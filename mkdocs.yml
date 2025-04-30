@@ -1,5 +1,5 @@
 site_name: n8n Docs
-site_url: https://n8n.racksync.com/
+site_url: https://n8n.racksync.com
 site_description: Documentation for n8n, a workflow automation platform.
 # Must be the docs repo for the edit page buttons to work
 repo_url: https://github.com/racksync/n8n-docs

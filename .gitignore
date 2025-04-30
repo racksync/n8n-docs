@@ -9,6 +9,7 @@ yarn.lock
 .vscode
 .idea
 
+.venv
 venv
 env
 site

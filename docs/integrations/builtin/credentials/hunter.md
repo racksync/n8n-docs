@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Hunter credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [Hunter](/integrations/builtin/app-nodes/n8n-nodes-base.hunter.md)
 
 ## Prerequisites
 
-Create a [Hunter](https://www.hunter.io/){:target=_blank .external-link} account.
+สร้างบัญชี [Hunter](https://www.hunter.io/){:target=_blank .external-link}
 
 ## Supported authentication methods
 
@@ -21,11 +21,11 @@ Create a [Hunter](https://www.hunter.io/){:target=_blank .external-link} account
 
 ## Related resources
 
-Refer to [Hunter's API documentation](https://hunter.io/api-documentation/v2){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Hunter's API documentation](https://hunter.io/api-documentation/v2){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ในการตั้งค่า credential นี้ คุณจะต้องมี:
 
-- An **API Key**: Generate an API key from your profile in the [dashboard](https://hunter.io/api-keys){:target=_blank .external-link}. Refer to the [Hunter API Authentication documentation](https://hunter.io/api-documentation/v2#authentication){:target=_blank .external-link} for more information.
+- **API Key**: สร้าง API key จากโปรไฟล์ของคุณใน [dashboard](https://hunter.io/api-keys){:target=_blank .external-link} ดูข้อมูลเพิ่มเติมได้ที่ [Hunter API Authentication documentation](https://hunter.io/api-documentation/v2#authentication){:target=_blank .external-link}
 

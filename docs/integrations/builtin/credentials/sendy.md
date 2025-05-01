@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Sendy credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้:
 
 - [Sendy](/integrations/builtin/app-nodes/n8n-nodes-base.sendy.md)
 
 ## Prerequisites
 
-Host a [Sendy](https://sendy.co/get-started){:target=_blank .external-link} application.
+ติดตั้ง [Sendy](https://sendy.co/get-started){:target=_blank .external-link} application
 
 ## Supported authentication methods
 
@@ -21,12 +21,12 @@ Host a [Sendy](https://sendy.co/get-started){:target=_blank .external-link} appl
 
 ## Related resources
 
-Refer to [Sendy's API documentation](https://sendy.co/api){:target=_blank .external-link} for more information about the service.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Sendy's API documentation](https://sendy.co/api){:target=_blank .external-link}
 
 ## Using API Key
 
-To configure this credential, you'll need:
+ในการตั้งค่า credentials นี้ คุณจะต้องมี:
 
-- A **URL**: The URL of your Sendy application.
-- An **API Key**: Get your API key from your user profile > **Settings > Your API Key**.
+- **URL**: URL ของ Sendy application ของคุณ
+- **API Key**: ดู API key ได้จาก user profile > **Settings > Your API Key**
 

@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Airtop credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node เหล่านี้:
 
 - [Airtop](/integrations/builtin/app-nodes/n8n-nodes-base.airtop.md)
 
 ## Prerequisites
 
-Create an [Airtop](https://portal.airtop.ai/sign-up) account.
+สมัคร [Airtop](https://portal.airtop.ai/sign-up) ให้เรียบร้อยก่อน
 
 ## Supported authentication methods
 
@@ -21,17 +21,17 @@ Create an [Airtop](https://portal.airtop.ai/sign-up) account.
 
 ## Related resources
 
-Refer to [Airtop's API documentation](https://docs.airtop.ai/api-reference/airtop-api) for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการได้ที่ [Airtop's API documentation](https://docs.airtop.ai/api-reference/airtop-api)
 
 ## Using API key
 
-To configure this credential, you'll need an [Airtop](https://portal.airtop.ai/sign-up) account and an **API key**. To generate a new key:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมีบัญชี [Airtop](https://portal.airtop.ai/sign-up) และ **API key** หากต้องการสร้าง key ใหม่:
 
-1. Log in to the [Airtop Portal](https://portal.airtop.ai).
-2. Go to [API Keys](https://portal.airtop.ai/api-keys).
-3. Select the **+ Create new key** button.
-4. Enter a name for the API key.
-5. Select the generated key to copy the key.
-6. Enter this as the **API Key** in your n8n credential.
+1. ล็อกอินเข้าสู่ [Airtop Portal](https://portal.airtop.ai)
+2. ไปที่ [API Keys](https://portal.airtop.ai/api-keys)
+3. เลือกปุ่ม **+ Create new key**
+4. ป้อนชื่อสำหรับ API key
+5. เลือก key ที่สร้างขึ้นเพื่อคัดลอก key
+6. ป้อน key นี้เป็น **API Key** ใน n8n credential ของคุณ
 
-Refer to [Airtop's Support](https://docs.airtop.ai/guides/misc/support) for assistance if you have any issues creating your API key.
+ดู [Airtop's Support](https://docs.airtop.ai/guides/misc/support) สำหรับความช่วยเหลือหากคุณมีปัญหาในการสร้าง API key ของคุณ

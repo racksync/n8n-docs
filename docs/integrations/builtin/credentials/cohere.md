@@ -7,21 +7,21 @@ contentType: [integration, reference]
 
 # Cohere credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node เหล่านี้:
 
 * [Cohere](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmcohere.md)
 * [Embeddings Cohere](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingscohere.md)
 
 ## Prerequisites
 
-Create a [Cohere account](https://cohere.com/){:target=_blank .external-link}.
+สมัคร [Cohere account](https://cohere.com/){:target=_blank .external-link} ให้เรียบร้อยก่อน
 
-You'll need an account with the following access:
+คุณจะต้องมีบัญชีที่มีสิทธิ์การเข้าถึงดังต่อไปนี้:
 
-- For the Trial API, you need User or Owner permissions.
-- For Production API, you need Owner permissions.
+- สำหรับ Trial API คุณต้องมีสิทธิ์ User หรือ Owner
+- สำหรับ Production API คุณต้องมีสิทธิ์ Owner
 
-Refer to [Cohere Teams and Roles documentation](https://docs.cohere.com/reference/teams-and-roles){:target=_blank .external-link} for more information.
+ดูข้อมูลเพิ่มเติมได้ที่ [Cohere Teams and Roles documentation](https://docs.cohere.com/reference/teams-and-roles){:target=_blank .external-link}
 
 ## Supported authentication methods
 
@@ -29,12 +29,12 @@ Refer to [Cohere Teams and Roles documentation](https://docs.cohere.com/referenc
 
 ## Related resources
 
-Refer to [Cohere's documentation](https://docs.cohere.com/reference/about){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการได้ที่ [Cohere's documentation](https://docs.cohere.com/reference/about){:target=_blank .external-link}
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
 ## Using API key
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- An **API Key**: To generate a Cohere API key, go to the [API Keys section of your Cohere dashboard](https://dashboard.cohere.com/api-keys){:target=_blank .external-link}.
+- **API Key**: หากต้องการสร้าง Cohere API key ให้ไปที่ส่วน [API Keys ของ Cohere dashboard ของคุณ](https://dashboard.cohere.com/api-keys){:target=_blank .external-link}

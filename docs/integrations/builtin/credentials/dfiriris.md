@@ -10,18 +10,17 @@ contentType: [integration, reference]
 
 ## Prerequisites
 
-An accessible instance of [DFIR-IRIS](https://docs.dfir-iris.org/latest/getting_started/){:target=_blank .external-link}.
+instance ของ [DFIR-IRIS](https://docs.dfir-iris.org/latest/getting_started/){:target=_blank .external-link} ที่เข้าถึงได้
 
 ## Related resources
 
-Refer to [DFIR-IRIS's API documentation](https://docs.dfir-iris.org/operations/api/){:target=_blank .external-link} for more information about authenticating with the service.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับการยืนยันตัวตนกับบริการได้ที่ [DFIR-IRIS's API documentation](https://docs.dfir-iris.org/operations/api/){:target=_blank .external-link}
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/dfir-iris/){:target=_blank .external-link} on n8n's website.
-
+นี่คือ credential-only node ดูรายละเอียดเพิ่มเติมได้ที่ [Custom API operations](/integrations/custom-operations.md) ดู [example workflows and related content](https://n8n.io/integrations/dfir-iris/){:target=_blank .external-link} บนเว็บไซต์ n8n
 
 ## Using API Key
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- An **API Key**: Refer to [DFIR-IRIS's API documentation](https://docs.dfir-iris.org/operations/api/){:target=_blank .external-link} for instructions on getting your API key.
-- The **Base URL** of your DFIR-IRIS instance.
+- **API Key**: ดูคำแนะนำในการรับ API key ของคุณได้ที่ [DFIR-IRIS's API documentation](https://docs.dfir-iris.org/operations/api/){:target=_blank .external-link}
+- **Base URL** ของ DFIR-IRIS instance ของคุณ

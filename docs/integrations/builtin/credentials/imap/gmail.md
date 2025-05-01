@@ -8,14 +8,14 @@ priority: high
 
 # Gmail IMAP credentials
 
-Follow these steps to configure the IMAP credentials with a Gmail account.
+ทำตามขั้นตอนเหล่านี้เพื่อกำหนดค่า IMAP credentials ด้วยบัญชี Gmail
 
 ## Prerequisites
 
-To follow these instructions, you must first:
+ในการทำตามคำแนะนำเหล่านี้ คุณต้องทำสิ่งต่อไปนี้ก่อน:
 
-1. [Enable 2-step Verification](#enable-2-step-verification) on your Gmail account.
-2. [Generate an app password](#generate-an-app-password).
+1. [Enable 2-step Verification](#enable-2-step-verification) บนบัญชี Gmail ของคุณ
+2. [Generate an app password](#generate-an-app-password)
 
 ### Enable 2-step Verification
 
@@ -27,13 +27,13 @@ To follow these instructions, you must first:
 
 ## Set up the credential
 
-To set up the IMAP credential with a Gmail account, use these settings:
+ในการตั้งค่า IMAP credential ด้วยบัญชี Gmail ให้ใช้การตั้งค่าเหล่านี้:
 
-1. Enter your Gmail email address as the **User**.
-2. Enter the app password you generated above as the **Password**.
-3. Enter `imap.gmail.com` as the **Host**.
-4. For the **Port**, keep the default port number of `993`. Check with your email administrator if this port doesn't work.
-5. Turn on the **SSL/TLS** toggle.
-6. Check with your email administrator about whether to **Allow Self-Signed Certificates**.
+1. ป้อนที่อยู่อีเมล Gmail ของคุณเป็น **User**
+2. ป้อน app password ที่คุณสร้างขึ้นด้านบนเป็น **Password**
+3. ป้อน `imap.gmail.com` เป็น **Host**
+4. สำหรับ **Port** ให้คงหมายเลข port เริ่มต้นไว้ที่ `993` ตรวจสอบกับผู้ดูแลระบบอีเมลของคุณหาก port นี้ใช้งานไม่ได้
+5. เปิดใช้งาน toggle **SSL/TLS**
+6. ตรวจสอบกับผู้ดูแลระบบอีเมลของคุณว่าควร **Allow Self-Signed Certificates** หรือไม่
 
-Refer to [Add Gmail to another client](https://support.google.com/mail/answer/7126229?hl=en){:target=_blank .external-link} for more information. You may need to **Enable IMAP** if you're using a personal Google account before June 2024.
+อ้างอิง [Add Gmail to another client](https://support.google.com/mail/answer/7126229?hl=en){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม คุณอาจต้อง **Enable IMAP** หากคุณใช้บัญชี Google ส่วนตัวก่อนเดือนมิถุนายน 2024

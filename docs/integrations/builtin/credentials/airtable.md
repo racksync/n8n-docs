@@ -8,14 +8,14 @@ priority: high
 
 # Airtable credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node เหล่านี้:
 
 - [Airtable](/integrations/builtin/app-nodes/n8n-nodes-base.airtable/index.md)
 - [Airtable Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.airtabletrigger.md)
 
 ## Prerequisites
 
-Create an [Airtable](https://airtable.com/){:target=_blank .external-link} account.
+สมัคร [Airtable](https://airtable.com/){:target=_blank .external-link} ให้เรียบร้อยก่อน
 
 ## Supported authentication methods
 
@@ -23,60 +23,60 @@ Create an [Airtable](https://airtable.com/){:target=_blank .external-link} accou
 - OAuth2
 
 /// note | API Key deprecation
-n8n used to offer an API key authentication method with Airtable. Airtable [fully deprecated these keys](https://support.airtable.com/v1/docs/airtable-api-deprecation-guidelines){:target=_blank .external-link} as of February 2024. If you were using an Airtable API credential, replace it with an Airtable Personal Access Token or Airtable OAuth2 credential. n8n recommends using Personal Access Token instead.
+n8n เคยมีวิธีการยืนยันตัวตนด้วย API key กับ Airtable Airtable [ยกเลิกการใช้งาน keys เหล่านี้อย่างสมบูรณ์](https://support.airtable.com/v1/docs/airtable-api-deprecation-guidelines){:target=_blank .external-link} ณ เดือนกุมภาพันธ์ 2024 หากคุณเคยใช้ Airtable API credential ให้แทนที่ด้วย Airtable Personal Access Token หรือ Airtable OAuth2 credential n8n แนะนำให้ใช้ Personal Access Token แทน
 ///
 
 ## Related resources
 
-Refer to [Airtable's API documentation](https://airtable.com/developers/web/api/authentication){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการได้ที่ [Airtable's API documentation](https://airtable.com/developers/web/api/authentication){:target=_blank .external-link}
 
 ## Using personal access token
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- A Personal **Access Token** (PAT)
+- Personal **Access Token** (PAT)
 
-To create your PAT:
+วิธีสร้าง PAT ของคุณ:
 
-1. Go to the Airtable Builder Hub [Personal access tokens](https://airtable.com/create/tokens){:target=_blank .external-link} page.
-1. Select **+ Create new token**. Airtable opens the **Create personal access token** page.
-1. Enter a **Name** for your token, like `n8n credential`.
-1. Add **Scopes** to your token. Refer to Airtable's [Scopes](https://airtable.com/developers/web/api/scopes){:target=_blank .external-link} guide for more information. n8n recommends using these scopes:
+1. ไปที่หน้า Airtable Builder Hub [Personal access tokens](https://airtable.com/create/tokens){:target=_blank .external-link}
+1. เลือก **+ Create new token** Airtable จะเปิดหน้า **Create personal access token**
+1. ป้อน **Name** สำหรับ token ของคุณ เช่น `n8n credential`
+1. เพิ่ม **Scopes** ให้กับ token ของคุณ ดูข้อมูลเพิ่มเติมได้ที่คู่มือ [Scopes](https://airtable.com/developers/web/api/scopes){:target=_blank .external-link} ของ Airtable n8n แนะนำให้ใช้ scopes เหล่านี้:
     - `data.records:read`
     - `data.records:write`
     - `schema.bases:read`
-1. Select the **Access** for your token. Choose from a single base, multiple bases (even bases from different workspaces), all of the current and future bases in a workspace you own, or all of the bases from any workspace that you own including bases/workspace added in the future.
-1. Select **Create token**.
-1. Airtable opens a modal with your token displayed. Copy this token and enter it in your n8n credential as the **Access Token**.
+1. เลือก **Access** สำหรับ token ของคุณ เลือกจาก base เดียว, หลาย bases (แม้กระทั่ง bases จาก workspaces ที่แตกต่างกัน), bases ทั้งหมดในปัจจุบันและอนาคตใน workspace ที่คุณเป็นเจ้าของ หรือ bases ทั้งหมดจาก workspace ใดๆ ที่คุณเป็นเจ้าของ รวมถึง bases/workspace ที่เพิ่มเข้ามาในอนาคต
+1. เลือก **Create token**
+1. Airtable จะเปิด modal พร้อม token ของคุณที่แสดงอยู่ คัดลอก token นี้และป้อนลงใน n8n credential ของคุณเป็น **Access Token**
 
-Refer to Airtable's [Find/create PATs documentation](https://support.airtable.com/v1/docs/creating-personal-access-tokens){:target=_blank .external-link} for more information.
+ดูข้อมูลเพิ่มเติมได้ที่ [Find/create PATs documentation](https://support.airtable.com/v1/docs/creating-personal-access-tokens){:target=_blank .external-link} ของ Airtable
 
 ## Using OAuth2
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- An **OAuth Redirect URL**
-- A **Client ID**
-- A **Client Secret**
+- **OAuth Redirect URL**
+- **Client ID**
+- **Client Secret**
 
-To generate all this information, register a new Airtable integration:
+หากต้องการสร้างข้อมูลทั้งหมดนี้ ให้ลงทะเบียน Airtable integration ใหม่:
 
-1. Open your Airtable Builder Hub [**OAuth integrations**](https://airtable.com/create/oauth){:target=_blank .external-link} page.
-2. Select the **Register new OAuth integration** button.
-3. Enter a name for your OAuth integration.
-4. Copy the **OAuth Redirect URL** from your n8n credential.
-5. Paste that redirect URL in Airtable as the **OAuth redirect URL**.
-6. Select **Register integration**.
-7. On the following page, copy the **Client ID** from Airtable and paste it into the **Client ID** in your n8n credential.
-8. In Airtable, select **Generate client secret**.
-9. Copy the client secret and paste it into the **Client Secret** in your n8n credential.
-10. Select the following scopes in Airtable:
+1. เปิดหน้า Airtable Builder Hub [**OAuth integrations**](https://airtable.com/create/oauth){:target=_blank .external-link} ของคุณ
+2. เลือกปุ่ม **Register new OAuth integration**
+3. ป้อนชื่อสำหรับ OAuth integration ของคุณ
+4. คัดลอก **OAuth Redirect URL** จาก n8n credential ของคุณ
+5. วาง redirect URL นั้นใน Airtable เป็น **OAuth redirect URL**
+6. เลือก **Register integration**
+7. ในหน้าถัดไป คัดลอก **Client ID** จาก Airtable และวางลงใน **Client ID** ใน n8n credential ของคุณ
+8. ใน Airtable เลือก **Generate client secret**
+9. คัดลอก client secret และวางลงใน **Client Secret** ใน n8n credential ของคุณ
+10. เลือก scopes ต่อไปนี้ใน Airtable:
     - `data.records:read`
     - `data.records:write`
     - `schema.bases:read`
-11. Select **Save changes** in Airtable.
-12. In your n8n credential, select the **Connect my account**. A **Grant access** modal opens.
-13. Follow the instructions and select the base you want to work on (or all bases).
-14. Select **Grant access** to complete the connection.
+11. เลือก **Save changes** ใน Airtable
+12. ใน n8n credential ของคุณ เลือก **Connect my account** modal **Grant access** จะเปิดขึ้น
+13. ทำตามคำแนะนำและเลือก base ที่คุณต้องการทำงาน (หรือ bases ทั้งหมด)
+14. เลือก **Grant access** เพื่อทำการเชื่อมต่อให้เสร็จสิ้น
 
-Refer to the [Airtable Register a new integration documentation](https://airtable.com/developers/web/guides/oauth-integrations){:target=_blank .external-link} for steps on registering a new Oauth integration.
+ดูขั้นตอนเกี่ยวกับการลงทะเบียน Oauth integration ใหม่ได้ที่ [Airtable Register a new integration documentation](https://airtable.com/developers/web/guides/oauth-integrations){:target=_blank .external-link}

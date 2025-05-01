@@ -12,8 +12,8 @@ priority: medium
 
 ## Prerequisites
 
-- Create an [Elasticsearch](https://www.elastic.co/){:target=_blank .external-link} account.
-- If you're creating a new account to test with, load some sample data into Kibana. Refer to the [Kibana quick start](https://www.elastic.co/guide/en/kibana/current/get-started.html){:target=_blank .external-link} for more information.
+- สร้างบัญชี [Elasticsearch](https://www.elastic.co/){:target=_blank .external-link}
+- หากคุณกำลังสร้างบัญชีใหม่เพื่อทดสอบ ให้โหลดข้อมูลตัวอย่างบางส่วนลงใน Kibana ดูข้อมูลเพิ่มเติมได้ที่ [Kibana quick start](https://www.elastic.co/guide/en/kibana/current/get-started.html){:target=_blank .external-link}
 
 ## Supported authentication methods
 
@@ -21,14 +21,14 @@ priority: medium
 
 ## Related resources
 
-Refer to [Kibana's API documentation](https://www.elastic.co/guide/en/kibana/current/api.html){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Kibana's API documentation](https://www.elastic.co/guide/en/kibana/current/api.html){:target=_blank .external-link}
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/kibana/){:target=_blank .external-link} on n8n's website.
+นี่คือ node ที่มีเฉพาะ credential เท่านั้น ดูข้อมูลเพิ่มเติมได้ที่ [Custom API operations](/integrations/custom-operations.md) ดู [example workflows and related content](https://n8n.io/integrations/kibana/){:target=_blank .external-link} บนเว็บไซต์ของ n8n
 
 ## Using basic auth
 
-To configure this credential, you'll need:
+ในการตั้งค่า credential นี้ คุณจะต้องมี:
 
-- The **URL** you use to access Kibana, for example `http://localhost:5601`
-- A **Username**: Use the same username that you use to log in to Elastic.
-- A **Password**: Use the same password that you use to log in to Elastic.
+- **URL** ที่คุณใช้เข้าถึง Kibana เช่น `http://localhost:5601`
+- **Username**: ใช้ username เดียวกับที่คุณใช้เข้าสู่ระบบ Elastic
+- **Password**: ใช้ password เดียวกับที่คุณใช้เข้าสู่ระบบ Elastic

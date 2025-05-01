@@ -9,11 +9,9 @@ contentType: [integration, reference]
 
 --8<-- "_snippets/integrations/builtin/credentials/cred-only-statement.md"
 
-<!-- If this credential has numerous prerequisites, include the Prerequisites section below and remove the account reference in the in the Using_Auth method_ section.
-If a single prereq. like having an account, delete the Prerequisites section here and just update the intro statement in the Using _Auth method_ section -->
 ## Prerequisites
 
-Create a [Zabbix Cloud](https://www.zabbix.com/) account or self-host your own Zabbix server.
+สมัคร [Zabbix Cloud](https://www.zabbix.com/) หรือ self-host Zabbix server ของคุณเอง
 
 ## Supported authentication methods
 
@@ -21,16 +19,15 @@ Create a [Zabbix Cloud](https://www.zabbix.com/) account or self-host your own Z
 
 ## Related resources
 
-Refer to [Zabbix's API documentation](https://www.zabbix.com/documentation/current/en/manual/api){:target=_blank .external-link} for more information about the service.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับการใช้งาน API ได้ที่ [Zabbix's API documentation](https://www.zabbix.com/documentation/current/en/manual/api){:target=_blank .external-link}
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/zabbix/){:target=_blank .external-link} on n8n's website.
-
+This is a credential-only node. ดูวิธีใช้งานเพิ่มเติมที่ [Custom API operations](/integrations/custom-operations.md) และดูตัวอย่าง workflow ได้ที่ [example workflows and related content](https://n8n.io/integrations/zabbix/){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- an **API Token**: An API key for your Zabbix user.
-- the **URL**: The URL of your Zabbix server. Don't include `/zabbix` as part of the URL.
+- **API Token**: เป็น API key ของ user ใน Zabbix
+- **URL**: URL ของ Zabbix server (ไม่ต้องใส่ `/zabbix` ใน URL)
 
-Refer to [Zabbix's API documentation](https://www.zabbix.com/documentation/current/en/manual/api#authentication){:target=_blank .external-link} for more information about authenticating to the service.
+ดูรายละเอียดเพิ่มเติมที่ [Zabbix's API documentation](https://www.zabbix.com/documentation/current/en/manual/api#authentication){:target=_blank .external-link}

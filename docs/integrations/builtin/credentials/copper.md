@@ -7,14 +7,14 @@ contentType: [integration, reference]
 
 # Copper credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node เหล่านี้:
 
 - [Copper](/integrations/builtin/app-nodes/n8n-nodes-base.copper.md)
 - [Copper Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.coppertrigger.md)
 
 ## Prerequisites
 
-Create a [Copper](https://www.copper.com/) account at the **Professional** or **Business** plan level.
+สมัคร [Copper](https://www.copper.com/) ที่ระดับแผน **Professional** หรือ **Business**
 
 ## Supported authentication methods
 
@@ -22,12 +22,12 @@ Create a [Copper](https://www.copper.com/) account at the **Professional** or **
 
 ## Related resources
 
-Refer to [Copper's API documentation](https://developer.copper.com/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการได้ที่ [Copper's API documentation](https://developer.copper.com/){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- An **API Key**: Refer to the [Copper Generating an API key documentation](https://support.copper.com/en/articles/8823347-generating-an-api-key){:target=_blank .external-link} for information on generating an API key.
-- An **Email** address: Use the API key creator's email address
+- **API Key**: ดูข้อมูลเกี่ยวกับการสร้าง API key ได้ที่ [Copper Generating an API key documentation](https://support.copper.com/en/articles/8823347-generating-an-api-key){:target=_blank .external-link}
+- ที่อยู่ **Email**: ใช้ที่อยู่ email ของผู้สร้าง API key
 

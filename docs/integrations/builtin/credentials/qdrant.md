@@ -8,7 +8,7 @@ priority: medium
 
 # Qdrant credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 * [Qdrant Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreqdrant.md)
 
@@ -18,25 +18,25 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Qdrant's documentation](https://qdrant.tech/documentation/){:target=_blank .external-link} for more information.
+ดูข้อมูลเพิ่มเติมที่ [Qdrant's documentation](https://qdrant.tech/documentation/){:target=_blank .external-link}
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
 ## Using API key
 
-To configure this credential, you'll need a [Qdrant cluster](https://qdrant.tech/documentation/cloud/create-cluster/){:target=_blank .external-link} and:
+สำหรับการตั้งค่า credentials นี้ คุณจะต้องมี [Qdrant cluster](https://qdrant.tech/documentation/cloud/create-cluster/){:target=_blank .external-link} และ:
 
-- An **API Key**
-- Your **Qdrant URL**
+- **API Key**
+- **Qdrant URL** ของคุณ
 
-To set it up:
+ขั้นตอนการตั้งค่า:
 
-1. Go to the [Cloud Dashboard](https://qdrant.to/cloud){:target=_blank .external-link}.
-2. Select **Access Management** to display available API keys (or go to the **API Keys** section of the **Cluster detail** page).
-3. Select **Create**.
-4. Select the cluster you want the key to have access to in the dropdown.
-5. Select **OK**.
-6. Copy the API Key and enter it in your n8n credential.
-7. Enter the URL for your Qdrant cluster in the **Qdrant URL**. Refer to [Qdrant Web UI](https://qdrant.tech/documentation/interfaces/web-ui/){:target=_blank .external-link} for more information.
+1. ไปที่ [Cloud Dashboard](https://qdrant.to/cloud){:target=_blank .external-link}
+2. เลือก **Access Management** เพื่อแสดง API keys ที่มีอยู่ (หรือไปที่ส่วน **API Keys** ของหน้า **Cluster detail**)
+3. เลือก **Create**
+4. เลือก cluster ที่คุณต้องการให้ key มีสิทธิ์เข้าถึงใน dropdown
+5. เลือก **OK**
+6. คัดลอก API Key และกรอกลงใน n8n credential ของคุณ
+7. กรอก URL สำหรับ Qdrant cluster ของคุณใน **Qdrant URL** ดูข้อมูลเพิ่มเติมที่ [Qdrant Web UI](https://qdrant.tech/documentation/interfaces/web-ui/){:target=_blank .external-link}
 
-Refer to [Qdrant's authentication documentation](https://qdrant.tech/documentation/cloud/authentication/){:target=_blank .external-link} for more information on creating and using API keys.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับการสร้างและใช้ API keys ได้ที่ [Qdrant's authentication documentation](https://qdrant.tech/documentation/cloud/authentication/){:target=_blank .external-link}

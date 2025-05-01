@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Freshdesk credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้:
 
 - [Freshdesk](/integrations/builtin/app-nodes/n8n-nodes-base.freshdesk.md)
 
 ## Prerequisites
 
-Create a [Freshdesk](https://freshdesk.com/){:target=_blank .external-link} account.
+สร้างบัญชี [Freshdesk](https://freshdesk.com/){:target=_blank .external-link}
 
 ## Supported authentication methods
 
@@ -21,12 +21,12 @@ Create a [Freshdesk](https://freshdesk.com/){:target=_blank .external-link} acco
 
 ## Related resources
 
-Refer to [Freshdesk's API documentation](https://developers.freshdesk.com/api/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Freshdesk's API documentation](https://developers.freshdesk.com/api/){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- An **API Key**: Refer to the [Freshdesk API authenticaton documentation](https://developers.freshdesk.com/api/#authentication){:target=_blank .external-link} for detailed instructions on getting your API key.
-- A Freshdesk **Domain**: Use the subdomain of your Freshdesk account. This is part of the URL, for example `https://<subdomain>.freshdesk.com`. So if you access Freshdesk through `https://n8n.freshdesk.com`, enter `n8n` as your **Domain**.
+- **API Key**: ดูคำแนะนำโดยละเอียดเกี่ยวกับการรับ API key ของคุณได้ที่ [Freshdesk API authenticaton documentation](https://developers.freshdesk.com/api/#authentication){:target=_blank .external-link}
+- Freshdesk **Domain**: ใช้ subdomain ของบัญชี Freshdesk ของคุณ นี่เป็นส่วนหนึ่งของ URL ตัวอย่างเช่น `https://<subdomain>.freshdesk.com` ดังนั้น หากคุณเข้าถึง Freshdesk ผ่าน `https://n8n.freshdesk.com` ให้ป้อน `n8n` เป็น **Domain** ของคุณ
 

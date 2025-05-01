@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Unleashed Software credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [Unleashed Software](/integrations/builtin/app-nodes/n8n-nodes-base.unleashedsoftware.md)
 
 ## Prerequisites
 
-Create an [Unleashed Software](https://www.unleashedsoftware.com/){:target=_blank .external-link} account.
+สร้างบัญชี [Unleashed Software](https://www.unleashedsoftware.com/){:target=_blank .external-link} ก่อน
 
 ## Supported authentication methods
 
@@ -21,17 +21,17 @@ Create an [Unleashed Software](https://www.unleashedsoftware.com/){:target=_blan
 
 ## Related resources
 
-Refer to [Unleashed's API documentation](https://apidocs.unleashedsoftware.com/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Unleashed's API documentation](https://apidocs.unleashedsoftware.com/){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ในการตั้งค่า credentials นี้ คุณจะต้องมี:
 
-- An **API ID**: Go to **Integrations > Unleashed API Access** to find your **API ID**.
-- An **API Key**: Go to **Integrations > Unleashed API Access** to find your **API Key**.
+- **API ID**: ไปที่ **Integrations > Unleashed API Access** เพื่อดู **API ID** ของคุณ
+- **API Key**: ไปที่ **Integrations > Unleashed API Access** เพื่อดู **API Key** ของคุณ
 
-Refer to [Unleashed API Access](https://support.unleashedsoftware.com/hc/en-us/articles/4402393233689-Unleashed-API-Access){:target=_blank .external-link} for more information.
+ดูรายละเอียดเพิ่มเติมได้ที่ [Unleashed API Access](https://support.unleashedsoftware.com/hc/en-us/articles/4402393233689-Unleashed-API-Access){:target=_blank .external-link}
 
 /// note | Account owner required
-You must log in as an Unleashed account owner to view the API ID and API Key.
+คุณต้อง login ด้วยบัญชี owner ของ Unleashed เพื่อดู API ID และ API Key
 ///

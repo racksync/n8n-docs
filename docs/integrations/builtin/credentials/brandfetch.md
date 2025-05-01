@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Brandfetch credentials
 
-You can use these credentials to authenticate the following node:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node ต่อไปนี้:
 
 - [Brandfetch](/integrations/builtin/app-nodes/n8n-nodes-base.brandfetch.md)
 
 ## Prerequisites
 
-Create a [Brandfetch developer](https://docs.brandfetch.com/docs/apis#-create-an-account){:target=_blank .external-link} developer account.
+สมัคร [Brandfetch developer](https://docs.brandfetch.com/docs/apis#-create-an-account){:target=_blank .external-link} developer account ให้เรียบร้อยก่อน
 
 ## Supported authentication methods
 
@@ -21,10 +21,10 @@ Create a [Brandfetch developer](https://docs.brandfetch.com/docs/apis#-create-an
 
 ## Related resources
 
-Refer to [Brandfetch's API documentation](https://docs.brandfetch.com/docs/apis){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการได้ที่ [Brandfetch's API documentation](https://docs.brandfetch.com/docs/apis){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- An **API Key**: Refer to the [Brandfetch Create an Account documentation](https://docs.brandfetch.com/docs/apis#-create-an-account){:target=_blank .external-link} to generate an API key.
+- **API Key**: ดู [Brandfetch Create an Account documentation](https://docs.brandfetch.com/docs/apis#-create-an-account){:target=_blank .external-link} เพื่อสร้าง API key

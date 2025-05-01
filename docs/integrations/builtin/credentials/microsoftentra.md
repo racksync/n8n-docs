@@ -8,16 +8,16 @@ priority: medium
 
 # Microsoft Entra ID credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนใน nodes ต่อไปนี้:
 
 * [Microsoft Entra ID](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftentra.md)
 
 ## Prerequisites
 
-- Create a Microsoft Entra ID account or subscription.
-- If the user account is managed by a corporate Microsoft Entra account, the administrator account has enabled the option “User can consent to apps accessing company data on their behalf” for this user (see the [Microsoft Entra documentation](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/grant-admin-consent)).
+- สร้างบัญชีหรือสมัครสมาชิก Microsoft Entra ID
+- หากบัญชีผู้ใช้ถูกจัดการโดยบัญชี Microsoft Entra ขององค์กร บัญชีผู้ดูแลระบบได้เปิดใช้งานตัวเลือก “User can consent to apps accessing company data on their behalf” สำหรับผู้ใช้นี้ (ดู [Microsoft Entra documentation](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/grant-admin-consent))
 
-Microsoft includes an Entra ID free plan when you create a [Microsoft Azure](https://azure.microsoft.com/){:target=_blank .external-link} account.
+Microsoft รวมแผน Entra ID ฟรีเมื่อคุณสร้างบัญชี [Microsoft Azure](https://azure.microsoft.com/){:target=_blank .external-link}
 
 ## Supported authentication methods
 
@@ -25,53 +25,53 @@ Microsoft includes an Entra ID free plan when you create a [Microsoft Azure](htt
 
 ## Related resources
 
-Refer to [Microsoft Entra ID's documentation](https://www.microsoft.com/en-us/security/business/identity-access/azure-active-directory){:target=_blank .external-link} for more information about the service.
+อ้างอิง [Microsoft Entra ID's documentation](https://www.microsoft.com/en-us/security/business/identity-access/azure-active-directory){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 ## Using OAuth2
 
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-For self-hosted users, there are two main steps to configure OAuth2 from scratch:
+สำหรับผู้ใช้ self-hosted มีสองขั้นตอนหลักในการกำหนดค่า OAuth2 ตั้งแต่ต้น:
 
-1. [Register an application](#register-an-application) with the Microsoft Identity Platform.
-2. [Generate a client secret](#generate-a-client-secret) for that application.
+1. [ลงทะเบียนแอปพลิเคชัน](#register-an-application) กับ Microsoft Identity Platform
+2. [สร้าง client secret](#generate-a-client-secret) สำหรับแอปพลิเคชันนั้น
 
-Follow the detailed instructions for each step below. For more detail on the Microsoft OAuth2 web flow, refer to [Microsoft authentication and authorization basics](https://learn.microsoft.com/en-us/graph/auth/auth-concepts){:target=_blank .external-link}. 
+ทำตามคำแนะนำโดยละเอียดสำหรับแต่ละขั้นตอนด้านล่าง สำหรับรายละเอียดเพิ่มเติมเกี่ยวกับ Microsoft OAuth2 web flow อ้างอิง [Microsoft authentication and authorization basics](https://learn.microsoft.com/en-us/graph/auth/auth-concepts){:target=_blank .external-link}
 
 ### Register an application
 
-Register an application with the Microsoft Identity Platform:
+ลงทะเบียนแอปพลิเคชันกับ Microsoft Identity Platform:
 
-1. Open the [Microsoft Application Registration Portal](https://aka.ms/appregistrations){:target=_blank .external-link}.
-2. Select **Register an application**.
-3. Enter a **Name** for your app.
-4. In **Supported account types**, select **Accounts in any organizational directory (Any Azure AD directory - Multi-tenant) and personal Microsoft accounts (for example, Skype, Xbox)**.
-5. In **Register an application**:
-    1. Copy the **OAuth Callback URL** from your n8n credential.
-    2. Paste it into the **Redirect URI (optional)** field.
-    3. Select **Select a platform** > **Web**.
-6. Select **Register** to finish creating your application.
-7. Copy the **Application (client) ID** and paste it into n8n as the **Client ID**.
+1. เปิด [Microsoft Application Registration Portal](https://aka.ms/appregistrations){:target=_blank .external-link}
+2. เลือก **Register an application**
+3. ป้อน **Name** สำหรับแอปของคุณ
+4. ใน **Supported account types** เลือก **Accounts in any organizational directory (Any Azure AD directory - Multi-tenant) and personal Microsoft accounts (for example, Skype, Xbox)**
+5. ใน **Register an application**:
+    1. คัดลอก **OAuth Callback URL** จาก credential ของ n8n
+    2. วางลงในฟิลด์ **Redirect URI (optional)**
+    3. เลือก **Select a platform** > **Web**
+6. เลือก **Register** เพื่อสิ้นสุดการสร้างแอปพลิเคชันของคุณ
+7. คัดลอก **Application (client) ID** และวางลงใน n8n เป็น **Client ID**
 
-Refer to [Register an application with the Microsoft Identity Platform](https://learn.microsoft.com/en-us/graph/auth-register-app-v2){:target=_blank .external-link} for more information.
+อ้างอิง [Register an application with the Microsoft Identity Platform](https://learn.microsoft.com/en-us/graph/auth-register-app-v2){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 
 ### Generate a client secret
 
-With your application created, generate a client secret for it:
+เมื่อสร้างแอปพลิเคชันของคุณแล้ว ให้สร้าง client secret สำหรับมัน:
 
-1. On your Microsoft application page, select **Certificates & secrets** in the left navigation.
-1. In **Client secrets**, select **+ New client secret**.
-1. Enter a **Description** for your client secret, such as `n8n credential`.
-1. Select **Add**.
-1. Copy the **Secret** in the **Value** column.
-1. Paste it into n8n as the **Client Secret**.
-1. Select **Connect my account** in n8n to finish setting up the connection.
-1. Log in to your Microsoft account and allow the app to access your info.
+1. บนหน้าแอปพลิเคชัน Microsoft ของคุณ เลือก **Certificates & secrets** ในการนำทางด้านซ้าย
+1. ใน **Client secrets** เลือก **+ New client secret**
+1. ป้อน **Description** สำหรับ client secret ของคุณ เช่น `n8n credential`
+1. เลือก **Add**
+1. คัดลอก **Secret** ในคอลัมน์ **Value**
+1. วางลงใน n8n เป็น **Client Secret**
+1. เลือก **Connect my account** ใน n8n เพื่อสิ้นสุดการตั้งค่าการเชื่อมต่อ
+1. เข้าสู่ระบบบัญชี Microsoft ของคุณและอนุญาตให้แอปเข้าถึงข้อมูลของคุณ
 
-Refer to Microsoft's [Add credentials](https://learn.microsoft.com/en-us/graph/auth-register-app-v2#add-credentials){:target=_blank .external-link} for more information on adding a client secret.
+อ้างอิง Microsoft's [Add credentials](https://learn.microsoft.com/en-us/graph/auth-register-app-v2#add-credentials){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับการเพิ่ม client secret
 
 ## Common issues
 
-Here are the known common errors and issues with Microsoft Entra credentials.
+นี่คือข้อผิดพลาดและปัญหาทั่วไปที่ทราบเกี่ยวกับ Microsoft Entra credentials
 
 --8<-- "_snippets/integrations/builtin/credentials/microsoft-need-admin-approval.md"

@@ -7,14 +7,14 @@ contentType: [integration, reference]
 
 # Invoice Ninja credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [Invoice Ninja](/integrations/builtin/app-nodes/n8n-nodes-base.invoiceninja.md)
 - [Invoice Ninja Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.invoiceninjatrigger.md)
 
 ## Prerequisites
 
-Create an [Invoice Ninja](https://www.invoiceninja.com/){:target=_blank .external-link} account. Only the Pro and Enterprise plans support API integrations.
+สร้างบัญชี [Invoice Ninja](https://www.invoiceninja.com/){:target=_blank .external-link} เฉพาะแผน Pro และ Enterprise เท่านั้นที่รองรับการรวม API
 
 ## Supported authentication methods
 
@@ -22,13 +22,13 @@ Create an [Invoice Ninja](https://www.invoiceninja.com/){:target=_blank .externa
 
 ## Related resources
 
-Refer to Invoice Ninja's [v4 API documentation](https://invoice-ninja.readthedocs.io/en/latest/api.html){:target=_blank .external-link} and [v5 API documentation](https://api-docs.invoicing.co/){:target=_blank .external-link} for more information about the APIs.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับ API ได้ที่ [v4 API documentation](https://invoice-ninja.readthedocs.io/en/latest/api.html){:target=_blank .external-link} และ [v5 API documentation](https://api-docs.invoicing.co/){:target=_blank .external-link} ของ Invoice Ninja
 
 ## Using API key
 
-To configure this credential, you'll need:
+ในการตั้งค่า credential นี้ คุณจะต้องมี:
 
-- A **URL**: If Invoice Ninja hosts your installation, use either of the default URLs mentioned. If you're self-hosting your installation, use the URL of your Invoice Ninja instance.
-- An **API Token**: Generate an API token in **Settings > Account Management > API Tokens**.
-- An optional **Secret**, available only for v5 API users
+- **URL**: หาก Invoice Ninja host การติดตั้งของคุณ ให้ใช้ URL เริ่มต้นที่กล่าวถึง หากคุณ self-hosting การติดตั้งของคุณ ให้ใช้ URL ของ Invoice Ninja instance ของคุณ
+- **API Token**: สร้าง API token ใน **Settings > Account Management > API Tokens**
+- **Secret** (ไม่บังคับ): มีให้สำหรับผู้ใช้ API v5 เท่านั้น
 

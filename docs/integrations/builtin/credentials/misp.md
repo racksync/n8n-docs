@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # MISP credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนใน nodes ต่อไปนี้:
 
 - [MISP](/integrations/builtin/app-nodes/n8n-nodes-base.misp.md)
 
 ## Prerequisites
 
-Install and run a [MISP](https://misp.github.io/MISP/){:target=_blank .external-link} instance.
+ติดตั้งและรัน instance ของ [MISP](https://misp.github.io/MISP/){:target=_blank .external-link}
 
 ## Supported authentication methods
 
@@ -21,13 +21,13 @@ Install and run a [MISP](https://misp.github.io/MISP/){:target=_blank .external-
 
 ## Related resources
 
-Refer to [MISP's Automation API documentation](https://www.circl.lu/doc/misp/automation){:target=_blank .external-link} for more information about the service.
+อ้างอิง [MISP's Automation API documentation](https://www.circl.lu/doc/misp/automation){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 ## Using API key
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- An **API Key**: In MISP, these are called Automation keys. Get an automation key from **Event Actions > Automation**. Refer to [MISP's automation keys documentation](https://www.circl.lu/doc/misp/automation/#automation-key){:target=_blank .external-link} for instructions on generating more keys.
-- A **Base URL**: Your MISP URL.
-- Select whether to **Allow Unauthorized Certificates**: If turned on, the credential will connect even if SSL certificate validation fails.
+- **API Key**: ใน MISP สิ่งเหล่านี้เรียกว่า Automation keys รับ automation key จาก **Event Actions > Automation** อ้างอิงเอกสาร [MISP's automation keys documentation](https://www.circl.lu/doc/misp/automation/#automation-key){:target=_blank .external-link} สำหรับคำแนะนำในการสร้าง keys เพิ่มเติม
+- **Base URL**: URL ของ MISP ของคุณ
+- เลือกว่าจะ **Allow Unauthorized Certificates**: หากเปิดใช้งาน credential จะเชื่อมต่อแม้ว่าการตรวจสอบใบรับรอง SSL จะล้มเหลว
 

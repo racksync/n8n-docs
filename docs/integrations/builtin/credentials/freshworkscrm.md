@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Freshworks CRM credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้:
 
 - [Freshworks CRM](/integrations/builtin/app-nodes/n8n-nodes-base.freshworkscrm.md)
 
 ## Prerequisites
 
-Create a [Freshworks CRM](https://www.freshworks.com/freshsales-crm/){:target=_blank .external-link} account.
+สร้างบัญชี [Freshworks CRM](https://www.freshworks.com/freshsales-crm/){:target=_blank .external-link}
 
 ## Supported authentication methods
 
@@ -21,12 +21,12 @@ Create a [Freshworks CRM](https://www.freshworks.com/freshsales-crm/){:target=_b
 
 ## Related resources
 
-Refer to [Freshworks CRM's API documentation](https://developers.freshworks.com/crm/api/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Freshworks CRM's API documentation](https://developers.freshworks.com/crm/api/){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- An **API Key**: Refer to the [Freshworks CRM API authenticaton documentation](https://developers.freshworks.com/crm/api/#authentication){:target=_blank .external-link} for detailed instructions on getting your API key.
-- Your Freshworks CRM **Domain**: Use the subdomain of your Freshworks CRM account. This is part of the URL, for example `https://<subdomain>.myfreshworks.com`. So if you access Freshworks CRM through `https://n8n.myfreshworks.com`, enter `n8n` as your **Domain**.
+- **API Key**: ดูคำแนะนำโดยละเอียดเกี่ยวกับการรับ API key ของคุณได้ที่ [Freshworks CRM API authenticaton documentation](https://developers.freshworks.com/crm/api/#authentication){:target=_blank .external-link}
+- Freshworks CRM **Domain** ของคุณ: ใช้ subdomain ของบัญชี Freshworks CRM ของคุณ นี่เป็นส่วนหนึ่งของ URL ตัวอย่างเช่น `https://<subdomain>.myfreshworks.com` ดังนั้น หากคุณเข้าถึง Freshworks CRM ผ่าน `https://n8n.myfreshworks.com` ให้ป้อน `n8n` เป็น **Domain** ของคุณ
 

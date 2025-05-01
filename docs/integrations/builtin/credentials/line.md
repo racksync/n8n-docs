@@ -10,11 +10,11 @@ priority: medium
 
 <!-- vale off -->
 /// warning | Deprecated: End of service
-LINE Notify is discontinuing service as of April 1st 2025 and this node will no longer work after that date. View LINE Notify's [end of service announement](https://notify-bot.line.me/closing-announce){:target=_blank .external-link} for more information.
+LINE Notify จะยุติการให้บริการ ณ วันที่ 1 เมษายน 2025 และ node นี้จะไม่ทำงานอีกต่อไปหลังจากวันดังกล่าว ดูข้อมูลเพิ่มเติมได้ที่ [end of service announement](https://notify-bot.line.me/closing-announce){:target=_blank .external-link} ของ LINE Notify
 ///
 <!-- vale on -->
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [Line](/integrations/builtin/app-nodes/n8n-nodes-base.line.md)
 
@@ -24,33 +24,33 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Line Notify's API documentation](https://notify-bot.line.me/doc/en/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Line Notify's API documentation](https://notify-bot.line.me/doc/en/){:target=_blank .external-link}
 
 ## Using Notify OAuth2
 
-To configure this credential, you'll need a [Line](https://line.me/en/){:target=_blank .external-link} account and:
+ในการตั้งค่า credential นี้ คุณจะต้องมีบัญชี [Line](https://line.me/en/){:target=_blank .external-link} และ:
 
-- A **Client ID**
-- A **Client Secret**
+- **Client ID**
+- **Client Secret**
 
-To generate both, connect Line with [Line Notify](https://notify-bot.line.me/en/){:target=_blank .external-link}. Then:
+ในการสร้างทั้งสองอย่าง ให้เชื่อมต่อ Line กับ [Line Notify](https://notify-bot.line.me/en/){:target=_blank .external-link} จากนั้น:
 
-1. Open the Line Notify page to [add a new service](https://notify-bot.line.me/my/services/new){:target=_blank .external-link}.
-1. Enter a **Service name**. This name displays when someone tries to connect to the service.
-1. Enter a **Service description**.
-1. Enter a **Service URL**
-1. Enter your **Company/Enterprise**.
-1. Select your **Country/region**.
-1. Enter your name or team name as the **Representative**.
-1. Enter a valid **Email address**. Line will verify this email address before the service is fully registered. Use an email address you have ready access to.
-1. Copy the **OAuth Redirect URL** from your n8n credential and enter it as the **Callback URL** in Line Notify.
-1. Select **Agree and continue** to agree to the terms of service.
-1. Verify the information you entered is correct and select **Add**.
-1. Check your email and open the Line Notify Registration URL to verify your email address.
-1. Once verification is complete, open [**My services**](https://notify-bot.line.me/my/services/){:target=_blank .external-link}.
-1. Select the service you just added.
-1. Copy the **Client ID** and enter it in your n8n credential.
-1. Select the option to **Display** the **Client Secret**. Copy the **Client Secret** and enter it in your n8n credential.
-1. In n8n, select **Connect my account** and follow the on-screen prompts to finish the credential.
+1.  เปิดหน้า Line Notify เพื่อ [add a new service](https://notify-bot.line.me/my/services/new){:target=_blank .external-link}
+2.  ป้อน **Service name** ชื่อนี้จะแสดงเมื่อมีคนพยายามเชื่อมต่อกับบริการ
+3.  ป้อน **Service description**
+4.  ป้อน **Service URL**
+5.  ป้อน **Company/Enterprise** ของคุณ
+6.  เลือก **Country/region** ของคุณ
+7.  ป้อนชื่อของคุณหรือชื่อทีมเป็น **Representative**
+8.  ป้อน **Email address** ที่ถูกต้อง Line จะยืนยันที่อยู่อีเมลนี้ก่อนที่บริการจะลงทะเบียนเสร็จสมบูรณ์ ใช้อีเมลที่คุณสามารถเข้าถึงได้ทันที
+9.  คัดลอก **OAuth Redirect URL** จาก n8n credential ของคุณและป้อนเป็น **Callback URL** ใน Line Notify
+10. เลือก **Agree and continue** เพื่อยอมรับข้อกำหนดในการให้บริการ
+11. ตรวจสอบว่าข้อมูลที่คุณป้อนถูกต้องและเลือก **Add**
+12. ตรวจสอบอีเมลของคุณและเปิด Line Notify Registration URL เพื่อยืนยันที่อยู่อีเมลของคุณ
+13. เมื่อการยืนยันเสร็จสมบูรณ์ ให้เปิด [**My services**](https://notify-bot.line.me/my/services/){:target=_blank .external-link}
+14. เลือกบริการที่คุณเพิ่งเพิ่ม
+15. คัดลอก **Client ID** และป้อนลงใน n8n credential ของคุณ
+16. เลือกตัวเลือกเพื่อ **Display** **Client Secret** คัดลอก **Client Secret** และป้อนลงใน n8n credential ของคุณ
+17. ใน n8n เลือก **Connect my account** และทำตามคำแนะนำบนหน้าจอเพื่อสิ้นสุดการตั้งค่า credential
 
-Refer to the Authentication section of [Line Notify's API documentation](https://notify-bot.line.me/doc/en/){:target=_blank .external-link} for more information.
+ดูข้อมูลเพิ่มเติมได้ที่ส่วน Authentication ของ [Line Notify's API documentation](https://notify-bot.line.me/doc/en/){:target=_blank .external-link}

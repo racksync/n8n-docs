@@ -8,83 +8,67 @@ priority: medium
 
 # Dropbox credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node เหล่านี้:
 
 - [Dropbox](/integrations/builtin/app-nodes/n8n-nodes-base.dropbox.md)
 
 ## Supported authentication methods
 
-- API access token: Dropbox recommends this method for testing with your user account and granting a limited number of users access.
-- OAuth2: Dropbox recommends this method for production or for testing with more than 50 users.
+- API access token: Dropbox แนะนำวิธีนี้สำหรับการทดสอบกับบัญชีผู้ใช้ของคุณ และให้สิทธิ์การเข้าถึงแก่ผู้ใช้จำนวนจำกัด
+- OAuth2: Dropbox แนะนำวิธีนี้สำหรับ production หรือสำหรับการทดสอบกับผู้ใช้มากกว่า 50 คน
 
 /// note | App reuse
-You can transition an app from the API access token to OAuth2 by creating a new credential in n8n for OAuth2 using the same app.
+คุณสามารถเปลี่ยน app จาก API access token ไปเป็น OAuth2 ได้โดยการสร้าง credential ใหม่ใน n8n สำหรับ OAuth2 โดยใช้ app เดิม
 ///
 
 ## Related resources
 
-Refer to [Dropbox's Developer documentation](https://www.dropbox.com/developers/documentation){:target=_blank .external-link} for more information about the service.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับการใช้งาน API ได้ที่ [Dropbox's Developer documentation](https://www.dropbox.com/developers/documentation){:target=_blank .external-link}
 
 ## Using access token
 
-To configure this credential, you'll need a [Dropbox](https://www.dropbox.com/developers){:target=_blank .external-link} developer account and:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมีบัญชี [Dropbox](https://www.dropbox.com/developers){:target=_blank .external-link} developer และ:
 
-- An **Access Token**: Generated once you create a Dropbox app.
-- An **App Access Type**
+- **Access Token**: สร้างขึ้นเมื่อคุณสร้าง Dropbox app
+- **App Access Type**
 
-To set up the credential, create a Dropbox app:
+วิธีตั้งค่า credential โดยสร้าง Dropbox app:
 
-1. Open the [App Console](https://www.dropbox.com/developers/apps){:target=_blank .external-link} within the Dropbox developer portal.
-2. Select **Create app**.
-3. In **Choose an API**, select **Scoped access**.
-4. In **Choose the type of access you need**, choose whichever option best fits your use of the [Dropbox](/integrations/builtin/app-nodes/n8n-nodes-base.dropbox.md) node:
-    - **App Folder** grants access to a single folder created specifically for your app.
-    - **Full Dropbox** grants access to all files and folders in your user's Dropbox.
-    - Refer to the [DBX Platform developer guide](https://www.dropbox.com/developers/reference/developer-guide){:target=_blank .external-link} for more information.
-5. In **Name your app**, enter a name for your app, like `n8n integration`.
-6. Check the box to agree to the **Dropbox API Terms and Conditions**.
-7. Select **Create app**. The app's **Settings** open.
-8. In the **OAuth 2** section, in **Generated access token**, select **Generate**.
-9. Copy the access token and enter it as the **Access Token** in your n8n credential.
-10. In n8n, select the same **App Access Type** you selected for your app.
+1. เปิด [App Console](https://www.dropbox.com/developers/apps){:target=_blank .external-link} ใน Dropbox developer portal
+2. เลือก **Create app**
+3. ใน **Choose an API** เลือก **Scoped access**
+4. ใน **Choose the type of access you need** เลือกตัวเลือกที่เหมาะสมกับการใช้งาน [Dropbox](/integrations/builtin/app-nodes/n8n-nodes-base.dropbox.md) node ของคุณมากที่สุด:
+    - **App folder**: ให้สิทธิ์เข้าถึงเฉพาะ folder ที่สร้างขึ้นสำหรับ app ของคุณเท่านั้น
+    - **Full Dropbox**: ให้สิทธิ์เข้าถึงไฟล์ทั้งหมดในบัญชี Dropbox ของผู้ใช้
+5. ตั้งชื่อ app ของคุณ เช่น `n8n integration`
+6. เลือก **Create app** รายละเอียด app จะเปิดขึ้น
+7. ในแท็บ **Permissions** เลือก permission ที่ต้องการสำหรับ app ของคุณ n8n แนะนำให้เลือก permission เหล่านี้สำหรับ [Dropbox](/integrations/builtin/app-nodes/n8n-nodes-base.dropbox.md) node:
+    - `files.metadata.write`
+    - `files.metadata.read`
+    - `files.content.write`
+    - `files.content.read`
+    - `sharing.write`
+    - `sharing.read`
+    - `file_requests.write`
+    - `file_requests.read`
+8. เลือก **Submit** เพื่อบันทึกการเปลี่ยนแปลง permission
+9. ในแท็บ **Settings** คัดลอก **App key** และ **App secret** ไปใส่ใน n8n credential ของคุณ
+10. ในส่วน **Generated access token** เลือก **Generate** เพื่อสร้าง access token
+11. คัดลอก access token ที่สร้างขึ้นแล้วนำไปใส่ใน n8n credential ของคุณ
 
-Refer to the [Dropbox App Console Settings documentation](https://www.dropbox.com/developers/reference/getting-started){:target=_blank .external-link} for more information.
-
-/// warning | User limits
-On the **Settings** tab, you can add other users to your app, even with the access token method. Once your app links 50 Dropbox users, you will have two weeks to apply for and receive production status approval before Dropbox freezes your app from linking more users.
-///
+ดูข้อมูลเพิ่มเติมได้ที่ [Dropbox Building an App documentation](https://www.dropbox.com/developers/reference/getting-started#app){:target=_blank .external-link}
 
 ## Using OAuth2
 
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-Cloud users need to select the **App Access Type**:
+หากคุณต้องการตั้งค่า OAuth2 ด้วยตัวเอง หรือต้องการรายละเอียดเพิ่มเติมเกี่ยวกับขั้นตอน OAuth web flow คุณจะต้องสร้าง Dropbox app:
 
-- **App Folder** grants access to a single folder created specifically for your app.
-- **Full Dropbox** grants access to all files and folders in your user's Dropbox.
-- Refer to the [DBX Platform developer guide](https://www.dropbox.com/developers/reference/developer-guide){:target=_blank .external-link} for more information.
+1. ทำตามขั้นตอน 1-9 ในส่วน [Using access token](#using-access-token) ด้านบน
+2. ใน n8n คัดลอก **OAuth Callback URL**
+3. ใน Dropbox app ของคุณ ไปที่แท็บ **Settings**
+4. ในส่วน **OAuth 2** เพิ่ม **Redirect URIs** โดยใส่ URL ที่คัดลอกมาจาก n8n
+5. เลือก **Add**
+6. เลือก **Connect my account** ใน n8n และทำตามคำแนะนำบนหน้าจอเพื่อเชื่อมต่อ credential ให้เสร็จสิ้น
 
-If you're [self-hosting](/hosting/index.md) n8n, you'll need to configure OAuth2 manually:
-
-1. Open the [App Console](https://www.dropbox.com/developers/apps){:target=_blank .external-link} within the Dropbox developer portal.
-2. Select **Create app**.
-3. In **Choose an API**, select **Scoped access**.
-4. In **Choose the type of access you need**, choose whichever option best fits your use of the [Dropbox](/integrations/builtin/app-nodes/n8n-nodes-base.dropbox.md) node:
-    - **App Folder** grants access to a single folder created specifically for your app.
-    - **Full Dropbox** grants access to all files and folders in your user's Dropbox.
-    - Refer to the [DBX Platform developer guide](https://www.dropbox.com/developers/reference/developer-guide){:target=_blank .external-link} for more information.
-5. In **Name your app**, enter a name for your app, like `n8n integration`.
-6. Check the box to agree to the **Dropbox API Terms and Conditions**.
-7. Select **Create app**. The app's **Settings** open.
-8. Copy the **App key** and enter it as the **Client ID** in your n8n credential.
-9. Copy the **Secret** and enter it as the **Client Secret** in your n8n credential.
-10. In n8n, copy the **OAuth Redirect URL** and enter it in the Dropbox **Redirect URIs**.
-11. In n8n, select the same **App Access Type** you selected for your app.
-
-Refer to the instructions in the [Dropbox Implementing OAuth documentation](https://developers.dropbox.com/oauth-guide#implementing-oauth){:target=_blank .external-link} for more information.
-
-For internal tools and limited usage, you can keep your app private. But if you'd like your app to be used by more than 50 users or you want to distribute it, you'll need to complete Dropbox's production approval process. Refer to **Production Approval** in the [DBX Platform developer guide](https://www.dropbox.com/developers/reference/developer-guide){:target=_blank .external-link} for more information.
-
-/// warning | User limits
-On the **Settings** tab, you can add other users to your app. Once your app links 50 Dropbox users, you will have two weeks to apply for and receive production status approval before Dropbox freezes your app from linking more users.
-///
+ดูข้อมูลเพิ่มเติมได้ที่ [Dropbox OAuth Guide](https://www.dropbox.com/developers/reference/oauth-guide){:target=_blank .external-link}

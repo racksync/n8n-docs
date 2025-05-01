@@ -12,8 +12,8 @@ priority: medium
 
 ## Prerequisites
 
-- Create a [Carbon Black subscription](https://www.vmware.com/products/carbon-black-cloud.html){:target=_blank .external-link}.
-- Create a [Carbon Black developer account](https://developer.carbonblack.com/){:target=_blank .external-link}.
+- สมัคร [Carbon Black subscription](https://www.vmware.com/products/carbon-black-cloud.html){:target=_blank .external-link} ให้เรียบร้อยก่อน
+- สมัคร [Carbon Black developer account](https://developer.carbonblack.com/){:target=_blank .external-link} ให้เรียบร้อยก่อน
 
 ## Authentication methods
 
@@ -21,13 +21,13 @@ priority: medium
 
 ## Related resources
 
-Refer to [Carbon Black's documentation](https://developer.carbonblack.com/reference/carbon-black-cloud/cb-defense/latest/rest-api/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการได้ที่ [Carbon Black's documentation](https://developer.carbonblack.com/reference/carbon-black-cloud/cb-defense/latest/rest-api/){:target=_blank .external-link}
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/carbon-black/){:target=_blank .external-link} on n8n's website.
+นี่คือ credential-only node ดูรายละเอียดเพิ่มเติมได้ที่ [Custom API operations](/integrations/custom-operations.md) ดู [example workflows and related content](https://n8n.io/integrations/carbon-black/){:target=_blank .external-link} บนเว็บไซต์ n8n
 
 ## Using API key
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- A **URL**: This URL is determined by the environment/product URL you use. You can find it by looking at the web address of your Carbon Black Cloud console. Refer to [Carbon Black's URL Parts documentation](https://developer.carbonblack.com/reference/carbon-black-cloud/authentication#the-url-parts){:target=_blank .external-link} for more information.
-- An **Access Token**: Refer to the [Carbon Black Create an API key documentation](https://developer.carbonblack.com/reference/carbon-black-cloud/authentication#carbon-black-cloud-manages-identities-and-roles){:target=_blank .external-link} to create an API key. Add the **API Secret Key** as the **Access Token** in n8n.
+- **URL**: URL นี้กำหนดโดย environment/product URL ที่คุณใช้ คุณสามารถค้นหาได้โดยดูที่ web address ของ Carbon Black Cloud console ของคุณ ดูข้อมูลเพิ่มเติมได้ที่ [Carbon Black's URL Parts documentation](https://developer.carbonblack.com/reference/carbon-black-cloud/authentication#the-url-parts){:target=_blank .external-link}
+- **Access Token**: ดู [Carbon Black Create an API key documentation](https://developer.carbonblack.com/reference/carbon-black-cloud/authentication#carbon-black-cloud-manages-identities-and-roles){:target=_blank .external-link} เพื่อสร้าง API key เพิ่ม **API Secret Key** เป็น **Access Token** ใน n8n

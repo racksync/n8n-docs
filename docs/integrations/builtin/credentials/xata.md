@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Xata credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อ authenticate กับ node เหล่านี้:
 
 * [Xata](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryxata.md)
 
 ## Prerequisites
 
-Create a [Xata](https://xata.io/){:target=_blank .external-link} database or an account on an existing database.
+สมัคร [Xata](https://xata.io/){:target=_blank .external-link} หรือสร้าง database ใหม่ หรือใช้ database ที่มีอยู่แล้ว
 
 ## Supported authentication methods
 
@@ -21,18 +21,18 @@ Create a [Xata](https://xata.io/){:target=_blank .external-link} database or an 
 
 ## Related resources
 
-Refer to [Xata's documentation](https://xata.io/docs/rest-api/authentication){:target=_blank .external-link} for more information about the service.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับการใช้งาน API ได้ที่ [Xata's documentation](https://xata.io/docs/rest-api/authentication){:target=_blank .external-link}
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
 ## Using API key
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- The **Database Endpoint**: The Workspace API requires that you identify the database you're requesting information from using this format: `https://{workspace-display-name}-{workspace-id}.{region}.xata.sh/db/{dbname}`. Refer to [Workspace API](https://xata.io/docs/rest-api#workspace-api){:target=_blank .external-link} for more information.
-    - `{workspace-display-name}`: The workspace display name is an optional identifier you can include in your Database Endpoint. The API ignores it, but including it can make it easier to figure out which workspace this database is in if you're saving multiple credentials.
-    - `{workspace-id}`: The unique ID of the workspace, 6 alphanumeric characters.
-    - `{region}`: The hosting region for the database. This value must match the database region configuration.
-    - `{dbname}`: The name of the database you're interacting with.
-- A **Branch**: Enter the name of the GitHub branch for your database.
-- An **API Key**: To generate an API key, go to [**Account Settings**](https://app.xata.io/settings){:target=_blank .external-link} and select **+ Add a key**. Refer to [Generate an API Key](https://xata.io/docs/rest-api#generate-an-api-key){:target=_blank .external-link} for more information.
+- **Database Endpoint**: Workspace API ต้องระบุ database ที่ต้องการใช้งานในรูปแบบนี้: `https://{workspace-display-name}-{workspace-id}.{region}.xata.sh/db/{dbname}` ดูรายละเอียดที่ [Workspace API](https://xata.io/docs/rest-api#workspace-api){:target=_blank .external-link}
+    - `{workspace-display-name}`: ชื่อ workspace (ใส่หรือไม่ใส่ก็ได้) เพื่อให้ง่ายต่อการแยก workspace ถ้ามีหลาย credentials
+    - `{workspace-id}`: รหัส workspace เป็นตัวอักษรและตัวเลข 6 ตัว
+    - `{region}`: region ที่ database ถูก deploy อยู่ ต้องตรงกับที่ตั้ง database
+    - `{dbname}`: ชื่อ database ที่ต้องการใช้งาน
+- **Branch**: ใส่ชื่อ branch ของ GitHub ที่ใช้กับ database ของคุณ
+- **API Key**: สร้าง API key ได้ที่ [**Account Settings**](https://app.xata.io/settings){:target=_blank .external-link} แล้วเลือก **+ Add a key** ดูรายละเอียดที่ [Generate an API Key](https://xata.io/docs/rest-api#generate-an-api-key){:target=_blank .external-link}

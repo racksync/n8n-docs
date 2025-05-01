@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Bitly credentials
 
-You can use these credentials to authenticate the following node:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node ต่อไปนี้:
 
 - [Bitly](/integrations/builtin/app-nodes/n8n-nodes-base.bitly.md)
 
 ## Prerequisites
 
-Create a [Bitly](https://www.bitly.com/){:target=_blank .external-link} account.
+สมัคร [Bitly](https://www.bitly.com/){:target=_blank .external-link} ให้เรียบร้อยก่อน
 
 ## Supported authentication methods
 
@@ -22,18 +22,18 @@ Create a [Bitly](https://www.bitly.com/){:target=_blank .external-link} account.
 
 ## Related resources
 
-Refer to [Bitly's API documentation](https://dev.bitly.com/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการได้ที่ [Bitly's API documentation](https://dev.bitly.com/){:target=_blank .external-link}
 
 ## Using API token
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- An **Access Token**: Once logged in, visit [Settings > Developer Settings > API](https://app.bitly.com/settings/api/){:target=_blank .external-link} to generate an Access Token.
+- **Access Token**: เมื่อล็อกอินแล้ว ไปที่ [Settings > Developer Settings > API](https://app.bitly.com/settings/api/){:target=_blank .external-link} เพื่อสร้าง Access Token
 
 
 ## Using OAuth2
 
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-If you need to configure OAuth2 from scratch or need more detail on what's happening in the OAuth web flow, refer to the [Bitly API Authentication documentation](https://dev.bitly.com/docs/getting-started/authentication/){:target=_blank .external-link} for more information.
+หากคุณต้องการตั้งค่า OAuth2 ด้วยตัวเอง หรือต้องการรายละเอียดเพิ่มเติมเกี่ยวกับขั้นตอน OAuth web flow โปรดดูข้อมูลเพิ่มเติมได้ที่ [Bitly API Authentication documentation](https://dev.bitly.com/docs/getting-started/authentication/){:target=_blank .external-link}
 

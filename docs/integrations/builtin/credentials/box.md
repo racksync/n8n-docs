@@ -7,14 +7,14 @@ contentType: [integration, reference]
 
 # Box credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node เหล่านี้:
 
 - [Box](/integrations/builtin/app-nodes/n8n-nodes-base.box.md)
 - [Box Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.boxtrigger.md)
 
 ## Prerequisites
 
-Create a [Box](https://www.box.com/) account.
+สมัคร [Box](https://www.box.com/) ให้เรียบร้อยก่อน
 
 ## Supported authentication methods
 
@@ -22,11 +22,11 @@ Create a [Box](https://www.box.com/) account.
 
 ## Related resources
 
-Refer to [Box's API documentation](https://developer.box.com/reference/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการได้ที่ [Box's API documentation](https://developer.box.com/reference/){:target=_blank .external-link}
 
 ## Using OAuth2
 
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-If you need to configure OAuth2 from scratch or need more detail on what's happening in the OAuth web flow, you'll need to create a Custom App. Refer to the [Box OAuth2 Setup documentation](https://developer.box.com/guides/authentication/oauth2/oauth2-setup/){:target=_blank .external-link} for more information.
+หากคุณต้องการตั้งค่า OAuth2 ด้วยตัวเอง หรือต้องการรายละเอียดเพิ่มเติมเกี่ยวกับขั้นตอน OAuth web flow คุณจะต้องสร้าง Custom App ดูข้อมูลเพิ่มเติมได้ที่ [Box OAuth2 Setup documentation](https://developer.box.com/guides/authentication/oauth2/oauth2-setup/){:target=_blank .external-link}
 

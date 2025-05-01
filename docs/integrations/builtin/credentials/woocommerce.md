@@ -8,15 +8,15 @@ priority: medium
 
 # WooCommerce credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้:
 
 - [WooCommerce](/integrations/builtin/app-nodes/n8n-nodes-base.woocommerce.md)
 - [WooCommerce Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.woocommercetrigger.md)
 
 ## Prerequisites
 
-- Install the [WooCommerce](https://woocommerce.com/){:target=_blank .external-link} plugin on your WordPress website.
-- In WordPress, go to **Settings > Permalinks** and set your WordPress permalinks to use something other than **Plain**.
+- ติดตั้ง [WooCommerce](https://woocommerce.com/){:target=_blank .external-link} plugin บนเว็บไซต์ WordPress ของคุณ
+- ใน WordPress ไปที่ **Settings > Permalinks** แล้วตั้งค่า permalinks ของ WordPress ให้ใช้แบบอื่นที่ไม่ใช่ **Plain**
 
 ## Supported authentication methods
 
@@ -24,30 +24,30 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [WooCommerce's REST API documentation](https://developer.woocommerce.com/docs/getting-started-with-the-woocommerce-rest-api/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [WooCommerce's REST API documentation](https://developer.woocommerce.com/docs/getting-started-with-the-woocommerce-rest-api/){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ในการตั้งค่า credential นี้ คุณจะต้องมี:
 
-- A **Consumer Key**: Created when you generate an API key.
-- A **Consumer Secret**: Created when you generate an API key.
-- A **WooCommerce URL**
+- **Consumer Key**: สร้างขึ้นเมื่อคุณ generate API key
+- **Consumer Secret**: สร้างขึ้นเมื่อคุณ generate API key
+- **WooCommerce URL**
 
-To generate an API key and set up your credential:
+วิธีสร้าง API key และตั้งค่า credential:
 
-1. Go to **WooCommerce > Settings > Advanced > Rest API > Add key**.
-2. Select **Read/Write** from the **Permissions** dropdown.
-3. Copy the generated **Consumer Key** and **Consumer Secret** and enter them into your n8n credentials.
-4. Enter your WordPress site URL as the **WooCommerce URL**.
-5. By default, n8n passes your credential details in the Authorization header. If you need to pass them as query string parameters instead, turn on **Include Credentials in Query**.
+1. ไปที่ **WooCommerce > Settings > Advanced > Rest API > Add key**
+2. เลือก **Read/Write** ที่ **Permissions**
+3. คัดลอก **Consumer Key** และ **Consumer Secret** ที่ได้มาใส่ใน n8n credentials
+4. ใส่ URL เว็บไซต์ WordPress ของคุณใน **WooCommerce URL**
+5. โดยปกติ n8n จะส่งข้อมูล credential ผ่าน Authorization header ถ้าคุณต้องการส่งผ่าน query string parameter ให้เปิด **Include Credentials in Query**
 
-Refer to [Generate Keys](https://developer.woocommerce.com/docs/getting-started-with-the-woocommerce-rest-api/#3-generate-keys){:target=_blank .external-link} for more information.
+ดูรายละเอียดเพิ่มเติมได้ที่ [Generate Keys](https://developer.woocommerce.com/docs/getting-started-with-the-woocommerce-rest-api/#3-generate-keys){:target=_blank .external-link}
 
 ## Resolve "Consumer key is missing" error
 
-When you try to connect your credentials, you may receive an error like this: `Consumer key is missing`.
+ถ้าคุณเชื่อมต่อ credential แล้วเจอ error ประมาณนี้: `Consumer key is missing`
 
-This occurs when the server can't parse the Authorization header details when authenticating over SSL.
+สาเหตุเกิดจาก server ไม่สามารถอ่าน Authorization header ได้เมื่อยืนยันตัวตนผ่าน SSL
 
-To resolve it, turn on the **Include Credentials in Query** toggle to pass the consumer key/secret as query string parameters instead and retry the credential.
+วิธีแก้ไข ให้เปิด toggle **Include Credentials in Query** เพื่อส่ง consumer key/secret ผ่าน query string แทน แล้วลองเชื่อมต่อ credential ใหม่อีกครั้ง

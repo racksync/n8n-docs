@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Philips Hue credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [Philips Hue](/integrations/builtin/app-nodes/n8n-nodes-base.philipshue.md)
 
 ## Prerequisites
 
-Create a [Philips Hue](https://www.philips-hue.com/en-us){:target=_blank .external-link} account.
+สร้าง [Philips Hue](https://www.philips-hue.com/en-us){:target=_blank .external-link} account
 
 ## Supported authentication methods
 
@@ -21,19 +21,19 @@ Create a [Philips Hue](https://www.philips-hue.com/en-us){:target=_blank .extern
 
 ## Related resources
 
-Refer to [Philips Hue's CLIP API documentation](https://developers.meethue.com/develop/hue-api-v2/api-reference/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Philips Hue's CLIP API documentation](https://developers.meethue.com/develop/hue-api-v2/api-reference/){:target=_blank .external-link}
 
 ## Using OAuth2
 
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-If you're using the built-in OAuth connection, you don't need to enter an **APP ID**.
+หากคุณใช้การเชื่อมต่อ OAuth ในตัว คุณไม่จำเป็นต้องกรอก **APP ID**
 
-If you need to configure OAuth2 from scratch, you'll need a [Philips Hue developer](https://developers.meethue.com/){:target=_blank .external-link} account
+หากคุณต้องการกำหนดค่า OAuth2 ตั้งแต่ต้น คุณจะต้องมี [Philips Hue developer](https://developers.meethue.com/){:target=_blank .external-link} account
 
-Create a new remote app on the [Add new Hue Remote API app](https://developers.meethue.com/add-new-hue-remote-api-app/) page.
+สร้าง remote app ใหม่บนหน้า [Add new Hue Remote API app](https://developers.meethue.com/add-new-hue-remote-api-app/)
 
-Use these settings for your app:
+ใช้การตั้งค่าเหล่านี้สำหรับ app ของคุณ:
 
-- Copy the **OAuth Callback URL** from n8n and add it as a **Callback URL**.
-- Copy the **AppId**, **ClientId**, and **ClientSecret** and enter these in the corresponding fields in n8n.
+- คัดลอก **OAuth Callback URL** จาก n8n และเพิ่มเป็น **Callback URL**
+- คัดลอก **AppId**, **ClientId** และ **ClientSecret** และกรอกลงในฟิลด์ที่เกี่ยวข้องใน n8n

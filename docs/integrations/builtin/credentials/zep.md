@@ -8,7 +8,7 @@ priority: medium
 
 # Zep credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อ authenticate กับ node เหล่านี้:
 
 * [Zep](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryzep.md)
 * [Zep Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorezep.md)
@@ -19,35 +19,35 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Zep's Cloud SDK documentation](https://help.getzep.com/sdks){:target=_blank .external-link} and [Open Source SDK documentation](https://docs.getzep.com/sdk/){:target=_blank .external-link} for more information about the service. Refer to [Zep's REST API documentation](https://getzep.github.io/zep/){:target=_blank .external-link} for information about the API.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับการใช้งาน SDK ได้ที่ [Zep's Cloud SDK documentation](https://help.getzep.com/sdks){:target=_blank .external-link} และ [Open Source SDK documentation](https://docs.getzep.com/sdk/){:target=_blank .external-link} สำหรับ REST API ดูที่ [Zep's REST API documentation](https://getzep.github.io/zep/){:target=_blank .external-link}
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
 ## Using API key
 
-To configure this credential, you'll need a [Zep server](https://www.getzep.com/){:target=_blank .external-link} with at least one project and:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี [Zep server](https://www.getzep.com/){:target=_blank .external-link} ที่มี project อย่างน้อย 1 อัน และ:
 
-- An **API URL**
-- An **API Key**
+- **API URL**
+- **API Key**
 
-Setup depends on whether you're using Zep Cloud or self-hosted Zep Open Source.
+วิธี setup ขึ้นอยู่กับว่าคุณใช้ Zep Cloud หรือ self-hosted Zep Open Source
 
 ### Zep Cloud setup
 
-Follow these instructions if you're using [Zep Cloud](https://app.getzep.com){:target=_blank .external-link}:
+ถ้าใช้ [Zep Cloud](https://app.getzep.com){:target=_blank .external-link} ให้ทำตามนี้:
 
-1. In Zep, open the [**Project Settings**](https://app.getzep.com/projects){:target=_blank .external-link}.
-2. In the **Project Keys** section, select **Add Key**.
-3. Enter a **Key Name**, like `n8n integration`.
-4. Select **Create**.
-5. Copy the key and enter it in your n8n integration as the **API Key**.
-6. Turn on the **Cloud** toggle.
+1. ใน Zep ให้เข้า [**Project Settings**](https://app.getzep.com/projects){:target=_blank .external-link}
+2. ที่ **Project Keys** เลือก **Add Key**
+3. ตั้งชื่อ key เช่น `n8n integration`
+4. กด **Create**
+5. คัดลอก key ไปใส่ใน n8n integration เป็น **API Key**
+6. เปิด **Cloud** toggle
 
 ### Self-hosted Zep Open Source setup
 
-Follow these instructions if you're self-hosting [Zep Open Source](https://docs.getzep.com/deployment/quickstart/){:target=_blank .external-link}:
+ถ้าใช้ [Zep Open Source](https://docs.getzep.com/deployment/quickstart/){:target=_blank .external-link} แบบ self-host ให้ทำตามนี้:
 
-1. Enter the JWT token for your Zep server as the **API Key** in n8n.
-    - If you haven't generated a JWT token for your Zep server before, refer to Zep's [Configuring Authentication](https://docs.getzep.com/deployment/auth/){:target=_blank .external-link} for instructions.
-2. Make sure the **Cloud** toggle is off.
-3. Enter the URL for your Zep server as the **API URL**.
+1. ใส่ JWT token ของ Zep server เป็น **API Key** ใน n8n
+    - ถ้ายังไม่เคยสร้าง JWT token ดูวิธีที่ [Configuring Authentication](https://docs.getzep.com/deployment/auth/){:target=_blank .external-link}
+2. ปิด **Cloud** toggle
+3. ใส่ URL ของ Zep server เป็น **API URL**

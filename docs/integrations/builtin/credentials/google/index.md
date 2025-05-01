@@ -7,26 +7,26 @@ contentType: overview
 
 # Google credentials
 
-This section contains:
+ส่วนนี้ประกอบด้วย:
 
-* [OAuth2 single service](/integrations/builtin/credentials/google/oauth-single-service.md): Create an OAuth2 credential for a specific service node, such as the Gmail node.
-* [OAuth2 generic](/integrations/builtin/credentials/google/oauth-generic.md): Create an OAuth2 credential for use with [custom operations](/integrations/custom-operations.md).
-* [Service Account](/integrations/builtin/credentials/google/service-account.md): Create a [Service Account](https://cloud.google.com/iam/docs/service-account-overview){:target=_blank .external-link} credential for some specific service nodes.
-* [Google PaLM and Gemini](/integrations/builtin/credentials/googleai.md): Get a Google Gemini/Google PaLM API key.
+* [OAuth2 single service](/integrations/builtin/credentials/google/oauth-single-service.md): สร้าง OAuth2 credential สำหรับ node บริการเฉพาะ เช่น node Gmail
+* [OAuth2 generic](/integrations/builtin/credentials/google/oauth-generic.md): สร้าง OAuth2 credential สำหรับใช้กับ [custom operations](/integrations/custom-operations.md)
+* [Service Account](/integrations/builtin/credentials/google/service-account.md): สร้าง [Service Account](https://cloud.google.com/iam/docs/service-account-overview){:target=_blank .external-link} credential สำหรับ node บริการเฉพาะบางตัว
+* [Google PaLM and Gemini](/integrations/builtin/credentials/googleai.md): รับ Google Gemini/Google PaLM API key
 
 
 ## OAuth2 and Service Account
 
-There are two authentication methods available for Google services nodes:
+มีวิธีการยืนยันตัวตนสองวิธีสำหรับ node บริการของ Google:
 
-* [OAuth2](https://developers.google.com/identity/protocols/oauth2){:target=_blank .external-link}: Recommended because it's more widely available and easier to set up.
-* [Service Account](https://cloud.google.com/iam/docs/understanding-service-accounts){:target=_blank .external-link}: Refer to the [Google documentation: Understanding service accounts](https://cloud.google.com/iam/docs/understanding-service-accounts){:target=_blank .external-link} for guidance on when you need a service account.
+* [OAuth2](https://developers.google.com/identity/protocols/oauth2){:target=_blank .external-link}: แนะนำเนื่องจากมีการใช้งานที่กว้างขวางกว่าและตั้งค่าได้ง่ายกว่า
+* [Service Account](https://cloud.google.com/iam/docs/understanding-service-accounts){:target=_blank .external-link}: อ้างอิงเอกสาร [Google documentation: Understanding service accounts](https://cloud.google.com/iam/docs/understanding-service-accounts){:target=_blank .external-link} สำหรับคำแนะนำเกี่ยวกับเวลาที่คุณต้องการ Service Account
 
 --8<-- "_snippets/integrations/managed-google-oauth.md"
 
 ## Compatible nodes
 
-Once configured, you can use your credentials to authenticate the following nodes. Most nodes are compatible with OAuth2 authentication. Support for Service Account authentication is limited.
+เมื่อกำหนดค่าแล้ว คุณสามารถใช้ credentials ของคุณเพื่อยืนยันตัวตน node ต่อไปนี้ Node ส่วนใหญ่เข้ากันได้กับการยืนยันตัวตนแบบ OAuth2 การรองรับการยืนยันตัวตนแบบ Service Account มีจำกัด
 
 
 | Node | OAuth | Service Account |
@@ -55,7 +55,7 @@ Once configured, you can use your credentials to authenticate the following node
 | [YouTube](/integrations/builtin/app-nodes/n8n-nodes-base.youtube.md) | :white_check_mark: | :x: |
 
 /// warning | Gmail and Service Accounts
-Google technically supports Service Accounts for use with Gmail, but it requires enabling domain-wide delegation, which Google discourages, and its behavior can be inconsistent.
+ทางเทคนิคแล้ว Google รองรับ Service Accounts สำหรับใช้กับ Gmail แต่ต้องเปิดใช้งาน domain-wide delegation ซึ่ง Google ไม่แนะนำ และพฤติกรรมอาจไม่สอดคล้องกัน
 
-n8n recommends using OAuth2 with the Gmail node.
+n8n แนะนำให้ใช้ OAuth2 กับ node Gmail
 ///

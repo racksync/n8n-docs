@@ -7,14 +7,14 @@ contentType: [integration, reference]
 
 # Azure Storage credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node เหล่านี้:
 
 * [Azure Storage](/integrations/builtin/app-nodes/n8n-nodes-base.azurestorage.md)
 
 ## Prerequisites
 
-* Create an [Azure](https://azure.microsoft.com) subscription.
-* Create an [Azure storage account](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create).
+* สมัคร [Azure](https://azure.microsoft.com) subscription
+* สร้าง [Azure storage account](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create)
 
 ## Supported authentication methods
 
@@ -23,62 +23,62 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Azure Storage's API documentation](https://learn.microsoft.com/en-us/rest/api/storageservices/) for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการได้ที่ [Azure Storage's API documentation](https://learn.microsoft.com/en-us/rest/api/storageservices/)
 
 ## Using OAuth2
 
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-For self-hosted users, there are two main steps to configure OAuth2 from scratch:
+สำหรับผู้ใช้ self-hosted มีสองขั้นตอนหลักในการตั้งค่า OAuth2 ด้วยตัวเอง:
 
-1. [Register an application](#register-an-application) with the Microsoft Identity Platform.
-2. [Generate a client secret](#generate-a-client-secret) for that application.
+1. [ลงทะเบียน application](#register-an-application) กับ Microsoft Identity Platform
+2. [สร้าง client secret](#generate-a-client-secret) สำหรับ application นั้น
 
-Follow the detailed instructions for each step below. For more detail on the Microsoft OAuth2 web flow, refer to [Microsoft authentication and authorization basics](https://learn.microsoft.com/en-us/graph/auth/auth-concepts). 
+ทำตามคำแนะนำโดยละเอียดสำหรับแต่ละขั้นตอนด้านล่าง สำหรับรายละเอียดเพิ่มเติมเกี่ยวกับ Microsoft OAuth2 web flow โปรดดูที่ [Microsoft authentication and authorization basics](https://learn.microsoft.com/en-us/graph/auth/auth-concepts)
 
 ### Register an application
 
-Register an application with the Microsoft Identity Platform:
+ลงทะเบียน application กับ Microsoft Identity Platform:
 
-1. Open the [Microsoft Application Registration Portal](https://aka.ms/appregistrations).
-2. Select **Register an application**.
-3. Enter a **Name** for your app.
-4. In **Supported account types**, select **Accounts in any organizational directory (Any Azure AD directory - Multi-tenant) and personal Microsoft accounts (for example, Skype, Xbox)**.
-5. In **Register an application**:
-    1. Copy the **OAuth Callback URL** from your n8n credential.
-    2. Paste it into the **Redirect URI (optional)** field.
-    3. Select **Select a platform** > **Web**.
-6. Select **Register** to finish creating your application.
-7. Copy the **Application (client) ID** and paste it into n8n as the **Client ID**.
+1. เปิด [Microsoft Application Registration Portal](https://aka.ms/appregistrations)
+2. เลือก **Register an application**
+3. ป้อน **Name** สำหรับ app ของคุณ
+4. ใน **Supported account types** เลือก **Accounts in any organizational directory (Any Azure AD directory - Multi-tenant) and personal Microsoft accounts (for example, Skype, Xbox)**
+5. ใน **Register an application**:
+    1. คัดลอก **OAuth Callback URL** จาก n8n credential ของคุณ
+    2. วางลงในฟิลด์ **Redirect URI (optional)**
+    3. เลือก **Select a platform** > **Web**
+6. เลือก **Register** เพื่อสร้าง application ของคุณให้เสร็จสิ้น
+7. คัดลอก **Application (client) ID** และวางลงใน n8n เป็น **Client ID**
 
-Refer to [Register an application with the Microsoft Identity Platform](https://learn.microsoft.com/en-us/graph/auth-register-app-v2) for more information.
+ดูข้อมูลเพิ่มเติมได้ที่ [Register an application with the Microsoft Identity Platform](https://learn.microsoft.com/en-us/graph/auth-register-app-v2)
 
 ### Generate a client secret
 
-With your application created, generate a client secret for it:
+เมื่อสร้าง application ของคุณแล้ว ให้สร้าง client secret สำหรับมัน:
 
-1. On your Microsoft application page, select **Certificates & secrets** in the left navigation.
-1. In **Client secrets**, select **+ New client secret**.
-1. Enter a **Description** for your client secret, such as `n8n credential`.
-1. Select **Add**.
-1. Copy the **Secret** in the **Value** column.
-1. Paste it into n8n as the **Client Secret**.
-1. Select **Connect my account** in n8n to finish setting up the connection.
-1. Log in to your Microsoft account and allow the app to access your info.
+1. บนหน้า Microsoft application ของคุณ เลือก **Certificates & secrets** ในการนำทางด้านซ้าย
+1. ใน **Client secrets** เลือก **+ New client secret**
+1. ป้อน **Description** สำหรับ client secret ของคุณ เช่น `n8n credential`
+1. เลือก **Add**
+1. คัดลอก **Secret** ในคอลัมน์ **Value**
+1. วางลงใน n8n เป็น **Client Secret**
+1. เลือก **Connect my account** ใน n8n เพื่อตั้งค่าการเชื่อมต่อให้เสร็จสิ้น
+1. ล็อกอินเข้าบัญชี Microsoft ของคุณและอนุญาตให้ app เข้าถึงข้อมูลของคุณ
 
-Refer to Microsoft's [Add credentials](https://learn.microsoft.com/en-us/graph/auth-register-app-v2#add-credentials) for more information on adding a client secret.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับการเพิ่ม client secret ได้ที่ [Add credentials](https://learn.microsoft.com/en-us/graph/auth-register-app-v2#add-credentials) ของ Microsoft
 
 ## Using Shared Key
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-* An **Account**: The name of your Azure Storage account.
-* A **Key**: A shared key for your Azure Storage account. Select **Security + networking** and then **Access keys**. You can use either of the two account keys for this purpose.
+* **Account**: ชื่อของ Azure Storage account ของคุณ
+* **Key**: shared key สำหรับ Azure Storage account ของคุณ เลือก **Security + networking** แล้วเลือก **Access keys** คุณสามารถใช้ key บัญชีใดก็ได้จากสอง key สำหรับวัตถุประสงค์นี้
 
-Refer to [Manage storage account access keys | Microsoft](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-keys-manage) for more detailed steps.
+ดูขั้นตอนโดยละเอียดเพิ่มเติมได้ที่ [Manage storage account access keys | Microsoft](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-keys-manage)
 
 ## Common issues
 
-Here are the known common errors and issues with Azure Storage credentials.
+นี่คือข้อผิดพลาดและปัญหาทั่วไปที่ทราบเกี่ยวกับ Azure Storage credentials
 
 --8<-- "_snippets/integrations/builtin/credentials/microsoft-need-admin-approval.md"

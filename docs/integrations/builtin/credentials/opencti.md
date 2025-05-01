@@ -11,7 +11,7 @@ contentType: [integration, reference]
 
 ## Prerequisites
 
-Create an [OpenCTI](https://filigran.io/solutions/open-cti/){:target=_blank .external-link} developer account.
+สร้างบัญชีนักพัฒนา [OpenCTI](https://filigran.io/solutions/open-cti/){:target=_blank .external-link}
 
 ## Authentication methods
 
@@ -19,12 +19,12 @@ Create an [OpenCTI](https://filigran.io/solutions/open-cti/){:target=_blank .ext
 
 ## Related resources
 
-Refer to [OpenCTI's documentation](https://docs.opencti.io/latest/){:target=_blank .external-link} for more information about the service.
+อ้างอิง [OpenCTI's documentation](https://docs.opencti.io/latest/){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/opencti/){:target=_blank .external-link} on n8n's website.
+นี่คือ node สำหรับ credential เท่านั้น อ้างอิง [Custom API operations](/integrations/custom-operations.md) เพื่อเรียนรู้เพิ่มเติม ดู [example workflows and related content](https://n8n.io/integrations/opencti/){:target=_blank .external-link} บนเว็บไซต์ของ n8n
 
 ## Using API key
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- An **API Key**: To get your API key, go to your **Profile > API access**. Refer to the OpenCTI [Integrations Authentication documentation](https://docs.opencti.io/latest/deployment/integrations/#authentication){:target=_blank .external-link} for more information.
+- **API Key**: หากต้องการรับ API key ของคุณ ให้ไปที่ **Profile > API access** อ้างอิงเอกสาร OpenCTI [Integrations Authentication documentation](https://docs.opencti.io/latest/deployment/integrations/#authentication){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม

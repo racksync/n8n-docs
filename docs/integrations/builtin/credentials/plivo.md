@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Plivo credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [Plivo](/integrations/builtin/app-nodes/n8n-nodes-base.plivo.md)
 
 ## Prerequisites
 
-Create a [Plivo](https://www.plivo.com/){:target=_blank .external-link} account.
+สร้าง [Plivo](https://www.plivo.com/){:target=_blank .external-link} account
 
 ## Supported authentication methods
 
@@ -21,14 +21,14 @@ Create a [Plivo](https://www.plivo.com/){:target=_blank .external-link} account.
 
 ## Related resources
 
-Refer to [Plivo's API documentation](https://www.plivo.com/docs/voice/api/overview/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Plivo's API documentation](https://www.plivo.com/docs/voice/api/overview/){:target=_blank .external-link}
 
 ## Using basic auth
 
-To configure this credential, you'll need:
+สำหรับการตั้งค่า credentials นี้ คุณจะต้องมี:
 
-- An **Auth ID**: Acts like your username. Copy yours from the **Overview** page of the Plivo [console](https://console.plivo.com/dashboard/){:target=_blank .external-link}.
-- An **Auth Token**: Acts like a password. Copy yours from the **Overview** page of the Plivo [console](https://console.plivo.com/dashboard/){:target=_blank .external-link}.
+- **Auth ID**: ใช้เหมือน username ของคุณ สามารถ copy ได้จากหน้า **Overview** ใน Plivo [console](https://console.plivo.com/dashboard/){:target=_blank .external-link}
+- **Auth Token**: ใช้เหมือน password ของคุณ สามารถ copy ได้จากหน้า **Overview** ใน Plivo [console](https://console.plivo.com/dashboard/){:target=_blank .external-link}
 
-Refer to [How can I change my Auth ID or Auth Token?](https://support.plivo.com/hc/en-us/articles/360041731231-How-can-I-change-my-Auth-ID-or-Auth-Token){:target=_blank .external-link} for more detailed instructions.
+ดูวิธีเปลี่ยน Auth ID หรือ Auth Token ได้ที่ [How can I change my Auth ID or Auth Token?](https://support.plivo.com/hc/en-us/articles/360041731231-How-can-I-change-my-Auth-ID-or-Auth-Token){:target=_blank .external-link}
 

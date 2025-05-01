@@ -8,14 +8,14 @@ priority: high
 
 # Supabase credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [Supabase](/integrations/builtin/app-nodes/n8n-nodes-base.supabase/index.md)
 - [Supabase Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase.md)
 
 ## Prerequisites
 
-Create a [Supabase](https://supabase.com/dashboard/sign-up){:target=_blank .external-link} account.
+สร้างบัญชี [Supabase](https://supabase.com/dashboard/sign-up){:target=_blank .external-link} ก่อน
 
 ## Supported authentication methods
 
@@ -23,22 +23,22 @@ Create a [Supabase](https://supabase.com/dashboard/sign-up){:target=_blank .exte
 
 ## Related resources
 
-Refer to [Supabase's API documentation](https://supabase.com/docs/guides/api){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Supabase's API documentation](https://supabase.com/docs/guides/api){:target=_blank .external-link}
 
 ## Using access token
 
-To configure this credential, you'll need:
+ในการตั้งค่า credentials นี้ คุณจะต้องมี:
 
-- A **Host**
-- A **Service Role Secret**
+- **Host**
+- **Service Role Secret**
 
-To generate your API Key:
+วิธีสร้าง API Key:
 
 <!-- vale off -->
 
-1. In your Supabase account, go to the **Dashboard** and create or select a project for which you want to create an API key.
-2. Go to [**Project Settings > API**](https://supabase.com/dashboard/project/_/settings/api){:target=_blank .external-link} to see the API Settings for your project.
-3. Copy the **URL** from the **Project URL** section and enter it as your n8n **Host**. Refer to [API URL and keys](https://supabase.com/docs/guides/api#api-url-and-keys){:target=_blank .external-link} for more detailed instruction.
-4. Reveal and copy the **Project API key** for the `service_role`. Copy that key and enter it as your n8n **Service Role Secret**. Refer to [Understanding API Keys](https://supabase.com/docs/guides/api/api-keys){:target=_blank .external-link} for more information on the `service_role` privileges.
+1. ในบัญชี Supabase ของคุณ ไปที่ **Dashboard** แล้วสร้างหรือเลือกโปรเจกต์ที่ต้องการสร้าง API key
+2. ไปที่ [**Project Settings > API**](https://supabase.com/dashboard/project/_/settings/api){:target=_blank .external-link} เพื่อดู API Settings ของโปรเจกต์
+3. คัดลอก **URL** จากส่วน **Project URL** แล้วนำไปใส่ใน n8n เป็น **Host** ดูรายละเอียดได้ที่ [API URL and keys](https://supabase.com/docs/guides/api#api-url-and-keys){:target=_blank .external-link}
+4. กด Reveal แล้วคัดลอก **Project API key** สำหรับ `service_role` แล้วนำไปใส่ใน n8n เป็น **Service Role Secret** ดูข้อมูลเพิ่มเติมเกี่ยวกับสิทธิ์ของ `service_role` ได้ที่ [Understanding API Keys](https://supabase.com/docs/guides/api/api-keys){:target=_blank .external-link}
 <!-- vale on -->
 

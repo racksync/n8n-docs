@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Zoho credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node เหล่านี้:
 
 - [Zoho CRM](/integrations/builtin/app-nodes/n8n-nodes-base.zohocrm.md)
 
 ## Prerequisites
 
-Create a [Zoho](https://www.zoho.com/){:target=_blank .external-link} account.
+สมัคร [Zoho](https://www.zoho.com/){:target=_blank .external-link} ให้เรียบร้อยก่อน
 
 ## Supported authentication methods
 
@@ -21,28 +21,28 @@ Create a [Zoho](https://www.zoho.com/){:target=_blank .external-link} account.
 
 ## Related resources
 
-Refer to [Zoho's CRM API documentation](https://www.zoho.com/crm/developer/docs/api/v3/){:target=_blank .external-link} for more information about the service.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับการใช้งาน API ได้ที่ [Zoho's CRM API documentation](https://www.zoho.com/crm/developer/docs/api/v3/){:target=_blank .external-link}
 
 ## Using OAuth2
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- An **Access Token URL**: Zoho provides region-specific access token URLs. Select the region that best fits your Zoho data center:
-    - **AU**: Select this option for Australia data center.
-    - **CN**: Select this option for Canada data center.
-    - **EU**: Select this option for the European Union data center.
-    - **IN**: Select this option for the India data center.
-    - **US**: Select this option for the United States data center.
+- **Access Token URL**: Zoho มี Access Token URL แยกตาม region ให้เลือก region ที่ตรงกับ data center ของคุณ:
+    - **AU**: สำหรับ Australia data center
+    - **CN**: สำหรับ Canada data center
+    - **EU**: สำหรับ European Union data center
+    - **IN**: สำหรับ India data center
+    - **US**: สำหรับ United States data center
 
-Refer to [Multi DC](https://www.zoho.com/crm/developer/docs/api/v3/multi-dc.html){:target=_blank .external-link} for more information about selecting a data center.
+ดูรายละเอียดเพิ่มเติมที่ [Multi DC](https://www.zoho.com/crm/developer/docs/api/v3/multi-dc.html){:target=_blank .external-link}
 
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-If you need to configure OAuth2 from scratch, [register an application](https://www.zoho.com/accounts/protocol/oauth-setup.html){:target=_blank .external-link} with Zoho.
+ถ้าต้องการตั้งค่า OAuth2 เอง ให้ [register an application](https://www.zoho.com/accounts/protocol/oauth-setup.html){:target=_blank .external-link} กับ Zoho
 
-Use these settings for your application:
+ใช้ค่าต่อไปนี้ในการตั้งค่า application:
 
-- Select **Server-based Applications** as the **Client Type**.
-- Copy the **OAuth Callback URL** from n8n and enter it in the Zoho **Authorized Redirect URIs** field.
-- Copy the **Client ID** and **Client Secret** from the application and enter them in your n8n credential.
+- เลือก **Server-based Applications** เป็น **Client Type**
+- คัดลอก **OAuth Callback URL** จาก n8n ไปใส่ใน Zoho **Authorized Redirect URIs**
+- คัดลอก **Client ID** และ **Client Secret** จาก application ไปใส่ใน n8n credential
 

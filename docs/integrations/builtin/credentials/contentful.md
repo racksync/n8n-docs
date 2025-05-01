@@ -7,14 +7,14 @@ contentType: [integration, reference]
 
 # Contentful credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node เหล่านี้:
 
 - [Contentful](/integrations/builtin/app-nodes/n8n-nodes-base.contentful.md)
 
 ## Prerequisites
 
-- Create a [Contentful](https://www.contentful.com/){:target=_blank .external-link} account.
-- Create a [Contentful space](https://www.contentful.com/help/contentful-101/#step-2-create-a-space){:target=_blank .external-link}.
+- สมัคร [Contentful](https://www.contentful.com/){:target=_blank .external-link} ให้เรียบร้อยก่อน
+- สร้าง [Contentful space](https://www.contentful.com/help/contentful-101/#step-2-create-a-space){:target=_blank .external-link}
 
 ## Supported authentication methods
 
@@ -22,15 +22,15 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Contentful's API documentation](https://www.contentful.com/developers/docs/references/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการได้ที่ [Contentful's API documentation](https://www.contentful.com/developers/docs/references/){:target=_blank .external-link}
 
 ## Using API access token
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- Your Contentful **Space ID**: The Space ID displays as you generate the tokens;  You can also refer to the [Contentful Find space ID documentation](https://www.contentful.com/help/find-space-id/){:target=_blank .external-link} to view the Space ID.
-- A **Content Delivery API Access Token**: Required if you want to use the [Content Delivery API](https://www.contentful.com/developers/docs/references/content-delivery-api/){:target=_blank .external-link}. Leave blank if you don't intend to use this API.
-- A **Content Preview API Access Token**: Required if you want to use the [Content Preview API](https://www.contentful.com/developers/docs/references/content-preview-api/){:target=_blank .external-link}. Leave blank if you don't intend to use this API.
+- Contentful **Space ID** ของคุณ: Space ID จะแสดงขึ้นเมื่อคุณสร้าง tokens; คุณยังสามารถดู Space ID ได้ที่ [Contentful Find space ID documentation](https://www.contentful.com/help/find-space-id/){:target=_blank .external-link}
+- **Content Delivery API Access Token**: จำเป็นหากคุณต้องการใช้ [Content Delivery API](https://www.contentful.com/developers/docs/references/content-delivery-api/){:target=_blank .external-link} เว้นว่างไว้หากคุณไม่ได้ตั้งใจจะใช้ API นี้
+- **Content Preview API Access Token**: จำเป็นหากคุณต้องการใช้ [Content Preview API](https://www.contentful.com/developers/docs/references/content-preview-api/){:target=_blank .external-link} เว้นว่างไว้หากคุณไม่ได้ตั้งใจจะใช้ API นี้
 
-View and generate access tokens in Contentful in **Settings > API keys**. Contentful generates tokens for both Content Delivery API and Content Preview API as part of a single key. Refer to [Contentful Creating and managing API keys](https://training.contentful.com/student/activity/1050378-creating-and-managing-api-keys){:target=_blank .external-link} for detailed instructions.
+ดูและสร้าง access tokens ใน Contentful ได้ที่ **Settings > API keys** Contentful สร้าง tokens สำหรับทั้ง Content Delivery API และ Content Preview API เป็นส่วนหนึ่งของ key เดียว ดูคำแนะนำโดยละเอียดได้ที่ [Contentful Creating and managing API keys](https://training.contentful.com/student/activity/1050378-creating-and-managing-api-keys){:target=_blank .external-link}
 

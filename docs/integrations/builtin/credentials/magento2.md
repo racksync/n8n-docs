@@ -7,23 +7,23 @@ contentType: [integration, reference]
 
 # Magento 2 credentials
 
-You can use these credentials to authenticate the following node:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนใน node ต่อไปนี้:
 
 - [Magento 2](/integrations/builtin/app-nodes/n8n-nodes-base.magento2.md)
 
 ## Prerequisites
 
-- Create a [Magento](https://magento.com/){:target=_blank .external-link} account.
-- Set your store to **Allow OAuth Access Tokens to be used as standalone Bearer tokens**.
-    - Go to **Admin > Stores > Configuration > Services > OAuth > Consumer Settings**.
-    - Set the **Allow OAuth Access Tokens to be used as standalone Bearer tokens** option to **Yes**.
-    - You can also enable this setting from the CLI by running the following command:
+- สร้างบัญชี [Magento](https://magento.com/){:target=_blank .external-link}
+- ตั้งค่าร้านค้าของคุณเป็น **Allow OAuth Access Tokens to be used as standalone Bearer tokens**
+    - ไปที่ **Admin > Stores > Configuration > Services > OAuth > Consumer Settings**
+    - ตั้งค่าตัวเลือก **Allow OAuth Access Tokens to be used as standalone Bearer tokens** เป็น **Yes**
+    - คุณยังสามารถเปิดใช้งานการตั้งค่านี้จาก CLI โดยรันคำสั่งต่อไปนี้:
 
         ```
         bin/magento config:set oauth/consumer/enable_integration_as_bearer 1
         ```
 
-This step is necessary until n8n updates the Magento 2 credentials to use OAuth. Refer to [Integration Tokens](https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-token/#integration-tokens){:target=_blank .external-link} for more information.
+ขั้นตอนนี้จำเป็นจนกว่า n8n จะอัปเดต credentials ของ Magento 2 ให้ใช้ OAuth อ้างอิง [Integration Tokens](https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-token/#integration-tokens){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 
 ## Supported authentication methods
 
@@ -31,16 +31,16 @@ This step is necessary until n8n updates the Magento 2 credentials to use OAuth.
 
 ## Related resources
 
-Refer to [Magento's API documentation](https://devdocs.magento.com/redoc/2.3/){:target=_blank .external-link} for more information about the service.
+อ้างอิง [Magento's API documentation](https://devdocs.magento.com/redoc/2.3/){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 ## Using API access token
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- A **Host**: Enter the address of your Magento store.
-- An **Access Token**: Get an access token from the [**Admin Panel**](https://docs.magento.com/user-guide/stores/admin.html){:target=_blank .external-link}:
-    1. Go to **System > Extensions > Integrations**.
-    2. Add a new Integration.
-    3. Go to the **API** tab and select the Magento resources you'd like the n8n integration to access.
-    4. From the **Integrations** page, **Activate** the new integration.
-    5. Select **Allow** to display your access token so you can copy it and enter it in n8n.
+- **Host**: ป้อนที่อยู่ของร้านค้า Magento ของคุณ
+- **Access Token**: รับ access token จาก [**Admin Panel**](https://docs.magento.com/user-guide/stores/admin.html){:target=_blank .external-link}:
+    1. ไปที่ **System > Extensions > Integrations**
+    2. เพิ่ม Integration ใหม่
+    3. ไปที่แท็บ **API** และเลือก Magento resources ที่คุณต้องการให้ n8n integration เข้าถึง
+    4. จากหน้า **Integrations** **Activate** integration ใหม่
+    5. เลือก **Allow** เพื่อแสดง access token ของคุณเพื่อให้คุณสามารถคัดลอกและป้อนลงใน n8n

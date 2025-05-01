@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # MSG91 credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนใน nodes ต่อไปนี้:
 
 - [MSG91](/integrations/builtin/app-nodes/n8n-nodes-base.msg91.md)
 
 ## Prerequisites
 
-Create a [MSG91](https://msg91.com/){:target=_blank .external-link} account.
+สร้างบัญชี [MSG91](https://msg91.com/){:target=_blank .external-link}
 
 ## Supported authentication methods
 
@@ -21,19 +21,19 @@ Create a [MSG91](https://msg91.com/){:target=_blank .external-link} account.
 
 ## Related resources
 
-Refer to [MSG91's API documentation](https://docs.msg91.com/overview){:target=_blank .external-link} for more information about the service.
+อ้างอิง [MSG91's API documentation](https://docs.msg91.com/overview){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 ## Using API key
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- An **Authentication Key**: To get your Authentication Key, go to the user menu and select **Authkey**. Refer to MSG91's [Where can I find my authentication key? documentation](https://msg91.com/help/where-can-i-find-my-authentication-key){:target=_blank .external-link} for more information.
+- **Authentication Key**: หากต้องการรับ Authentication Key ของคุณ ให้ไปที่เมนูผู้ใช้และเลือก **Authkey** อ้างอิงเอกสาร [Where can I find my authentication key? documentation](https://msg91.com/help/where-can-i-find-my-authentication-key){:target=_blank .external-link} ของ MSG91 สำหรับข้อมูลเพิ่มเติม
 
 ## IP Security
 
-MSG91 enables [IP Security](https://msg91.com/help/what-do-you-mean-by-api-security){:target=_blank .external-link} by default for authkeys.
+MSG91 เปิดใช้งาน [IP Security](https://msg91.com/help/what-do-you-mean-by-api-security){:target=_blank .external-link} โดยค่าเริ่มต้นสำหรับ authkeys
 
-For the n8n credentials to function with this setting enabled, add all the [n8n IP addresses](/manage-cloud/cloud-ip.md) as whitelisted IPs in MSG91. You can add them in one of two places, depending on your desired security level:
+เพื่อให้ credentials ของ n8n ทำงานได้เมื่อเปิดใช้งานการตั้งค่านี้ ให้เพิ่ม [n8n IP addresses](/manage-cloud/cloud-ip.md) ทั้งหมดเป็น IP ที่อนุญาต (whitelisted IPs) ใน MSG91 คุณสามารถเพิ่มได้ในสองที่ ขึ้นอยู่กับระดับความปลอดภัยที่คุณต้องการ:
 
-- To allow any/all authkeys in the account to work with n8n, add the n8n IP addresses in the **Company's whitelisted IPs** section of the **Authkey** page.
-- To allow only specific authkeys to work with n8n, add the n8n IP addresses in the **Whitelisted IPs** section of an authkey's details.
+- หากต้องการอนุญาตให้ authkeys ใดๆ/ทั้งหมดในบัญชีทำงานกับ n8n ได้ ให้เพิ่ม n8n IP addresses ในส่วน **Company's whitelisted IPs** ของหน้า **Authkey**
+- หากต้องการอนุญาตให้เฉพาะ authkeys ที่ระบุทำงานกับ n8n ได้ ให้เพิ่ม n8n IP addresses ในส่วน **Whitelisted IPs** ของรายละเอียด authkey

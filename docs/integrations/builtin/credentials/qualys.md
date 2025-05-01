@@ -11,7 +11,7 @@ contentType: [integration, reference]
 
 ## Prerequisites
 
-Create a [Qualys](https://www.qualys.com/){:target=_blank .external-link} user account with any user role except Contact.
+สร้าง [Qualys](https://www.qualys.com/){:target=_blank .external-link} user account ด้วย user role ใดก็ได้ ยกเว้น Contact
 
 ## Supported authentication methods
 
@@ -19,14 +19,14 @@ Create a [Qualys](https://www.qualys.com/){:target=_blank .external-link} user a
 
 ## Related resources
 
-Refer to [Qualys's documentation](https://qualysguard.qg2.apps.qualys.com/qwebhelp/fo_portal/api_doc/index.htm){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Qualys's documentation](https://qualysguard.qg2.apps.qualys.com/qwebhelp/fo_portal/api_doc/index.htm){:target=_blank .external-link}
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/qualys/){:target=_blank .external-link} on n8n's website.
+นี่คือ credential-only node ดูข้อมูลเพิ่มเติมที่ [Custom API operations](/integrations/custom-operations.md) ดู [example workflows and related content](https://n8n.io/integrations/qualys/){:target=_blank .external-link} บนเว็บไซต์ n8n
 
 ## Using basic auth
 
-To configure this credential, you'll need:
+สำหรับการตั้งค่า credentials นี้ คุณจะต้องมี:
 
-- A **Username**
-- A **Password**
-- A **Requested With** string: Enter a user description, like a user agent, or keep the default `n8n application`. This sets the required `X-Requested-With` header.
+- **Username**
+- **Password**
+- สตริง **Requested With**: กรอกคำอธิบาย user เช่น user agent หรือคงค่า default `n8n application` ไว้ สิ่งนี้จะตั้งค่า header `X-Requested-With` ที่จำเป็น

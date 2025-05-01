@@ -8,108 +8,108 @@ priority: high
 
 # Notion credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนใน nodes ต่อไปนี้:
 
 - [Notion](/integrations/builtin/app-nodes/n8n-nodes-base.notion/index.md)
 - [Notion Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.notiontrigger.md)
 
 ## Prerequisites
 
-Create a [Notion](https://notion.so){:target=_blank .external-link} account with admin level access.
+สร้างบัญชี [Notion](https://notion.so){:target=_blank .external-link} ที่มีสิทธิ์ระดับ admin
 
 ## Supported authentication methods
 
-- API integration token: Used for internal integrations.
-- OAuth2: Used for public integrations.
+- API integration token: ใช้สำหรับ internal integrations
+- OAuth2: ใช้สำหรับ public integrations
 
 /// note | Integration type
-Not sure which integration type to use? Refer to [Internal vs. public integrations](#internal-vs-public-integrations) below for more information.
+ไม่แน่ใจว่าจะใช้ integration type ไหน? อ้างอิง [Internal vs. public integrations](#internal-vs-public-integrations) ด้านล่างสำหรับข้อมูลเพิ่มเติม
 ///
 
 ## Related resources
 
-Refer to [Notion's API documentation](https://developers.notion.com/reference/intro){:target=_blank .external-link} for more information about the service.
+อ้างอิง [Notion's API documentation](https://developers.notion.com/reference/intro){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 ## Using API integration token
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- An **Internal Integration Secret**: Generated once you create a Notion integration.
+- **Internal Integration Secret**: สร้างขึ้นเมื่อคุณสร้าง Notion integration
 
-To generate an integration secret, [create a Notion integration](https://developers.notion.com/docs/create-a-notion-integration#create-your-integration-in-notion){:target=_blank .external-link} and grab the integration secret from the **Secrets** tab:
+วิธีสร้าง integration secret ให้ [สร้าง Notion integration](https://developers.notion.com/docs/create-a-notion-integration#create-your-integration-in-notion){:target=_blank .external-link} และรับ integration secret จากแท็บ **Secrets**:
 
-1. Go to your Notion [integration dashboard](https://www.notion.com/my-integrations){:target=_blank .external-link}.
-2. Select the **+ New integration** button.
-3. Enter a **Name** for your integration, for example `n8n integration`. If desired, add a **Logo**.
-4. Select **Submit** to create your integration.
-5. Open the **Capabilities** tab. Select these capabilities:
+1. ไปที่ [integration dashboard](https://www.notion.com/my-integrations){:target=_blank .external-link} ของ Notion
+2. เลือกปุ่ม **+ New integration**
+3. ป้อน **Name** สำหรับ integration ของคุณ เช่น `n8n integration` หากต้องการ ให้เพิ่ม **Logo**
+4. เลือก **Submit** เพื่อสร้าง integration ของคุณ
+5. เปิดแท็บ **Capabilities** เลือก capabilities เหล่านี้:
     - `Read content`
     - `Update content`
     - `Insert content`
     - `User information without email addresses`
-6. Be sure to **Save changes**.
-7. Select the **Secrets** tab.
-8. Copy the **Internal Integration Token** and add it as your n8n **Internal Integration Secret**.
+6. อย่าลืม **Save changes**
+7. เลือกแท็บ **Secrets**
+8. คัดลอก **Internal Integration Token** และเพิ่มเป็น **Internal Integration Secret** ของ n8n
 
-Refer to the [Internal integration auth flow setup documentation](https://developers.notion.com/docs/authorization#internal-integration-auth-flow-set-up){:target=_blank .external-link} for more information about authenticating to the service.
+อ้างอิงเอกสาร [Internal integration auth flow setup documentation](https://developers.notion.com/docs/authorization#internal-integration-auth-flow-set-up){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับการยืนยันตัวตนกับบริการ
 
 ### Share Notion page(s) with the integration
 
-For your integration to interact with Notion, you must [give your integration page permission](https://developers.notion.com/docs/create-a-notion-integration#give-your-integration-page-permissions){:target=_blank .external-link} to interact with page(s) in your Notion workspace:
+เพื่อให้ integration ของคุณโต้ตอบกับ Notion ได้ คุณต้อง [ให้สิทธิ์ integration ของคุณในการเข้าถึง page](https://developers.notion.com/docs/create-a-notion-integration#give-your-integration-page-permissions){:target=_blank .external-link} ใน Notion workspace ของคุณ:
 
-1. Visit the page in your Notion workspace.
-2. Select the triple dot menu at the top right of a page.
-3. In **Connections**, select **Connect to**.
-4. Use the search bar to find and select your integration from the dropdown list.
+1. ไปที่ page ใน Notion workspace ของคุณ
+2. เลือกเมนูสามจุดที่มุมขวาบนของ page
+3. ใน **Connections** เลือก **Connect to**
+4. ใช้แถบค้นหาเพื่อค้นหาและเลือก integration ของคุณจากรายการดรอปดาวน์
 
-Once you share at least one page with the integration, you can start making API requests. If the page isn't shared, any API requests made will respond with an error.
+เมื่อคุณแชร์อย่างน้อยหนึ่ง page กับ integration แล้ว คุณสามารถเริ่มส่งคำขอ API ได้ หาก page ไม่ได้ถูกแชร์ คำขอ API ใดๆ ที่ส่งไปจะตอบกลับด้วยข้อผิดพลาด
 
-Refer to [Integration permissions](https://developers.notion.com/docs/authorization#integration-permissions){:target=_blank .external-link} for more information.
+อ้างอิง [Integration permissions](https://developers.notion.com/docs/authorization#integration-permissions){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 
 ## Using OAuth2
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- A **Client ID**: Generated once you configure a public integration.
-- A **Client Secret**: Generated once you configure a public integration.
+- **Client ID**: สร้างขึ้นเมื่อคุณกำหนดค่า public integration
+- **Client Secret**: สร้างขึ้นเมื่อคุณกำหนดค่า public integration
 
-You must [create a Notion integration](https://developers.notion.com/docs/create-a-notion-integration#create-your-integration-in-notion){:target=_blank .external-link} and set it to public distribution:
+คุณต้อง [สร้าง Notion integration](https://developers.notion.com/docs/create-a-notion-integration#create-your-integration-in-notion){:target=_blank .external-link} และตั้งค่าเป็นการเผยแพร่แบบสาธารณะ (public distribution):
 
-1. Go to your Notion [integration dashboard](https://www.notion.so/my-integrations){:target=_blank .external-link}.
-2. Select the **+ New integration** button.
-3. Enter a **Name** for your integration, for example `n8n integration`. If desired, add a **Logo**.
-4. Select **Submit** to create your integration.
-5. Open the **Capabilities** tab. Select these capabilities:
+1. ไปที่ [integration dashboard](https://www.notion.com/my-integrations){:target=_blank .external-link} ของ Notion
+2. เลือกปุ่ม **+ New integration**
+3. ป้อน **Name** สำหรับ integration ของคุณ เช่น `n8n integration` หากต้องการ ให้เพิ่ม **Logo**
+4. เลือก **Submit** เพื่อสร้าง integration ของคุณ
+5. เปิดแท็บ **Capabilities** เลือก capabilities เหล่านี้:
     - `Read content`
     - `Update content`
     - `Insert content`
     - `User information without email addresses`
-6. Select **Save changes**.
-7. Go to the **Distribution** tab.
-8. Turn on the **Do you want to make this integration public?** control.
-9. Enter your company name and website in the **Organization Information** section.
-10. Copy the n8n **OAuth Redirect URL** and add it to as a **Redirect URI** in the Notion integration's **OAuth Domain & URLs** section.
-11. Go to the **Secrets** tab.
-12. Copy the **Client ID** and **Client Secret** and add them to your n8n credential.
+6. เลือก **Save changes**
+7. ไปที่แท็บ **Distribution**
+8. เปิดใช้งานตัวควบคุม **Do you want to make this integration public?**
+9. ป้อนชื่อบริษัทและเว็บไซต์ของคุณในส่วน **Organization Information**
+10. คัดลอก **OAuth Redirect URL** ของ n8n และเพิ่มเป็น **Redirect URI** ในส่วน **OAuth Domain & URLs** ของ Notion integration
+11. ไปที่แท็บ **Secrets**
+12. คัดลอก **Client ID** และ **Client Secret** และเพิ่มลงใน credential ของ n8n
 
-Refer to Notion's [public integration auth flow setup](https://developers.notion.com/docs/authorization#public-integration-auth-flow-set-up){:target=_blank .external-link} for more information about authenticating to the service.
+อ้างอิง [public integration auth flow setup](https://developers.notion.com/docs/authorization#public-integration-auth-flow-set-up){:target=_blank .external-link} ของ Notion สำหรับข้อมูลเพิ่มเติมเกี่ยวกับการยืนยันตัวตนกับบริการ
 
 ## Internal vs. public integrations
 
-**Internal** integrations are:
+**Internal** integrations คือ:
 
-* Specific to a single workspace.
-* Accessible only to members of that workspace.
-* Ideal for custom workspace enhancements.
+* เฉพาะสำหรับ workspace เดียว
+* เข้าถึงได้เฉพาะสมาชิกของ workspace นั้น
+* เหมาะสำหรับการปรับปรุง workspace แบบกำหนดเอง
 
-Internal integrations use a simpler authentication process (the integration secret) and don't require any security review before publishing.
+Internal integrations ใช้กระบวนการยืนยันตัวตนที่ง่ายกว่า (integration secret) และไม่ต้องมีการตรวจสอบความปลอดภัยก่อนเผยแพร่
 
-**Public** integrations are:
+**Public** integrations คือ:
 
-* Usable across multiple, unrelated Notion workspaces.
-* Accessible by any Notion user, regardless of their workspace.
-* Ideal for catering to broad use cases.
+* ใช้งานได้ในหลาย Notion workspaces ที่ไม่เกี่ยวข้องกัน
+* เข้าถึงได้โดยผู้ใช้ Notion ทุกคน โดยไม่คำนึงถึง workspace ของพวกเขา
+* เหมาะสำหรับกรณีการใช้งานที่หลากหลาย
 
-Public integrations use the OAuth 2.0 protocol for authentication. They require a Notion security review before publishing.
+Public integrations ใช้โปรโตคอล OAuth 2.0 สำหรับการยืนยันตัวตน ต้องมีการตรวจสอบความปลอดภัยของ Notion ก่อนเผยแพร่
 
-For a more detailed breakdown of the two integration types, refer to Notion's [Internal vs. Public Integrations documentation](https://developers.notion.com/docs/getting-started#internal-vs-public-integrations){:target=_blank .external-link}.
+สำหรับรายละเอียดเพิ่มเติมเกี่ยวกับ integration ทั้งสองประเภท อ้างอิงเอกสาร [Internal vs. Public Integrations documentation](https://developers.notion.com/docs/getting-started#internal-vs-public-integrations){:target=_blank .external-link} ของ Notion

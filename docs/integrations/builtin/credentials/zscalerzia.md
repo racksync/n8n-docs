@@ -12,25 +12,25 @@ priority: medium
 
 ## Prerequisites
 
-Create an admin account on a [Zscaler Internet Access (ZIA)](https://www.zscaler.com/products/zscaler-internet-access){:target=_blank .external-link} cloud instance.
+สร้างบัญชีแอดมินบน [Zscaler Internet Access (ZIA)](https://www.zscaler.com/products/zscaler-internet-access){:target=_blank .external-link} cloud instance
 
 ## Supported authentication methods
 
-- Basic auth and API key combo
+- Basic auth และ API key combo
 
 ## Related resources
 
-Refer to [Zscaler ZIA's documentation](https://help.zscaler.com/zia/getting-started-zia-api){:target=_blank .external-link} for more information about the service.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับการใช้งาน API ได้ที่ [Zscaler ZIA's documentation](https://help.zscaler.com/zia/getting-started-zia-api){:target=_blank .external-link}
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/zscaler-zia/){:target=_blank .external-link} on n8n's website.
+This is a credential-only node. ดูวิธีใช้งานเพิ่มเติมที่ [Custom API operations](/integrations/custom-operations.md) และดูตัวอย่าง workflow ได้ที่ [example workflows and related content](https://n8n.io/integrations/zscaler-zia/){:target=_blank .external-link}
 
 ## Using basic auth and API key combo
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- A **Base URL**: Enter the base URL of your Zscaler ZIA cloud name. To get your base URL, log in to the ZIA Admin Portal and go to **Administration > Cloud Service API Security**. The base URL is displayed in both the **Cloud Service API Key** tab and the **OAuth 2.0 Authorization Servers** tab.
-- A **Username**: Enter your ZIA admin username.
-- A **Password**: Enter your ZIA admin password.
-- An **Api Key**: Get an API key by creating one from **Administration > Cloud Service API Security > Cloud Service API Key**.
+- **Base URL**: ใส่ base URL ของ Zscaler ZIA cloud name ของคุณ ดูได้จาก ZIA Admin Portal ที่ **Administration > Cloud Service API Security**
+- **Username**: ใส่ username ของแอดมิน ZIA
+- **Password**: ใส่ password ของแอดมิน ZIA
+- **Api Key**: สร้าง API key ได้ที่ **Administration > Cloud Service API Security > Cloud Service API Key**
 
-Refer to [About Cloud Service API Key](https://help.zscaler.com/zia/about-cloud-service-api-key){:target=_blank .external-link} for more detailed instructions.
+ดูรายละเอียดเพิ่มเติมที่ [About Cloud Service API Key](https://help.zscaler.com/zia/about-cloud-service-api-key){:target=_blank .external-link}

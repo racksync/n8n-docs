@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # LingvaNex credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [LingvaNex](/integrations/builtin/app-nodes/n8n-nodes-base.lingvanex.md)
 
 ## Prerequisites
 
-Create a [LingvaNex](https://lingvanex.com){:target=_blank .external-link} account.
+สร้างบัญชี [LingvaNex](https://lingvanex.com){:target=_blank .external-link}
 
 ## Supported authentication methods
 
@@ -21,12 +21,12 @@ Create a [LingvaNex](https://lingvanex.com){:target=_blank .external-link} accou
 
 ## Related resources
 
-Refer to [Lingvanex's Cloud API documentation](https://docs.lingvanex.com/reference/overview){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Lingvanex's Cloud API documentation](https://docs.lingvanex.com/reference/overview){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ในการตั้งค่า credential นี้ คุณจะต้องมี:
 
-- An **API Key**: Generate an API key from your **Account** page. Refer to [Where can I get the authorization key?](https://docs.lingvanex.com/reference/translator-service-faq#where-can-i-get-the-authorization-key){:target=_blank .external-link} for more detailed instructions.
+- **API Key**: สร้าง API key จากหน้า **Account** ของคุณ ดูคำแนะนำโดยละเอียดเพิ่มเติมได้ที่ [Where can I get the authorization key?](https://docs.lingvanex.com/reference/translator-service-faq#where-can-i-get-the-authorization-key){:target=_blank .external-link}
 
 

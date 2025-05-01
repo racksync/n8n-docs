@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Okta credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนใน nodes ต่อไปนี้:
 
 - [Okta](/integrations/builtin/app-nodes/n8n-nodes-base.okta.md)
 
 ## Prerequisites
 
-Create an [Okta free trial](https://www.okta.com/free-trial/){:target=_blank .external-link} or create an admin account on an existing Okta org.
+สร้าง [Okta free trial](https://www.okta.com/free-trial/){:target=_blank .external-link} หรือสร้างบัญชีผู้ดูแลระบบบน Okta org ที่มีอยู่
 
 ## Supported authentication methods
 
@@ -21,13 +21,13 @@ Create an [Okta free trial](https://www.okta.com/free-trial/){:target=_blank .ex
 
 ## Related resources
 
-Refer to [Okta's documentation](https://developer.okta.com/docs/reference/){:target=_blank .external-link} for more information about the service.
+อ้างอิง [Okta's documentation](https://developer.okta.com/docs/reference/){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 ## Using SSWS API access token
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- The **URL**: The base URL of your Okta org, also referred to as your unique subdomain. There are two quick ways to access it:
-    1. In the Admin Console, select your **Profile**, hover over the domain listed below your username, and select the **Copy** icon. Paste this into n8n, but be sure to add `https://` before it.
-    2. Copy the base URL of your Admin Console URL, for example `https://dev-123456-admin.okta.com`. Paste it into n8n and remove `-admin`, for example: `https://dev-123456.okta.com`.
-- An **SSWS Access Token**: Create a token by going to **Security > API > Tokens > Create token**. Refer to [Create Okta API tokens](https://help.okta.com/en-us/content/topics/security/api.htm?cshid=ext-create-api-token#create-okta-api-token){:target=_blank .external-link} for more information.
+- **URL**: Base URL ของ Okta org ของคุณ หรือที่เรียกว่า subdomain เฉพาะของคุณ มีสองวิธีง่ายๆ ในการเข้าถึง:
+    1. ใน Admin Console เลือก **Profile** ของคุณ เลื่อนเมาส์ไปเหนือ domain ที่แสดงอยู่ใต้ชื่อผู้ใช้ของคุณ และเลือกไอคอน **Copy** วางสิ่งนี้ลงใน n8n แต่อย่าลืมเพิ่ม `https://` ข้างหน้า
+    2. คัดลอก base URL ของ Admin Console URL ของคุณ ตัวอย่างเช่น `https://dev-123456-admin.okta.com` วางลงใน n8n และลบ `-admin` ออก ตัวอย่างเช่น: `https://dev-123456.okta.com`
+- **SSWS Access Token**: สร้าง token โดยไปที่ **Security > API > Tokens > Create token** อ้างอิง [Create Okta API tokens](https://help.okta.com/en-us/content/topics/security/api.htm?cshid=ext-create-api-token#create-okta-api-token){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม

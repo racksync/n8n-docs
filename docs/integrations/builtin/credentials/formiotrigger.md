@@ -8,7 +8,7 @@ priority: medium
 
 # Form.io Trigger credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้:
 
 - [Form.io Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.formiotrigger.md)
 
@@ -18,21 +18,21 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Form.io's API documentation](https://apidocs.form.io/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Form.io's API documentation](https://apidocs.form.io/){:target=_blank .external-link}
 
 ## Using basic auth
 
-To configure this credential, you'll need a [Form.io](https://www.form.io/) account and:
+ในการกำหนดค่า credential นี้ คุณจะต้องมีบัญชี [Form.io](https://www.form.io/) และ:
 
-- Your **Environment**
-- Your login **Email address**
-- Your **Password**
+- **Environment** ของคุณ
+- **Email address** ที่ใช้เข้าสู่ระบบของคุณ
+- **Password** ของคุณ
 
-To set up the credential:
+วิธีตั้งค่า credential:
 
-1. Select your **Environment**: 
-    - Choose **Cloud hosted** if you aren't hosting Form.io yourself.
-    - Choose **Self-hosted** if you're hosting Form.io yourself. Then add:
-        - Your **Self-Hosted Domain**. Use only the domain itself. For example, if you view a form at `https://yourserver.com/yourproject/manage/view`, the Self-Hosted Domain is `https://yourserver.com`.
-2. Enter the **Email address** you use to log in to Form.io.
-3. Enter the **Password** you use to log in to Form.io.
+1. เลือก **Environment** ของคุณ:
+    - เลือก **Cloud hosted** หากคุณไม่ได้โฮสต์ Form.io ด้วยตัวเอง
+    - เลือก **Self-hosted** หากคุณโฮสต์ Form.io ด้วยตัวเอง จากนั้นเพิ่ม:
+        - **Self-Hosted Domain** ของคุณ ใช้เฉพาะ domain เท่านั้น ตัวอย่างเช่น หากคุณดูฟอร์มที่ `https://yourserver.com/yourproject/manage/view` Self-Hosted Domain คือ `https://yourserver.com`
+2. ป้อน **Email address** ที่คุณใช้เข้าสู่ระบบ Form.io
+3. ป้อน **Password** ที่คุณใช้เข้าสู่ระบบ Form.io

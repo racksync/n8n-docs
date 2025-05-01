@@ -8,12 +8,12 @@ priority: medium
 
 # monday.com credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนใน nodes ต่อไปนี้:
 
 - [monday.com](/integrations/builtin/app-nodes/n8n-nodes-base.mondaycom.md)
 
 /// info | Minimum required version
-The monday.com node requires n8n version 1.22.6 or above.
+node monday.com ต้องการ n8n เวอร์ชัน 1.22.6 หรือสูงกว่า
 ///
 
 ## Supported authentication methods
@@ -23,46 +23,46 @@ The monday.com node requires n8n version 1.22.6 or above.
 
 ## Related resources
 
-Refer to [monday.com's API documentation](https://developer.monday.com/api-reference/docs/basics){:target=_blank .external-link} for more information about authenticating with the service.
+อ้างอิง [monday.com's API documentation](https://developer.monday.com/api-reference/docs/basics){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับการยืนยันตัวตนกับบริการ
 
 ## Using API token
 
-To configure this credential, you'll need a [monday.com](https://monday.com/){:target=_blank .external-link} account and:
+ในการกำหนดค่า credential นี้ คุณจะต้องมีบัญชี [monday.com](https://monday.com/){:target=_blank .external-link} และ:
 
-- An API **Token V2**
+- **Token V2** ของ API
 
-To get your token:
+วิธีรับ token ของคุณ:
 
-1. In your monday.com account, select your profile picture in the top right corner.
-2. Select **Developers**. The Developer Center opens in a new tab.
-3. In the Developer Center, select **My Access Tokens > Show**.
-4. Copy your personal token and enter it in your n8n credential as the **Token V2**.
+1. ในบัญชี monday.com ของคุณ เลือกรูปโปรไฟล์ของคุณที่มุมขวาบน
+2. เลือก **Developers** Developer Center จะเปิดขึ้นในแท็บใหม่
+3. ใน Developer Center เลือก **My Access Tokens > Show**
+4. คัดลอก personal token ของคุณและป้อนลงใน credential ของ n8n เป็น **Token V2**
 
-Refer to [monday.com API Authentication](https://developer.monday.com/api-reference/docs/authentication){:target=_blank .external-link} for more information.
+อ้างอิง [monday.com API Authentication](https://developer.monday.com/api-reference/docs/authentication){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 
 ## Using OAuth2
 
-To configure this credential, you'll need a [monday.com](https://monday.com/){:target=_blank .external-link} account and:
+ในการกำหนดค่า credential นี้ คุณจะต้องมีบัญชี [monday.com](https://monday.com/){:target=_blank .external-link} และ:
 
-- A **Client ID**
-- A **Client Secret**
+- **Client ID**
+- **Client Secret**
 
-To generate both these fields, register a new monday.com application:
+วิธีสร้างฟิลด์ทั้งสองนี้ ให้ลงทะเบียนแอปพลิเคชัน monday.com ใหม่:
 
-1. In your monday.com account, select your profile picture in the top right corner.
-2. Select **Developers**. The Developer Center opens in a new tab.
-3. In the Developer Center, select **Build app**. The app details open.
-4. Enter a **Name** for your app, like `n8n integration`.
-5. Copy the **Client ID** and enter it in your n8n credential.
-6. **Show** the **Client Secret**, copy it, and enter it in your n8n credential.
-7. In the left menu, select **OAuth**.
-8. For **Scopes**, select `boards:write` and `boards:read`.
-9. Select **Save Scopes**.
-10. Select the **Redirect URLs** tab.
-11. Copy the **OAuth Redirect URL** from n8n and enter it as the **Redirect URL**.
-12. **Save** your changes in monday.com.
-13. In n8n, select **Connect my account** to finish the setup.
+1. ในบัญชี monday.com ของคุณ เลือกรูปโปรไฟล์ของคุณที่มุมขวาบน
+2. เลือก **Developers** Developer Center จะเปิดขึ้นในแท็บใหม่
+3. ใน Developer Center เลือก **Build app** รายละเอียดแอปจะเปิดขึ้น
+4. ป้อน **Name** สำหรับแอปของคุณ เช่น `n8n integration`
+5. คัดลอก **Client ID** และป้อนลงใน credential ของ n8n
+6. **Show** **Client Secret** คัดลอก และป้อนลงใน credential ของ n8n
+7. ในเมนูด้านซ้าย เลือก **OAuth**
+8. สำหรับ **Scopes** เลือก `boards:write` และ `boards:read`
+9. เลือก **Save Scopes**
+10. เลือกแท็บ **Redirect URLs**
+11. คัดลอก **OAuth Redirect URL** จาก n8n และป้อนเป็น **Redirect URL**
+12. **Save** การเปลี่ยนแปลงของคุณใน monday.com
+13. ใน n8n เลือก **Connect my account** เพื่อสิ้นสุดการตั้งค่า
 
- Refer to [Create an app](https://developer.monday.com/apps/docs/create-an-app){:target=_blank .external-link} for more information on creating apps.
+ อ้างอิง [Create an app](https://developer.monday.com/apps/docs/create-an-app){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับการสร้างแอป
  
- Refer to [OAuth and permissions](https://developer.monday.com/apps/docs/oauth){:target=_blank .external-link} for more information on the available scopes and setting up the Redirect URL.
+ อ้างอิง [OAuth and permissions](https://developer.monday.com/apps/docs/oauth){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับ scopes ที่มีอยู่และการตั้งค่า Redirect URL

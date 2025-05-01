@@ -11,7 +11,7 @@ contentType: [integration, reference]
 
 ## Prerequisites
 
-Create a [Fortinet FortiGate](https://www.fortinet.com/){:target=_blank .external-link} account.
+สร้างบัญชี [Fortinet FortiGate](https://www.fortinet.com/){:target=_blank .external-link}
 
 ## Supported authentication methods
 
@@ -19,14 +19,14 @@ Create a [Fortinet FortiGate](https://www.fortinet.com/){:target=_blank .externa
 
 ## Related resources
 
-Refer to [Fortinet FortiGate's API documentation](https://docs.fortinet.com/document/fortigate/7.4.3/administration-guide/940602/using-apis){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Fortinet FortiGate's API documentation](https://docs.fortinet.com/document/fortigate/7.4.3/administration-guide/940602/using-apis){:target=_blank .external-link}
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/fortinet-fortigate/){:target=_blank .external-link} on n8n's website.
+นี่คือ node แบบ credential-only ดูข้อมูลเพิ่มเติมได้ที่ [Custom API operations](/integrations/custom-operations.md) ดู [example workflows and related content](https://n8n.io/integrations/fortinet-fortigate/){:target=_blank .external-link} บนเว็บไซต์ของ n8n
 
 ## Using API access token
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- An API **Access Token**: To generate an access token, create a [REST API administrator](https://docs.fortinet.com/document/fortigate/7.4.3/administration-guide/399023/rest-api-administrator){:target=_blank .external-link}.
+- API **Access Token**: หากต้องการสร้าง access token ให้สร้าง [REST API administrator](https://docs.fortinet.com/document/fortigate/7.4.3/administration-guide/399023/rest-api-administrator){:target=_blank .external-link}
 
-Refer to the [Fortinet FortiGate Using APIs documentation](https://docs.fortinet.com/document/fortigate/7.4.3/administration-guide/940602/using-apis){:target=_blank .external-link} for more information about token-based authentication in FortiGate.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับการยืนยันตัวตนแบบ token-based ใน FortiGate ได้ที่ [Fortinet FortiGate Using APIs documentation](https://docs.fortinet.com/document/fortigate/7.4.3/administration-guide/940602/using-apis){:target=_blank .external-link}

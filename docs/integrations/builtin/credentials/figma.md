@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Figma credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้:
 
 - [Figma Trigger (Beta)](/integrations/builtin/trigger-nodes/n8n-nodes-base.figmatrigger.md)
 
 ## Prerequisites
 
-Create a [Figma](https://www.figma.com/){:target=_blank .external-link} account. You need an admin or owner level account.
+สร้างบัญชี [Figma](https://www.figma.com/){:target=_blank .external-link} คุณต้องมีบัญชีระดับ admin หรือ owner
 
 ## Supported authentication methods
 
@@ -21,10 +21,10 @@ Create a [Figma](https://www.figma.com/){:target=_blank .external-link} account.
 
 ## Related resources
 
-Refer to [Figma's API documentation](https://www.figma.com/developers/api){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Figma's API documentation](https://www.figma.com/developers/api){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- A Personal **Access Token** (PAT): Refer to the [Figma API Access Tokens documentation](https://www.figma.com/developers/api#access-tokens){:target=_blank .external-link} for instructions on generating a Personal **Access Token**.
+- Personal **Access Token** (PAT): ดูคำแนะนำในการสร้าง Personal **Access Token** ได้ที่ [Figma API Access Tokens documentation](https://www.figma.com/developers/api#access-tokens){:target=_blank .external-link}

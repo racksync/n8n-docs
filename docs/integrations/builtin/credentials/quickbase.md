@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Quick Base credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [Quick Base](/integrations/builtin/app-nodes/n8n-nodes-base.quickbase.md)
 
 ## Prerequisites
 
-Create a [Quick Base](https://www.quickbase.com/){:target=_blank .external-link} account.
+สร้าง [Quick Base](https://www.quickbase.com/){:target=_blank .external-link} account
 
 ## Supported authentication methods
 
@@ -21,12 +21,12 @@ Create a [Quick Base](https://www.quickbase.com/){:target=_blank .external-link}
 
 ## Related resources
 
-Refer to [Quick Base's API documentation](https://developer.quickbase.com/auth/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Quick Base's API documentation](https://developer.quickbase.com/auth/){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+สำหรับการตั้งค่า credentials นี้ คุณจะต้องมี:
 
-- A **Hostname**: The string of characters located between `https://` and `/db` in your Quick Base URL.
-- A **User Token**: To generate a token, select your **Profile > My preferences > My User Information > Manage my user tokens**. Refer to [Creating and using user tokens](https://helpv2.quickbase.com/hc/en-us/articles/4570374095124-Creating-and-using-user-tokens){:target=_blank .external-link} for detailed instructions.
+- **Hostname**: สตริงของอักขระที่อยู่ระหว่าง `https://` และ `/db` ใน Quick Base URL ของคุณ
+- **User Token**: หากต้องการสร้าง token ให้เลือก **Profile > My preferences > My User Information > Manage my user tokens** ดูคำแนะนำโดยละเอียดที่ [Creating and using user tokens](https://helpv2.quickbase.com/hc/en-us/articles/4570374095124-Creating-and-using-user-tokens){:target=_blank .external-link}
 

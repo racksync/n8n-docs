@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Xero credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อ authenticate กับ node เหล่านี้:
 
 - [Xero](/integrations/builtin/app-nodes/n8n-nodes-base.xero.md)
 
 ## Prerequisites
 
-Create a [Xero](https://www.xero.com/){:target=_blank .external-link} account.
+สมัคร [Xero](https://www.xero.com/){:target=_blank .external-link} ให้เรียบร้อยก่อน
 
 ## Supported authentication methods
 
@@ -21,29 +21,29 @@ Create a [Xero](https://www.xero.com/){:target=_blank .external-link} account.
 
 ## Related resources
 
-Refer to [Zero's API documentation](https://developer.xero.com/documentation/api/accounting/overview){:target=_blank .external-link} for more information about the service.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับการใช้งาน API ได้ที่ [Zero's API documentation](https://developer.xero.com/documentation/api/accounting/overview){:target=_blank .external-link}
 
 ## Using OAuth2
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- A **Client ID**: Generated when you create a new app for a custom connection.
-- A **Client Secret**: Generated when you create a new app for a custom connection.
+- **Client ID**: ได้จากการสร้างแอปใหม่สำหรับ custom connection
+- **Client Secret**: ได้จากการสร้างแอปใหม่สำหรับ custom connection
 
-To generate your Client ID and Client Secret, [create an OAuth2 custom connection app](https://developer.xero.com/documentation/guides/oauth2/custom-connections/){:target=_blank .external-link} in your Xero developer portal [**My Apps**](https://developer.xero.com/app/manage){:target=_blank .external-link}.
+สร้าง Client ID และ Client Secret ได้โดย [สร้าง OAuth2 custom connection app](https://developer.xero.com/documentation/guides/oauth2/custom-connections/){:target=_blank .external-link} ใน Xero developer portal ที่ [**My Apps**](https://developer.xero.com/app/manage){:target=_blank .external-link}
 
-Use these settings for your app:
+ตั้งค่าแอปตามนี้:
 
 /// note | Xero App Name
 
-Xero doesn't support app instances within the Xero Developer Centre that contain `n8n` in their name.
+Xero ไม่อนุญาตให้ใช้ชื่อแอปที่มีคำว่า `n8n` ใน Xero Developer Centre
 
 ///
 
-- Select **Web app** as the **Integration Type**.
-- For the **Company or Application URL**, enter the URL of your n8n server or reverse proxy address. For cloud users, for example, this is: `https://your-username.app.n8n.cloud/`.
-- Copy the **OAuth Redirect URL** from n8n and add it as an **OAuth 2.0 redirect URI** in your app.
-- Select appropriate **scopes** for your app. Refer to [OAuth2 Scopes](https://developer.xero.com/documentation/guides/oauth2/scopes/){:target=_blank .external-link} for more information.
-    - To use all functionality in the [Xero](/integrations/builtin/app-nodes/n8n-nodes-base.xero.md) node, add the `accounting.contacts` and `accounting.transactions` scopes.
+- เลือก **Web app** ใน **Integration Type**
+- สำหรับ **Company or Application URL** ให้ใส่ URL ของ n8n server หรือ reverse proxy ของคุณ (เช่น cloud user: `https://your-username.app.n8n.cloud/`)
+- คัดลอก **OAuth Redirect URL** จาก n8n ไปใส่ใน **OAuth 2.0 redirect URI** ของแอป
+- เลือก **scopes** ที่เหมาะสมกับแอป ดูรายละเอียดที่ [OAuth2 Scopes](https://developer.xero.com/documentation/guides/oauth2/scopes/){:target=_blank .external-link}
+    - ถ้าต้องการใช้ทุกฟีเจอร์ใน [Xero](/integrations/builtin/app-nodes/n8n-nodes-base.xero.md) node ให้เพิ่ม scope `accounting.contacts` และ `accounting.transactions`
 
-Refer to Xero's [OAuth Custom Connections](https://developer.xero.com/documentation/guides/oauth2/custom-connections){:target=_blank .external-link} documentation for more information.
+ดูรายละเอียดเพิ่มเติมที่ [OAuth Custom Connections](https://developer.xero.com/documentation/guides/oauth2/custom-connections){:target=_blank .external-link}

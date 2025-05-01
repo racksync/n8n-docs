@@ -7,14 +7,14 @@ contentType: [integration, reference]
 
 # Disqus credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node เหล่านี้:
 
 - [Disqus](/integrations/builtin/app-nodes/n8n-nodes-base.disqus.md)
 
 ## Prerequisites
 
-- Create a [Disqus](https://www.disqus.com/){:target=_blank .external-link} account.
-- Register an [API application](https://help.disqus.com/en/articles/1717083-how-to-create-an-api-application){:target=_blank .external-link}.
+- สมัคร [Disqus](https://www.disqus.com/){:target=_blank .external-link} ให้เรียบร้อยก่อน
+- ลงทะเบียน [API application](https://help.disqus.com/en/articles/1717083-how-to-create-an-api-application){:target=_blank .external-link}
 
 ## Supported authentication methods
 
@@ -22,10 +22,10 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Disqus's API documentation](https://disqus.com/api/docs/){:target=_blank .external-link} for more information about the service.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับการใช้งาน API ได้ที่ [Disqus's API documentation](https://disqus.com/api/docs/){:target=_blank .external-link}
 
 ## Using API access token
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- An **Access Token**: Once you've registered an API application, copy the **API Key** and add it to n8n as the **Access Token**.
+- **Access Token**: เมื่อคุณลงทะเบียน API application แล้ว ให้คัดลอก **API Key** และเพิ่มลงใน n8n เป็น **Access Token**

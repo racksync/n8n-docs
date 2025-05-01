@@ -15,14 +15,13 @@ contentType: [integration, reference]
 
 ## Related resources
 
-Refer to [SolarWinds Observability SaaS's API documentation](https://documentation.solarwinds.com/en/success_center/observability/content/api/api-swagger.htm){:target=_blank .external-link} for more information about the service.
-
+ดูรายละเอียดเพิ่มเติมได้ที่ [SolarWinds Observability SaaS's API documentation](https://documentation.solarwinds.com/en/success_center/observability/content/api/api-swagger.htm){:target=_blank .external-link}
 
 ## Using API Token
 
-To configure this credential, you'll need a SolarWinds Observability SaaS account and:
+ในการตั้งค่า credential นี้ คุณจะต้องมี SolarWinds Observability SaaS account และ:
 
-- **URL**: The URL you use to access the SolarWinds Observability SaaS platform
-- **API Token**: An API token found in the SolarWinds Observability SaaS platform under **Settings > Api Tokens**
+- **URL**: URL ที่ใช้เข้า SolarWinds Observability SaaS platform
+- **API Token**: หาได้จาก SolarWinds Observability SaaS platform ที่ **Settings > Api Tokens**
 
-Refer to [SolarWinds Observability SaaS's API documentation](https://documentation.solarwinds.com/en/success_center/observability/content/settings/api-tokens.htm){:target=_blank .external-link} for more information about authenticating to the service.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับการยืนยันตัวตนได้ที่ [SolarWinds Observability SaaS's API documentation](https://documentation.solarwinds.com/en/success_center/observability/content/settings/api-tokens.htm){:target=_blank .external-link}

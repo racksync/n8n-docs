@@ -8,68 +8,68 @@ priority: medium
 
 # Odoo credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนใน nodes ต่อไปนี้:
 
 - [Odoo](/integrations/builtin/app-nodes/n8n-nodes-base.odoo.md)
 
 ## Supported authentication methods
 
-- API key (Recommended)
+- API key (แนะนำ)
 - Password
 
 ## Related resources
 
-Refer to [Odoo's External API documentation](https://www.odoo.com/documentation/17.0/developer/reference/external_api.html){:target=_blank .external-link} for more information about the service.
+อ้างอิง [Odoo's External API documentation](https://www.odoo.com/documentation/17.0/developer/reference/external_api.html){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
-Refer to the Odoo [Getting Started tutorial](https://www.odoo.com/slides/getting-started-15){:target=_blank .external-link} if you're new to Odoo.
+อ้างอิง Odoo [Getting Started tutorial](https://www.odoo.com/slides/getting-started-15){:target=_blank .external-link} หากคุณยังใหม่กับ Odoo
 
 ## Using API key
 
-To configure this credential, you'll need a user account on an [Odoo](https://www.odoo.com/){:target=_blank .external-link} database and:
+ในการกำหนดค่า credential นี้ คุณจะต้องมีบัญชีผู้ใช้บนฐานข้อมูล [Odoo](https://www.odoo.com/){:target=_blank .external-link} และ:
 
-- Your **Site URL**
-- Your **Username**
-- An **API key**
-- Your **Database name**
+- **Site URL** ของคุณ
+- **Username** ของคุณ
+- **API key**
+- **Database name** ของคุณ
 
-To set up the credential with an API key:
+วิธีตั้งค่า credential ด้วย API key:
 
-1. Enter your Odoo server or site URL as the **Site URL**.
-2. Enter your **Username** as it's displayed on your **Change password** screen in Odoo.
-4. To use an API key, go to **Your Profile > Preferences > Account Security > Developer API Keys**.
-    - If you don't have this option, you may need to upgrade your Odoo plan. Refer to [Required plan type](#required-plan-type) for more information.
-5. Select **New API Key**.
-6. Enter a **Description** for the key, like `n8n integration`.
-7. Select **Generate Key**.
-8. Copy the key and enter it as the **Password or API key** in your n8n credential.
-9. Enter your Odoo **Database name**, also known as the instance name.
+1. ป้อน URL เซิร์ฟเวอร์หรือไซต์ Odoo ของคุณเป็น **Site URL**
+2. ป้อน **Username** ของคุณตามที่แสดงบนหน้าจอ **Change password** ใน Odoo
+4. หากต้องการใช้ API key ให้ไปที่ **Your Profile > Preferences > Account Security > Developer API Keys**
+    - หากคุณไม่มีตัวเลือกนี้ คุณอาจต้องอัปเกรดแผน Odoo ของคุณ อ้างอิง [Required plan type](#required-plan-type) สำหรับข้อมูลเพิ่มเติม
+5. เลือก **New API Key**
+6. ป้อน **Description** สำหรับ key เช่น `n8n integration`
+7. เลือก **Generate Key**
+8. คัดลอก key และป้อนเป็น **Password or API key** ใน credential ของ n8n
+9. ป้อน **Database name** ของ Odoo หรือที่เรียกว่า instance name
 
-Refer to [Odoo API Keys](https://www.odoo.com/documentation/15.0/developer/reference/external_api.html?#api-keys){:target=_blank .external-link} for more information.
+อ้างอิง [Odoo API Keys](https://www.odoo.com/documentation/15.0/developer/reference/external_api.html?#api-keys){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 
 ## Using password
 
-To configure this credential, you'll need a user account on an [Odoo](https://www.odoo.com/){:target=_blank .external-link} database and:
+ในการกำหนดค่า credential นี้ คุณจะต้องมีบัญชีผู้ใช้บนฐานข้อมูล [Odoo](https://www.odoo.com/){:target=_blank .external-link} และ:
 
-- Your **Site URL**
-- Your **Username**
-- Your **Password**
-- Your **Database name**
+- **Site URL** ของคุณ
+- **Username** ของคุณ
+- **Password** ของคุณ
+- **Database name** ของคุณ
 
-To set up the credential with a password:
+วิธีตั้งค่า credential ด้วย password:
 
-1. Enter your Odoo server or site URL as the **Site URL**.
-2. Enter your **Username** as it's displayed on your **Change password** screen in Odoo.
-3. To use a password, enter your user password in the **Password or API key** field.
-4. Enter your Odoo **Database name**, also known as the instance name.
+1. ป้อน URL เซิร์ฟเวอร์หรือไซต์ Odoo ของคุณเป็น **Site URL**
+2. ป้อน **Username** ของคุณตามที่แสดงบนหน้าจอ **Change password** ใน Odoo
+3. หากต้องการใช้ password ให้ป้อนรหัสผ่านผู้ใช้ของคุณในฟิลด์ **Password or API key**
+4. ป้อน **Database name** ของ Odoo หรือที่เรียกว่า instance name
 
 /// note | Password compatibility
-If you try a password credential and it doesn't work for a specific node function, try switching to an API key. Odoo requires an API key for certain modules or based on certain settings.
+หากคุณลองใช้ credential แบบ password แล้วใช้งานไม่ได้สำหรับฟังก์ชัน node เฉพาะ ให้ลองเปลี่ยนไปใช้ API key Odoo ต้องการ API key สำหรับโมดูลบางอย่างหรือขึ้นอยู่กับการตั้งค่าบางอย่าง
 ///
 
 ## Required plan type
 
 /// note | Required plan type
-Access to the external API is only available on a **Custom** Odoo plan. (The One App Free or Standard plans won't give you access.)
+การเข้าถึง external API มีให้ใช้งานเฉพาะในแผน Odoo แบบ **Custom** เท่านั้น (แผน One App Free หรือ Standard จะไม่ให้คุณเข้าถึง)
 
-Refer to [Odoo Pricing Plans](https://www.odoo.com/pricing-plan){:target=_blank .external-link} for more information.
+อ้างอิง [Odoo Pricing Plans](https://www.odoo.com/pricing-plan){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 ///

@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # GoTo Webinar credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้:
 
 - [GoToWebinar](/integrations/builtin/app-nodes/n8n-nodes-base.gotowebinar.md)
 
 ## Prerequisites
 
-Create a [GoToWebinar](https://www.goto.com/webinar){:target=_blank .external-link} account with [Developer Center](https://developer.goto.com/){:target=_blank .external-link} access.
+สร้างบัญชี [GoToWebinar](https://www.goto.com/webinar){:target=_blank .external-link} พร้อมสิทธิ์เข้าถึง [Developer Center](https://developer.goto.com/){:target=_blank .external-link}
 
 ## Supported authentication methods
 
@@ -21,14 +21,14 @@ Create a [GoToWebinar](https://www.goto.com/webinar){:target=_blank .external-li
 
 ## Related resources
 
-Refer to [GoToWebinar's API documentation](https://developer.goto.com/GoToWebinarV2){:target=_blank .external-link} for more information about authenticating with the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับการยืนยันตัวตนกับบริการนี้ได้ที่ [GoToWebinar's API documentation](https://developer.goto.com/GoToWebinarV2){:target=_blank .external-link}
 
 ## Using OAuth2
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- A **Client ID**: Provided once you create an OAuth client
-- A **Client Secret**: Provided once you create an OAuth client
+- **Client ID**: ได้รับเมื่อคุณสร้าง OAuth client
+- **Client Secret**: ได้รับเมื่อคุณสร้าง OAuth client
 
-Refer to the [Create an OAuth client documentation](https://developer.goto.com/guides/Get%20Started/02_HOW_createClient/){:target=_blank .external-link} for detailed instructions on creating an OAuth client. Copy the **OAuth Callback URL** from n8n to use as the **Redirect URI** in your OAuth client. The Client ID and Client secret are provided once you've finished setting up your client.
+ดูคำแนะนำโดยละเอียดเกี่ยวกับการสร้าง OAuth client ได้ที่ [Create an OAuth client documentation](https://developer.goto.com/guides/Get%20Started/02_HOW_createClient/){:target=_blank .external-link} คัดลอก **OAuth Callback URL** จาก n8n เพื่อใช้เป็น **Redirect URI** ใน OAuth client ของคุณ Client ID และ Client secret จะได้รับเมื่อคุณตั้งค่า client เสร็จสิ้น
 

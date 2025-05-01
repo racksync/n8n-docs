@@ -8,14 +8,13 @@ priority: medium
 
 # Agile CRM credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node เหล่านี้:
 
 - [Agile CRM](/integrations/builtin/app-nodes/n8n-nodes-base.agilecrm.md)
 
-
 ## Prerequisites
 
-Create an [Agile CRM](https://www.agilecrm.com/) account.
+สมัคร [Agile CRM](https://www.agilecrm.com/) ให้เรียบร้อยก่อน
 
 ## Supported authentication methods
 
@@ -23,12 +22,12 @@ Create an [Agile CRM](https://www.agilecrm.com/) account.
 
 ## Related resources
 
-Refer to [Agile CRM's API documentation](https://www.agilecrm.com/api){:target=_blank .external-link} for more information about working with the service.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับการใช้งาน API ได้ที่ [Agile CRM's API documentation](https://www.agilecrm.com/api){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- An **Email Address** registered with AgileCRM
-- A REST **API Key**: Access your Agile CRM API key through **Admin Settings > Developers & API >** [**REST API key**](https://github.com/agilecrm/rest-api?tab=readme-ov-file#api-key){:target=_blank .external-link}.
-- An Agile CRM **Subdomain** (for example, `n8n`)
+- **Email Address** ที่ลงทะเบียนกับ AgileCRM
+- **REST API Key**: หาได้ที่ **Admin Settings > Developers & API >** [**REST API key**](https://github.com/agilecrm/rest-api?tab=readme-ov-file#api-key){:target=_blank .external-link}
+- **Subdomain** ของ Agile CRM (เช่น `n8n`)

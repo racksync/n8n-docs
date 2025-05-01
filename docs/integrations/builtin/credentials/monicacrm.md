@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Monica CRM credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนใน nodes ต่อไปนี้:
 
 - [Monica CRM](/integrations/builtin/app-nodes/n8n-nodes-base.monicacrm.md)
 
 ## Prerequisites
 
-Sign up for a [Monica CRM](https://www.monicahq.com/){:target=_blank .external-link} account or self-host an instance.
+ลงทะเบียนบัญชี [Monica CRM](https://www.monicahq.com/){:target=_blank .external-link} หรือ self-host instance
 
 ## Supported authentication methods
 
@@ -21,14 +21,14 @@ Sign up for a [Monica CRM](https://www.monicahq.com/){:target=_blank .external-l
 
 ## Related resources
 
-Refer to [Monica's API documentation](https://www.monicahq.com/api){:target=_blank .external-link} for more information about the service.
+อ้างอิง [Monica's API documentation](https://www.monicahq.com/api){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 ## Using API token
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- Your **Environment**:
-    - Select **Cloud-Hosted** if you access your Monica instance through Monica.
-    - Select **Self-Hosted** if you have self-hosted Monica on your own server. Provide your **Self-Hosted Domain**.
-- An **API Token**: Generate a token in **Settings > API**.
+- **Environment** ของคุณ:
+    - เลือก **Cloud-Hosted** หากคุณเข้าถึง instance Monica ของคุณผ่าน Monica
+    - เลือก **Self-Hosted** หากคุณ self-host Monica บนเซิร์ฟเวอร์ของคุณเอง ระบุ **Self-Hosted Domain** ของคุณ
+- **API Token**: สร้าง token ใน **Settings > API**
 

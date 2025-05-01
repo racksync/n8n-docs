@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # PhantomBuster credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [PhantomBuster](/integrations/builtin/app-nodes/n8n-nodes-base.phantombuster.md)
 
 ## Prerequisites
 
-Create a [PhantomBuster](https://www.phantombuster.com/){:target=_blank .external-link} account.
+สร้าง [PhantomBuster](https://www.phantombuster.com/){:target=_blank .external-link} account
 
 ## Supported authentication methods
 
@@ -21,10 +21,10 @@ Create a [PhantomBuster](https://www.phantombuster.com/){:target=_blank .externa
 
 ## Related resources
 
-Refer to [PhantomBuster's API documentation](https://hub.phantombuster.com/reference){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [PhantomBuster's API documentation](https://hub.phantombuster.com/reference){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+สำหรับการตั้งค่า credentials นี้ คุณจะต้องมี:
 
-- An **API Key**: To get an API key, go to [**Workspace settings**](https://phantombuster.com/workspace-settings){:target=_blank .external-link} **> Third party API keys** and select **+ Add API Key**. Refer to [How to find my API key](https://hub.phantombuster.com/docs/api#how-to-find-my-api-key){:target=_blank .external-link} for more information.
+- **API Key**: หากต้องการรับ API key ให้ไปที่ [**Workspace settings**](https://phantombuster.com/workspace-settings){:target=_blank .external-link} **> Third party API keys** และเลือก **+ Add API Key** ดูข้อมูลเพิ่มเติมที่ [How to find my API key](https://hub.phantombuster.com/docs/api#how-to-find-my-api-key){:target=_blank .external-link}

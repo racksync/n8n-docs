@@ -8,7 +8,7 @@ priority: high
 
 # Slack credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้:
 
 - [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack.md)
 - [Slack Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger.md)
@@ -16,101 +16,101 @@ You can use these credentials to authenticate the following nodes:
 ## Supported authentication methods
 
 - API access token:
-    - Required for the [Slack Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger.md) node.
-    - Works with the [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack.md) node, but not recommended.
+    - จำเป็นสำหรับ [Slack Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger.md) node
+    - ใช้กับ [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack.md) node ได้ แต่ไม่แนะนำ
 - OAuth2:
-    - Recommended method for the [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack.md) node.
-    - Doesn't work with the [Slack Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger.md) node.
+    - เป็นวิธีที่แนะนำสำหรับ [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack.md) node
+    - ใช้กับ [Slack Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger.md) node ไม่ได้
 
 ## Related resources
 
-Refer to [Slack's API documentation](https://api.slack.com/apis){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Slack's API documentation](https://api.slack.com/apis){:target=_blank .external-link}
 
 ## Using API access token
 
-To configure this credential, you'll need a [Slack](https://slack.com/){:target=_blank .external-link} account and:
+ในการตั้งค่า credential นี้ คุณต้องมีบัญชี [Slack](https://slack.com/){:target=_blank .external-link} และ:
 
-- An **Access Token**
+- **Access Token**
 
-To generate an access token, create a Slack app:
+วิธีสร้าง access token ให้สร้าง Slack app ขึ้นมาใหม่:
 
-1. Open your [Slack API Apps](https://api.slack.com/apps){:target=_blank .external-link} page.
-2. Select **Create New App > From scratch**.
-3. Enter an **App Name**.
-4. Select the **Workspace** where you'll be developing your app.
-5. Select **Create App**. The app details open.
-6. In the left menu under **Features**, select **OAuth & Permissions**.
-8. In the **Scopes** section, select appropriate scopes for your app. Refer to [Scopes](#scopes) for a list of recommended scopes.
-9. After you've added scopes, go up to the **OAuth Tokens** section and select **Install to Workspace**. You must be a Slack workspace admin to complete this action.
-10. Select **Allow**.
-12. Copy the **Bot User OAuth Token** and enter it as the **Access Token** in your n8n credential.
-13. If you're using this credential for the [Slack Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger.md), follow the steps in [Slack Trigger configuration](#slack-trigger-configuration) to finish setting up your app.
+1. เปิดหน้า [Slack API Apps](https://api.slack.com/apps){:target=_blank .external-link}
+2. เลือก **Create New App > From scratch**
+3. กรอก **App Name**
+4. เลือก **Workspace** ที่จะใช้พัฒนาแอป
+5. กด **Create App** รายละเอียดแอปจะเปิดขึ้นมา
+6. ที่เมนูซ้ายใต้ **Features** เลือก **OAuth & Permissions**
+8. ในส่วน **Scopes** ให้เลือก scopes ที่เหมาะสมกับแอปของคุณ ดูรายการแนะนำได้ที่ [Scopes](#scopes)
+9. หลังจากเพิ่ม scopes แล้ว ให้เลื่อนไปที่ส่วน **OAuth Tokens** แล้วเลือก **Install to Workspace** (ต้องเป็น admin ของ Slack workspace)
+10. กด **Allow**
+12. คัดลอก **Bot User OAuth Token** แล้วนำไปใส่ในช่อง **Access Token** ใน n8n credential
+13. ถ้าคุณใช้ credential นี้กับ [Slack Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger.md) ให้ทำตามขั้นตอนใน [Slack Trigger configuration](#slack-trigger-configuration) เพื่อจบการตั้งค่าแอป
 
-Refer to the Slack API [Quickstart](https://api.slack.com/quickstart){:target=_blank .external-link} for more information.
+ดูรายละเอียดเพิ่มเติมได้ที่ Slack API [Quickstart](https://api.slack.com/quickstart){:target=_blank .external-link}
 
 ### Slack Trigger configuration
 
-To use your Slack app with the [Slack Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger.md) node:
+ถ้าต้องการใช้ Slack app กับ [Slack Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger.md) node:
 
-1. Go to **Features** > **Event Subscriptions**.
-2. Turn on the **Enable Events** control.
-3. In n8n, copy the **Webhook URL** and enter it as the **Request URL** in your Slack app.
+1. ไปที่ **Features** > **Event Subscriptions**
+2. เปิดใช้งาน **Enable Events**
+3. ใน n8n ให้คัดลอก **Webhook URL** แล้วนำไปใส่ในช่อง **Request URL** ของ Slack app
 
     ///  note  | Request URL
-    Slack only allows one request URL per app. If you want to test your workflow, you'll need to do one of the following:
+    Slack อนุญาตให้ใช้ request URL ได้แค่ 1 อันต่อแอป ถ้าคุณต้องการทดสอบ workflow ให้เลือกวิธีใดวิธีหนึ่งต่อไปนี้:
 
-    - Test with your **Test URL** first, then change your Slack app to use the **Production URL** once you've verified everything's working
-    - Use the **Production URL** with execution logging.
+    - ทดสอบด้วย **Test URL** ก่อน แล้วค่อยเปลี่ยน Slack app ไปใช้ **Production URL** หลังจากทดสอบเสร็จ
+    - ใช้ **Production URL** พร้อมกับเปิด execution logging
     ///
 
-4. Once verified, select the bot events to subscribe to. Use the **Trigger on** field in n8n to filter these requests. 
-    - To use an event not in the list, add it as a bot event and select **Any Event** in the n8n node.
+4. เมื่อยืนยันแล้ว ให้เลือก bot events ที่ต้องการ subscribe ใช้ฟิลด์ **Trigger on** ใน n8n เพื่อกรอง request เหล่านี้
+    - ถ้าต้องการใช้งาน event ที่ไม่มีในลิสต์ ให้เพิ่มเป็น bot event แล้วเลือก **Any Event** ใน n8n node
 
-Refer to [Quickstart | Configuring the app for event listening](https://api.slack.com/quickstart#listening){:target=_blank .external-link} for more information.
+ดูรายละเอียดเพิ่มเติมได้ที่ [Quickstart | Configuring the app for event listening](https://api.slack.com/quickstart#listening){:target=_blank .external-link}
 
 ## Using OAuth2
 
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-If you're [self-hosting n8n](/hosting/index.md) and need to configure OAuth2 from scratch, you'll need a [Slack](https://slack.com/){:target=_blank .external-link} account and:
+ถ้าคุณ [self-hosting n8n](/hosting/index.md) และต้องการตั้งค่า OAuth2 เองตั้งแต่ต้น คุณต้องมีบัญชี [Slack](https://slack.com/){:target=_blank .external-link} และ:
 
-- A **Client ID**
-- A **Client Secret**
+- **Client ID**
+- **Client Secret**
 
-To get both, create a Slack app:
+วิธีขอข้อมูลทั้งสองนี้ ให้สร้าง Slack app ขึ้นมาใหม่:
 
-1. Open your [Slack API Apps](https://api.slack.com/apps){:target=_blank .external-link} page.
-2. Select **Create New App > From scratch**.
-3. Enter an **App Name**.
-4. Select the **Workspace** where you'll be developing your app.
-5. Select **Create App**. The app details open.
-6. In **Settings > Basic Information**, open the **App Credentials** section.
-7. Copy the **Client ID** and **Client Secret**. Paste these into the corresponding fields in n8n.
-6. In the left menu under **Features**, select **OAuth & Permissions**.
-7. In the **Redirect URLs** section, select **Add New Redirect URL**.
-8. Copy the **OAuth Callback URL** from n8n and enter it as the new Redirect URL in Slack.
-9. Select **Add**.
-10. Select **Save URLs**.
-11. In the **Scopes** section, select appropriate scopes for your app. Refer to [Scopes](#scopes) for a list of scopes.
-13. After you've added scopes, go up to the **OAuth Tokens** section and select **Install to Workspace**. You must be a Slack workspace admin to complete this action.
-14. Select **Allow**.
-15. At this point, you should be able to select the OAuth button in your n8n credential to connect.
+1. เปิดหน้า [Slack API Apps](https://api.slack.com/apps){:target=_blank .external-link}
+2. เลือก **Create New App > From scratch**
+3. กรอก **App Name**
+4. เลือก **Workspace** ที่จะใช้พัฒนาแอป
+5. กด **Create App** รายละเอียดแอปจะเปิดขึ้นมา
+6. ที่ **Settings > Basic Information** เปิดส่วน **App Credentials**
+7. คัดลอก **Client ID** และ **Client Secret** แล้วนำไปใส่ใน n8n
+6. ที่เมนูซ้ายใต้ **Features** เลือก **OAuth & Permissions**
+7. ในส่วน **Redirect URLs** ให้เลือก **Add New Redirect URL**
+8. คัดลอก **OAuth Callback URL** จาก n8n แล้วนำไปใส่ใน Slack
+9. กด **Add**
+10. กด **Save URLs**
+11. ในส่วน **Scopes** ให้เลือก scopes ที่เหมาะสมกับแอปของคุณ ดูรายการได้ที่ [Scopes](#scopes)
+13. หลังจากเพิ่ม scopes แล้ว ให้เลื่อนไปที่ส่วน **OAuth Tokens** แล้วเลือก **Install to Workspace** (ต้องเป็น admin ของ Slack workspace)
+14. กด **Allow**
+15. ตอนนี้คุณสามารถกดปุ่ม OAuth ใน n8n credential เพื่อเชื่อมต่อได้เลย
 
-Refer to the Slack API [Quickstart](https://api.slack.com/quickstart){:target=_blank .external-link} for more information. Refer to the Slack [Installing with OAuth](https://api.slack.com/authentication/oauth-v2){:target=_blank .external-link} documentation for more details on the OAuth flow itself.
+ดูรายละเอียดเพิ่มเติมได้ที่ Slack API [Quickstart](https://api.slack.com/quickstart){:target=_blank .external-link} และ [Installing with OAuth](https://api.slack.com/authentication/oauth-v2){:target=_blank .external-link}
 
 ## Scopes
 
-Scopes determine what permissions an app has.
+Scopes คือสิทธิ์การเข้าถึงที่แอปจะได้รับ
 
-* If you want your app to act on behalf of users who authorize the app, add the required scopes under the **User Token Scopes** section.
-* If you're building a bot, add the required scopes under the **Bot Token Scopes** section.
+* ถ้าต้องการให้แอปทำงานแทนผู้ใช้ที่ authorize แอป ให้เพิ่ม scopes ที่ต้องการใน **User Token Scopes**
+* ถ้าคุณสร้าง bot ให้เพิ่ม scopes ที่ต้องการใน **Bot Token Scopes**
 
-Here's the list of scopes the OAuth credential requires, which are a good starting point:
+นี่คือลิสต์ scopes ที่ OAuth credential ต้องใช้ เหมาะสำหรับเริ่มต้น:
 
 | **Scope name** | **Notes** |
 | --- | --- |
 | `channels:read` | |
-| `channels:write` | Not available as a bot token scope |
+| `channels:write` | ใช้กับ bot token scope ไม่ได้ |
 | `chat:write` | |
 | `files:read` | |
 | `files:write` | |
@@ -119,12 +119,12 @@ Here's the list of scopes the OAuth credential requires, which are a good starti
 | `mpim:read` | |
 | `reactions:read` | |
 | `reactions:write` | |
-| `stars:read`| Not available as a bot token scope |
-| `stars:write` | Not available as a bot token scope |
+| `stars:read`| ใช้กับ bot token scope ไม่ได้ |
+| `stars:write` | ใช้กับ bot token scope ไม่ได้ |
 | `usergroups:read` | |
 | `usergroups:write` | | 
 | `users.profile:read` | |
-| `users.profile:write` | Not available as a bot token scope |
+| `users.profile:write` | ใช้กับ bot token scope ไม่ได้ |
 | `users:read` | |
 
 ## Common issues

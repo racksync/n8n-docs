@@ -7,14 +7,14 @@ contentType: [integration, reference]
 
 # Onfleet credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนใน nodes ต่อไปนี้:
 
 - [Onfleet](/integrations/builtin/app-nodes/n8n-nodes-base.onfleet.md)
 - [Onfleet Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.onfleettrigger.md)
 
 ## Prerequisites
 
-Create an [Onfleet](https://onfleet.com/){:target=_blank .external-link} administrator account.
+สร้างบัญชีผู้ดูแลระบบ [Onfleet](https://onfleet.com/){:target=_blank .external-link}
 
 # Supported authentication methods
 
@@ -22,12 +22,12 @@ Create an [Onfleet](https://onfleet.com/){:target=_blank .external-link} adminis
 
 ## Related resources
 
-Refer to [Onfleet's API documentation](https://docs.onfleet.com/reference/introduction){:target=_blank .external-link} for more information about the service.
+อ้างอิง [Onfleet's API documentation](https://docs.onfleet.com/reference/introduction){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 ## Using API key
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- An **API key**: To create an API key, log into your organization's administrator account. Select **Settings > API & Webhooks**, then select **+** to create a new key. Refer to Onfleet's [Creating an API key documentation](https://support.onfleet.com/hc/en-us/articles/360045763292-API) for more information.
+- **API key**: หากต้องการสร้าง API key ให้เข้าสู่ระบบบัญชีผู้ดูแลระบบขององค์กรของคุณ เลือก **Settings > API & Webhooks** จากนั้นเลือก **+** เพื่อสร้าง key ใหม่ อ้างอิงเอกสาร [Creating an API key documentation](https://support.onfleet.com/hc/en-us/articles/360045763292-API) ของ Onfleet สำหรับข้อมูลเพิ่มเติม
 
 

@@ -7,93 +7,93 @@ contentType: [integration, reference]
 
 # Google: OAuth2 generic
 
-This document contains instructions for creating a generic OAuth2 Google credential for use with [custom operations](/integrations/custom-operations.md).
+เอกสารนี้มีคำแนะนำในการสร้าง Google OAuth2 credential แบบทั่วไปสำหรับใช้กับ [custom operations](/integrations/custom-operations.md)
 
 --8<-- "_snippets/integrations/managed-google-oauth.md"
 
 ## Prerequisites
 
-* Create a [Google Cloud](https://cloud.google.com/){:targe=_blank .external-link} account.
+* สร้างบัญชี [Google Cloud](https://cloud.google.com/){:targe=_blank .external-link}
 
 ## Set up OAuth
 
-There are five steps to connecting your n8n credential to Google services:
+มีห้าขั้นตอนในการเชื่อมต่อ credential ของ n8n กับบริการของ Google:
 
-1. [Create a Google Cloud Console project](#create-a-google-cloud-console-project).
-1. [Enable APIs](#enable-apis).
-1. [Configure your OAuth consent screen](#configure-your-oauth-consent-screen).
-1. [Create your Google OAuth client credentials](#create-your-google-oauth-client-credentials).
-1. [Finish your n8n credential](#finish-your-n8n-credential).
+1. [Create a Google Cloud Console project](#create-a-google-cloud-console-project)
+1. [Enable APIs](#enable-apis)
+1. [Configure your OAuth consent screen](#configure-your-oauth-consent-screen)
+1. [Create your Google OAuth client credentials](#create-your-google-oauth-client-credentials)
+1. [Finish your n8n credential](#finish-your-n8n-credential)
 
 ### Create a Google Cloud Console project
 
-First, create a Google Cloud Console project. If you already have a project, jump to the next section:
+ขั้นแรก สร้างโปรเจกต์ Google Cloud Console หากคุณมีโปรเจกต์อยู่แล้ว ข้ามไปที่ส่วนถัดไป:
 
-1. Log in to the [Google Cloud Console](https://console.cloud.google.com){:target=_blank .external-link} using your Google credentials.
-2. In the top menu, select the project dropdown in the top navigation and select **New project** or go directly to the [New Project](https://console.cloud.google.com/projectcreate){:target=_blank .external-link} page.
-3. Enter a **Project name** and select the **Location** for your project.
-4. Select **Create**.
-5. Check the top navigation and make sure the **Select a project** dropdown has your project selected. If not, select the project you just created.
+1. ล็อกอินเข้าสู่ [Google Cloud Console](https://console.cloud.google.com){:target=_blank .external-link} โดยใช้ข้อมูลประจำตัว Google ของคุณ
+2. ในเมนูด้านบน เลือก dropdown ของโปรเจกต์ในแถบนำทางด้านบนและเลือก **New project** หรือไปที่หน้า [New Project](https://console.cloud.google.com/projectcreate){:target=_blank .external-link} โดยตรง
+3. ป้อน **Project name** และเลือก **Location** สำหรับโปรเจกต์ของคุณ
+4. เลือก **Create**
+5. ตรวจสอบแถบนำทางด้านบนและตรวจสอบให้แน่ใจว่า dropdown **Select a project** ได้เลือกโปรเจกต์ของคุณแล้ว หากไม่ ให้เลือกโปรเจกต์ที่คุณเพิ่งสร้าง
 
 	<figure markdown="span">
 	![The project dropdown in the Google Cloud top navigation](/_images/integrations/builtin/credentials/google/google-cloud-project-dropdown.png)
-	<figcaption>Check the project dropdown in the Google Cloud top navigation</figcaption>
+	<figcaption>ตรวจสอบ dropdown ของโปรเจกต์ในแถบนำทางด้านบนของ Google Cloud</figcaption>
 	</figure>
 
 ### Enable APIs
 
-With your project created, enable the APIs you'll need access to:
+เมื่อสร้างโปรเจกต์ของคุณแล้ว เปิดใช้งาน APIs ที่คุณต้องการเข้าถึง:
 
 --8<-- "_snippets/integrations/builtin/credentials/google/enable-apis.md"
 
 ### Configure your OAuth consent screen
 
-If you haven't used OAuth in your Google Cloud project before, you'll need to [configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent){:target=_blank .external-link}:
+หากคุณไม่เคยใช้ OAuth ในโปรเจกต์ Google Cloud ของคุณมาก่อน คุณจะต้อง [configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent){:target=_blank .external-link}:
 
-1. Access your [Google Cloud Console - Library](https://console.cloud.google.com/apis/library){:target=_blank .external-link}. Make sure you're in the correct project.
+1. เข้าถึง [Google Cloud Console - Library](https://console.cloud.google.com/apis/library){:target=_blank .external-link} ของคุณ ตรวจสอบให้แน่ใจว่าคุณอยู่ในโปรเจกต์ที่ถูกต้อง
 	<figure markdown="span">
 	![The project dropdown in the Google Cloud top navigation](/_images/integrations/builtin/credentials/google/google-cloud-project-dropdown.png)
-	<figcaption>Check the project dropdown in the Google Cloud top navigation</figcaption>
+	<figcaption>ตรวจสอบ dropdown ของโปรเจกต์ในแถบนำทางด้านบนของ Google Cloud</figcaption>
 	</figure>
-1. Open the left navigation menu and go to **APIs & Services > OAuth consent screen**.
-2. For **User Type**, select **Internal** for user access within your organization's Google workspace or **External** for any user with a Google account. Refer to Google's [User type documentation](https://support.google.com/cloud/answer/10311615#user-type&zippy=%2Cexternal%2Cinternal){:target=_blank .external-link} for more information on user types.
-3. Select **Create**.
-4. Enter the essential information:
+1. เปิดเมนูนำทางด้านซ้ายและไปที่ **APIs & Services > OAuth consent screen**
+2. สำหรับ **User Type** เลือก **Internal** สำหรับการเข้าถึงของผู้ใช้ภายใน Google Workspace ขององค์กรของคุณ หรือ **External** สำหรับผู้ใช้ใดๆ ที่มีบัญชี Google อ้างอิงเอกสาร [User type documentation](https://support.google.com/cloud/answer/10311615#user-type&zippy=%2Cexternal%2Cinternal){:target=_blank .external-link} ของ Google สำหรับข้อมูลเพิ่มเติมเกี่ยวกับประเภทผู้ใช้
+3. เลือก **Create**
+4. ป้อนข้อมูลที่จำเป็น:
 	- **App name**
 	- **User support email**
-	- **Email addresses** field in **Developer contact information**
-5. In the **Authorized domains** section, add `n8n.cloud` if using n8n's Cloud service. If you're [self-hosting](/hosting/index.md), add the domain of your n8n instance.
-7. Select **SAVE AND CONTINUE** to go to the **Data Access** page and open **Add or remove scopes**.
-8. You don't need to set any scopes. Select **SAVE AND CONTINUE** again to go to the **Summary** page.
-9. On the **Summary** page, review the information for accuracy.
+	- ฟิลด์ **Email addresses** ใน **Developer contact information**
+5. ในส่วน **Authorized domains** เพิ่ม `n8n.cloud` หากใช้บริการ Cloud ของ n8n หากคุณ [self-hosting](/hosting/index.md) ให้เพิ่มโดเมนของ instance n8n ของคุณ
+7. เลือก **SAVE AND CONTINUE** เพื่อไปยังหน้า **Data Access** และเปิด **Add or remove scopes**
+8. คุณไม่จำเป็นต้องตั้งค่า scope ใดๆ เลือก **SAVE AND CONTINUE** อีกครั้งเพื่อไปยังหน้า **Summary**
+9. ในหน้า **Summary** ตรวจสอบข้อมูลเพื่อความถูกต้อง
 
 ### Create your Google OAuth client credentials
 
-Next, create the OAuth client credentials in Google:
+ถัดไป สร้าง OAuth client credentials ใน Google:
 
-1. In the **APIs & Services** section, select **Credentials**.
-2. Select **+ CREATE CREDENTIALS > OAuth client ID**.
-3. In the **Application type** dropdown, select **Web application**.
-4. Google automatically generates a **Name**. Update the **Name** to something you'll recognize in your console.
-5. From your n8n credential, copy the **OAuth Redirect URL**. Paste it into the **Authorized redirect URIs** in Google Console.
-6. Select **CREATE**.
+1. ในส่วน **APIs & Services** เลือก **Credentials**
+2. เลือก **+ CREATE CREDENTIALS > OAuth client ID**
+3. ใน dropdown **Application type** เลือก **Web application**
+4. Google จะสร้าง **Name** โดยอัตโนมัติ อัปเดต **Name** เป็นชื่อที่คุณจะจำได้ใน console ของคุณ
+5. จาก credential ของ n8n ของคุณ คัดลอก **OAuth Redirect URL** วางลงใน **Authorized redirect URIs** ใน Google Console
+6. เลือก **CREATE**
 
 ### Finish your n8n credential
 
-With the Google project and credentials fully configured, finish the n8n credential:
+เมื่อโปรเจกต์และ credentials ของ Google ได้รับการกำหนดค่าอย่างสมบูรณ์แล้ว ให้ดำเนินการ credential ของ n8n ให้เสร็จสิ้น:
 
-1. From Google's **OAuth client created** modal, copy the **Client ID**. Enter this in your n8n credential.
-2. From the same Google modal, copy the **Client Secret**. Enter this in your n8n credential.
-3. You must provide the scopes for this credential. Refer to [Scopes](#scopes) for more information. Enter multiple scopes in a space-separated list, for example:
+1. จาก modal **OAuth client created** ของ Google คัดลอก **Client ID** ป้อนค่านี้ใน credential ของ n8n ของคุณ
+2. จาก modal เดียวกันของ Google คัดลอก **Client Secret** ป้อนค่านี้ใน credential ของ n8n ของคุณ
+3. คุณต้องระบุ scope สำหรับ credential นี้ อ้างอิง [Scopes](#scopes) สำหรับข้อมูลเพิ่มเติม ป้อนหลาย scope โดยคั่นด้วยช่องว่าง ตัวอย่างเช่น:
 	```
 	https://www.googleapis.com/auth/gmail.labels https://www.googleapis.com/auth/gmail.addons.current.action.compose
 	```
-4. In n8n, select **Sign in with Google** to complete your Google authentication.
-5. **Save** your new credentials.
+4. ใน n8n เลือก **Sign in with Google** เพื่อทำการยืนยันตัวตน Google ของคุณให้เสร็จสมบูรณ์
+5. **Save** credentials ใหม่ของคุณ
 
 ## Video
 
-The following video demonstrates the steps described above:
+วิดีโอต่อไปนี้สาธิตขั้นตอนที่อธิบายไว้ข้างต้น:
 
 
 <div class="video-container">
@@ -102,9 +102,9 @@ The following video demonstrates the steps described above:
 
 ## Scopes
 
-Google services have one or more possible access scopes. A scope limits what a user can do. Refer to [OAuth 2.0 Scopes for Google APIs](https://developers.google.com/identity/protocols/oauth2/scopes){:target=_blank .external-link} for a list of scopes for all services.
+บริการของ Google มี scope การเข้าถึงที่เป็นไปได้อย่างน้อยหนึ่งรายการ scope จะจำกัดสิ่งที่ผู้ใช้สามารถทำได้ อ้างอิง [OAuth 2.0 Scopes for Google APIs](https://developers.google.com/identity/protocols/oauth2/scopes){:target=_blank .external-link} สำหรับรายการ scope ของบริการทั้งหมด
 
-n8n doesn't support all scopes. When creating a generic Google OAuth2 API credential, you can enter scopes from the **Supported scopes** list below. If you enter a scope that n8n doesn't already support, it won't work.
+n8n ไม่รองรับ scope ทั้งหมด เมื่อสร้าง Google OAuth2 API credential แบบทั่วไป คุณสามารถป้อน scope จากรายการ **Supported scopes** ด้านล่าง หากคุณป้อน scope ที่ n8n ยังไม่รองรับ มันจะไม่ทำงาน
 
 ??? Details "Supported scopes"
 	| Service | Available scopes |

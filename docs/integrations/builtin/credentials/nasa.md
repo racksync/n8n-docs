@@ -8,7 +8,7 @@ priority: medium
 
 # NASA credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนใน nodes ต่อไปนี้:
 
 - [NASA](/integrations/builtin/app-nodes/n8n-nodes-base.nasa.md)
 
@@ -18,16 +18,16 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to the **Browse APIs** section of the [NASA Open APIs](https://api.nasa.gov/){:target=_blank .external-link} for more information about the service.
+อ้างอิงส่วน **Browse APIs** ของ [NASA Open APIs](https://api.nasa.gov/){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 ## Using an API key
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- An **API Key**
+- **API Key**
 
-To generate an API key:
+วิธีสร้าง API key:
 
-1. Go to the [NASA Open APIs](https://api.nasa.gov/){:target=_blank .external-link} page.
-2. Complete the fields in the **Generate API Key** section.
-3. Copy the **API Key** and enter it in your n8n credential.
+1. ไปที่หน้า [NASA Open APIs](https://api.nasa.gov/){:target=_blank .external-link}
+2. กรอกข้อมูลในฟิลด์ในส่วน **Generate API Key**
+3. คัดลอก **API Key** และป้อนลงใน credential ของ n8n

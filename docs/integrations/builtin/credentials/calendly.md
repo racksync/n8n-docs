@@ -8,12 +8,12 @@ priority: medium
 
 # Calendly credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node เหล่านี้:
 
 - [Calendly Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.calendlytrigger.md)
 
 /// warning | Supported Calendly plans
-The Calendly Trigger node relies on Calendly webhooks. Calendly only offers access to webhooks in their paid plans.
+Calendly Trigger node อาศัย Calendly webhooks Calendly ให้สิทธิ์เข้าถึง webhooks เฉพาะในแผนแบบชำระเงินเท่านั้น
 ///
 
 ## Supported authentication methods
@@ -23,44 +23,44 @@ The Calendly Trigger node relies on Calendly webhooks. Calendly only offers acce
 
 ## Related resources
 
-Refer to [Calendly's API documentation](https://developer.calendly.com/getting-started){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการได้ที่ [Calendly's API documentation](https://developer.calendly.com/getting-started){:target=_blank .external-link}
 
 ## Using API access token
 
-To configure this credential, you'll need a [Calendly](https://www.calendly.com/){:target=_blank .external-link} account and:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมีบัญชี [Calendly](https://www.calendly.com/){:target=_blank .external-link} และ:
 
-- An API Key or **Personal Access Token**
+- API Key หรือ **Personal Access Token**
 
-To get your access token:
+วิธีรับ access token ของคุณ:
 
-1. Go to the Calendly [**Integrations & apps**](https://calendly.com/integrations){:target=_blank .external-link} page.
-2. Select [**API & Webhooks**](https://calendly.com/integrations/api_webhooks){:target=_blank .external-link}.
-3. In **Your Personal Access Tokens**, select **Generate new token**.
-4. Enter a **Name** for your access token, like `n8n integration`.
-5. Select **Create token**.
-6. Select **Copy token** and enter it in your n8n credential.
+1. ไปที่หน้า [**Integrations & apps**](https://calendly.com/integrations){:target=_blank .external-link} ของ Calendly
+2. เลือก [**API & Webhooks**](https://calendly.com/integrations/api_webhooks){:target=_blank .external-link}
+3. ใน **Your Personal Access Tokens** เลือก **Generate new token**
+4. ป้อน **Name** สำหรับ access token ของคุณ เช่น `n8n integration`
+5. เลือก **Create token**
+6. เลือก **Copy token** และป้อนลงใน n8n credential ของคุณ
 
-Refer to [Calendly's API authentication documentation](https://developer.calendly.com/how-to-authenticate-with-personal-access-tokens){:target=_blank .external-link} for more information.
+ดูข้อมูลเพิ่มเติมได้ที่ [Calendly's API authentication documentation](https://developer.calendly.com/how-to-authenticate-with-personal-access-tokens){:target=_blank .external-link}
 
 ## Using OAuth2
 
-To configure this credential, you'll need a [Calendly developer](https://developer.calendly.com){:target=_blank .external-link} account and:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมีบัญชี [Calendly developer](https://developer.calendly.com){:target=_blank .external-link} และ:
 
-- A **Client ID**
-- A **Client Secret**
+- **Client ID**
+- **Client Secret**
 
-To get both, create a new OAuth app in Calendly:
+หากต้องการรับทั้งสองอย่าง ให้สร้าง OAuth app ใหม่ใน Calendly:
 
-1. Log in to Calendly's developer portal and go to [**My apps**](https://developer.calendly.com/console/apps){:target=_blank .external-link}.
-1. Select **Create new app**.
-1. Enter a **Name of app**, like `n8n integration`.
-2. In **Kind of app**, select **Web**.
-3. In **Environment type**, select the environment that corresponds to your usage, either **Sandbox** or **Production**.
-    - Calendly recommends starting with **Sandbox** for development and creating a second application for **Production** when you're ready to go live.
-4. Copy the **OAuth Redirect URL** from n8n and enter it as a **Redirect URI** in the OAuth app.
-5. Select **Save & Continue**. The app details display.
-5. Copy the **Client ID** and enter this as your n8n **Client ID**.
-6. Copy the **Client secret** and enter this as your n8n **Client Secret**.
-1. Select **Connect my account** in n8n and follow the on-screen prompts to finish authorizing the credential.
+1. ล็อกอินเข้าสู่ developer portal ของ Calendly และไปที่ [**My apps**](https://developer.calendly.com/console/apps){:target=_blank .external-link}
+1. เลือก **Create new app**
+1. ป้อน **Name of app** เช่น `n8n integration`
+2. ใน **Kind of app** เลือก **Web**
+3. ใน **Environment type** เลือก environment ที่สอดคล้องกับการใช้งานของคุณ ไม่ว่าจะเป็น **Sandbox** หรือ **Production**
+    - Calendly แนะนำให้เริ่มต้นด้วย **Sandbox** สำหรับการพัฒนา และสร้าง application ที่สองสำหรับ **Production** เมื่อคุณพร้อมที่จะใช้งานจริง
+4. คัดลอก **OAuth Redirect URL** จาก n8n และป้อนเป็น **Redirect URI** ใน OAuth app
+5. เลือก **Save & Continue** รายละเอียด app จะแสดงขึ้น
+5. คัดลอก **Client ID** และป้อนเป็น **Client ID** ของ n8n
+6. คัดลอก **Client secret** และป้อนเป็น **Client Secret** ของ n8n
+1. เลือก **Connect my account** ใน n8n และทำตามคำแนะนำบนหน้าจอเพื่ออนุญาต credential ให้เสร็จสิ้น
 
-Refer to [Registering your application with Calendly](https://developer.calendly.com/create-a-developer-account){:target=_blank .external-link} for more information.
+ดูข้อมูลเพิ่มเติมได้ที่ [Registering your application with Calendly](https://developer.calendly.com/create-a-developer-account){:target=_blank .external-link}

@@ -7,14 +7,14 @@ contentType: [integration, reference]
 
 # Mailgun credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนใน nodes ต่อไปนี้:
 
 - [Mailgun](/integrations/builtin/app-nodes/n8n-nodes-base.mailgun.md)
 
 ## Prerequisites
 
-- Create a [Mailgun](https://www.mailgun.com/){:target=_blank .external-link} account.
-- [Add and verify a domain](https://help.mailgun.com/hc/en-us/articles/360026833053-Domain-Verification-Setup-Guide){:target=_blank .external-link} in Mailgun or use the provided sandbox domain for testing.
+- สร้างบัญชี [Mailgun](https://www.mailgun.com/){:target=_blank .external-link}
+- [เพิ่มและยืนยัน domain](https://help.mailgun.com/hc/en-us/articles/360026833053-Domain-Verification-Setup-Guide){:target=_blank .external-link} ใน Mailgun หรือใช้ sandbox domain ที่ให้มาสำหรับการทดสอบ
 
 ## Supported authentication methods
 
@@ -22,16 +22,16 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Mailgun's API documentation](https://documentation.mailgun.com/docs/mailgun/api-reference/intro/){:target=_blank .external-link} for more information about the service.
+อ้างอิง [Mailgun's API documentation](https://documentation.mailgun.com/docs/mailgun/api-reference/intro/){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 ## Using API key
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- An **API Domain**: If your Mailgun account is based in Europe, select **api.eu.mailgun.net**; otherwise, select **api.mailgun.net**. Refer to [Mailgun Base URLs](https://documentation.mailgun.com/docs/mailgun/api-reference/intro/#base-url){:target=_blank .external-link} for more information.
-- An **Email Domain**: Enter the email sending domain you're working with. If you have multiple sending domains, refer to [Working with multiple email domains](#working-with-multiple-email-domains) for more information.
-- An **API Key**: View your API key in **Settings > API Keys**. Refer to [Mailgun's API Authentication documentation](https://documentation.mailgun.com/docs/mailgun/api-reference/authentication/){:target=_blank .external-link} for more detailed instructions.
+- **API Domain**: หากบัญชี Mailgun ของคุณอยู่ในยุโรป ให้เลือก **api.eu.mailgun.net** มิฉะนั้น ให้เลือก **api.mailgun.net** อ้างอิง [Mailgun Base URLs](https://documentation.mailgun.com/docs/mailgun/api-reference/intro/#base-url){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
+- **Email Domain**: ป้อน email sending domain ที่คุณกำลังทำงานด้วย หากคุณมี sending domains หลายรายการ อ้างอิง [Working with multiple email domains](#working-with-multiple-email-domains) สำหรับข้อมูลเพิ่มเติม
+- **API Key**: ดู API key ของคุณใน **Settings > API Keys** อ้างอิงเอกสาร [Mailgun's API Authentication documentation](https://documentation.mailgun.com/docs/mailgun/api-reference/authentication/){:target=_blank .external-link} สำหรับคำแนะนำโดยละเอียดเพิ่มเติม
 
 ## Working with multiple email domains
 
-If your Mailgun account includes multiple sending domains, create a separate credential for each email domain you're working with.
+หากบัญชี Mailgun ของคุณมี sending domains หลายรายการ ให้สร้าง credential แยกต่างหากสำหรับแต่ละ email domain ที่คุณกำลังทำงานด้วย

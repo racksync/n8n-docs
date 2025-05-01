@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Peekalink credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [Peekalink](/integrations/builtin/app-nodes/n8n-nodes-base.peekalink.md)
 
 ## Prerequisites
 
-Create a [Peekalink](https://www.peekalink.io/){:target=_blank .external-link} account.
+สร้าง [Peekalink](https://www.peekalink.io/){:target=_blank .external-link} account
 
 ## Supported authentication methods
 
@@ -21,10 +21,10 @@ Create a [Peekalink](https://www.peekalink.io/){:target=_blank .external-link} a
 
 ## Related resources
 
-Refer to [Peekalink's API documentation](https://docs.peekalink.io/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Peekalink's API documentation](https://docs.peekalink.io/){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+สำหรับการตั้งค่า credentials นี้ คุณจะต้องมี:
 
-- An **API Key**: To get your API key, access your Peekalink [dashboard](https://www.peekalink.io/app/overview){:target=_blank .external-link} and copy the key in the **Your API Key** section. Refer to [Get your API key](https://docs.peekalink.io/setup#get-your-api-key){:target=_blank .external-link} for more information.
+- **API Key**: หากต้องการรับ API key ของคุณ ให้เข้าถึง Peekalink [dashboard](https://www.peekalink.io/app/overview){:target=_blank .external-link} ของคุณและคัดลอก key ในส่วน **Your API Key** ดูข้อมูลเพิ่มเติมที่ [Get your API key](https://docs.peekalink.io/setup#get-your-api-key){:target=_blank .external-link}

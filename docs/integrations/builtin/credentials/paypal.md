@@ -7,14 +7,14 @@ contentType: [integration, reference]
 
 # PayPal credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [PayPal](/integrations/builtin/app-nodes/n8n-nodes-base.paypal.md)
 - [PayPal Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.paypaltrigger.md)
 
 ## Prerequisites
 
-Create a [PayPal developer](https://developer.paypal.com/home){:target=_blank .external-link} account.
+สร้าง [PayPal developer](https://developer.paypal.com/home){:target=_blank .external-link} account
 
 ## Supported authentication methods
 
@@ -22,16 +22,16 @@ Create a [PayPal developer](https://developer.paypal.com/home){:target=_blank .e
 
 ## Related resources
 
-Refer to [Paypal's API documentation](https://developer.paypal.com/api/rest/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Paypal's API documentation](https://developer.paypal.com/api/rest/){:target=_blank .external-link}
 
 ## Using API client and secret
 
-To configure this credential, you'll need:
+สำหรับการตั้งค่า credentials นี้ คุณจะต้องมี:
 
-- A **Client ID**: Generated when you create an app.
-- A **Secret**: Generated when you create an app.
-- An **Environment**: Select **Live** or **Sandbox**.
+- **Client ID**: สร้างขึ้นเมื่อคุณสร้าง app
+- **Secret**: สร้างขึ้นเมื่อคุณสร้าง app
+- **Environment**: เลือก **Live** หรือ **Sandbox**
 
-To generate the **Client ID** and **Secret**, log in to your Paypal [developer dashboard](https://developer.paypal.com/dashboard/). Select **Apps & Credentials > Rest API apps > Create app**. Refer to [Get client ID and client secret](https://developer.paypal.com/api/rest/#link-getclientidandclientsecret){:target=_blank .external-link} for more information.
+หากต้องการสร้าง **Client ID** และ **Secret** ให้ล็อกอินเข้าสู่ Paypal [developer dashboard](https://developer.paypal.com/dashboard/) ของคุณ เลือก **Apps & Credentials > Rest API apps > Create app** ดูข้อมูลเพิ่มเติมที่ [Get client ID and client secret](https://developer.paypal.com/api/rest/#link-getclientidandclientsecret){:target=_blank .external-link}
 
 

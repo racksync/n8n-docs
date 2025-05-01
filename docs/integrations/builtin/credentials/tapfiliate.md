@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Tapfiliate credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [Tapfiliate](/integrations/builtin/app-nodes/n8n-nodes-base.tapfiliate.md)
 
 ## Prerequisites
 
-Create a [Tapfiliate](https://tapfiliate.com/){:target=_blank .external-link} account.
+สร้างบัญชี [Tapfiliate](https://tapfiliate.com/){:target=_blank .external-link} ก่อน
 
 ## Supported authentication methods
 
@@ -21,12 +21,12 @@ Create a [Tapfiliate](https://tapfiliate.com/){:target=_blank .external-link} ac
 
 ## Related resources
 
-Refer to [Tapfiliate's API documentation](https://tapfiliate.com/docs/rest/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Tapfiliate's API documentation](https://tapfiliate.com/docs/rest/){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ในการตั้งค่า credentials นี้ คุณจะต้องมี:
 
-- An **API Key**: Get your API Key from your [**Profile Settings**](https://app.tapfiliate.com/a/profile/){:target=_blank .external-link} **> API Key**.
+- **API Key**: ไปที่ [**Profile Settings**](https://app.tapfiliate.com/a/profile/){:target=_blank .external-link} **> API Key** เพื่อรับ API Key ของคุณ
 
-Refer to [Your API key](https://support.tapfiliate.com/en/articles/1441950-your-api-key){:target=_blank .external-link} for more information.
+ดูข้อมูลเพิ่มเติมได้ที่ [Your API key](https://support.tapfiliate.com/en/articles/1441950-your-api-key){:target=_blank .external-link}

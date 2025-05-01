@@ -7,15 +7,15 @@ contentType: [integration, reference]
 
 # LDAP credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 * [LDAP](/integrations/builtin/core-nodes/n8n-nodes-base.ldap.md)
 
 ## Prerequisites
 
-Create a server directory using Lightweight Directory Access Protocol (LDAP).
+สร้าง server directory โดยใช้ Lightweight Directory Access Protocol (LDAP)
 
-Some common LDAP providers include:
+ผู้ให้บริการ LDAP ทั่วไปบางราย ได้แก่:
 
 * [Jumpcloud](https://jumpcloud.com/blog/how-to-connect-your-application-to-ldap){:target=_blank .external-link}
 * [Azure ADDS](https://learn.microsoft.com/en-us/azure/active-directory-domain-services/tutorial-configure-ldaps){:target=_blank .external-link}
@@ -27,21 +27,21 @@ Some common LDAP providers include:
 
 ## Related resources
 
-Refer to your LDAP provider's own documentation for detailed information.
+ดูข้อมูลโดยละเอียดได้จากเอกสารของผู้ให้บริการ LDAP ของคุณ
 
-For general LDAP information, refer to [Basic LDAP concepts](https://ldap.com/basic-ldap-concepts/){:target=_blank .external-link} for a basic overview and [The LDAP Bind Operation](https://ldap.com/the-ldap-bind-operation/){:target=_blank .external-link} for information on how the bind operation and authentication work.
+สำหรับข้อมูล LDAP ทั่วไป โปรดดู [Basic LDAP concepts](https://ldap.com/basic-ldap-concepts/){:target=_blank .external-link} สำหรับภาพรวมพื้นฐาน และ [The LDAP Bind Operation](https://ldap.com/the-ldap-bind-operation/){:target=_blank .external-link} สำหรับข้อมูลเกี่ยวกับวิธีการทำงานของการดำเนินการ bind และการยืนยันตัวตน
 
 ## Using LDAP server details
 
-To configure this credential, you'll need:
+ในการตั้งค่า credential นี้ คุณจะต้องมี:
 
-- The **LDAP Server Address**: Use the IP address or domain of your LDAP server.
-- The **LDAP Server Port**: Use the number of the port used to connect to the LDAP server.
-- The **Binding DN**: Use the Binding Distinguished Name (Bind DN) for your LDAP server. This is the user account the credential should log in as. If you're using Active Directory, this may look something like `cn=administrator, cn=Users, dc=n8n, dc=io`. Refer to your LDAP provider's documentation for more information on identifying this DN and the related password.
-- The **Binding Password**: Use the password for the **Binding DN** user.
-- Select the **Connection Security**: Options include:
+- **LDAP Server Address**: ใช้ IP address หรือ domain ของ LDAP server ของคุณ
+- **LDAP Server Port**: ใช้หมายเลข port ที่ใช้เชื่อมต่อกับ LDAP server
+- **Binding DN**: ใช้ Binding Distinguished Name (Bind DN) สำหรับ LDAP server ของคุณ นี่คือบัญชีผู้ใช้ที่ credential ควรเข้าสู่ระบบ หากคุณใช้ Active Directory อาจมีลักษณะคล้าย `cn=administrator, cn=Users, dc=n8n, dc=io` ดูข้อมูลเพิ่มเติมเกี่ยวกับวิธีระบุ DN นี้และรหัสผ่านที่เกี่ยวข้องได้จากเอกสารของผู้ให้บริการ LDAP ของคุณ
+- **Binding Password**: ใช้รหัสผ่านสำหรับผู้ใช้ **Binding DN**
+- เลือก **Connection Security**: ตัวเลือกได้แก่:
     - `None`
     - `TLS`
     - `STARTTLS`
-- _Optional:_ Enter a numeric value in seconds to set a **Connection Timeout**.
+- _Optional:_ ป้อนค่าตัวเลขเป็นวินาทีเพื่อตั้งค่า **Connection Timeout**
 

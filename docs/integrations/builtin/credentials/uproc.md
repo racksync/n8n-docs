@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # uProc credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [uProc](/integrations/builtin/app-nodes/n8n-nodes-base.uproc.md)
 
 ## Prerequisites
 
-Create a [uProc](https://uproc.io){:target=_blank .external-link} account.
+สมัครบัญชี [uProc](https://uproc.io){:target=_blank .external-link} ก่อน
 
 ## Supported authentication methods
 
@@ -21,13 +21,13 @@ Create a [uProc](https://uproc.io){:target=_blank .external-link} account.
 
 ## Related resources
 
-Refer to [uProc's API documentation](https://docs.uproc.io/api/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [uProc's API documentation](https://docs.uproc.io/api/){:target=_blank .external-link}
 
 ## Using API Key
 
-To configure this credential, you'll need:
+ในการตั้งค่า credential นี้ คุณจะต้องมี:
 
-- An **Email** address: Enter the email address you use to log in to uProc. This is also displayed in **Settings > Integrations > API Credentials**.
-- An **API Key**: Go to **Settings > Integrations > API Credentials**. Copy the **API Key (real)** from the **API Credentials** section and enter it in your n8n credential.
+- **Email**: ใส่อีเมลที่คุณใช้ล็อกอิน uProc ซึ่งจะแสดงใน **Settings > Integrations > API Credentials** ด้วย
+- **API Key**: ไปที่ **Settings > Integrations > API Credentials** แล้วคัดลอก **API Key (real)** จากส่วน **API Credentials** มาใส่ใน n8n credential ของคุณ
 
 

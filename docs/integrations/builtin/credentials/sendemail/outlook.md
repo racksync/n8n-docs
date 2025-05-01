@@ -8,24 +8,24 @@ priority: high
 
 # Outlook.com Send Email credentials
 
-Follow these steps to configure the Send Email credentials with an Outlook.com account.
+ทำตามขั้นตอนเหล่านี้เพื่อกำหนดค่า Send Email credentials ด้วยบัญชี Outlook.com
 
 ## Set up the credential
 
-To configure the Send Email credential to use an Outlook.com account:
+เพื่อกำหนดค่า Send Email credential ให้ใช้บัญชี Outlook.com:
 
-1. Enter your Outlook.com email address as the **User**.
-2. Enter your Outlook.com password as the **Password**.
+1. ป้อนที่อยู่อีเมล Outlook.com ของคุณเป็น **User**
+2. ป้อนรหัสผ่าน Outlook.com ของคุณเป็น **Password**
 
 	/// note | App password
-	Outlook.com doesn't require you to use an app password, but if you'd like to for security reasons, refer to [Use an app password](#use-an-app-password).
+	Outlook.com ไม่จำเป็นต้องใช้ app password แต่หากคุณต้องการใช้เพื่อเหตุผลด้านความปลอดภัย โปรดอ้างอิง [Use an app password](#use-an-app-password)
 	///
 
-4. Enter `smtp-mail.outlook.com` as the **Host**.
-5. Enter `587` for the **Port**.
-6. Turn on the **SSL/TLS** toggle.
+4. ป้อน `smtp-mail.outlook.com` เป็น **Host**
+5. ป้อน `587` สำหรับ **Port**
+6. เปิดใช้งาน toggle **SSL/TLS**
 
-Refer to Microsoft's [POP, IMAP, and SMTP settings for Outlook.com](https://support.microsoft.com/en-us/office/pop-imap-and-smtp-settings-for-outlook-com-d088b986-291d-42b8-9564-9c414e2aa040){:target=_blank .external-link} documentation for more information. If the settings above don't work for you, check with your email administrator.
+อ้างอิงเอกสารของ Microsoft [POP, IMAP, and SMTP settings for Outlook.com](https://support.microsoft.com/en-us/office/pop-imap-and-smtp-settings-for-outlook-com-d088b986-291d-42b8-9564-9c414e2aa040){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม หากการตั้งค่าข้างต้นใช้ไม่ได้ผลสำหรับคุณ โปรดตรวจสอบกับผู้ดูแลระบบอีเมลของคุณ
 
 ## Use an app password
 

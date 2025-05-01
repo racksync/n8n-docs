@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Mocean credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนใน nodes ต่อไปนี้:
 
 - [Mocean](/integrations/builtin/app-nodes/n8n-nodes-base.mocean.md)
 
 ## Prerequisites
 
-Create a [Mocean](https://moceanapi.com/) account.
+สร้างบัญชี [Mocean](https://moceanapi.com/)
 
 ## Supported authentication methods
 
@@ -21,14 +21,14 @@ Create a [Mocean](https://moceanapi.com/) account.
 
 ## Related resources
 
-Refer to [Mocean's API documentation](https://moceanapi.com/docs/){:target=_blank .external-link} for more information about the service.
+อ้างอิง [Mocean's API documentation](https://moceanapi.com/docs/){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 ## Using API key
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- An **API Key**
-- An **API Secret**
+- **API Key**
+- **API Secret**
 
-Both the key and secret are accessible in your Mocean [Dashboard](https://dashboard.moceanapi.com/). Refer to [API Authentication](https://moceanapi.com/docs/#authentication){:target=_blank .external-link} for more information.
+ทั้ง key และ secret สามารถเข้าถึงได้ใน [Dashboard](https://dashboard.moceanapi.com/) ของ Mocean อ้างอิง [API Authentication](https://moceanapi.com/docs/#authentication){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 

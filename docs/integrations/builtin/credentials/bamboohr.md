@@ -8,13 +8,13 @@ priority: medium
 
 # BambooHR credentials
 
-You can use these credentials to authenticate the following node:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node ต่อไปนี้:
 
 - [BambooHR](/integrations/builtin/app-nodes/n8n-nodes-base.bamboohr.md)
 
 ## Prerequisites
 
-Create a [BambooHR](https://www.bamboohr.com/) account.
+สมัคร [BambooHR](https://www.bamboohr.com/) ให้เรียบร้อยก่อน
 
 ## Supported authentication methods
 
@@ -22,12 +22,12 @@ Create a [BambooHR](https://www.bamboohr.com/) account.
 
 ## Related resources
 
-Refer to [BambooHR's API documentation](https://documentation.bamboohr.com/docs/getting-started){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการได้ที่ [BambooHR's API documentation](https://documentation.bamboohr.com/docs/getting-started){:target=_blank .external-link}
 
 ## Using API Key
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- Your BambooHR **Subdomain**: the part between `https://` and `.bamboohr.com`
-- A BambooHR **API Key**: Refer to the [Authentication section of BambooHR's Getting Started API documentation](https://documentation.bamboohr.com/docs/getting-started#authentication){:target=_blank .external-link} for instructions on generating an API key.
+- **Subdomain** ของ BambooHR ของคุณ: ส่วนที่อยู่ระหว่าง `https://` และ `.bamboohr.com`
+- BambooHR **API Key**: ดูคำแนะนำในการสร้าง API key ได้ที่ [Authentication section of BambooHR's Getting Started API documentation](https://documentation.bamboohr.com/docs/getting-started#authentication){:target=_blank .external-link}
 

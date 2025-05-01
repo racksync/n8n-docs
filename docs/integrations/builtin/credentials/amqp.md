@@ -8,14 +8,14 @@ priority: medium
 
 # AMQP credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node เหล่านี้:
 
 - [AMQP Sender](/integrations/builtin/app-nodes/n8n-nodes-base.amqp.md)
 - [AMQP Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.amqptrigger.md)
 
 ## Prerequisites
 
-Install an AMQP 1.0-compatible message broker like [ActiveMQ](https://activemq.apache.org/){:target=_blank .external-link}. Refer to [AMQP Products](https://www.amqp.org/about/examples){:target=_blank .external-link} for a list of options.
+ติดตั้ง message broker ที่เข้ากันได้กับ AMQP 1.0 เช่น [ActiveMQ](https://activemq.apache.org/){:target=_blank .external-link} ดูรายการตัวเลือกได้ที่ [AMQP Products](https://www.amqp.org/about/examples){:target=_blank .external-link}
 
 ## Supported authentication methods
 
@@ -23,20 +23,20 @@ Install an AMQP 1.0-compatible message broker like [ActiveMQ](https://activemq.a
 
 ## Related resources
 
-Advanced Message Queuing Protocol (AMQP) is an open standard application layer protocol for message-oriented middleware. The defining features of AMQP are message orientation, queuing, routing, reliability and security. Refer to the [OASIS AMQP Version 1.0 Standard](https://docs.oasis-open.org/amqp/core/v1.0/amqp-core-overview-v1.0.html){:target=_blank .external-link} for more information.
+Advanced Message Queuing Protocol (AMQP) เป็นโปรโตคอลชั้น application แบบเปิดสำหรับ middleware ที่เน้นข้อความ คุณสมบัติเด่นของ AMQP คือ การเน้นข้อความ, การจัดคิว, การกำหนดเส้นทาง, ความน่าเชื่อถือ และความปลอดภัย ดูข้อมูลเพิ่มเติมได้ที่ [OASIS AMQP Version 1.0 Standard](https://docs.oasis-open.org/amqp/core/v1.0/amqp-core-overview-v1.0.html){:target=_blank .external-link}
 
-Refer to your provider's documentation for more information about the service. Refer to [ActiveMQ's API documentation](https://activemq.apache.org/components/classic/documentation/rest){:target=_blank .external-link} as one example.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการได้ที่เอกสารของผู้ให้บริการของคุณ ดู [ActiveMQ's API documentation](https://activemq.apache.org/components/classic/documentation/rest){:target=_blank .external-link} เป็นตัวอย่างหนึ่ง
 
 ## Using AMQP connection
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- A **Hostname**: Enter the hostname of your AMQP message broker.
-- A **Port**: Enter the port number the connection should use.
-- A **User**: Enter the name of the user to establish the connection as.
-    - For example, the default username in ActiveMQ is `admin`.
-- A **Password**: Enter the user's password.
-    - For example, the default password in ActiveMQ is `admin`.
-- _Optional:_ **Transport Type**: Enter either `tcp` or `tls`.
+- **Hostname**: ป้อน hostname ของ AMQP message broker ของคุณ
+- **Port**: ป้อนหมายเลข port ที่การเชื่อมต่อควรใช้
+- **User**: ป้อนชื่อผู้ใช้เพื่อสร้างการเชื่อมต่อ
+    - ตัวอย่างเช่น username เริ่มต้นใน ActiveMQ คือ `admin`
+- **Password**: ป้อน password ของผู้ใช้
+    - ตัวอย่างเช่น password เริ่มต้นใน ActiveMQ คือ `admin`
+- _Optional:_ **Transport Type**: ป้อน `tcp` หรือ `tls`
 
-Refer to your provider's documentation for more detailed instructions.
+ดูคำแนะนำโดยละเอียดเพิ่มเติมได้ที่เอกสารของผู้ให้บริการของคุณ

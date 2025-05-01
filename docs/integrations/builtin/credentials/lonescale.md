@@ -7,14 +7,14 @@ contentType: [integration, reference]
 
 # LoneScale credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [LoneScale](/integrations/builtin/app-nodes/n8n-nodes-base.lonescale.md)
 - [LoneScale Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.lonescaletrigger.md)
 
 ## Prerequisites
 
-Create a [LoneScale](https://www.lonescale.com/){:target=_blank .external-link} account.
+สร้างบัญชี [LoneScale](https://www.lonescale.com/){:target=_blank .external-link}
 
 ## Supported authentication methods
 
@@ -22,10 +22,10 @@ Create a [LoneScale](https://www.lonescale.com/){:target=_blank .external-link} 
 
 ## Related resources
 
-Refer to [LoneScale's API documentation](https://public-api.lonescale.com/api){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [LoneScale's API documentation](https://public-api.lonescale.com/api){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ในการตั้งค่า credential นี้ คุณจะต้องมี:
 
-- An **API Key**: Refer to [LoneScale's Generate an API key documentation](https://help-center.lonescale.com/en/articles/6454360-lonescale-public-api){:target=_blank .external-link} to generate your key.
+- **API Key**: ดูวิธีการสร้าง key ของคุณได้ที่ [LoneScale's Generate an API key documentation](https://help-center.lonescale.com/en/articles/6454360-lonescale-public-api){:target=_blank .external-link}

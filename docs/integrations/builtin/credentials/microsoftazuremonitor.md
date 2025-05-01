@@ -10,8 +10,8 @@ contentType: [integration, reference]
 
 ## Prerequisites
 
-* Create a Microsoft Azure account or subscription
-* An app registered in Microsoft Entra ID
+* สร้างบัญชีหรือสมัครสมาชิก Microsoft Azure
+* แอปที่ลงทะเบียนใน Microsoft Entra ID
 
 ## Supported authentication methods
 
@@ -19,15 +19,15 @@ contentType: [integration, reference]
 
 ## Related resources
 
-Refer to [Microsoft Azure Monitor's API documentation](https://learn.microsoft.com/en-us/azure/azure-monitor/azure-monitor-rest-api-index){:target=_blank .external-link} for more information about the service.
+อ้างอิง [Microsoft Azure Monitor's API documentation](https://learn.microsoft.com/en-us/azure/azure-monitor/azure-monitor-rest-api-index){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 ## Using OAuth2
 
-To configure this credential, you'll need a Microsoft Azure account and:
+ในการกำหนดค่า credential นี้ คุณจะต้องมีบัญชี Microsoft Azure และ:
 
-- A **Client ID**
-- A **Client Secret**
-- A **Tenant ID**
-- The **Resource** you plan to access
+- **Client ID**
+- **Client Secret**
+- **Tenant ID**
+- **Resource** ที่คุณวางแผนจะเข้าถึง
 
-Refer to [Microsoft Azure Monitor's API documentation](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/api/access-api?tabs=rest#set-up-authentication){:target=_blank .external-link} for more information about authenticating to the service.
+อ้างอิง [Microsoft Azure Monitor's API documentation](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/api/access-api?tabs=rest#set-up-authentication){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับการยืนยันตัวตนกับบริการ

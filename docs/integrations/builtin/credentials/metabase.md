@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Metabase credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนใน nodes ต่อไปนี้:
 
 - [Metabase node](/integrations/builtin/app-nodes/n8n-nodes-base.metabase.md)
 
 ## Prerequisites
 
-Create a [Metabase](https://www.metabase.com/){:target=_blank .external-link} account with access to a Metabase instance.
+สร้างบัญชี [Metabase](https://www.metabase.com/){:target=_blank .external-link} ที่มีสิทธิ์เข้าถึง instance ของ Metabase
 
 ## Supported authentication methods
 
@@ -21,12 +21,12 @@ Create a [Metabase](https://www.metabase.com/){:target=_blank .external-link} ac
 
 ## Related resources
 
-Refer to [Metabase's API documentation](https://www.metabase.com/docs/latest/api-documentation){:target=_blank .external-link} for more information about the service.
+อ้างอิง [Metabase's API documentation](https://www.metabase.com/docs/latest/api-documentation){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 ## Using basic auth
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- A **URL**: Enter the base URL of your Metabase instance. If you're using a custom domain, use that URL.
-- A **Username**: Enter your Metabase username.
-- A **Password**: Enter your Metabase password.
+- **URL**: ป้อน base URL ของ instance Metabase ของคุณ หากคุณใช้ custom domain ให้ใช้ URL นั้น
+- **Username**: ป้อนชื่อผู้ใช้ Metabase ของคุณ
+- **Password**: ป้อนรหัสผ่าน Metabase ของคุณ

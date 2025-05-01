@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # SIGNL4 credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้:
 
 - [SIGNL4](/integrations/builtin/app-nodes/n8n-nodes-base.signl4.md)
 
 ## Prerequisites
 
-Create a [SIGNL4](https://www.signl4.com/){:target=_blank .external-link} account.
+สมัคร [SIGNL4](https://www.signl4.com/){:target=_blank .external-link} account ก่อนใช้งาน
 
 ## Supported authentication methods
 
@@ -21,11 +21,11 @@ Create a [SIGNL4](https://www.signl4.com/){:target=_blank .external-link} accoun
 
 ## Related resources
 
-Refer to [SIGNL4's Inbound Webhook documentation](https://connect.signl4.com/webhook/docs/index.html){:target=_blank .external-link} for more information about the service.
+ดูรายละเอียดเพิ่มเติมได้ที่ [SIGNL4's Inbound Webhook documentation](https://connect.signl4.com/webhook/docs/index.html){:target=_blank .external-link}
 
 ## Using webhook secret
 
-To configure this credential, you'll need:
+ในการตั้งค่า credential นี้ คุณจะต้องมี:
 
-- A **Team Secret**: SIGNL4 includes this secret in the "✅ Sign up complete" email as the last part of the webhook URL. If your webhook URL is `https://connect.signl4.com/webhook/helloworld`, your team secret would be `helloworld`.
+- **Team Secret**: SIGNL4 จะส่ง secret นี้ในอีเมล "✅ Sign up complete" เป็นส่วนท้ายของ webhook URL เช่น ถ้า URL คือ `https://connect.signl4.com/webhook/helloworld` team secret คือ `helloworld`
 

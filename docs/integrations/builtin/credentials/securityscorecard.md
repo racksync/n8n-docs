@@ -7,14 +7,13 @@ contentType: [integration, reference]
 
 # SecurityScorecard credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้:
 
 - [SecurityScorecard](/integrations/builtin/app-nodes/n8n-nodes-base.securityscorecard.md)
 
-
 ## Prerequisites
 
-Create a [SecurityScorecard](https://securityscorecard.com/){:target=_blank .external-link} account.
+สร้าง [SecurityScorecard](https://securityscorecard.com/){:target=_blank .external-link} account
 
 ## Supported authentication methods
 
@@ -22,13 +21,13 @@ Create a [SecurityScorecard](https://securityscorecard.com/){:target=_blank .ext
 
 ## Related resources
 
-Refer to [SecurityScorecard's Developer documentation](https://securityscorecard.readme.io/docs/integrate-ratings-platform-services){:target=_blank .external-link} and [API documentation](https://securityscorecard.readme.io/reference/introduction){:target=_blank .external-link} for more information about the service.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [SecurityScorecard's Developer documentation](https://securityscorecard.readme.io/docs/integrate-ratings-platform-services){:target=_blank .external-link} และ [API documentation](https://securityscorecard.readme.io/reference/introduction){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ในการตั้งค่า credentials นี้ คุณจะต้องมี:
 
-- An **API Key**: Generate an API key in one of two ways:
-    * As a user in [**My Settings > API**](https://platform.securityscorecard.io/#/my-settings/api){:target=_blank .external-link}. Refer to [Get an API key](https://securityscorecard.readme.io/docs/getting-started#step-1-get-an-api-key){:target=_blank .external-link} for more information.
-    * As a bot user: View the bot user and select **create token**. Refer to [Authenticate with a bot user](https://securityscorecard.readme.io/docs/authentication#){:target=_blank .external-link} for more information.
+- **API Key**: สร้าง API key ได้ 2 วิธี:
+    * ในฐานะ user ที่ [**My Settings > API**](https://platform.securityscorecard.io/#/my-settings/api){:target=_blank .external-link} ดูวิธีได้ที่ [Get an API key](https://securityscorecard.readme.io/docs/getting-started#step-1-get-an-api-key){:target=_blank .external-link}
+    * ในฐานะ bot user: ดู bot user แล้วเลือก **create token** ดูวิธีได้ที่ [Authenticate with a bot user](https://securityscorecard.readme.io/docs/authentication#){:target=_blank .external-link}
 

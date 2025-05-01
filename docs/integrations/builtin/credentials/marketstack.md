@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Marketstack credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนใน nodes ต่อไปนี้:
 
 - [Marketstack](/integrations/builtin/app-nodes/n8n-nodes-base.marketstack.md)
 
 ## Prerequisites
 
-Create a [Marketstack](https://marketstack.com/){:target=_blank .external-link} account.
+สร้างบัญชี [Marketstack](https://marketstack.com/){:target=_blank .external-link}
 
 ## Supported authentication methods
 
@@ -21,14 +21,14 @@ Create a [Marketstack](https://marketstack.com/){:target=_blank .external-link} 
 
 ## Related resources
 
-Refer to [Marketstack's API documentation](https://marketstack.com/documentation){:target=_blank .external-link} for more information about the service.
+อ้างอิง [Marketstack's API documentation](https://marketstack.com/documentation){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 ## Using API key
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- An **API Key**: View and generate API keys in your Marketstack [account dashboard](https://marketstack.com/dashboard){:target=_blank .external-link}.
-- Select whether to **Use HTTPS**: Make this selection based on your Marketstack account plan level:
-    - Free plan: Turn off **Use HTTPS**
-    - All other plans: Turn on **Use HTTPS**
+- **API Key**: ดูและสร้าง API keys ใน [account dashboard](https://marketstack.com/dashboard){:target=_blank .external-link} ของ Marketstack
+- เลือกว่าจะ **Use HTTPS**: เลือกตัวเลือกนี้ตามระดับแผนบัญชี Marketstack ของคุณ:
+    - แผน Free: ปิด **Use HTTPS**
+    - แผนอื่นๆ ทั้งหมด: เปิด **Use HTTPS**
 

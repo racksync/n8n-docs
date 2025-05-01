@@ -7,16 +7,15 @@ contentType: [integration, reference]
 
 # SurveyMonkey credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [SurveyMonkey Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.surveymonkeytrigger.md)
 
-
 ## Prerequisites
 
-- Create a [SurveyMonkey](https://www.surveymonkey.com){:target=_blank .external-link} account.
-- [Register an app](https://api.surveymonkey.com/v3/docs?api_key=3yr7n6m8sjwvm48x8nhxej52#registering-an-app){:target=_blank .external-link} from your [**Developer dashboard > My apps**](https://developer.surveymonkey.com/apps/){:target=_blank .external-link}.
-    - Refer to [Required app scopes](#required-app-scopes) for information on the scopes you must use.
+- สร้างบัญชี [SurveyMonkey](https://www.surveymonkey.com){:target=_blank .external-link}
+- [ลงทะเบียนแอป](https://api.surveymonkey.com/v3/docs?api_key=3yr7n6m8sjwvm48x8nhxej52#registering-an-app){:target=_blank .external-link} จาก [**Developer dashboard > My apps**](https://developer.surveymonkey.com/apps/){:target=_blank .external-link}
+    - ดู [Required app scopes](#required-app-scopes) สำหรับ scope ที่ต้องใช้
 
 ## Supported authentication methods
 
@@ -25,42 +24,42 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [SurveyMonkey's API documentation](https://developer.surveymonkey.com/api/v3/#SurveyMonkey-Api){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [SurveyMonkey's API documentation](https://developer.surveymonkey.com/api/v3/#SurveyMonkey-Api){:target=_blank .external-link}
 
 ## Using API access token
 
-To configure this credential, you'll need:
+ในการตั้งค่า credentials นี้ คุณจะต้องมี:
 
-- An **Access Token**: Generated once you create an app.
-- A **Client ID**: Generated once you create an app.
-- A **Client Secret**: Generated once you create an app.
+- **Access Token**: ได้หลังจากสร้างแอป
+- **Client ID**: ได้หลังจากสร้างแอป
+- **Client Secret**: ได้หลังจากสร้างแอป
 
-Once you've created your app and assigned appropriate scopes, go to **Settings > Credentials**. Copy the **Access Token**, **Client ID**, and **Secret** and add them to n8n.
+เมื่อสร้างแอปและกำหนด scope ที่เหมาะสมแล้ว ไปที่ **Settings > Credentials** คัดลอก **Access Token**, **Client ID** และ **Secret** แล้วนำไปใส่ใน n8n
 
 ## Using OAuth
 
-To configure this credential, you'll need:
+ในการตั้งค่า credentials นี้ คุณจะต้องมี:
 
-- A **Client ID**: Generated once you create an app.
-- A **Client Secret**: Generated once you create an app.
+- **Client ID**: ได้หลังจากสร้างแอป
+- **Client Secret**: ได้หลังจากสร้างแอป
 
-Once you've created your app and assigned appropriate scopes:
+เมื่อสร้างแอปและกำหนด scope ที่เหมาะสมแล้ว:
 
-1. Go to the app's **Settings > Settings**.
-2. From n8n, copy the **OAuth Redirect URL**.
-3. Overwrite the app's existing **OAuth Redirect URL** with that URL.
-4. Select **Submit Changes**.
-5. Be sure the **Scopes** section contains the [Required app scopes](#required-app-scopes).
+1. ไปที่ **Settings > Settings** ของแอป
+2. จาก n8n ให้คัดลอก **OAuth Redirect URL**
+3. นำ URL นี้ไปวางแทนที่ **OAuth Redirect URL** เดิมของแอป
+4. กด **Submit Changes**
+5. ตรวจสอบว่าในส่วน **Scopes** มี [Required app scopes](#required-app-scopes) ครบถ้วน
 
-From the app's **Settings > Credentials**, copy the **Client ID** and **Client Secret** and add them to your n8n credential. You can now select **Connect my account** from n8n.
+จาก **Settings > Credentials** ของแอป ให้คัดลอก **Client ID** และ **Client Secret** ไปใส่ใน n8n credential แล้วเลือก **Connect my account** จาก n8n ได้เลย
 
 /// note | SurveyMonkey Test OAuth Flow
-This option only works if you keep the default SurveyMonkey **OAuth Redirect URL** and add the n8n OAuth Redirect URL as an **Additional Redirect URL**.
+ตัวเลือกนี้จะใช้ได้ก็ต่อเมื่อคุณยังคงใช้ **OAuth Redirect URL** ของ SurveyMonkey ที่เป็นค่าเริ่มต้น และเพิ่ม n8n OAuth Redirect URL เป็น **Additional Redirect URL**
 ///
 
 ## Required app scopes
 
-Once you create your app, go to **Settings > Scopes**. Select these scopes for your n8n credential to work:
+หลังจากสร้างแอปแล้ว ไปที่ **Settings > Scopes** เลือก scope เหล่านี้เพื่อให้ n8n credential ใช้งานได้:
 
 - **View Surveys**
 - **View Collectors**
@@ -69,4 +68,4 @@ Once you create your app, go to **Settings > Scopes**. Select these scopes for y
 - **Create/Modify Webhooks**
 - **View Webhooks**
 
-Select **Update Scopes** to save them.
+กด **Update Scopes** เพื่อบันทึก

@@ -8,7 +8,7 @@ priority: medium
 
 # ClickUp credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node เหล่านี้:
 
 - [ClickUp](/integrations/builtin/app-nodes/n8n-nodes-base.clickup.md)
 - [ClickUp Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.clickuptrigger.md)
@@ -20,34 +20,34 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [ClickUp's documentation](https://clickup.com/api/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการได้ที่ [ClickUp's documentation](https://clickup.com/api/){:target=_blank .external-link}
 
 ## Using API access token
 
-To configure this credential, you'll need a [ClickUp](https://www.clickup.com/){:target=_blank .external-link} account and:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมีบัญชี [ClickUp](https://www.clickup.com/){:target=_blank .external-link} และ:
 
-- A Personal API **Access Token**
+- Personal API **Access Token**
 
-To get your personal API token:
+วิธีรับ personal API token ของคุณ:
 
-1. If you're using ClickUp 2.0, select your avatar in the lower-left corner and select **Apps**. If you're using ClickUp 3.0, select your avatar in the upper-right corner, select **Settings**, and scroll down to select **Apps** in the sidebar.
-2. Under **API Token**, select **Generate**.
-3. Copy your **Personal API token** and enter it in your n8n credential as the **Access Token**.
+1. หากคุณใช้ ClickUp 2.0 ให้เลือก avatar ของคุณที่มุมล่างซ้ายแล้วเลือก **Apps** หากคุณใช้ ClickUp 3.0 ให้เลือก avatar ของคุณที่มุมบนขวา เลือก **Settings** แล้วเลื่อนลงมาเลือก **Apps** ในแถบด้านข้าง
+2. ใต้ **API Token** เลือก **Generate**
+3. คัดลอก **Personal API token** ของคุณแล้วป้อนลงใน n8n credential เป็น **Access Token**
 
-Refer to [ClickUp's Personal Token documentation](https://clickup.com/api/developer-portal/authentication#personal-token){:target=_blank .external-link} for more information.
+ดูข้อมูลเพิ่มเติมได้ที่ [ClickUp's Personal Token documentation](https://clickup.com/api/developer-portal/authentication#personal-token){:target=_blank .external-link}
 
 ## Using OAuth2
 
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-If you're [self-hosting](/hosting/index.md) n8n, you'll need to create an OAuth app:
+หากคุณ [self-hosting](/hosting/index.md) n8n คุณจะต้องสร้าง OAuth app:
 
-1. In ClickUp, select your avatar and select **Integrations**.
-2. Select **ClickUp API**.
-3. Select **Create an App**.
-4. Enter a **Name** for your app.
-5. In n8n, copy the **OAuth Redirect URL**. Enter this as your ClickUp app's **Redirect URL**.
-6. Once you create your app, copy the **client_id** and **secret** and enter them in your n8n credential.
-7. Select **Connect my account** and follow the on-screen prompts to finish connecting the credential.
+1. ใน ClickUp เลือก avatar ของคุณแล้วเลือก **Integrations**
+2. เลือก **ClickUp API**
+3. เลือก **Create an App**
+4. ป้อน **Name** สำหรับ app ของคุณ
+5. ใน n8n คัดลอก **OAuth Redirect URL** ป้อน URL นี้เป็น **Redirect URL** ของ ClickUp app ของคุณ
+6. เมื่อคุณสร้าง app แล้ว ให้คัดลอก **client_id** และ **secret** แล้วป้อนลงใน n8n credential ของคุณ
+7. เลือก **Connect my account** และทำตามคำแนะนำบนหน้าจอเพื่อเชื่อมต่อ credential ให้เสร็จสิ้น
 
- Refer to the [ClickUp Oauth flow documentation](https://clickup.com/api/developer-portal/authentication#oauth-flow){:target=_blank .external-link} for more information.
+ ดูข้อมูลเพิ่มเติมได้ที่ [ClickUp Oauth flow documentation](https://clickup.com/api/developer-portal/authentication#oauth-flow){:target=_blank .external-link}

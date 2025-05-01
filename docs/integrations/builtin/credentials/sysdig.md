@@ -11,7 +11,7 @@ contentType: [integration, reference]
 
 ## Prerequisites
 
-Create a [Sysdig](https://sysdig.com){:target=_blank .external-link} account or configure a local instance.
+สร้างบัญชี [Sysdig](https://sysdig.com){:target=_blank .external-link} หรือกำหนดค่า instance ในเครื่องของคุณ
 
 ## Supported authentication methods
 
@@ -19,14 +19,14 @@ Create a [Sysdig](https://sysdig.com){:target=_blank .external-link} account or 
 
 ## Related resources
 
-Refer to [Sysdig's documentation](https://docs.sysdig.com/en/docs/developer-tools/sysdig-api/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Sysdig's documentation](https://docs.sysdig.com/en/docs/developer-tools/sysdig-api/){:target=_blank .external-link}
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more.
+นี่คือ node สำหรับ credential เท่านั้น ดูข้อมูลเพิ่มเติมได้ที่ [Custom API operations](/integrations/custom-operations.md)
 
 ## Using API access key
 
-To configure this credential, you'll need:
+ในการตั้งค่า credentials นี้ คุณจะต้องมี:
 
-- An **Access Key**
+- **Access Key**
 
-Refer to the [Sysdig Agent Access Keys documentation](https://docs.sysdig.com/en/docs/administration/agent_access_key/){:target=_blank .external-link} for instructions on obtaining the Access Key from the application.
+ดูวิธีขอ Access Key จากแอปพลิเคชันได้ที่ [Sysdig Agent Access Keys documentation](https://docs.sysdig.com/en/docs/administration/agent_access_key/){:target=_blank .external-link}

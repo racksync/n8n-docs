@@ -8,7 +8,7 @@ priority: high
 
 # Ollama credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนใน nodes ต่อไปนี้:
 
 * [Ollama](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmollama/index.md)
 * [Chat Ollama](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama/index.md)
@@ -16,7 +16,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create and run an [Ollama](https://ollama.com/){:target=_blank .external-link} instance with one user. Refer to the Ollama [Quick Start](https://github.com/ollama/ollama/blob/main/README.md#quickstart){:target=_blank .external-link} for more information.
+สร้างและรัน instance ของ [Ollama](https://ollama.com/){:target=_blank .external-link} ด้วยผู้ใช้หนึ่งคน อ้างอิง Ollama [Quick Start](https://github.com/ollama/ollama/blob/main/README.md#quickstart){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 
 ## Supported authentication methods
 
@@ -24,24 +24,24 @@ Create and run an [Ollama](https://ollama.com/){:target=_blank .external-link} i
 
 ## Related resources
 
-Refer to [Ollama's API documentation](https://github.com/ollama/ollama/blob/main/docs/api.md){:target=_blank .external-link} for more information about the service.
+อ้างอิง [Ollama's API documentation](https://github.com/ollama/ollama/blob/main/docs/api.md){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
 ## Using instance URL
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- The **Base URL** of your Ollama instance.
+- **Base URL** ของ instance Ollama ของคุณ
 
-The default **Base URL** is `http://localhost:11434`, but if you've set the `OLLAMA_HOST` environment variable, enter that value. If you have issues connecting to a local n8n server, try `127.0.0.1` instead of `localhost`.
+**Base URL** เริ่มต้นคือ `http://localhost:11434` แต่ถ้าคุณได้ตั้งค่าตัวแปรสภาพแวดล้อม `OLLAMA_HOST` ให้ป้อนค่านั้น หากคุณมีปัญหาในการเชื่อมต่อกับเซิร์ฟเวอร์ n8n ในเครื่อง ให้ลองใช้ `127.0.0.1` แทน `localhost`
 
-Refer to [How do I configure Ollama server?](https://github.com/ollama/ollama/blob/main/docs/faq.md#how-do-i-configure-ollama-server){:target=_blank .external-link} for more information.
+อ้างอิง [How do I configure Ollama server?](https://github.com/ollama/ollama/blob/main/docs/faq.md#how-do-i-configure-ollama-server){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 
 ### Ollama and self-hosted n8n
 
-If you're self-hosting n8n on the same machine as Ollama, you may run into issues if they're running in different containers.
+หากคุณ self-host n8n บนเครื่องเดียวกับ Ollama คุณอาจประสบปัญหาหากทำงานใน containers ที่แตกต่างกัน
 
-For this setup, open a specific port for n8n to communicate with Ollama by setting the `OLLAMA_ORIGINS` variable or adjusting `OLLAMA_HOST` to an address the other container can access.
+สำหรับการตั้งค่านี้ ให้เปิด port เฉพาะสำหรับ n8n เพื่อสื่อสารกับ Ollama โดยตั้งค่าตัวแปร `OLLAMA_ORIGINS` หรือปรับ `OLLAMA_HOST` เป็นที่อยู่ที่ container อื่นสามารถเข้าถึงได้
 
-Refer to Ollama's [How can I allow additional web origins to access Ollama?](https://github.com/ollama/ollama/blob/main/docs/faq.md#how-can-i-allow-additional-web-origins-to-access-ollama){:target=_blank .external-link} for more information.
+อ้างอิง Ollama's [How can I allow additional web origins to access Ollama?](https://github.com/ollama/ollama/blob/main/docs/faq.md#how-can-i-allow-additional-web-origins-to-access-ollama){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม

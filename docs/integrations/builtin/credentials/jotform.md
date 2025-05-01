@@ -8,7 +8,7 @@ priority: medium
 
 # JotForm credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [JotForm Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.jotformtrigger.md)
 
@@ -18,24 +18,24 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [JotForm's API documentation](https://api.jotform.com/docs/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [JotForm's API documentation](https://api.jotform.com/docs/){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need a [JotForm](https://www.jotform.com/){:target=_blank .external-link} account and:
+ในการตั้งค่า credential นี้ คุณจะต้องมีบัญชี [JotForm](https://www.jotform.com/){:target=_blank .external-link} และ:
 
-- An **API Key**
-- The **API Domain**
+- **API Key**
+- **API Domain**
 
-To set it up:
+วิธีตั้งค่า:
 
-1. Go to **Settings >** [**API**](https://www.jotform.com/myaccount/api){:target=_blank .external-link}.
-2. Select **Create New Key**.
-3. Select the **Name** in JotForm to update the API key name to something meaningful, like `n8n integration`.
-4. Copy the **API Key** and enter it in your n8n credential.
-5. In n8n, select the **API Domain** that applies to you based on the forms you're using:
-    - **api.jotform.com**: Use this unless the other form types apply to you.
-    - **eu-api.jotform.com**: Select this if you're using JotForm [EU Safe Forms](https://www.jotform.com/eu-safe-forms/){:target=_blank .external-link}.
-    - **hipaa-api.jotform.com**: Select this if you're using JotForm [HIPAA forms](https://www.jotform.com/hipaa/){:target=_blank .external-link}.
+1.  ไปที่ **Settings >** [**API**](https://www.jotform.com/myaccount/api){:target=_blank .external-link}
+2.  เลือก **Create New Key**
+3.  เลือก **Name** ใน JotForm เพื่ออัปเดตชื่อ API key เป็นชื่อที่มีความหมาย เช่น `n8n integration`
+4.  คัดลอก **API Key** และป้อนลงใน n8n credential ของคุณ
+5.  ใน n8n เลือก **API Domain** ที่ตรงกับคุณตามแบบฟอร์มที่คุณใช้:
+    - **api.jotform.com**: ใช้ตัวเลือกนี้ เว้นแต่แบบฟอร์มประเภทอื่นจะตรงกับคุณ
+    - **eu-api.jotform.com**: เลือกตัวเลือกนี้หากคุณใช้ JotForm [EU Safe Forms](https://www.jotform.com/eu-safe-forms/){:target=_blank .external-link}
+    - **hipaa-api.jotform.com**: เลือกตัวเลือกนี้หากคุณใช้ JotForm [HIPAA forms](https://www.jotform.com/hipaa/){:target=_blank .external-link}
 
-Refer to the [JotForm API documentation](https://api.jotform.com/docs/) for more information on creating keys and API domains.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับการสร้าง keys และ API domains ได้ที่ [JotForm API documentation](https://api.jotform.com/docs/)

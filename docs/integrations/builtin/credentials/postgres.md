@@ -8,7 +8,7 @@ priority: high
 
 # Postgres credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [Postgres](/integrations/builtin/app-nodes/n8n-nodes-base.postgres/index.md)
 - [Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md)
@@ -16,12 +16,12 @@ You can use these credentials to authenticate the following nodes:
 - [PGVector Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepgvector.md) 
 
 /// note | Agent node users
-The Agent node doesn't support SSH tunnels.
+Agent node ยังไม่รองรับ SSH tunnels.
 ///
 
 ## Prerequisites
 
-[Create a user account](https://www.postgresql.org/docs/current/sql-createuser.html) on a Postgres server. 
+[สร้าง user account](https://www.postgresql.org/docs/current/sql-createuser.html) บน Postgres server
 
 ## Supported authentication methods
 
@@ -29,62 +29,62 @@ The Agent node doesn't support SSH tunnels.
 
 ## Related resources
 
-Refer to [Postgres's documentation](https://www.postgresql.org/docs/16/index.html){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Postgres's documentation](https://www.postgresql.org/docs/16/index.html){:target=_blank .external-link}
 
 ## Using database connection
 
-To configure this credential, you'll need:
+สำหรับการตั้งค่า credentials นี้ คุณจะต้องมี:
 
-- The **Host** or domain name for the server.
-- The **Database** name.
-- A **User** name.
-- A user **Password**.
-- **Ignore SSL Issues**: Set whether the credential connects if SSL validation fails.
-- **SSL**: Choose whether to use SSL in your connection.
-- The **Port** number to use for the connection.
-- **SSH Tunnel**: Choose if you want to use SSH to encrypt the network connection with the Postgres server.
+- **Host** หรือ domain name ของ server
+- ชื่อ **Database**
+- ชื่อ **User**
+- **Password** ของ user
+- **Ignore SSL Issues**: ตั้งค่าว่าจะให้เชื่อมต่อแม้ SSL validation จะล้มเหลวหรือไม่
+- **SSL**: เลือกว่าจะใช้ SSL ในการเชื่อมต่อหรือไม่
+- หมายเลข **Port** ที่จะใช้เชื่อมต่อ
+- **SSH Tunnel**: เลือกว่าจะใช้ SSH เพื่อเข้ารหัสการเชื่อมต่อกับ Postgres server หรือไม่
 
-To set up the database connection:
+ขั้นตอนการตั้งค่าการเชื่อมต่อ database:
 
-1. Enter the **Host** or domain name for the Postgres server. You can either run the `/conninfo` command to confirm the host name or run this query:
+1. กรอก **Host** หรือ domain name ของ Postgres server คุณสามารถใช้คำสั่ง `/conninfo` เพื่อดู host name หรือรัน query นี้:
 
     ```
     SELECT inet_server_addr();
     ```
 
-2. Enter the **Database** name. Run the `/conninfo` command to confirm the database name.
-3. Enter the **User** name of the user you wish to connect as.
-4. Enter the user's **Password**.
-5. **Ignore SSL Issues**: If you turn this on, the credential will connect even if SSL validation fails.
-6. **SSL**: Choose whether to use SSL in your connection. Refer to Postgres [SSL Support](https://www.postgresql.org/docs/16/libpq-ssl.html){:target=_blank .external-link} for more information. Options include:
-    - **Allow**: Sets the `ssl-mode` parameter to `allow`. First try a non-SSL connection; if that fails, try an SSL connection.
-    - **Disable**: Sets the `ssl-mode` parameter to `disable`. Only try a non-SSL connection.
-    - **Require**: Sets the `ssl-mode` parameter to `require`. Only try an SSL connection. If a root CA file is present, verify that a trusted certificate authority (CA) issued the server certificate.
-7. Enter the **Port** number to use for the connection. You can either run the `/conninfo` command to confirm the host name or run this query:
+2. กรอกชื่อ **Database** สามารถใช้คำสั่ง `/conninfo` เพื่อดูชื่อ database ได้
+3. กรอกชื่อ **User** ที่ต้องการเชื่อมต่อ
+4. กรอก **Password** ของ user
+5. **Ignore SSL Issues**: ถ้าเปิดใช้งาน credential จะเชื่อมต่อแม้ SSL validation จะล้มเหลว
+6. **SSL**: เลือกว่าจะใช้ SSL ในการเชื่อมต่อหรือไม่ ดูรายละเอียดเพิ่มเติมที่ [Postgres SSL Support](https://www.postgresql.org/docs/16/libpq-ssl.html){:target=_blank .external-link} ตัวเลือกที่มี:
+    - **Allow**: ตั้งค่า `ssl-mode` เป็น `allow` จะลองเชื่อมต่อแบบ non-SSL ก่อน ถ้าไม่สำเร็จจะลองแบบ SSL
+    - **Disable**: ตั้งค่า `ssl-mode` เป็น `disable` จะเชื่อมต่อแบบ non-SSL เท่านั้น
+    - **Require**: ตั้งค่า `ssl-mode` เป็น `require` จะเชื่อมต่อแบบ SSL เท่านั้น ถ้ามี root CA file จะตรวจสอบว่า certificate ออกโดย CA ที่เชื่อถือได้
+7. กรอกหมายเลข **Port** ที่จะใช้เชื่อมต่อ สามารถใช้คำสั่ง `/conninfo` หรือรัน query นี้:
 
     ```
     SELECT inet_server_port();
     ```
 
-8. **SSH Tunnel**: Turn this setting on to connect to the database over SSH. Refer to [SSH tunnel limitations](#ssh-tunnel-limitations) for some guidance around using SSH. Once turned on, you'll need:
-    1. Select **SSH Authenticate with** to set the SSH Tunnel type to build:
-        - Select **Password** if you want to connect to SSH using a password.
-        - Select **Private Key** if you want to connect to SSH using an identity file (private key) and a passphrase.
-    2. Enter the remote bind address you're connecting to as the **SSH Host**.
-    3. **SSH Port**: Enter the local port number for the SSH tunnel.
-    4. **SSH Postgres Port**: Enter the remote end of the tunnel, the port number the database server is using.
-    5. **SSH User**: Enter the username to log in as.
-    6. If you selected **Password** for SSH Authenticate with, add the user's **SSH Password**.
-    7. If you selected **Private Key** for **SSH Authenticate with**:
-        1. Add the contents of the **Private Key** or identity file used for SSH.
-        2. If the **Private Key** was created with a passphrase, enter that **Passphrase**. If the **Private Ke**y has no passphrase, leave this field blank.
+8. **SSH Tunnel**: เปิดใช้งานถ้าต้องการเชื่อมต่อ database ผ่าน SSH ดูรายละเอียดข้อจำกัดการใช้ SSH ได้ที่ [SSH tunnel limitations](#ssh-tunnel-limitations) ถ้าเปิดใช้งาน จะต้องกรอกข้อมูลเพิ่มเติมดังนี้:
+    1. เลือก **SSH Authenticate with** เพื่อกำหนดประเภท SSH Tunnel ที่จะใช้:
+        - เลือก **Password** ถ้าต้องการเชื่อมต่อ SSH ด้วยรหัสผ่าน
+        - เลือก **Private Key** ถ้าต้องการเชื่อมต่อ SSH ด้วยไฟล์ private key และ passphrase
+    2. กรอก **SSH Host** เป็น remote bind address ที่ต้องการเชื่อมต่อ
+    3. **SSH Port**: กรอกหมายเลข port ฝั่ง local สำหรับ SSH tunnel
+    4. **SSH Postgres Port**: กรอกหมายเลข port ฝั่ง remote ที่ database server ใช้งาน
+    5. **SSH User**: กรอกชื่อผู้ใช้สำหรับ SSH
+    6. ถ้าเลือก **Password** สำหรับ SSH Authenticate with ให้กรอก **SSH Password**
+    7. ถ้าเลือก **Private Key** สำหรับ SSH Authenticate with:
+        1. กรอกเนื้อหา **Private Key** หรือไฟล์ identity ที่ใช้สำหรับ SSH
+        2. ถ้า **Private Key** มี passphrase ให้กรอก **Passphrase** ถ้าไม่มีให้เว้นว่าง
 
-Refer to [Secure TCP/IP Connections with SSH Tunnels](https://www.postgresql.org/docs/16/ssh-tunnels.html){:target=_blank .external-link} for more information.
+ดูรายละเอียดเพิ่มเติมที่ [Secure TCP/IP Connections with SSH Tunnels](https://www.postgresql.org/docs/16/ssh-tunnels.html){:target=_blank .external-link}
 
 ### SSH tunnel limitations
 
-Only use the **SSH Tunnel** setting if:
+ควรใช้ **SSH Tunnel** เฉพาะกรณีต่อไปนี้:
 
-- You're using the credential with the [Postgres](/integrations/builtin/app-nodes/n8n-nodes-base.postgres/index.md) node (Agent node doesn't support SSH tunnels).
-- You have an SSH server running on the same machine as the Postgres server.
-- You have a user account that can log in using `ssh`.
+- ใช้ credential นี้กับ [Postgres](/integrations/builtin/app-nodes/n8n-nodes-base.postgres/index.md) node เท่านั้น (Agent node ยังไม่รองรับ SSH tunnels)
+- มี SSH server รันอยู่บนเครื่องเดียวกับ Postgres server
+- มี user account ที่สามารถล็อกอินด้วย `ssh`

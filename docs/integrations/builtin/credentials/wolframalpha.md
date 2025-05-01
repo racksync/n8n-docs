@@ -8,7 +8,7 @@ priority: medium
 
 # Wolfram|Alpha credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้:
 
 * [Wolfram|Alpha](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwolframalpha.md)
 
@@ -18,34 +18,34 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Wolfram|Alpha's Simple API documentation](https://products.wolframalpha.com/simple-api/documentation){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Wolfram|Alpha's Simple API documentation](https://products.wolframalpha.com/simple-api/documentation){:target=_blank .external-link}
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
 ## Using API key
 
-To configure this credential, you'll need a registered [Wolfram ID](https://account.wolfram.com){:target=_blank .external-link} and:
+ในการตั้งค่า credential นี้ คุณต้องมี [Wolfram ID](https://account.wolfram.com){:target=_blank .external-link} ที่ลงทะเบียนแล้ว และ:
 
-- An **App ID**
+- **App ID**
 
-To get an App ID:
+วิธีขอ App ID:
 
-1. Open the Wolfram|Alpha Developer Portal and go to [**API Access**](https://developer.wolframalpha.com/access){:target=_blank .external-link}.
-2. Select **Get an App ID**.
-3. Enter a **Name** for your application, like `n8n integration`.
-4. Enter a **Description** for your application.
-5. Select **Simple API** as the **API**.
-6. Select **Submit**.
-6. Copy the generated **App ID** and enter it in your n8n credential.
+1. ไปที่ Wolfram|Alpha Developer Portal แล้วเข้า [**API Access**](https://developer.wolframalpha.com/access){:target=_blank .external-link}
+2. เลือก **Get an App ID**
+3. กรอก **Name** ของแอป เช่น `n8n integration`
+4. กรอก **Description** ของแอป
+5. เลือก **Simple API** ที่ **API**
+6. กด **Submit**
+6. คัดลอก **App ID** ที่ได้มาใส่ใน n8n credential
 
-Refer to **Getting Started** in the [Wolfram|Alpha Simple API documentation](https://products.wolframalpha.com/simple-api/documentation){:target=_blank .external-link} for more information.
+ดูรายละเอียดเพิ่มเติมได้ที่ **Getting Started** ใน [Wolfram|Alpha Simple API documentation](https://products.wolframalpha.com/simple-api/documentation){:target=_blank .external-link}
 
 ## Resolve Forbidden connection error
 
-If you enter your App ID and get an error that the credential is **Forbidden**, make sure that you have verified your email address for your Wolfram ID:
+ถ้าคุณกรอก App ID แล้วเจอ error ว่า credential **Forbidden** ให้ตรวจสอบว่าได้ยืนยันอีเมลสำหรับ Wolfram ID แล้วหรือยัง:
 
-1. Go to your [Wolfram ID Details](https://account.wolfram.com/wolframid){:target=_blank .external-link}.
-2. If you don't see the **Verified** label underneath your **Email address**, select the link to **Send a verification email**.
-3. You must open the link in that email to verify your email address.
+1. ไปที่ [Wolfram ID Details](https://account.wolfram.com/wolframid){:target=_blank .external-link}
+2. ถ้าไม่เห็นป้าย **Verified** ใต้ **Email address** ให้กดลิงก์ **Send a verification email**
+3. ต้องเปิดลิงก์ในอีเมลนั้นเพื่อยืนยันอีเมล
 
-It may take several minutes for the verification to populate to the API, but once it does, retrying the n8n credential should succeed.
+อาจใช้เวลาหลายนาทีกว่าการยืนยันจะอัปเดตไปยัง API เมื่อเสร็จแล้วให้ลองเชื่อมต่อ credential ใน n8n ใหม่อีกครั้ง

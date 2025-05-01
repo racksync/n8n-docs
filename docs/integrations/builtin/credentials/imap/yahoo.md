@@ -8,23 +8,23 @@ priority: high
 
 # Yahoo IMAP credentials
 
-Follow these steps to configure the IMAP credentials with a Yahoo account.
+ทำตามขั้นตอนเหล่านี้เพื่อกำหนดค่า IMAP credentials ด้วยบัญชี Yahoo
 
 ## Prerequisites
 
-To follow these instructions, you must first generate an app password:
+ในการทำตามคำแนะนำเหล่านี้ คุณต้องสร้าง app password ก่อน:
 
 --8<-- "_snippets/integrations/builtin/credentials/email/yahoo-app-password.md"
 
 ## Set up the credential
 
-To set up the IMAP credential with a Yahoo Mail account, use these settings:
+ในการตั้งค่า IMAP credential ด้วยบัญชี Yahoo Mail ให้ใช้การตั้งค่าเหล่านี้:
 
-1. Enter your Yahoo email address as the **User**.
-2. Enter the app password you generated above as the **Password**.
-3. Enter `imap.mail.yahoo.com` as the **Host**.
-4. Keep the default **Port** number of `993`. Check with your email administrator if this port doesn't work.
-5. Turn on the **SSL/TLS** toggle.
-6. Check with your email administrator about whether to **Allow Self-Signed Certificates**.
+1. ป้อนที่อยู่อีเมล Yahoo ของคุณเป็น **User**
+2. ป้อน app password ที่คุณสร้างขึ้นด้านบนเป็น **Password**
+3. ป้อน `imap.mail.yahoo.com` เป็น **Host**
+4. คงหมายเลข **Port** เริ่มต้นไว้ที่ `993` ตรวจสอบกับผู้ดูแลระบบอีเมลของคุณหาก port นี้ใช้งานไม่ได้
+5. เปิดใช้งาน toggle **SSL/TLS**
+6. ตรวจสอบกับผู้ดูแลระบบอีเมลของคุณว่าควร **Allow Self-Signed Certificates** หรือไม่
 
-Refer to [Set up IMAP for Yahoo mail account](https://help.yahoo.com/kb/sln4075.html){:target=_blank .external-link} for more information.
+อ้างอิง [Set up IMAP for Yahoo mail account](https://help.yahoo.com/kb/sln4075.html){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม

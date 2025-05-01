@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Gotify credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้:
 
 - [Gotify](/integrations/builtin/app-nodes/n8n-nodes-base.gotify.md)
 
 ## Prerequisites
 
-Install [Gotify](https://gotify.net/docs/install){:target=_blank .external-link} on your server.
+ติดตั้ง [Gotify](https://gotify.net/docs/install){:target=_blank .external-link} บนเซิร์ฟเวอร์ของคุณ
 
 ## Supported authentication methods
 
@@ -21,13 +21,13 @@ Install [Gotify](https://gotify.net/docs/install){:target=_blank .external-link}
 
 ## Related resources
 
-Refer to [Gotify's API documentation](https://gotify.net/api-docs){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Gotify's API documentation](https://gotify.net/api-docs){:target=_blank .external-link}
 
 ## Using API token
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- An **App API Token**: Only required if you'll use this credential to create messages. To generate an App API token, create an application from the **Apps** menu. Refer to [Gotify's Push messages documentation](https://gotify.net/docs/pushmsg){:target=_blank .external-link} for more information.
-- A **Client API Token**: Required for all actions other than creating messages (such as deleting or retrieving messages). To generate a Client API token, create a client from the **Clients** menu.
-- The **URL** of the Gotify host
+- **App API Token**: จำเป็นเฉพาะเมื่อคุณจะใช้ credential นี้เพื่อสร้างข้อความ หากต้องการสร้าง App API token ให้สร้าง application จากเมนู **Apps** ดูข้อมูลเพิ่มเติมได้ที่ [Gotify's Push messages documentation](https://gotify.net/docs/pushmsg){:target=_blank .external-link}
+- **Client API Token**: จำเป็นสำหรับการดำเนินการอื่นๆ ทั้งหมดนอกเหนือจากการสร้างข้อความ (เช่น การลบหรือการดึงข้อความ) หากต้องการสร้าง Client API token ให้สร้าง client จากเมนู **Clients**
+- **URL** ของ Gotify host
 

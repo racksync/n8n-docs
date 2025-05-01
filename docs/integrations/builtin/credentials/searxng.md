@@ -7,7 +7,7 @@ contentType: [integration, reference]
 
 # SearXNG credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้:
 
 * [SearXNG Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolsearxng.md)
 
@@ -17,12 +17,12 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [SearXNG's documentation](https://docs.searxng.org/index.html) for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [SearXNG's documentation](https://docs.searxng.org/index.html)
 
 ## Using API URL
 
-To configure this credential, you'll need an instance of SearXNG running at an URL that's accessible from n8n:
+ในการตั้งค่า credentials นี้ คุณจะต้องมี instance ของ SearXNG ที่รันอยู่บน URL ที่ n8n เข้าถึงได้:
 
-- **API URL**: The URL of the SearXNG instance you want to connect to.
+- **API URL**: URL ของ SearXNG instance ที่คุณต้องการเชื่อมต่อ
 
-Refer to [SearXNG's Administrator documentation](https://docs.searxng.org/admin/index.html) for more information about running the service.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับการรัน service ได้ที่ [SearXNG's Administrator documentation](https://docs.searxng.org/admin/index.html)

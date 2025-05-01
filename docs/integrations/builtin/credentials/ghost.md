@@ -7,36 +7,36 @@ contentType: [integration, reference]
 
 # Ghost credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้:
 
 - [Ghost](/integrations/builtin/app-nodes/n8n-nodes-base.ghost.md)
 
 ## Prerequisites
 
-Create a [Ghost](https://ghost.org/){:target=_blank .external-link} account.
+สร้างบัญชี [Ghost](https://ghost.org/){:target=_blank .external-link}
 
 ## Supported authentication methods
 
 - Admin API key
 - Content API key
 
-The keys are generated following the same steps, but the authorization flows and key format are different, so n8n stores the credentials separately. The Content API uses an API key; the Admin API uses an API key to generate a token for authentication.
+keys เหล่านี้สร้างขึ้นตามขั้นตอนเดียวกัน แต่ขั้นตอนการ authorization และรูปแบบ key แตกต่างกัน ดังนั้น n8n จึงจัดเก็บ credentials แยกกัน Content API ใช้ API key; Admin API ใช้ API key เพื่อสร้าง token สำหรับการยืนยันตัวตน
 
 ## Related resources
 
-Refer to Ghost's [Admin API documentation](https://ghost.org/docs/admin-api/){:target=_blank .external-link} for more information about the Admin API service. Refer to Ghost's [Content API documentation](https://ghost.org/docs/content-api/){:target=_blank .external-link} for more information about the Content API service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการ Admin API ได้ที่ [Ghost's Admin API documentation](https://ghost.org/docs/admin-api/){:target=_blank .external-link} ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการ Content API ได้ที่ [Ghost's Content API documentation](https://ghost.org/docs/content-api/){:target=_blank .external-link}
 
 ## Using Admin API key
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- The **URL** of your Ghost admin domain. Your [admin domain](https://ghost.org/docs/admin-api/#base-url){:target=_blank .external-link} can be different to your main domain and may include a subdirectory. All Ghost(Pro) blogs have a `*.ghost.io` domain as their admin domain and require https.
-- An **API Key**: To generate a new API key, create a new Custom Integration. Refer to the [Ghost Admin API Token Authentication Key documentation](https://ghost.org/docs/admin-api/#token-authentication){:target=_blank .external-link} for more detailed instructions. Copy the **Admin API Key** and use this as the **API Key** in the Ghost Admin n8n credential.
+- **URL** ของ Ghost admin domain ของคุณ [admin domain](https://ghost.org/docs/admin-api/#base-url){:target=_blank .external-link} ของคุณอาจแตกต่างจาก domain หลักของคุณและอาจรวมถึง subdirectory บล็อก Ghost(Pro) ทั้งหมดมี domain `*.ghost.io` เป็น admin domain และต้องใช้ https
+- **API Key**: หากต้องการสร้าง API key ใหม่ ให้สร้าง Custom Integration ใหม่ ดูคำแนะนำโดยละเอียดเพิ่มเติมได้ที่ [Ghost Admin API Token Authentication Key documentation](https://ghost.org/docs/admin-api/#token-authentication){:target=_blank .external-link} คัดลอก **Admin API Key** และใช้เป็น **API Key** ใน Ghost Admin n8n credential
 
 ## Using Content API key
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- The **URL** of your Ghost admin domain. Your [admin domain](https://ghost.org/docs/content-api/#url){:target=_blank .external-link} can be different to your main domain and may include a subdirectory. All Ghost(Pro) blogs have a `*.ghost.io` domain as their admin domain and require https.
-- An **API Key**: To generate a new API key, create a new Custom Integration. Refer to the [Ghost Content API Key documentation](https://ghost.org/docs/content-api/#key){:target=_blank .external-link} for more detailed instructions. Copy the **Content API Key** and use this as the **API Key** in the Ghost Content n8n credential.
+- **URL** ของ Ghost admin domain ของคุณ [admin domain](https://ghost.org/docs/content-api/#url){:target=_blank .external-link} ของคุณอาจแตกต่างจาก domain หลักของคุณและอาจรวมถึง subdirectory บล็อก Ghost(Pro) ทั้งหมดมี domain `*.ghost.io` เป็น admin domain และต้องใช้ https
+- **API Key**: หากต้องการสร้าง API key ใหม่ ให้สร้าง Custom Integration ใหม่ ดูคำแนะนำโดยละเอียดเพิ่มเติมได้ที่ [Ghost Content API Key documentation](https://ghost.org/docs/content-api/#key){:target=_blank .external-link} คัดลอก **Content API Key** และใช้เป็น **API Key** ใน Ghost Content n8n credential
 

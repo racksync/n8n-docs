@@ -8,18 +8,18 @@ priority: medium
 
 # Autopilot credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node เหล่านี้:
 
 - [Autopilot](/integrations/builtin/app-nodes/n8n-nodes-base.autopilot.md)
 - [Autopilot Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.autopilottrigger.md)
 
 /// warning | Autopilot branding change
-Autopilot has become Ortto. The Autopilot credentials and nodes are only compatible with Autopilot, not the new Ortto API.
+Autopilot ได้เปลี่ยนเป็น Ortto แล้ว Autopilot credentials และ nodes เข้ากันได้กับ Autopilot เท่านั้น ไม่ใช่ Ortto API ใหม่
 ///
 
 ## Prerequisites
 
-Create an [Autopilot](https://app.autopilothq.com){:target=_blank .external-link} account.
+สมัคร [Autopilot](https://app.autopilothq.com){:target=_blank .external-link} ให้เรียบร้อยก่อน
 
 ## Supported authentication methods
 
@@ -27,11 +27,11 @@ Create an [Autopilot](https://app.autopilothq.com){:target=_blank .external-link
 
 ## Related resources
 
-Refer to [Autopilot's API documentation](https://autopilot.docs.apiary.io/#){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการได้ที่ [Autopilot's API documentation](https://autopilot.docs.apiary.io/#){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- An **API Key**: Generate an API key in **Settings > Autopilot API**. Refer to [Autopilot API authentication](https://autopilot.docs.apiary.io/#reference/authentication){:target=_blank .external-link} for more information.
+- **API Key**: สร้าง API key ใน **Settings > Autopilot API** ดูข้อมูลเพิ่มเติมได้ที่ [Autopilot API authentication](https://autopilot.docs.apiary.io/#reference/authentication){:target=_blank .external-link}
 

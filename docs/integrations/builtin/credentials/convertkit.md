@@ -7,14 +7,14 @@ contentType: [integration, reference]
 
 # ConvertKit credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node เหล่านี้:
 
 - [ConvertKit](/integrations/builtin/app-nodes/n8n-nodes-base.convertkit.md)
 - [ConvertKit Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.convertkittrigger.md)
 
 ## Prerequisites
 
-Create a [ConvertKit](https://convertkit.com/) account.
+สมัคร [ConvertKit](https://convertkit.com/) ให้เรียบร้อยก่อน
 
 ## Supported authentication methods
 
@@ -22,10 +22,10 @@ Create a [ConvertKit](https://convertkit.com/) account.
 
 ## Related resources
 
-Refer to [ConvertKit's API documentation](https://developers.convertkit.com/#overview){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการได้ที่ [ConvertKit's API documentation](https://developers.convertkit.com/#overview){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- An **API Secret**: Access your ConvertKit API key in [**Account Settings > Advanced**](https://app.convertkit.com/account_settings/advanced_settings){:target=_blank .external-link}. Add this key as the **API Secret** in n8n.
+- **API Secret**: เข้าถึง ConvertKit API key ของคุณได้ใน [**Account Settings > Advanced**](https://app.convertkit.com/account_settings/advanced_settings){:target=_blank .external-link} เพิ่ม key นี้เป็น **API Secret** ใน n8n

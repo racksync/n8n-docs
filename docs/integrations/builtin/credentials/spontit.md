@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Spontit credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้:
 
 - [Spontit](/integrations/builtin/app-nodes/n8n-nodes-base.spontit.md)
 
 ## Prerequisites
 
-Create a [Spontit](https://www.spontit.com/){:target=_blank .external-link} account.
+สมัคร [Spontit](https://www.spontit.com/){:target=_blank .external-link} account ก่อนใช้งาน
 
 ## Supported authentication methods
 
@@ -21,12 +21,12 @@ Create a [Spontit](https://www.spontit.com/){:target=_blank .external-link} acco
 
 ## Related resources
 
-Refer to [Spontit's API documentation](https://api.spontit.com/){:target=_blank .external-link} for more information about the service.
+ดูรายละเอียดเพิ่มเติมได้ที่ [Spontit's API documentation](https://api.spontit.com/){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ในการตั้งค่า credential นี้ คุณจะต้องมี:
 
-- An **API Key**: Go to **API** to get a new secret key. Enter that key as your **API Key**.
-- A **Username**: Enter your Spontit username. If you're unsure how to format it, open your **Profile** and copy the username from there.
+- **API Key**: ไปที่ **API** เพื่อขอ secret key ใหม่ แล้วนำ key นี้ไปใส่ในช่อง **API Key**
+- **Username**: ใส่ชื่อผู้ใช้ Spontit ของคุณ ถ้าไม่แน่ใจให้เปิด **Profile** แล้วคัดลอก username จากตรงนั้น
 

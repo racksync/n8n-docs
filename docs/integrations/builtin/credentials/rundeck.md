@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Rundeck credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [Rundeck](/integrations/builtin/app-nodes/n8n-nodes-base.rundeck.md)
 
 ## Prerequisites
 
-Create a user account on a [Rundeck](https://www.rundeck.com/){:target=_blank .external-link} server.
+สร้าง user account บน [Rundeck](https://www.rundeck.com/){:target=_blank .external-link} server
 
 ## Supported authentication methods
 
@@ -21,12 +21,12 @@ Create a user account on a [Rundeck](https://www.rundeck.com/){:target=_blank .e
 
 ## Related resources
 
-Refer to [Rundeck's API documentation](https://docs.rundeck.com/docs/api/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Rundeck's API documentation](https://docs.rundeck.com/docs/api/){:target=_blank .external-link}
 
 ## Using API token
 
-To configure this credential, you'll need:
+สำหรับการตั้งค่า credentials นี้ คุณจะต้องมี:
 
-- Your **URL**: Enter the base URL of your Rundeck server, for example `http://myserver:4440`. Refer to [URLs](https://docs.rundeck.com/docs/api/#urls) for more information.
-- A user API **Token**: To generate a user API token, go to your **Profile > User API Tokens**. Refer to [User API tokens](https://docs.rundeck.com/docs/manual/10-user.html#user-api-tokens){:target=_blank .external-link} for more information.
+- **URL** ของคุณ: กรอก base URL ของ Rundeck server ของคุณ เช่น `http://myserver:4440` ดูข้อมูลเพิ่มเติมที่ [URLs](https://docs.rundeck.com/docs/api/#urls)
+- User API **Token**: หากต้องการสร้าง user API token ให้ไปที่ **Profile > User API Tokens** ดูข้อมูลเพิ่มเติมที่ [User API tokens](https://docs.rundeck.com/docs/manual/10-user.html#user-api-tokens){:target=_blank .external-link}
 

@@ -8,7 +8,7 @@ priority: high
 
 # Google Gemini(PaLM) credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้:
 
 * [Embeddings Google Gemini](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglegemini.md)
 * [Google Gemini Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini.md)
@@ -16,8 +16,8 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-* Create a [Google Cloud](https://cloud.google.com/){:target=_blank .external-link} account.
-* Create a [Google Cloud Platform project](https://developers.google.com/workspace/marketplace/create-gcp-project){:target=_blank .external-link}.
+* สร้างบัญชี [Google Cloud](https://cloud.google.com/){:target=_blank .external-link}
+* สร้าง [Google Cloud Platform project](https://developers.google.com/workspace/marketplace/create-gcp-project){:target=_blank .external-link}
 
 ## Supported authentication methods
 
@@ -25,24 +25,24 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Google's Gemini API documentation](https://ai.google.dev/gemini-api/docs){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Google's Gemini API documentation](https://ai.google.dev/gemini-api/docs){:target=_blank .external-link}
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
 ## Using Gemini(PaLM) API key
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- The API **Host** URL: Both PaLM and Gemini use the default `https://generativelanguage.googleapis.com`.
-- An **API Key**: Create a key in [Google AI Studio](https://makersuite.google.com/app/apikey){:target=_blank .external-link}.
+- API **Host** URL: ทั้ง PaLM และ Gemini ใช้ค่าเริ่มต้น `https://generativelanguage.googleapis.com`
+- **API Key**: สร้าง key ใน [Google AI Studio](https://makersuite.google.com/app/apikey){:target=_blank .external-link}
 
 /// warning | Custom hosts not supported
-The related nodes don't yet support custom hosts or proxies for the API host and must use 'https://generativelanguage.googleapis.com'.
+node ที่เกี่ยวข้องยังไม่รองรับ custom hosts หรือ proxies สำหรับ API host และต้องใช้ 'https://generativelanguage.googleapis.com'
 ///
 
-To create an API key:
+วิธีสร้าง API key:
 
-1. Go to the API Key page in Google AI Studio: [https://makersuite.google.com/app/apikey](https://makersuite.google.com/app/apikey){:target=_blank .external-link}.
-2. Select **Create API Key**.
-3. You can choose whether to **Create API key in new project** or search for an existing Google Cloud project to **Create API key in existing project**.
-4. Copy the generated API key and add it to your n8n credential.
+1. ไปที่หน้า API Key ใน Google AI Studio: [https://makersuite.google.com/app/apikey](https://makersuite.google.com/app/apikey){:target=_blank .external-link}
+2. เลือก **Create API Key**
+3. คุณสามารถเลือกได้ว่าจะ **Create API key in new project** หรือค้นหา Google Cloud project ที่มีอยู่เพื่อ **Create API key in existing project**
+4. คัดลอก API key ที่สร้างขึ้นและเพิ่มลงใน credential ของ n8n

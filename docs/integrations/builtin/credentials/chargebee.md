@@ -7,14 +7,14 @@ contentType: [integration, reference]
 
 # Chargebee credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node เหล่านี้:
 
 - [Chargebee](/integrations/builtin/app-nodes/n8n-nodes-base.chargebee.md)
 - [Chargebee Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.chargebeetrigger.md)
 
 ## Prerequisites
 
-Create a [Chargebee](https://www.chargebee.com/) account.
+สมัคร [Chargebee](https://www.chargebee.com/) ให้เรียบร้อยก่อน
 
 ## Supported authentication methods
 
@@ -22,14 +22,14 @@ Create a [Chargebee](https://www.chargebee.com/) account.
 
 ## Related resources
 
-Refer to [Chargebee's API documentation](https://apidocs.chargebee.com/docs/api/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการได้ที่ [Chargebee's API documentation](https://apidocs.chargebee.com/docs/api/){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- An **Account Name**: This is your Chargebee Site Name or subdomain, for example if `https://n8n.chargebee.com` is the full site name, the Account Name is `n8n`.
-- An **API Key**: Refer to the [Chargebee Creating an API key documentation](https://www.chargebee.com/docs/api_keys.html#creating-an-api-key){:target=_blank .external-link} for steps on how to generate an API key. 
+- **Account Name**: นี่คือ Chargebee Site Name หรือ subdomain ของคุณ ตัวอย่างเช่น ถ้า `https://n8n.chargebee.com` คือชื่อ site เต็ม Account Name คือ `n8n`
+- **API Key**: ดูขั้นตอนเกี่ยวกับวิธีสร้าง API key ได้ที่ [Chargebee Creating an API key documentation](https://www.chargebee.com/docs/api_keys.html#creating-an-api-key){:target=_blank .external-link}
 
-Refer to their more general [API authentication documentation](https://apidocs.chargebee.com/docs/api/auth?lang=curl){:target=_blank .external-link} for further clarification.
+ดูคำชี้แจงเพิ่มเติมได้ที่ [API authentication documentation](https://apidocs.chargebee.com/docs/api/auth?lang=curl){:target=_blank .external-link} ทั่วไปของพวกเขา
 

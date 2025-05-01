@@ -12,7 +12,7 @@ priority: medium
 
 ## Prerequisites
 
-Create an [Imperva WAF](https://www.imperva.com/products/web-application-firewall-waf/){:target=_blank .external-link} account.
+สร้างบัญชี [Imperva WAF](https://www.imperva.com/products/web-application-firewall-waf/){:target=_blank .external-link}
 
 ## Supported authentication methods
 
@@ -20,15 +20,15 @@ Create an [Imperva WAF](https://www.imperva.com/products/web-application-firewal
 
 ## Related resources
 
-Refer to [Imperva WAF's documentation](https://docs.imperva.com/bundle/api-docs/page/api/authentication.htm){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Imperva WAF's documentation](https://docs.imperva.com/bundle/api-docs/page/api/authentication.htm){:target=_blank .external-link}
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/imperva-waf/){:target=_blank .external-link} on n8n's website.
+นี่คือ node ที่มีเฉพาะ credential เท่านั้น ดูข้อมูลเพิ่มเติมได้ที่ [Custom API operations](/integrations/custom-operations.md) ดู [example workflows and related content](https://n8n.io/integrations/imperva-waf/){:target=_blank .external-link} บนเว็บไซต์ของ n8n
 
 ## Using API key
 
-To configure this credential, you'll need:
+ในการตั้งค่า credential นี้ คุณจะต้องมี:
 
-- An **API ID**
-- An **API Key**
+- **API ID**
+- **API Key**
 
-Refer to [Imperva WAF's API Key Management documentation](https://docs.imperva.com/bundle/cloud-application-security/page/settings/api-keys.htm){:target=_blank .external-link} for instructions on generating and viewing API Keys and IDs.
+ดูคำแนะนำในการสร้างและดู API Keys และ IDs ได้ที่ [Imperva WAF's API Key Management documentation](https://docs.imperva.com/bundle/cloud-application-security/page/settings/api-keys.htm){:target=_blank .external-link}

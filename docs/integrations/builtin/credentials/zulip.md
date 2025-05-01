@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Zulip credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node เหล่านี้:
 
 - [Zulip](/integrations/builtin/app-nodes/n8n-nodes-base.zulip.md)
 
 ## Prerequisites
 
-Create a [Zulip](https://zulip.com/){:target=_blank .external-link} account.
+สมัคร [Zulip](https://zulip.com/){:target=_blank .external-link} ให้เรียบร้อยก่อน
 
 ## Supported authentication methods
 
@@ -21,13 +21,13 @@ Create a [Zulip](https://zulip.com/){:target=_blank .external-link} account.
 
 ## Related resources
 
-Refer to [Zulip's API documentation](https://zulip.com/api/){:target=_blank .external-link} for more information about the service.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับการใช้งาน API ได้ที่ [Zulip's API documentation](https://zulip.com/api/){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- A **URL**: Enter the URL of your Zulip domain.
-- An **Email** address: Enter the email address you use to log in to Zulip.
-- An **API Key**: Get your API key in the **Gear cog > Personal Settings > Account & privacy > API Key**. Refer to [API Keys](https://zulip.com/api/api-keys){:target=_blank .external-link} for more information.
+- **URL**: ใส่ URL ของโดเมน Zulip ของคุณ
+- **Email**: ใส่อีเมลที่ใช้ล็อกอิน Zulip
+- **API Key**: หา API key ได้ที่ **Gear cog > Personal Settings > Account & privacy > API Key** ดูรายละเอียดที่ [API Keys](https://zulip.com/api/api-keys){:target=_blank .external-link}
 

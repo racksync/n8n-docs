@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Dropcontact credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node เหล่านี้:
 
 - [Dropcontact](/integrations/builtin/app-nodes/n8n-nodes-base.dropcontact.md)
 
 ## Prerequisites
 
-Create a developer account in [Dropcontact](https://app.dropcontact.com/signup){:target=_blank .external-link}.
+สมัคร [Dropcontact](https://www.dropcontact.io/){:target=_blank .external-link} ให้เรียบร้อยก่อน
 
 ## Supported authentication methods
 
@@ -21,11 +21,11 @@ Create a developer account in [Dropcontact](https://app.dropcontact.com/signup){
 
 ## Related resources
 
-Refer to [Dropcontact's API documentation](https://developer.dropcontact.com/){:target=_blank .external-link} for more information about the service.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับการใช้งาน API ได้ที่ [Dropcontact's API documentation](https://developers.dropcontact.io/api){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- An **API Key**: To view your API key in Dropcontact, go to [**API**](https://app.dropcontact.com/api){:target=_blank .external-link}. Refer to the [Dropcontact API key documentation](https://support.dropcontact.com/article/237-how-to-use-the-dropcontact-api-key){:target=_blank .external-link} for more information.
+- **API Key**: สร้าง API key ได้ใน [Dropcontact dashboard](https://app.dropcontact.io/api){:target=_blank .external-link}
 

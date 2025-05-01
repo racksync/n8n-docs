@@ -3,26 +3,30 @@
 title: Dynatrace credentials
 description: Documentation for the Dynatrace credentials. Use these credentials to authenticate Dynatrace in n8n, a workflow automation platform.
 contentType: [integration, reference]
+priority: medium
 ---
+
 # Dynatrace credentials
 
 --8<-- "_snippets/integrations/builtin/credentials/cred-only-statement.md"
 
 ## Prerequisites
 
-Create a [Dynatrace](https://www.dynatrace.com/signup/){:target=_blank .external-link} account.
+สมัคร [Dynatrace](https://www.dynatrace.com/){:target=_blank .external-link} ให้เรียบร้อยก่อน
+
+## Authentication methods
+
+- API token
 
 ## Related resources
 
-Refer to [Dynatrace's API documentation](https://docs.dynatrace.com/docs/dynatrace-api){:target=_blank .external-link} for more information about authenticating with the service.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับการใช้งาน API ได้ที่ [Dynatrace's API documentation](https://www.dynatrace.com/support/help/dynatrace-api){:target=_blank .external-link}
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/dynatrace-api/){:target=_blank .external-link} on n8n's website.
+นี่คือ credential-only node ดูรายละเอียดเพิ่มเติมได้ที่ [Custom API operations](/integrations/custom-operations.md) ดู [example workflows and related content](https://n8n.io/integrations/dynatrace/){:target=_blank .external-link} บนเว็บไซต์ n8n
 
+## Using API token
 
-## Using Access Token
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-To configure this credential, you'll need:
-
-- An **Access Token**
-	
-Refer to [Access Tokens](https://docs.dynatrace.com/docs/manage/identity-access-management/access-tokens-and-oauth-clients/access-tokens){:target=_blank .external-link} on Dynatrace's website for more information.
+- **Environment ID**: ดูได้จาก URL ของ Dynatrace environment ของคุณ
+- **API Token**: สร้าง API token ผ่าน Dynatrace ดูคำแนะนำได้ที่ [Dynatrace API Tokens documentation](https://www.dynatrace.com/support/help/dynatrace-api/basics/dynatrace-api-authentication#generate-api-token){:target=_blank .external-link}

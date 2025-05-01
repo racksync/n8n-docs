@@ -8,7 +8,7 @@ priority: medium
 
 # OpenWeatherMap credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนใน nodes ต่อไปนี้:
 
 - [OpenWeatherMap](/integrations/builtin/app-nodes/n8n-nodes-base.openweathermap.md)
 
@@ -18,22 +18,22 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [OpenWeatherMap's API documentation](https://openweathermap.org/api){:target=_blank .external-link} for more information about the service.
+อ้างอิง [OpenWeatherMap's API documentation](https://openweathermap.org/api){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 ## Using API access token
 
-To configure this credential, you'll need an [OpenWeatherMap](https://openweathermap.org/){:target=_blank .external-link} account and:
+ในการกำหนดค่า credential นี้ คุณจะต้องมีบัญชี [OpenWeatherMap](https://openweathermap.org/){:target=_blank .external-link} และ:
 
-- An **Access Token**
+- **Access Token**
 
-To get your **Access Token**:
+วิธีรับ **Access Token** ของคุณ:
 
-1. After you verify your email address, OpenWeatherMap includes an **API Key** in your welcome email.
-2. Copy that key and enter it in your n8n credential.
+1. หลังจากที่คุณยืนยันที่อยู่อีเมลของคุณแล้ว OpenWeatherMap จะรวม **API Key** ไว้ในอีเมลต้อนรับของคุณ
+2. คัดลอก key นั้นและป้อนลงใน credential ของ n8n
 
-If you'd prefer to create a new key:
+หากคุณต้องการสร้าง key ใหม่:
 
-1. To create a new key, go to **Account >** [**API Keys**](https://home.openweathermap.org/api_keys){:target=_blank .external-link}.
-2. In the **Create Key** section, enter an **API Key Name**, like `n8n integration`.
-3. Select **Generate** to generate your key.
-4. Copy the generated key and enter it in your n8n credential.
+1. หากต้องการสร้าง key ใหม่ ให้ไปที่ **Account >** [**API Keys**](https://home.openweathermap.org/api_keys){:target=_blank .external-link}
+2. ในส่วน **Create Key** ให้ป้อน **API Key Name** เช่น `n8n integration`
+3. เลือก **Generate** เพื่อสร้าง key ของคุณ
+4. คัดลอก key ที่สร้างขึ้นและป้อนลงใน credential ของ n8n

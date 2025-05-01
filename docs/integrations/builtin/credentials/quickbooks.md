@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # QuickBooks credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [QuickBooks](/integrations/builtin/app-nodes/n8n-nodes-base.quickbooks.md)
 
 ## Prerequisites
 
-Create an [Intuit developer](https://developer.intuit.com/){:target=_blank .external-link} account.
+สร้าง [Intuit developer](https://developer.intuit.com/){:target=_blank .external-link} account
 
 ## Supported authentication methods
 
@@ -21,26 +21,26 @@ Create an [Intuit developer](https://developer.intuit.com/){:target=_blank .exte
 
 ## Related resources
 
-Refer to [Intuit's API documentation](https://developer.intuit.com/app/developer/qbo/docs/develop){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Intuit's API documentation](https://developer.intuit.com/app/developer/qbo/docs/develop){:target=_blank .external-link}
 
 ## Using OAuth2
 
-To configure this credential, you'll need:
+สำหรับการตั้งค่า credentials นี้ คุณจะต้องมี:
 
-- A **Client ID**: Generated when you create an app.
-- A **Client Secret**: Generated when you create an app.
-- An **Environment**: Select whether this credential should access your **Production** or **Sandbox** environment. 
+- **Client ID**: สร้างขึ้นเมื่อคุณสร้าง app
+- **Client Secret**: สร้างขึ้นเมื่อคุณสร้าง app
+- **Environment**: เลือกว่า credential นี้ควรเข้าถึง environment **Production** หรือ **Sandbox** ของคุณ
 
-To generate your **Client ID** and **Client Secret**, [create an app](https://developer.intuit.com/app/developer/qbo/docs/get-started/start-developing-your-app#create-an-app){:target=_blank .external-link}.
+หากต้องการสร้าง **Client ID** และ **Client Secret** ของคุณ ให้ [สร้าง app](https://developer.intuit.com/app/developer/qbo/docs/get-started/start-developing-your-app#create-an-app){:target=_blank .external-link}
 
-Use these settings when creating your app:
+ใช้การตั้งค่าเหล่านี้เมื่อสร้าง app ของคุณ:
 
-- Select appropriate scopes for your app. Refer to [Learn about scopes](https://developer.intuit.com/app/developer/qbo/docs/learn/scopes){:target=_blank .external-link} for more information.
-- Enter the **OAuth Redirect URL** from n8n as a **Redirect URI** in the app's **Development > Keys & OAuth** section.
-- Copy the **Client ID** and **Client Secret** from the app's **Development > Keys & OAuth** section to enter in n8n. Refer to [Get the Client ID and Client Secret for your app](https://developer.intuit.com/app/developer/qbo/docs/get-started/get-client-id-and-client-secret){:target=_blank .external-link} for more information.
+- เลือก scopes ที่เหมาะสมสำหรับ app ของคุณ ดูข้อมูลเพิ่มเติมที่ [Learn about scopes](https://developer.intuit.com/app/developer/qbo/docs/learn/scopes){:target=_blank .external-link}
+- กรอก **OAuth Redirect URL** จาก n8n เป็น **Redirect URI** ในส่วน **Development > Keys & OAuth** ของ app
+- คัดลอก **Client ID** และ **Client Secret** จากส่วน **Development > Keys & OAuth** ของ app เพื่อกรอกใน n8n ดูข้อมูลเพิ่มเติมที่ [Get the Client ID and Client Secret for your app](https://developer.intuit.com/app/developer/qbo/docs/get-started/get-client-id-and-client-secret){:target=_blank .external-link}
 
-Refer to Intuit's [Set up OAuth 2.0 documentation](https://developer.intuit.com/app/developer/qbo/docs/develop/authentication-and-authorization/oauth-2.0){:target=_blank .external-link} for more information on the entire process.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับกระบวนการทั้งหมดได้ที่ [Set up OAuth 2.0 documentation](https://developer.intuit.com/app/developer/qbo/docs/develop/authentication-and-authorization/oauth-2.0){:target=_blank .external-link} ของ Intuit
 
 /// note | Environment selection
-If you're creating a new app from scratch, start with the **Sandbox** environment. Production apps need to fulfill all Intuit's requirements. Refer to Intuit's [Publish your app documentation](https://developer.intuit.com/app/developer/qbo/docs/go-live/publish-app){:target=_blank .external-link} for more information.
+หากคุณกำลังสร้าง app ใหม่ตั้งแต่ต้น ให้เริ่มต้นด้วย environment **Sandbox** Production apps จำเป็นต้องปฏิบัติตามข้อกำหนดทั้งหมดของ Intuit ดูข้อมูลเพิ่มเติมที่ [Publish your app documentation](https://developer.intuit.com/app/developer/qbo/docs/go-live/publish-app){:target=_blank .external-link} ของ Intuit
 ///

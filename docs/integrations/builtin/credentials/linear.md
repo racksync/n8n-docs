@@ -7,14 +7,14 @@ contentType: [integration, reference]
 
 # Linear credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 * [Linear Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.lineartrigger.md)
 * [Linear](/integrations/builtin/app-nodes/n8n-nodes-base.linear.md)
 
 ## Prerequisites
 
-Create a [Linear](https://linear.app/){:target=_blank .external-link} account.
+สร้างบัญชี [Linear](https://linear.app/){:target=_blank .external-link}
 
 ## Supported authentication methods
 
@@ -23,23 +23,23 @@ Create a [Linear](https://linear.app/){:target=_blank .external-link} account.
 
 ## Related resources
 
-Refer to [Linear's API documentation](https://developers.linear.app/docs/graphql/working-with-the-graphql-api){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Linear's API documentation](https://developers.linear.app/docs/graphql/working-with-the-graphql-api){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ในการตั้งค่า credential นี้ คุณจะต้องมี:
 
-- A personal **API Key**: Create an API key in your [**Settings > API**](https://linear.app/n8n/settings/api){:target=_blank .external-link}. Refer to the [Linear Personal API keys documentation](https://developers.linear.app/docs/graphql/working-with-the-graphql-api#personal-api-keys){:target=_blank .external-link} for more information.
+- **API Key** ส่วนตัว: สร้าง API key ใน [**Settings > API**](https://linear.app/n8n/settings/api){:target=_blank .external-link} ดูข้อมูลเพิ่มเติมได้ที่ [Linear Personal API keys documentation](https://developers.linear.app/docs/graphql/working-with-the-graphql-api#personal-api-keys){:target=_blank .external-link}
 
 ## Using OAuth2
 
-To configure this credential, you'll need:
+ในการตั้งค่า credential นี้ คุณจะต้องมี:
 
-- A **Client ID**: Generated when you create a new OAuth2 application.
-- A **Client Secret**: Generated when you create a new OAuth2 application.
-- Select the **Actor**: The actor defines how the OAuth2 application should create issues, comments and other changes. Options include:
-    - **User** (Linear's default): The application creates resources as the authorizing user. Use this option if you want each user to do their own authentication.
-    - **Application**: The application creates resources as itself. Use this option if you have only one user (like an admin) authorizing the application.
-- To use this credential with the [Linear Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.lineartrigger.md) node, you must enable the **Include Admin Scope** toggle.
+- **Client ID**: สร้างขึ้นเมื่อคุณสร้าง OAuth2 application ใหม่
+- **Client Secret**: สร้างขึ้นเมื่อคุณสร้าง OAuth2 application ใหม่
+- เลือก **Actor**: actor กำหนดว่า OAuth2 application ควรสร้าง issues, comments และการเปลี่ยนแปลงอื่นๆ อย่างไร ตัวเลือกได้แก่:
+    - **User** (ค่าเริ่มต้นของ Linear): application สร้าง resources ในฐานะผู้ใช้ที่ให้สิทธิ์ ใช้ตัวเลือกนี้หากคุณต้องการให้ผู้ใช้แต่ละคนทำการยืนยันตัวตนของตนเอง
+    - **Application**: application สร้าง resources ในฐานะตัวมันเอง ใช้ตัวเลือกนี้หากคุณมีผู้ใช้เพียงคนเดียว (เช่น admin) ที่ให้สิทธิ์ application
+- หากต้องการใช้ credential นี้กับ node [Linear Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.lineartrigger.md) คุณต้องเปิดใช้งาน toggle **Include Admin Scope**
 
-Refer to the [Linear OAuth2 Authentication documentation](https://developers.linear.app/docs/oauth/authentication){:target=_blank .external-link} for more detailed instructions and explanations. Use the n8n **OAuth Redirect URL** as the **Redirect callback URL** in your Linear OAuth2 application.
+ดูคำแนะนำและคำอธิบายโดยละเอียดเพิ่มเติมได้ที่ [Linear OAuth2 Authentication documentation](https://developers.linear.app/docs/oauth/authentication){:target=_blank .external-link} ใช้ **OAuth Redirect URL** ของ n8n เป็น **Redirect callback URL** ใน Linear OAuth2 application ของคุณ

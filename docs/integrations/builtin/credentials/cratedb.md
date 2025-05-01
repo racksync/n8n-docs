@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # CrateDB credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node เหล่านี้:
 
 - [CrateDB](/integrations/builtin/app-nodes/n8n-nodes-base.cratedb.md)
 
 ## Prerequisites
 
-An available instance of CrateDB. 
+instance ของ CrateDB ที่พร้อมใช้งาน
 
 ## Supported authentication methods
 
@@ -21,21 +21,21 @@ An available instance of CrateDB.
 
 ## Related resources
 
-Refer to [CrateDB's documentation](https://cratedb.com/docs/crate/reference/en/latest/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการได้ที่ [CrateDB's documentation](https://cratedb.com/docs/crate/reference/en/latest/){:target=_blank .external-link}
 
 ## Using account connection
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- Your **Host** name
-- Your **Database** name
-- A **User** name
-- A user **Password**
-- To set the **SSL** parameter. Refer to the [CrateDB Secured Communications (SSL/TLS) documentation](https://cratedb.com/docs/crate/reference/en/5.7/admin/ssl.html#admin-ssl){:target=_blank .external-link} for more information. The options n8n supports are:
-    - Allow 
+- ชื่อ **Host** ของคุณ
+- ชื่อ **Database** ของคุณ
+- ชื่อ **User**
+- **Password** ของผู้ใช้
+- ตั้งค่าพารามิเตอร์ **SSL** ดูข้อมูลเพิ่มเติมได้ที่ [CrateDB Secured Communications (SSL/TLS) documentation](https://cratedb.com/docs/crate/reference/en/5.7/admin/ssl.html#admin-ssl){:target=_blank .external-link} ตัวเลือกที่ n8n รองรับคือ:
+    - Allow
     - Disable
     - Require
-- A **Port** number
+- หมายเลข **Port**
 
-Refer to the [Connect to a CrateDB cluster documentation](https://cratedb.com/docs/crate/clients-tools/en/latest/connect/){:target=_blank .external-link} for detailed instructions on these fields and their default values.
+ดูคำแนะนำโดยละเอียดเกี่ยวกับฟิลด์เหล่านี้และค่าเริ่มต้นได้ที่ [Connect to a CrateDB cluster documentation](https://cratedb.com/docs/crate/clients-tools/en/latest/connect/){:target=_blank .external-link}
 

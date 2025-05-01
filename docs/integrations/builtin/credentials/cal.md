@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Cal.com credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node เหล่านี้:
 
 - [Cal.com Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.caltrigger.md)
 
 ## Prerequisites
 
-Create a [Cal.com](https://www.cal.com/){:target=_blank .external-link} account.
+สมัคร [Cal.com](https://www.cal.com/){:target=_blank .external-link} ให้เรียบร้อยก่อน
 
 ## Supported authentication methods
 
@@ -21,12 +21,12 @@ Create a [Cal.com](https://www.cal.com/){:target=_blank .external-link} account.
 
 ## Related resources
 
-Refer to [Cal.com's API documentation](https://cal.com/docs/enterprise-features/api#api-server-specifications){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการได้ที่ [Cal.com's API documentation](https://cal.com/docs/enterprise-features/api#api-server-specifications){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- An **API Key**: Refer to the [Cal API Quick Start documentation](https://cal.com/docs/enterprise-features/api/quick-start){:target=_blank .external-link} for information on how to generate a new API key.
-- A **Host**: If you're using the cloud version of Cal.com, leave the Host as `https://api.cal.com`. If you're self-hosting Cal.com, enter the **Host** for your Cal.com instance.
+- **API Key**: ดูข้อมูลเกี่ยวกับวิธีสร้าง API key ใหม่ได้ที่ [Cal API Quick Start documentation](https://cal.com/docs/enterprise-features/api/quick-start){:target=_blank .external-link}
+- **Host**: หากคุณใช้ Cal.com เวอร์ชัน cloud ให้คง Host เป็น `https://api.cal.com` หากคุณ self-hosting Cal.com ให้ป้อน **Host** สำหรับ Cal.com instance ของคุณ
 

@@ -8,7 +8,7 @@ priority: medium
 
 # Typeform credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [Typeform Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.typeformtrigger.md)
 
@@ -19,47 +19,47 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Typeform's API documentation](https://www.typeform.com/developers/get-started/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Typeform's API documentation](https://www.typeform.com/developers/get-started/){:target=_blank .external-link}
 
 ## Using API token
 
-To configure this credential, you'll need a [Typeform](https://typeform.com/){:target=_blank .external-link} account and:
+ในการตั้งค่า credentials นี้ คุณจะต้องมีบัญชี [Typeform](https://typeform.com/){:target=_blank .external-link} และ:
 
-- A personal **Access Token**
+- **Access Token** ส่วนตัว
 
-To get your personal access token:
+วิธีขอ personal access token:
 
-1. Log into your Typeform account.
-2. Select your profile avatar in the upper right and go to **Account > Your settings >** [**Personal Tokens**](https://admin.typeform.com/user/tokens){:target=_blank .external-link}.
-3. Select **Generate a new token**.
-4. Give your token a **Name**, like `n8n integration`.
-5. For **Scopes**, select **Custom scopes**. Select these scopes:
+1. เข้าสู่ระบบบัญชี Typeform ของคุณ
+2. เลือก avatar มุมขวาบน แล้วไปที่ **Account > Your settings >** [**Personal Tokens**](https://admin.typeform.com/user/tokens){:target=_blank .external-link}
+3. เลือก **Generate a new token**
+4. ตั้งชื่อ token เช่น `n8n integration`
+5. สำหรับ **Scopes** ให้เลือก **Custom scopes** แล้วเลือก scope เหล่านี้:
     - Forms: Read
     - Webhooks: Read, Write
-6. Select **Generate token**.
-7. Copy the token and enter it in your n8n credential.
+6. เลือก **Generate token**
+7. คัดลอก token แล้วนำไปใส่ใน n8n credential
 
-Refer to Typeform's [Personal access token documentation](https://www.typeform.com/developers/get-started/personal-access-token/){:target=_blank .external-link} for more information.
+ดูรายละเอียดเพิ่มเติมได้ที่ [Personal access token documentation](https://www.typeform.com/developers/get-started/personal-access-token/){:target=_blank .external-link}
 
 ## Using OAuth2
 
-To configure this credential, you'll need a [Typeform](https://typeform.com/){:target=_blank .external-link} account and:
+ในการตั้งค่า credentials นี้ คุณจะต้องมีบัญชี [Typeform](https://typeform.com/){:target=_blank .external-link} และ:
 
-- A **Client ID**: Generated when you register an app.
-- A **Client Secret**: Generated when you register an app.
+- **Client ID**: ได้จากการลงทะเบียนแอป
+- **Client Secret**: ได้จากการลงทะเบียนแอป
 
-To get your Client ID and Client Secret, register a new Typeform app:
+วิธีขอ Client ID และ Client Secret ให้ลงทะเบียนแอปใหม่ใน Typeform:
 
-1. Log into your Typeform account.
-2. In the upper left, select the dropdown for your organization and select **Developer apps**.
-3. Select **Register a new app**.
-4. Enter an **App Name** that makes sense, like `n8n OAuth2 integration`.
-5. Enter your n8n base URL as the **App website**, for example `https://n8n-sample.app.n8n.cloud/`.
-6. From n8n, copy the **OAuth Redirect URL**. Enter this in Typeform as the **Redirect URI(s)**.
-7. Select **Register app**.
-8. Copy the **Client Secret** and enter it in your n8n credential.
-9. In Typeform, select **Got it** to close the Client Secret modal.
-10. The **Developer apps** panel displays your new app. Copy the **Client ID** and enter it in your n8n credential.
-10. Once you enter both the **Client ID** and **Client Secret** in n8n, select **Connect my account** and follow the on-screen prompts to finish authorizing the app.
+1. เข้าสู่ระบบบัญชี Typeform ของคุณ
+2. มุมซ้ายบน เลือก dropdown สำหรับ organization แล้วเลือก **Developer apps**
+3. เลือก **Register a new app**
+4. กรอก **App Name** เช่น `n8n OAuth2 integration`
+5. กรอก n8n base URL เป็น **App website** เช่น `https://n8n-sample.app.n8n.cloud/`
+6. จาก n8n คัดลอก **OAuth Redirect URL** แล้วนำไปใส่ใน Typeform เป็น **Redirect URI(s)**
+7. เลือก **Register app**
+8. คัดลอก **Client Secret** แล้วนำไปใส่ใน n8n credential
+9. ใน Typeform เลือก **Got it** เพื่อปิด modal
+10. ใน **Developer apps** จะเห็นแอปใหม่ ให้คัดลอก **Client ID** แล้วนำไปใส่ใน n8n credential
+10. เมื่อกรอก **Client ID** และ **Client Secret** ใน n8n แล้ว ให้เลือก **Connect my account** และทำตามขั้นตอนบนหน้าจอเพื่อ authorize แอป
 
-Refer to [Create applications that integrate with Typeform's APIs](https://www.typeform.com/developers/get-started/applications/#1-create-an-application-in-the-typeform-admin-panel){:target=_blank .external-link} for more information.
+ดูรายละเอียดเพิ่มเติมได้ที่ [Create applications that integrate with Typeform's APIs](https://www.typeform.com/developers/get-started/applications/#1-create-an-application-in-the-typeform-admin-panel){:target=_blank .external-link}

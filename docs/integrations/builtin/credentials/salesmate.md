@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Salesmate credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้:
 
 - [Salesmate](/integrations/builtin/app-nodes/n8n-nodes-base.salesmate.md)
 
 ## Prerequisites
 
-Create a [Salesmate](https://salesmate.io/){:target=_blank .external-link} account.
+สร้าง [Salesmate](https://salesmate.io/){:target=_blank .external-link} account ก่อน
 
 ## Supported authentication methods
 
@@ -21,13 +21,12 @@ Create a [Salesmate](https://salesmate.io/){:target=_blank .external-link} accou
 
 ## Related resources
 
-Refer to [Salesmate's API documentation](https://apidocs.salesmate.io/?version=latest){:target=_blank .external-link} for more information about the service.
-
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Salesmate's API documentation](https://apidocs.salesmate.io/?version=latest){:target=_blank .external-link}
 
 ## Using API token
 
-To configure this credential, you'll need:
+ในการตั้งค่า credentials นี้ คุณจะต้องมี:
 
-- A **Session Token**: An **Access Key**. Generate an access key in **My Account > Access Key**. Refer to [Access Rights and Keys](https://apidocs.salesmate.io/?version=latest#ac8296ec-cb44-4937-a860-5ae032397ca0){:target=_blank .external-link} for more information.
-- A **URL**: Your Salesmate domain name/base URL, for example `n8n.salesmate.io`.
+- **Session Token**: หรือที่เรียกว่า **Access Key** ให้ไปสร้าง access key ได้ที่ **My Account > Access Key** ดูรายละเอียดเพิ่มเติมที่ [Access Rights and Keys](https://apidocs.salesmate.io/?version=latest#ac8296ec-cb44-4937-a860-5ae032397ca0){:target=_blank .external-link}
+- **URL**: คือชื่อโดเมนหรือ base URL ของ Salesmate ของคุณ เช่น `n8n.salesmate.io`
 

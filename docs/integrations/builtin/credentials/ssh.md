@@ -8,47 +8,46 @@ priority: medium
 
 # SSH credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้:
 
 - [SSH](/integrations/builtin/core-nodes/n8n-nodes-base.ssh.md)
 
 ## Prerequisites
 
-- Create a remote server with SSH enabled.
-- Create a user account that can `ssh` into the server using one of the following:
-    - Their own [password](#using-password)
-    - An SSH [private key](#using-private-key)
+- สร้าง remote server ที่เปิดใช้งาน SSH
+- สร้าง user account ที่สามารถ `ssh` เข้า server ได้ โดยใช้วิธีใดวิธีหนึ่งต่อไปนี้:
+    - ใช้ [password](#using-password) ของตัวเอง
+    - ใช้ SSH [private key](#using-private-key)
 
 ## Supported authentication methods
 
-- [Password](#using-password): Use this method if you have a user account that can `ssh` into the server using their own password.
-- [Private key](#using-private-key): Use this method if you have a user account that uses an SSH key for the server or service.
+- [Password](#using-password): ใช้วิธีนี้ถ้าคุณมี user account ที่สามารถ `ssh` เข้า server ด้วย password ของตัวเอง
+- [Private key](#using-private-key): ใช้วิธีนี้ถ้าคุณมี user account ที่ใช้ SSH key สำหรับ server หรือ service
 
 ## Related resources
 
-Secure Shell (SSH) protocol is a method for securely sending commands over a network. Refer to [Connecting to GitHub with SSH](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh) for an example of SSH setup.
-
+Secure Shell (SSH) protocol คือวิธีส่งคำสั่งอย่างปลอดภัยผ่าน network ดูตัวอย่างการตั้งค่า SSH ได้ที่ [Connecting to GitHub with SSH](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)
 
 ## Using password
 
-Use this method if you have a user account that can `ssh` into the server using their own password.
+ใช้วิธีนี้ถ้าคุณมี user account ที่สามารถ `ssh` เข้า server ด้วย password ของตัวเอง
 
-To configure this credential, you'll need to:
+วิธีตั้งค่า credential นี้ ให้กรอกข้อมูลดังนี้:
 
-1. Enter the IP address of the server you're connecting to as the **Host**.
-2. Enter the **Port** to use for the connection. SSH uses port `22` by default.
-3. Enter the **Username** for a user account with `ssh` access on the server.
-4. Enter the **Password** for that user account.
+1. กรอก IP address ของ server ที่ต้องการเชื่อมต่อในช่อง **Host**
+2. กรอก **Port** ที่ใช้เชื่อมต่อ (ปกติ SSH ใช้ port `22`)
+3. กรอก **Username** ของ user account ที่มีสิทธิ์ `ssh` เข้า server
+4. กรอก **Password** ของ user account นั้น
 
 ## Using private key
 
-Use this method if you have a user account that uses an SSH key for the server or service.
+ใช้วิธีนี้ถ้าคุณมี user account ที่ใช้ SSH key สำหรับ server หรือ service
 
-To configure this credential, you'll need to:
+วิธีตั้งค่า credential นี้ ให้กรอกข้อมูลดังนี้:
 
-1. Enter the IP address of the server you're connecting to as the **Host**.
-2. Enter the **Port** to use for the connection. SSH uses port `22` by default.
-3. Enter the **Username** of the account that generated the private key.
-4. Enter the entire contents of your SSH **Private Key**.
-5. If you created a **Passphrase** for the **Private Key**, enter the passphrase.
-    - If you didn't create a passphrase for the key, leave blank.
+1. กรอก IP address ของ server ที่ต้องการเชื่อมต่อในช่อง **Host**
+2. กรอก **Port** ที่ใช้เชื่อมต่อ (ปกติ SSH ใช้ port `22`)
+3. กรอก **Username** ของ account ที่สร้าง private key นี้
+4. กรอกเนื้อหา SSH **Private Key** ทั้งหมด
+5. ถ้าคุณตั้ง **Passphrase** ให้กับ **Private Key** ให้กรอก passphrase ด้วย
+    - ถ้าไม่ได้ตั้ง passphrase ให้เว้นว่างไว้

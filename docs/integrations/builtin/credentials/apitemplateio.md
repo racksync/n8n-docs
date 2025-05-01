@@ -8,13 +8,13 @@ priority: medium
 
 # APITemplate.io credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node เหล่านี้:
 
 - [APITemplate.io](/integrations/builtin/app-nodes/n8n-nodes-base.apitemplateio.md)
 
 ## Prerequisites
 
-Create an [APITemplate.io](https://apitemplate.io/){:target=_blank .external-link} account.
+สมัคร [APITemplate.io](https://apitemplate.io/){:target=_blank .external-link} ให้เรียบร้อยก่อน
 
 ## Supported authentication methods
 
@@ -22,11 +22,11 @@ Create an [APITemplate.io](https://apitemplate.io/){:target=_blank .external-lin
 
 ## Related resources
 
-Refer to [APITemplate.io's API documentation](https://apitemplate.io/apiv2/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการได้ที่ [APITemplate.io's API documentation](https://apitemplate.io/apiv2/){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- An **API Key**: Once you've created an APITemplate.io account, go to **API Integration** to copy the **API Key**.
+- **API Key**: เมื่อคุณสร้างบัญชี APITemplate.io แล้ว ไปที่ **API Integration** เพื่อคัดลอก **API Key**
 

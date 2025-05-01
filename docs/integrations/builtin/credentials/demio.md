@@ -7,14 +7,14 @@ contentType: [integration, reference]
 
 # Demio credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node เหล่านี้:
 
 - [Demio](/integrations/builtin/app-nodes/n8n-nodes-base.demio.md)
 
 
 ## Prerequisites
 
-Create a [Demio](https://demio.com/) account.
+สมัคร [Demio](https://demio.com/) ให้เรียบร้อยก่อน
 
 ## Supported authentication methods
 
@@ -22,14 +22,14 @@ Create a [Demio](https://demio.com/) account.
 
 ## Related resources
 
-Refer to [Demio's API documentation](https://publicdemioapi.docs.apiary.io/#){:target=_blank .external-link} for more information about the service.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับการใช้งาน API ได้ที่ [Demio's API documentation](https://publicdemioapi.docs.apiary.io/#){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- An **API Key**
-- An **API Secret**
+- **API Key**
+- **API Secret**
 
-You must have Owner status in Demio to generate API keys and secrets. To view and generate API keys and secrets, go to **Account Settings > API**. Refer to the [Demio Account Owner Settings documentation](https://help.demio.com/en/articles/6456716-account-owner-settings){:target=_blank .external-link} for more detailed steps.
+คุณต้องมีสถานะ Owner ใน Demio เพื่อสร้าง API keys และ secrets หากต้องการดูและสร้าง API keys และ secrets ให้ไปที่ **Account Settings > API** ดูขั้นตอนโดยละเอียดเพิ่มเติมได้ที่ [Demio Account Owner Settings documentation](https://help.demio.com/en/articles/6456716-account-owner-settings){:target=_blank .external-link}
 

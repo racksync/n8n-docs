@@ -7,14 +7,14 @@ contentType: [integration, reference]
 
 # Discourse credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node เหล่านี้:
 
 - [Discourse](/integrations/builtin/app-nodes/n8n-nodes-base.discourse.md)
 
 ## Prerequisites
 
-- Host an instance of [Discourse](https://discourse.org/)
-- Create an account on your hosted instance and make sure that you are an admin
+- Host instance ของ [Discourse](https://discourse.org/)
+- สร้างบัญชีบน instance ที่ host ของคุณ และตรวจสอบให้แน่ใจว่าคุณเป็น admin
 
 ## Supported authentication methods
 
@@ -22,16 +22,16 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Discourse's API documentation](https://docs.discourse.org/){:target=_blank .external-link} for more information about the service.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับการใช้งาน API ได้ที่ [Discourse's API documentation](https://docs.discourse.org/){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- The **URL** of your Discourse instance, for example `https://community.n8n.io`
-- An **API Key**: Create an API key through the Discourse admin panel. Refer to the [Discourse create and configure an API key documentation](https://meta.discourse.org/t/create-and-configure-an-api-key/230124){:target=_blank .external-link} for instructions on creating an API key and specifying a username.
-- A **Username**: Use your own name, `system`, or another user.
+- **URL** ของ Discourse instance ของคุณ เช่น `https://community.n8n.io`
+- **API Key**: สร้าง API key ผ่าน Discourse admin panel ดูคำแนะนำในการสร้าง API key และระบุ username ได้ที่ [Discourse create and configure an API key documentation](https://meta.discourse.org/t/create-and-configure-an-api-key/230124){:target=_blank .external-link}
+- **Username**: ใช้ชื่อของคุณเอง `system` หรือ user อื่น
 
-Refer to the Authentication section of the [Discourse API documentation](https://docs.discourse.org/){:target=_blank .external-link} for examples.
+ดูตัวอย่างได้ในส่วน Authentication ของ [Discourse API documentation](https://docs.discourse.org/){:target=_blank .external-link}
 
 

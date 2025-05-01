@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Travis CI credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [Travis CI](/integrations/builtin/app-nodes/n8n-nodes-base.travisci.md)
 
 ## Prerequisites
 
-Create a [Travis CI](https://travis-ci.org/){:target=_blank .external-link} account.
+สร้างบัญชี [Travis CI](https://travis-ci.org/){:target=_blank .external-link} ก่อน
 
 ## Supported authentication methods
 
@@ -21,11 +21,11 @@ Create a [Travis CI](https://travis-ci.org/){:target=_blank .external-link} acco
 
 ## Related resources
 
-Refer to [Travis CI's API documentation](https://docs.travis-ci.com/user/developer/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Travis CI's API documentation](https://docs.travis-ci.com/user/developer/){:target=_blank .external-link}
 
 ## Using API token
 
-To configure this credential, you'll need:
+ในการตั้งค่า credentials นี้ คุณจะต้องมี:
 
-- An **API Token**: Get your API token from **Account Settings >** [**API Token**](https://packagecloud.io/api_token){:target=_blank .external-link} or generate one through the Travis CI [command line client](https://github.com/travis-ci/travis.rb#installation){:target=_blank .external-link} .
+- **API Token**: รับ token ได้ที่ **Account Settings >** [**API Token**](https://packagecloud.io/api_token){:target=_blank .external-link} หรือสร้างผ่าน [command line client](https://github.com/travis-ci/travis.rb#installation){:target=_blank .external-link} ของ Travis CI
 

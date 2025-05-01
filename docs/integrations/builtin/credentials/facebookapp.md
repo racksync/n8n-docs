@@ -8,12 +8,12 @@ priority: medium
 
 # Facebook App credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้:
 
 - [Facebook Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/index.md)
 
 /// note | Facebook Graph API credentials
-If you want to create credentials for the [Facebook Graph API](/integrations/builtin/app-nodes/n8n-nodes-base.facebookgraphapi.md) node, follow the instructions in the [Facebook Graph API credentials](/integrations/builtin/credentials/facebookgraph.md) documentation.
+หากคุณต้องการสร้าง credentials สำหรับ node [Facebook Graph API](/integrations/builtin/app-nodes/n8n-nodes-base.facebookgraphapi.md) ให้ทำตามคำแนะนำในเอกสาร [Facebook Graph API credentials](/integrations/builtin/credentials/facebookgraph.md)
 ///
 
 ## Supported authentication methods
@@ -22,121 +22,121 @@ If you want to create credentials for the [Facebook Graph API](/integrations/bui
 
 ## Related resources
 
-Refer to [Meta's Graph API documentation](https://developers.facebook.com/docs/graph-api/overview){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Meta's Graph API documentation](https://developers.facebook.com/docs/graph-api/overview){:target=_blank .external-link}
 
 ## Using app access token
 
-To configure this credential, you'll need a [Meta for Developers](https://developers.facebook.com/){:target=_blank .external-link} account and:
+ในการกำหนดค่า credential นี้ คุณจะต้องมีบัญชี [Meta for Developers](https://developers.facebook.com/){:target=_blank .external-link} และ:
 
-- An app **Access Token**
-- An optional **App Secret**: Used to verify the integrity and origin of the payload.
+- **Access Token** ของแอป
+- **App Secret** (ทางเลือก): ใช้เพื่อตรวจสอบความสมบูรณ์และที่มาของ payload
 
-There are five steps in setting up your credential:
+มีห้าขั้นตอนในการตั้งค่า credential ของคุณ:
 
-1. [Create a Meta app](#create-a-meta-app) with the Webhooks product.
-2. [Generate an App Access Token](#generate-an-app-access-token) for that app.
-3. [Configure the Facebook trigger](#configure-the-facebook-trigger).
-4. Optional: [Add an app secret](#optional-add-an-app-secret).
-5. [App Review](#app-review): Only required if your app's users don't have roles on the app itself. If you're creating the app for your own internal purposes, this isn't necessary.
+1. [สร้าง Meta app](#create-a-meta-app) พร้อมผลิตภัณฑ์ Webhooks
+2. [สร้าง App Access Token](#generate-an-app-access-token) สำหรับแอปนั้น
+3. [กำหนดค่า Facebook trigger](#configure-the-facebook-trigger)
+4. ทางเลือก: [เพิ่ม app secret](#optional-add-an-app-secret)
+5. [App Review](#app-review): จำเป็นเฉพาะเมื่อผู้ใช้แอปของคุณไม่มีบทบาทในแอปเอง หากคุณกำลังสร้างแอปเพื่อวัตถุประสงค์ภายในของคุณเอง สิ่งนี้ไม่จำเป็น
 
-Refer to the detailed instructions below for each step.
+ดูคำแนะนำโดยละเอียดด้านล่างสำหรับแต่ละขั้นตอน
 
 ### Create a Meta app
 
-To create a Meta app:
+วิธีสร้าง Meta app:
 
-1. Go to the Meta Developer [App Dashboard](https://developers.facebook.com/apps){:target=_blank .external-link} and select **Create App**.
-2. If you have a business portfolio and you're ready to connect the app to it, select the business portfolio. If you don't have a business portfolio or you're not ready to connect the app to the portfolio, select **I don’t want to connect a business portfolio yet** and select **Next**. The **Use cases** page opens.
-3. Select **Other**, then select **Next**.
-4. Select **Business** and **Next**.
-5. Complete the essential information:
-    * Add an **App name**.
-    * Add an **App contact email**.
-    * Here again you can connect to a business portfolio or skip it.
-1. Select **Create app**.
-1. The **Add products to your app** page opens.
-1. Select **App settings > Basic** from the left menu.
-1. Enter a **Privacy Policy URL**. (Required to take the app "Live.")
-1. Select **Save changes**.
-1. At the top of the page, toggle the **App Mode** from **Development** to **Live**.
-1. In the left menu, select **Add Product**.
-6. The **Add products to your app** page appears. Select **Webhooks**.
-7. The **Webhooks** product opens.
+1. ไปที่ [App Dashboard](https://developers.facebook.com/apps){:target=_blank .external-link} ของ Meta Developer แล้วเลือก **Create App**
+2. หากคุณมี business portfolio และพร้อมที่จะเชื่อมต่อแอปเข้ากับมัน ให้เลือก business portfolio หากคุณไม่มี business portfolio หรือยังไม่พร้อมที่จะเชื่อมต่อแอปเข้ากับ portfolio ให้เลือก **I don’t want to connect a business portfolio yet** แล้วเลือก **Next** หน้า **Use cases** จะเปิดขึ้น
+3. เลือก **Other** จากนั้นเลือก **Next**
+4. เลือก **Business** และ **Next**
+5. กรอกข้อมูลที่จำเป็น:
+    * เพิ่ม **App name**
+    * เพิ่ม **App contact email**
+    * ที่นี่คุณสามารถเชื่อมต่อกับ business portfolio หรือข้ามไปได้อีกครั้ง
+1. เลือก **Create app**
+1. หน้า **Add products to your app** จะเปิดขึ้น
+1. เลือก **App settings > Basic** จากเมนูด้านซ้าย
+1. ป้อน **Privacy Policy URL** (จำเป็นต้องใช้เพื่อทำให้แอป "Live")
+1. เลือก **Save changes**
+1. ที่ด้านบนของหน้า สลับ **App Mode** จาก **Development** เป็น **Live**
+1. ในเมนูด้านซ้าย เลือก **Add Product**
+6. หน้า **Add products to your app** จะปรากฏขึ้น เลือก **Webhooks**
+7. ผลิตภัณฑ์ **Webhooks** จะเปิดขึ้น
 
-Refer to Meta's [Create an app](https://developers.facebook.com/docs/development/create-an-app){:target=_blank .external-link} documentation for more information on creating an app, required fields like the Privacy Policy URL, and adding products.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับการสร้างแอป ฟิลด์ที่จำเป็น เช่น Privacy Policy URL และการเพิ่มผลิตภัณฑ์ได้ที่เอกสาร [Create an app](https://developers.facebook.com/docs/development/create-an-app){:target=_blank .external-link} ของ Meta
 
-For more information on the app modes and switching to **Live** mode, refer to [App Modes](https://developers.facebook.com/docs/development/build-and-test/app-modes){:target=_blank .external-link} and [Publish | App Types](https://developers.facebook.com/docs/development/release#app-types){:target=_blank .external-link}.
+สำหรับข้อมูลเพิ่มเติมเกี่ยวกับโหมดแอปและการเปลี่ยนเป็นโหมด **Live** โปรดดูที่ [App Modes](https://developers.facebook.com/docs/development/build-and-test/app-modes){:target=_blank .external-link} และ [Publish | App Types](https://developers.facebook.com/docs/development/release#app-types){:target=_blank .external-link}
 
 ### Generate an App Access Token
 
-Next, create an app access token to be used by your n8n credential and the Webhooks product:
+ถัดไป สร้าง app access token เพื่อใช้กับ n8n credential ของคุณและผลิตภัณฑ์ Webhooks:
 
-1. In a separate tab or window, open the [Graph API explorer](https://developers.facebook.com/tools/explorer/){:target=_blank .external-link}.
-2. Select the **Meta App** you just created in the **Access Token** section.
-3. In **User or Page**, select **Get App Token**.
-4. Select **Generate Access Token**.
-5. The page prompts you to log in and grant access. Follow the on-screen prompts.
+1. ในแท็บหรือหน้าต่างแยกต่างหาก เปิด [Graph API explorer](https://developers.facebook.com/tools/explorer/){:target=_blank .external-link}
+2. เลือก **Meta App** ที่คุณเพิ่งสร้างในส่วน **Access Token**
+3. ใน **User or Page** เลือก **Get App Token**
+4. เลือก **Generate Access Token**
+5. หน้าเว็บจะแจ้งให้คุณเข้าสู่ระบบและให้สิทธิ์การเข้าถึง ทำตามคำแนะนำบนหน้าจอ
 
     /// warning | App unavailable
-    You may receive a warning that the app isn't available. Once you take an app live, there may be a few minutes' delay before you can generate an access token.
+    คุณอาจได้รับคำเตือนว่าแอปไม่พร้อมใช้งาน เมื่อคุณทำให้แอปใช้งานได้จริง อาจมีความล่าช้าเล็กน้อยก่อนที่คุณจะสามารถสร้าง access token ได้
     ///
 
-5. Copy the token and enter it in your n8n credential as the **Access Token**. Save this token somewhere else, too, since you'll need it for the Webhooks configuration.
-6. Save your n8n credential.
+5. คัดลอก token และป้อนลงใน n8n credential ของคุณเป็น **Access Token** บันทึก token นี้ไว้ที่อื่นด้วย เนื่องจากคุณจะต้องใช้สำหรับการกำหนดค่า Webhooks
+6. บันทึก n8n credential ของคุณ
 
-Refer to the Meta instructions for [Your First Request](https://developers.facebook.com/docs/graph-api/get-started#get-started){:target=_blank .external-link} for more information on generating the token.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับการสร้าง token ได้ที่คำแนะนำของ Meta สำหรับ [Your First Request](https://developers.facebook.com/docs/graph-api/get-started#get-started){:target=_blank .external-link}
 
 ### Configure the Facebook Trigger
 
-Now that you have a token, you can configure the Facebook Trigger node:
+ตอนนี้คุณมี token แล้ว คุณสามารถกำหนดค่า node Facebook Trigger ได้:
 
-1. In your Meta app, copy the **App ID** from the top navigation bar.
-1. In n8n, open your Facebook Trigger node.
-2. Paste the **App ID** into the **APP ID** field.
-3. Select **Test step** to shift the trigger into listening mode.
-6. Return to the tab or window where your Meta app's **Webhooks** product configuration is open.
-7. **Subscribe** to the objects you want to receive Facebook Trigger notifications about. For each subscription:
-    1. Copy the **Webhook URL** from n8n and enter it as the **Callback URL** in your Meta App.
-    1. Enter the **Access Token** you copied above as the **Verify token**.
-    1. Select **Verify and save**. (This step fails if you don't have your n8n trigger listening.)
-    1. Some webhook subscriptions, like **User**, prompt you to subscribe to individual events. Subscribe to the events you're interested in.
-    1. You can send some **Test** events from Meta to confirm things are working. If you send a test event, verify its receipt in n8n.
+1. ในแอป Meta ของคุณ คัดลอก **App ID** จากแถบนำทางด้านบน
+1. ใน n8n เปิด node Facebook Trigger ของคุณ
+2. วาง **App ID** ลงในฟิลด์ **APP ID**
+3. เลือก **Test step** เพื่อเปลี่ยน trigger เข้าสู่โหมด listening
+6. กลับไปที่แท็บหรือหน้าต่างที่การกำหนดค่าผลิตภัณฑ์ **Webhooks** ของแอป Meta ของคุณเปิดอยู่
+7. **Subscribe** กับ objects ที่คุณต้องการรับการแจ้งเตือน Facebook Trigger สำหรับการสมัครสมาชิกแต่ละครั้ง:
+    1. คัดลอก **Webhook URL** จาก n8n และป้อนเป็น **Callback URL** ในแอป Meta ของคุณ
+    1. ป้อน **Access Token** ที่คุณคัดลอกไว้ด้านบนเป็น **Verify token**
+    1. เลือก **Verify and save** (ขั้นตอนนี้จะล้มเหลวหากคุณไม่ได้ให้ n8n trigger ของคุณอยู่ในโหมด listening)
+    1. การสมัครสมาชิก webhook บางอย่าง เช่น **User** จะแจ้งให้คุณสมัครสมาชิกเหตุการณ์แต่ละรายการ สมัครสมาชิกเหตุการณ์ที่คุณสนใจ
+    1. คุณสามารถส่งเหตุการณ์ **Test** บางส่วนจาก Meta เพื่อยืนยันว่าทุกอย่างทำงานได้ หากคุณส่งเหตุการณ์ทดสอบ ให้ตรวจสอบการรับใน n8n
 
-Refer to the [Facebook Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/index.md) documentation for more information.
+ดูข้อมูลเพิ่มเติมได้ที่เอกสาร [Facebook Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/index.md)
 
 ### Optional: Add an App Secret
 
-For added security, Meta recommends adding an **App Secret**. This signs all API calls with the `appsecret_proof` parameter. The app secret proof is a sha256 hash of your access token, using your app secret as the key.
+เพื่อความปลอดภัยที่เพิ่มขึ้น Meta แนะนำให้เพิ่ม **App Secret** สิ่งนี้จะลงนามการเรียก API ทั้งหมดด้วยพารามิเตอร์ `appsecret_proof` app secret proof คือ sha256 hash ของ access token ของคุณ โดยใช้ app secret ของคุณเป็น key
 
-To generate an App Secret:
+วิธีสร้าง App Secret:
 
-1. In Meta while viewing your app, select **App settings > Basic** from the left menu.
-1. Select **Show** next to the **App secret** field.
-1. The page prompts you to re-enter your Facebook account credentials. Once you do so, Meta shows the App Secret.
-1. Highlight it to select it, copy it, and paste this into your n8n credential as the **App Secret**.
-1. **Save** your n8n credential.
+1. ใน Meta ขณะดูแอปของคุณ เลือก **App settings > Basic** จากเมนูด้านซ้าย
+1. เลือก **Show** ถัดจากฟิลด์ **App secret**
+1. หน้าเว็บจะแจ้งให้คุณป้อนข้อมูลประจำตัวบัญชี Facebook ของคุณอีกครั้ง เมื่อคุณทำเช่นนั้น Meta จะแสดง App Secret
+1. ไฮไลต์เพื่อเลือก คัดลอก และวางสิ่งนี้ลงใน n8n credential ของคุณเป็น **App Secret**
+1. **Save** n8n credential ของคุณ
 
-Refer to the [App Secret documentation](https://developers.facebook.com/docs/facebook-login/security#appsecret){:target=_blank .external-link} for more information.
+ดูข้อมูลเพิ่มเติมได้ที่ [App Secret documentation](https://developers.facebook.com/docs/facebook-login/security#appsecret){:target=_blank .external-link}
 
 ### App review
 
-App Review requires Business Verification.
+App Review ต้องการ Business Verification
 
-Your app must go through App Review if it will be used by someone who:
+แอปของคุณต้องผ่าน App Review หากจะถูกใช้โดยบุคคลที่:
 
-- Doesn't have a role on the app itself.
-- Doesn't have a role in the Business that has claimed the app.
+- ไม่มีบทบาทในแอปเอง
+- ไม่มีบทบาทใน Business ที่ได้อ้างสิทธิ์ในแอป
 
-If your only app users are users who have a role on the app itself, App Review isn't required.
+หากผู้ใช้แอปของคุณเพียงคนเดียวคือผู้ใช้ที่มีบทบาทในแอปเอง App Review ก็ไม่จำเป็น
 
-As part of the App Review process, you may need to request advanced access for your webhook subscriptions.
+ในฐานะส่วนหนึ่งของกระบวนการ App Review คุณอาจต้องขอ advanced access สำหรับการสมัครสมาชิก webhook ของคุณ
 
-Refer to Meta's [App Review](https://developers.facebook.com/docs/resp-plat-initiatives/app-review){:target=_blank .external-link} and [Advanced Access](https://developers.facebook.com/docs/graph-api/overview/access-levels#advanced-access){:target=_blank .external-link} documentation for more information.
+ดูข้อมูลเพิ่มเติมได้ที่เอกสาร [App Review](https://developers.facebook.com/docs/resp-plat-initiatives/app-review){:target=_blank .external-link} และ [Advanced Access](https://developers.facebook.com/docs/graph-api/overview/access-levels#advanced-access){:target=_blank .external-link} ของ Meta
 
 ## Common issues
 
 ### Unverified apps limit
 
-Facebook only lets you have a developer or administrator role on a maximum of 15 apps that aren't already linked to a Meta Verified Business Account.
+Facebook อนุญาตให้คุณมีบทบาท developer หรือ administrator ได้สูงสุด 15 แอปเท่านั้นที่ยังไม่ได้เชื่อมโยงกับ Meta Verified Business Account
 
-Refer to [Limitations | Create an app](https://developers.facebook.com/docs/development/create-an-app#limitations){:target=_blank .external-link} if you're over that limit.
+โปรดดูที่ [Limitations | Create an app](https://developers.facebook.com/docs/development/create-an-app#limitations){:target=_blank .external-link} หากคุณเกินขีดจำกัดนั้น

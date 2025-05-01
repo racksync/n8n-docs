@@ -1,14 +1,14 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Trello credentials
-description: Documentation for Trello credentials. Use these credentials to authenticate Trello in n8n, a workflow automation platform.
+description: เอกสารสำหรับ Trello credentials ใช้ credentials นี้เพื่อยืนยันตัวตน Trello ใน n8n ซึ่งเป็นแพลตฟอร์มสำหรับการทำงานอัตโนมัติ
 contentType: [integration, reference]
 priority: medium
 ---
 
 # Trello credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [Trello](/integrations/builtin/app-nodes/n8n-nodes-base.trello.md)
 - [Trello Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.trellotrigger.md)
@@ -19,31 +19,31 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Trello's API documentation](https://developer.atlassian.com/cloud/trello/guides/rest-api/api-introduction/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Trello's API documentation](https://developer.atlassian.com/cloud/trello/guides/rest-api/api-introduction/){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need a [Trello](https://trello.com/){:target=_blank .external-link} account and:
+ในการตั้งค่า credentials นี้ คุณจะต้องมีบัญชี [Trello](https://trello.com/){:target=_blank .external-link} และ:
 
-- An **API Key**
-- An **API Token**
+- **API Key**
+- **API Token**
 
-To generate both the API Key and API Token, create a Trello Power-Up:
+วิธีสร้าง API Key และ API Token ให้สร้าง Trello Power-Up:
 
-1. Open the Trello [Power-Up Admin Portal](https://trello.com/power-ups/admin){:target=_blank .external-link}.
-2. Select **New**.
-3. Enter a **Name** for your Power-Up, like `n8n integration`.
-4. Select the **Workspace** the Power-Up should have access to.
-5. Leave the **iframe connector URL** blank.
-6. Enter appropriate contact information.
-7. Select **Create**.
-8. This should open the Power-Up to the **API Key** page. (If it doesn't, open that page.)
-9. Select **Generate a new API Key**.
-10. Copy the **API key** from Trello and enter it in your n8n credential.
-11. In your Trello API key page, enter your n8n base URL as an **Allowed origin**.
-12. In **Capabilities** make sure to select the necessary options.
-13. Select the **Token** link next to your Trello **API Key**.
-14. When prompted, select **Allow** to grant all the permissions asked for.
-15. Copy the Trello **Token** and enter it as the n8n **API Token**.
+1. เปิด [Power-Up Admin Portal](https://trello.com/power-ups/admin){:target=_blank .external-link} ของ Trello
+2. เลือก **New**
+3. กรอก **Name** สำหรับ Power-Up เช่น `n8n integration`
+4. เลือก **Workspace** ที่ Power-Up นี้จะเข้าถึง
+5. ช่อง **iframe connector URL** ปล่อยว่างไว้
+6. กรอกข้อมูลติดต่อที่จำเป็น
+7. เลือก **Create**
+8. ระบบจะเปิดหน้า **API Key** (ถ้าไม่เปิดให้ไปที่หน้านั้นเอง)
+9. เลือก **Generate a new API Key**
+10. คัดลอก **API key** จาก Trello แล้วนำไปใส่ใน n8n credential
+11. ในหน้า API key ของ Trello ให้กรอก n8n base URL เป็น **Allowed origin**
+12. ใน **Capabilities** ให้เลือก options ที่จำเป็น
+13. เลือก **Token** ข้าง **API Key** ของ Trello
+14. เมื่อระบบถาม ให้เลือก **Allow** เพื่ออนุญาต permission ทั้งหมด
+15. คัดลอก **Token** ของ Trello แล้วนำไปใส่ใน n8n credential เป็น **API Token**
 
-Refer to Trello's [API Introduction](https://developer.atlassian.com/cloud/trello/guides/rest-api/api-introduction/#api-introduction){:target=_blank .external-link} for more information on API keys and tokens. Refer to Trello's [Power-Up Admin Portal](https://developer.atlassian.com/cloud/trello/guides/power-ups/managing-power-ups/#power-up-admin-portal){:target=_blank .external-link} for more information on creating Power-Ups.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับ API key และ token ได้ที่ [API Introduction](https://developer.atlassian.com/cloud/trello/guides/rest-api/api-introduction/#api-introduction){:target=_blank .external-link} และดูข้อมูลเกี่ยวกับ Power-Up ได้ที่ [Power-Up Admin Portal](https://developer.atlassian.com/cloud/trello/guides/power-ups/managing-power-ups/#power-up-admin-portal){:target=_blank .external-link}

@@ -8,12 +8,12 @@ priority: medium
 
 # Facebook Graph API credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้:
 
 - [Facebook Graph API](/integrations/builtin/app-nodes/n8n-nodes-base.facebookgraphapi.md)
 
 /// note | Facebook Trigger credentials
-If you want to create credentials for the [Facebook Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/index.md) node, follow the instructions mentioned in the [Facebook App credentials](/integrations/builtin/credentials/facebookapp.md) documentation.
+หากคุณต้องการสร้าง credentials สำหรับ node [Facebook Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/index.md) ให้ทำตามคำแนะนำที่กล่าวถึงในเอกสาร [Facebook App credentials](/integrations/builtin/credentials/facebookapp.md)
 ///
 
 ## Supported authentication methods
@@ -22,60 +22,60 @@ If you want to create credentials for the [Facebook Trigger](/integrations/built
 
 ## Related resources
 
-Refer to [Meta's Graph API documentation](https://developers.facebook.com/docs/graph-api/overview){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Meta's Graph API documentation](https://developers.facebook.com/docs/graph-api/overview){:target=_blank .external-link}
 
 ## Using app access token
 
-To configure this credential, you'll need a [Meta for Developers](https://developers.facebook.com/){:target=_blank .external-link} account and:
+ในการกำหนดค่า credential นี้ คุณจะต้องมีบัญชี [Meta for Developers](https://developers.facebook.com/){:target=_blank .external-link} และ:
 
-- An app **Access Token**
+- **Access Token** ของแอป
 
-There are two steps in setting up your credential:
+มีสองขั้นตอนในการตั้งค่า credential ของคุณ:
 
-1. [Create a Meta app](#create-a-meta-app) with the products you need to access.
-2. [Generate an App Access Token](#generate-an-app-access-token) for that app.
+1. [สร้าง Meta app](#create-a-meta-app) พร้อมผลิตภัณฑ์ที่คุณต้องการเข้าถึง
+2. [สร้าง App Access Token](#generate-an-app-access-token) สำหรับแอปนั้น
 
-Refer to the detailed instructions below for each step.
+ดูคำแนะนำโดยละเอียดด้านล่างสำหรับแต่ละขั้นตอน
 
 ### Create a Meta app
 
-To create a Meta app:
+วิธีสร้าง Meta app:
 
-1. Go to the Meta Developer [App Dashboard](https://developers.facebook.com/apps){:target=_blank .external-link} and select **Create App**.
-2. If you have a business portfolio and you're ready to connect the app to it, select the business portfolio. If you don't have a business portfolio or you're not ready to connect the app to the portfolio, select **I don’t want to connect a business portfolio yet** and select **Next**. The **Use cases** page opens.
-3. Select the **Use case** that aligns with how you wish to use the Facebook Graph API. For example, for products in Meta's **Business** suite (like Messenger, Instagram, WhatsApp, Marketing API, App Events, Audience Network, Commerce API, Fundraisers, Jobs, Threat Exchange, and Webhooks), select **Other**, then select **Next**.
-4. Select **Business** and **Next**.
-5. Complete the essential information:
-    * Add an **App name**.
-    * Add an **App contact email**.
-    * Here again you can connect to a business portfolio or skip it.
-1. Select **Create app**.
-1. The **Add products to your app** page opens.
-1. Select **App settings > Basic** from the left menu.
-1. Enter a **Privacy Policy URL**. (Required to take the app "Live.")
-1. Select **Save changes**.
-1. At the top of the page, toggle the **App Mode** from **Development** to **Live**.
-1. In the left menu, select **Add Product**.
-6. The **Add products to your app** page appears. Select the products that make sense for your app and configure them.
+1. ไปที่ [App Dashboard](https://developers.facebook.com/apps){:target=_blank .external-link} ของ Meta Developer แล้วเลือก **Create App**
+2. หากคุณมี business portfolio และพร้อมที่จะเชื่อมต่อแอปเข้ากับมัน ให้เลือก business portfolio หากคุณไม่มี business portfolio หรือยังไม่พร้อมที่จะเชื่อมต่อแอปเข้ากับ portfolio ให้เลือก **I don’t want to connect a business portfolio yet** แล้วเลือก **Next** หน้า **Use cases** จะเปิดขึ้น
+3. เลือก **Use case** ที่สอดคล้องกับวิธีที่คุณต้องการใช้ Facebook Graph API ตัวอย่างเช่น สำหรับผลิตภัณฑ์ในชุด **Business** ของ Meta (เช่น Messenger, Instagram, WhatsApp, Marketing API, App Events, Audience Network, Commerce API, Fundraisers, Jobs, Threat Exchange และ Webhooks) ให้เลือก **Other** จากนั้นเลือก **Next**
+4. เลือก **Business** และ **Next**
+5. กรอกข้อมูลที่จำเป็น:
+    * เพิ่ม **App name**
+    * เพิ่ม **App contact email**
+    * ที่นี่คุณสามารถเชื่อมต่อกับ business portfolio หรือข้ามไปได้อีกครั้ง
+1. เลือก **Create app**
+1. หน้า **Add products to your app** จะเปิดขึ้น
+1. เลือก **App settings > Basic** จากเมนูด้านซ้าย
+1. ป้อน **Privacy Policy URL** (จำเป็นต้องใช้เพื่อทำให้แอป "Live")
+1. เลือก **Save changes**
+1. ที่ด้านบนของหน้า สลับ **App Mode** จาก **Development** เป็น **Live**
+1. ในเมนูด้านซ้าย เลือก **Add Product**
+6. หน้า **Add products to your app** จะปรากฏขึ้น เลือกผลิตภัณฑ์ที่เหมาะสมกับแอปของคุณและกำหนดค่า
 
-Refer to Meta's [Create an app](https://developers.facebook.com/docs/development/create-an-app){:target=_blank .external-link} documentation for more information on creating an app, required fields like the Privacy Policy URL, and adding products.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับการสร้างแอป ฟิลด์ที่จำเป็น เช่น Privacy Policy URL และการเพิ่มผลิตภัณฑ์ได้ที่เอกสาร [Create an app](https://developers.facebook.com/docs/development/create-an-app){:target=_blank .external-link} ของ Meta
 
-For more information on the app modes and switching to **Live** mode, refer to [App Modes](https://developers.facebook.com/docs/development/build-and-test/app-modes){:target=_blank .external-link} and [Publish | App Types](https://developers.facebook.com/docs/development/release#app-types){:target=_blank .external-link}.
+สำหรับข้อมูลเพิ่มเติมเกี่ยวกับโหมดแอปและการเปลี่ยนเป็นโหมด **Live** โปรดดูที่ [App Modes](https://developers.facebook.com/docs/development/build-and-test/app-modes){:target=_blank .external-link} และ [Publish | App Types](https://developers.facebook.com/docs/development/release#app-types){:target=_blank .external-link}
 
 ### Generate an App Access Token
 
-Next, create an app access token to use with your n8n credential and the products you selected:
+ถัดไป สร้าง app access token เพื่อใช้กับ n8n credential ของคุณและผลิตภัณฑ์ที่คุณเลือก:
 
-1. In a separate tab or window, open the [Graph API explorer](https://developers.facebook.com/tools/explorer/){:target=_blank .external-link}.
-2. Select the **Meta App** you just created in the **Access Token** section.
-3. In **User or Page**, select **Get App Token**.
-4. Select **Generate Access Token**.
-5. The page prompts you to log in and grant access. Follow the on-screen prompts.
+1. ในแท็บหรือหน้าต่างแยกต่างหาก เปิด [Graph API explorer](https://developers.facebook.com/tools/explorer/){:target=_blank .external-link}
+2. เลือก **Meta App** ที่คุณเพิ่งสร้างในส่วน **Access Token**
+3. ใน **User or Page** เลือก **Get App Token**
+4. เลือก **Generate Access Token**
+5. หน้าเว็บจะแจ้งให้คุณเข้าสู่ระบบและให้สิทธิ์การเข้าถึง ทำตามคำแนะนำบนหน้าจอ
 
     /// warning | App unavailable
-    You may receive a warning that the app isn't available. Once you take an app live, there may be a few minutes' delay before you can generate an access token.
+    คุณอาจได้รับคำเตือนว่าแอปไม่พร้อมใช้งาน เมื่อคุณทำให้แอปใช้งานได้จริง อาจมีความล่าช้าเล็กน้อยก่อนที่คุณจะสามารถสร้าง access token ได้
     ///
 
-5. Copy the token and enter it in your n8n credential as the **Access Token**.
+5. คัดลอก token และป้อนลงใน n8n credential ของคุณเป็น **Access Token**
 
-Refer to the Meta instructions for [Your First Request](https://developers.facebook.com/docs/graph-api/get-started#get-started){:target=_blank .external-link} for more information on generating the token.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับการสร้าง token ได้ที่คำแนะนำของ Meta สำหรับ [Your First Request](https://developers.facebook.com/docs/graph-api/get-started#get-started){:target=_blank .external-link}

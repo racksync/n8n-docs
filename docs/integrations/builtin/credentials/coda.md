@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Coda credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node เหล่านี้:
 
 - [Coda](/integrations/builtin/app-nodes/n8n-nodes-base.coda.md)
 
 ## Prerequisites
 
-Create a [Coda](https://www.coda.io/){:target=_blank .external-link} account.
+สมัคร [Coda](https://www.coda.io/){:target=_blank .external-link} ให้เรียบร้อยก่อน
 
 ## Supported authentication methods
 
@@ -21,11 +21,11 @@ Create a [Coda](https://www.coda.io/){:target=_blank .external-link} account.
 
 ## Related resources
 
-Refer to [Coda's API documentation](https://coda.io/developers/apis/v1){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการได้ที่ [Coda's API documentation](https://coda.io/developers/apis/v1){:target=_blank .external-link}
 
 ## Using API access token
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- An API **Access Token**: Generate an API access token in your Coda [**Account settings**](https://coda.io/@oleg/getting-started-guide-coda-api/start-here-5#_luxC4){:target=_blank .external-link}.
+- API **Access Token**: สร้าง API access token ใน [**Account settings**](https://coda.io/@oleg/getting-started-guide-coda-api/start-here-5#_luxC4){:target=_blank .external-link} ของ Coda
 

@@ -7,14 +7,14 @@ contentType: [integration, reference]
 
 # Webex by Cisco credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node เหล่านี้:
 
 - [Webex by Cisco](/integrations/builtin/app-nodes/n8n-nodes-base.ciscowebex.md)
 - [Webex by Cisco Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.ciscowebextrigger.md)
 
 ## Prerequisites
 
-Create a [Webex by Cisco](https://www.webex.com/) account (this should automatically get you [developer account access](https://developer.webex.com){:target=_blank .external-link}).
+สมัคร [Webex by Cisco](https://www.webex.com/) (ซึ่งควรจะให้ [developer account access](https://developer.webex.com){:target=_blank .external-link} โดยอัตโนมัติ)
 
 ## Supported authentication methods
 
@@ -22,17 +22,17 @@ Create a [Webex by Cisco](https://www.webex.com/) account (this should automatic
 
 ## Related resources
 
-Refer to [Webex's API documentation](https://developer.webex.com/docs/getting-started){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการได้ที่ [Webex's API documentation](https://developer.webex.com/docs/getting-started){:target=_blank .external-link}
 
 ## Using OAuth2
 
 /// note | Note for n8n Cloud users
-You'll only need to enter the Credentials Name and select the **Connect my account** button in the OAuth credential to connect your Webex by Cisco account to n8n.
+คุณจะต้องป้อน Credentials Name และเลือกปุ่ม **Connect my account** ใน OAuth credential เพื่อเชื่อมต่อบัญชี Webex by Cisco ของคุณกับ n8n เท่านั้น
 ///
 
-Should you need to configure OAuth2 from scratch, you'll need to create an integration to use this credential. Refer to the instructions in the [Webex Registering your Integration documentation](https://developer.webex.com/docs/integrations#registering-your-integration){:target=_blank .external-link} to begin.
+หากคุณต้องการตั้งค่า OAuth2 ด้วยตัวเอง คุณจะต้องสร้าง integration เพื่อใช้ credential นี้ โปรดดูคำแนะนำใน [Webex Registering your Integration documentation](https://developer.webex.com/docs/integrations#registering-your-integration){:target=_blank .external-link} เพื่อเริ่มต้น
 
-n8n recommends using the following **Scopes** for your integration:
+n8n แนะนำให้ใช้ **Scopes** ต่อไปนี้สำหรับ integration ของคุณ:
 
 * `spark:rooms_read`
 * `spark:messages_write`

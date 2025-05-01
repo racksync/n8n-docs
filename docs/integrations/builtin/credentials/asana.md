@@ -8,7 +8,7 @@ priority: medium
 
 # Asana credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node เหล่านี้:
 
 - [Asana](/integrations/builtin/app-nodes/n8n-nodes-base.asana.md)
 - [Asana Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.asanatrigger.md)
@@ -20,43 +20,43 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Asana's Developer Guides](https://developers.asana.com/docs/overview){:target=_blank .external-link} for more information about working with the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับการทำงานกับบริการได้ที่ [Asana's Developer Guides](https://developers.asana.com/docs/overview){:target=_blank .external-link}
 
 ## Using Access token
 
-To configure this credential, you'll need an [Asana](https://asana.com/){:target=_blank .external-link} account and:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมีบัญชี [Asana](https://asana.com/){:target=_blank .external-link} และ:
 
-- A Personal **Access Token** (PAT)
+- Personal **Access Token** (PAT)
 
-To get your PAT:
+วิธีรับ PAT ของคุณ:
 
-1. Open the Asana [developer console](https://app.asana.com/0/my-apps){:target=_blank .external-link}.
-2. In the **Personal access tokens** section, select **Create new token**.
-3. Enter a **Token name**, like `n8n integration`.
-4. Check the box to agree to the **Asana API terms**.
-5. Select **Create token**.
-6. Copy the token and enter it as the **Access Token** in your n8n credential.
+1. เปิด Asana [developer console](https://app.asana.com/0/my-apps){:target=_blank .external-link}
+2. ในส่วน **Personal access tokens** เลือก **Create new token**
+3. ป้อน **Token name** เช่น `n8n integration`
+4. ทำเครื่องหมายในช่องเพื่อยอมรับ **Asana API terms**
+5. เลือก **Create token**
+6. คัดลอก token และป้อนเป็น **Access Token** ใน n8n credential ของคุณ
 
-Refer to the [Asana Quick start guide](https://developers.asana.com/docs/quick-start#setup){:target=_blank .external-link} for more information.
+ดูข้อมูลเพิ่มเติมได้ที่ [Asana Quick start guide](https://developers.asana.com/docs/quick-start#setup){:target=_blank .external-link}
 
 ## Using OAuth2
 
-To configure this credential, you'll need an [Asana](https://asana.com/){:target=_blank .external-link} account.
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมีบัญชี [Asana](https://asana.com/){:target=_blank .external-link}
 
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-If you're [self-hosting](/hosting/index.md) n8n, you'll need to register an application to set up OAuth:
+หากคุณ [self-hosting](/hosting/index.md) n8n คุณจะต้องลงทะเบียน application เพื่อตั้งค่า OAuth:
 
-1. Open the Asana [developer console](https://app.asana.com/0/my-apps){:target=_blank .external-link}.
-2. In the **My apps** section, select **Create new app**.
-3. Enter an **App name** for your application, like `n8n integration`.
-4. Select a purpose for your app.
-5. Check the box to agree to the **Asana API terms**.
-6. Select **Create app**. The page opens to the app's **Basic Information**.
-7. Select **OAuth** from the left menu.
-8. In n8n, copy the **OAuth Redirect URL**.
-9. In Asana, select **Add redirect URL** and enter the URL you copied from n8n.
-7. Copy the **Client ID** from Asana and enter it in your n8n credential.
-8. Copy the **Client Secret** from Asana and enter it in your n8n credential.
+1. เปิด Asana [developer console](https://app.asana.com/0/my-apps){:target=_blank .external-link}
+2. ในส่วน **My apps** เลือก **Create new app**
+3. ป้อน **App name** สำหรับ application ของคุณ เช่น `n8n integration`
+4. เลือกวัตถุประสงค์สำหรับ app ของคุณ
+5. ทำเครื่องหมายในช่องเพื่อยอมรับ **Asana API terms**
+6. เลือก **Create app** หน้าจะเปิดไปที่ **Basic Information** ของ app
+7. เลือก **OAuth** จากเมนูด้านซ้าย
+8. ใน n8n คัดลอก **OAuth Redirect URL**
+9. ใน Asana เลือก **Add redirect URL** และป้อน URL ที่คุณคัดลอกมาจาก n8n
+7. คัดลอก **Client ID** จาก Asana และป้อนลงใน n8n credential ของคุณ
+8. คัดลอก **Client Secret** จาก Asana และป้อนลงใน n8n credential ของคุณ
 
-Refer to the [Asana OAuth register an application documentation](https://developers.asana.com/docs/oauth#register-an-application){:target=_blank .external-link} for more information.
+ดูข้อมูลเพิ่มเติมได้ที่ [Asana OAuth register an application documentation](https://developers.asana.com/docs/oauth#register-an-application){:target=_blank .external-link}

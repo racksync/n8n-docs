@@ -7,13 +7,14 @@ contentType: [integration, reference]
 
 # ERPNext credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node เหล่านี้:
 
 - [ERPNext](/integrations/builtin/app-nodes/n8n-nodes-base.erpnext.md)
 
 ## Prerequisites
 
-- Create an [ERPNext](https://erpnext.com) account.
+- มี instance ของ [ERPNext](https://erpnext.com/){:target=_blank .external-link} ที่เข้าถึงได้
+- สร้างบัญชีผู้ใช้บน instance นั้น
 
 ## Supported authentication methods
 
@@ -21,30 +22,13 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [ERPNext's documentation](https://docs.erpnext.com/docs/user/manual/en/introduction){:target=_blank .external-link} for more information about the service.
-
-Refer to [ERPNext's developer documentation](https://frappeframework.com/docs/user/en/introduction){:target=_blank .external-link} for more information about working with the framework.
-
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับการใช้งาน API ได้ที่ [ERPNext's API documentation](https://frappeframework.com/docs/v13/user/en/guides/integration/rest_api){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- An **API Key**: Generate this from your own ERPNext user account in **Settings > My Settings > API Access**.
-- An **API Secret**: Generated with the API key.
-- Your ERPNext **Environment**:
-    - For **Cloud-hosted**:
-        - Your ERPNext **Subdomain**: Refer to the [FAQs](#how-to-find-the-subdomain-of-an-erpnext-cloud-hosted-account)
-        - Your **Domain**: Choose between `erpnext.com` and `frappe.cloud`.
-    - For **Self-hosted**:
-        - The fully qualified **Domain** where you host ERPNext
-- Choose whether to **Ignore SSL Issues**: When selected, n8n will connect even if SSL certificate validation is unavailable.
-
-If you are an ERPNext System Manager, you can also generate API keys and secrets for other users. Refer to the [ERPNext Adding Users documentation](https://docs.erpnext.com/docs/user/manual/en/adding-users){:target=_blank .external-link} for more information.
-
-## How to find the subdomain of an ERPNext cloud-hosted account
-
-You can find your ERPNext subdomain by reviewing the address bar of your browser. The string between `https://` and either `.erpnext.com` or `frappe.cloud` is your subdomain.
-
-For example, if the URL in the address bar is `https://n8n.erpnext.com`, the subdomain is `n8n`.
+- **URL** ของ ERPNext instance ของคุณ เช่น `https://example.erpnext.com`
+- **API Key**: สร้าง API key ผ่าน ERPNext ดูคำแนะนำได้ที่ [ERPNext API Access documentation](https://frappeframework.com/docs/v13/user/en/guides/integration/rest_api/token_based_auth){:target=_blank .external-link}
+- **API Secret**: สร้างพร้อมกับ API key
 

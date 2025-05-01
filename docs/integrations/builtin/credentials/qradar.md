@@ -11,7 +11,7 @@ contentType: [integration, reference]
 
 ## Prerequisites
 
-Create a [Qradar](https://www.ibm.com/qradar){:target=_blank .external-link} account.
+สร้าง [Qradar](https://www.ibm.com/qradar){:target=_blank .external-link} account
 
 ## Supported authentication methods
 
@@ -19,12 +19,12 @@ Create a [Qradar](https://www.ibm.com/qradar){:target=_blank .external-link} acc
 
 ## Related resources
 
-Refer to [QRadar's documentation](https://ibmsecuritydocs.github.io/qradar_api_overview/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [QRadar's documentation](https://ibmsecuritydocs.github.io/qradar_api_overview/){:target=_blank .external-link}
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/qradar/){:target=_blank .external-link} on n8n's website.
+นี่คือ credential-only node ดูข้อมูลเพิ่มเติมที่ [Custom API operations](/integrations/custom-operations.md) ดู [example workflows and related content](https://n8n.io/integrations/qradar/){:target=_blank .external-link} บนเว็บไซต์ n8n
 
 ## Using API key
 
-To configure this credential, you'll need:
+สำหรับการตั้งค่า credentials นี้ คุณจะต้องมี:
 
-- An **API Key**: Also known as an authorized service token. Use the **Manage Authorized Services** window on the **Admin** tab to create an authentication token. Refer to [Creating an authentication token](https://www.ibm.com/docs/en/qradar-common?topic=forwarding-creating-authentication-token){:target=_blank .external-link} for more information.
+- **API Key**: หรือที่เรียกว่า authorized service token ใช้หน้าต่าง **Manage Authorized Services** บนแท็บ **Admin** เพื่อสร้าง authentication token ดูข้อมูลเพิ่มเติมที่ [Creating an authentication token](https://www.ibm.com/docs/en/qradar-common?topic=forwarding-creating-authentication-token){:target=_blank .external-link}

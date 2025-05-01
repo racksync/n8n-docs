@@ -7,14 +7,14 @@ contentType: [integration, reference]
 
 # GetResponse credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [GetResponse](/integrations/builtin/app-nodes/n8n-nodes-base.getresponse.md)
 - [GetResponse Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.getresponsetrigger.md)
 
 ## Prerequisites
 
-Create a [GetResponse](https://www.getresponse.com/){:target=_blank .external-link} account.
+สร้างบัญชี [GetResponse](https://www.getresponse.com/){:target=_blank .external-link} ก่อน
 
 ## Supported authentication methods
 
@@ -23,37 +23,37 @@ Create a [GetResponse](https://www.getresponse.com/){:target=_blank .external-li
 
 ## Related resources
 
-Refer to [GetResponse's API documentation](https://apidocs.getresponse.com/v3){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [GetResponse's API documentation](https://apidocs.getresponse.com/v3){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ถ้าต้องการตั้งค่า credential นี้ คุณจะต้องมี:
 
-- An **API Key**: To view or generate an API key, go to **Integrations and API > API**. Refer to the [GetResponse Help Center](https://www.getresponse.com/help/where-do-i-find-the-api-key.html){:target=_blank .external-link} for more detailed instructions.
+- **API Key**: ดูหรือสร้าง API key ได้ที่ **Integrations and API > API** ดูวิธีการโดยละเอียดได้ที่ [GetResponse Help Center](https://www.getresponse.com/help/where-do-i-find-the-api-key.html){:target=_blank .external-link}
 
 ## Using OAuth2
 
-To configure this credential, you'll need:
+ถ้าต้องการตั้งค่า credential นี้ คุณจะต้องมี:
 
-- A **Client ID**: Generated when you [register your application](https://apidocs.getresponse.com/v3/authentication/oauth2){:target=_blank .external-link}.
-- A **Client Secret**: Generated when you [register your application](https://apidocs.getresponse.com/v3/authentication/oauth2){:target=_blank .external-link} as the **Client Secret Key**.
+- **Client ID**: สร้างขึ้นเมื่อคุณ [register your application](https://apidocs.getresponse.com/v3/authentication/oauth2){:target=_blank .external-link}
+- **Client Secret**: สร้างขึ้นเมื่อคุณ [register your application](https://apidocs.getresponse.com/v3/authentication/oauth2){:target=_blank .external-link} ในชื่อ **Client Secret Key**
 
-When you register your application, copy the **OAuth Redirect URL** from n8n and add it as the **Redirect URL** in GetResponse.
+ตอนที่คุณ register application ให้ copy **OAuth Redirect URL** จาก n8n ไปใส่ใน **Redirect URL** ของ GetResponse
 
 /// note | Redirect URL with localhost
-The Redirect URL should be a URL in your domain, for example: `https://mytemplatemaker.example.com/gr_callback`. GetResponse doesn't accept a localhost callback URL. Refer to the [FAQs](#configure-oauth2-credentials-for-a-local-environment) to configure the credentials for the local environment.
+Redirect URL ควรเป็น URL ใน domain ของคุณเอง เช่น `https://mytemplatemaker.example.com/gr_callback` GetResponse ไม่รองรับ callback URL ที่เป็น localhost ดู [FAQs](#configure-oauth2-credentials-for-a-local-environment) สำหรับการตั้งค่า credentials ใน local environment
 ///
 
 ## Configure OAuth2 credentials for a local environment
 
-GetResponse doesn't accept the localhost callback URL. Follow the steps below to configure the OAuth credentials for a local environment:
-1. Use [ngrok](https://ngrok.com/){:target=_blank .external-link} to expose the local server running on port `5678` to the internet. In your terminal, run the following command:
+GetResponse ไม่รองรับ callback URL ที่เป็น localhost ทำตามขั้นตอนนี้เพื่อ config OAuth credentials สำหรับ local environment:
+1. ใช้ [ngrok](https://ngrok.com/){:target=_blank .external-link} เพื่อ expose server ที่รันอยู่บน port `5678` ไปยังอินเทอร์เน็ต ใน terminal ให้รันคำสั่งนี้:
 ```sh
 ngrok http 5678
 ```
-2. Run the following command in a new terminal. Replace `<YOUR-NGROK-URL>` with the URL that you got from the previous step.
+2. เปิด terminal ใหม่แล้วรันคำสั่งนี้ โดยแทนที่ `<YOUR-NGROK-URL>` ด้วย URL ที่ได้จากขั้นตอนก่อนหน้า
 ```sh
 export WEBHOOK_URL=<YOUR-NGROK-URL>
 ```
-3. Follow the [Using OAuth2](#using-oauth2) instructions to configure your credentials, using this URL as your **Redirect URL**.
+3. ทำตามขั้นตอนใน [Using OAuth2](#using-oauth2) เพื่อ config credentials โดยใช้ URL นี้เป็น **Redirect URL**
 

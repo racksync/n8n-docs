@@ -7,14 +7,14 @@ contentType: [integration, reference]
 
 # Help Scout credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [Help Scout](/integrations/builtin/app-nodes/n8n-nodes-base.helpscout.md)
 - [Help Scout Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.helpscouttrigger.md)
 
 ## Prerequisites
 
-Create a [Help Scout](https://www.helpscout.com/) account.
+สร้างบัญชี [Help Scout](https://www.helpscout.com/)
 
 ## Supported authentication methods
 
@@ -22,10 +22,10 @@ Create a [Help Scout](https://www.helpscout.com/) account.
 
 ## Related resources
 
-Refer to [Help Scout's API documentation](https://developer.helpscout.com/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Help Scout's API documentation](https://developer.helpscout.com/){:target=_blank .external-link}
 
 ## Using OAuth2
 
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-If you need to configure OAuth2 from scratch or need more detail on what's happening in the OAuth web flow, you'll need to create a Help Scout app. Refer to the instructions in the [Help Scout OAuth documentation](https://developer.helpscout.com/mailbox-api/overview/authentication/#oauth2-application){:target=_blank .external-link} for more information.
+หากคุณต้องการตั้งค่า OAuth2 ตั้งแต่ต้น หรือต้องการรายละเอียดเพิ่มเติมเกี่ยวกับสิ่งที่เกิดขึ้นใน OAuth web flow คุณจะต้องสร้างแอป Help Scout โปรดดูคำแนะนำใน [Help Scout OAuth documentation](https://developer.helpscout.com/mailbox-api/overview/authentication/#oauth2-application){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม

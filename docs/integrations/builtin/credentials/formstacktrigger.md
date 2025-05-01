@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Formstack Trigger credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้:
 
 - [Formstack Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.formstacktrigger.md)
 
 ## Prerequisites
 
-Create a [Formstack](https://www.formstack.com/){:target=_blank .external-link} account.
+สร้างบัญชี [Formstack](https://www.formstack.com/){:target=_blank .external-link}
 
 ## Supported authentication methods
 
@@ -22,43 +22,43 @@ Create a [Formstack](https://www.formstack.com/){:target=_blank .external-link} 
 
 ## Related resources
 
-Refer to [Formstack's API documentation](https://developers.formstack.com/reference/api-overview){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Formstack's API documentation](https://developers.formstack.com/reference/api-overview){:target=_blank .external-link}
 
 ## Using API access token
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- An API **Access Token**: To generate an Access Token, [create a new application](https://www.formstack.com/admin/apiKey/main){:target=_blank .external-link} in Formstack using the following details:
-    * **Redirect URI**: For cloud n8n instances, enter `https://oauth.n8n.cloud/oauth2/callback`.
-        - For self-hosted n8n instances, enter the OAuth callback URL for your n8n instance in the format `https://<n8n_url>/rest/oauth2-credential/callback`. For example `https://localhost:5678/rest/oauth2-credential/callback`.
-    * **Platform**: Select **Website**.
+- API **Access Token**: หากต้องการสร้าง Access Token ให้ [create a new application](https://www.formstack.com/admin/apiKey/main){:target=_blank .external-link} ใน Formstack โดยใช้รายละเอียดต่อไปนี้:
+    * **Redirect URI**: สำหรับ n8n instances บนคลาวด์ ให้ป้อน `https://oauth.n8n.cloud/oauth2/callback`
+        - สำหรับ n8n instances ที่ self-hosted ให้ป้อน OAuth callback URL สำหรับ n8n instance ของคุณในรูปแบบ `https://<n8n_url>/rest/oauth2-credential/callback` ตัวอย่างเช่น `https://localhost:5678/rest/oauth2-credential/callback`
+    * **Platform**: เลือก **Website**
 
-Once you've created the application, copy the access token either from the applications list or by selecting the application to view its details.
+เมื่อคุณสร้าง application แล้ว ให้คัดลอก access token จากรายการ applications หรือโดยการเลือก application เพื่อดูรายละเอียด
 
-Refer to [Formstack's API Authorization documentation](https://developers.formstack.com/reference/api-overview#obtaining-an-api-key-oauth2-access-token){:target=_blank .external-link} for more detailed instructions.
+ดูคำแนะนำโดยละเอียดเพิ่มเติมได้ที่ [Formstack's API Authorization documentation](https://developers.formstack.com/reference/api-overview#obtaining-an-api-key-oauth2-access-token){:target=_blank .external-link}
 
 /// note | Access token permissions
-Formstack ties access tokens to a Formstack user. Access tokens follow Formstack (in-app) user permissions.
+Formstack ผูก access tokens กับผู้ใช้ Formstack Access tokens เป็นไปตามสิทธิ์ของผู้ใช้ Formstack (ในแอป)
 ///
 
 ## Using OAuth2
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- A **Client ID**
-- A **Client Secret**
+- **Client ID**
+- **Client Secret**
 
-To generate both of these, [create a new application](https://www.formstack.com/admin/apiKey/main){:target=_blank .external-link} in Formstack using the following details:
+หากต้องการสร้างทั้งสองอย่างนี้ ให้ [create a new application](https://www.formstack.com/admin/apiKey/main){:target=_blank .external-link} ใน Formstack โดยใช้รายละเอียดต่อไปนี้:
 
-- **Redirect URI**: Copy the **OAuth Redirect URL** from the n8n credential to enter here.
-    - For self-hosted n8n instances, enter the OAuth callback URL for your n8n instance in the format `https://<n8n_url>/rest/oauth2-credential/callback`. For example `https://localhost:5678/rest/oauth2-credential/callback`.
-- **Platform**: Select **Website**.
+- **Redirect URI**: คัดลอก **OAuth Redirect URL** จาก n8n credential เพื่อป้อนที่นี่
+    - สำหรับ n8n instances ที่ self-hosted ให้ป้อน OAuth callback URL สำหรับ n8n instance ของคุณในรูปแบบ `https://<n8n_url>/rest/oauth2-credential/callback` ตัวอย่างเช่น `https://localhost:5678/rest/oauth2-credential/callback`
+- **Platform**: เลือก **Website**
 
-Once you've created the application, select it from the applications list to view the **Application Details**. Copy the **Client ID** and **Client Secret** and add them to n8n. Once you've added both, select the **Connect my account** button to begin the OAuth2 flow and authorization process.
+เมื่อคุณสร้าง application แล้ว ให้เลือกจากรายการ applications เพื่อดู **Application Details** คัดลอก **Client ID** และ **Client Secret** แล้วเพิ่มลงใน n8n เมื่อคุณเพิ่มทั้งสองอย่างแล้ว ให้เลือกปุ่ม **Connect my account** เพื่อเริ่มขั้นตอน OAuth2 และกระบวนการ authorization
 
-Refer to [Formstack's API Authorization documentation](https://developers.formstack.com/reference/api-overview#obtaining-an-api-key-oauth2-access-token){:target=_blank .external-link} for more detailed instructions.
+ดูคำแนะนำโดยละเอียดเพิ่มเติมได้ที่ [Formstack's API Authorization documentation](https://developers.formstack.com/reference/api-overview#obtaining-an-api-key-oauth2-access-token){:target=_blank .external-link}
 
 /// note | Access token permissions
-Formstack ties access tokens to a Formstack user. Access tokens follow Formstack (in-app) user permissions.
+Formstack ผูก access tokens กับผู้ใช้ Formstack Access tokens เป็นไปตามสิทธิ์ของผู้ใช้ Formstack (ในแอป)
 ///
 

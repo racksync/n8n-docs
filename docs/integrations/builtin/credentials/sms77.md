@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # seven credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้:
 
 - [seven](/integrations/builtin/app-nodes/n8n-nodes-base.sms77.md)
 
 ## Prerequisites
 
-Create a [seven](https://www.seven.io/en){:target=_blank .external-link} developer account.
+สมัคร [seven](https://www.seven.io/en){:target=_blank .external-link} developer account ก่อนใช้งาน
 
 ## Supported authentication methods
 
@@ -21,11 +21,11 @@ Create a [seven](https://www.seven.io/en){:target=_blank .external-link} develop
 
 ## Related resources
 
-Refer to [seven's API documentation](https://docs.seven.io/en){:target=_blank .external-link} for more information about the service.
+ดูรายละเอียดเพิ่มเติมได้ที่ [seven's API documentation](https://docs.seven.io/en){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ในการตั้งค่า credential นี้ คุณจะต้องมี:
 
-- An **API key**: Go to **Account > Developer >** [**API Keys**](https://app.seven.io/developer#create-api-key){:target=_blank .external-link} to create an API key. Refer to [API First Steps](https://docs.seven.io/en/rest-api/first-steps){:target=_blank .external-link} for more information.
+- **API key**: ไปที่ **Account > Developer >** [**API Keys**](https://app.seven.io/developer#create-api-key){:target=_blank .external-link} เพื่อสร้าง API key ดูรายละเอียดที่ [API First Steps](https://docs.seven.io/en/rest-api/first-steps){:target=_blank .external-link}
 

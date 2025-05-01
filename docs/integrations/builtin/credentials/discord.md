@@ -8,17 +8,17 @@ priority: high
 
 # Discord credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node เหล่านี้:
 
 - [Discord](/integrations/builtin/app-nodes/n8n-nodes-base.discord/index.md)
 
 ## Prerequisites
 
-- Create a [Discord](https://www.discord.com/){:target=_blank .external-link} account.
-- For Bot and OAuth2 credentials:
-    - [Set up your local developer environment](https://discord.com/developers/docs/quick-start/getting-started#step-0-project-setup){:target=_blank .external-link}.
-    - [Create an application and a bot user](https://discord.com/developers/docs/quick-start/getting-started#step-1-creating-an-app){:target=_blank .external-link}.
-- For webhook credentials, [create a webhook](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks){:target=_blank .external-link}.
+- สมัคร [Discord](https://www.discord.com/){:target=_blank .external-link} ให้เรียบร้อยก่อน
+- สำหรับ Bot และ OAuth2 credentials:
+    - [ตั้งค่า local developer environment ของคุณ](https://discord.com/developers/docs/quick-start/getting-started#step-0-project-setup){:target=_blank .external-link}
+    - [สร้าง application และ bot user](https://discord.com/developers/docs/quick-start/getting-started#step-1-creating-an-app){:target=_blank .external-link}
+- สำหรับ webhook credentials [สร้าง webhook](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks){:target=_blank .external-link}
 
 ## Supported authentication methods
 
@@ -26,37 +26,37 @@ You can use these credentials to authenticate the following nodes:
 - OAuth2
 - Webhook
 
-Not sure which method to use? Refer to [Choose an authentication method](#choose-an-authentication-method) for more guidance.
+ไม่แน่ใจว่าควรใช้วิธีไหน? ดูคำแนะนำเพิ่มเติมได้ที่ [Choose an authentication method](#choose-an-authentication-method)
 
 ## Related resources
 
-Refer to [Discord's Developer documentation](https://discord.com/developers/docs/intro){:target=_blank .external-link} for more information about the service.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับการใช้งาน API ได้ที่ [Discord's Developer documentation](https://discord.com/developers/docs/intro){:target=_blank .external-link}
 
 ## Using bot
 
-Use this method if you want to add the bot to your Discord server using a bot token rather than OAuth2.
+ใช้วิธีนี้หากคุณต้องการเพิ่ม bot ไปยัง Discord server ของคุณโดยใช้ bot token แทน OAuth2
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- A **Bot Token**: Generated once you create an application with a bot.
+- **Bot Token**: สร้างขึ้นเมื่อคุณสร้าง application พร้อม bot
 
-To create an application with a bot and generate the **Bot Token**:
+วิธีสร้าง application พร้อม bot และสร้าง **Bot Token**:
 
-1. If you don't have one already, create an app in the [developer portal](https://discord.com/developers/applications?new_application=true){:target=_blank .external-link}.
-2. Enter a **Name** for your app.
-3. Select **Create**.
-4. Select **Bot** from the left menu.
-5. Under **Token**, select **Reset Token** to generate a new bot token. 
-6. Copy the token and add it to your n8n credential.
-7. In **Bot > Privileged Gateway Intents**, add any privileged intents you want your bot to have. Refer to [Configuring your bot](https://discord.com/developers/docs/quick-start/getting-started#configuring-your-bot){:target=_blank .external-link} for more information on privileged intents.
-    - n8n recommends activating **SERVER MEMBERS INTENT: Required for your bot to receive events listed under GUILD_MEMBERS**. 
-8. In **Installation > Installation Contexts**, select the installation contexts you want your bot to use:
-    - Select **Guild Install** for server-installed apps. (Most common for n8n users.)
-    - Select **User Install** for user-installed apps. (Less common for n8n users, but may be useful for testing.)
-    - Refer to Discord's [Choosing installation contexts](https://discord.com/developers/docs/quick-start/getting-started#choosing-installation-contexts){:target=_blank .external-link} documentation for more information about these installation contexts.
-9. In **Installation > Install Link**, select **Discord Provided Link** if it's not already selected.
-10. Still on the **Installation** page, in the **Default Install Settings** section, select `applications.commands` and `bot` scopes. Refer to Discord's [Scopes](https://discord.com/developers/docs/topics/oauth2#shared-resources-oauth2-scopes){:target=_blank .external-link} documentation for more information about these and other scopes.
-11. Add permissions on the **Bot > Bot Permissions** page. Refer to Discord's [Permissions](https://discord.com/developers/docs/topics/permissions){:target=_blank .external-link} documentation for more information. n8n recommends selecting these permissions for the [Discord](/integrations/builtin/app-nodes/n8n-nodes-base.discord/index.md) node:
+1. หากยังไม่มี ให้สร้าง app ใน [developer portal](https://discord.com/developers/applications?new_application=true){:target=_blank .external-link}
+2. ป้อน **Name** สำหรับ app ของคุณ
+3. เลือก **Create**
+4. เลือก **Bot** จากเมนูด้านซ้าย
+5. ใต้ **Token** เลือก **Reset Token** เพื่อสร้าง bot token ใหม่
+6. คัดลอก token และเพิ่มลงใน n8n credential ของคุณ
+7. ใน **Bot > Privileged Gateway Intents** เพิ่ม privileged intents ที่คุณต้องการให้ bot ของคุณมี ดูข้อมูลเพิ่มเติมเกี่ยวกับ privileged intents ได้ที่ [Configuring your bot](https://discord.com/developers/docs/quick-start/getting-started#configuring-your-bot){:target=_blank .external-link}
+    - n8n แนะนำให้เปิดใช้งาน **SERVER MEMBERS INTENT: Required for your bot to receive events listed under GUILD_MEMBERS**
+8. ใน **Installation > Installation Contexts** เลือก installation contexts ที่คุณต้องการให้ bot ของคุณใช้:
+    - เลือก **Guild Install** สำหรับ app ที่ติดตั้งบน server (พบบ่อยที่สุดสำหรับผู้ใช้ n8n)
+    - เลือก **User Install** สำหรับ app ที่ติดตั้งโดยผู้ใช้ (พบน้อยกว่าสำหรับผู้ใช้ n8n แต่อาจมีประโยชน์สำหรับการทดสอบ)
+    - ดูข้อมูลเพิ่มเติมเกี่ยวกับ installation contexts เหล่านี้ได้ที่เอกสาร [Choosing installation contexts](https://discord.com/developers/docs/quick-start/getting-started#choosing-installation-contexts){:target=_blank .external-link} ของ Discord
+9. ใน **Installation > Install Link** เลือก **Discord Provided Link** หากยังไม่ได้เลือกไว้
+10. ยังคงอยู่ที่หน้า **Installation** ในส่วน **Default Install Settings** เลือก `applications.commands` และ `bot` scopes ดูข้อมูลเพิ่มเติมเกี่ยวกับ scopes เหล่านี้และ scopes อื่นๆ ได้ที่เอกสาร [Scopes](https://discord.com/developers/docs/topics/oauth2#shared-resources-oauth2-scopes){:target=_blank .external-link} ของ Discord
+11. เพิ่ม permissions ในหน้า **Bot > Bot Permissions** ดูข้อมูลเพิ่มเติมได้ที่เอกสาร [Permissions](https://discord.com/developers/docs/topics/permissions){:target=_blank .external-link} ของ Discord n8n แนะนำให้เลือก permissions เหล่านี้สำหรับ [Discord](/integrations/builtin/app-nodes/n8n-nodes-base.discord/index.md) node:
     - Manage Roles
     - Manage Channels
     - Read Messages/View Channels
@@ -71,58 +71,58 @@ To create an application with a bot and generate the **Bot Token**:
     - Attach Files
     - Read Message History
     - Add Reactions
-12. Add the app to your server or test server:
-    1. Go to **Installation > Install Link** and copy the link listed there.
-    2. Paste the link in your browser and hit Enter.
-    1. Select **Add to server** in the installation prompt.
-    1. Once your app's added to your server, you'll see it in the member list.
+12. เพิ่ม app ไปยัง server หรือ test server ของคุณ:
+    1. ไปที่ **Installation > Install Link** และคัดลอก link ที่แสดงอยู่
+    2. วาง link ในเบราว์เซอร์ของคุณแล้วกด Enter
+    1. เลือก **Add to server** ในหน้าต่างการติดตั้ง
+    1. เมื่อ app ของคุณถูกเพิ่มไปยัง server แล้ว คุณจะเห็นมันใน member list
 
-These steps outline the basic functionality needed to set up your n8n credential. Refer to the [Discord Creating an App](https://discord.com/developers/docs/quick-start/getting-started#step-1-creating-an-app){:target=_blank .external-link} guide for more information on creating an app, especially:
+ขั้นตอนเหล่านี้สรุปฟังก์ชันพื้นฐานที่จำเป็นในการตั้งค่า n8n credential ของคุณ ดูข้อมูลเพิ่มเติมเกี่ยวกับการสร้าง app ได้ที่คู่มือ [Discord Creating an App](https://discord.com/developers/docs/quick-start/getting-started#step-1-creating-an-app){:target=_blank .external-link} โดยเฉพาะ:
 
-- [Fetching your credentials](https://discord.com/developers/docs/quick-start/getting-started#fetching-your-credentials){:target=_blank .external-link} for getting your app's credentials into your local developer environment.
-- [Handling interactivity](https://discord.com/developers/docs/quick-start/getting-started#step-3-handling-interactivity){:target=_blank .external-link} for information on setting up public endpoints for interactive `/slash` commands.
+- [Fetching your credentials](https://discord.com/developers/docs/quick-start/getting-started#fetching-your-credentials){:target=_blank .external-link} สำหรับการนำ credentials ของ app เข้าสู่ local developer environment ของคุณ
+- [Handling interactivity](https://discord.com/developers/docs/quick-start/getting-started#step-3-handling-interactivity){:target=_blank .external-link} สำหรับข้อมูลเกี่ยวกับการตั้งค่า public endpoints สำหรับคำสั่ง `/slash` แบบโต้ตอบ
 
 ## Using OAuth2
 
-Use this method if you want to add the bot to Discord servers using the OAuth2 flow, which simplifies the process for those installing your app.
+ใช้วิธีนี้หากคุณต้องการเพิ่ม bot ไปยัง Discord servers โดยใช้ OAuth2 flow ซึ่งทำให้กระบวนการง่ายขึ้นสำหรับผู้ที่ติดตั้ง app ของคุณ
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- A **Client ID**
-- A **Client Secret**
-- Choose whether to send **Authentication** in the **Header** or **Body**
-- A **Bot Token**
+- **Client ID**
+- **Client Secret**
+- เลือกว่าจะส่ง **Authentication** ใน **Header** หรือ **Body**
+- **Bot Token**
 
-For details on creating an application with a bot and generating the token, follow the same steps as in [Using bot](#using-bot) above.
+สำหรับรายละเอียดเกี่ยวกับการสร้าง application พร้อม bot และการสร้าง token ให้ทำตามขั้นตอนเดียวกับใน [Using bot](#using-bot) ด้านบน
 
-Then:
+จากนั้น:
 
-1. Copy the **Bot Token** you generate and add it into the n8n credential.
-2. Open the **OAuth2** page in your Discord application to access your **Client ID** and generate a **Client Secret**. Add these to your n8n credential.
-3. From n8n, copy the **OAuth Redirect URL** and add it into the Discord application in **OAuth2 > Redirects**. Be sure you save these changes.
+1. คัดลอก **Bot Token** ที่คุณสร้างขึ้นและเพิ่มลงใน n8n credential
+2. เปิดหน้า **OAuth2** ใน Discord application ของคุณเพื่อเข้าถึง **Client ID** และสร้าง **Client Secret** เพิ่มข้อมูลเหล่านี้ลงใน n8n credential ของคุณ
+3. จาก n8n คัดลอก **OAuth Redirect URL** และเพิ่มลงใน Discord application ใน **OAuth2 > Redirects** อย่าลืมบันทึกการเปลี่ยนแปลงเหล่านี้
 
 ## Using webhook
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- A **Webhook URL**: Generated once you create a webhook.
+- **Webhook URL**: สร้างขึ้นเมื่อคุณสร้าง webhook
 
-To get a Webhook URL, you create a webhook and copy the URL that gets generated:
+หากต้องการรับ Webhook URL คุณต้องสร้าง webhook และคัดลอก URL ที่สร้างขึ้น:
 
-1. Open your Discord **Server Settings** and open the **Integrations** tab.
-2. Select **Create Webhook** to create a new webhook.
-3. Give your webhook a **Name** that makes sense.
-3. Select the **avatar** next to the **Name** to edit or upload a new avatar.
-4. In the **CHANNEL** dropdown, select the channel the webhook should post to.
-5. Select **Copy Webhook URL** to copy the Webhook URL. Enter this URL in your n8n credential.
+1. เปิด **Server Settings** ของ Discord และเปิดแท็บ **Integrations**
+2. เลือก **Create Webhook** เพื่อสร้าง webhook ใหม่
+3. ตั้ง **Name** ที่สื่อความหมายให้กับ webhook ของคุณ
+3. เลือก **avatar** ถัดจาก **Name** เพื่อแก้ไขหรืออัปโหลด avatar ใหม่
+4. ใน dropdown **CHANNEL** เลือก channel ที่ webhook ควรโพสต์ไป
+5. เลือก **Copy Webhook URL** เพื่อคัดลอก Webhook URL ป้อน URL นี้ใน n8n credential ของคุณ
 
-Refer to the [Discord Making a Webhook documentation](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks){:target=_blank .external-link} for more information.
+ดูข้อมูลเพิ่มเติมได้ที่เอกสาร [Discord Making a Webhook documentation](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks){:target=_blank .external-link}
 
 ## Choose an authentication method
 
-The simplest installation is a **webhook**. You create and add webhooks to a single channel on a Discord server. Webhooks can post messages to a channel. They don't require a bot user or authentication. But they can't listen or respond to user requests or commands. If you need a straightforward way to send messages to a channel without the need for interaction or feedback, use a webhook.
+การติดตั้งที่ง่ายที่สุดคือ **webhook** คุณสร้างและเพิ่ม webhooks ไปยัง channel เดียวบน Discord server Webhooks สามารถโพสต์ข้อความไปยัง channel ได้ ไม่จำเป็นต้องมี bot user หรือ authentication แต่ไม่สามารถฟังหรือตอบสนองต่อคำขอหรือคำสั่งของผู้ใช้ได้ หากคุณต้องการวิธีที่ตรงไปตรงมาในการส่งข้อความไปยัง channel โดยไม่จำเป็นต้องมีการโต้ตอบหรือข้อเสนอแนะ ให้ใช้ webhook
 
-A **bot** is an interactive step up from a webhook. You add bots to the Discord server (referred to as a `guild` in the Discord API documentation) or to user accounts. Bots added to the server can interact with users on all the server's channels. They can manage channels, send and retrieve messages, retrieve the list of all users, and change their roles. If you need to build an interactive, complex, or multi-step workflow, use a bot.
+**bot** เป็นขั้นตอนที่โต้ตอบได้มากกว่า webhook คุณเพิ่ม bots ไปยัง Discord server (เรียกว่า `guild` ในเอกสาร Discord API) หรือไปยังบัญชีผู้ใช้ Bots ที่เพิ่มไปยัง server สามารถโต้ตอบกับผู้ใช้ในทุก channels ของ server ได้ สามารถจัดการ channels ส่งและดึงข้อความ ดึงรายชื่อผู้ใช้ทั้งหมด และเปลี่ยน roles ของพวกเขาได้ หากคุณต้องการสร้าง workflow ที่โต้ตอบได้ ซับซ้อน หรือหลายขั้นตอน ให้ใช้ bot
 
-**OAuth2** is basically a **bot** that uses an OAuth2 flow rather than just the bot token. As with bots, you add these to the Discord server or to user accounts. These credentials offer the same functionalities as bots, but they can simplify the installation of the bot on your server.
+**OAuth2** โดยพื้นฐานแล้วคือ **bot** ที่ใช้ OAuth2 flow แทนที่จะใช้เพียง bot token เช่นเดียวกับ bots คุณเพิ่มสิ่งเหล่านี้ไปยัง Discord server หรือบัญชีผู้ใช้ Credentials เหล่านี้มีฟังก์ชันการทำงานเช่นเดียวกับ bots แต่สามารถทำให้การติดตั้ง bot บน server ของคุณง่ายขึ้น
 

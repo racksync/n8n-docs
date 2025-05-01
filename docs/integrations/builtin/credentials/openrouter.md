@@ -8,13 +8,13 @@ priority: critical
 
 # OpenRouter credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนใน nodes ต่อไปนี้:
 
 - [Chat OpenRouter](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenrouter.md)
 
 ## Prerequisites
 
-Create a [OpenRouter](https://openrouter.ai/) account.
+สร้างบัญชี [OpenRouter](https://openrouter.ai/)
 
 ## Supported authentication methods
 
@@ -22,19 +22,19 @@ Create a [OpenRouter](https://openrouter.ai/) account.
 
 ## Related resources
 
-Refer to [OpenRouter's API documentation](https://openrouter.ai/docs/quick-start) for more information about the service.
+อ้างอิง [OpenRouter's API documentation](https://openrouter.ai/docs/quick-start) สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 ## Using API key
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- An **API Key**
+- **API Key**
 
-To generate your API Key:
+วิธีสร้าง API Key ของคุณ:
 
-1. Login to your OpenRouter account or [create](https://openrouter.ai/) an account.
-2. Open your [API keys](https://openrouter.ai/keys) page.
-3. Select **Create new secret key** to create an API key, optionally naming the key.
-4. Copy your key and add it as the **API Key** in n8n.
+1. เข้าสู่ระบบบัญชี OpenRouter ของคุณ หรือ [สร้าง](https://openrouter.ai/) บัญชี
+2. เปิดหน้า [API keys](https://openrouter.ai/keys) ของคุณ
+3. เลือก **Create new secret key** เพื่อสร้าง API key โดยสามารถตั้งชื่อ key ได้ (ไม่บังคับ)
+4. คัดลอก key ของคุณและเพิ่มเป็น **API Key** ใน n8n
 
-Refer to the [OpenRouter Quick Start](https://openrouter.ai/docs/quick-start) page for more information.
+อ้างอิงหน้า [OpenRouter Quick Start](https://openrouter.ai/docs/quick-start) สำหรับข้อมูลเพิ่มเติม

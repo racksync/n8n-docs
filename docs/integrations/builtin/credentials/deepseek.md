@@ -8,13 +8,13 @@ priority: critical
 
 # DeepSeek credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node เหล่านี้:
 
 - [Chat DeepSeek](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatdeepseek.md)
 
 ## Prerequisites
 
-Create a [DeepSeek](https://platform.deepseek.com/sign_up) account.
+สมัคร [DeepSeek](https://platform.deepseek.com/sign_up) ให้เรียบร้อยก่อน
 
 ## Supported authentication methods
 
@@ -22,19 +22,19 @@ Create a [DeepSeek](https://platform.deepseek.com/sign_up) account.
 
 ## Related resources
 
-Refer to [DeepSeek's API documentation](https://api-docs.deepseek.com/api/deepseek-api) for more information about the service.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับการใช้งาน API ได้ที่ [DeepSeek's API documentation](https://api-docs.deepseek.com/api/deepseek-api)
 
 ## Using API key
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- An **API Key**
+- **API Key**
 
-To generate your API Key:
+วิธีสร้าง API Key ของคุณ:
 
-1. Login to your DeepSeek account or [create](https://platform.deepseek.com/sign_up) an account.
-2. Open your [API keys](https://platform.deepseek.com/api_keys) page.
-3. Select **Create new secret key** to create an API key, optionally naming the key.
-4. Copy your key and add it as the **API Key** in n8n.
+1. ล็อกอินเข้าบัญชี DeepSeek ของคุณ หรือ [สร้าง](https://platform.deepseek.com/sign_up) บัญชี
+2. เปิดหน้า [API keys](https://platform.deepseek.com/api_keys) ของคุณ
+3. เลือก **Create new secret key** เพื่อสร้าง API key โดยสามารถตั้งชื่อ key ได้ (ไม่บังคับ)
+4. คัดลอก key ของคุณและเพิ่มเป็น **API Key** ใน n8n
 
-Refer to the [Your First API Call](https://api-docs.deepseek.com/) page for more information.
+ดูข้อมูลเพิ่มเติมได้ที่หน้า [Your First API Call](https://api-docs.deepseek.com/)

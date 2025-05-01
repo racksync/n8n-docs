@@ -7,14 +7,14 @@ contentType: [integration, reference]
 
 # DeepL credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node เหล่านี้:
 
 - [DeepL](/integrations/builtin/app-nodes/n8n-nodes-base.deepl.md)
 
 
 ## Prerequisites
 
-Create a [DeepL developer](https://www.deepl.com/pro-api){:target=_blank .external-link} account. n8n works with both Free and Pro API Plans.
+สมัคร [DeepL developer](https://www.deepl.com/pro-api){:target=_blank .external-link} ให้เรียบร้อยก่อน n8n ทำงานได้กับทั้ง Free และ Pro API Plans
 
 ## Supported authentication methods
 
@@ -22,14 +22,14 @@ Create a [DeepL developer](https://www.deepl.com/pro-api){:target=_blank .extern
 
 ## Related resources
 
-Refer to [DeepL's API documentation](https://developers.deepl.com/docs){:target=_blank .external-link} for more information about the service.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับการใช้งาน API ได้ที่ [DeepL's API documentation](https://developers.deepl.com/docs){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- An **API Key**: Refer to [DeepL's Authentication documentation](https://developers.deepl.com/docs/getting-started/auth#authentication){:target=_blank .external-link} for more information on getting your API key.
-- To identify which **API Plan** you're on. DeepL has different API endpoints for each plan, so be sure you select the correct one:
+- **API Key**: ดูข้อมูลเพิ่มเติมเกี่ยวกับการรับ API key ของคุณได้ที่ [DeepL's Authentication documentation](https://developers.deepl.com/docs/getting-started/auth#authentication){:target=_blank .external-link}
+- ระบุ **API Plan** ที่คุณใช้อยู่ DeepL มี API endpoints ที่แตกต่างกันสำหรับแต่ละ plan ดังนั้นโปรดตรวจสอบให้แน่ใจว่าคุณเลือกอันที่ถูกต้อง:
     - Pro Plan
     - Free Plan
 

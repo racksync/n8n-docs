@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Bitwarden credentials
 
-You can use these credentials to authenticate the following node:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node ต่อไปนี้:
 
 - [Bitwarden](/integrations/builtin/app-nodes/n8n-nodes-base.bitwarden.md)
 
 ## Prerequisites
 
-Create a [Bitwarden](https://vault.bitwarden.com/#/register?org=teams){:target=_blank .external-link} Teams organization or Enterprise organization account. (Bitwarden only makes the Bitwarden Public API available for these [organization](https://bitwarden.com/help/about-organizations/){:target=_blank .external-link} plans.)
+สมัคร [Bitwarden](https://vault.bitwarden.com/#/register?org=teams){:target=_blank .external-link} Teams organization หรือ Enterprise organization account (Bitwarden เปิดให้ใช้ Bitwarden Public API เฉพาะสำหรับแผน [organization](https://bitwarden.com/help/about-organizations/){:target=_blank .external-link} เหล่านี้เท่านั้น)
 
 ## Supported authentication methods
 
@@ -21,17 +21,17 @@ Create a [Bitwarden](https://vault.bitwarden.com/#/register?org=teams){:target=_
 
 ## Related resources
 
-Refer to [Bitwarden's Public API documentation](https://bitwarden.com/help/public-api/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการได้ที่ [Bitwarden's Public API documentation](https://bitwarden.com/help/public-api/){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- A **Client ID**: Provided when you generate an API key
-- A **Client Secret**: Provided when you generate an API key
-- The **Environment**:
-    - Choose **Cloud-hosted** if you don't self-host Bitwarden. No further configuration required.
-    - Choose **Self-hosted** if you host Bitwarden on your own server. Enter your **Self-hosted domain** in the appropriate field.
+- **Client ID**: ให้มาเมื่อคุณสร้าง API key
+- **Client Secret**: ให้มาเมื่อคุณสร้าง API key
+- **Environment**:
+    - เลือก **Cloud-hosted** หากคุณไม่ได้ self-host Bitwarden ไม่ต้องกำหนดค่าเพิ่มเติม
+    - เลือก **Self-hosted** หากคุณ host Bitwarden บน server ของคุณเอง ป้อน **Self-hosted domain** ของคุณในฟิลด์ที่เหมาะสม
 
-The Client ID and Client Secret must be for an **Organization API Key**, not a Personal API Key. Refer to the [Bitwarden Public API Authentication documentation](https://bitwarden.com/help/public-api/#authentication){:target=_blank .external-link} for instructions on generating an Organization API Key.
+Client ID และ Client Secret ต้องเป็นของ **Organization API Key** ไม่ใช่ Personal API Key ดูคำแนะนำในการสร้าง Organization API Key ได้ที่ [Bitwarden Public API Authentication documentation](https://bitwarden.com/help/public-api/#authentication){:target=_blank .external-link}
 

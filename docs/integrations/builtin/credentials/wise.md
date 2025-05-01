@@ -7,14 +7,14 @@ contentType: [integration, reference]
 
 # Wise credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้:
 
 - [Wise](/integrations/builtin/app-nodes/n8n-nodes-base.wise.md)
 - [Wise Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.wisetrigger.md)
 
 ## Prerequisites
 
-Create a [Wise](https://wise.com/){:target=_blank .external-link} account.
+สร้างบัญชี [Wise](https://wise.com/){:target=_blank .external-link} ก่อน
 
 ## Supported authentication methods
 
@@ -22,38 +22,38 @@ Create a [Wise](https://wise.com/){:target=_blank .external-link} account.
 
 ## Related resources
 
-Refer to [Wise's API documentation](https://docs.wise.com/api-docs/api-reference){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Wise's API documentation](https://docs.wise.com/api-docs/api-reference){:target=_blank .external-link}
 
 ## Using API token
 
-To configure this credential, you'll need:
+ในการตั้งค่า credential นี้ คุณจะต้องมี:
 
-- An **API Token**: Go to your **user menu > Settings > API tokens** to generate an API token. Enter the generated API key in your n8n credential. Refer to [Getting started with the API](https://wise.com/help/articles/2958107/getting-started-with-the-api){:target=_blank .external-link} for more information.
-- Your **Environment**: Select the environment that best matches your Wise account environment.
-    - If you're using a Wise test sandbox account, select **Test**.
-    - Otherwise, select **Live**.
-- **Private Key (Optional)**: For live endpoints requiring Strong Customer Authentication (SCA), generate a public and private key. Enter the private key here. Refer to [Add a private key](#add-a-private-key) for more information.
-    - If you're using a **Test** environment, you'll only need to enter a Private Key if you've enabled Strong Customer Authentication on the [public keys management page](https://sandbox.transferwise.tech/public-keys){:target=_blank .external-link}.
+- **API Token**: ไปที่ **user menu > Settings > API tokens** เพื่อสร้าง API token แล้วนำ API key ที่ได้ไปใส่ใน n8n ดูรายละเอียดเพิ่มเติมได้ที่ [Getting started with the API](https://wise.com/help/articles/2958107/getting-started-with-the-api){:target=_blank .external-link}
+- **Environment**: เลือก environment ที่ตรงกับบัญชี Wise ของคุณ
+    - ถ้าใช้บัญชี test sandbox ของ Wise ให้เลือก **Test**
+    - ถ้าไม่ใช่ ให้เลือก **Live**
+- **Private Key (Optional)**: สำหรับ endpoint แบบ live ที่ต้องใช้ Strong Customer Authentication (SCA) ให้สร้าง public และ private key แล้วนำ private key มาใส่ที่นี่ ดูรายละเอียดเพิ่มเติมได้ที่ [Add a private key](#add-a-private-key)
+    - ถ้าใช้ environment แบบ **Test** จะต้องใส่ Private Key เฉพาะกรณีที่เปิดใช้งาน Strong Customer Authentication ใน [public keys management page](https://sandbox.transferwise.tech/public-keys){:target=_blank .external-link}
 
 ## Add a private key
 
-Wise protects some live endpoints and operations with Strong Customer Authentication (SCA). Refer to [Strong Customer Authentication & 2FA](https://docs.wise.com/api-docs/features/strong-customer-authentication-2fa){:target=_blank .external-link} for details.
+Wise จะป้องกัน endpoint และ operation บางอย่างใน live ด้วย Strong Customer Authentication (SCA) ดูรายละเอียดที่ [Strong Customer Authentication & 2FA](https://docs.wise.com/api-docs/features/strong-customer-authentication-2fa){:target=_blank .external-link}
 
-If you make a request to an endpoint that requires SCA, Wise returns a 403 Forbidden HTTP status code. The error returned will look like this:
+ถ้าคุณเรียก endpoint ที่ต้องใช้ SCA แล้วเจอ error 403 Forbidden ระบบจะขึ้นข้อความประมาณนี้:
 
 > This request requires Strong Customer Authentication (SCA). Please add a key pair to your account and n8n credentials. See https://api-docs.transferwise.com/#strong-customer-authentication-personal-token
 
-To use endpoints requiring SCA, generate an RSA key pair and add the relevant key information to both Wise and n8n:
+ถ้าต้องการใช้ endpoint ที่ต้องใช้ SCA ให้สร้าง RSA key pair แล้วเพิ่มข้อมูล key ที่เกี่ยวข้องทั้งใน Wise และ n8n:
 
-1. Generate an RSA key pair:
+1. สร้าง RSA key pair:
 
     ```sh
     $ openssl genrsa -out private.pem 2048 
     $ openssl rsa -pubout -in private.pem -out public.pem
     ```
 
-2. Add the content of the public key `public.pem` to your Wise **user menu > Settings > API tokens > Manage public keys**.
-3. Add the content of the private key `private.pem` in n8n to the **Private Key (Optional)**.
+2. นำเนื้อหา public key จาก `public.pem` ไปใส่ที่ Wise ที่ **user menu > Settings > API tokens > Manage public keys**
+3. นำเนื้อหา private key จาก `private.pem` ไปใส่ใน n8n ที่ **Private Key (Optional)**
 
-Refer to [Personal Token SCA](https://docs.wise.com/api-docs/features/strong-customer-authentication-2fa/personal-token-sca){:target=_blank .external-link} for more information.
+ดูรายละเอียดเพิ่มเติมได้ที่ [Personal Token SCA](https://docs.wise.com/api-docs/features/strong-customer-authentication-2fa/personal-token-sca){:target=_blank .external-link}
 

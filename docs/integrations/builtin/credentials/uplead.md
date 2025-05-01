@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # UpLead credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [UpLead](/integrations/builtin/app-nodes/n8n-nodes-base.uplead.md)
 
 ## Prerequisites
 
-Create an [UpLead](https://uplead.com/){:target=_blank .external-link} account.
+สร้างบัญชี [UpLead](https://uplead.com/){:target=_blank .external-link} ก่อน
 
 ## Supported authentication methods
 
@@ -21,11 +21,11 @@ Create an [UpLead](https://uplead.com/){:target=_blank .external-link} account.
 
 ## Related resources
 
-Refer to [UpLead's API documentation](https://docs.uplead.com/#overview){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [UpLead's API documentation](https://docs.uplead.com/#overview){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ในการตั้งค่า credentials นี้ คุณจะต้องมี:
 
-- An **API Key**: Go to your **Account > Profiles** to **Generate New API Key**. Refer to [How can I generate an API key?](https://support.uplead.com/en/articles/5621412-how-can-i-generate-an-api-key){:target=_blank .external-link} for more information.
+- **API Key**: ไปที่ **Account > Profiles** เพื่อ **Generate New API Key** ดูรายละเอียดเพิ่มเติมได้ที่ [How can I generate an API key?](https://support.uplead.com/en/articles/5621412-how-can-i-generate-an-api-key){:target=_blank .external-link}
 

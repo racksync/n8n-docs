@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Git credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้:
 
 - [Git](/integrations/builtin/core-nodes/n8n-nodes-base.git.md)
 
 ## Prerequisites
 
-Create an account on [GitHub](https://github.com){:target=_blank .external-link}, [GitLab](https://about.gitlab.com/){:target=_blank .external-link}, or similar platforms for use with [Git](https://git-scm.com){:target=_blank .external-link}.
+สร้างบัญชีบน [GitHub](https://github.com){:target=_blank .external-link}, [GitLab](https://about.gitlab.com/){:target=_blank .external-link} หรือแพลตฟอร์มที่คล้ายกันเพื่อใช้กับ [Git](https://git-scm.com){:target=_blank .external-link}
 
 ## Supported authentication methods
 
@@ -21,12 +21,12 @@ Create an account on [GitHub](https://github.com){:target=_blank .external-link}
 
 ## Related resources
 
-Refer to [Git's documentation](https://git-scm.com/doc){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Git's documentation](https://git-scm.com/doc){:target=_blank .external-link}
 
 ## Using basic auth
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- A **Username** for GitHub, GitLab, or a similar platform
-- A **Password** for GitHub, GitLab, or a similar platform
+- **Username** สำหรับ GitHub, GitLab หรือแพลตฟอร์มที่คล้ายกัน
+- **Password** สำหรับ GitHub, GitLab หรือแพลตฟอร์มที่คล้ายกัน
 

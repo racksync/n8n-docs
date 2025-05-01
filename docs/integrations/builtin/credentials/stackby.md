@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Stackby credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [Stackby](/integrations/builtin/app-nodes/n8n-nodes-base.stackby.md)
 
 ## Prerequisites
 
-Create a [Stackby](https://stackby.com/){:target=_blank .external-link} account.
+สร้างบัญชี [Stackby](https://stackby.com/){:target=_blank .external-link} ก่อน
 
 ## Supported authentication methods
 
@@ -21,11 +21,11 @@ Create a [Stackby](https://stackby.com/){:target=_blank .external-link} account.
 
 ## Related resources
 
-Refer to [Stackby's API documentation](https://documenter.getpostman.com/view/27762116/2s9YBxXvCa){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Stackby's API documentation](https://documenter.getpostman.com/view/27762116/2s9YBxXvCa){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ในการตั้งค่า credentials นี้ คุณจะต้องมี:
 
-- An **API Key**: Go to your [**Account Settings > API**](https://www.stackby.com/account){:target=_blank .external-link} to create an API Key. Refer to [API Key](https://help.stackby.com/en/article/95-api-key){:target=_blank .external-link} for more information.
+- **API Key**: ไปที่ [**Account Settings > API**](https://www.stackby.com/account){:target=_blank .external-link} เพื่อสร้าง API Key ของคุณ ดูรายละเอียดเพิ่มเติมได้ที่ [API Key](https://help.stackby.com/en/article/95-api-key){:target=_blank .external-link}
 

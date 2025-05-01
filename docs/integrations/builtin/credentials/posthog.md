@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # PostHog credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [PostHog](/integrations/builtin/app-nodes/n8n-nodes-base.posthog.md)
 
 ## Prerequisites
 
-Create a [PostHog](https://posthog.com/){:target=_blank .external-link} account or host PostHog on your server.
+สร้าง [PostHog](https://posthog.com/){:target=_blank .external-link} account หรือ host PostHog บน server ของคุณ
 
 ## Supported authentication methods
 
@@ -21,18 +21,18 @@ Create a [PostHog](https://posthog.com/){:target=_blank .external-link} account 
 
 ## Related resources
 
-Refer to [PostHog's API documentation](https://posthog.com/docs/api){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [PostHog's API documentation](https://posthog.com/docs/api){:target=_blank .external-link}
 
 
 ## Using API key
 
-To configure this credential, you'll need:
+สำหรับการตั้งค่า credentials นี้ คุณจะต้องมี:
 
-- The API **URL**: Enter the correct domain for your API requests:
-    - On US Cloud, use `https://us.i.posthog.com` for public POST-only endpoints or `https://us.posthog.com` for private endpoints.
-    - On EU Cloud, use `https://eu.i.posthog.com` for public POST-only endpoints or `https://eu.posthog.com` for private endpoints.
-    - For self-hosted instances, use your self-hosted domain. 
-    - Confirm yours by checking your PostHog instance URL.
-- An **API Key**: The API key you use depends on whether you're accessing public or private endpoints:
-    - For public POST-only endpoints, use a [Project API key](https://app.posthog.com/project/settings) from your project's **General** Settings.
-    - For private endpoints, use a [Personal API key](https://app.posthog.com/settings/user-api-keys) from your User account's **Personal API Keys** Settings. Refer to [How to obtain a personal API key](https://posthog.com/docs/api#private-endpoint-authentication){:target=_blank .external-link} for more information.
+- API **URL**: กรอก domain ที่ถูกต้องสำหรับ API requests ของคุณ:
+    - บน US Cloud ใช้ `https://us.i.posthog.com` สำหรับ public POST-only endpoints หรือ `https://us.posthog.com` สำหรับ private endpoints
+    - บน EU Cloud ใช้ `https://eu.i.posthog.com` สำหรับ public POST-only endpoints หรือ `https://eu.posthog.com` สำหรับ private endpoints
+    - สำหรับ self-hosted instances ใช้ self-hosted domain ของคุณ
+    - ยืนยันของคุณโดยตรวจสอบ PostHog instance URL ของคุณ
+- **API Key**: API key ที่คุณใช้ขึ้นอยู่กับว่าคุณกำลังเข้าถึง public หรือ private endpoints:
+    - สำหรับ public POST-only endpoints ใช้ [Project API key](https://app.posthog.com/project/settings) จาก **General** Settings ของ project ของคุณ
+    - สำหรับ private endpoints ใช้ [Personal API key](https://app.posthog.com/settings/user-api-keys) จาก **Personal API Keys** Settings ของ User account ของคุณ ดูข้อมูลเพิ่มเติมที่ [How to obtain a personal API key](https://posthog.com/docs/api#private-endpoint-authentication){:target=_blank .external-link}

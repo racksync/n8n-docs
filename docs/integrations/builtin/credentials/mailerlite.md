@@ -7,14 +7,14 @@ contentType: [integration, reference]
 
 # MailerLite credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนใน nodes ต่อไปนี้:
 
 - [MailerLite](/integrations/builtin/app-nodes/n8n-nodes-base.mailerlite.md)
 - [MailerLite Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.mailerlitetrigger.md)
 
 ## Prerequisites
 
-Create a [MailerLite](https://www.mailerlite.com/){:target=_blank .external-link} account.
+สร้างบัญชี [MailerLite](https://www.mailerlite.com/){:target=_blank .external-link}
 
 ## Supported authentication methods
 
@@ -22,16 +22,16 @@ Create a [MailerLite](https://www.mailerlite.com/){:target=_blank .external-link
 
 ## Related resources
 
-Refer to [MailerLite's API documentation](https://developers.mailerlite.com/docs/){:target=_blank .external-link} for more information about the service.
+อ้างอิง [MailerLite's API documentation](https://developers.mailerlite.com/docs/){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 ## Using API key
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- An **API Key**: Generate an API key from the **Integrations** menu. Refer to the [API Authentication documentation](https://developers.mailerlite.com/docs/#authentication){:target=_blank .external-link} for more detailed instructions.
+- **API Key**: สร้าง API key จากเมนู **Integrations** อ้างอิงเอกสาร [API Authentication documentation](https://developers.mailerlite.com/docs/#authentication){:target=_blank .external-link} สำหรับคำแนะนำโดยละเอียดเพิ่มเติม
 
-Enable the **Classic API** toggle if the API key is for a MailerLite Classic account instead of the newer MailerLite experience.
+เปิดใช้งานสวิตช์ **Classic API** หาก API key สำหรับบัญชี MailerLite Classic แทนที่จะเป็นประสบการณ์ MailerLite ที่ใหม่กว่า
 
 /// note
-Most new MailerLite accounts and all free accounts should disable the **Classic API** toggle. You can find out [which version of MailerLite you are using](https://www.mailerlite.com/help/which-version-of-mailerlite-am-i-using) and learn more about the differences between the two in the [MailerLite FAQ](https://www.mailerlite.com/help/new-mailerlite-faq).
+บัญชี MailerLite ใหม่ส่วนใหญ่และบัญชีฟรีทั้งหมดควรปิดใช้งานสวิตช์ **Classic API** คุณสามารถค้นหา [which version of MailerLite you are using](https://www.mailerlite.com/help/which-version-of-mailerlite-am-i-using) และเรียนรู้เพิ่มเติมเกี่ยวกับความแตกต่างระหว่างทั้งสองใน [MailerLite FAQ](https://www.mailerlite.com/help/new-mailerlite-faq)
 ///

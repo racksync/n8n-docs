@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Bannerbear credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node เหล่านี้:
 
 - [Bannerbear](/integrations/builtin/app-nodes/n8n-nodes-base.bannerbear.md)
 
 ## Prerequisites
 
-Create a [Bannerbear](https://www.BannerBear.com/){:target=_blank .external-link} account.
+สมัคร [Bannerbear](https://www.BannerBear.com/){:target=_blank .external-link} ให้เรียบร้อยก่อน
 
 ## Supported authentication methods
 
@@ -21,11 +21,11 @@ Create a [Bannerbear](https://www.BannerBear.com/){:target=_blank .external-link
 
 ## Related resources
 
-Refer to [Bannerbear's API documentation](https://developers.bannerbear.com/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการได้ที่ [Bannerbear's API documentation](https://developers.bannerbear.com/){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- A **Project API Key**: To generate an API key, first create a Bannerbear project. Go to **Settings > API Key** to view the API key. Refer to the [Bannerbear API Authentication documentation](https://developers.bannerbear.com/#authentication){:target=_blank .external-link} for more detailed steps.
+- **Project API Key**: หากต้องการสร้าง API key ก่อนอื่นให้สร้าง Bannerbear project ไปที่ **Settings > API Key** เพื่อดู API key ดูขั้นตอนโดยละเอียดเพิ่มเติมได้ที่ [Bannerbear API Authentication documentation](https://developers.bannerbear.com/#authentication){:target=_blank .external-link}
 

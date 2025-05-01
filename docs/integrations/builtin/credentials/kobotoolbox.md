@@ -7,14 +7,14 @@ contentType: [integration, reference]
 
 # KoboToolbox credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 * [KoboToolbox trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.kobotoolboxtrigger.md)
 * [KoboToolbox](/integrations/builtin/app-nodes/n8n-nodes-base.kobotoolbox.md)
 
 ## Prerequisites
 
-Create a [KoboToolbox](https://www.kobotoolbox.org/){:target=_blank .external-link} account.
+สร้างบัญชี [KoboToolbox](https://www.kobotoolbox.org/){:target=_blank .external-link}
 
 ## Supported authentication methods
 
@@ -22,11 +22,11 @@ Create a [KoboToolbox](https://www.kobotoolbox.org/){:target=_blank .external-li
 
 ## Related resources
 
-Refer to [KoboToolbox's API documentation](https://support.kobotoolbox.org/api.html){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [KoboToolbox's API documentation](https://support.kobotoolbox.org/api.html){:target=_blank .external-link}
 
 ## Using API token
 
-To configure this credential, you'll need:
+ในการตั้งค่า credential นี้ คุณจะต้องมี:
 
-- An **API Root URL**: Enter the URL of the KoboToolbox server where you created your account. For the Global KoboToolbox Server, use `https://kf.kobotoolbox.org`. For the European Union KoboToolbox Server, use `https://eu.kobotoolbox.org`.
-- An **API Token**: Displayed in your **Account Settings**. Refer to [Getting your API token](https://support.kobotoolbox.org/api.html#getting-your-api-token){:target=_blank .external-link} for more information.
+- **API Root URL**: ป้อน URL ของ KoboToolbox server ที่คุณสร้างบัญชี สำหรับ Global KoboToolbox Server ใช้ `https://kf.kobotoolbox.org` สำหรับ European Union KoboToolbox Server ใช้ `https://eu.kobotoolbox.org`
+- **API Token**: แสดงใน **Account Settings** ของคุณ ดูข้อมูลเพิ่มเติมได้ที่ [Getting your API token](https://support.kobotoolbox.org/api.html#getting-your-api-token){:target=_blank .external-link}

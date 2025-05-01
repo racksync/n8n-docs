@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Postmark credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [Postmark Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.postmarktrigger.md)
 
 ## Prerequisites
 
-Create a [Postmark](https://postmarkapp.com/){:target=_blank .external-link} account on a Postmark server.
+สร้าง [Postmark](https://postmarkapp.com/){:target=_blank .external-link} account บน Postmark server
 
 ## Supported authentication methods
 
@@ -21,10 +21,10 @@ Create a [Postmark](https://postmarkapp.com/){:target=_blank .external-link} acc
 
 ## Related resources
 
-Refer to [Postmark's API documentation](https://postmarkapp.com/developer/api/overview){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Postmark's API documentation](https://postmarkapp.com/developer/api/overview){:target=_blank .external-link}
 
 ## Using API token
 
-To configure this credential, you'll need:
+สำหรับการตั้งค่า credentials นี้ คุณจะต้องมี:
 
-- A **Server API Token**: The Server API token is accessible by Account Owners, Account Admins, and users who have Server Admin privileges on a server. Get yours from the [**API Tokens**](https://account.postmarkapp.com/api_tokens){:target=_blank .external-link} tab under your Postmark server. Refer to [API Authentication](https://postmarkapp.com/developer/api/overview#authentication){:target=_blank .external-link} for more information.
+- **Server API Token**: Server API token สามารถเข้าถึงได้โดย Account Owners, Account Admins และ users ที่มีสิทธิ์ Server Admin บน server รับของคุณได้จากแท็บ [**API Tokens**](https://account.postmarkapp.com/api_tokens){:target=_blank .external-link} ใต้ Postmark server ของคุณ ดูข้อมูลเพิ่มเติมที่ [API Authentication](https://postmarkapp.com/developer/api/overview#authentication){:target=_blank .external-link}

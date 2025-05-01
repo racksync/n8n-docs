@@ -7,44 +7,44 @@ contentType: [integration, reference]
 
 # Sentry.io credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้:
 
 - [Sentry.io](/integrations/builtin/app-nodes/n8n-nodes-base.sentryio.md)
 
 ## Prerequisites
 
-Create a [Sentry.io](https://sentry.io/){:target=_blank .external-link} account.
+สร้าง [Sentry.io](https://sentry.io/){:target=_blank .external-link} account
 
 ## Supported authentication methods
 
 - API token
 - OAuth2
-- Server API token: Use for [self-hosted Sentry](https://develop.sentry.dev/self-hosted/){:target=_blank .external-link}.
+- Server API token: ใช้สำหรับ [self-hosted Sentry](https://develop.sentry.dev/self-hosted/){:target=_blank .external-link}
 
 ## Related resources
 
-Refer to [Sentry.io's API documentation](https://docs.sentry.io/api/){:target=_blank .external-link} for more information about the service.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Sentry.io's API documentation](https://docs.sentry.io/api/){:target=_blank .external-link}
 
 ## Using API token
 
-To configure this credential, you'll need:
+ในการตั้งค่า credentials นี้ คุณจะต้องมี:
 
-- An API **Token**: Generate a [**User Auth Token**](https://sentry.io/settings/account/api/auth-tokens/){:target=_blank .external-link} in **Account > Settings > User Auth Tokens**. Refer to [User Auth Tokens](https://docs.sentry.io/account/auth-tokens/#user-auth-tokens){:target=_blank .external-link} for more information.
+- **Token**: สร้าง [**User Auth Token**](https://sentry.io/settings/account/api/auth-tokens/){:target=_blank .external-link} ที่ **Account > Settings > User Auth Tokens** ดูรายละเอียดเพิ่มเติมที่ [User Auth Tokens](https://docs.sentry.io/account/auth-tokens/#user-auth-tokens){:target=_blank .external-link}
 
 ## Using OAuth
 
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-If you need to configure OAuth2 from scratch, [create an integration](https://docs.sentry.io/organization/integrations/integration-platform/#creating-an-integration){:target=_blank .external-link} with these settings:
+ถ้าคุณต้องการตั้งค่า OAuth2 เอง [create an integration](https://docs.sentry.io/organization/integrations/integration-platform/#creating-an-integration){:target=_blank .external-link} โดยใช้ค่าต่อไปนี้:
 
-- Copy the n8n **OAuth Callback URL** and add it as an **Authorized Redirect URI**.
-- Copy the **Client ID** and **Client Secret** and add them to your n8n credential.
+- คัดลอก **OAuth Callback URL** ของ n8n ไปใส่ใน **Authorized Redirect URI**
+- คัดลอก **Client ID** และ **Client Secret** ไปใส่ใน n8n credential
 
-Refer to [Public integrations](https://docs.sentry.io/organization/integrations/integration-platform/public-integration/){:target=_blank .external-link} for more information on creating the integration.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับการสร้าง integration ได้ที่ [Public integrations](https://docs.sentry.io/organization/integrations/integration-platform/public-integration/){:target=_blank .external-link}
 
 ## Using Server API token
 
-To configure this credential, you'll need:
+ในการตั้งค่า credentials นี้ คุณจะต้องมี:
 
-- An API **Token**: Generate a [**User Auth Token**](https://sentry.io/settings/account/api/auth-tokens/){:target=_blank .external-link} in **Account > Settings > User Auth Tokens**. Refer to [User Auth Tokens](https://docs.sentry.io/account/auth-tokens/#user-auth-tokens){:target=_blank .external-link} for more information.
-- The **URL** of your self-hosted Sentry instance.
+- **Token**: สร้าง [**User Auth Token**](https://sentry.io/settings/account/api/auth-tokens/){:target=_blank .external-link} ที่ **Account > Settings > User Auth Tokens** ดูรายละเอียดเพิ่มเติมที่ [User Auth Tokens](https://docs.sentry.io/account/auth-tokens/#user-auth-tokens){:target=_blank .external-link}
+- **URL**: URL ของ self-hosted Sentry instance ของคุณ

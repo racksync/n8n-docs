@@ -8,13 +8,13 @@ priority: high
 
 # Baserow credentials
 
-You can use these credentials to authenticate the following node:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node ต่อไปนี้:
 
 - [Baserow](/integrations/builtin/app-nodes/n8n-nodes-base.baserow.md)
 
 ## Prerequisites
 
-Create a [Baserow](https://baserow.io/){:target=_blank .external-link} account on any hosted Baserow instance or a self-hosted instance.
+สมัคร [Baserow](https://baserow.io/){:target=_blank .external-link} บน Baserow instance ที่ host ใดก็ได้ หรือ self-hosted instance
 
 ## Supported authentication methods
 
@@ -22,24 +22,24 @@ Create a [Baserow](https://baserow.io/){:target=_blank .external-link} account o
 
 ## Related resources
 
-Refer to [Baserow's documentation](https://baserow.io/docs/index){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการได้ที่ [Baserow's documentation](https://baserow.io/docs/index){:target=_blank .external-link}
 
-Refer to [Baserow's auto-generated API documentation](https://baserow.io/api-docs){:target=_blank .external-link} for more information about the API specifically.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับ API โดยเฉพาะได้ที่ [Baserow's auto-generated API documentation](https://baserow.io/api-docs){:target=_blank .external-link}
 
 ## Using basic auth
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- Your Baserow **Host**
-- A **Username** and **Password** to log in with
+- **Host** ของ Baserow ของคุณ
+- **Username** และ **Password** เพื่อล็อกอิน
 
-Follow these steps:
+ทำตามขั้นตอนเหล่านี้:
 
-1. Enter the **Host** for the Baserow instance:
-    - For a Baserow-hosted instance: leave as `https://api.baserow.io`.
-    - For a self-hosted instance: set to your self-hosted instance API URL.
-2. Enter the **Username** for the user account n8n should use.
-3. Enter the **Password** for that user account.
+1. ป้อน **Host** สำหรับ Baserow instance:
+    - สำหรับ Baserow-hosted instance: คงไว้เป็น `https://api.baserow.io`
+    - สำหรับ self-hosted instance: ตั้งค่าเป็น self-hosted instance API URL ของคุณ
+2. ป้อน **Username** สำหรับบัญชีผู้ใช้ที่ n8n ควรใช้
+3. ป้อน **Password** สำหรับบัญชีผู้ใช้นั้น
 
-Refer to [Baserow's API Authentication documentation](https://baserow.io/docs/apis/rest-api#authentication) for information on creating user accounts.
+ดูข้อมูลเกี่ยวกับการสร้างบัญชีผู้ใช้ได้ที่ [Baserow's API Authentication documentation](https://baserow.io/docs/apis/rest-api#authentication)
 

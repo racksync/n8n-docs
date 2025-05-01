@@ -14,14 +14,14 @@ contentType: [integration, reference]
 
 ## Related resources
 
-Refer to [SolarWinds IPAM's API documentation](https://github.com/solarwinds/OrionSDK/wiki/REST){:target=_blank .external-link} for more information about the service.
+ดูรายละเอียดเพิ่มเติมได้ที่ [SolarWinds IPAM's API documentation](https://github.com/solarwinds/OrionSDK/wiki/REST){:target=_blank .external-link}
 
 ## Using Username & Password
 
-To configure this credential, you'll need a SolarWinds IPAM account and:
+ในการตั้งค่า credential นี้ คุณจะต้องมี SolarWinds IPAM account และ:
 
-- **URL**: The base URL of your SolarWinds IPAM server
-- **Username**: The username you use to access SolarWinds IPAM
-- **Password**: The password you use to access SolarWinds IPAM
+- **URL**: base URL ของ SolarWinds IPAM server ของคุณ
+- **Username**: ชื่อผู้ใช้ที่ใช้เข้า SolarWinds IPAM
+- **Password**: รหัสผ่านที่ใช้เข้า SolarWinds IPAM
 
-Refer to [SolarWinds IPAM's API documentation](https://github.com/solarwinds/OrionSDK/wiki/REST){:target=_blank .external-link} for more information about authenticating to the service.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับการยืนยันตัวตนได้ที่ [SolarWinds IPAM's API documentation](https://github.com/solarwinds/OrionSDK/wiki/REST){:target=_blank .external-link}

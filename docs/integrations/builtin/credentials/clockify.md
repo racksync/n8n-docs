@@ -7,14 +7,14 @@ contentType: [integration, reference]
 
 # Clockify credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node เหล่านี้:
 
 - [Clockify](/integrations/builtin/app-nodes/n8n-nodes-base.clockify.md)
 - [Clockify Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.clockifytrigger.md)
 
 ## Prerequisites
 
-Create a [Clockify](https://www.clockify.com/) account.
+สมัคร [Clockify](https://www.clockify.com/) ให้เรียบร้อยก่อน
 
 ## Supported authentication methods
 
@@ -22,11 +22,11 @@ Create a [Clockify](https://www.clockify.com/) account.
 
 ## Related resources
 
-Refer to [Clockify's API documentation](https://docs.developer.clockify.me/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการได้ที่ [Clockify's API documentation](https://docs.developer.clockify.me/){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- An **API Key**: Access your API key from your [Clockify Profile Settings](https://clockify.me/help/users/profile-settings){:target=_blank .external-link}.
+- **API Key**: เข้าถึง API key ของคุณได้จาก [Clockify Profile Settings](https://clockify.me/help/users/profile-settings){:target=_blank .external-link}
 

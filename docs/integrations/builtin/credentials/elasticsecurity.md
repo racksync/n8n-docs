@@ -1,53 +1,33 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Elastic Security credentials
-description: Documentation for Elastic Security credentials. Use these credentials to authenticate Elastic Security in n8n, a workflow automation platform.
+description: Documentation for the Elastic Security credentials. Use these credentials to authenticate Elastic Security in n8n, a workflow automation platform.
 contentType: [integration, reference]
+priority: medium
 ---
 
 # Elastic Security credentials
 
-You can use these credentials to authenticate the following nodes:
-
-- [Elastic Security](/integrations/builtin/app-nodes/n8n-nodes-base.elasticsecurity.md)
+--8<-- "_snippets/integrations/builtin/credentials/cred-only-statement.md"
 
 ## Prerequisites
 
-- Create an [Elastic Security](https://www.elastic.co/security) account.
-- [Deploy](https://www.elastic.co/guide/en/cloud/current/ec-create-deployment.html) an application.
+- มี instance ของ [Elastic Security](https://www.elastic.co/security){:target=_blank .external-link} ที่เข้าถึงได้
+- สร้างบัญชีผู้ใช้บน instance นั้น
 
-## Supported authentication methods
+## Authentication methods
 
-- Basic auth
-- API Key
+- API key
 
 ## Related resources
 
-Refer to [Elastic Security's documentation](https://www.elastic.co/guide/en/security/current/es-overview.html){:target=_blank .external-link} for more information about the service.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับการใช้งาน API ได้ที่ [Elastic Security's API documentation](https://www.elastic.co/guide/en/security/current/security-apis.html){:target=_blank .external-link}
 
-## Using basic auth
-
-To configure this credential, you'll need:
-
-- A **Username**: For the user account you log into Elasticsearch with.
-- A **Password**: For the user account you log into Elasticsearch with.
-- Your Elasticsearch application's **Base URL** (also known as the Elasticsearch application endpoint):
-
-    1. In Elasticsearch, select the option to **Manage this deployment**.
-    2. In the **Applications** section, copy the endpoint of the **Elasticsearch** application.
-    3. Add this in n8n as the **Base URL**.
-
-/// note | Custom endpoint aliases
-If you add a [custom endpoint alias](https://www.elastic.co/guide/en/cloud/current/ec-regional-deployment-aliases.html){:target=_blank .external-link} to a deployment, update your n8n credential **Base URL** with the new endpoint.
-///
+นี่คือ credential-only node ดูรายละเอียดเพิ่มเติมได้ที่ [Custom API operations](/integrations/custom-operations.md) ดู [example workflows and related content](https://n8n.io/integrations/elastic-security/){:target=_blank .external-link} บนเว็บไซต์ n8n
 
 ## Using API key
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- An **API Key**: For the user account you log into Elasticsearch with. Refer to Elasticsearch's [Create API key documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-create-api-key.html){:target=_blank .external-link} for more information.
-- Your Elasticsearch application's **Base URL** (also known as the Elasticsearch application endpoint):
-
-    1. In Elasticsearch, select the option to **Manage this deployment**.
-    2. In the **Applications** section, copy the endpoint of the **Elasticsearch** application.
-    3. Add this in n8n as the **Base URL**.
+- **URL** ของ Elastic Security instance ของคุณ
+- **API Key**: สร้าง API key ผ่าน Elastic Security ดูคำแนะนำได้ที่ [Elastic Security API Keys documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-create-api-key.html){:target=_blank .external-link}

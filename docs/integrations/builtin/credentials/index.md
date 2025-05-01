@@ -5,8 +5,8 @@ contentType: overview
 
 # Credentials library
 
-This section contains step-by-step information about authenticating the different nodes in n8n.
+ส่วนนี้ประกอบด้วยข้อมูลทีละขั้นตอนเกี่ยวกับการยืนยันตัวตนของ node ต่างๆ ใน n8n
 
-To learn more about creating, managing, and sharing credentials, refer to [Manage credentials](/credentials/index.md).
+หากต้องการเรียนรู้เพิ่มเติมเกี่ยวกับการสร้าง จัดการ และแชร์ credentials โปรดดูที่ [Manage credentials](/credentials/index.md)
 
 

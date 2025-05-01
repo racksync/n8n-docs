@@ -12,18 +12,17 @@ contentType: [integration, reference]
 
 ## Prerequisites
 
-Create a [Filescan](https://www.filescan.io/auth/signup/){:target=_blank .external-link} account.
+สร้างบัญชี [Filescan](https://www.filescan.io/auth/signup/){:target=_blank .external-link}
 
 ## Related resources
 
-Refer to [Filescan's API documentation](https://www.filescan.io/api/docs){:target=_blank .external-link} for more information about authenticating with the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับการยืนยันตัวตนกับบริการนี้ได้ที่ [Filescan's API documentation](https://www.filescan.io/api/docs){:target=_blank .external-link}
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/filescan/){:target=_blank .external-link} on n8n's website.
-
+นี่คือ node แบบ credential-only ดูข้อมูลเพิ่มเติมได้ที่ [Custom API operations](/integrations/custom-operations.md) ดู [example workflows and related content](https://n8n.io/integrations/filescan/){:target=_blank .external-link} บนเว็บไซต์ของ n8n
 
 ## Using API key
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- An **API Key**: Generate your API key from your [**profile settings**](https://www.filescan.io/users/profile){:target=_blank .external-link} **> API Key**. Refer to the [Filescan FAQ](https://www.filescan.io/help/faq){:target=_blank .external-link} for more information.
+- **API Key**: สร้าง API key ของคุณจาก [**profile settings**](https://www.filescan.io/users/profile){:target=_blank .external-link} **> API Key** ดูข้อมูลเพิ่มเติมได้ที่ [Filescan FAQ](https://www.filescan.io/help/faq){:target=_blank .external-link}
 <!-- vale on -->

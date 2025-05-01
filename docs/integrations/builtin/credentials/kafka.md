@@ -8,7 +8,7 @@ priority: medium
 
 # Kafka credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [Kafka](/integrations/builtin/app-nodes/n8n-nodes-base.kafka.md)
 - [Kafka Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.kafkatrigger.md)
@@ -19,29 +19,29 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Kafka's documentation](https://kafka.apache.org/documentation/){:target=_blank .external-link} for more information about using the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับการใช้บริการนี้ได้ที่ [Kafka's documentation](https://kafka.apache.org/documentation/){:target=_blank .external-link}
 
-If you're new to Kafka, refer to the [Apache Kafka Quickstart](https://kafka.apache.org/quickstart){:target=_blank .external-link} for initial setup.
+หากคุณเพิ่งเริ่มใช้ Kafka โปรดดู [Apache Kafka Quickstart](https://kafka.apache.org/quickstart){:target=_blank .external-link} สำหรับการตั้งค่าเริ่มต้น
 
-Refer to [Encryption and Authentication using SSL](https://kafka.apache.org/documentation/#security_ssl){:target=_blank .external-link} for working with SSL in Kafka.
+โปรดดู [Encryption and Authentication using SSL](https://kafka.apache.org/documentation/#security_ssl){:target=_blank .external-link} สำหรับการทำงานกับ SSL ใน Kafka
 
 ## Using client ID
 
-To configure this credential, you'll need a running Kafka environment and:
+ในการตั้งค่า credential นี้ คุณจะต้องมีสภาพแวดล้อม Kafka ที่ทำงานอยู่ และ:
 
-- A **Client ID**
-- A list of relevant **Brokers**
-- Username/password authentication details if your Kafka environment uses authentication
+- **Client ID**
+- รายการ **Brokers** ที่เกี่ยวข้อง
+- รายละเอียดการยืนยันตัวตนด้วย Username/password หากสภาพแวดล้อม Kafka ของคุณใช้การยืนยันตัวตน
 
-To set it up:
+วิธีตั้งค่า:
 
-1. Enter the `CLIENT-ID` of the client or consumer group in the **Client ID** field in your credential.
-2. Enter a comma-separated list of relevant **Brokers** for the credential to use in the format `<broker-service-name>:<port>`. Use the name you gave the broker when you defined it in the `services` list. For example, `kafka-1:9092,kafka-2:9092` would add the brokers `kafka-1` and `kafka-2` on port `9092`.
-3. If your Kafka environment doesn't use SSL, turn off the **SSL** toggle.
-4. If you've enabled authentication using SASL in your Kafka environment, turn on the **Authentication** toggle. Then add:
-    1. The **Username**
-    2. The **Password**
-    3. Select the broker's configured **SASL Mechanism**. Refer to [SASL configuration](https://kafka.apache.org/documentation/#security_sasl_config){:target=_blank .external-link} for more information. Options include:
+1.  ป้อน `CLIENT-ID` ของ client หรือ consumer group ในช่อง **Client ID** ใน credential ของคุณ
+2.  ป้อนรายการ **Brokers** ที่เกี่ยวข้องที่คั่นด้วยเครื่องหมายจุลภาคเพื่อให้ credential ใช้ในรูปแบบ `<broker-service-name>:<port>` ใช้ชื่อที่คุณตั้งให้กับ broker เมื่อคุณกำหนดไว้ในรายการ `services` ตัวอย่างเช่น `kafka-1:9092,kafka-2:9092` จะเพิ่ม brokers `kafka-1` และ `kafka-2` บน port `9092`
+3.  หากสภาพแวดล้อม Kafka ของคุณไม่ได้ใช้ SSL ให้ปิด toggle **SSL**
+4.  หากคุณเปิดใช้งานการยืนยันตัวตนโดยใช้ SASL ในสภาพแวดล้อม Kafka ของคุณ ให้เปิด toggle **Authentication** จากนั้นเพิ่ม:
+    1.  **Username**
+    2.  **Password**
+    3.  เลือก **SASL Mechanism** ที่กำหนดค่าไว้ของ broker ดูข้อมูลเพิ่มเติมได้ที่ [SASL configuration](https://kafka.apache.org/documentation/#security_sasl_config){:target=_blank .external-link} ตัวเลือกได้แก่:
         - `Plain`
         - `scram-sha-256`
         - `scram-sha-512`

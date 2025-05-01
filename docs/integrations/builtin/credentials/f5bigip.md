@@ -12,7 +12,7 @@ priority: medium
 
 ## Prerequisites
 
-Create an [F5 Big-IP](https://www.f5.com/products/big-ip-services){:target=_blank .external-link} account.
+สร้างบัญชี [F5 Big-IP](https://www.f5.com/products/big-ip-services){:target=_blank .external-link}
 
 ## Authentication methods
 
@@ -20,13 +20,13 @@ Create an [F5 Big-IP](https://www.f5.com/products/big-ip-services){:target=_blan
 
 ## Related resources
 
-Refer to [F5 Big-IP's API documentation](https://clouddocs.f5.com/products/big-iq/mgmt-api/v0.0/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [F5 Big-IP's API documentation](https://clouddocs.f5.com/products/big-iq/mgmt-api/v0.0/){:target=_blank .external-link}
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/f5-big-ip/){:target=_blank .external-link} on n8n's website.
+นี่คือ node แบบ credential-only ดูข้อมูลเพิ่มเติมได้ที่ [Custom API operations](/integrations/custom-operations.md) ดู [example workflows and related content](https://n8n.io/integrations/f5-big-ip/){:target=_blank .external-link} บนเว็บไซต์ของ n8n
 
 ## Using account login
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- A **Username**: Use the username you use to log in to F5 Big-IP.
-- A **Password**: Use the user password you use to log in to F5 Big-IP.
+- **Username**: ใช้ username ที่คุณใช้เข้าสู่ระบบ F5 Big-IP
+- **Password**: ใช้ password ของผู้ใช้ที่คุณใช้เข้าสู่ระบบ F5 Big-IP

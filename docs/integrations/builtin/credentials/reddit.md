@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Reddit credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [Reddit](/integrations/builtin/app-nodes/n8n-nodes-base.reddit.md)
 
 ## Prerequisites
 
-Create a [Reddit](https://reddit.com/){:target=_blank .external-link} account.
+สร้าง [Reddit](https://reddit.com/){:target=_blank .external-link} account
 
 ## Supported authentication methods
 
@@ -21,24 +21,24 @@ Create a [Reddit](https://reddit.com/){:target=_blank .external-link} account.
 
 ## Related resources
 
-Refer to [Reddit's developer documentation](https://support.reddithelp.com/hc/en-us/articles/14945211791892-Developer-Platform-Accessing-Reddit-Data){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Reddit's developer documentation](https://support.reddithelp.com/hc/en-us/articles/14945211791892-Developer-Platform-Accessing-Reddit-Data){:target=_blank .external-link}
 
 ## Using OAuth2
 
-To configure this credential, you'll need:
+สำหรับการตั้งค่า credentials นี้ คุณจะต้องมี:
 
-- A **Client ID**
-- A **Client Secret**
+- **Client ID**
+- **Client Secret**
 
 /// note | Developer program
-Reddit's developer program is in a closed beta. The instructions below are for regular Reddit users, not members of the developer platform.
+โปรแกรม developer ของ Reddit อยู่ในช่วง closed beta คำแนะนำด้านล่างนี้สำหรับผู้ใช้ Reddit ทั่วไป ไม่ใช่สมาชิกของ developer platform
 ///
 
-Generate both by creating a [third-party app](https://www.reddit.com/prefs/apps){:target=_blank .external-link}. Visit the previous link or go to your **profile > Settings > Safety & Privacy > Manage third-party app authorization > are you a developer? create an app**.
+สร้างทั้งสองอย่างโดยการสร้าง [third-party app](https://www.reddit.com/prefs/apps){:target=_blank .external-link} ไปที่ลิงก์ก่อนหน้า หรือไปที่ **profile > Settings > Safety & Privacy > Manage third-party app authorization > are you a developer? create an app**
 
-Use these settings for your app:
+ใช้การตั้งค่าเหล่านี้สำหรับ app ของคุณ:
 
-- Copy the **OAuth Callback URL** from n8n and use it as your app's **redirect uri**.
-- The app's client ID displays underneath your app name. Copy that and add it as your n8n **Client ID**.
-- Copy the app's **secret** and add it as your n8n **Client Secret**.
+- คัดลอก **OAuth Callback URL** จาก n8n และใช้เป็น **redirect uri** ของ app ของคุณ
+- client ID ของ app จะแสดงอยู่ใต้ชื่อ app ของคุณ คัดลอกและเพิ่มเป็น **Client ID** ใน n8n ของคุณ
+- คัดลอก **secret** ของ app และเพิ่มเป็น **Client Secret** ใน n8n ของคุณ
 

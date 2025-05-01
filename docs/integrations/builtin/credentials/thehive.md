@@ -7,17 +7,17 @@ contentType: [integration, reference]
 
 # TheHive credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [TheHive](/integrations/builtin/app-nodes/n8n-nodes-base.thehive.md)
 
 /// note | TheHive and TheHive 5
-n8n provides two nodes for TheHive. Use these credentials with TheHive node for TheHive 3 or TheHive 4. If you're using TheHive5 node, use [TheHive 5 credentials](/integrations/builtin/credentials/thehive5.md).
+n8n มี node สำหรับ TheHive สองแบบ ใช้ credentials นี้กับ TheHive node สำหรับ TheHive 3 หรือ TheHive 4 ถ้าใช้ TheHive5 node ให้ใช้ [TheHive 5 credentials](/integrations/builtin/credentials/thehive5.md)
 ///
 
 ## Prerequisites
 
-Install [TheHive](https://github.com/TheHive-Project/TheHiveDocs/blob/master/installation/install-guide.md){:target=_blank .external-link} on your server.
+ติดตั้ง [TheHive](https://github.com/TheHive-Project/TheHiveDocs/blob/master/installation/install-guide.md){:target=_blank .external-link} บนเซิร์ฟเวอร์ของคุณ
 
 ## Supported authentication methods
 
@@ -25,17 +25,17 @@ Install [TheHive](https://github.com/TheHive-Project/TheHiveDocs/blob/master/ins
 
 ## Related resources
 
-Refer to [TheHive 3's API documentation](https://docs.thehive-project.org/thehive/legacy/thehive3/api/){:target=_blank .external-link} and [TheHive 4's API documentation](https://docs.thehive-project.org/thehive/){:target=_blank .external-link} for more information about the services.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [TheHive 3's API documentation](https://docs.thehive-project.org/thehive/legacy/thehive3/api/){:target=_blank .external-link} และ [TheHive 4's API documentation](https://docs.thehive-project.org/thehive/){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ในการตั้งค่า credentials นี้ คุณจะต้องมี:
 
-- An **API Key**: Create an API key from **Organization > Create API Key**. Refer to [API Authentication](https://docs.thehive-project.org/thehive/legacy/thehive3/api/authentication/){:target=_blank .external-link} for more information.
-- Your **URL**: The URL of your TheHive server.
-- An **API Version**: Choose between:
+- **API Key**: สร้าง API key ได้ที่ **Organization > Create API Key** ดูรายละเอียดได้ที่ [API Authentication](https://docs.thehive-project.org/thehive/legacy/thehive3/api/authentication/){:target=_blank .external-link}
+- **URL** ของคุณ: URL ของ TheHive server ของคุณ
+- **API Version**: เลือกได้ระหว่าง:
     - **TheHive 3 (api v0)**
     - **TheHive 4 (api v1)**
-    - For TheHive 5, use [TheHive 5 credentials](/integrations/builtin/credentials/thehive5.md) instead.
-- **Ignore SSL Issues**: When turned on, n8n will connect even if SSL certificate validation fails.
+    - ถ้าใช้ TheHive 5 ให้ใช้ [TheHive 5 credentials](/integrations/builtin/credentials/thehive5.md) แทน
+- **Ignore SSL Issues**: ถ้าเปิดใช้งาน n8n จะเชื่อมต่อแม้ SSL certificate validation จะล้มเหลว
 

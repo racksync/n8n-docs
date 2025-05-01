@@ -8,7 +8,7 @@ priority: medium
 
 # GitLab credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้:
 
 - [GitLab](/integrations/builtin/app-nodes/n8n-nodes-base.gitlab.md)
 - [GitLab Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.gitlabtrigger.md)
@@ -16,48 +16,48 @@ You can use these credentials to authenticate the following nodes:
 ## Supported authentication methods
 
 - API access token
-- OAuth2 (Recommended)
+- OAuth2 (แนะนำ)
 
 ## Related resources
 
-Refer to [GitLab's API documentation](https://docs.gitlab.com/ee/api/rest/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [GitLab's API documentation](https://docs.gitlab.com/ee/api/rest/){:target=_blank .external-link}
 
 ## Using API access token
 
-To configure this credential, you'll need a [GitLab](https://gitlab.com/){:target=_blank .external-link} account and:
+ในการกำหนดค่า credential นี้ คุณจะต้องมีบัญชี [GitLab](https://gitlab.com/){:target=_blank .external-link} และ:
 
-- The URL of your **GitLab Server**
-- An **Access Token**
+- URL ของ **GitLab Server** ของคุณ
+- **Access Token**
 
-To set up the credential:
+วิธีตั้งค่า credential:
 
-1. In GitLab, select your avatar, then select **Edit profile**.
-2. In the left sidebar, select **Access tokens**.
-3. Select **Add new token**.
-4. Enter a **Name** for the token, like `n8n integration`.
-5. Enter an **expiry date** for the token. If you don't enter an expiry date, GitLab automatically sets it to 365 days later than the current date.
-    - The token expires on that expiry date at midnight UTC.
-6. Select the desired **Scopes**. For the [GitLab](/integrations/builtin/app-nodes/n8n-nodes-base.gitlab.md) node, use the `api` scope to easily grant access for all the node's functionality. Or refer to [Personal access token scopes](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html#personal-access-token-scopes){:target=_blank .external-link} to select scopes for the functions you want to use.
-7. Select **Create personal access token**.
-8. Copy the access token this creates and enter it in your n8n credential as the **Access Token**.
-9. Enter the URL of your **GitLab Server** in your n8n credential. 
+1. ใน GitLab เลือก avatar ของคุณ จากนั้นเลือก **Edit profile**
+2. ในแถบด้านข้างซ้าย เลือก **Access tokens**
+3. เลือก **Add new token**
+4. ป้อน **Name** สำหรับ token เช่น `n8n integration`
+5. ป้อน **expiry date** สำหรับ token หากคุณไม่ป้อนวันหมดอายุ GitLab จะตั้งค่าโดยอัตโนมัติเป็น 365 วันหลังจากวันที่ปัจจุบัน
+    - token จะหมดอายุในวันหมดอายุนั้น ณ เวลาเที่ยงคืน UTC
+6. เลือก **Scopes** ที่ต้องการ สำหรับ node [GitLab](/integrations/builtin/app-nodes/n8n-nodes-base.gitlab.md) ให้ใช้ scope `api` เพื่อให้สิทธิ์เข้าถึงฟังก์ชันทั้งหมดของ node ได้อย่างง่ายดาย หรือดูที่ [Personal access token scopes](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html#personal-access-token-scopes){:target=_blank .external-link} เพื่อเลือก scopes สำหรับฟังก์ชันที่คุณต้องการใช้
+7. เลือก **Create personal access token**
+8. คัดลอก access token ที่สร้างขึ้นนี้และป้อนลงใน credential ของ n8n เป็น **Access Token**
+9. ป้อน URL ของ **GitLab Server** ของคุณใน credential ของ n8n
 
-Refer to GitLab's [Create a personal access token documentation](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html#create-a-personal-access-token){:target=_blank .external-link} for more information.
+ดูข้อมูลเพิ่มเติมได้ที่ [Create a personal access token documentation](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html#create-a-personal-access-token){:target=_blank .external-link} ของ GitLab
 
 ## Using OAuth2
 
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-If you're [self-hosting](/hosting/index.md) n8n, you'll need a [GitLab](https://gitlab.com/){:target=_blank .external-link} account. Then create a new GitLab application:
+หากคุณ [self-hosting](/hosting/index.md) n8n คุณจะต้องมีบัญชี [GitLab](https://gitlab.com/){:target=_blank .external-link} จากนั้นสร้าง GitLab application ใหม่:
 
-1. In GitLab, select your avatar, then select **Edit profile**.
-2. In the left sidebar, select **Applications**.
-3. Select **Add new application**.
-4. Enter a **Name** for your application, like `n8n integration`.
-5. In n8n, copy the **OAuth Redirect URL**. Enter it as the GitLab **Redirect URI**.
-6. Select the desired **Scopes**. For the [GitLab](/integrations/builtin/app-nodes/n8n-nodes-base.gitlab.md) node, use the `api` scope to easily grant access for all the node's functionality. Or refer to [Personal access token scopes](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html#personal-access-token-scopes){:target=_blank .external-link} to select scopes for the functions you want to use.
-6. Select **Save application**.
-7. Copy the **Application ID** and enter it as the **Client ID** in your n8n credential.
-8. Copy the **Secret** and enter it as the **Client Secret** in your n8n credential.
+1. ใน GitLab เลือก avatar ของคุณ จากนั้นเลือก **Edit profile**
+2. ในแถบด้านข้างซ้าย เลือก **Applications**
+3. เลือก **Add new application**
+4. ป้อน **Name** สำหรับ application ของคุณ เช่น `n8n integration`
+5. ใน n8n คัดลอก **OAuth Redirect URL** ป้อนเป็น **Redirect URI** ของ GitLab
+6. เลือก **Scopes** ที่ต้องการ สำหรับ node [GitLab](/integrations/builtin/app-nodes/n8n-nodes-base.gitlab.md) ให้ใช้ scope `api` เพื่อให้สิทธิ์เข้าถึงฟังก์ชันทั้งหมดของ node ได้อย่างง่ายดาย หรือดูที่ [Personal access token scopes](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html#personal-access-token-scopes){:target=_blank .external-link} เพื่อเลือก scopes สำหรับฟังก์ชันที่คุณต้องการใช้
+6. เลือก **Save application**
+7. คัดลอก **Application ID** และป้อนเป็น **Client ID** ใน credential ของ n8n
+8. คัดลอก **Secret** และป้อนเป็น **Client Secret** ใน credential ของ n8n
 
-Refer to GitLab's [Configure GitLab as an OAuth 2.0 authentication identity provider](https://docs.gitlab.com/ee/integration/oauth_provider.html){:target=_blank .external-link} documentation for more information. Refer to the [GitLab OAuth 2.0 identity provider API documentation](https://docs.gitlab.com/ee/api/oauth2.html){:target=_blank .external-link} for more information on OAuth2 and GitLab.
+ดูข้อมูลเพิ่มเติมได้ที่เอกสาร [Configure GitLab as an OAuth 2.0 authentication identity provider](https://docs.gitlab.com/ee/integration/oauth_provider.html){:target=_blank .external-link} ของ GitLab ดูข้อมูลเพิ่มเติมเกี่ยวกับ OAuth2 และ GitLab ได้ที่ [GitLab OAuth 2.0 identity provider API documentation](https://docs.gitlab.com/ee/api/oauth2.html){:target=_blank .external-link}

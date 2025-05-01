@@ -8,7 +8,7 @@ priority: medium
 
 # Stripe credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [Stripe Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.stripetrigger.md)
 - [Stripe](/integrations/builtin/app-nodes/n8n-nodes-base.stripe.md)
@@ -19,59 +19,59 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Stripe's API documentation](https://docs.stripe.com/api){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Stripe's API documentation](https://docs.stripe.com/api){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need a [Stripe](https://stripe.com/){:target=_blank .external-link} admin or developer account and:
+ในการตั้งค่า credentials นี้ คุณจะต้องมีบัญชี admin หรือ developer ของ [Stripe](https://stripe.com/){:target=_blank .external-link} และ:
 
-- An API **Secret Key**
+- **Secret Key** สำหรับ API
 
-Before you generate an API key, decide whether to generate it in live mode or test mode. Refer to [Test mode and live mode](#test-mode-and-live-mode) for more information about the two modes.
+ก่อนจะสร้าง API key ให้ตัดสินใจก่อนว่าจะสร้างใน live mode หรือ test mode ดูรายละเอียดเพิ่มเติมได้ที่ [Test mode and live mode](#test-mode-and-live-mode)
 
 ### Live mode Secret key
 
-To generate a Secret key in live mode:
+วิธีสร้าง Secret key ใน live mode:
 
-1. Open the [Stripe developer dashboard](https://dashboard.stripe.com/developers){:target=_blank .external-link} and select [**API Keys**](https://dashboard.stripe.com/apikeys){:target=_blank .external-link}.
-2. In the **Standard Keys** section, select **Create secret key**.
-3. Enter a **Key name**, like `n8n integration`.
-4. Select **Create**. The new API key displays.
-4. Copy the key and enter it in your n8n credential as the **Secret Key**.
+1. เปิด [Stripe developer dashboard](https://dashboard.stripe.com/developers){:target=_blank .external-link} แล้วเลือก [**API Keys**](https://dashboard.stripe.com/apikeys){:target=_blank .external-link}
+2. ในส่วน **Standard Keys** ให้เลือก **Create secret key**
+3. กรอก **Key name** เช่น `n8n integration`
+4. กด **Create** แล้วจะเห็น API key ใหม่
+4. คัดลอก key แล้วนำไปใส่ใน n8n credential ในช่อง **Secret Key**
 
-Refer to Stripe's [Create a secret API key](https://docs.stripe.com/keys#create-api-secret-key){:target=_blank .external-link} for more information.
+ดูรายละเอียดเพิ่มเติมได้ที่ [Create a secret API key](https://docs.stripe.com/keys#create-api-secret-key){:target=_blank .external-link}
 
 ### Test mode Secret key
 
-To use a Secret key in test mode, you must copy the existing one:
+ถ้าต้องการใช้ Secret key ใน test mode ให้คัดลอก key ที่มีอยู่แล้ว:
 
-1. Go to your [Stripe test mode developer dashboard](https://dashboard.stripe.com/test/developers){:target=_blank .external-link} and select [**API Keys**](https://dashboard.stripe.com/test/apikeys){:target=_blank .external-link}.
-2. In the **Standard Keys** section, select **Reveal test key** for the **Secret key**.
-3. Copy the key and enter it in your n8n credential as the **Secret Key**.
+1. ไปที่ [Stripe test mode developer dashboard](https://dashboard.stripe.com/test/developers){:target=_blank .external-link} แล้วเลือก [**API Keys**](https://dashboard.stripe.com/test/apikeys){:target=_blank .external-link}
+2. ในส่วน **Standard Keys** ให้เลือก **Reveal test key** สำหรับ **Secret key**
+3. คัดลอก key แล้วนำไปใส่ใน n8n credential ในช่อง **Secret Key**
 
-Refer to Stripe's [Create a secret API key](https://docs.stripe.com/keys#create-api-secret-key){:target=_blank .external-link} for more information.
+ดูรายละเอียดเพิ่มเติมได้ที่ [Create a secret API key](https://docs.stripe.com/keys#create-api-secret-key){:target=_blank .external-link}
 
 ## Test mode and live mode
 
-All Stripe API requests happen within either [test mode](https://docs.stripe.com/test-mode) or live mode. Each mode has its own API key. 
+ทุก request ของ Stripe API จะอยู่ใน [test mode](https://docs.stripe.com/test-mode) หรือ live mode เท่านั้น โดยแต่ละ mode จะมี API key ของตัวเอง
 
-Use test mode to access simulated test data and live mode to access actual account data. Objects in one mode aren’t accessible to the other.
+ใช้ test mode เพื่อทดสอบกับข้อมูลจำลอง และ live mode สำหรับข้อมูลจริง ข้อมูลแต่ละ mode จะไม่สามารถเข้าถึงกันได้
 
-Refer to [API keys | Test mode versus live mode](https://docs.stripe.com/keys#test-live-modes){:target=_blank .external-link} for more information about what's available in each mode and guidance on when to use each.
+ดูรายละเอียดเพิ่มเติมได้ที่ [API keys | Test mode versus live mode](https://docs.stripe.com/keys#test-live-modes){:target=_blank .external-link}
 
 /// note | n8n credentials for both modes
-If you want to work with both live mode and test mode keys, store each mode's key in a separate n8n credential.
+ถ้าต้องการใช้ทั้ง live mode และ test mode ให้เก็บ key ของแต่ละ mode ใน n8n credential แยกกัน
 ///
 
 ## Key prefixes
 
-Stripes' Secret keys always begin with `sk_`:
+Secret key ของ Stripe จะขึ้นต้นด้วย `sk_` เสมอ:
 
-- Live keys begin with `sk_live_`.
-- Test keys begin with `sk_test_`.
+- live key จะขึ้นต้นด้วย `sk_live_`
+- test key จะขึ้นต้นด้วย `sk_test_`
 
-n8n hasn't tested these credentials with Restricted keys (prefixed `rk_`).
+n8n ยังไม่ได้ทดสอบกับ Restricted keys (ขึ้นต้นด้วย `rk_`)
 
 /// warning | Publishable keys
-Don't use the Publishable keys (prefixed `pk_`) with your n8n credential.
+ห้ามใช้ Publishable keys (ขึ้นต้นด้วย `pk_`) กับ n8n credential ของคุณ
 ///

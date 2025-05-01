@@ -7,14 +7,14 @@ contentType: [integration, reference]
 
 # Twist credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อ authenticate กับ node เหล่านี้:
 
 - [Twist](/integrations/builtin/app-nodes/n8n-nodes-base.twist.md)
 
 ## Prerequisites
 
-- Create a [Twist](https://twist.com/){:target=_blank .external-link} account.
-- [Create a general integration](https://twist.com/app_console/create_app){:target=_blank .external-link} and configure a valid OAuth Redirect URL. Refer to [Using OAuth2](#using-oauth2) for more information.
+- สมัคร [Twist](https://twist.com/){:target=_blank .external-link} ให้เรียบร้อย
+- [สร้าง general integration](https://twist.com/app_console/create_app){:target=_blank .external-link} แล้วตั้งค่า OAuth Redirect URL ให้ถูกต้อง ดูรายละเอียดที่ [Using OAuth2](#usinkg-oauth2)
 
 ## Supported authentication methods
 
@@ -22,38 +22,38 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Twist's API documentation](https://developer.twist.com/v3/#authorization){:target=_blank .external-link} for more information about authenticating with the service.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับการใช้งาน API ได้ที่ [Twist's API documentation](https://developer.twist.com/v3/#authorization){:target=_blank .external-link}
 
 ## Using OAuth2
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- A **Client ID**: Generated once you create a general integration.
-- A **Client Secret**: Generated once you create a general integration.
+- **Client ID**: ได้จากการสร้าง general integration
+- **Client Secret**: ได้จากการสร้าง general integration
 
-To generate your Client ID and Client Secret, [create a general integration](https://twist.com/app_console/create_app){:target=_blank .external-link}.
+สร้าง Client ID และ Client Secret ได้โดย [สร้าง general integration](https://twist.com/app_console/create_app){:target=_blank .external-link}
 
-Use these settings for your integration's **OAuth Authentication**:
+ตั้งค่า integration สำหรับ **OAuth Authentication** แบบนี้:
 
-- Copy the **OAuth Redirect URL** from n8n and enter it as the **OAuth 2 redirect URL** in Twist.
+- คัดลอก **OAuth Redirect URL** จาก n8n ไปใส่ใน Twist เป็น **OAuth 2 redirect URL**
     
     /// note | OAuth Redirect URL for self-hosted n8n
-    Twist doesn't accept a `localhost` Redirect URL. The Redirect URL should be a URL in your domain, for example: `https://mytemplatemaker.example.com/gr_callback`. If your n8n **OAuth Redirect URL** contains localhost, refer below to [Local environment redirect URL](#local-environment-redirect-url) for generating a URL that Twist will allow.
+    Twist ไม่อนุญาตให้ใช้ Redirect URL ที่เป็น `localhost` ต้องใช้ URL ที่เป็น domain จริง เช่น `https://mytemplatemaker.example.com/gr_callback` ถ้า OAuth Redirect URL ของ n8n เป็น localhost ดูวิธีด้านล่างที่ [Local environment redirect URL](#local-environment-redirect-url) เพื่อสร้าง URL ที่ Twist ยอมรับ
     ///
 
-- Select **Update OAuth settings** to save those changes.
-- Copy the **Client ID** and **Client Secret** from Twist and enter them in the appropriate fields in n8n.
+- กด **Update OAuth settings** เพื่อบันทึก
+- คัดลอก **Client ID** และ **Client Secret** จาก Twist ไปใส่ใน n8n
 
 ### Local environment redirect URL
 
-Twist doesn't accept a localhost callback URL. These steps should allow you to configure the OAuth credentials for the local environment:
+Twist ไม่อนุญาตให้ใช้ callback URL ที่เป็น localhost ทำตามนี้เพื่อ setup OAuth credentials สำหรับ local environment:
 
-1. Use [ngrok](https://ngrok.com/) to expose the local server running on port `5678` to the internet. In your terminal, run the following command:
+1. ใช้ [ngrok](https://ngrok.com/) เพื่อ expose server ที่รันอยู่บน port `5678` ขึ้นอินเทอร์เน็ต เปิด terminal แล้วรันคำสั่งนี้:
 ```sh
 ngrok http 5678
 ```
-2. Run the following command in a new terminal. Replace `<YOUR-NGROK-URL>` with the URL that you get from the previous step.
+2. เปิด terminal ใหม่แล้วรันคำสั่งนี้ โดยแทนที่ `<YOUR-NGROK-URL>` ด้วย URL ที่ได้จากขั้นตอนก่อนหน้า
 ```sh
 export WEBHOOK_URL=<YOUR-NGROK-URL>
 ```
-3. Use the generated URL as your **OAuth 2 redirect URL** in Twist.
+3. ใช้ URL ที่ได้เป็น **OAuth 2 redirect URL** ใน Twist
 

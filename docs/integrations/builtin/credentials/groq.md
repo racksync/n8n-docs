@@ -8,13 +8,13 @@ priority: medium
 
 # Groq credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้:
 
 * [Groq Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgroq.md)
 
 ## Prerequisites
 
-Create a [Groq](https://groq.com/){:target=_blank .external-link} account.
+สร้างบัญชี [Groq](https://groq.com/){:target=_blank .external-link}
 
 ## Supported authentication methods
 
@@ -22,25 +22,25 @@ Create a [Groq](https://groq.com/){:target=_blank .external-link} account.
 
 ## Related resources
 
-Refer to [Groq's documentation](https://console.groq.com/docs/quickstart){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Groq's documentation](https://console.groq.com/docs/quickstart){:target=_blank .external-link}
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
 ## Using API key
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- An **API Key**
+- **API Key**
 
-To get your API key:
+วิธีรับ API key ของคุณ:
 
-1. Go to the [API Keys](https://console.groq.com/keys) page of your Groq console.
-2. Select **Create API Key**.
-3. Enter a **display name** for the key, like `n8n integration`, and select **Submit**.
-4. Copy the key and paste it into your n8n credential.
+1. ไปที่หน้า [API Keys](https://console.groq.com/keys) ใน Groq console ของคุณ
+2. เลือก **Create API Key**
+3. ป้อน **display name** สำหรับ key เช่น `n8n integration` แล้วเลือก **Submit**
+4. คัดลอก key แล้ววางลงใน credential ของ n8n
 
-Refer to [Groq's API Keys documentation](https://console.groq.com/docs/quickstart){:target=_blank .external-link} for more information.
+ดูข้อมูลเพิ่มเติมได้ที่ [Groq's API Keys documentation](https://console.groq.com/docs/quickstart){:target=_blank .external-link}
 
 /// note | Groq API keys
-Groq binds API keys to the organization, not the user.
+Groq ผูก API keys กับ organization ไม่ใช่ user
 ///

@@ -8,12 +8,12 @@ priority: medium
 
 # Adalo credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node เหล่านี้:
 
 - [Adalo](/integrations/builtin/app-nodes/n8n-nodes-base.adalo.md)
 
 /// note | API access
-You need a Team or Business plan to use the Adalo APIs.
+คุณต้องมีแผน Team หรือ Business เพื่อใช้ Adalo APIs
 ///
 
 ## Supported authentication methods
@@ -22,30 +22,30 @@ You need a Team or Business plan to use the Adalo APIs.
 
 ## Related resources
 
-Refer to [Adalo's API collections documentation](https://help.adalo.com/integrations/the-adalo-api/collections){:target=_blank .external-link} for more information about working with the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับการทำงานกับบริการได้ที่ [Adalo's API collections documentation](https://help.adalo.com/integrations/the-adalo-api/collections){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need an [Adalo](https://www.adalo.com/){:target=_blank .external-link} account and:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมีบัญชี [Adalo](https://www.adalo.com/){:target=_blank .external-link} และ:
 
-- An **API Key**
-- An **App ID**
+- **API Key**
+- **App ID**
 
-To get these, create an Adalo app:
+หากต้องการรับสิ่งเหล่านี้ ให้สร้าง Adalo app:
 
-1. From the app dropdown in the top navigation, select **CREATE NEW APP**.
-1. Select the App Layout type that makes sense for you and select **Next**.
-    - If you're new to using the product, Adalo recommend using **Mobile Only**.
-1. Select a template to get started with or select **Blank**, then select **Next**.
-1. Enter an **App Name**, like `n8n integration`.
-1. If applicable, select the **Team** for the app.
-1. Select branding colors.
-1. Select **Create**. The app editor opens.
-1. In the left menu, select **Settings** (the gear cog icon).
-1. Select **App Access**.
-1. In the **API Key** section, select **Generate Key**.
-    - If you don't have the correct plan level, you'll see a prompt to upgrade instead.
-1. Copy the key and enter it as the **API Key** in your n8n credential.
-1. The URL includes the **App ID** after `https://app.adalo.com/apps/`. For example, if the URL for your app is `https://app.adalo.com/apps/b78bdfcf-48dc-4550-a474-dd52c19fc371/app-settings`, `b78bdfcf-48dc-4550-a474-dd52c19fc371` is the App ID. Copy this value and enter it in your n8n credential.
+1. จาก dropdown ของ app ในแถบนำทางด้านบน เลือก **CREATE NEW APP**
+1. เลือกประเภท App Layout ที่เหมาะสมกับคุณแล้วเลือก **Next**
+    - หากคุณเพิ่งเริ่มใช้ผลิตภัณฑ์ Adalo แนะนำให้ใช้ **Mobile Only**
+1. เลือก template เพื่อเริ่มต้น หรือเลือก **Blank** แล้วเลือก **Next**
+1. ป้อน **App Name** เช่น `n8n integration`
+1. หากมี ให้เลือก **Team** สำหรับ app
+1. เลือกสี branding
+1. เลือก **Create** ตัวแก้ไข app จะเปิดขึ้น
+1. ในเมนูด้านซ้าย เลือก **Settings** (ไอคอนรูปเฟือง)
+1. เลือก **App Access**
+1. ในส่วน **API Key** เลือก **Generate Key**
+    - หากคุณไม่มีระดับแผนที่ถูกต้อง คุณจะเห็นข้อความแจ้งให้อัปเกรดแทน
+1. คัดลอก key และป้อนเป็น **API Key** ใน n8n credential ของคุณ
+1. URL จะรวม **App ID** ไว้หลัง `https://app.adalo.com/apps/` ตัวอย่างเช่น หาก URL สำหรับ app ของคุณคือ `https://app.adalo.com/apps/b78bdfcf-48dc-4550-a474-dd52c19fc371/app-settings` `b78bdfcf-48dc-4550-a474-dd52c19fc371` คือ App ID คัดลอกค่านี้และป้อนลงใน n8n credential ของคุณ
 
-Refer to [Creating an app](https://help.adalo.com/design/designing-your-app/creating-an-app){:target=_blank .external-link} for more information on creating apps in Adalo. Refer to [The Adalo API](https://help.adalo.com/integrations/the-adalo-api){:target=_blank .external-link} for more information on generating API keys.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับการสร้าง apps ใน Adalo ได้ที่ [Creating an app](https://help.adalo.com/design/designing-your-app/creating-an-app){:target=_blank .external-link} ดูข้อมูลเพิ่มเติมเกี่ยวกับการสร้าง API keys ได้ที่ [The Adalo API](https://help.adalo.com/integrations/the-adalo-api){:target=_blank .external-link}

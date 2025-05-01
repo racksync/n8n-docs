@@ -8,7 +8,7 @@ priority: medium
 
 # Anthropic credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node เหล่านี้:
 
 - [Anthropic Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic.md)
 
@@ -18,20 +18,20 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Anthropic's documentation](https://docs.anthropic.com/claude/reference/getting-started-with-the-api){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการได้ที่ [Anthropic's documentation](https://docs.anthropic.com/claude/reference/getting-started-with-the-api){:target=_blank .external-link}
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
 ## Using API key
 
-To configure this credential, you'll need an [Anthropic Console account](https://console.anthropic.com){:target=_blank .external-link} with access to Claude.
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมีบัญชี [Anthropic Console account](https://console.anthropic.com){:target=_blank .external-link} ที่มีสิทธิ์เข้าถึง Claude
 
-Then:
+จากนั้น:
 
-1. In the Anthropic Console, open **Settings >** [**API Keys**](https://console.anthropic.com/settings/keys){:target=_blank .external-link}.
-2. Select **+ Create Key**.
-3. Give your key a **Name**, like `n8n-integration`.
-4. Select **Copy Key** to copy the key.
-5. Enter this as the **API Key** in your n8n credential.
+1. ใน Anthropic Console เปิด **Settings >** [**API Keys**](https://console.anthropic.com/settings/keys){:target=_blank .external-link}
+2. เลือก **+ Create Key**
+3. ตั้ง **Name** ให้กับ key ของคุณ เช่น `n8n-integration`
+4. เลือก **Copy Key** เพื่อคัดลอก key
+5. ป้อน key นี้เป็น **API Key** ใน n8n credential ของคุณ
 
-Refer to Anthropic's [Intro to Claude](https://docs.anthropic.com/en/docs/intro-to-claude){:target=_blank .external-link} and [Quickstart](https://docs.anthropic.com/en/docs/quickstart){:target=_blank .external-link} for more information.
+ดูข้อมูลเพิ่มเติมได้ที่ [Intro to Claude](https://docs.anthropic.com/en/docs/intro-to-claude){:target=_blank .external-link} และ [Quickstart](https://docs.anthropic.com/en/docs/quickstart){:target=_blank .external-link} ของ Anthropic

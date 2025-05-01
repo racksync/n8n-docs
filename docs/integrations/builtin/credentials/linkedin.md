@@ -8,86 +8,86 @@ priority: medium
 
 # LinkedIn credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [LinkedIn](/integrations/builtin/app-nodes/n8n-nodes-base.linkedin.md)
 
 
 ## Prerequisites
 
-* Create a [LinkedIn](https://www.linkedin.com/){:target=_blank .external-link} account.
-* Create a LinkedIn [Company Page](https://www.linkedin.com/help/linkedin/answer/a543852){:target=_blank .external-link}.
+*   สร้างบัญชี [LinkedIn](https://www.linkedin.com/){:target=_blank .external-link}
+*   สร้าง [Company Page](https://www.linkedin.com/help/linkedin/answer/a543852){:target=_blank .external-link} บน LinkedIn
 
 ## Supported authentication methods
 
-- **Community Management OAuth2**: Use this method if you're a new LinkedIn user or creating a new LinkedIn app.
-- **OAuth2**: Use this method for older LinkedIn apps and user accounts.
+- **Community Management OAuth2**: ใช้วิธีนี้หากคุณเป็นผู้ใช้ LinkedIn ใหม่ หรือกำลังสร้างแอป LinkedIn ใหม่
+- **OAuth2**: ใช้วิธีนี้สำหรับแอป LinkedIn และบัญชีผู้ใช้ที่เก่ากว่า
 
 ## Related Resources
 
-Refer to [LinkedIn's Community Management API documentation](https://learn.microsoft.com/en-us/linkedin/marketing/community-management/community-management-overview?view=li-lms-2024-04){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [LinkedIn's Community Management API documentation](https://learn.microsoft.com/en-us/linkedin/marketing/community-management/community-management-overview?view=li-lms-2024-04){:target=_blank .external-link}
 
-This credential works with API version `202404`.
+credential นี้ทำงานร่วมกับ API version `202404`
 
 ## Using Community Management OAuth2
 
-Use this method if you're a new LinkedIn user or creating a new LinkedIn app.
+ใช้วิธีนี้หากคุณเป็นผู้ใช้ LinkedIn ใหม่ หรือกำลังสร้างแอป LinkedIn ใหม่
 
-To configure this credential, you'll need a [LinkedIn](https://www.linkedin.com/){:target=_blank .external-link} account, a LinkedIn [Company Page](https://www.linkedin.com/help/linkedin/answer/a543852){:target=_blank .external-link}, and:
+ในการตั้งค่า credential นี้ คุณจะต้องมีบัญชี [LinkedIn](https://www.linkedin.com/){:target=_blank .external-link}, [Company Page](https://www.linkedin.com/help/linkedin/answer/a543852){:target=_blank .external-link} บน LinkedIn และ:
 
-- A **Client ID**: Generated after you create a new developer app.
-- A **Client Secret**: Generated after you create a new developer app.
+- **Client ID**: สร้างขึ้นหลังจากที่คุณสร้าง developer app ใหม่
+- **Client Secret**: สร้างขึ้นหลังจากที่คุณสร้าง developer app ใหม่
 
-To create a new developer app and set up the credential:
+วิธีสร้าง developer app ใหม่และตั้งค่า credential:
 
-1. Log into LinkedIn and select this link to [create a new developer app](https://www.linkedin.com/developers/apps/new){:target=_blank .external-link}.
-2. Enter an **App name** for your app, like `n8n integration`.
-3. For the **LinkedIn Page**, enter a LinkedIn [Company Page](https://www.linkedin.com/help/linkedin/answer/a543852){:target=_blank .external-link} or use the **Create a new LinkedIn Page** link to create one on-the-fly. Refer to [Associate an App with a LinkedIn Page](https://www.linkedin.com/help/linkedin/answer/a548360){:target=_blank .external-link} for more information. 
-4. Add an **App logo**.
-5. Check the box to agree to the **Legal agreement**.
-6. Select **Create app**.
-7. This should open the **Products** tab. Select the products/APIs you want to enable for your app. For the LinkedIn node to work properly, you must include:
-	- **Share on LinkedIn**
-	- **Sign In with LinkedIn using OpenID Connect**
-8. Once you've requested access to the products you need, open the **Auth** tab.
-9. Copy the **Client ID** and enter it in your n8n credential.
-10. Select the icon to **Copy** the **Primary Client Secret**. Enter this in your n8n credential as the **Client Secret**.
+1.  เข้าสู่ระบบ LinkedIn และเลือก link นี้เพื่อ [create a new developer app](https://www.linkedin.com/developers/apps/new){:target=_blank .external-link}
+2.  ป้อน **App name** สำหรับแอปของคุณ เช่น `n8n integration`
+3.  สำหรับ **LinkedIn Page** ให้ป้อน [Company Page](https://www.linkedin.com/help/linkedin/answer/a543852){:target=_blank .external-link} ของ LinkedIn หรือใช้ link **Create a new LinkedIn Page** เพื่อสร้างหน้าใหม่ทันที ดูข้อมูลเพิ่มเติมได้ที่ [Associate an App with a LinkedIn Page](https://www.linkedin.com/help/linkedin/answer/a548360){:target=_blank .external-link}
+4.  เพิ่ม **App logo**
+5.  ทำเครื่องหมายในช่องเพื่อยอมรับ **Legal agreement**
+6.  เลือก **Create app**
+7.  ขั้นตอนนี้ควรเปิดแท็บ **Products** เลือก products/APIs ที่คุณต้องการเปิดใช้งานสำหรับแอปของคุณ เพื่อให้ LinkedIn node ทำงานได้อย่างถูกต้อง คุณต้องรวม:
+    *   **Share on LinkedIn**
+    *   **Sign In with LinkedIn using OpenID Connect**
+8.  เมื่อคุณขอเข้าถึง products ที่ต้องการแล้ว ให้เปิดแท็บ **Auth**
+9.  คัดลอก **Client ID** และป้อนลงใน n8n credential ของคุณ
+10. เลือกไอคอนเพื่อ **Copy** **Primary Client Secret** ป้อนข้อมูลนี้ลงใน n8n credential ของคุณเป็น **Client Secret**
 
 /// note | Posting from organization accounts
-To post as an organization, you need to put your app through LinkedIn's [Community Management App Review](https://learn.microsoft.com/en-us/linkedin/marketing/community-management-app-review){:target=_blank .external-link} process.
+หากต้องการโพสต์ในฐานะองค์กร คุณต้องส่งแอปของคุณผ่านกระบวนการ [Community Management App Review](https://learn.microsoft.com/en-us/linkedin/marketing/community-management-app-review){:target=_blank .external-link} ของ LinkedIn
 ///
 
-Refer to [Getting Access to LinkedIn APIs](https://learn.microsoft.com/en-us/linkedin/shared/authentication/getting-access){:target=_blank .external-link} for more information on scopes and permissions.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับ scopes และ permissions ได้ที่ [Getting Access to LinkedIn APIs](https://learn.microsoft.com/en-us/linkedin/shared/authentication/getting-access){:target=_blank .external-link}
 
 ## Using OAuth2
 
-Only use this method for older LinkedIn apps and user accounts.
+ใช้วิธีนี้สำหรับแอป LinkedIn และบัญชีผู้ใช้ที่เก่ากว่าเท่านั้น
 
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-All users must select:
+ผู้ใช้ทุกคนต้องเลือก:
 
-- **Organization Support**: If turned on, the credential requests permission to post as an organization using the `w_organization_social` scope.
-	- To use this option, you must put your app through LinkedIn's [Community Management App Review](https://learn.microsoft.com/en-us/linkedin/marketing/community-management-app-review){:target=_blank .external-link} process.
-- **Legacy**: If turned on, the credential uses legacy scopes for `r_liteprofile` and `r_emailaddress` instead of the newer `profile` and `email` scopes.
+- **Organization Support**: หากเปิดใช้งาน credential จะขออนุญาตโพสต์ในฐานะองค์กรโดยใช้ scope `w_organization_social`
+    - หากต้องการใช้ตัวเลือกนี้ คุณต้องส่งแอปของคุณผ่านกระบวนการ [Community Management App Review](https://learn.microsoft.com/en-us/linkedin/marketing/community-management-app-review){:target=_blank .external-link} ของ LinkedIn
+- **Legacy**: หากเปิดใช้งาน credential จะใช้ legacy scopes สำหรับ `r_liteprofile` และ `r_emailaddress` แทน scopes ใหม่ `profile` และ `email`
 
-If you're [self-hosting](/hosting/index.md) n8n, you'll need to configure OAuth2 from scratch by creating a new developer app:
+หากคุณ [self-hosting](/hosting/index.md) n8n คุณจะต้องตั้งค่า OAuth2 ตั้งแต่ต้นโดยสร้าง developer app ใหม่:
 
-1. Log into LinkedIn and select this link to [create a new developer app](https://www.linkedin.com/developers/apps/new){:target=_blank .external-link}.
-2. Enter an **App name** for your app, like `n8n integration`.
-3. For the **LinkedIn Page**, enter a LinkedIn [Company Page](https://www.linkedin.com/help/linkedin/answer/a543852){:target=_blank .external-link} or use the **Create a new LinkedIn Page** link to create one on-the-fly. Refer to [Associate an App with a LinkedIn Page](https://www.linkedin.com/help/linkedin/answer/a548360){:target=_blank .external-link} for more information. 
-4. Add an **App logo**.
-5. Check the box to agree to the **Legal agreement**.
-6. Select **Create app**.
-7. This should open the **Products** tab. Select the products/APIs you want to enable for your app. For the LinkedIn node to work properly, you must include:
-	- **Share on LinkedIn**
-	- **Sign In with LinkedIn using OpenID Connect**
-8. Once you've requested access to the products you need, open the **Auth** tab.
-9. Copy the **Client ID** and enter it in your n8n credential.
-10. Select the icon to **Copy** the **Primary Client Secret**. Enter this in your n8n credential as the **Client Secret**.
+1.  เข้าสู่ระบบ LinkedIn และเลือก link นี้เพื่อ [create a new developer app](https://www.linkedin.com/developers/apps/new){:target=_blank .external-link}
+2.  ป้อน **App name** สำหรับแอปของคุณ เช่น `n8n integration`
+3.  สำหรับ **LinkedIn Page** ให้ป้อน [Company Page](https://www.linkedin.com/help/linkedin/answer/a543852){:target=_blank .external-link} ของ LinkedIn หรือใช้ link **Create a new LinkedIn Page** เพื่อสร้างหน้าใหม่ทันที ดูข้อมูลเพิ่มเติมได้ที่ [Associate an App with a LinkedIn Page](https://www.linkedin.com/help/linkedin/answer/a548360){:target=_blank .external-link}
+4.  เพิ่ม **App logo**
+5.  ทำเครื่องหมายในช่องเพื่อยอมรับ **Legal agreement**
+6.  เลือก **Create app**
+7.  ขั้นตอนนี้ควรเปิดแท็บ **Products** เลือก products/APIs ที่คุณต้องการเปิดใช้งานสำหรับแอปของคุณ เพื่อให้ LinkedIn node ทำงานได้อย่างถูกต้อง คุณต้องรวม:
+    *   **Share on LinkedIn**
+    *   **Sign In with LinkedIn using OpenID Connect**
+8.  เมื่อคุณขอเข้าถึง products ที่ต้องการแล้ว ให้เปิดแท็บ **Auth**
+9.  คัดลอก **Client ID** และป้อนลงใน n8n credential ของคุณ
+10. เลือกไอคอนเพื่อ **Copy** **Primary Client Secret** ป้อนข้อมูลนี้ลงใน n8n credential ของคุณเป็น **Client Secret**
 
 /// note | Posting from organization accounts
-To post as an organization, you need to put your app through LinkedIn's [Community Management App Review](https://learn.microsoft.com/en-us/linkedin/marketing/community-management-app-review){:target=_blank .external-link} process.
+หากต้องการโพสต์ในฐานะองค์กร คุณต้องส่งแอปของคุณผ่านกระบวนการ [Community Management App Review](https://learn.microsoft.com/en-us/linkedin/marketing/community-management-app-review){:target=_blank .external-link} ของ LinkedIn
 ///
 
-Refer to [Getting Access to LinkedIn APIs](https://learn.microsoft.com/en-us/linkedin/shared/authentication/getting-access){:target=_blank .external-link} for more information on scopes and permissions.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับ scopes และ permissions ได้ที่ [Getting Access to LinkedIn APIs](https://learn.microsoft.com/en-us/linkedin/shared/authentication/getting-access){:target=_blank .external-link}

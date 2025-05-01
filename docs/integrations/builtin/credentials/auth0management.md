@@ -12,7 +12,7 @@ priority: medium
 
 ## Prerequisites
 
-Create an [Auth0](https://auth0.com){:target=_blank .external-link} account.
+สมัคร [Auth0](https://auth0.com){:target=_blank .external-link} ให้เรียบร้อยก่อน
 
 ## Supported authentication methods
 
@@ -20,16 +20,16 @@ Create an [Auth0](https://auth0.com){:target=_blank .external-link} account.
 
 ## Related resources
 
-Refer to [Auth0 Management's documentation](https://auth0.com/docs/api/management/v2){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการได้ที่ [Auth0 Management's documentation](https://auth0.com/docs/api/management/v2){:target=_blank .external-link}
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/auth0-management-api/){:target=_blank .external-link} on n8n's website.
+นี่คือ credential-only node ดูรายละเอียดเพิ่มเติมได้ที่ [Custom API operations](/integrations/custom-operations.md) ดู [example workflows and related content](https://n8n.io/integrations/auth0-management-api/){:target=_blank .external-link} บนเว็บไซต์ n8n
 
 ## Using API client secret
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- An Auth0 **Domain**
-- A **Client ID**
-- A **Client Secret**
+- Auth0 **Domain**
+- **Client ID**
+- **Client Secret**
 
-Refer to the [Auth0 Management API Get Access Tokens documentation](https://auth0.com/docs/secure/tokens/access-tokens/get-access-tokens){:target=_blank .external-link} for instructions on obtaining the Client ID and Client Secret from the application's **Settings** tab.
+ดูคำแนะนำในการรับ Client ID และ Client Secret จากแท็บ **Settings** ของ application ได้ที่ [Auth0 Management API Get Access Tokens documentation](https://auth0.com/docs/secure/tokens/access-tokens/get-access-tokens){:target=_blank .external-link}

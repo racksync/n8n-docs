@@ -7,17 +7,17 @@ contentType: [integration, reference]
 <!-- vale off -->
 # Venafi TLS Protect Datacenter credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 * [Venafi TLS Protect Datacenter node](/integrations/builtin/app-nodes/n8n-nodes-base.venafitlsprotectdatacenter.md)
 
 ## Prerequisites
 
-- Create a Venafi [TLS Protect Datacenter](https://venafi.com/){:target=_blank .external-link} account.
-- Set the expiration and refresh time for tokens. Refer to [Setting up token authentication](https://docs.venafi.com/Docs/current/TopNav/Content/SDK/AuthSDK/t-SDKa-Setup-OAuth.php){:target=_blank .external-link} for more information.
-- Create an [API integration](https://docs.venafi.com/Docs/current/TopNav/Content/API-ApplicationIntegration/c-APIAppIntegrations-about.php){:target=_blank .external-link} in **API > Integrations**. Refer to [Integrating other systems with Venafi products](https://docs.venafi.com/Docs/current/TopNav/Content/API-ApplicationIntegration/t-APIAppIntegrations-creating.php){:target=_blank .external-link} for detailed instructions.
-    - Take note of the Client ID for your integration.
-    - Choose the scopes needed for the operations you want to perform within n8n. Refer to the scopes table in [Integrating other systems with Venafi products](https://docs.venafi.com/Docs/current/TopNav/Content/API-ApplicationIntegration/t-APIAppIntegrations-creating.php){:target=_blank .external-link} for more details on available scopes.
+- สมัครบัญชี Venafi [TLS Protect Datacenter](https://venafi.com/){:target=_blank .external-link}
+- ตั้งค่า expiration และ refresh time สำหรับ token ดูรายละเอียดที่ [Setting up token authentication](https://docs.venafi.com/Docs/current/TopNav/Content/SDK/AuthSDK/t-SDKa-Setup-OAuth.php){:target=_blank .external-link}
+- สร้าง [API integration](https://docs.venafi.com/Docs/current/TopNav/Content/API-ApplicationIntegration/c-APIAppIntegrations-about.php){:target=_blank .external-link} ที่ **API > Integrations** ดูวิธีการที่ [Integrating other systems with Venafi products](https://docs.venafi.com/Docs/current/TopNav/Content/API-ApplicationIntegration/t-APIAppIntegrations-creating.php){:target=_blank .external-link}
+    - จด Client ID สำหรับ integration ของคุณไว้
+    - เลือก scope ที่ต้องการใช้งานใน n8n ดูตาราง scope ได้ที่ [Integrating other systems with Venafi products](https://docs.venafi.com/Docs/current/TopNav/Content/API-ApplicationIntegration/t-APIAppIntegrations-creating.php){:target=_blank .external-link}
 
 ## Supported authentication methods
 
@@ -25,16 +25,16 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Venafi's API integration documentation](https://docs.venafi.com/Docs/currentSDK/TopNav/Content/SDK/WebSDK/c-sdk-AboutThisGuide.php){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Venafi's API integration documentation](https://docs.venafi.com/Docs/currentSDK/TopNav/Content/SDK/WebSDK/c-sdk-AboutThisGuide.php){:target=_blank .external-link}
 
 ## Using API integration
 
-To configure this credential, you'll need:
+ในการตั้งค่า credential นี้ คุณจะต้องมี:
 
-- A **Domain**: Enter your Venafi TLS Protect Datacenter domain.
-- A **Client ID**: Enter the **Client ID** from your API integration. Refer to the information and links in [Prerequisites](#prerequisites) for more information on creating an API integration.
-- A **Username**: Enter your username.
-- A **Password**: Enter your password.
-- **Allow Self-Signed Certificates**: If turned on, the credential will allow self-signed certificates.
+- **Domain**: ใส่ domain ของ Venafi TLS Protect Datacenter ของคุณ
+- **Client ID**: ใส่ Client ID จาก API integration ดูรายละเอียดใน [Prerequisites](#prerequisites)
+- **Username**: ใส่ username ของคุณ
+- **Password**: ใส่ password ของคุณ
+- **Allow Self-Signed Certificates**: ถ้าเปิดใช้งาน credential จะยอมรับ self-signed certificates ได้
 
 <!-- vale on -->

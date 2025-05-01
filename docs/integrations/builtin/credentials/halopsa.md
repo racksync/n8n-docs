@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # HaloPSA credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [HaloPSA](/integrations/builtin/app-nodes/n8n-nodes-base.halopsa.md)
 
 ## Prerequisites
 
-Create a [HaloPSA](https://halopsa.com/) account.
+สร้างบัญชี [HaloPSA](https://halopsa.com/) ก่อน
 
 ## Supported authentication methods
 
@@ -21,21 +21,21 @@ Create a [HaloPSA](https://halopsa.com/) account.
 
 ## Related resources
 
-Refer to [HaloPSA's API documentation](https://halopsa.com/apidoc/info){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [HaloPSA's API documentation](https://halopsa.com/apidoc/info){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ถ้าต้องการตั้งค่า credential นี้ คุณจะต้อง:
 
-- To select your **Hosting Type**:
-    - **On Premise Solution**: Choose this option if you're hosting the Halo application on your own server
-    - **Hosted Solution Of Halo**: Choose this option if your application is hosted by Halo. If this option is selected, you'll need to provide your **Tenant**.
-- The **HaloPSA Authorisation Server URL**: Your Authorisation Server URL is displayed within HaloPSA in **Configuration > Integrations > Halo API** in [API Details](https://halopsa.com/guides/article/?kbid=1737){:target=_blank .external-link}.
-- The **Resource Server** URL: Your Resource Server is displayed within HaloPSA in **Configuration > Integrations > Halo API** in [API Details](https://halopsa.com/guides/article/?kbid=1737){:target=_blank .external-link}.
-- A **Client ID**: Obtained by registering the application in the Halo API settings. Refer to [HaloPSA's Authorisation documentation](https://halopsa.com/apidoc/authorisation){:target=_blank .external-link} for detailed instructions. n8n recommends using these settings:
-    - Choose `Client Credentials` as your **Authentication Method**.
-    - Use the `all` permission.
-- A **Client Secret**: Obtained by registering the application in the Halo API settings.
-- Your **Tenant** name: If **Hosted Solution of Halo** is selected as the **Hosting Type**, you must provide your tenant name. Your tenant name is displayed within HaloPSA in **Configuration > Integrations > Halo API** in [API Details](https://halopsa.com/guides/article/?kbid=1737){:target=_blank .external-link}.
+- เลือก **Hosting Type** ของคุณ:
+    - **On Premise Solution**: เลือกอันนี้ถ้าคุณ host Halo application เองบน server ของคุณ
+    - **Hosted Solution Of Halo**: เลือกอันนี้ถ้า application ของคุณ host โดย Halo ถ้าเลือกอันนี้ คุณต้องกรอก **Tenant** ของคุณด้วย
+- **HaloPSA Authorisation Server URL**: ดู URL นี้ได้ใน HaloPSA ที่ **Configuration > Integrations > Halo API** ใน [API Details](https://halopsa.com/guides/article/?kbid=1737){:target=_blank .external-link}
+- **Resource Server** URL: ดู Resource Server ได้ใน HaloPSA ที่ **Configuration > Integrations > Halo API** ใน [API Details](https://halopsa.com/guides/article/?kbid=1737){:target=_blank .external-link}
+- **Client ID**: ได้จากการ register application ใน Halo API settings ดูวิธีโดยละเอียดที่ [HaloPSA's Authorisation documentation](https://halopsa.com/apidoc/authorisation){:target=_blank .external-link} n8n แนะนำให้ใช้ settings เหล่านี้:
+    - เลือก `Client Credentials` เป็น **Authentication Method**
+    - ใช้ permission `all`
+- **Client Secret**: ได้จากการ register application ใน Halo API settings
+- **Tenant** name: ถ้าเลือก **Hosted Solution of Halo** เป็น **Hosting Type** ต้องกรอก tenant name ด้วย ดู tenant name ได้ใน HaloPSA ที่ **Configuration > Integrations > Halo API** ใน [API Details](https://halopsa.com/guides/article/?kbid=1737){:target=_blank .external-link}
 
-HaloPSA uses both the application permissions and the agent's permissions to determine API access.
+HaloPSA จะใช้ทั้ง permission ของ application และ permission ของ agent ในการกำหนดสิทธิ์การเข้าถึง API

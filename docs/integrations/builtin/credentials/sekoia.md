@@ -12,7 +12,7 @@ priority: medium
 
 ## Prerequisites
 
-Create a [Sekoia SOC platform](https://www.sekoia.io/en/homepage/) account.
+สร้าง [Sekoia SOC platform](https://www.sekoia.io/en/homepage/) account
 
 ## Supported authentication methods
 
@@ -20,12 +20,12 @@ Create a [Sekoia SOC platform](https://www.sekoia.io/en/homepage/) account.
 
 ## Related resources
 
-Refer to [Sekoia's documentation](https://docs.sekoia.io/getting_started/){:target=_blank .external-link} for more information about the service.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Sekoia's documentation](https://docs.sekoia.io/getting_started/){:target=_blank .external-link}
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/sekoia/){:target=_blank .external-link} on n8n's website.
+นี่คือ node สำหรับ credentials เท่านั้น ดูวิธีใช้งาน [Custom API operations](/integrations/custom-operations.md) เพิ่มเติม และดู [example workflows และเนื้อหาที่เกี่ยวข้อง](https://n8n.io/integrations/sekoia/){:target=_blank .external-link} บนเว็บไซต์ n8n
 
 ## Using API key
 
-To configure this credential, you'll need:
+ในการตั้งค่า credentials นี้ คุณจะต้องมี:
 
-- An **API Key**: To generate an API key, select **+ API Key**. Refer to [Create an API key](https://docs.sekoia.io/getting_started/manage_api_keys/#create-an-api-key){:target=_blank .external-link} for more information.
+- **API Key**: กด **+ API Key** เพื่อสร้าง API key ดูวิธีได้ที่ [Create an API key](https://docs.sekoia.io/getting_started/manage_api_keys/#create-an-api-key){:target=_blank .external-link}

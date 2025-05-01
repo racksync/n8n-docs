@@ -8,13 +8,13 @@ priority: critical
 
 # Webhook credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้:
 
 - [Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md)
 
 ## Prerequisites
 
-You must use the authentication method required by the app or service you want to query.
+คุณต้องใช้วิธีการยืนยันตัวตนที่แอปหรือบริการที่คุณต้องการเชื่อมต่อกำหนดไว้
 
 ## Supported authentication methods
 
@@ -29,4 +29,4 @@ You must use the authentication method required by the app or service you want t
 
 ## Using JWT auth
 
-[**JWT Auth**](https://jwt.io/introduction/){:target=_blank .external-link} is a method of authentication that uses JSON Web Tokens (JWT) to digitally sign data. This authentication method uses the **JWT credential** and can use either a **Passphrase** or **PEM Key** as key type. Refer to [JWT credential](/integrations/builtin/credentials/jwt.md) for more information.
+[**JWT Auth**](https://jwt.io/introduction/){:target=_blank .external-link} เป็นวิธีการยืนยันตัวตนที่ใช้ JSON Web Tokens (JWT) ในการเซ็นข้อมูลแบบดิจิทัล วิธีนี้จะใช้ **JWT credential** และสามารถใช้ได้ทั้ง **Passphrase** หรือ **PEM Key** เป็น key type ดูรายละเอียดเพิ่มเติมได้ที่ [JWT credential](/integrations/builtin/credentials/jwt.md)

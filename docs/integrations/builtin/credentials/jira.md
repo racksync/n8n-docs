@@ -8,52 +8,52 @@ priority: medium
 
 # Jira credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [Jira](/integrations/builtin/app-nodes/n8n-nodes-base.jira.md)
 - [Jira Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.jiratrigger.md)
 
 ## Prerequisites
 
-Create a [Jira](https://www.atlassian.com/software/jira){:target=_blank .external-link} Software Cloud or Server account.
+สร้างบัญชี [Jira](https://www.atlassian.com/software/jira){:target=_blank .external-link} Software Cloud หรือ Server
 
 ## Supported authentication methods
 
-- [SW Cloud API token](#using-sw-cloud-api-token): Use this method with [Jira Software Cloud](https://www.atlassian.com/software/jira){:target=_blank .external-link}.
-- [SW Server account](#using-sw-server-account): Use this method with [Jira Software Server](https://www.atlassian.com/software/jira/download.){:target=_blank .external-link}.
+- [SW Cloud API token](#using-sw-cloud-api-token): ใช้วิธีนี้กับ [Jira Software Cloud](https://www.atlassian.com/software/jira){:target=_blank .external-link}
+- [SW Server account](#using-sw-server-account): ใช้วิธีนี้กับ [Jira Software Server](https://www.atlassian.com/software/jira/download.){:target=_blank .external-link}
 
 ## Related resources
 
-Refer to [Jira's API documentation](https://developer.atlassian.com/cloud/jira/platform/rest/v2/intro/#about){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Jira's API documentation](https://developer.atlassian.com/cloud/jira/platform/rest/v2/intro/#about){:target=_blank .external-link}
 
 ## Using SW Cloud API token
 
-To configure this credential, you'll need an account on [Jira Software Cloud](https://www.atlassian.com/software/jira){:target=_blank .external-link}.
+ในการตั้งค่า credential นี้ คุณจะต้องมีบัญชีบน [Jira Software Cloud](https://www.atlassian.com/software/jira){:target=_blank .external-link}
 
-Then:
+จากนั้น:
 
-1. Log in to your Atlassian profile > **Security > API tokens** page, or jump straight there using this [link](https://id.atlassian.com/manage-profile/security/api-tokens){:target=_blank .external-link}.
-2. Select **Create API Token**.
-3. Enter a good **Label** for your token, like `n8n integration`.
-4. Select **Create**.
-5. Copy the API token.
-6. In n8n, enter the **Email** address associated with your Jira account.
-7. Paste the API token you copied as your **API Token**.
-8. Enter the **Domain** you access Jira on, for example `https://example.atlassian.net`.
+1.  เข้าสู่ระบบโปรไฟล์ Atlassian ของคุณ > หน้า **Security > API tokens** หรือไปที่นั่นโดยตรงโดยใช้ [link](https://id.atlassian.com/manage-profile/security/api-tokens){:target=_blank .external-link} นี้
+2.  เลือก **Create API Token**
+3.  ป้อน **Label** ที่ดีสำหรับ token ของคุณ เช่น `n8n integration`
+4.  เลือก **Create**
+5.  คัดลอก API token
+6.  ใน n8n ป้อน **Email** address ที่เชื่อมโยงกับบัญชี Jira ของคุณ
+7.  วาง API token ที่คุณคัดลอกมาเป็น **API Token** ของคุณ
+8.  ป้อน **Domain** ที่คุณเข้าถึง Jira เช่น `https://example.atlassian.net`
 
-Refer to [Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/){:target=_blank .external-link} for more information.
+ดูข้อมูลเพิ่มเติมได้ที่ [Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/){:target=_blank .external-link}
 
 /// note | New tokens
-New tokens may take up to a minute before they work. If your credential verification fails the first time, wait a minute before retrying.
+token ใหม่อาจใช้เวลาถึงหนึ่งนาทีก่อนที่จะใช้งานได้ หากการยืนยัน credential ของคุณล้มเหลวในครั้งแรก ให้รอสักครู่ก่อนลองอีกครั้ง
 ///
 
 ## Using SW Server account
 
-To configure this credential, you'll need an account on [Jira Software Server](https://www.atlassian.com/software/jira/download.){:target=_blank .external-link}.
+ในการตั้งค่า credential นี้ คุณจะต้องมีบัญชีบน [Jira Software Server](https://www.atlassian.com/software/jira/download.){:target=_blank .external-link}
 
-Then:
+จากนั้น:
 
-1. Enter the **Email** address associated with your Jira account.
-2. Enter your Jira account **Password**.
-3. Enter the **Domain** you access Jira on.
+1.  ป้อน **Email** address ที่เชื่อมโยงกับบัญชี Jira ของคุณ
+2.  ป้อน **Password** บัญชี Jira ของคุณ
+3.  ป้อน **Domain** ที่คุณเข้าถึง Jira
 

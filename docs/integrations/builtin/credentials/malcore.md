@@ -10,19 +10,19 @@ contentType: [integration, reference]
 
 ## Prerequisites
 
-Create a [Malcore](https://app.malcore.io/register){:target=_blank .external-link} account.
+สร้างบัญชี [Malcore](https://app.malcore.io/register){:target=_blank .external-link}
 
 ## Related resources
 
-Refer to [Malcore's API documentation](https://malcore.readme.io/reference/){:target=_blank .external-link} for more information about authenticating with the service.
+อ้างอิง [Malcore's API documentation](https://malcore.readme.io/reference/){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับการยืนยันตัวตนกับบริการ
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/malcore/){:target=_blank .external-link} on n8n's website.
+นี่คือ node สำหรับ credential เท่านั้น อ้างอิง [Custom API operations](/integrations/custom-operations.md) เพื่อเรียนรู้เพิ่มเติม ดู [example workflows and related content](https://n8n.io/integrations/malcore/){:target=_blank .external-link} บนเว็บไซต์ของ n8n
 
 
 ## Using API key
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- An **API Key**: Get an API Key from your **Account > API**.
+- **API Key**: รับ API Key จาก **Account > API** ของคุณ
 
-Refer to [Using the Malcore API](https://support.malcore.io/hc/en-au/articles/17711707070617-Using-the-Malcore-API){:target=_blank .external-link} for more information.
+อ้างอิง [Using the Malcore API](https://support.malcore.io/hc/en-au/articles/17711707070617-Using-the-Malcore-API){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม

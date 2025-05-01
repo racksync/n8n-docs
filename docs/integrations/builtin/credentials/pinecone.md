@@ -8,7 +8,7 @@ priority: medium
 
 # Pinecone credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 * [Pinecone Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone.md)
 
@@ -18,21 +18,21 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Pinecone's documentation](https://docs.pinecone.io/reference/api/introduction){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Pinecone's documentation](https://docs.pinecone.io/reference/api/introduction){:target=_blank .external-link}
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
 ## Using API key
 
-To configure this credential, you'll need a [Pinecone](https://www.pinecone.io/){:target=_blank .external-link} account and:
+สำหรับการตั้งค่า credentials นี้ คุณจะต้องมี [Pinecone](https://www.pinecone.io/){:target=_blank .external-link} account และ:
 
-- An **API Key**
+- **API Key**
 
-To get an API key:
+วิธีรับ API key:
 
-1. Open your [Pinecone console](https://app.pinecone.io/organizations/-/projects){:target=_blank .external-link}.
-2. Select the project you want to create an API key for. If you don't have any existing projects, create one. Refer to Pinecone's [Quickstart](https://docs.pinecone.io/guides/get-started/quickstart){:target=_blank .external-link} for more information.
-3. Go to **API Keys**.
-4. Copy the API Key displayed there and enter it in your n8n credential.
+1. เปิด [Pinecone console](https://app.pinecone.io/organizations/-/projects){:target=_blank .external-link} ของคุณ
+2. เลือก project ที่คุณต้องการสร้าง API key หากคุณไม่มี project ที่มีอยู่ ให้สร้าง project ใหม่ ดูข้อมูลเพิ่มเติมที่ [Quickstart](https://docs.pinecone.io/guides/get-started/quickstart){:target=_blank .external-link} ของ Pinecone
+3. ไปที่ **API Keys**
+4. คัดลอก API Key ที่แสดงและกรอกลงใน n8n credential ของคุณ
 
-Refer to Pinecone's API [Authentication documentation](https://docs.pinecone.io/guides/get-started/authentication){:target=_blank .external-link} for more information.
+ดูข้อมูลเพิ่มเติมที่ [Authentication documentation](https://docs.pinecone.io/guides/get-started/authentication){:target=_blank .external-link} ของ Pinecone API

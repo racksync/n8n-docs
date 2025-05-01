@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Cortex credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node เหล่านี้:
 
 - [Cortex](/integrations/builtin/app-nodes/n8n-nodes-base.cortex.md)
 
 ## Prerequisites
 
-Install [Cortex](https://docs.strangebee.com/cortex/installation-and-configuration/){:target=_blank .external-link} on your server.
+ติดตั้ง [Cortex](https://docs.strangebee.com/cortex/installation-and-configuration/){:target=_blank .external-link} บน server ของคุณ
 
 ## Supported authentication methods
 
@@ -21,12 +21,12 @@ Install [Cortex](https://docs.strangebee.com/cortex/installation-and-configurati
 
 ## Related resources
 
-Refer to [Cortex's API documentation](https://docs.strangebee.com/cortex/api/api-guide/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการได้ที่ [Cortex's API documentation](https://docs.strangebee.com/cortex/api/api-guide/){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- An **API Key**: Refer to the [Cortex API Authentication documentation](https://docs.strangebee.com/cortex/api/api-guide/#authentication){:target=_blank .external-link} for detailed instructions on generating API keys.
-- The URL/Server Address for your **Cortex Instance** (defaults to `http://<your_server_address>:9001/`)
+- **API Key**: ดูคำแนะนำโดยละเอียดเกี่ยวกับการสร้าง API keys ได้ที่ [Cortex API Authentication documentation](https://docs.strangebee.com/cortex/api/api-guide/#authentication){:target=_blank .external-link}
+- URL/Server Address สำหรับ **Cortex Instance** ของคุณ (ค่าเริ่มต้นคือ `http://<your_server_address>:9001/`)
 

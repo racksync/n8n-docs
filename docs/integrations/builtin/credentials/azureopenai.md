@@ -8,15 +8,15 @@ priority: medium
 
 # Azure OpenAI credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node เหล่านี้:
 
 - [Chat Azure OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md)
 - [Embeddings Azure OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsazureopenai.md)
 
 ## Prerequisites
 
-- Create an [Azure](https://azure.microsoft.com){:target=_blank .external-link} subscription.
-- Access to Azure OpenAI within that subscription. You may need to [request access](https://aka.ms/oai/access){:target=_blank .external-link} if your organization doesn't yet have it.
+- สมัคร [Azure](https://azure.microsoft.com){:target=_blank .external-link} subscription
+- เข้าถึง Azure OpenAI ภายใน subscription นั้น คุณอาจต้อง [ขอสิทธิ์เข้าถึง](https://aka.ms/oai/access){:target=_blank .external-link} หากองค์กรของคุณยังไม่มี
 
 ## Supported authentication methods
 
@@ -24,18 +24,18 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Azure OpenAI's API documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/reference){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการได้ที่ [Azure OpenAI's API documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/reference){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- A **Resource Name**: the **Name** you give the resource
-- An **API key**: **Key 1** works well. This can be accessed before deployment in **Keys and Endpoint**.
-- The **API Version** the credentials should use. See the [Azure OpenAI API preview lifecycle documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/api-version-deprecation){:target=_blank .external-link} for more information about API versioning in Azure OpenAI.
+- **Resource Name**: **Name** ที่คุณตั้งให้กับ resource
+- **API key**: **Key 1** ใช้งานได้ดี สามารถเข้าถึงได้ก่อน deployment ใน **Keys and Endpoint**
+- **API Version** ที่ credentials ควรใช้ ดูข้อมูลเพิ่มเติมเกี่ยวกับ API versioning ใน Azure OpenAI ได้ที่ [Azure OpenAI API preview lifecycle documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/api-version-deprecation){:target=_blank .external-link}
 
-To get the information above, [create and deploy an Azure OpenAI Service resource](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource){:target=_blank .external-link}.
+หากต้องการข้อมูลข้างต้น ให้ [สร้างและ deploy Azure OpenAI Service resource](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource){:target=_blank .external-link}
 
 /// note | Model name for Azure OpenAI nodes
-Once you deploy the resource, use the **Deployment name** as the model name for the Azure OpenAI nodes where you're using this credential.
+เมื่อคุณ deploy resource แล้ว ให้ใช้ **Deployment name** เป็น model name สำหรับ Azure OpenAI nodes ที่คุณใช้ credential นี้
 ///

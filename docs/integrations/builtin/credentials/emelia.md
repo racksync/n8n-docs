@@ -7,14 +7,13 @@ contentType: [integration, reference]
 
 # Emelia credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node เหล่านี้:
 
 - [Emelia](/integrations/builtin/app-nodes/n8n-nodes-base.emelia.md)
-- [Emelia Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.emeliatrigger.md)
 
 ## Prerequisites
 
-Create an [Emelia](https://emelia.io) account.
+สมัคร [Emelia](https://emelia.io/){:target=_blank .external-link} ให้เรียบร้อยก่อน
 
 ## Supported authentication methods
 
@@ -22,11 +21,11 @@ Create an [Emelia](https://emelia.io) account.
 
 ## Related resources
 
-Refer to [Emelia's API documentation](https://docs.emelia.io/){:target=_blank .external-link} for more information about the service.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับการใช้งาน API ได้ที่ [Emelia's API documentation](https://developers.emelia.io/reference/introduction){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- An **API Key**: To generate an API Key in Emelia, access your **API Keys** by selecting the avatar in the top right (your **Settings**). Refer to the Authentication section of [Emelia's API documentation](https://docs.emelia.io/){:target=_blank .external-link} for more information.
+- **API Key**: สร้าง API key ได้ใน [Emelia dashboard](https://app.emelia.io/settings/api){:target=_blank .external-link}
 

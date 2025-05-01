@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Grist credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้:
 
 * [Grist](/integrations/builtin/app-nodes/n8n-nodes-base.grist.md)
 
 ## Prerequisites
 
-Create a [Grist](https://getgrist.com/){:target=_blank .external-link} account.
+สร้างบัญชี [Grist](https://getgrist.com/){:target=_blank .external-link}
 
 ## Supported authentication methods
 
@@ -21,15 +21,15 @@ Create a [Grist](https://getgrist.com/){:target=_blank .external-link} account.
 
 ## Related resources
 
-Refer to [Grist's API documentation](https://support.getgrist.com/api/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Grist's API documentation](https://support.getgrist.com/api/){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- An **API Key**: Refer to the [Grist API authentication documentation](https://support.getgrist.com/rest-api/#authentication){:target=_blank .external-link} for instructions on creating an API key.
-- To select your Grist **Plan Type**. Options include:
+- **API Key**: ดูคำแนะนำในการสร้าง API key ได้ที่ [Grist API authentication documentation](https://support.getgrist.com/rest-api/#authentication){:target=_blank .external-link}
+- เลือก Grist **Plan Type** ของคุณ ตัวเลือกได้แก่:
     - Free
-    - Paid: If selected, provide your Grist **Custom Subdomain**. This is the portion that comes before `.getgrist.com`. For example, if our full Grist domain was `n8n.getgrist.com`, we'd enter `n8n` here.
-    - Self-Hosted: If selected, provide your Grist **Self-Hosted URL**. This should be the full URL.
+    - Paid: หากเลือกตัวเลือกนี้ ให้ระบุ Grist **Custom Subdomain** ของคุณ นี่คือส่วนที่อยู่ก่อนหน้า `.getgrist.com` ตัวอย่างเช่น หาก Grist domain เต็มของเราคือ `n8n.getgrist.com` เราจะป้อน `n8n` ที่นี่
+    - Self-Hosted: หากเลือกตัวเลือกนี้ ให้ระบุ Grist **Self-Hosted URL** ของคุณ ควรเป็น URL แบบเต็ม
 

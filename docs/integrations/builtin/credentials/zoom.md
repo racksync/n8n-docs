@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Zoom credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อ authenticate กับ node เหล่านี้:
 
 - [Zoom](/integrations/builtin/app-nodes/n8n-nodes-base.zoom.md)
 
 ## Prerequisites
 
-Create a [Zoom](https://zoom.us/){:target=_blank .external-link} account. Your account must have one of the following permissions:
+สมัคร [Zoom](https://zoom.us/){:target=_blank .external-link} ให้เรียบร้อยก่อน โดย account ของคุณต้องมีสิทธิ์อย่างใดอย่างหนึ่งต่อไปนี้:
 
 - Account owner
 - Account admin
@@ -25,37 +25,37 @@ Create a [Zoom](https://zoom.us/){:target=_blank .external-link} account. Your a
 - OAuth2
 
 /// warning | API JWT token deprecation
-Zoom removed support for JWT access tokens in June 2023. You must use OAuth2 for all new credentials.
+Zoom ยกเลิกการรองรับ JWT access tokens ตั้งแต่เดือนมิถุนายน 2023 ต้องใช้ OAuth2 สำหรับ credentials ใหม่เท่านั้น
 ///
 
 ## Related resources
 
-Refer to [Zoom's API documentation](https://developers.zoom.us/docs/api/){:target=_blank .external-link} for more information about the service.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับการใช้งาน API ได้ที่ [Zoom's API documentation](https://developers.zoom.us/docs/api/){:target=_blank .external-link}
 
 ## Using API JWT token
 
-This authentication method has been fully deprecated by Zoom. Don't create new credentials with it.
+วิธีนี้ถูก Zoom ยกเลิกการใช้งานแล้ว ไม่ควรสร้าง credentials ใหม่ด้วยวิธีนี้
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- A **JWT token**: To create a JWT token, create a new JWT app in the [Zoom App Marketplace](https://marketplace.zoom.us/){:target=_blank .external-link}.
+- **JWT token**: สร้าง JWT token ได้โดยสร้าง JWT app ใหม่ใน [Zoom App Marketplace](https://marketplace.zoom.us/){:target=_blank .external-link}
 
 ## Using OAuth2
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- A **Client ID**: Generated when you create an OAuth app on the Zoom App Marketplace.
-- A **Client Secret**: Generated when you create an OAuth app.
+- **Client ID**: ได้จากการสร้าง OAuth app ใน Zoom App Marketplace
+- **Client Secret**: ได้จากการสร้าง OAuth app
 
-To generate your **Client ID** and **Client Secret**, [create an OAuth app](https://developers.zoom.us/docs/integrations/create/){:target=_blank .external-link}.
+สร้าง **Client ID** และ **Client Secret** ได้โดย [สร้าง OAuth app](https://developers.zoom.us/docs/integrations/create/){:target=_blank .external-link}
 
-Use these settings for your OAuth app:
+ตั้งค่า OAuth app ตามนี้:
 
-- Select **User-managed app** for **Select how the app is managed**.
-- Copy the **OAuth Callback URL** from n8n and enter it as an **OAuth Redirect URL** in Zoom.
-- If your n8n credential displays a **Whitelist URL**, also enter that URL as a an **OAuth Redirect URL**.
-- Enter **Scopes** for the scopes you plan to use. For all functionality in the [Zoom](/integrations/builtin/app-nodes/n8n-nodes-base.zoom.md) node, select:
+- เลือก **User-managed app** ใน **Select how the app is managed**
+- คัดลอก **OAuth Callback URL** จาก n8n ไปใส่ใน Zoom เป็น **OAuth Redirect URL**
+- ถ้า credential ใน n8n มี **Whitelist URL** ให้ใส่ URL นั้นเป็น **OAuth Redirect URL** ใน Zoom ด้วย
+- ใส่ **Scopes** ตามที่ต้องการใช้งาน สำหรับใช้ทุกฟีเจอร์ใน [Zoom](/integrations/builtin/app-nodes/n8n-nodes-base.zoom.md) node ให้เลือก:
     - `meeting:read`
     - `meeting:write`
-    - Refer to [OAuth scopes | Meeting scopes](https://developers.zoom.us/docs/integrations/oauth-scopes/#meeting-scopes){:target=_blank .external-link} for more information on meeting scopes.
-- Copy the **Client ID** and **Client Secret** provided in the Zoom app and enter them in your n8n credential.
+    - ดูรายละเอียด scope เพิ่มเติมที่ [OAuth scopes | Meeting scopes](https://developers.zoom.us/docs/integrations/oauth-scopes/#meeting-scopes){:target=_blank .external-link}
+- คัดลอก **Client ID** และ **Client Secret** จาก Zoom app ไปใส่ใน n8n credential

@@ -7,15 +7,15 @@ contentType: [integration, reference]
 
 # Zendesk credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อ authenticate กับ node เหล่านี้:
 
 - [Zendesk](/integrations/builtin/app-nodes/n8n-nodes-base.zendesk.md)
 - [Zendesk Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.zendesktrigger.md)
 
 ## Prerequisites
 
-- Create a [Zendesk](https://zendesk.com/){:target=_blank .external-link} account.
-- For API token authentication, enable token access to the API in Admin Center under **Apps and integrations > APIs > Zendesk APIs**.
+- สมัคร [Zendesk](https://zendesk.com/){:target=_blank .external-link} ให้เรียบร้อยก่อน
+- ถ้าจะใช้ API token authentication ให้เปิด token access ที่ Admin Center ใน **Apps and integrations > APIs > Zendesk APIs**
 
 ## Supported authentication methods
 
@@ -24,32 +24,31 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Zendesk's API documentation](https://developer.zendesk.com/api-reference/){:target=_blank .external-link} for more information about the service.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับการใช้งาน API ได้ที่ [Zendesk's API documentation](https://developer.zendesk.com/api-reference/){:target=_blank .external-link}
 
 ## Using API token
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- Your **Subdomain**: Your Zendesk subdomain is the portion of the URL between `https://` and `.zendesk.com`. For example, if the Zendesk URL is `https://n8n-example.zendesk.com/agent/dashboard`, the subdomain is `n8n-example`.
-- An **Email** address: Enter the email address you use to log in to Zendesk.
-- An **API Token**: Generate an API token in **Apps and integrations > APIs > Zendesk API**. Refer to [API token](https://developer.zendesk.com/api-reference/introduction/security-and-auth/#api-token){:target=_blank .external-link} for more information.
+- **Subdomain**: subdomain ของ Zendesk คือส่วนของ URL ที่อยู่ระหว่าง `https://` กับ `.zendesk.com` เช่นถ้า URL คือ `https://n8n-example.zendesk.com/agent/dashboard` subdomain คือ `n8n-example`
+- **Email**: ใส่อีเมลที่ใช้ login Zendesk
+- **API Token**: สร้าง API token ได้ที่ **Apps and integrations > APIs > Zendesk API** ดูรายละเอียดที่ [API token](https://developer.zendesk.com/api-reference/introduction/security-and-auth/#api-token){:target=_blank .external-link}
 
 ## Using OAuth2
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- A **Client ID**: Generated when you create a new OAuth client.
-- A **Client Secret**: Generated when you create a new OAuth client.
-- Your **Subdomain**: Your Zendesk subdomain is the portion of the URL between `https://` and `.zendesk.com`. For example, if the Zendesk URL is `https://n8n-example.zendesk.com/agent/dashboard`, the subdomain is `n8n-example`.
+- **Client ID**: ได้จากการสร้าง OAuth client ใหม่
+- **Client Secret**: ได้จากการสร้าง OAuth client ใหม่
+- **Subdomain**: subdomain ของ Zendesk คือส่วนของ URL ที่อยู่ระหว่าง `https://` กับ `.zendesk.com` เช่นถ้า URL คือ `https://n8n-example.zendesk.com/agent/dashboard` subdomain คือ `n8n-example`
 
-To create a new OAuth client, go to **Apps and integrations > APIs > Zendesk API > OAuth Clients**.
+สร้าง OAuth client ใหม่ได้ที่ **Apps and integrations > APIs > Zendesk API > OAuth Clients**
 
-Use these settings:
+ตั้งค่าตามนี้:
 
- - Copy the **OAuth Redirect URL** from n8n and enter it as a **Redirect URL** in the OAuth client.
- - Copy the **Unique identifier** for the Zendesk client and enter this as your n8n **Client ID**.
- - Copy the **Secret** from Zendesk and enter this as your n8n **Client Secret**
+ - คัดลอก **OAuth Redirect URL** จาก n8n ไปใส่ใน **Redirect URL** ของ OAuth client
+ - คัดลอก **Unique identifier** ของ Zendesk client ไปใส่เป็น **Client ID** ใน n8n
+ - คัดลอก **Secret** จาก Zendesk ไปใส่เป็น **Client Secret** ใน n8n
  
- 
- Refer to [Registering your application with Zendesk](https://support.zendesk.com/hc/en-us/articles/4408845965210-Using-OAuth-authentication-with-your-application#topic_s21_lfs_qk){:target=_blank .external-link} for more information.
+ดูรายละเอียดเพิ่มเติมที่ [Registering your application with Zendesk](https://support.zendesk.com/hc/en-us/articles/4408845965210-Using-OAuth-authentication-with-your-application#topic_s21_lfs_qk){:target=_blank .external-link}
 

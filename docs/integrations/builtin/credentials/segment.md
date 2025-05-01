@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Segment credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้:
 
 - [Segment](/integrations/builtin/app-nodes/n8n-nodes-base.segment.md)
 
 ## Prerequisites
 
-Create a [Segment](https://segment.com/){:target=_blank .external-link} account.
+สร้าง [Segment](https://segment.com/){:target=_blank .external-link} account
 
 ## Supported authentication methods
 
@@ -21,13 +21,13 @@ Create a [Segment](https://segment.com/){:target=_blank .external-link} account.
 
 ## Related resources
 
-Refer to [Segment's Sources documentation](https://segment.com/docs/connections/sources/){:target=_blank .external-link} for more information about the service.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Segment's Sources documentation](https://segment.com/docs/connections/sources/){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ในการตั้งค่า credentials นี้ คุณจะต้องมี:
 
-- A **Write Key**: To get a Write Key, go to **Sources > Add Source**. Add a **Node.js** source and copy that write key to add to your n8n credential.
+- **Write Key**: ไปที่ **Sources > Add Source** แล้วเพิ่ม **Node.js** source จากนั้น copy write key มาใส่ใน n8n credential ของคุณ
 
-Refer to [Locate your Write Key](https://segment.com/docs/connections/find-writekey/){:target=_blank .external-link} for more information.
+ดูวิธีหา Write Key ได้ที่ [Locate your Write Key](https://segment.com/docs/connections/find-writekey/){:target=_blank .external-link}
 

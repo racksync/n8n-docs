@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Raindrop credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [Raindrop](/integrations/builtin/app-nodes/n8n-nodes-base.raindrop.md)
 
 ## Prerequisites
 
-Create a [Raindrop](https://raindrop.io/){:target=_blank .external-link} account.
+สร้าง [Raindrop](https://raindrop.io/){:target=_blank .external-link} account
 
 ## Supported authentication methods
 
@@ -21,21 +21,21 @@ Create a [Raindrop](https://raindrop.io/){:target=_blank .external-link} account
 
 ## Related resources
 
-Refer to [Raindrop's API documentation](https://developer.raindrop.io/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Raindrop's API documentation](https://developer.raindrop.io/){:target=_blank .external-link}
 
 ## Using OAuth
 
-To configure this credential, you'll need:
+สำหรับการตั้งค่า credentials นี้ คุณจะต้องมี:
 
-- A **Client ID**
-- A **Client Secret**
+- **Client ID**
+- **Client Secret**
 
-Generate both by creating a Raindrop app.
+สร้างทั้งสองอย่างโดยการสร้าง Raindrop app
 
-To create an app, go to **Settings >** [**Integrations**](https://app.raindrop.io/settings/integrations){:target=_blank .external-link} and select **+ Create new app** in the **For Developers** section.
+หากต้องการสร้าง app ให้ไปที่ **Settings >** [**Integrations**](https://app.raindrop.io/settings/integrations){:target=_blank .external-link} และเลือก **+ Create new app** ในส่วน **For Developers**
 
-Use these settings for your app:
+ใช้การตั้งค่าเหล่านี้สำหรับ app ของคุณ:
 
-- Copy the **OAuth Redirect URL** from n8n and add it as a **Redirect URI** in your app.
-- Copy the **Client ID** and **Client Secret** from the Raindrop app and enter them in your n8n credential.
+- คัดลอก **OAuth Redirect URL** จาก n8n และเพิ่มเป็น **Redirect URI** ใน app ของคุณ
+- คัดลอก **Client ID** และ **Client Secret** จาก Raindrop app และกรอกลงใน n8n credential ของคุณ
 

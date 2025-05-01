@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # SyncroMSP credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [SyncroMSP](/integrations/builtin/app-nodes/n8n-nodes-base.syncromsp.md)
 
 ## Prerequisites
 
-Create a [SyncroMSP](https://syncromsp.com/){:target=_blank .external-link} account.
+สร้างบัญชี [SyncroMSP](https://syncromsp.com/){:target=_blank .external-link} ก่อน
 
 ## Supported authentication methods
 
@@ -21,13 +21,13 @@ Create a [SyncroMSP](https://syncromsp.com/){:target=_blank .external-link} acco
 
 ## Related resources
 
-Refer to [SyncroMSP's API documentation](https://api-docs.syncromsp.com/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [SyncroMSP's API documentation](https://api-docs.syncromsp.com/){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ในการตั้งค่า credentials นี้ คุณจะต้องมี:
 
-- An **API Key**: Called an **API token** in SyncroMSP. To create an API token, go to your **user menu > Profile/Password > API Tokens** and select the option to **Create New Token**. Select **Custom Permissions** to enter a name for your token and adjust the permissions to match your requirements.
-- Your **Subdomain**: Enter your SyncroMSP subdomain. This is visible in the URL of your SyncroMSP, located between `https://` and `.syncromsp.com`. If your full URL is `https://n8n-instance.syncromsp.com`, you'd enter `n8n-instance` as the subdomain.
+- **API Key**: ใน SyncroMSP เรียกว่า **API token** วิธีสร้าง API token ให้ไปที่ **user menu > Profile/Password > API Tokens** แล้วเลือก **Create New Token** จากนั้นเลือก **Custom Permissions** เพื่อกรอกชื่อ token และกำหนด permission ตามที่ต้องการ
+- **Subdomain** ของคุณ: กรอก subdomain ของ SyncroMSP ซึ่งจะอยู่ใน URL ระหว่าง `https://` และ `.syncromsp.com` เช่น ถ้า URL คือ `https://n8n-instance.syncromsp.com` ให้กรอก `n8n-instance` เป็น subdomain
 
-Refer to [API Tokens](https://community.syncromsp.com/t/api-tokens/2297){:target=_blank .external-link} for more information on creating new tokens.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับการสร้าง token ได้ที่ [API Tokens](https://community.syncromsp.com/t/api-tokens/2297){:target=_blank .external-link}

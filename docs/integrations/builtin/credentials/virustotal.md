@@ -12,7 +12,7 @@ priority: medium
 
 ## Prerequisites
 
-Create a [VirusTotal](https://www.virustotal.com){:target=_blank .external-link} account.
+สร้างบัญชี [VirusTotal](https://www.virustotal.com){:target=_blank .external-link} ก่อน
 
 ## Supported authentication methods
 
@@ -20,13 +20,12 @@ Create a [VirusTotal](https://www.virustotal.com){:target=_blank .external-link}
 
 ## Related resources
 
-Refer to [VirusTotal's documentation](https://docs.virustotal.com/reference/overview){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [VirusTotal's documentation](https://docs.virustotal.com/reference/overview){:target=_blank .external-link}
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/virustotal/){:target=_blank .external-link} on n8n's website.
-
+นี่เป็น node สำหรับ credential เท่านั้น ดูรายละเอียดเพิ่มเติมได้ที่ [Custom API operations](/integrations/custom-operations.md) และดู [example workflows and related content](https://n8n.io/integrations/virustotal/){:target=_blank .external-link} บนเว็บไซต์ n8n
 
 ## Using API key
 
-To configure this credential, you'll need:
+ในการตั้งค่า credential นี้ คุณจะต้องมี:
 
-- An **API Token**: Go to your **user account menu > API key** to get your API key. Enter this as the **API Token** in your n8n credential. Refer to [API authentication](https://docs.virustotal.com/reference/authentication){:target=_blank .external-link} for more information.
+- **API Token**: ไปที่ **user account menu > API key** เพื่อรับ API key ของคุณ แล้วนำไปใส่ใน n8n เป็น **API Token** ดูรายละเอียดเพิ่มเติมได้ที่ [API authentication](https://docs.virustotal.com/reference/authentication){:target=_blank .external-link}

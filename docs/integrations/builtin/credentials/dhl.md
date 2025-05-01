@@ -8,7 +8,7 @@ priority: medium
 
 # DHL credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node เหล่านี้:
 
 - [DHL](/integrations/builtin/app-nodes/n8n-nodes-base.dhl.md)
 
@@ -18,25 +18,25 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [DHL's Developer documentation](https://support-developer.dhl.com/support/home){:target=_blank .external-link} for more information about the service.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับการใช้งาน API ได้ที่ [DHL's Developer documentation](https://support-developer.dhl.com/support/home){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need a [DHL Developer](https://developer.dhl.com/user/register){:target=_blank .external-link} account and:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมีบัญชี [DHL Developer](https://developer.dhl.com/user/register){:target=_blank .external-link} และ:
 
-- An **API Key**
+- **API Key**
 
-To get an API key, create an app:
+วิธีขอ API key โดยสร้าง app:
 
-1. In the DHL Developer portal, select the user icon to open your [User Apps](https://developer.dhl.com/user/apps){:target=_blank .external-link}.
-2. Select **+ Create App**.
-3. Enter an **App name**, like `n8n integration`.
-4. Enter a **Machine name**, like `n8n_integration`.
-4. In **SELECT APIs**, select **Shipment Tracking - Unified**. The API is added to the **Add API to app** section.
-5. In the **Add API to app** section, select the **+** next to the **Shipment Tracking - Unified** API.
-6. Select **Create App**. The **Apps** page opens, displaying the app you just created.
-7. Select the app you just created to view its details.
-8. Select **Show key** next to **API Key**.
-9. Copy the **API Key** and enter it in your n8n credential.
+1. ใน DHL Developer portal เลือกไอคอนผู้ใช้เพื่อเปิด [User Apps](https://developer.dhl.com/user/apps){:target=_blank .external-link} ของคุณ
+2. เลือก **+ Create App**
+3. ป้อน **App name** เช่น `n8n integration`
+4. ป้อน **Machine name** เช่น `n8n_integration`
+4. ใน **SELECT APIs** เลือก **Shipment Tracking - Unified** API จะถูกเพิ่มไปยังส่วน **Add API to app**
+5. ในส่วน **Add API to app** เลือก **+** ถัดจาก API **Shipment Tracking - Unified**
+6. เลือก **Create App** หน้า **Apps** จะเปิดขึ้น แสดง app ที่คุณเพิ่งสร้าง
+7. เลือก app ที่คุณเพิ่งสร้างเพื่อดูรายละเอียด
+8. เลือก **Show key** ถัดจาก **API Key**
+9. คัดลอก **API Key** และป้อนลงใน n8n credential ของคุณ
 
-Refer to [How to create an app?](https://support-developer.dhl.com/support/solutions/articles/47001177011-how-to-create-an-app-){:target=_blank .external-link} for more information.
+ดูข้อมูลเพิ่มเติมได้ที่ [How to create an app?](https://support-developer.dhl.com/support/solutions/articles/47001177011-how-to-create-an-app-){:target=_blank .external-link}

@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Gumroad credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้:
 
 - [Gumroad Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.gumroadtrigger.md)
 
 ## Prerequisites
 
-Create a [Gumroad](https://gumroad.com/){:target=_blank .external-link} account.
+สร้างบัญชี [Gumroad](https://gumroad.com/){:target=_blank .external-link}
 
 ## Supported authentication methods
 
@@ -21,11 +21,11 @@ Create a [Gumroad](https://gumroad.com/){:target=_blank .external-link} account.
 
 ## Related resources
 
-Refer to [Gumroad's API documentation](https://app.gumroad.com/api){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Gumroad's API documentation](https://app.gumroad.com/api){:target=_blank .external-link}
 
 ## Using API access token
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- An API **Access Token**: Create an application to generate an access token. Refer to the [Gumroad Create an application for the API documentation](https://help.gumroad.com/article/280-create-application-api){:target=_blank .external-link} for detailed instructions on creating a new application and generating an access token.
+- **Access Token** ของ API: สร้าง application เพื่อสร้าง access token ดูคำแนะนำโดยละเอียดเกี่ยวกับการสร้าง application ใหม่และการสร้าง access token ได้ที่ [Gumroad Create an application for the API documentation](https://help.gumroad.com/article/280-create-application-api){:target=_blank .external-link}
 

@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Clearbit credentials
 
-You can use these credentials to authenticate the following node:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node ต่อไปนี้:
 
 - [Clearbit](/integrations/builtin/app-nodes/n8n-nodes-base.clearbit.md)
 
 ## Prerequisites
 
-Create a [Clearbit](https://www.clearbit.com/){:target=_blank .external-link} account.
+สมัคร [Clearbit](https://www.clearbit.com/){:target=_blank .external-link} ให้เรียบร้อยก่อน
 
 ## Supported authentication methods
 
@@ -21,10 +21,10 @@ Create a [Clearbit](https://www.clearbit.com/){:target=_blank .external-link} ac
 
 ## Related resources
 
-Refer to [Clearbit's API documentation](https://dashboard.clearbit.com/docs){:target=_blank .external-link} for more information about authenticating with the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับการยืนยันตัวตนกับบริการได้ที่ [Clearbit's API documentation](https://dashboard.clearbit.com/docs){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- An **API Key**: Refer to [Clearbit's API Authentication documentation](https://dashboard.clearbit.com/docs#authentication) for more information on creating and viewing API keys.
+- **API Key**: ดูข้อมูลเพิ่มเติมเกี่ยวกับการสร้างและดู API keys ได้ที่ [Clearbit's API Authentication documentation](https://dashboard.clearbit.com/docs#authentication)

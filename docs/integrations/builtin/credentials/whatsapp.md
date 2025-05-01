@@ -8,91 +8,90 @@ priority: high
 
 # WhatsApp Business Cloud credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้:
 
 - [WhatsApp Business Cloud](/integrations/builtin/app-nodes/n8n-nodes-base.whatsapp/index.md)
 - [WhatsApp Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.whatsapptrigger.md)
 
 ## Requirements
 
-To create credentials for WhatsApp, you need the following Meta assets:
+ในการสร้าง credentials สำหรับ WhatsApp คุณต้องมี Meta assets ต่อไปนี้:
 
-- A [Meta developer](https://developers.facebook.com/docs/development/register) account: A developer account allows you to create and manage Meta apps, including WhatsApp integrations.
+- [Meta developer](https://developers.facebook.com/docs/development/register) account: บัญชีนักพัฒนา Meta จะช่วยให้คุณสร้างและจัดการ Meta apps รวมถึงการเชื่อมต่อ WhatsApp
 ??? note "Set up a Meta developer account"
-	1. Visit the [Facebook Developers site](https://developers.facebook.com).
-	2. Click **Getting Started** in the upper-right corner (if the link says **My Apps**, you've already set up a developer account).
-	3. Agree to terms and conditions.
-	4. Provide a phone number for verification.
-	5. Select your occupation or role.
-- A Meta [business portfolio](https://www.facebook.com/business/help/1710077379203657?id=180505742745347): WhatsApp messaging services require a Meta business portfolio, formerly called a Business Manager account. The UI may still show either option.
+	1. ไปที่ [Facebook Developers site](https://developers.facebook.com)
+	2. คลิก **Getting Started** ที่มุมขวาบน (ถ้าขึ้นว่า **My Apps** แสดงว่าคุณมีบัญชีนักพัฒนาแล้ว)
+	3. ยอมรับข้อตกลง
+	4. ใส่เบอร์โทรศัพท์เพื่อยืนยันตัวตน
+	5. เลือกอาชีพหรือบทบาทของคุณ
+- [business portfolio](https://www.facebook.com/business/help/1710077379203657?id=180505742745347) ของ Meta: การส่งข้อความ WhatsApp ต้องใช้ business portfolio ของ Meta (ชื่อเดิม Business Manager account) UI อาจแสดงชื่อใดชื่อหนึ่ง
 ??? note "Set up a Meta business portfolio"
-	1. Visit the [Facebook Business site](https://business.facebook.com).
-	2. Select **Create an account**.
-		* If you already have a Facebook Business account and portfolio, but want a new portfolio, open the business portfolio selector in the left-side menu and select **Create a business portfolio**.
-	3. Enter a **Business portfolio name**.
-	4. Enter your **name**.
-	5. Enter a **business email**.
-	6. Select **Submit** or **Create**.
-- A Meta [business app](https://developers.facebook.com/docs/development/create-an-app/) configured with WhatsApp: Once you have a developer account, you will create a Meta business app.
+	1. ไปที่ [Facebook Business site](https://business.facebook.com)
+	2. เลือก **Create an account**
+		* ถ้ามี Facebook Business account และ portfolio อยู่แล้ว แต่ต้องการสร้าง portfolio ใหม่ ให้เปิดตัวเลือก business portfolio ทางเมนูซ้ายแล้วเลือก **Create a business portfolio**
+	3. กรอก **Business portfolio name**
+	4. กรอก **name** ของคุณ
+	5. กรอก **business email**
+	6. กด **Submit** หรือ **Create**
+- [business app](https://developers.facebook.com/docs/development/create-an-app/) ของ Meta ที่ตั้งค่า WhatsApp แล้ว: เมื่อมีบัญชีนักพัฒนาแล้ว ให้สร้าง business app ของ Meta
 ??? note "Set up a Meta business app with WhatsApp"
-	1. Visit the [Meta for Developers Apps dashboard](https://developers.facebook.com/apps/)
-	2. Select **Create app**.
-	3. In **Add products to your app**, select **Set up** in the WhatsApp tile. Refer to [Add the WhatsApp Product](https://developers.facebook.com/docs/whatsapp/solution-providers/get-started-for-tech-providers#step-3--add-the-whatsapp-product) for more detail.
-	4. This opens the WhatsApp **Quickstart** page. Select your business portfolio.
-	5. Select **Continue**.
-	6. In the left-side menu, go to **App settings** > **Basic**.
-	7. Set the **Privacy Policy URL** and **Terms of Service URL** for the app.
-	8. Change the **App Mode** to **Live**.
-
+	1. ไปที่ [Meta for Developers Apps dashboard](https://developers.facebook.com/apps/)
+	2. เลือก **Create app**
+	3. ใน **Add products to your app** ให้เลือก **Set up** ที่ช่อง WhatsApp ดูรายละเอียดที่ [Add the WhatsApp Product](https://developers.facebook.com/docs/whatsapp/solution-providers/get-started-for-tech-providers#step-3--add-the-whatsapp-product)
+	4. จะเข้าสู่หน้า WhatsApp **Quickstart** เลือก business portfolio ของคุณ
+	5. กด **Continue**
+	6. ทางเมนูซ้ายไปที่ **App settings** > **Basic**
+	7. ตั้งค่า **Privacy Policy URL** และ **Terms of Service URL** ให้กับแอป
+	8. เปลี่ยน **App Mode** เป็น **Live**
 
 ## Supported authentication methods
 
-- API key: Use for the [WhatsApp Business Cloud](/integrations/builtin/app-nodes/n8n-nodes-base.whatsapp/index.md) node.
-- OAuth2: Use for the [WhatsApp Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.whatsapptrigger.md) node.
+- API key: ใช้กับ [WhatsApp Business Cloud](/integrations/builtin/app-nodes/n8n-nodes-base.whatsapp/index.md) node
+- OAuth2: ใช้กับ [WhatsApp Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.whatsapptrigger.md) node
 
 ## Related resources
 
-Refer to [WhatsApp's API documentation](https://developers.facebook.com/docs/whatsapp/#platform-apis) for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [WhatsApp's API documentation](https://developers.facebook.com/docs/whatsapp/#platform-apis)
 
-Meta classifies users who create WhatsApp business apps as Tech Providers; refer to Meta's [Get Started for Tech Providers](https://developers.facebook.com/docs/whatsapp/solution-providers/get-started-for-tech-providers) for more information.
+Meta จะจัดกลุ่มผู้สร้าง WhatsApp business apps เป็น Tech Providers ดูรายละเอียดที่ [Get Started for Tech Providers](https://developers.facebook.com/docs/whatsapp/solution-providers/get-started-for-tech-providers)
 
 ## Using API key
 
-You need WhatsApp API key credentials to use the [WhatsApp Business Cloud](/integrations/builtin/app-nodes/n8n-nodes-base.whatsapp/index.md) node.
+คุณต้องมี WhatsApp API key credentials เพื่อใช้ [WhatsApp Business Cloud](/integrations/builtin/app-nodes/n8n-nodes-base.whatsapp/index.md) node
 
-To configure this credential, you'll need:
+ในการตั้งค่า credential นี้ คุณจะต้องมี:
 
-- An API **Access Token**
-- A **Business Account ID**
+- **Access Token** สำหรับ API
+- **Business Account ID**
 
-To generate an access token, follow these steps:
+วิธีสร้าง access token:
 
-1. Visit the [Meta for Developers Apps dashboard](https://developers.facebook.com/apps/).
-2. Select your Meta app.
-3. In the left-side menu, select **WhatsApp** > **API Setup**.
-4. Select **Generate access token** and confirm the access you want to grant.
-5. Copy the **Access token** and add it to n8n as the **Access Token**.
-6. Copy the **WhatsApp Business Account ID** and add it to n8n as the **Business Account ID**.
+1. ไปที่ [Meta for Developers Apps dashboard](https://developers.facebook.com/apps/)
+2. เลือก Meta app ของคุณ
+3. ทางเมนูซ้ายเลือก **WhatsApp** > **API Setup**
+4. เลือก **Generate access token** และยืนยันสิทธิ์ที่ต้องการ
+5. คัดลอก **Access token** แล้วนำไปใส่ใน n8n ที่ **Access Token**
+6. คัดลอก **WhatsApp Business Account ID** แล้วนำไปใส่ใน n8n ที่ **Business Account ID**
 
-Refer to [Test Business Messaging on WhatsApp](https://developers.facebook.com/docs/whatsapp/solution-providers/become-a-tech-provider-legacy-flow#step-4--test-business-messaging-on-whatsapp) for more information on the above steps.
+ดูรายละเอียดขั้นตอนเพิ่มเติมได้ที่ [Test Business Messaging on WhatsApp](https://developers.facebook.com/docs/whatsapp/solution-providers/become-a-tech-provider-legacy-flow#step-4--test-business-messaging-on-whatsapp)
 
-Fully verifying and launching your app will take further configuration. Refer to Meta's [Get Started for Tech Providers](https://developers.facebook.com/docs/whatsapp/solution-providers/become-a-tech-provider-legacy-flow#step-5--scale-your-solution) Steps 5 and beyond for more information. Refer to [App Review](https://developers.facebook.com/docs/resp-plat-initiatives/app-review) for more information on the Meta App Review process.
+การยืนยันและเปิดใช้งานแอปจริงจะต้องตั้งค่าเพิ่มเติม ดูรายละเอียดที่ [Get Started for Tech Providers](https://developers.facebook.com/docs/whatsapp/solution-providers/become-a-tech-provider-legacy-flow#step-5--scale-your-solution) ขั้นตอน 5 ขึ้นไป และ [App Review](https://developers.facebook.com/docs/resp-plat-initiatives/app-review)
 
 ## Using OAuth2
 
-You need WhatsApp OAuth2 credentials to use the [WhatsApp Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.whatsapptrigger.md) node.
+คุณต้องมี WhatsApp OAuth2 credentials เพื่อใช้ [WhatsApp Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.whatsapptrigger.md) node
 
-To configure this credential, you'll need:
+ในการตั้งค่า credential นี้ คุณจะต้องมี:
 
-- A **Client ID**
-- A **Client Secret**
+- **Client ID**
+- **Client Secret**
 
-To retrieve these items, follow these steps:
+วิธีรับค่าเหล่านี้:
 
-1. Visit the [Meta for Developers Apps dashboard](https://developers.facebook.com/apps/).
-2. Select your Meta app.
-3. In the left-side menu, select **App settings** > **Basic**.
-4. Copy the **App ID** and enter it as the **Client ID** within the n8n credential.
-5. Copy the **App Secret** and enter it as the **Client Secret** within the n8n credential.
+1. ไปที่ [Meta for Developers Apps dashboard](https://developers.facebook.com/apps/)
+2. เลือก Meta app ของคุณ
+3. ทางเมนูซ้ายเลือก **App settings** > **Basic**
+4. คัดลอก **App ID** แล้วนำไปใส่ใน n8n ที่ **Client ID**
+5. คัดลอก **App Secret** แล้วนำไปใส่ใน n8n ที่ **Client Secret**
 
-Fully verifying and launching your app will take further configuration. Refer to Meta's [Get Started for Tech Providers](https://developers.facebook.com/docs/whatsapp/solution-providers/become-a-tech-provider-legacy-flow#step-5--scale-your-solution) Steps 5 and beyond for more information. Refer to [App Review](https://developers.facebook.com/docs/resp-plat-initiatives/app-review) for more information on the Meta App Review process.
+การยืนยันและเปิดใช้งานแอปจริงจะต้องตั้งค่าเพิ่มเติม ดูรายละเอียดที่ [Get Started for Tech Providers](https://developers.facebook.com/docs/whatsapp/solution-providers/become-a-tech-provider-legacy-flow#step-5--scale-your-solution) ขั้นตอน 5 ขึ้นไป และ [App Review](https://developers.facebook.com/docs/resp-plat-initiatives/app-review)

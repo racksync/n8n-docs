@@ -8,7 +8,7 @@ priority: medium
 
 # Facebook Lead Ads credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้:
 
 * [Facebook Lead Ads trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebookleadadstrigger.md)
 
@@ -18,48 +18,48 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Facebook Lead Ads' documentation](https://developers.facebook.com/docs/marketing-api/guides/lead-ads/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Facebook Lead Ads' documentation](https://developers.facebook.com/docs/marketing-api/guides/lead-ads/){:target=_blank .external-link}
 
-View [example workflows and related content](https://n8n.io/integrations/facebook-lead-ads-trigger/){:target=_blank .external-link} on n8n's website.
+ดู [example workflows and related content](https://n8n.io/integrations/facebook-lead-ads-trigger/){:target=_blank .external-link} บนเว็บไซต์ของ n8n
 
 ## Using OAuth2
 
-To configure this credential, you'll need a [Meta for Developers](https://developers.facebook.com/){:target=_blank .external-link} account and:
+ในการกำหนดค่า credential นี้ คุณจะต้องมีบัญชี [Meta for Developers](https://developers.facebook.com/){:target=_blank .external-link} และ:
 
-- A **Client ID**
-- A **Client Secret**
+- **Client ID**
+- **Client Secret**
 
-To get both, [create a Meta app](https://developers.facebook.com/docs/development/create-an-app){:target=_blank .external-link} with either the Facebook Login product or the Facebook Login for Business product.
+หากต้องการรับทั้งสองอย่าง ให้ [create a Meta app](https://developers.facebook.com/docs/development/create-an-app){:target=_blank .external-link} ด้วยผลิตภัณฑ์ Facebook Login หรือ Facebook Login for Business
 
-To create your app and set up the credential with **Facebook Login for Business**:
+วิธีสร้างแอปของคุณและตั้งค่า credential ด้วย **Facebook Login for Business**:
 
-1. Go to the Meta Developer [App Dashboard](https://developers.facebook.com/apps){:target=_blank .external-link} and select **Create App**.
-2. If you have a business portfolio and you're ready to connect the app to it, select the business portfolio. If you don't have a business portfolio or you're not ready to connect the app to the portfolio, select **I don’t want to connect a business portfolio yet** and select **Next**. The **Use cases** page opens.
-3. Select **Other**, then select **Next**.
-4. Select **Business** and **Next**.
-5. Complete the essential information:
-    * Add an **App name**.
-    * Add an **App contact email**.
-    * Here again you can connect to a business portfolio or skip it.
-1. Select **Create app**. The **Add products to your app** page opens.
-1. Select **Facebook Login for Business**. The **Settings** page for this product opens.
-1. Copy the **OAuth Redirect URL** from your n8n credential.
-1. In your Meta app settings in **Client OAuth settings**, paste that URL as the **Valid OAuth Redirect URIs**.
-1. Select **App settings > Basic** from the left menu.
-1. Copy the **App ID** and enter it as the **Client ID** within your n8n credential.
-1. Copy the **App Secret** and enter it as the **Client Secret** within your n8n credential.
+1. ไปที่ [App Dashboard](https://developers.facebook.com/apps){:target=_blank .external-link} ของ Meta Developer แล้วเลือก **Create App**
+2. หากคุณมี business portfolio และพร้อมที่จะเชื่อมต่อแอปเข้ากับมัน ให้เลือก business portfolio หากคุณไม่มี business portfolio หรือยังไม่พร้อมที่จะเชื่อมต่อแอปเข้ากับ portfolio ให้เลือก **I don’t want to connect a business portfolio yet** แล้วเลือก **Next** หน้า **Use cases** จะเปิดขึ้น
+3. เลือก **Other** จากนั้นเลือก **Next**
+4. เลือก **Business** และ **Next**
+5. กรอกข้อมูลที่จำเป็น:
+    * เพิ่ม **App name**
+    * เพิ่ม **App contact email**
+    * ที่นี่คุณสามารถเชื่อมต่อกับ business portfolio หรือข้ามไปได้อีกครั้ง
+1. เลือก **Create app** หน้า **Add products to your app** จะเปิดขึ้น
+1. เลือก **Facebook Login for Business** หน้า **Settings** สำหรับผลิตภัณฑ์นี้จะเปิดขึ้น
+1. คัดลอก **OAuth Redirect URL** จาก n8n credential ของคุณ
+1. ในการตั้งค่าแอป Meta ของคุณใน **Client OAuth settings** ให้วาง URL นั้นเป็น **Valid OAuth Redirect URIs**
+1. เลือก **App settings > Basic** จากเมนูด้านซ้าย
+1. คัดลอก **App ID** และป้อนเป็น **Client ID** ภายใน n8n credential ของคุณ
+1. คัดลอก **App Secret** และป้อนเป็น **Client Secret** ภายใน n8n credential ของคุณ
 
-Your credential should successfully connect now, but you'll need to go through the steps to take your Meta app live before you can use it with the [Facebook Lead Ads trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebookleadadstrigger.md). Here's a summary of what you'll need to do:
+ตอนนี้ credential ของคุณควรเชื่อมต่อได้สำเร็จ แต่คุณจะต้องทำตามขั้นตอนเพื่อทำให้แอป Meta ของคุณใช้งานได้จริง (live) ก่อนจึงจะสามารถใช้กับ [Facebook Lead Ads trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebookleadadstrigger.md) ได้ นี่คือสรุปสิ่งที่คุณต้องทำ:
 
-1. In your Meta app, select **App settings > Basic** from the left menu.
-1. Enter a **Privacy Policy URL**. (Required to take the app "Live.")
-1. Select **Save changes**.
-1. At the top of the page, toggle the **App Mode** from **Development** to **Live**.
-1. Facebook Login for Business requires Advanced Access for `public_profile`. To add it, go to **App Review > Permissions and Features**.
-1. Search for `public_profile` and select **Request advanced access**.
-1. Complete the steps for [business verification](https://www.facebook.com/business/tools/meta-verified-for-business/){:target=_blank .external-link}.
-1. Use the [Lead Ads Testing Tool](https://developers.facebook.com/tools/lead-ads-testing){:target=_blank .external-link} to trigger some demo form submissions and test your workflow.
+1. ในแอป Meta ของคุณ เลือก **App settings > Basic** จากเมนูด้านซ้าย
+1. ป้อน **Privacy Policy URL** (จำเป็นต้องใช้เพื่อทำให้แอป "Live")
+1. เลือก **Save changes**
+1. ที่ด้านบนของหน้า สลับ **App Mode** จาก **Development** เป็น **Live**
+1. Facebook Login for Business ต้องการ Advanced Access สำหรับ `public_profile` หากต้องการเพิ่ม ให้ไปที่ **App Review > Permissions and Features**
+1. ค้นหา `public_profile` และเลือก **Request advanced access**
+1. ทำตามขั้นตอนสำหรับ [business verification](https://www.facebook.com/business/tools/meta-verified-for-business/){:target=_blank .external-link}
+1. ใช้ [Lead Ads Testing Tool](https://developers.facebook.com/tools/lead-ads-testing){:target=_blank .external-link} เพื่อทริกเกอร์การส่งฟอร์มตัวอย่างและทดสอบ workflow ของคุณ
 
-Refer to Meta's [Create an app](https://developers.facebook.com/docs/development/create-an-app){:target=_blank .external-link} documentation for more information on creating an app, required fields like the Privacy Policy URL, and adding products.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับการสร้างแอป ฟิลด์ที่จำเป็น เช่น Privacy Policy URL และการเพิ่มผลิตภัณฑ์ได้ที่เอกสาร [Create an app](https://developers.facebook.com/docs/development/create-an-app){:target=_blank .external-link} ของ Meta
 
-For more information on the app modes and switching to **Live** mode, refer to [App Modes](https://developers.facebook.com/docs/development/build-and-test/app-modes){:target=_blank .external-link} and [Publish | App Types](https://developers.facebook.com/docs/development/release#app-types){:target=_blank .external-link}.
+สำหรับข้อมูลเพิ่มเติมเกี่ยวกับโหมดแอปและการเปลี่ยนเป็นโหมด **Live** โปรดดูที่ [App Modes](https://developers.facebook.com/docs/development/build-and-test/app-modes){:target=_blank .external-link} และ [Publish | App Types](https://developers.facebook.com/docs/development/release#app-types){:target=_blank .external-link}

@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # E-goi credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node เหล่านี้:
 
 - [E-goi](/integrations/builtin/app-nodes/n8n-nodes-base.egoi.md)
 
 ## Prerequisites
 
-Create an [E-goi](https://www.e-goi.com/) account.
+สมัคร [E-goi](https://www.e-goi.com/){:target=_blank .external-link} ให้เรียบร้อยก่อน
 
 ## Supported authentication methods
 
@@ -21,11 +21,11 @@ Create an [E-goi](https://www.e-goi.com/) account.
 
 ## Related resources
 
-Refer to [E-goi's API documentation](https://developers.e-goi.com/api/v3/){:target=_blank .external-link} for more information about the service.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับการใช้งาน API ได้ที่ [E-goi's API documentation](https://developers.e-goi.com/){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- An **API Key**: Refer to [E-goi's API key documentation](https://helpdesk.e-goi.com/511369-Whats-E-gois-API-and-where-do-I-find-my-API-key){:target=_blank .external-link} for instructions on generating and viewing an API key.
+- **API Key**: สร้าง API key ได้ใน [E-goi dashboard](https://login.egoiapp.com/){:target=_blank .external-link} ไปที่ **Integrations** ในเมนูผู้ใช้
 

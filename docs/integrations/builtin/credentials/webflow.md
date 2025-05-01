@@ -7,15 +7,15 @@ contentType: [integration, reference]
 
 # Webflow credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้:
 
 - [Webflow](/integrations/builtin/app-nodes/n8n-nodes-base.webflow.md)
 - [Webflow Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.webflowtrigger.md)
 
 ## Prerequisites
 
-- Create a [Webflow](https://webflow.com/){:target=_blank .external-link} account.
-- [Create a site](https://developers.webflow.com/data/reference/structure-1#sites){:target=_blank .external-link}: Required for API access token authentication only.
+- สร้างบัญชี [Webflow](https://webflow.com/){:target=_blank .external-link}
+- [Create a site](https://developers.webflow.com/data/reference/structure-1#sites){:target=_blank .external-link}: จำเป็นสำหรับการยืนยันตัวตนด้วย API access token เท่านั้น
 
 ## Supported authentication methods
 
@@ -24,24 +24,24 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Webflow's API documentation](https://developers.webflow.com/data/reference/rest-introduction){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Webflow's API documentation](https://developers.webflow.com/data/reference/rest-introduction){:target=_blank .external-link}
 
 ## Using API access token
 
-To configure this credential, you'll need:
+ในการตั้งค่า credential นี้ คุณจะต้องมี:
 
-- A Site **Access Token**: Access tokens are site-specific. Go to your site's **Site Settings > Apps & integrations > API access** and select **Generate API token**. Refer to [Get a Site Token](https://developers.webflow.com/data/docs/get-a-site-token){:target=_blank .external-link} for more information.
+- **Access Token** ของ Site: Access token จะเป็นแบบเฉพาะ site ไปที่ **Site Settings > Apps & integrations > API access** แล้วเลือก **Generate API token** ดูรายละเอียดเพิ่มเติมได้ที่ [Get a Site Token](https://developers.webflow.com/data/docs/get-a-site-token){:target=_blank .external-link}
 
 ## Using OAuth2
 
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-If you need to configure OAuth2 from scratch, [register an application](https://developers.webflow.com/data/docs/register-an-app){:target=_blank .external-link} in your workspace.
+ถ้าคุณต้องการตั้งค่า OAuth2 ใหม่ทั้งหมด ให้ [register an application](https://developers.webflow.com/data/docs/register-an-app){:target=_blank .external-link} ใน workspace ของคุณ
 
-Use these settings for your application:
+ใช้ค่าต่อไปนี้สำหรับ application ของคุณ:
 
-- Copy the **OAuth callback URL** from n8n and add it as a **Redirect URI** in your application.
-- Once you've created your application, copy the **Client ID** and **Client Secret** and enter them in your n8n credential.
-- If you are using the Webflow Data API V1 (deprecated), enable the **Legacy** toggle. Otherwise, leave this inactive.
+- คัดลอก **OAuth callback URL** จาก n8n แล้วนำไปใส่เป็น **Redirect URI** ใน application ของคุณ
+- เมื่อสร้าง application เสร็จแล้ว ให้คัดลอก **Client ID** และ **Client Secret** ไปใส่ใน credential ของ n8n
+- ถ้าคุณใช้ Webflow Data API V1 (deprecated) ให้เปิด toggle **Legacy** ถ้าไม่ใช้ให้ปล่อยว่างไว้
 
-Refer to [OAuth](https://developers.webflow.com/data/reference/oauth-app){:target=_blank .external-link} for more information on Webflow's OAuth web flow.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับ OAuth ได้ที่ [OAuth](https://developers.webflow.com/data/reference/oauth-app){:target=_blank .external-link}

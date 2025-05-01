@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # ServiceNow credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้:
 
 - [ServiceNow](/integrations/builtin/app-nodes/n8n-nodes-base.servicenow.md)
 
 ## Prerequisites
 
-Create a [ServiceNow](https://developer.servicenow.com/dev.do#!/reference){:target=_blank .external-link} developer account.
+สมัคร [ServiceNow](https://developer.servicenow.com/dev.do#!/reference){:target=_blank .external-link} developer account ก่อนใช้งาน
 
 ## Supported authentication methods
 
@@ -22,29 +22,29 @@ Create a [ServiceNow](https://developer.servicenow.com/dev.do#!/reference){:targ
 
 ## Related resources
 
-Refer to [ServiceNow's API documentation](https://developer.servicenow.com/dev.do#!/reference/api/washingtondc/rest/){:target=_blank .external-link} for more information about the service.
+ดูรายละเอียดเพิ่มเติมได้ที่ [ServiceNow's API documentation](https://developer.servicenow.com/dev.do#!/reference/api/washingtondc/rest/){:target=_blank .external-link}
 
 ## Using basic auth
 
-To configure this credential, you'll need:
+ในการตั้งค่า credential นี้ คุณจะต้องมี:
 
-- A **User** name: Enter your ServiceNow username.
-- A **Password**: Enter your ServiceNow password.
-- A **Subdomain**: The subdomain for your servicenow instance is in your instance URL: `https://<subdomain>.service-now.com/`. For example, if the full URL is `https://dev99890.service-now.com`, then the subdomain is `dev99890`.
+- **User** name: ใส่ชื่อผู้ใช้ ServiceNow ของคุณ
+- **Password**: ใส่รหัสผ่าน ServiceNow ของคุณ
+- **Subdomain**: subdomain ของ instance คุณจะอยู่ใน URL: `https://<subdomain>.service-now.com/` เช่น ถ้า URL คือ `https://dev99890.service-now.com` subdomain คือ `dev99890`
 
 ## Using OAuth2
 
-To configure this credential, you'll need:
+ในการตั้งค่า credential นี้ คุณจะต้องมี:
 
-- A **Client ID**: Generated once you register a new app.
-- A **Client Secret**: Generated once you register a new app.
-- A **Subdomain**: The subdomain for your servicenow instance is in your instance URL: `https://<subdomain>.service-now.com/`. For example, if the full URL is `https://dev99890.service-now.com`, then the subdomain is `dev99890`.
+- **Client ID**: ได้หลังจาก register app ใหม่
+- **Client Secret**: ได้หลังจาก register app ใหม่
+- **Subdomain**: subdomain ของ instance คุณจะอยู่ใน URL: `https://<subdomain>.service-now.com/` เช่น ถ้า URL คือ `https://dev99890.service-now.com` subdomain คือ `dev99890`
 
-To generate your **Client ID** and **Client Secret**, register a new app in **System OAuth > Application Registry > New > Create an OAuth API endpoint for external clients**. Use these settings for your app:
+วิธีสร้าง **Client ID** และ **Client Secret** ให้ไปที่ **System OAuth > Application Registry > New > Create an OAuth API endpoint for external clients** แล้วใช้ค่าต่อไปนี้:
 
-- Copy the **Client ID** and add it to your n8n credential.
-- Enter a **Client Secret** or leave it blank to automatically generate a random secret. Add this secret to your n8n credential.
-- Copy the n8n **OAuth Redirect URL** and add it as a **Redirect URL**.
+- คัดลอก **Client ID** แล้วนำไปใส่ใน n8n credential
+- ใส่ **Client Secret** หรือปล่อยว่างไว้เพื่อให้ระบบสร้าง secret อัตโนมัติ แล้วนำ secret นี้ไปใส่ใน n8n credential
+- คัดลอก **OAuth Redirect URL** จาก n8n แล้วนำไปใส่ใน **Redirect URL**
 
-Refer to [How to setup OAuth2 authentication for RESTMessageV2 integrations](https://www.servicenow.com/community/in-other-news/how-to-setup-oauth2-authentication-for-restmessagev2/ba-p/2271823){:target=_blank .external-link} for more information.
+ดูรายละเอียดเพิ่มเติมได้ที่ [How to setup OAuth2 authentication for RESTMessageV2 integrations](https://www.servicenow.com/community/in-other-news/how-to-setup-oauth2-authentication-for-restmessagev2/ba-p/2271823){:target=_blank .external-link}
 

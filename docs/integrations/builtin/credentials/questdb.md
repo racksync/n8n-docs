@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # QuestDB credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [QuestDB](/integrations/builtin/app-nodes/n8n-nodes-base.questdb.md)
 
 ## Prerequisites
 
-Create a user account on an instance of [QuestDB](https://questdb.io/){:target=_blank .external-link}.
+สร้าง user account บน instance ของ [QuestDB](https://questdb.io/){:target=_blank .external-link}
 
 ## Supported authentication methods
 
@@ -21,20 +21,20 @@ Create a user account on an instance of [QuestDB](https://questdb.io/){:target=_
 
 ## Related resources
 
-Refer to [QuestDB's documentation](https://questdb.io/docs){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [QuestDB's documentation](https://questdb.io/docs){:target=_blank .external-link}
 
 ## Using database connection
 
-To configure this credential, you'll need:
+สำหรับการตั้งค่า credentials นี้ คุณจะต้องมี:
 
-- The **Host**: Enter the host name or IP address for the server.
-- The **Database**: Enter the database name, for example `qdb`.
-- A **User**: Enter the username for the user account as configured in `pg.user` or `pg.readonly.user` property in `server.conf`. Default value is `admin`.
-- A **Password**: Enter the password for the user account as configured in `pg.password` or `pg.readonly.password` property in `server.conf`. Default value is `quest`.
-- **SSL**: Select whether the connection should use SSL, which sets the `sslmode` parameter. Options include:
+- **Host**: กรอก host name หรือ IP address ของ server
+- **Database**: กรอกชื่อ database เช่น `qdb`
+- **User**: กรอก username สำหรับ user account ตามที่กำหนดค่าใน property `pg.user` หรือ `pg.readonly.user` ใน `server.conf` ค่า default คือ `admin`
+- **Password**: กรอก password สำหรับ user account ตามที่กำหนดค่าใน property `pg.password` หรือ `pg.readonly.password` ใน `server.conf` ค่า default คือ `quest`
+- **SSL**: เลือกว่าการเชื่อมต่อควรใช้ SSL หรือไม่ ซึ่งจะตั้งค่า parameter `sslmode` ตัวเลือกที่มี:
     - **Allow**
     - **Disable**
     - **Require**
-- The **Port**: Enter the port number to use for the connection. Default is `8812`.
+- **Port**: กรอกหมายเลข port ที่จะใช้สำหรับการเชื่อมต่อ ค่า default คือ `8812`
 
-Refer to [List of supported connection properties](https://questdb.io/docs/reference/api/postgres/#list-of-supported-connection-properties){:target=_blank .external-link} for more information.
+ดูข้อมูลเพิ่มเติมที่ [List of supported connection properties](https://questdb.io/docs/reference/api/postgres/#list-of-supported-connection-properties){:target=_blank .external-link}

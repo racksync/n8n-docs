@@ -7,18 +7,18 @@ contentType: [integration, reference]
 
 # Medium credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนใน nodes ต่อไปนี้:
 
 - [Medium](/integrations/builtin/app-nodes/n8n-nodes-base.medium.md)
 
 /// warning | Medium API no longer supported
-Medium has stopped supporting the Medium API. These credentials still appear within n8n, but you can't configure new integrations using them.
+Medium ได้หยุดสนับสนุน Medium API แล้ว credentials เหล่านี้ยังคงปรากฏใน n8n แต่คุณไม่สามารถกำหนดค่า integrations ใหม่โดยใช้ credentials เหล่านี้ได้
 ///
 
 ## Prerequisites
 
-- Create an account on [Medium](https://www.medium.com/){:target=_blank .external-link}.
-- For OAuth2, request access to credentials by emailing [yourfriends@medium.com](mailto:yourfriends@medium.com).
+- สร้างบัญชีบน [Medium](https://www.medium.com/){:target=_blank .external-link}
+- สำหรับ OAuth2 ให้ขอสิทธิ์เข้าถึง credentials โดยส่งอีเมลไปที่ [yourfriends@medium.com](mailto:yourfriends@medium.com)
 
 ## Supported authentication methods
 
@@ -27,26 +27,26 @@ Medium has stopped supporting the Medium API. These credentials still appear wit
 
 ## Related resources
 
-Refer to [Medium's API documentation](https://github.com/Medium/medium-api-docs){:target=_blank .external-link} for more information about the service.
+อ้างอิง [Medium's API documentation](https://github.com/Medium/medium-api-docs){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 ## Using API access token
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- An API **Access Token**: Generate a token in **Settings >** [**Security and apps**](https://medium.com/me/settings/security){:target=_blank .external-link} **> Integration tokens**. Use the integration token this generates as your n8n **Access Token**.
+- **Access Token** ของ API: สร้าง token ใน **Settings >** [**Security and apps**](https://medium.com/me/settings/security){:target=_blank .external-link} **> Integration tokens** ใช้ integration token ที่สร้างขึ้นนี้เป็น **Access Token** ของ n8n
 
-Refer to the Medium API [Self-issued access tokens documentation](https://github.com/Medium/medium-api-docs?tab=readme-ov-file#21-self-issued-access-tokens){:target=_blank .external-link} for more information.
+อ้างอิงเอกสาร Medium API [Self-issued access tokens documentation](https://github.com/Medium/medium-api-docs?tab=readme-ov-file#21-self-issued-access-tokens){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 
 ## Using OAuth2
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- A **Client ID**
-- A **Client Secret**
+- **Client ID**
+- **Client Secret**
 
-To generate a **Client ID** and **Client Secret**, you'll need access to the **Developers** menu. From there, create a new application to generate the Client ID and Secret.
+วิธีสร้าง **Client ID** และ **Client Secret** คุณจะต้องเข้าถึงเมนู **Developers** จากนั้น สร้างแอปพลิเคชันใหม่เพื่อสร้าง Client ID และ Secret
 
-Use these settings for your new application:
+ใช้การตั้งค่าเหล่านี้สำหรับแอปพลิเคชันใหม่ของคุณ:
 
-- Select **OAuth 2** as the **Authorization Protocol**
-- Copy the **OAuth Callback URL** from n8n and use this as the **Callback URL** in Medium.
+- เลือก **OAuth 2** เป็น **Authorization Protocol**
+- คัดลอก **OAuth Callback URL** จาก n8n และใช้เป็น **Callback URL** ใน Medium

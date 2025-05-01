@@ -7,31 +7,25 @@ contentType: [integration, reference]
 
 # Eventbrite credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node เหล่านี้:
 
+- [Eventbrite](/integrations/builtin/app-nodes/n8n-nodes-base.eventbrite.md)
 - [Eventbrite Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.eventbritetrigger.md)
 
 ## Prerequisites
 
-Create an [Eventbrite](https://www.eventbrite.com/) account.
+สมัคร [Eventbrite](https://www.eventbrite.com/){:target=_blank .external-link} ให้เรียบร้อยก่อน
 
 ## Supported authentication methods
 
-- API private key
 - OAuth2
 
 ## Related resources
 
-Refer to [Eventbrite's API documentation](https://www.eventbrite.com/platform/api){:target=_blank .external-link} for more information about the service.
-
-## Using API private key
-
-To configure this credential, you'll need:
-
-- A **Private Key**: Refer to the [Eventbrite API Authentication Get a Private Token documentation](https://www.eventbrite.com/platform/api#/introduction/authentication/1.-get-a-private-token){:target=_blank .external-link} for detailed steps to generate a Private Token. Use this private token as the **Private Key** in the n8n credential.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับการใช้งาน API ได้ที่ [Eventbrite's API documentation](https://www.eventbrite.com/platform/api){:target=_blank .external-link}
 
 ## Using OAuth2
 
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-If you need to configure OAuth2 from scratch or need more detail on what's happening in the OAuth web flow, refer to the instructions in the [Eventbrite API authentication For App Partners documentation](https://www.eventbrite.com/platform/api#/introduction/authentication/2.-(for-app-partners)-authorize-your-users){:target=_blank .external-link} to set up OAuth.
+หากคุณต้องการตั้งค่า OAuth2 ด้วยตัวเอง หรือต้องการรายละเอียดเพิ่มเติมเกี่ยวกับขั้นตอน OAuth web flow คุณจะต้องสร้าง API key ดูข้อมูลเพิ่มเติมได้ที่ [Eventbrite API Key Management documentation](https://www.eventbrite.com/platform/docs/authentication#api-key-management){:target=_blank .external-link}

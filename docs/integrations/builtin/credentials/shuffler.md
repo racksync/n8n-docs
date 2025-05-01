@@ -12,7 +12,7 @@ priority: medium
 
 ## Prerequisites
 
-Create a [Shuffler](https://shuffler.io){:target=_blank .external-link} account on either a cloud or self-hosted instance.
+สมัคร [Shuffler](https://shuffler.io){:target=_blank .external-link} ได้ทั้งบน cloud หรือ self-hosted instance
 
 ## Supported authentication methods 
 
@@ -20,12 +20,12 @@ Create a [Shuffler](https://shuffler.io){:target=_blank .external-link} account 
 
 ## Related resources
 
-Refer to [Shuffler's documentation](https://shuffler.io/docs/API#authentication){:target=_blank .external-link} for more information about the service.
+ดูรายละเอียดเพิ่มเติมได้ที่ [Shuffler's documentation](https://shuffler.io/docs/API#authentication){:target=_blank .external-link}
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/shuffler/){:target=_blank .external-link} on n8n's website.
+นี่เป็น node สำหรับ credential เท่านั้น ดูวิธีใช้งาน [Custom API operations](/integrations/custom-operations.md) เพิ่มเติม และดู [example workflows and related content](https://n8n.io/integrations/shuffler/){:target=_blank .external-link} บนเว็บไซต์ n8n
 
 ## Using API key
 
-To configure this credential, you'll need:
+ในการตั้งค่า credential นี้ คุณจะต้องมี:
 
-- An **API Key**: Get your API key from the **Settings** page.
+- **API Key**: สามารถหาได้จากหน้า **Settings**

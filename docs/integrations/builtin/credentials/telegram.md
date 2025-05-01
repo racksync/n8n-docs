@@ -8,14 +8,14 @@ priority: critical
 
 # Telegram credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [Telegram](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/index.md)
 - [Telegram Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/index.md)
 
 ## Prerequisites
 
-Create a [Telegram](https://telegram.org/){:target=_blank .external-link} account.
+สร้างบัญชี [Telegram](https://telegram.org/){:target=_blank .external-link} ก่อน
 
 ## Supported authentication methods
 
@@ -23,28 +23,28 @@ Create a [Telegram](https://telegram.org/){:target=_blank .external-link} accoun
 
 ## Related resources
 
-Refer to [Telegram's Bot API documentation](https://core.telegram.org/bots/api){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Telegram's Bot API documentation](https://core.telegram.org/bots/api){:target=_blank .external-link}
 
-Refer to the [Telegram Bot Features](https://core.telegram.org/bots/features){:target=_blank .external-link} documentation for more information on creating and working with bots.
+ดูข้อมูลเกี่ยวกับการสร้างและใช้งาน bot ได้ที่ [Telegram Bot Features](https://core.telegram.org/bots/features){:target=_blank .external-link}
 
 ## Using API bot access token
 
-To configure this credential, you'll need:
+ในการตั้งค่า credentials นี้ คุณจะต้องมี:
 
-- A bot **Access Token**
+- **Access Token** ของ bot
 
-To generate your access token:
+วิธีสร้าง access token:
 
-1. Start a chat with the [BotFather](https://telegram.me/BotFather){:target=_blank .external-link}.
-2. Enter the `/newbot` command to create a new bot.
-3. The BotFather will ask you for a name and username for your new bot:
-    * The **name** is the bot's name displayed in contact details and elsewhere. You can change the bot name later.
-    * The **username** is a short name used in search, mentions, and t.me links. Use these guidelines when creating your username:
-        * Must be between 5 and 32 characters long.
-        * Not case sensitive.
-        * May only include Latin characters, numbers, and underscores.
-        * Must end in `bot`, like `tetris_bot` or `TetrisBot`.
-        * You can't change the username later.
-3. Copy the bot **token** the BotFather generates and add it as the **Access Token** in n8n.
+1. เริ่มแชทกับ [BotFather](https://telegram.me/BotFather){:target=_blank .external-link}
+2. พิมพ์คำสั่ง `/newbot` เพื่อสร้าง bot ใหม่
+3. BotFather จะถามชื่อและ username ของ bot ใหม่:
+    * **name** คือชื่อที่จะแสดงใน contact และที่อื่น ๆ สามารถเปลี่ยนชื่อ bot ได้ภายหลัง
+    * **username** คือชื่อสั้น ๆ ที่ใช้ใน search, mention และ t.me link โดยมีข้อกำหนดดังนี้:
+        * ต้องมีความยาว 5-32 ตัวอักษร
+        * ไม่สนใจตัวพิมพ์ใหญ่/เล็ก
+        * ใช้ได้เฉพาะตัวอักษรภาษาอังกฤษ ตัวเลข และขีดล่าง (_)
+        * ต้องลงท้ายด้วย `bot` เช่น `tetris_bot` หรือ `TetrisBot`
+        * ไม่สามารถเปลี่ยน username ได้ภายหลัง
+3. คัดลอก **token** ที่ BotFather สร้างให้ แล้วนำไปใส่ใน n8n เป็น **Access Token**
 
-Refer to the [BotFather Create a new bot documentation](https://core.telegram.org/bots/features#creating-a-new-bot) for more information.
+ดูรายละเอียดเพิ่มเติมได้ที่ [BotFather Create a new bot documentation](https://core.telegram.org/bots/features#creating-a-new-bot)

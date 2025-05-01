@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Matrix credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนใน nodes ต่อไปนี้:
 
 - [Matrix](/integrations/builtin/app-nodes/n8n-nodes-base.matrix.md)
 
 ## Prerequisites
 
-Create an account on a [Matrix](https://matrix.org/){:target=_blank .external-link} server. Refer to [Creating an account](https://matrix.org/docs/chat_basics/matrix-for-im/#creating-a-matrix-account){:target=_blank .external-link} for more information.
+สร้างบัญชีบนเซิร์ฟเวอร์ [Matrix](https://matrix.org/){:target=_blank .external-link} อ้างอิง [Creating an account](https://matrix.org/docs/chat_basics/matrix-for-im/#creating-a-matrix-account){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 
 ## Supported authentication methods
 
@@ -21,16 +21,16 @@ Create an account on a [Matrix](https://matrix.org/){:target=_blank .external-li
 
 ## Related resources
 
-Refer to the [Matrix Specification](https://spec.matrix.org/latest/){:target=_blank .external-link} for more information about the service.
+อ้างอิง [Matrix Specification](https://spec.matrix.org/latest/){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
-Refer to the documentation for the specific client you're using to access the Matrix server.
+อ้างอิงเอกสารสำหรับ client เฉพาะที่คุณใช้เพื่อเข้าถึงเซิร์ฟเวอร์ Matrix
 
 ## Using API access token
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- An **Access Token**: This token is tied to the account you use to log into Matrix with.
-- A **Homeserver URL**: This is the URL of the [homeserver](https://matrix.org/docs/matrix-concepts/elements-of-matrix/#homeserver){:target=_blank .external-link} you entered when you created your account. n8n prepopulates this with matrix.org's own server; adjust this if you're using a server hosted elsewhere.
+- **Access Token**: token นี้ผูกกับบัญชีที่คุณใช้เข้าสู่ระบบ Matrix
+- **Homeserver URL**: นี่คือ URL ของ [homeserver](https://matrix.org/docs/matrix-concepts/elements-of-matrix/#homeserver){:target=_blank .external-link} ที่คุณป้อนเมื่อสร้างบัญชีของคุณ n8n เติมข้อมูลนี้ล่วงหน้าด้วยเซิร์ฟเวอร์ของ matrix.org เอง ปรับเปลี่ยนค่านี้หากคุณใช้เซิร์ฟเวอร์ที่โฮสต์ที่อื่น
 
-Instructions for getting these details vary depending on the client you're using to access the server. Both the **Access Token** and the **Homeserver URL** can most commonly be found in **Settings > Help & About > Advanced**, but refer to your client's documentation for more details. 
+คำแนะนำในการรับรายละเอียดเหล่านี้แตกต่างกันไปขึ้นอยู่กับ client ที่คุณใช้เพื่อเข้าถึงเซิร์ฟเวอร์ ทั้ง **Access Token** และ **Homeserver URL** ส่วนใหญ่มักพบได้ใน **Settings > Help & About > Advanced** แต่อ้างอิงเอกสารของ client ของคุณสำหรับรายละเอียดเพิ่มเติม
 

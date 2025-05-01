@@ -8,68 +8,68 @@ priority: medium
 
 # X (formerly Twitter) credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [X (formerly Twitter)](/integrations/builtin/app-nodes/n8n-nodes-base.twitter.md)
 
 ## Prerequisites
 
-- Create an [X developer](https://developer.x.com/en){:target=_blank .external-link} account.
-- Create a [Twitter app](https://developer.x.com/en/docs/apps){:target=_blank .external-link} or use the default project and app created when you sign up for the developer portal. Refer to each supported authentication method below for more details on the app's configuration.
+- สร้าง [X developer](https://developer.x.com/en){:target=_blank .external-link} account ขึ้นมาก่อน
+- สร้าง [Twitter app](https://developer.x.com/en/docs/apps){:target=_blank .external-link} หรือจะใช้ project และ app ที่ถูกสร้างให้อัตโนมัติเมื่อสมัคร developer portal ก็ได้ ดูรายละเอียดการตั้งค่า app เพิ่มเติมในแต่ละ authentication method ด้านล่าง
 
 ## Supported authentication methods
 
 - OAuth2
 
 /// note | Deprecation warning
-n8n used to support an **OAuth** authentication method, which used X's [OAuth 1.0a](https://developer.x.com/en/docs/authentication/oauth-1-0a){:target=_blank .external-link} authentication method. n8n deprecated this method with the release of V2 of the X node in n8n version [0.236.0](/release-notes/0-x.md#n8n02360).
+n8n เคยรองรับวิธี **OAuth** authentication ที่ใช้ X's [OAuth 1.0a](https://developer.x.com/en/docs/authentication/oauth-1-0a){:target=_blank .external-link} authentication method มาก่อน แต่ n8n ได้ยกเลิกวิธีนี้ตั้งแต่ปล่อย V2 ของ X node ใน n8n เวอร์ชัน [0.236.0](/release-notes/0-x.md#n8n02360)
 ///
 
 ## Related resources
 
-Refer to [X's API documentation](https://developer.x.com/en/docs/twitter-api){:target=_blank .external-link} for more information about the service. Refer to [X's API authentication documentation](https://developer.x.com/en/docs/authentication/overview){:target=_blank .external-link} for more information about authenticating with the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [X's API documentation](https://developer.x.com/en/docs/twitter-api){:target=_blank .external-link} และดูข้อมูลเกี่ยวกับการยืนยันตัวตนได้ที่ [X's API authentication documentation](https://developer.x.com/en/docs/authentication/overview){:target=_blank .external-link}
 
-Refer to [Application-only Authentication](https://developer.twitter.com/en/docs/authentication/oauth-2-0/application-only){:target=_blank .external-link} for more information about app-only authentication.
+ดูข้อมูลเกี่ยวกับ app-only authentication ได้ที่ [Application-only Authentication](https://developer.twitter.com/en/docs/authentication/oauth-2-0/application-only){:target=_blank .external-link}
 
 ## Using OAuth2
 
-Use this method if you're using n8n version 0.236.0 or later.
+ใช้วิธีนี้ถ้าคุณใช้ n8n เวอร์ชัน 0.236.0 ขึ้นไป
 
-To configure this credential, you'll need:
+ในการตั้งค่า credential นี้ คุณจะต้องมี:
 
-- A **Client ID**
-- A **Client Secret**
+- **Client ID**
+- **Client Secret**
 
-To generate your Client ID and Client Secret:
+วิธีสร้าง Client ID และ Client Secret:
 
-1. In the Twitter [developer portal](https://developer.x.com/en/portal/dashboard){:target=_blank .external-link}, open your project.
-2. On the project's **Overview** tab, find the **Apps** section and select **Add App**.
-3. Give your app a **Name** and select **Next**.
-1. Go to the **App Settings**.
-4. In the **User authentication settings**, select **Set Up**.
-1. Set the **App permissions**. Choose **Read and write and Direct message** if you want to use all functions of the n8n X node.
-5. In the **Type of app** section, select **Web App, Automated App or Bot**.
-1. In n8n, copy the **OAuth Redirect URL**.
-7. In your X app, find the **App Info** section and paste that URL in as the **Callback URI / Redirect URL**.
-7. Add a **Website URL**.
-8. Save your changes.
-1. Copy the **Client ID** and **Client Secret** displayed in X and add them to the corresponding fields in your n8n credential.
+1. เข้าไปที่ [developer portal](https://developer.x.com/en/portal/dashboard){:target=_blank .external-link} ของ Twitter แล้วเปิด project ของคุณ
+2. ที่แท็บ **Overview** ของ project ให้หา section **Apps** แล้วเลือก **Add App**
+3. ตั้งชื่อ app ในช่อง **Name** แล้วกด **Next**
+1. ไปที่ **App Settings**
+4. ใน **User authentication settings** ให้เลือก **Set Up**
+1. ตั้งค่า **App permissions** เลือก **Read and write and Direct message** ถ้าต้องการใช้ฟังก์ชันทั้งหมดของ n8n X node
+5. ใน section **Type of app** ให้เลือก **Web App, Automated App or Bot**
+1. ใน n8n ให้ copy **OAuth Redirect URL**
+7. ใน X app ให้หา section **App Info** แล้ววาง URL ที่ copy มาในช่อง **Callback URI / Redirect URL**
+7. เพิ่ม **Website URL**
+8. กดบันทึกการเปลี่ยนแปลง
+1. copy **Client ID** และ **Client Secret** ที่แสดงใน X แล้วนำไปใส่ในช่องที่เกี่ยวข้องใน n8n credential
 
-Refer to X's [OAuth 2.0 Authentication documentation](https://developer.x.com/en/docs/authentication/oauth-2-0){:target=_blank .external-link} for more information on working with this authentication method.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับการใช้งาน OAuth 2.0 ได้ที่ [OAuth 2.0 Authentication documentation](https://developer.x.com/en/docs/authentication/oauth-2-0){:target=_blank .external-link}
 
 /// note | X rate limits
-This credential uses the OAuth 2.0 Bearer Token authentication method, so you'll be subject to app rate limits. Refer to [X rate limits](#x-rate-limits) below for more information.
+credential นี้ใช้ OAuth 2.0 Bearer Token authentication method ดังนั้นจะมีข้อจำกัด rate limit ตามที่ X กำหนด ดูรายละเอียดเพิ่มเติมได้ที่ [X rate limits](#x-rate-limits) ด้านล่าง
 ///
 
 ## X rate limits
 
-X has time-based rate limits per endpoint based on your developer access plan level. X calculates app rate limits and user rate limits independently. Refer to [Rate limits](https://developer.x.com/en/docs/twitter-api/rate-limits){:target=_blank .external-link} for the access plan level rate limits and guidance on avoiding hitting them.
+X จะมีการจำกัดจำนวนการใช้งาน (rate limit) ต่อ endpoint ตามระดับ access plan ของ developer แต่ละคน โดย X จะคำนวณ rate limit ของ app และ user แยกจากกัน ดูรายละเอียด rate limit และวิธีหลีกเลี่ยงได้ที่ [Rate limits](https://developer.x.com/en/docs/twitter-api/rate-limits){:target=_blank .external-link}
 
-Use the guidance below for calculating rate limits:
+แนวทางการคำนวณ rate limit:
 
-- If you're using the deprecated OAuth method, user rate limits apply. You'll have one limit per time window for each set of users' access tokens.
-- If you're [Using OAuth2](#using-oauth2), app rate limits apply. You'll have a limit per time window for requests made by your app.
+- ถ้าใช้ OAuth แบบเก่า (deprecated) จะใช้ user rate limit คือจำกัดตาม access token ของแต่ละ user ในแต่ละช่วงเวลา
+- ถ้า [Using OAuth2](#using-oauth2) จะใช้ app rate limit คือจำกัดตาม app ในแต่ละช่วงเวลา
 
-X calculates user rate limits and app rate limits independently.
+X จะคำนวณ user rate limit และ app rate limit แยกจากกัน
 
-Refer to X's [Rate limits and authentication methods](https://developer.x.com/en/docs/twitter-api/rate-limits#auth){:target=_blank .external-link} for more information about these rate limit types.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับ rate limit แต่ละประเภทได้ที่ [Rate limits and authentication methods](https://developer.x.com/en/docs/twitter-api/rate-limits#auth){:target=_blank .external-link}

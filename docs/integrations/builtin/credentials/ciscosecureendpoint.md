@@ -12,8 +12,8 @@ priority: medium
 
 ## Prerequisites
 
-- Create a [Cisco DevNet developer account](https://developer.cisco.com){:target=_blank .external-link}.
-- Access to a [Cisco Secure Endpoint license](https://www.cisco.com/site/us/en/products/security/endpoint-security/secure-endpoint/index.html){:target=_blank .external-link}.
+- สมัคร [Cisco DevNet developer account](https://developer.cisco.com){:target=_blank .external-link} ให้เรียบร้อยก่อน
+- เข้าถึง [Cisco Secure Endpoint license](https://www.cisco.com/site/us/en/products/security/endpoint-security/secure-endpoint/index.html){:target=_blank .external-link}
 
 ## Authentication methods
 
@@ -21,20 +21,20 @@ priority: medium
 
 ## Related resources
 
-Refer to [Cisco Secure Endpoint's documentation](https://developer.cisco.com/docs/secure-endpoint/introduction/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการได้ที่ [Cisco Secure Endpoint's documentation](https://developer.cisco.com/docs/secure-endpoint/introduction/){:target=_blank .external-link}
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/cisco-secure-endpoint/){:target=_blank .external-link} on n8n's website.
+นี่คือ credential-only node ดูรายละเอียดเพิ่มเติมได้ที่ [Custom API operations](/integrations/custom-operations.md) ดู [example workflows and related content](https://n8n.io/integrations/cisco-secure-endpoint/){:target=_blank .external-link} บนเว็บไซต์ n8n
 
 ## Using OAuth2
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- The **Region** for your Cisco Secure Endpoint. Options are:
+- **Region** สำหรับ Cisco Secure Endpoint ของคุณ ตัวเลือกคือ:
     - Asia Pacific, Japan, and China
     - Europe
     - North America
-- A **Client ID**: Provided when you register a SecureX API Client
-- A **Client Secret**: Provided when you register a SecureX API Client
+- **Client ID**: ให้มาเมื่อคุณลงทะเบียน SecureX API Client
+- **Client Secret**: ให้มาเมื่อคุณลงทะเบียน SecureX API Client
 
-To get a Client ID and Client Secret, you'll need to Register a SecureX API Client. Refer to [Cisco Secure Endpoint's authentication documentation](https://developer.cisco.com/docs/secure-endpoint/authentication/#authentication){:target=_blank .external-link} for detailed instructions. Use the SecureX **Client Password** as the **Client Secret** within the n8n credential.
+หากต้องการรับ Client ID และ Client Secret คุณจะต้องลงทะเบียน SecureX API Client ดูคำแนะนำโดยละเอียดได้ที่ [Cisco Secure Endpoint's authentication documentation](https://developer.cisco.com/docs/secure-endpoint/authentication/#authentication){:target=_blank .external-link} ใช้ SecureX **Client Password** เป็น **Client Secret** ภายใน n8n credential
 

@@ -7,14 +7,14 @@ contentType: [integration, reference]
 
 # Keap credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [Keap](/integrations/builtin/app-nodes/n8n-nodes-base.keap.md)
 - [Keap Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.keaptrigger.md)
 
 ## Prerequisites
 
-Create a [Keap](https://developer.keap.com/){:target=_blank .external-link} developer account.
+สร้างบัญชีนักพัฒนา [Keap](https://developer.keap.com/){:target=_blank .external-link}
 
 ## Supported authentication methods
 
@@ -22,11 +22,11 @@ Create a [Keap](https://developer.keap.com/){:target=_blank .external-link} deve
 
 ## Related resources
 
-Refer to Keap's [REST API documentation](https://developer.keap.com/docs/restv2/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [REST API documentation](https://developer.keap.com/docs/restv2/){:target=_blank .external-link} ของ Keap
 
 ## Using OAuth2
 
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-If you need to configure OAuth2 from scratch or need more detail on what's happening in the OAuth web flow, refer to the instructions in the [Getting Started with OAuth2 documentation](https://developer.keap.com/getting-started-oauth-keys/){:target=_blank .external-link}.
+หากคุณต้องการตั้งค่า OAuth2 ตั้งแต่ต้น หรือต้องการรายละเอียดเพิ่มเติมเกี่ยวกับสิ่งที่เกิดขึ้นใน OAuth web flow โปรดดูคำแนะนำใน [Getting Started with OAuth2 documentation](https://developer.keap.com/getting-started-oauth-keys/){:target=_blank .external-link}
 

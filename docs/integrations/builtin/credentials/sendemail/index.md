@@ -8,51 +8,51 @@ priority: high
 
 # Send Email credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตน nodes ต่อไปนี้:
 
 - [Send Email](/integrations/builtin/core-nodes/n8n-nodes-base.sendemail.md)
 
 ## Prerequisites
 
-- Create an email account on a service that supports SMTP.
-- Some email providers require that you enable or set up outgoing SMTP or generate an app password. Refer to your provider's documentation to see if there are other required steps.
+- สร้างบัญชีอีเมลบนบริการที่รองรับ SMTP
+- ผู้ให้บริการอีเมลบางรายต้องการให้คุณเปิดใช้งานหรือตั้งค่า SMTP ขาออก หรือสร้าง app password โปรดอ้างอิงเอกสารของผู้ให้บริการของคุณเพื่อดูว่ามีขั้นตอนอื่นที่จำเป็นหรือไม่
 
 ## Supported authentication methods
 
-- SMTP account
+- บัญชี SMTP
 
 ## Related resources
 
-Simple Message Transfer Protocol (SMTP) is a standard protocol for sending and receiving email. Most email providers offer instructions on setting up their service with SMTP. Refer to your provider's SMTP instructions.
+Simple Message Transfer Protocol (SMTP) เป็นโปรโตคอลมาตรฐานสำหรับการส่งและรับอีเมล ผู้ให้บริการอีเมลส่วนใหญ่มีคำแนะนำในการตั้งค่าบริการของตนด้วย SMTP โปรดอ้างอิงคำแนะนำ SMTP ของผู้ให้บริการของคุณ
 
 ## Using SMTP account
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- A **User** email address
-- A **Password**: This may be the user's password or an app password. Refer to the documentation for your email provider.
-- The **Host**: The SMTP host address for your email provider, often formatted as `smtp.<provider>.com`. Check with your provider.
-- A **Port** number: The default is port `465`, commonly used for SSL. Other common ports are `587` for TLS or `25` for no encryption. Check with your provider.
-- **SSL/TLS**: When turned on, SMTP will use SSL/TLS.
-- **Disable STARTTLS**: When SSL/TLS is disabled, the SMTP server can still try to [upgrade the TCP connection using STARTTLS](https://en.wikipedia.org/wiki/Opportunistic_TLS){:target=_blank .external-link}. Turning this on prevents that behaviour.
-- **Client Host Name**: If needed by your provider, add a client host name. This name identifies the client to the server.
+- ที่อยู่อีเมล **User**
+- **Password**: อาจเป็นรหัสผ่านของผู้ใช้หรือ app password โปรดอ้างอิงเอกสารสำหรับผู้ให้บริการอีเมลของคุณ
+- **Host**: ที่อยู่ SMTP host สำหรับผู้ให้บริการอีเมลของคุณ ซึ่งมักอยู่ในรูปแบบ `smtp.<provider>.com` โปรดตรวจสอบกับผู้ให้บริการของคุณ
+- หมายเลข **Port**: ค่าเริ่มต้นคือ port `465` ซึ่งใช้กันทั่วไปสำหรับ SSL พอร์ตทั่วไปอื่นๆ คือ `587` สำหรับ TLS หรือ `25` สำหรับการไม่เข้ารหัส โปรดตรวจสอบกับผู้ให้บริการของคุณ
+- **SSL/TLS**: เมื่อเปิดใช้งาน SMTP จะใช้ SSL/TLS
+- **Disable STARTTLS**: เมื่อปิดใช้งาน SSL/TLS เซิร์ฟเวอร์ SMTP ยังคงสามารถพยายาม [upgrade the TCP connection using STARTTLS](https://en.wikipedia.org/wiki/Opportunistic_TLS){:target=_blank .external-link} ได้ การเปิดใช้งานตัวเลือกนี้จะป้องกันพฤติกรรมดังกล่าว
+- **Client Host Name**: หากผู้ให้บริการของคุณต้องการ ให้เพิ่ม client host name ชื่อนี้จะระบุ client ให้กับ server
 
 ### Provider instructions
 
-Refer to the quickstart guides for these common email providers.
+อ้างอิงคู่มือเริ่มต้นฉบับย่อสำหรับผู้ให้บริการอีเมลทั่วไปเหล่านี้
 
 #### Gmail
 
-Refer to [Gmail](/integrations/builtin/credentials/sendemail/gmail.md).
+อ้างอิง [Gmail](/integrations/builtin/credentials/sendemail/gmail.md)
 
 #### Outlook.com
 
-Refer to [Outlook.com](/integrations/builtin/credentials/sendemail/outlook.md).
+อ้างอิง [Outlook.com](/integrations/builtin/credentials/sendemail/outlook.md)
 
 #### Yahoo
 
-Refer to [Yahoo](/integrations/builtin/credentials/sendemail/yahoo.md).
+อ้างอิง [Yahoo](/integrations/builtin/credentials/sendemail/yahoo.md)
 
 ### My provider isn't listed
 
-If your email provider isn't listed here, search for `SMTP settings` to find their instructions. (These instructions may also be included with `IMAP settings` or `POP settings`.)
+หากผู้ให้บริการอีเมลของคุณไม่อยู่ในรายการนี้ ให้ค้นหา `SMTP settings` เพื่อค้นหาคำแนะนำของพวกเขา (คำแนะนำเหล่านี้อาจรวมอยู่ใน `IMAP settings` หรือ `POP settings` ด้วย)

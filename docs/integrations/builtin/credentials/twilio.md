@@ -8,67 +8,67 @@ priority: medium
 
 # Twilio credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [Twilio](/integrations/builtin/app-nodes/n8n-nodes-base.twilio.md)
 - [Twilio trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.twiliotrigger.md)
 
 ## Supported authentication methods
 
-- **Auth token**: Twilio recommends this method for local testing only.
-- **API key**: Twilio recommends this method for production.
+- **Auth token**: Twilio แนะนำวิธีนี้สำหรับการทดสอบในเครื่องเท่านั้น
+- **API key**: Twilio แนะนำวิธีนี้สำหรับ production
 
 ## Related resources
 
-Refer to [Twilio's API documentation](https://www.twilio.com/docs){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Twilio's API documentation](https://www.twilio.com/docs){:target=_blank .external-link}
 
 ## Using Auth Token
 
-To configure this credential, you'll need a [Twilio](https://twilio.com/){:target=_blank .external-link} account and:
+ในการตั้งค่า credentials นี้ คุณจะต้องมีบัญชี [Twilio](https://twilio.com/){:target=_blank .external-link} และ:
 
-- Your Twilio **Account SID**
-- Your Twilio **Auth Token**
+- **Account SID** ของ Twilio
+- **Auth Token** ของ Twilio
 
-To set up the credential:
+วิธีตั้งค่า credentials:
 
-1. In n8n, select **Auth Token** as the **Auth Type**.
-2. In Twilio, go to **Console Dashboard > Account Info**.
-3. Copy your **Account SID** and enter this in your n8n credential. This acts as a username.
-4. Cop your **Auth Token** and enter this in your n8n credential. This acts as a password.
+1. ใน n8n เลือก **Auth Token** เป็น **Auth Type**
+2. ใน Twilio ไปที่ **Console Dashboard > Account Info**
+3. คัดลอก **Account SID** แล้วนำไปใส่ใน n8n credential (ใช้เป็น username)
+4. คัดลอก **Auth Token** แล้วนำไปใส่ใน n8n credential (ใช้เป็น password)
 
-Refer to [Auth Tokens and How to Change Them](https://help.twilio.com/articles/223136027-Auth-Tokens-and-How-to-Change-Them){:target=_blank .external-link} for more information.
+ดูรายละเอียดเพิ่มเติมได้ที่ [Auth Tokens and How to Change Them](https://help.twilio.com/articles/223136027-Auth-Tokens-and-How-to-Change-Them){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need a [Twilio](https://twilio.com/){:target=_blank .external-link} account and:
+ในการตั้งค่า credentials นี้ คุณจะต้องมีบัญชี [Twilio](https://twilio.com/){:target=_blank .external-link} และ:
 
-- Your Twilio **Account SID**
-- An **API Key SID**: Generated when you create an API key.
-- An **API Key Secret**: Generated when you create an API key.
+- **Account SID** ของ Twilio
+- **API Key SID**: ได้จากการสร้าง API key
+- **API Key Secret**: ได้จากการสร้าง API key
 
-To set up the credential:
+วิธีตั้งค่า credentials:
 
-1. In n8n, select **API Key** as the **Auth Type**.
-2. In Twilio, go to **Console Dashboard > Account Info**.
-3. Copy your **Account SID** and enter it in your n8n credential.
-4. In Twilio, go to your account's [**API keys & tokens**](https://www.twilio.com/console/project/api-keys) page.
-5. Select **Create API Key**.
-6. Enter a **Friendly name** for your API key, like `n8n integration`.
-7. Select your **Key type**. n8n works with either **Main** or **Standard**. Refer to [Selecting an API key type](#selecting-an-api-key-type) for more information.
-8. Select **Create API Key** to finish creating the key.
-5. On the **Copy secret key** page, copy the **SID** displayed with the key and enter it in your n8n credential **API Key SID**.
-6. On the **Copy secret key** page, copy the **Secret** displayed with the key and enter it in your n8n credential **API Key Secret**.
+1. ใน n8n เลือก **API Key** เป็น **Auth Type**
+2. ใน Twilio ไปที่ **Console Dashboard > Account Info**
+3. คัดลอก **Account SID** แล้วนำไปใส่ใน n8n credential
+4. ใน Twilio ไปที่ [**API keys & tokens**](https://www.twilio.com/console/project/api-keys) ของบัญชีคุณ
+5. เลือก **Create API Key**
+6. กรอก **Friendly name** สำหรับ API key เช่น `n8n integration`
+7. เลือก **Key type** ที่ต้องการ n8n รองรับทั้ง **Main** และ **Standard** ดูรายละเอียดเพิ่มเติมที่ [Selecting an API key type](#selecting-an-api-key-type)
+8. เลือก **Create API Key** เพื่อสร้าง key
+5. ในหน้า **Copy secret key** คัดลอก **SID** ที่แสดงกับ key แล้วนำไปใส่ใน n8n credential **API Key SID**
+6. ในหน้า **Copy secret key** คัดลอก **Secret** ที่แสดงกับ key แล้วนำไปใส่ใน n8n credential **API Key Secret**
 
-Refer to [Create an API key](https://www.twilio.com/docs/iam/api-keys#create-an-api-key){:target=_blank .external-link} for more detailed instructions.
+ดูรายละเอียดเพิ่มเติมได้ที่ [Create an API key](https://www.twilio.com/docs/iam/api-keys#create-an-api-key){:target=_blank .external-link}
 
 ### Selecting an API key type
 
-When you create a Twilio API key, you must select a key type. The n8n credential works with **Main** and **Standard** key types.
+ตอนสร้าง Twilio API key คุณต้องเลือก key type โดย n8n credential รองรับ **Main** และ **Standard**
 
-Here are more details on the different API key types:
+รายละเอียดของแต่ละ key type:
 
-* **Main**: This key type gives you the same level of access as using your Account SID and Auth Token in API requests.
-* **Standard**: This key type gives you access to all the functionality in Twilio's APIs except the API key resources and Account resources.
-* **Restricted**: This key type is in beta. n8n hasn't tested the credential against this key type; if you try it, let us know if you run into any issues.
+* **Main**: ให้สิทธิ์เท่ากับการใช้ Account SID และ Auth Token ใน API request
+* **Standard**: ให้สิทธิ์เข้าถึงฟังก์ชันทั้งหมดใน Twilio API ยกเว้น API key resources และ Account resources
+* **Restricted**: key type นี้ยังเป็น beta n8n ยังไม่ได้ทดสอบ credential กับ key type นี้ ถ้าคุณลองใช้แล้วพบปัญหาแจ้งเราได้เลย
 
-Refer to [Types of API keys](https://www.twilio.com/docs/iam/api-keys#types-of-api-keys){:target=_blank .external-link} for more information on the key types.
+ดูรายละเอียดเพิ่มเติมได้ที่ [Types of API keys](https://www.twilio.com/docs/iam/api-keys#types-of-api-keys){:target=_blank .external-link}

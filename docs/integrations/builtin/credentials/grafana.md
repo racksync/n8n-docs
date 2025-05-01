@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Grafana credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้:
 
 - [Grafana](/integrations/builtin/app-nodes/n8n-nodes-base.grafana.md)
 
 ## Prerequisites
 
-- Create a [Grafana](https://grafana.com/){:target=_blank .external-link} account.
+- สร้างบัญชี [Grafana](https://grafana.com/){:target=_blank .external-link}
 
 ## Supported authentication methods
 
@@ -21,12 +21,12 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Grafana's API documentation](https://grafana.com/docs/grafana/latest/developers/http_api/){:target=_blank .external-link} for more information about authenticating with the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับการยืนยันตัวตนกับบริการนี้ได้ที่ [Grafana's API documentation](https://grafana.com/docs/grafana/latest/developers/http_api/){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- An **API Key**: Refer to the [Create an API key documentation](https://grafana.com/docs/grafana/latest/administration/api-keys/#create-an-api-key){:target=_blank .external-link} for detailed instructions on creating an API key.
-- The **Base URL** for your Grafana instance, for example: `https://n8n.grafana.net`.
+- **API Key**: ดูคำแนะนำโดยละเอียดเกี่ยวกับการสร้าง API key ได้ที่ [Create an API key documentation](https://grafana.com/docs/grafana/latest/administration/api-keys/#create-an-api-key){:target=_blank .external-link}
+- **Base URL** สำหรับ instance ของ Grafana ของคุณ ตัวอย่างเช่น: `https://n8n.grafana.net`
 

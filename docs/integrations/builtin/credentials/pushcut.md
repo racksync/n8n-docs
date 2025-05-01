@@ -7,14 +7,14 @@ contentType: [integration, reference]
 
 # Pushcut credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [Pushcut](/integrations/builtin/app-nodes/n8n-nodes-base.pushcut.md)
 - [Pushcut Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.pushcuttrigger.md)
 
 ## Prerequisites
 
-Download the [Pushcut](https://www.pushcut.io){:target=_blank .external-link} app.
+ดาวน์โหลดแอป [Pushcut](https://www.pushcut.io){:target=_blank .external-link}
 
 ## Supported authentication methods
 
@@ -22,11 +22,11 @@ Download the [Pushcut](https://www.pushcut.io){:target=_blank .external-link} ap
 
 ## Related resources
 
-Refer to [Pushcut's Guides documentation](https://www.pushcut.io/guides){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Pushcut's Guides documentation](https://www.pushcut.io/guides){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+สำหรับการตั้งค่า credentials นี้ คุณจะต้องมี:
 
-- An **API Key**: To generate an API key, go to **Account > Integrations > Add API Key**. Refer to [Create an API key](https://www.pushcut.io/guides/homekit-api-schedule-cancel#step_2){:target=_blank .external-link} for more information.
+- **API Key**: หากต้องการสร้าง API key ให้ไปที่ **Account > Integrations > Add API Key** ดูข้อมูลเพิ่มเติมที่ [Create an API key](https://www.pushcut.io/guides/homekit-api-schedule-cancel#step_2){:target=_blank .external-link}
 

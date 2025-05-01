@@ -7,38 +7,38 @@ contentType: [integration, reference]
 
 # Storyblok credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [Storyblok](/integrations/builtin/app-nodes/n8n-nodes-base.storyblok.md)
 
 ## Prerequisites
 
-Create a [Storyblok](https://www.storyblok.com/){:target=_blank .external-link} account.
+สร้างบัญชี [Storyblok](https://www.storyblok.com/){:target=_blank .external-link} ก่อน
 
 ## Supported authentication methods
 
-- Content API key: For read-only access
-- Management API key: For full CRUD operations
+- Content API key: สำหรับการอ่านข้อมูลเท่านั้น (read-only)
+- Management API key: สำหรับการจัดการข้อมูลแบบเต็มรูปแบบ (CRUD)
 
 /// note | Content API support
-n8n supports Content API v1 only.
+n8n รองรับ Content API v1 เท่านั้น
 ///
 
 ## Related resources
 
-Refer to Storyblok's [Content v1 API documentation](https://www.storyblok.com/docs/api/content-delivery/v1){:target=_blank .external-link} and [Management API documentation](https://www.storyblok.com/docs/api/management/getting-started/introduction){:target=_blank .external-link} for more information about the services.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Content v1 API documentation](https://www.storyblok.com/docs/api/content-delivery/v1){:target=_blank .external-link} และ [Management API documentation](https://www.storyblok.com/docs/api/management/getting-started/introduction){:target=_blank .external-link}
 
 ## Using Content API key
 
-To configure this credential, you'll need:
+ในการตั้งค่า credentials นี้ คุณจะต้องมี:
 
-- A Content **API Key**: Go to your Storyblok workspace's **Settings > Access Tokens** to get an API key. Choose an **Access Level** of either **Public** (`version=published`) or **Preview** (`version-published` and `version=draft`). Enter this access token as your **API Key**. Refer to [How to retrieve and generate access tokens](https://www.storyblok.com/faq/retrieve-and-generate-access-tokens){:target=_blank .external-link} for more detailed instructions.
+- **API Key** สำหรับ Content: ไปที่ **Settings > Access Tokens** ใน workspace ของ Storyblok เพื่อรับ API key เลือก **Access Level** เป็น **Public** (`version=published`) หรือ **Preview** (`version-published` และ `version=draft`) แล้วนำ access token นี้ไปใส่ในช่อง **API Key** ของ n8n ดูวิธีการได้ที่ [How to retrieve and generate access tokens](https://www.storyblok.com/faq/retrieve-and-generate-access-tokens){:target=_blank .external-link}
 
-Refer to [Content v1 API Authentication](https://www.storyblok.com/docs/api/content-delivery/v1#topics/authentication){:target=_blank .external-link} for more information about supported operations with each Access Level.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับการยืนยันตัวตนและ operation ที่รองรับแต่ละ Access Level ได้ที่ [Content v1 API Authentication](https://www.storyblok.com/docs/api/content-delivery/v1#topics/authentication){:target=_blank .external-link}
 
 ## Using Management API key
 
-To configure this credential, you'll need:
+ในการตั้งค่า credentials นี้ คุณจะต้องมี:
 
-- A **Personal Access Token**: Go to [**My Account**](https://app.storyblok.com/#!/me/account){:target=_blank .external-link} **> Personal access tokens** to generate a new access token. Enter this access token as your **Personal Access Token**.
+- **Personal Access Token**: ไปที่ [**My Account**](https://app.storyblok.com/#!/me/account){:target=_blank .external-link} **> Personal access tokens** เพื่อสร้าง access token ใหม่ แล้วนำ access token นี้ไปใส่ในช่อง **Personal Access Token** ของ n8n
 

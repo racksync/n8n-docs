@@ -15,14 +15,14 @@ contentType: [integration, reference]
 
 ## Related resources
 
-Refer to [ConvertAPI's API documentation](https://docs.convertapi.com/docs/getting-started) for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการได้ที่ [ConvertAPI's API documentation](https://docs.convertapi.com/docs/getting-started)
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/convertapi/) on n8n's website.
+นี่คือ credential-only node ดูรายละเอียดเพิ่มเติมได้ที่ [Custom API operations](/integrations/custom-operations.md) ดู [example workflows and related content](https://n8n.io/integrations/convertapi/) บนเว็บไซต์ n8n
 
 ## Using API Token
 
-To configure this credential, you'll need a [ConvertAPI](https://www.convertapi.com/a/signin) account and:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมีบัญชี [ConvertAPI](https://www.convertapi.com/a/signin) และ:
 
-- An [**API Token**](https://docs.convertapi.com/docs/api-tokens) to authenticate requests to the service.
+- [**API Token**](https://docs.convertapi.com/docs/api-tokens) เพื่อยืนยันตัวตนคำขอไปยังบริการ
 
-Refer to [ConvertAPI's API documentation](https://docs.convertapi.com/docs/authentication) for more information about authenticating to the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับการยืนยันตัวตนกับบริการได้ที่ [ConvertAPI's API documentation](https://docs.convertapi.com/docs/authentication)

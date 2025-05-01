@@ -11,7 +11,7 @@ contentType: [integration, reference]
 
 ## Prerequisites
 
-Create a [Recorded Future](https://www.recordedfuture.com){:target=_blank .external-link} account.
+สร้าง [Recorded Future](https://www.recordedfuture.com){:target=_blank .external-link} account
 
 ## Supported authentication methods
 
@@ -19,14 +19,14 @@ Create a [Recorded Future](https://www.recordedfuture.com){:target=_blank .exter
 
 ## Related resources
 
-Refer to [Recorded Future's documentation](https://api.recordedfuture.com/index.html){:target=_blank .external-link} for more information about the service. The rest of Recorded Future's help center requires a paid account.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Recorded Future's documentation](https://api.recordedfuture.com/index.html){:target=_blank .external-link} ส่วนที่เหลือของ help center ของ Recorded Future ต้องใช้ account แบบชำระเงิน
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/recorded-future/){:target=_blank .external-link} on n8n's website.
+นี่คือ credential-only node ดูข้อมูลเพิ่มเติมที่ [Custom API operations](/integrations/custom-operations.md) ดู [example workflows and related content](https://n8n.io/integrations/recorded-future/){:target=_blank .external-link} บนเว็บไซต์ n8n
 
 ## Using API access token
 
-To configure this credential, you'll need:
+สำหรับการตั้งค่า credentials นี้ คุณจะต้องมี:
 
-- An API **Access Token**
+- API **Access Token**
 
-Refer to the [Recorded Future APIs documentation](https://support.recordedfuture.com/hc/en-us/categories/16372120363539-Recorded-Future-APIs){:target=_blank .external-link} for more information on getting your API access token.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับการรับ API access token ของคุณได้ที่ [Recorded Future APIs documentation](https://support.recordedfuture.com/hc/en-us/categories/16372120363539-Recorded-Future-APIs){:target=_blank .external-link}

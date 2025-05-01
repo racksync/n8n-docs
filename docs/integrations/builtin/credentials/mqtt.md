@@ -8,16 +8,16 @@ priority: medium
 
 # MQTT credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนใน nodes ต่อไปนี้:
 
 - [MQTT](/integrations/builtin/app-nodes/n8n-nodes-base.mqtt.md)
 - [MQTT Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.mqtttrigger.md)
 
 ## Prerequisites
 
-Install an [MQTT broker](https://mqtt.org/){:target=_blank .external-link}.
+ติดตั้ง [MQTT broker](https://mqtt.org/){:target=_blank .external-link}
 
-MQTT provides a list of Servers/Brokers at [MQTT Software](https://mqtt.org/software/){:target=_blank .external-link}.
+MQTT มีรายการ Servers/Brokers ที่ [MQTT Software](https://mqtt.org/software/){:target=_blank .external-link}
 
 ## Supported authentication methods
 
@@ -25,38 +25,38 @@ MQTT provides a list of Servers/Brokers at [MQTT Software](https://mqtt.org/soft
 
 ## Related resources
 
-Refer to [MQTT's documentation](https://mqtt.org/){:target=_blank .external-link} for more information about the MQTT protocol.
+อ้างอิง [MQTT's documentation](https://mqtt.org/){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับโปรโตคอล MQTT
 
-Refer to your broker provider's documentation for more detailed configuration and details.
+อ้างอิงเอกสารของผู้ให้บริการ broker ของคุณสำหรับรายละเอียดและการกำหนดค่าเพิ่มเติม
 
 ## Using broker connection
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- Your MQTT broker's **Protocol**
-- The **Host**
-- The **Port**
-- A **Username** and **Password** to authenticate with
-- If you're using **SSL**, the relevant certificates and keys
+- **Protocol** ของ MQTT broker ของคุณ
+- **Host**
+- **Port**
+- **Username** และ **Password** เพื่อยืนยันตัวตน
+- หากคุณใช้ **SSL** ใบรับรองและ keys ที่เกี่ยวข้อง
 
-To set things up:
+วิธีตั้งค่า:
 
-1. Select the broker's **Protocol**, which determines the URL n8n uses. Options include:
-    - **Mqtt**: Begin the URL with the standard `mqtt:` protocol.
-    - **Mqtts**: Begin the URL with the secure `mqtts:` protocol.
-    - **Ws**: Begin the URL with the WebSocket `ws:` protocol.
-2. Enter your broker **Host**.
-3. Enter the **Port** number n8n should use to connect to the broker host.
-4. Enter the **Username** to log into the broker as.
-5. Enter that user's **Password**.
-6. If you want to receive QoS 1 and 2 messages while offline, turn off the **Clean Session** toggle.
-7. Enter a **Client ID** you'd like the credential to use. If you leave this blank, n8n will generate one for you. You can use a fixed or expression-based Client ID.
-    - Client IDs can be useful to identify and track connection access. n8n recommends using something with `n8n` in it for easier auditing.
-8. If your MQTT broker uses SSL, turn the **SSL** toggle on. Once you turn it on:
-    1. Select whether to use **Passwordless** connection with certificates, which is like the SASL mechanism EXTERNAL. If turned on:
-        1. Select whether to **Reject Unauthorized Certificate**: If turned off, n8n will connect even if the certificate validation fails.
-        2. Add an SSL **Client Certificate**.
-        3. Add an SSL **Client Key** for the Client Certificate.
-    2. One or more SSL **CA Certificates**.
+1. เลือก **Protocol** ของ broker ซึ่งกำหนด URL ที่ n8n ใช้ ตัวเลือกได้แก่:
+    - **Mqtt**: เริ่มต้น URL ด้วยโปรโตคอล `mqtt:` มาตรฐาน
+    - **Mqtts**: เริ่มต้น URL ด้วยโปรโตคอล `mqtts:` ที่ปลอดภัย
+    - **Ws**: เริ่มต้น URL ด้วยโปรโตคอล WebSocket `ws:`
+2. ป้อน **Host** ของ broker ของคุณ
+3. ป้อนหมายเลข **Port** ที่ n8n ควรใช้เพื่อเชื่อมต่อกับ broker host
+4. ป้อน **Username** เพื่อเข้าสู่ระบบ broker
+5. ป้อน **Password** ของผู้ใช้นั้น
+6. หากคุณต้องการรับข้อความ QoS 1 และ 2 ขณะออฟไลน์ ให้ปิดสวิตช์ **Clean Session**
+7. ป้อน **Client ID** ที่คุณต้องการให้ credential ใช้ หากคุณเว้นว่างไว้ n8n จะสร้างให้คุณ คุณสามารถใช้ Client ID แบบคงที่หรือแบบ expression-based ได้
+    - Client IDs มีประโยชน์ในการระบุและติดตามการเข้าถึงการเชื่อมต่อ n8n แนะนำให้ใช้บางอย่างที่มี `n8n` อยู่ในนั้นเพื่อให้ง่ายต่อการตรวจสอบ
+8. หาก MQTT broker ของคุณใช้ SSL ให้เปิดสวิตช์ **SSL** เมื่อคุณเปิดใช้งาน:
+    1. เลือกว่าจะใช้การเชื่อมต่อ **Passwordless** กับใบรับรองหรือไม่ ซึ่งเหมือนกับกลไก SASL EXTERNAL หากเปิดใช้งาน:
+        1. เลือกว่าจะ **Reject Unauthorized Certificate**: หากปิดใช้งาน n8n จะเชื่อมต่อแม้ว่าการตรวจสอบใบรับรองจะล้มเหลว
+        2. เพิ่ม SSL **Client Certificate**
+        3. เพิ่ม SSL **Client Key** สำหรับ Client Certificate
+    2. SSL **CA Certificates** หนึ่งรายการหรือมากกว่า
 
-Refer to your MQTT broker provider's documentation for more detailed configuration instructions.
+อ้างอิงเอกสารของผู้ให้บริการ MQTT broker ของคุณสำหรับคำแนะนำการกำหนดค่าโดยละเอียดเพิ่มเติม

@@ -7,16 +7,16 @@ contentType: [integration, reference]
 
 # Mandrill credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนใน nodes ต่อไปนี้:
 
 - [Mandrill](/integrations/builtin/app-nodes/n8n-nodes-base.mandrill.md)
 
 ## Prerequisites
 
-- Create a Mailchimp [Transactional email account](https://mailchimp.com/features/transactional-email-infrastructure/){:target=_blank .external-link} 
-- Log in to [Mandrill](https://mandrillapp.com/login/){:target=_blank .external-link} with your Mailchimp account.
+- สร้างบัญชี Mailchimp [Transactional email account](https://mailchimp.com/features/transactional-email-infrastructure/){:target=_blank .external-link}
+- เข้าสู่ระบบ [Mandrill](https://mandrillapp.com/login/){:target=_blank .external-link} ด้วยบัญชี Mailchimp ของคุณ
 
-If you already have a Mailchimp account with a Standard plan or higher, enable [Transactional Emails](https://mailchimp.com/help/add-or-remove-transactional-email){:target=_blank .external-link} within that account to use Mandrill.
+หากคุณมีบัญชี Mailchimp ที่มีแผน Standard หรือสูงกว่าอยู่แล้ว ให้เปิดใช้งาน [Transactional Emails](https://mailchimp.com/help/add-or-remove-transactional-email){:target=_blank .external-link} ภายในบัญชีนั้นเพื่อใช้ Mandrill
 
 ## Supported authentication methods
 
@@ -24,11 +24,11 @@ If you already have a Mailchimp account with a Standard plan or higher, enable [
 
 ## Related resources
 
-Refer to [Mailchimp's Transactional API documentation](https://mailchimp.com/developer/transactional/api/){:target=_blank .external-link} for more information about the service.
+อ้างอิง [Mailchimp's Transactional API documentation](https://mailchimp.com/developer/transactional/api/){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 ## Using API key
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- An **API Key**: Generate an API key from the Mandrill [Settings](https://mandrillapp.com/settings){:target=_blank .external-link}. Refer to Mailchimp's [Generate your API key documentation](https://mailchimp.com/developer/transactional/guides/quick-start/#generate-your-api-key){:target=_blank .external-link} for more detailed instructions.
+- **API Key**: สร้าง API key จาก [Settings](https://mandrillapp.com/settings){:target=_blank .external-link} ของ Mandrill อ้างอิงเอกสาร Mailchimp's [Generate your API key documentation](https://mailchimp.com/developer/transactional/guides/quick-start/#generate-your-api-key){:target=_blank .external-link} สำหรับคำแนะนำโดยละเอียดเพิ่มเติม
 

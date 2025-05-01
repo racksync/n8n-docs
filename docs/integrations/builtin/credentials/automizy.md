@@ -8,13 +8,13 @@ priority: medium
 
 # Automizy credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node เหล่านี้:
 
 - [Automizy](/integrations/builtin/app-nodes/n8n-nodes-base.automizy.md)
 
 ## Prerequisites
 
-Create an [Automizy](https://automizy.com/){:target=_blank .external-link} account.
+สมัคร [Automizy](https://automizy.com/){:target=_blank .external-link} ให้เรียบร้อยก่อน
 
 ## Supported authentication methods
 
@@ -22,11 +22,11 @@ Create an [Automizy](https://automizy.com/){:target=_blank .external-link} accou
 
 ## Related resources
 
-Refer to [Automizy's API documentation](https://developers.automizy.com/automizyrestapi/){:target=_blank .external-link} for more information about the service.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับการใช้งาน API ได้ที่ [Automizy's API documentation](https://developers.automizy.com/automizyrestapi/){:target=_blank .external-link}
 
 ## Using API token
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- An **API Token**: Create new or access existing API tokens from your [**Automizy dashboard**](https://app.automizy.com/dashboard){:target=_blank .external-link} **> Settings > API Token**.
+- **API Token**: สร้างหรือดู token ได้ที่ [**Automizy dashboard**](https://app.automizy.com/dashboard){:target=_blank .external-link} **> Settings > API Token**
 

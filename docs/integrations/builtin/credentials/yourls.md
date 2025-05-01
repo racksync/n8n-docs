@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Yourls credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อ authenticate กับ node เหล่านี้:
 
 - [Yourls](/integrations/builtin/app-nodes/n8n-nodes-base.yourls.md)
 
 ## Prerequisites
 
-Install [Yourls](https://github.com/YOURLS/YOURLS){:target=_blank .external-link} on your server.
+ติดตั้ง [Yourls](https://github.com/YOURLS/YOURLS){:target=_blank .external-link} บน server ของคุณ
 
 ## Supported authentication methods
 
@@ -21,12 +21,12 @@ Install [Yourls](https://github.com/YOURLS/YOURLS){:target=_blank .external-link
 
 ## Related resources
 
-Refer to [Yourl's documentation](https://yourls.org/docs){:target=_blank .external-link} for more information about the service.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับการใช้งาน API ได้ที่ [Yourl's documentation](https://yourls.org/docs){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- A **Signature** token: Go to **Tools > Secure passwordless API call** to get your **Signature** token. Refer to [Yourl's Passworldess API documentation](https://yourls.org/docs/guide/advanced/passwordless-api){:target=_blank .external-link} for more information.
-- A **URL**: Enter the URL of your Yourls instance.
+- **Signature** token: ไปที่ **Tools > Secure passwordless API call** เพื่อรับ **Signature** token ดูรายละเอียดที่ [Yourl's Passworldess API documentation](https://yourls.org/docs/guide/advanced/passwordless-api){:target=_blank .external-link}
+- **URL**: ใส่ URL ของ Yourls instance ของคุณ
 

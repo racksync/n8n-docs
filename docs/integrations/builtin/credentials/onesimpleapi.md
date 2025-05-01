@@ -8,13 +8,13 @@ contentType: [integration, reference]
 <!-- Not adding 'Simple' to accept.txt but can't really get away from it here -->
 # One Simple API credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนใน nodes ต่อไปนี้:
 
 - [One Simple API](/integrations/builtin/app-nodes/n8n-nodes-base.onesimpleapi.md)
 
 ## Prerequisites
 
-Create a [One Simple API](https://onesimpleapi.com/register){:target=_blank .external-link} account.
+สร้างบัญชี [One Simple API](https://onesimpleapi.com/register){:target=_blank .external-link}
 
 ## Supported authentication methods
 
@@ -22,14 +22,14 @@ Create a [One Simple API](https://onesimpleapi.com/register){:target=_blank .ext
 
 ## Related resources
 
-Refer to [One Simple API's documentation](https://onesimpleapi.com/docs){:target=_blank .external-link} for more information about the service.
+อ้างอิง [One Simple API's documentation](https://onesimpleapi.com/docs){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 ## Using API token
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- An **API token**: Create a new API token on the [API Tokens](https://onesimpleapi.com/user/api-tokens) page. Be sure you select appropriate permissions for the token.
+- **API token**: สร้าง API token ใหม่บนหน้า [API Tokens](https://onesimpleapi.com/user/api-tokens) ตรวจสอบให้แน่ใจว่าคุณเลือก permissions ที่เหมาะสมสำหรับ token
 
-You can also access the API Tokens page by selecting your **Profile > API Tokens**.
+คุณยังสามารถเข้าถึงหน้า API Tokens ได้โดยเลือก **Profile > API Tokens**
 
 <!-- vale on -->

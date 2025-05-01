@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Pushover credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [Pushover](/integrations/builtin/app-nodes/n8n-nodes-base.pushover.md)
 
 ## Prerequisites
 
-Create a [Pushover](https://pushover.net){:target=_blank .external-link} account.
+สร้าง [Pushover](https://pushover.net){:target=_blank .external-link} account
 
 ## Supported authentication methods
 
@@ -21,11 +21,11 @@ Create a [Pushover](https://pushover.net){:target=_blank .external-link} account
 
 ## Related resources
 
-Refer to [Pushover's API documentation](https://pushover.net/api){:target=_blank .external-link} for more information about authenticating with the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับการยืนยันตัวตนกับบริการนี้ได้ที่ [Pushover's API documentation](https://pushover.net/api){:target=_blank .external-link}
 
 ## Using API Key
 
-To configure this credential, you'll need:
+สำหรับการตั้งค่า credentials นี้ คุณจะต้องมี:
 
-- An **API Key**: Generated when you [register an application](https://pushover.net/apps/build){:target=_blank .external-link}. Refer to [Application Registration](https://pushover.net/api#registration){:target=_blank .external-link} for more information.
+- **API Key**: สร้างขึ้นเมื่อคุณ [register an application](https://pushover.net/apps/build){:target=_blank .external-link} ดูข้อมูลเพิ่มเติมที่ [Application Registration](https://pushover.net/api#registration){:target=_blank .external-link}
 

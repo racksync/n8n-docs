@@ -7,14 +7,14 @@ contentType: [integration, reference]
 
 # Flow credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้:
 
 - [Flow](/integrations/builtin/app-nodes/n8n-nodes-base.flow.md)
 - [Flow Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.flowtrigger.md)
 
 ## Prerequisites
 
-Create a [Flow](https://www.getflow.com/) account.
+สร้างบัญชี [Flow](https://www.getflow.com/)
 
 ## Supported authentication methods
 
@@ -22,13 +22,13 @@ Create a [Flow](https://www.getflow.com/) account.
 
 ## Related resources
 
-Refer to [Flow's API documentation](https://developer.getflow.com/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Flow's API documentation](https://developer.getflow.com/){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- Your numeric **Organization ID**
-- An **Access Token**
+- **Organization ID** ที่เป็นตัวเลขของคุณ
+- **Access Token**
 
-Refer to the [Flow API Getting Started documentation](https://developer.getflow.com/#getting-started){:target=_blank .external-link} for instructions on generating your Access Token and viewing your Organization ID.
+ดูคำแนะนำในการสร้าง Access Token และดู Organization ID ของคุณได้ที่ [Flow API Getting Started documentation](https://developer.getflow.com/#getting-started){:target=_blank .external-link}

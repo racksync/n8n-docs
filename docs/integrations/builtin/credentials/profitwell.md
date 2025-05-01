@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # ProfitWell credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [ProfitWell](/integrations/builtin/app-nodes/n8n-nodes-base.profitwell.md)
 
 ## Prerequisites
 
-Create a [ProfitWell](https://www2.profitwell.com/signup/start){:target=_blank .external-link} account.
+สร้าง [ProfitWell](https://www2.profitwell.com/signup/start){:target=_blank .external-link} account
 
 ## Supported authentication methods
 
@@ -21,11 +21,11 @@ Create a [ProfitWell](https://www2.profitwell.com/signup/start){:target=_blank .
 
 ## Related resources
 
-Refer to [Profitwell's API documentation](https://profitwellapiv2.docs.apiary.io/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Profitwell's API documentation](https://profitwellapiv2.docs.apiary.io/){:target=_blank .external-link}
 
 ## Using API token
 
-To configure this credential, you'll need:
+สำหรับการตั้งค่า credentials นี้ คุณจะต้องมี:
 
-- An **API Token**: To get an API key or token, go to **Account Settings > Integrations** and select **ProfitWell API**. 
+- **API Token**: หากต้องการรับ API key หรือ token ให้ไปที่ **Account Settings > Integrations** และเลือก **ProfitWell API**
 

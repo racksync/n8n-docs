@@ -8,61 +8,61 @@ priority: medium
 
 # NocoDB credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนใน nodes ต่อไปนี้:
 
 - [NocoDB](/integrations/builtin/app-nodes/n8n-nodes-base.nocodb.md)
 
 ## Supported authentication methods
 
-- API token (recommended)
+- API token (แนะนำ)
 - User auth token
 
     /// note | User auth token deprecation
-    NocoDB deprecated user auth tokens in v0.205.1. Use [API tokens](#using-api-token) instead.
+    NocoDB เลิกใช้ user auth tokens ในเวอร์ชัน v0.205.1 ให้ใช้ [API tokens](#using-api-token) แทน
     ///
 
 ## Related resources
 
-Refer to [NocoDB's API documentation](https://data-apis-v2.nocodb.com/){:target=_blank .external-link} for more information about the service.
+อ้างอิง [NocoDB's API documentation](https://data-apis-v2.nocodb.com/){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 ## Using API token
 
-To configure this credential, you'll need a [NocoDB](https://www.nocodb.com/){:target=_blank .external-link} instance and:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี instance ของ [NocoDB](https://www.nocodb.com/){:target=_blank .external-link} และ:
 
-- An **API Token**
-- Your database **Host**
+- **API Token**
+- **Host** ของฐานข้อมูลของคุณ
 
-To generate an API token:
+วิธีสร้าง API token:
 
-1. Log into NocoDB and select the **User menu** in the bottom left sidebar.
-2. Select **Account Settings**.
-3. Open the **Tokens** tab.
-4. Select **Add new API token**.
-5. Enter a **Name** for your token, like `n8n integration`.
-6. Select **Save**.
-7. Copy the **API Token** and enter it in your n8n credential.
-8. Enter the **Host** of your NocoDB instance in your n8n credential, for example `http://localhost:8080`.
+1. เข้าสู่ระบบ NocoDB และเลือก **User menu** ที่แถบด้านข้างซ้ายล่าง
+2. เลือก **Account Settings**
+3. เปิดแท็บ **Tokens**
+4. เลือก **Add new API token**
+5. ป้อน **Name** สำหรับ token ของคุณ เช่น `n8n integration`
+6. เลือก **Save**
+7. คัดลอก **API Token** และป้อนลงใน credential ของ n8n
+8. ป้อน **Host** ของ instance NocoDB ของคุณใน credential ของ n8n เช่น `http://localhost:8080`
 
-Refer to the NocoDB [API Tokens documentation](https://docs.nocodb.com/account-settings/api-tokens/){:target=_blank .external-link} for more detailed instructions.
+อ้างอิงเอกสาร NocoDB [API Tokens documentation](https://docs.nocodb.com/account-settings/api-tokens/){:target=_blank .external-link} สำหรับคำแนะนำโดยละเอียดเพิ่มเติม
 
 ## Using user auth token
 
-Before NocoDB deprecated it, user auth token was a temporary token designed for quick experiments with the API, valid for a session until the user logs out or for 10 hours.
+ก่อนที่ NocoDB จะเลิกใช้ user auth token เป็น token ชั่วคราวที่ออกแบบมาสำหรับการทดลอง API อย่างรวดเร็ว ซึ่งใช้ได้สำหรับ session จนกว่าผู้ใช้จะออกจากระบบ หรือเป็นเวลา 10 ชั่วโมง
 
 /// note | User auth token deprecation
-NocoDB deprecated user auth tokens in v0.205.1. Use [API tokens](#using-api-token) instead.
+NocoDB เลิกใช้ user auth tokens ในเวอร์ชัน v0.205.1 ให้ใช้ [API tokens](#using-api-token) แทน
 ///
 
-To configure this credential, you'll need a [NocoDB](https://www.nocodb.com/){:target=_blank .external-link} instance and:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี instance ของ [NocoDB](https://www.nocodb.com/){:target=_blank .external-link} และ:
 
-- A **User Token**
-- Your database **Host**
+- **User Token**
+- **Host** ของฐานข้อมูลของคุณ
 
-To generate a user auth token:
+วิธีสร้าง user auth token:
 
-1. Log into NocoDB and select the **User menu** in the bottom left sidebar.
-2. Select **Copy Auth token**.
-3. Enter that auth token as the **User Token** in n8n. 
-4. Enter the **Host** of your NocoDB instance, for example `http://localhost:8080`.
+1. เข้าสู่ระบบ NocoDB และเลือก **User menu** ที่แถบด้านข้างซ้ายล่าง
+2. เลือก **Copy Auth token**
+3. ป้อน auth token นั้นเป็น **User Token** ใน n8n
+4. ป้อน **Host** ของ instance NocoDB ของคุณ เช่น `http://localhost:8080`
 
-Refer to the NocoDB [Auth Tokens documentation](https://docs.nocodb.com/account-settings/api-tokens/#auth-tokens){:target=_blank .external-link} for more information.
+อ้างอิงเอกสาร NocoDB [Auth Tokens documentation](https://docs.nocodb.com/account-settings/api-tokens/#auth-tokens){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม

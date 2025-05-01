@@ -8,7 +8,7 @@ priority: critical
 
 # OpenAI credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนใน nodes ต่อไปนี้:
 
 - [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/index.md)
 - [Chat OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/index.md)
@@ -17,7 +17,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create an [OpenAI](https://platform.openai.com/signup/){:target=_blank .external-link} account.
+สร้างบัญชี [OpenAI](https://platform.openai.com/signup/){:target=_blank .external-link}
 
 ## Supported authentication methods
 
@@ -25,28 +25,28 @@ Create an [OpenAI](https://platform.openai.com/signup/){:target=_blank .external
 
 ## Related resources
 
-Refer to [OpenAI's API documentation](https://platform.openai.com/docs/introduction){:target=_blank .external-link} for more information about the service.
+อ้างอิง [OpenAI's API documentation](https://platform.openai.com/docs/introduction){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 ## Using API key
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- An **API Key**
-- An **Organization ID**: Required if you belong to multiple organizations; otherwise, leave this blank.
+- **API Key**
+- **Organization ID**: จำเป็นหากคุณอยู่ในหลายองค์กร มิฉะนั้น ให้เว้นว่างไว้
 
-To generate your API Key:
+วิธีสร้าง API Key ของคุณ:
 
-1. Login to your OpenAI account or [create](https://platform.openai.com/signup/){:target=_blank .external-link} an account.
-2. Open your [API keys](https://platform.openai.com/api-keys){:target=_blank .external-link} page.
-3. Select **Create new secret key** to create an API key, optionally naming the key.
-4. Copy your key and add it as the **API Key** in n8n.
+1. เข้าสู่ระบบบัญชี OpenAI ของคุณ หรือ [สร้าง](https://platform.openai.com/signup/){:target=_blank .external-link} บัญชี
+2. เปิดหน้า [API keys](https://platform.openai.com/api-keys){:target=_blank .external-link} ของคุณ
+3. เลือก **Create new secret key** เพื่อสร้าง API key โดยสามารถตั้งชื่อ key ได้ (ไม่บังคับ)
+4. คัดลอก key ของคุณและเพิ่มเป็น **API Key** ใน n8n
 
-Refer to the [API Quickstart Account Setup documentation](https://platform.openai.com/docs/quickstart/account-setup){:target=_blank .external-link} for more information.
+อ้างอิงเอกสาร [API Quickstart Account Setup documentation](https://platform.openai.com/docs/quickstart/account-setup){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 
-To find your Organization ID:
+วิธีค้นหา Organization ID ของคุณ:
 
-1. Go to your [Organization Settings](https://platform.openai.com/account/organization){:target=_blank .external-link} page.
-2. Copy your Organization ID and add it as the **Organization ID** in n8n.
+1. ไปที่หน้า [Organization Settings](https://platform.openai.com/account/organization){:target=_blank .external-link} ของคุณ
+2. คัดลอก Organization ID ของคุณและเพิ่มเป็น **Organization ID** ใน n8n
 
-Refer to [Setting up your organization](https://platform.openai.com/docs/guides/production-best-practices/setting-up-your-organization){:target=_blank .external-link} for more information. Note that API requests made using an Organization ID will count toward the organization's subscription quota.
+อ้างอิง [Setting up your organization](https://platform.openai.com/docs/guides/production-best-practices/setting-up-your-organization){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม โปรดทราบว่าคำขอ API ที่ทำโดยใช้ Organization ID จะนับรวมอยู่ในโควต้าการสมัครสมาชิกขององค์กร
 

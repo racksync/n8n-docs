@@ -7,14 +7,14 @@ contentType: [integration, reference]
 
 # Taiga credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [Taiga](/integrations/builtin/app-nodes/n8n-nodes-base.taiga.md)
 - [Taiga Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.taigatrigger.md)
 
 ## Prerequisites
 
-Create a [Taiga](https://taiga.io/){:target=_blank .external-link} account.
+สร้างบัญชี [Taiga](https://taiga.io/){:target=_blank .external-link} ก่อน
 
 ## Supported authentication methods
 
@@ -22,14 +22,14 @@ Create a [Taiga](https://taiga.io/){:target=_blank .external-link} account.
 
 ## Related resources
 
-Refer to [Taiga's API documentation](https://docs.taiga.io/api.html){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Taiga's API documentation](https://docs.taiga.io/api.html){:target=_blank .external-link}
 
 ## Using basic auth
 
-To configure this credential, you'll need:
+ในการตั้งค่า credentials นี้ คุณจะต้องมี:
 
-- A **Username**: Enter your username or user email address. Refer to [Normal login](https://docs.taiga.io/api.html#auth-normal-login){:target=_blank .external-link} for more information.
-- A **Password**: Enter your password.
-- The **Environment**: Choose between **Cloud** or **Self-Hosted**. For **Self-Hosted** instances, you'll also need to add:
-    - The **URL**: Enter your Taiga URL.
+- **Username**: กรอก username หรืออีเมลของคุณ ดูรายละเอียดได้ที่ [Normal login](https://docs.taiga.io/api.html#auth-normal-login){:target=_blank .external-link}
+- **Password**: กรอกรหัสผ่านของคุณ
+- **Environment**: เลือก **Cloud** หรือ **Self-Hosted** ถ้าเลือก **Self-Hosted** จะต้องกรอก:
+    - **URL**: กรอก URL ของ Taiga instance ของคุณ
 

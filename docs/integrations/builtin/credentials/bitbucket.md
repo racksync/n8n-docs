@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Bitbucket credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อเชื่อมต่อกับ node เหล่านี้:
 
 - [Bitbucket Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.bitbuckettrigger.md)
 
 ## Prerequisites
 
-Create a [Bitbucket](https://www.bitbucket.com/){:target=_blank .external-link} account.
+สมัคร [Bitbucket](https://www.bitbucket.com/){:target=_blank .external-link} ให้เรียบร้อยก่อน
 
 ## Supported authentication methods
 
@@ -21,18 +21,18 @@ Create a [Bitbucket](https://www.bitbucket.com/){:target=_blank .external-link} 
 
 ## Related resources
 
-Refer to [Bitbucket's API documentation](https://developer.atlassian.com/cloud/bitbucket/rest/intro/#authentication){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการได้ที่ [Bitbucket's API documentation](https://developer.atlassian.com/cloud/bitbucket/rest/intro/#authentication){:target=_blank .external-link}
 
 ## Using API username/app password
 
-To configure this credential, you'll need:
+ถ้าจะตั้งค่า credentials นี้ คุณต้องมี:
 
-- A **Username**: Visible in your Bitbucket profile settings **Personal settings > Account settings**.
-- An **App Password**: Refer to the Bitbucket instructions to [Create an app password](https://support.atlassian.com/bitbucket-cloud/docs/create-an-app-password/){:target=_blank .external-link}.
+- **Username**: ดูได้ใน Bitbucket profile settings **Personal settings > Account settings**
+- **App Password**: ดูคำแนะนำของ Bitbucket เพื่อ [Create an app password](https://support.atlassian.com/bitbucket-cloud/docs/create-an-app-password/){:target=_blank .external-link}
 
 ## App password permissions
 
-Bitbucket API credentials will only work if the user account you generated the app password for has the appropriate privilege scopes for the selected app password permissions. The n8n credentials dialog will throw an error if the user account lacks the appropriate permissions for the selected scope, like `Your credentials lack one or more required privilege scopes`.
+Bitbucket API credentials จะทำงานได้ก็ต่อเมื่อบัญชีผู้ใช้ที่คุณสร้าง app password ให้มี privilege scopes ที่เหมาะสมสำหรับ app password permissions ที่เลือกไว้ กล่องโต้ตอบ n8n credentials จะแสดงข้อผิดพลาดหากบัญชีผู้ใช้ไม่มี permissions ที่เหมาะสมสำหรับ scope ที่เลือก เช่น `Your credentials lack one or more required privilege scopes`
 
-See the [Bitbucket App password permissions documentation](https://support.atlassian.com/bitbucket-cloud/docs/app-password-permissions/){:target=_blank .external-link} for more information on working with these permissions.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับการทำงานกับ permissions เหล่านี้ได้ที่ [Bitbucket App password permissions documentation](https://support.atlassian.com/bitbucket-cloud/docs/app-password-permissions/){:target=_blank .external-link}
 

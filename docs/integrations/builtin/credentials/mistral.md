@@ -8,7 +8,7 @@ priority: medium
 
 # Mistral Cloud credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนใน nodes ต่อไปนี้:
 
 * [Mistral Cloud](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmistralcloud.md)
 * [Embeddings Mistral Cloud](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsmistralcloud.md)
@@ -16,8 +16,8 @@ You can use these credentials to authenticate the following nodes:
 ## Prerequisites
 
 <!-- vale off -->
-- Create a [Mistral](https://mistral.ai/){:target=_blank .external-link} La Plateforme account.
-- You must add payment information in **Workspace >** [**Billing**](https://admin.mistral.ai/organization/billing){:target=_blank .external-link} and activate payments to enable API keys. Refer to [Account setup](https://docs.mistral.ai/getting-started/quickstart/#account-setup){:target=_blank .external-link} for more information.
+- สร้างบัญชี [Mistral](https://mistral.ai/){:target=_blank .external-link} La Plateforme
+- คุณต้องเพิ่มข้อมูลการชำระเงินใน **Workspace >** [**Billing**](https://admin.mistral.ai/organization/billing){:target=_blank .external-link} และเปิดใช้งานการชำระเงินเพื่อเปิดใช้งาน API keys อ้างอิง [Account setup](https://docs.mistral.ai/getting-started/quickstart/#account-setup){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 <!-- vale on -->
 
 ## Supported authentication methods
@@ -26,24 +26,25 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Mistral's API documentation](https://docs.mistral.ai/api/){:target=_blank .external-link} for more information about the APIs.
+อ้างอิง [Mistral's API documentation](https://docs.mistral.ai/api/){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับ APIs
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
 ## Using API key
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- An **API Key**
+- **API Key**
 
-Once you've added payment information to your Mistral Cloud account:
+เมื่อคุณเพิ่มข้อมูลการชำระเงินในบัญชี Mistral Cloud ของคุณแล้ว:
 
-1. Sign in to your [Mistral account](https://console.mistral.ai/home){:target=_blank .external-link}.
-2. Go to the **API Keys** page.
-3. Select **Create new key**.
-4. Copy the API key and enter it in your n8n credential.
+1. ลงชื่อเข้าใช้บัญชี [Mistral account](https://console.mistral.ai/home){:target=_blank .external-link} ของคุณ
+2. ไปที่หน้า **API Keys**
+3. เลือก **Create new key**
+4. คัดลอก API key และป้อนลงใน credential ของ n8n
 
-Refer to [Account setup](https://docs.mistral.ai/getting-started/quickstart/#account-setup){:target=_blank .external-link} for more information.
+อ้างอิง [Account setup](https://docs.mistral.ai/getting-started/quickstart/#account-setup){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 
 /// note | Paid account required
-Mistral requires you to add payment information and activate payments to use API keys. Refer to the [Prerequisites](#prerequisites) section above for more information.
+Mistral ต้องการให้คุณเพิ่มข้อมูลการชำระเงินและเปิดใช้งานการชำระเงินเพื่อใช้ API keys อ้างอิงส่วน [Prerequisites](#prerequisites) ด้านบนสำหรับข้อมูลเพิ่มเติม
+///

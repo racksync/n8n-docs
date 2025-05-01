@@ -8,16 +8,16 @@ priority: critical
 
 # HTTP Request credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md)
 - [HTTP Request Tool (legacy)](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest.md)
 
 ## Prerequisites
 
-You must use the authentication method required by the app or service you want to query.
+คุณต้องใช้วิธีการยืนยันตัวตนที่แอปหรือบริการที่คุณต้องการ query กำหนด
 
-If you need to secure the authentication with an SSL certificate, refer to [Provide an SSL certificate](#provide-an-ssl-certificate) for the information you'll need.
+หากคุณต้องการรักษาความปลอดภัยในการยืนยันตัวตนด้วย SSL certificate โปรดดู [Provide an SSL certificate](#provide-an-ssl-certificate) สำหรับข้อมูลที่คุณต้องการ
 
 ## Supported authentication methods
 
@@ -31,19 +31,19 @@ If you need to secure the authentication with an SSL certificate, refer to [Prov
 - OAuth2 (generic credential type)
 - Query auth (generic credential type)
 
-Refer to [HTTP authentication](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication){:target=_blank .external-link} for more information relating to generic credential types.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับ generic credential types ได้ที่ [HTTP authentication](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication){:target=_blank .external-link}
 
 /// note | Predefined credential types
-n8n recommends using predefined credential types whenever there's a credential type available for the service you want to connect to. It offers an easier way to set up and manage credentials, compared to configuring generic credentials.
+n8n แนะนำให้ใช้ predefined credential types เมื่อใดก็ตามที่มี credential type สำหรับบริการที่คุณต้องการเชื่อมต่อ มันมีวิธีที่ง่ายกว่าในการตั้งค่าและจัดการ credentials เมื่อเทียบกับการกำหนดค่า generic credentials
 
-You can use [Predefined credential types](/integrations/custom-operations.md#predefined-credential-types) to perform custom operations with some APIs where n8n has a node for the platform. For example, n8n has an Asana node, and supports using your Asana credentials in the HTTP Request node. Refer to [Custom operations](/integrations/custom-operations.md) for more information.
+คุณสามารถใช้ [Predefined credential types](/integrations/custom-operations.md#predefined-credential-types) เพื่อดำเนินการ custom operations กับ API บางตัวที่ n8n มี node สำหรับแพลตฟอร์มนั้น ตัวอย่างเช่น n8n มี Asana node และรองรับการใช้ Asana credentials ของคุณใน HTTP Request node ดูข้อมูลเพิ่มเติมได้ที่ [Custom operations](/integrations/custom-operations.md)
 ///
 
 ## Using predefined credential type
 
 --8<-- "_snippets/integrations/predefined-credential-type-how-to.md"
 
-Refer to [Custom API operations](/integrations/custom-operations.md) for more information.
+ดูข้อมูลเพิ่มเติมได้ที่ [Custom API operations](/integrations/custom-operations.md)
 
 --8<-- "_snippets/integrations/builtin/credentials/generic-auth/basic-auth.md"
 
@@ -55,106 +55,106 @@ Refer to [Custom API operations](/integrations/custom-operations.md) for more in
 
 ## Using OAuth1
 
-Use this generic authentication if your app or service supports OAuth1 authentication.
+ใช้ generic authentication นี้หากแอปหรือบริการของคุณรองรับการยืนยันตัวตนแบบ OAuth1
 
-To configure this credential, enter:
+ในการตั้งค่า credential นี้ ให้ป้อน:
 
-- An **Authorization URL**: Also known as the Resource Owner Authorization URI. This URL typically ends in `/oauth1/authorize`. The temporary credentials are sent here to prompt a user to complete authorization.
-- An **Access Token URL**: This is the URI used for the initial request for temporary credentials. This URL typically ends in `/oauth1/request` or `/oauth1/token`.
-- A **Consumer Key**: Also known as the client key, like a username. This specifies the `oauth_consumer_key` to use for the call.
-- A **Consumer Secret**: Also known as the client secret, like a password.
-- A **Request Token URL**: This is the URI used to switch from temporary credentials to long-lived credentials after authorization. This URL typically ends in `/oauth1/access`.
-- Select the **Signature Method** the auth handshake uses. This specifies the `oauth_signature_method` to use for the call. Options include:
+- **Authorization URL**: หรือที่เรียกว่า Resource Owner Authorization URI โดยทั่วไป URL นี้จะลงท้ายด้วย `/oauth1/authorize` credentials ชั่วคราวจะถูกส่งมาที่นี่เพื่อแจ้งให้ผู้ใช้ทำการยืนยันตัวตนให้เสร็จสมบูรณ์
+- **Access Token URL**: นี่คือ URI ที่ใช้สำหรับการร้องขอ credentials ชั่วคราวครั้งแรก โดยทั่วไป URL นี้จะลงท้ายด้วย `/oauth1/request` หรือ `/oauth1/token`
+- **Consumer Key**: หรือที่เรียกว่า client key เหมือนกับ username สิ่งนี้ระบุ `oauth_consumer_key` ที่จะใช้สำหรับการเรียก
+- **Consumer Secret**: หรือที่เรียกว่า client secret เหมือนกับ password
+- **Request Token URL**: นี่คือ URI ที่ใช้ในการเปลี่ยนจาก credentials ชั่วคราวเป็น credentials ระยะยาวหลังจากการยืนยันตัวตน โดยทั่วไป URL นี้จะลงท้ายด้วย `/oauth1/access`
+- เลือก **Signature Method** ที่ auth handshake ใช้ สิ่งนี้ระบุ `oauth_signature_method` ที่จะใช้สำหรับการเรียก ตัวเลือกได้แก่:
 	- **HMAC-SHA1**
 	- **HMAC-SHA256**
 	- **HMAC-SHA512**
 
-For most OAuth1 integrations, you'll need to configure an app, service, or integration to generate the values for most of these fields. Use the **OAuth Redirect URL** in n8n as the redirect URL or redirect URI for such a service.
+สำหรับการรวม OAuth1 ส่วนใหญ่ คุณจะต้องกำหนดค่าแอป บริการ หรือการรวมระบบเพื่อสร้างค่าสำหรับฟิลด์ส่วนใหญ่เหล่านี้ ใช้ **OAuth Redirect URL** ใน n8n เป็น redirect URL หรือ redirect URI สำหรับบริการดังกล่าว
 
-Read more about [OAuth1](https://oauth.net/1/){:target=_blank .external-link} and the [OAuth1 authorization flow](https://oauth1.wp-api.org/docs/basics/Auth-Flow.html){:target=_blank .external-link}.
+อ่านเพิ่มเติมเกี่ยวกับ [OAuth1](https://oauth.net/1/){:target=_blank .external-link} และ [OAuth1 authorization flow](https://oauth1.wp-api.org/docs/basics/Auth-Flow.html){:target=_blank .external-link}
 
 ## Using OAuth2
 
-Use this generic authentication if your app or service supports OAuth2 authentication.
+ใช้ generic authentication นี้หากแอปหรือบริการของคุณรองรับการยืนยันตัวตนแบบ OAuth2
 
-Requirements to configure this credential depend on the **Grant Type** selected. Refer to [OAuth Grant Types](https://oauth.net/2/grant-types/) for more information on each grant type.
+ข้อกำหนดในการตั้งค่า credential นี้ขึ้นอยู่กับ **Grant Type** ที่เลือก โปรดดู [OAuth Grant Types](https://oauth.net/2/grant-types/) สำหรับข้อมูลเพิ่มเติมเกี่ยวกับ grant type แต่ละประเภท
 
-For most OAuth2 integrations, you'll need to configure an app, service, or integration. Use the **OAuth Redirect URL** in n8n as the redirect URL or redirect URI for such a service.
+สำหรับการรวม OAuth2 ส่วนใหญ่ คุณจะต้องกำหนดค่าแอป บริการ หรือการรวมระบบ ใช้ **OAuth Redirect URL** ใน n8n เป็น redirect URL หรือ redirect URI สำหรับบริการดังกล่าว
 
-Read more about [OAuth2](https://oauth.net/2/){:target=_blank .external-link}.
+อ่านเพิ่มเติมเกี่ยวกับ [OAuth2](https://oauth.net/2/){:target=_blank .external-link}
 
 ### Authorization Code grant type
 
-Use Authorization Code grant type to exchange an authorization code for an access token. The auth flow uses the redirect URL to return the user to the client. Then the application gets the authorization code from the URL and uses it to request an access token. Refer to [Authorization Code Request](https://www.oauth.com/oauth2-servers/access-tokens/authorization-code-request/){:target=_blank .external-link} for more information.
+ใช้ Authorization Code grant type เพื่อแลกเปลี่ยน authorization code เป็น access token auth flow ใช้ redirect URL เพื่อส่งผู้ใช้กลับไปยัง client จากนั้น application จะรับ authorization code จาก URL และใช้เพื่อขอ access token ดูข้อมูลเพิ่มเติมได้ที่ [Authorization Code Request](https://www.oauth.com/oauth2-servers/access-tokens/authorization-code-request/){:target=_blank .external-link}
 
-To configure this credential, select **Authorization Code** as the **Grant Type**.
+ในการตั้งค่า credential นี้ ให้เลือก **Authorization Code** เป็น **Grant Type**
 
-Then enter:
+จากนั้นป้อน:
 
-- An **Authorization URL**
-- An **Access Token URL**
-- A **Client ID**: The ID or username to log in with.
-- A **Client Secret**: The secret or password used to log in with.
-- _Optional:_ Enter one or more **Scope**s for the credential. If unspecified, the credential will request all scopes available to the client.
-- _Optional:_ Some services require more query parameters. If your service does, add them as **Auth URI Query Parameters**.
-- An **Authentication** type: Select the option that best suits your use case. Options include:
-	- **Header**: Send the credentials as a basic auth header.
-	- **Body**: Send the credentials in the body of the request.
-- _Optional:_ Choose whether to **Ignore SSL Issues**. If turned on, n8n will connect even if SSL validation fails.
+- **Authorization URL**
+- **Access Token URL**
+- **Client ID**: ID หรือ username ที่จะใช้เข้าสู่ระบบ
+- **Client Secret**: secret หรือ password ที่ใช้เข้าสู่ระบบ
+- _Optional:_ ป้อน **Scope** หนึ่งรายการหรือมากกว่าสำหรับ credential หากไม่ระบุ credential จะร้องขอ scopes ทั้งหมดที่มีให้สำหรับ client
+- _Optional:_ บางบริการต้องการ query parameters เพิ่มเติม หากบริการของคุณต้องการ ให้เพิ่มเป็น **Auth URI Query Parameters**
+- **Authentication** type: เลือกตัวเลือกที่เหมาะสมกับกรณีการใช้งานของคุณมากที่สุด ตัวเลือกได้แก่:
+	- **Header**: ส่ง credentials เป็น basic auth header
+	- **Body**: ส่ง credentials ใน body ของ request
+- _Optional:_ เลือกว่าจะ **Ignore SSL Issues** หรือไม่ หากเปิดใช้งาน n8n จะเชื่อมต่อแม้ว่าการตรวจสอบ SSL จะล้มเหลว
 
 ### Client Credentials grant type
 
-Use the Client Credentials grant type when applications request an access token to access their own resources, not on behalf of a user. Refer to [Client Credentials](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/){:target=_blank .external-link} for more information.
+ใช้ Client Credentials grant type เมื่อ applications ขอ access token เพื่อเข้าถึง resources ของตนเอง ไม่ใช่ในนามของผู้ใช้ ดูข้อมูลเพิ่มเติมได้ที่ [Client Credentials](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/){:target=_blank .external-link}
 
-To configure this credential, select **Client Credentials** as the **Grant Type**.
+ในการตั้งค่า credential นี้ ให้เลือก **Client Credentials** เป็น **Grant Type**
 
-Then enter:
+จากนั้นป้อน:
 
-- An **Access Token URL**: The URL to hit to begin the OAuth2 flow. Typically this URL ends in `/token`.
-- A **Client ID**: The ID or username to use to log in to the client.
-- A **Client Secret**: The secret or password used to log in to the client.
-- _Optional:_ Enter one or more **Scope**s for the credential. Most services don't support scopes for Client Credentials grant types; only enter scopes here if yours does.
-- An **Authentication** type: Select the option that best suits your use case. Options include:
-	- **Header**: Send the credentials as a basic auth header.
-	- **Body**: Send the credentials in the body of the request.
-- _Optional:_ Choose whether to **Ignore SSL Issues**. If turned on, n8n will connect even if SSL validation fails.
+- **Access Token URL**: URL ที่จะเรียกเพื่อเริ่ม OAuth2 flow โดยทั่วไป URL นี้จะลงท้ายด้วย `/token`
+- **Client ID**: ID หรือ username ที่จะใช้เข้าสู่ระบบ client
+- **Client Secret**: secret หรือ password ที่ใช้เข้าสู่ระบบ client
+- _Optional:_ ป้อน **Scope** หนึ่งรายการหรือมากกว่าสำหรับ credential บริการส่วนใหญ่ไม่รองรับ scopes สำหรับ Client Credentials grant types; ป้อน scopes ที่นี่เฉพาะในกรณีที่บริการของคุณรองรับเท่านั้น
+- **Authentication** type: เลือกตัวเลือกที่เหมาะสมกับกรณีการใช้งานของคุณมากที่สุด ตัวเลือกได้แก่:
+	- **Header**: ส่ง credentials เป็น basic auth header
+	- **Body**: ส่ง credentials ใน body ของ request
+- _Optional:_ เลือกว่าจะ **Ignore SSL Issues** หรือไม่ หากเปิดใช้งาน n8n จะเชื่อมต่อแม้ว่าการตรวจสอบ SSL จะล้มเหลว
 
 ### PKCE grant type
 
-Proof Key for Code Exchange (PKCE) grant type is an extension to the Authorization Code flow to prevent CSRF and authorization code injection attacks.
+Proof Key for Code Exchange (PKCE) grant type เป็นส่วนขยายของ Authorization Code flow เพื่อป้องกันการโจมตีแบบ CSRF และ authorization code injection
 
-To configure this credential, select **PKCE** as the **Grant Type**.
+ในการตั้งค่า credential นี้ ให้เลือก **PKCE** เป็น **Grant Type**
 
-Then enter:
+จากนั้นป้อน:
 
-- An **Authorization URL**
-- An **Access Token URL**
-- A **Client ID**: The ID or username to log in with.
-- A **Client Secret**: The secret or password used to log in with.
-- _Optional:_ Enter one or more **Scope**s for the credential. If unspecified, the credential will request all scopes available to the client.
-- _Optional:_ Some services require more query parameters. If your service does, add them as **Auth URI Query Parameters**.
-- An **Authentication** type: Select the option that best suits your use case. Options include:
-	- **Header**: Send the credentials as a basic auth header.
-	- **Body**: Send the credentials in the body of the request.
-- _Optional:_ Choose whether to **Ignore SSL Issues**. If turned on, n8n will connect even if SSL validation fails.
+- **Authorization URL**
+- **Access Token URL**
+- **Client ID**: ID หรือ username ที่จะใช้เข้าสู่ระบบ
+- **Client Secret**: secret หรือ password ที่ใช้เข้าสู่ระบบ
+- _Optional:_ ป้อน **Scope** หนึ่งรายการหรือมากกว่าสำหรับ credential หากไม่ระบุ credential จะร้องขอ scopes ทั้งหมดที่มีให้สำหรับ client
+- _Optional:_ บางบริการต้องการ query parameters เพิ่มเติม หากบริการของคุณต้องการ ให้เพิ่มเป็น **Auth URI Query Parameters**
+- **Authentication** type: เลือกตัวเลือกที่เหมาะสมกับกรณีการใช้งานของคุณมากที่สุด ตัวเลือกได้แก่:
+	- **Header**: ส่ง credentials เป็น basic auth header
+	- **Body**: ส่ง credentials ใน body ของ request
+- _Optional:_ เลือกว่าจะ **Ignore SSL Issues** หรือไม่ หากเปิดใช้งาน n8n จะเชื่อมต่อแม้ว่าการตรวจสอบ SSL จะล้มเหลว
 
 ## Using query auth
 
-Use this generic authentication if your app or service supports passing authentication as a single key/value query parameter. (For multiple query parameters, use [Custom Auth](#using-custom-auth).)
+ใช้ generic authentication นี้หากแอปหรือบริการของคุณรองรับการส่งผ่านการยืนยันตัวตนเป็น query parameter แบบ key/value เดียว (สำหรับ query parameters หลายตัว ให้ใช้ [Custom Auth](#using-custom-auth))
 
-To configure this credential, enter:
+ในการตั้งค่า credential นี้ ให้ป้อน:
 
-- A query parameter key or **Name**
-- A query parameter **Value**
+- query parameter key หรือ **Name**
+- query parameter **Value**
 
 ## Using custom auth
 
-Use this generic authentication if your app or service supports passing authentication as multiple key/value query parameters or you need more flexibility than the other generic auth options.
+ใช้ generic authentication นี้หากแอปหรือบริการของคุณรองรับการส่งผ่านการยืนยันตัวตนเป็น query parameters แบบ key/value หลายตัว หรือคุณต้องการความยืดหยุ่นมากกว่าตัวเลือก generic auth อื่นๆ
 
-The **Custom Auth** credential expects JSON data to define your credential. You can use `headers`, `qs`, `body` or a mix. Review the examples below to get started.
+**Custom Auth** credential คาดหวังข้อมูล JSON เพื่อกำหนด credential ของคุณ คุณสามารถใช้ `headers`, `qs`, `body` หรือผสมกันได้ ตรวจสอบตัวอย่างด้านล่างเพื่อเริ่มต้น
 
 ### Sending two headers
-```
+```json
 {
 	"headers": {
 		"X-AUTH-USERNAME": "username",
@@ -164,7 +164,7 @@ The **Custom Auth** credential expects JSON data to define your credential. You 
 ```
 
 ### Body
-```
+```json
 {
 	 "body" : {
 		"user": "username",
@@ -174,7 +174,7 @@ The **Custom Auth** credential expects JSON data to define your credential. You 
 ```
 
 ### Query string
-```
+```json
 {
 	"qs": { 
 		"appid": "123456",
@@ -184,7 +184,7 @@ The **Custom Auth** credential expects JSON data to define your credential. You 
 ```
 
 ### Sending header and query string
-```
+```json
 {
 	"headers": {
 		"api-version": "202404"
@@ -197,19 +197,19 @@ The **Custom Auth** credential expects JSON data to define your credential. You 
 
 ## Provide an SSL certificate
 
-You can send an SSL certificate with your HTTP request. Create the SSL certificate as a separate credential for use by the node:
+คุณสามารถส่ง SSL certificate พร้อมกับ HTTP request ของคุณได้ สร้าง SSL certificate เป็น credential แยกต่างหากเพื่อใช้โดย node:
 
-1. In the HTTP Request node **Settings**, turn on **SSL Certificates**.
-2. On the **Parameters** tab, add an existing SSL Certificate credential to **Credential for SSL Certificates** or create a new one.
+1.  ใน HTTP Request node **Settings** เปิดใช้งาน **SSL Certificates**
+2.  บนแท็บ **Parameters** เพิ่ม SSL Certificate credential ที่มีอยู่ลงใน **Credential for SSL Certificates** หรือสร้างใหม่
 
-To configure your SSL Certificates credential, you'll need to add:
+ในการตั้งค่า SSL Certificates credential ของคุณ คุณจะต้องเพิ่ม:
 
-- The Certificate Authority **CA** bundle
-- The **Certificate** (CRT): May also appear as a Public Key, depending on who your issuing CA was and how they format the cert
-- The **Private Key** (KEY)
-- _Optional:_ If the **Private Key** is encrypted, enter a **Passphrase** for the private key.
+- Certificate Authority **CA** bundle
+- **Certificate** (CRT): อาจปรากฏเป็น Public Key ขึ้นอยู่กับว่า CA ที่ออกใบรับรองของคุณคือใครและจัดรูปแบบ cert อย่างไร
+- **Private Key** (KEY)
+- _Optional:_ หาก **Private Key** ถูกเข้ารหัส ให้ป้อน **Passphrase** สำหรับ private key
 
-If your SSL certificate is in a single file (such as a `.pfx` file), you'll need to open the file to copy details from it to paste into the appropriate fields:
+หาก SSL certificate ของคุณอยู่ในไฟล์เดียว (เช่น ไฟล์ `.pfx`) คุณจะต้องเปิดไฟล์เพื่อคัดลอกรายละเอียดจากไฟล์นั้นไปวางในฟิลด์ที่เหมาะสม:
 
-- Enter the Public Key/CRT as the **Certificate**
-- Enter the **Private Key**/KEY in that field
+- ป้อน Public Key/CRT เป็น **Certificate**
+- ป้อน **Private Key**/KEY ในฟิลด์นั้น

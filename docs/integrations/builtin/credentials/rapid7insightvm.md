@@ -11,7 +11,7 @@ contentType: [integration, reference]
 
 ## Prerequisites
 
-Create a [Rapid7 InsightVM](https://www.rapid7.com/products/insightvm/) account.
+สร้าง [Rapid7 InsightVM](https://www.rapid7.com/products/insightvm/) account
 
 ## Supported authentication methods
 
@@ -19,15 +19,15 @@ Create a [Rapid7 InsightVM](https://www.rapid7.com/products/insightvm/) account.
 
 ## Related resources
 
-Refer to [Rapid7 InsightVM's API documentation](https://help.rapid7.com/insightvm/en-us/api/integrations.html){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Rapid7 InsightVM's API documentation](https://help.rapid7.com/insightvm/en-us/api/integrations.html){:target=_blank .external-link}
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/rapid7-insight-platform/){:target=_blank .external-link} on n8n's website.
+นี่คือ credential-only node ดูข้อมูลเพิ่มเติมที่ [Custom API operations](/integrations/custom-operations.md) ดู [example workflows and related content](https://n8n.io/integrations/rapid7-insight-platform/){:target=_blank .external-link} บนเว็บไซต์ n8n
 
 ## Using API key
 
-To configure this credential, you'll need a [Rapid7 InsightVM](https://www.rapid7.com/products/insightvm/) account and:
+สำหรับการตั้งค่า credentials นี้ คุณจะต้องมี [Rapid7 InsightVM](https://www.rapid7.com/products/insightvm/) account และ:
 
-* A **URL**: The API endpoint URL where the resource or data you are requesting lives. You can find more information about the expected format in the [endpoint section of the Rapid7's API overview](https://docs.rapid7.com/insight/api-overview/#endpoint).
-* An **API Key**: Refer to [Rapid7's Managing Platform API Keys documentation](https://docs.rapid7.com/insight/managing-platform-api-keys/) to create an API key.
+* **URL**: API endpoint URL ที่ resource หรือข้อมูลที่คุณร้องขออยู่ คุณสามารถดูข้อมูลเพิ่มเติมเกี่ยวกับรูปแบบที่คาดหวังได้ใน [endpoint section of the Rapid7's API overview](https://docs.rapid7.com/insight/api-overview/#endpoint)
+* **API Key**: ดู [Rapid7's Managing Platform API Keys documentation](https://docs.rapid7.com/insight/managing-platform-api-keys/) เพื่อสร้าง API key
 
-Refer to [Rapid7 InsightVM's API documentation](https://help.rapid7.com/insightvm/en-us/api/integrations.html){:target=_blank .external-link} for more information about authenticating to the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับการยืนยันตัวตนกับบริการนี้ได้ที่ [Rapid7 InsightVM's API documentation](https://help.rapid7.com/insightvm/en-us/api/integrations.html){:target=_blank .external-link}

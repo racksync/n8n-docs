@@ -7,17 +7,17 @@ contentType: [integration, reference]
 
 # TheHive 5 credentials
 
-You can use these credentials to authenticate the following nodes with TheHive 5.
+คุณสามารถใช้ credentials นี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ของ TheHive 5
 
 - [TheHive 5](/integrations/builtin/app-nodes/n8n-nodes-base.thehive5.md)
 
 /// note | TheHive and TheHive 5
-n8n provides two nodes for TheHive. Use these credentials with TheHive 5 node. If you're using TheHive node for TheHive 3 or TheHive 4, use [TheHive credentials](/integrations/builtin/credentials/thehive.md).
+n8n มี node สำหรับ TheHive สองแบบ ใช้ credentials นี้กับ TheHive 5 node ถ้าใช้ TheHive node สำหรับ TheHive 3 หรือ TheHive 4 ให้ใช้ [TheHive credentials](/integrations/builtin/credentials/thehive.md)
 ///
 
 ## Prerequisites
 
-Install [TheHive 5](https://docs.strangebee.com/thehive/download/){:target=_blank .external-link} on your server.
+ติดตั้ง [TheHive 5](https://docs.strangebee.com/thehive/download/){:target=_blank .external-link} บนเซิร์ฟเวอร์ของคุณ
 
 ## Supported authentication methods
 
@@ -25,17 +25,17 @@ Install [TheHive 5](https://docs.strangebee.com/thehive/download/){:target=_blan
 
 ## Related resources
 
-Refer to [TheHive's API documentation](https://docs.strangebee.com/thehive/api-docs/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [TheHive's API documentation](https://docs.strangebee.com/thehive/api-docs/){:target=_blank .external-link}
 
 ## Using API key
 
-To configure this credential, you'll need:
+ในการตั้งค่า credentials นี้ คุณจะต้องมี:
 
-- An **API Key**: Users with `orgAdmin` and `superAdmin` accounts can generate API keys:
-    - `orgAdmin` account: Go to **Organization > Create API Key** for the user you wish to generate a key for.
-    - `superAdmin` account: Go to **Users > Create API Key** for the user you wish to generate a key for.
-    - Refer to [API Authentication](https://docs.strangebee.com/cortex/api/api-guide/?h=api+key#authentication){:target=_blank .external-link} for more information.
-- A **URL**: The URL of your TheHive server.
-- **Ignore SSL Issues**: When turned on, n8n will connect even if SSL certificate validation fails.
+- **API Key**: ผู้ใช้ที่มีบัญชี `orgAdmin` และ `superAdmin` สามารถสร้าง API key ได้:
+    - บัญชี `orgAdmin`: ไปที่ **Organization > Create API Key** สำหรับ user ที่ต้องการสร้าง key ให้
+    - บัญชี `superAdmin`: ไปที่ **Users > Create API Key** สำหรับ user ที่ต้องการสร้าง key ให้
+    - ดูรายละเอียดเพิ่มเติมได้ที่ [API Authentication](https://docs.strangebee.com/cortex/api/api-guide/?h=api+key#authentication){:target=_blank .external-link}
+- **URL**: URL ของ TheHive server ของคุณ
+- **Ignore SSL Issues**: ถ้าเปิดใช้งาน n8n จะเชื่อมต่อแม้ SSL certificate validation จะล้มเหลว
 
 

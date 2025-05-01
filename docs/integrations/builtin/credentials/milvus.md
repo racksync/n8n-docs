@@ -8,13 +8,13 @@ priority: high
 
 # Milvus credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนใน nodes ต่อไปนี้:
 
 * [Milvus Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoremilvus.md)
 
 ## Prerequisites
 
-Create and run an [Milvus](https://milvus.io/) instance. Refer to the [Install Milvus](https://milvus.io/docs/install-overview.md) for more information.
+สร้างและรัน instance ของ [Milvus](https://milvus.io/) อ้างอิง [Install Milvus](https://milvus.io/docs/install-overview.md) สำหรับข้อมูลเพิ่มเติม
 
 ## Supported authentication methods
 
@@ -22,14 +22,14 @@ Create and run an [Milvus](https://milvus.io/) instance. Refer to the [Install M
 
 ## Related resources
 
-Refer to [Milvus's Authentication documentation](https://milvus.io/docs/authenticate.md?tab=docker#Authenticate-User-Access) for more information about setting up authentication.
+อ้างอิง [Milvus's Authentication documentation](https://milvus.io/docs/authenticate.md?tab=docker#Authenticate-User-Access) สำหรับข้อมูลเพิ่มเติมเกี่ยวกับการตั้งค่าการยืนยันตัวตน
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
 ## Using basic auth
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-* **Base URL**: The base URL of your Milvus instance. The default is `http://localhost:19530`.
-* **Username**: The username to authenticate to your Milvus instance. The default value is `root`.
-* **Password**: The password to authenticate to your Milvus instance. The default value is `Milvus`.
+* **Base URL**: Base URL ของ instance Milvus ของคุณ ค่าเริ่มต้นคือ `http://localhost:19530`
+* **Username**: ชื่อผู้ใช้เพื่อยืนยันตัวตนกับ instance Milvus ของคุณ ค่าเริ่มต้นคือ `root`
+* **Password**: รหัสผ่านเพื่อยืนยันตัวตนกับ instance Milvus ของคุณ ค่าเริ่มต้นคือ `Milvus`

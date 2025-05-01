@@ -12,7 +12,7 @@ priority: medium
 
 ## Prerequisites
 
-Create a [Mist](https://www.mist.com/){:target=_blank .external-link} account and organization. Refer to [Create a Mist account and Organization](https://www.mist.com/documentation/create-mist-org/){:target=_blank .external-link} for detailed instructions.
+สร้างบัญชีและองค์กร [Mist](https://www.mist.com/){:target=_blank .external-link} อ้างอิง [Create a Mist account and Organization](https://www.mist.com/documentation/create-mist-org/){:target=_blank .external-link} สำหรับคำแนะนำโดยละเอียด
 
 ## Supported authentication methods
 
@@ -20,15 +20,15 @@ Create a [Mist](https://www.mist.com/){:target=_blank .external-link} account an
 
 ## Related resources
 
-Refer to [Mist's documentation](https://www.mist.com/documentation/mist-api-introduction/){:target=_blank .external-link} for more information about the service. If you're logged in to your Mist account, go to [https://api.mist.com/api/v1/docs/Home](https://api.mist.com/api/v1/docs/Home){:target=_blank .external-link} to view the full API documentation.
+อ้างอิง [Mist's documentation](https://www.mist.com/documentation/mist-api-introduction/){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ หากคุณเข้าสู่ระบบบัญชี Mist ของคุณ ให้ไปที่ [https://api.mist.com/api/v1/docs/Home](https://api.mist.com/api/v1/docs/Home){:target=_blank .external-link} เพื่อดูเอกสาร API ฉบับเต็ม
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/mist/){:target=_blank .external-link} on n8n's website.
+นี่คือ node สำหรับ credential เท่านั้น อ้างอิง [Custom API operations](/integrations/custom-operations.md) เพื่อเรียนรู้เพิ่มเติม ดู [example workflows and related content](https://n8n.io/integrations/mist/){:target=_blank .external-link} บนเว็บไซต์ของ n8n
 
 ## Using API token
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- An **API Token**: You can use either a User API token or an Org API token. Refer to [How to generate a user API token](https://www.mist.com/documentation/using-postman/){:target=_blank .external-link} for instructions on generating a User API token. Refer to [Org API token](https://www.mist.com/documentation/org-api-token/){:target=_blank .external-link} for instructions on generating an Org API token.
-- Select the **Region** you're in. Options include:
-    - **Europe**: Select this option if your cloud environment is in any of the EMEA regions.
-    - **Global**: Select this option if your cloud environment is in any of the global regions.
+- **API Token**: คุณสามารถใช้ User API token หรือ Org API token ก็ได้ อ้างอิง [How to generate a user API token](https://www.mist.com/documentation/using-postman/){:target=_blank .external-link} สำหรับคำแนะนำในการสร้าง User API token อ้างอิง [Org API token](https://www.mist.com/documentation/org-api-token/){:target=_blank .external-link} สำหรับคำแนะนำในการสร้าง Org API token
+- เลือก **Region** ที่คุณอยู่ ตัวเลือกได้แก่:
+    - **Europe**: เลือกตัวเลือกนี้หากสภาพแวดล้อมคลาวด์ของคุณอยู่ในภูมิภาค EMEA ใดๆ
+    - **Global**: เลือกตัวเลือกนี้หากสภาพแวดล้อมคลาวด์ของคุณอยู่ในภูมิภาค global ใดๆ

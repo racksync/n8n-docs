@@ -7,7 +7,7 @@ contentType: [integration, reference]
 
 # Gong credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้:
 
 * [Gong](/integrations/builtin/app-nodes/n8n-nodes-base.gong.md)
 
@@ -18,24 +18,24 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Gong's API documentation](https://gong.app.gong.io/settings/api/documentation){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Gong's API documentation](https://gong.app.gong.io/settings/api/documentation){:target=_blank .external-link}
 
 ## Using API access token
 
-To configure this credential, you'll need a [Gong](https://app.gong.io/welcome/sign-in) account and:
+ในการกำหนดค่า credential นี้ คุณจะต้องมีบัญชี [Gong](https://app.gong.io/welcome/sign-in) และ:
 
-- An **Access Key**
-- An **Access Key Secret**
+- **Access Key**
+- **Access Key Secret**
 
-You can create both of these items on the [Gong API Page](https://app.gong.io/company/api) (you must be a technical administrator in Gong to access this resource).
+คุณสามารถสร้างทั้งสองรายการนี้ได้ที่ [Gong API Page](https://app.gong.io/company/api) (คุณต้องเป็นผู้ดูแลระบบทางเทคนิคใน Gong เพื่อเข้าถึงทรัพยากรนี้)
 
-Refer to [Gong's API documentation](https://gong.app.gong.io/settings/api/documentation){:target=_blank .external-link} for more information about authenticating to the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับการยืนยันตัวตนกับบริการนี้ได้ที่ [Gong's API documentation](https://gong.app.gong.io/settings/api/documentation){:target=_blank .external-link}
 
 ## Using OAuth2
 
-To configure this credential, you'll need a [Gong](https://app.gong.io/welcome/sign-in) account, a [Gong developer](https://gong.partnerfleet.app/application_forms/become-a-gong-technology-partner/partner_applications/new) account and:
+ในการกำหนดค่า credential นี้ คุณจะต้องมีบัญชี [Gong](https://app.gong.io/welcome/sign-in), บัญชี [Gong developer](https://gong.partnerfleet.app/application_forms/become-a-gong-technology-partner/partner_applications/new) และ:
 
-* A **Client ID**: Generated when you create an Oauth app for Gong.
-* A **Client Secret**: Generated when you create an Oauth app for Gong.
+* **Client ID**: สร้างขึ้นเมื่อคุณสร้าง Oauth app สำหรับ Gong
+* **Client Secret**: สร้างขึ้นเมื่อคุณสร้าง Oauth app สำหรับ Gong
 
-If you're [self-hosting](/hosting/index.md) n8n, you'll need to [create an app](https://help.gong.io/docs/create-an-app-for-gong) to configure OAuth2. Refer to [Gong's OAuth documentation](https://gong.app.gong.io/settings/api/documentation){:target=_blank .external-link} for more information about setting up OAuth2.
+หากคุณ [self-hosting](/hosting/index.md) n8n คุณจะต้อง [create an app](https://help.gong.io/docs/create-an-app-for-gong) เพื่อกำหนดค่า OAuth2 ดูข้อมูลเพิ่มเติมเกี่ยวกับการตั้งค่า OAuth2 ได้ที่ [Gong's OAuth documentation](https://gong.app.gong.io/settings/api/documentation){:target=_blank .external-link}

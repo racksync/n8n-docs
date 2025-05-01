@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # PagerDuty credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials นี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้ได้:
 
 - [PagerDuty](/integrations/builtin/app-nodes/n8n-nodes-base.pagerduty.md)
 
 ## Prerequisites
 
-Create a [PagerDuty](https://pagerduty.com/){:target=_blank .external-link} account.
+สร้าง [PagerDuty](https://pagerduty.com/){:target=_blank .external-link} account
 
 ## Supported authentication methods
 
@@ -22,32 +22,32 @@ Create a [PagerDuty](https://pagerduty.com/){:target=_blank .external-link} acco
 
 ## Related resources
 
-Refer to [PagerDuty's API documentation](https://developer.pagerduty.com/docs/531092d4c6658-rest-api-v2-overview){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [PagerDuty's API documentation](https://developer.pagerduty.com/docs/531092d4c6658-rest-api-v2-overview){:target=_blank .external-link}
 
 ## Using API token
 
-To configure this credential, you'll need:
+สำหรับการตั้งค่า credentials นี้ คุณจะต้องมี:
 
-- A general access **API Token**: To generate an API token, go to **Integrations > Developer Tools > API Access Keys > Create New API Key**. Refer to [Generate a General Access REST API key](https://support.pagerduty.com/docs/api-access-keys#generate-a-general-access-rest-api-key){:target=_blank .external-link} for more information.
+- general access **API Token**: หากต้องการสร้าง API token ให้ไปที่ **Integrations > Developer Tools > API Access Keys > Create New API Key** ดูข้อมูลเพิ่มเติมที่ [Generate a General Access REST API key](https://support.pagerduty.com/docs/api-access-keys#generate-a-general-access-rest-api-key){:target=_blank .external-link}
 
 ## Using OAuth2
 
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-If you need to configure OAuth2 from scratch, [register a new Pagerduty app](https://developer.pagerduty.com/docs/dd91fbd09a1a1-register-an-app){:target=_blank .external-link}.
+หากคุณต้องการกำหนดค่า OAuth2 ตั้งแต่ต้น ให้ [register a new Pagerduty app](https://developer.pagerduty.com/docs/dd91fbd09a1a1-register-an-app){:target=_blank .external-link}
 
-Use these settings for registering your app:
+ใช้การตั้งค่าเหล่านี้สำหรับการลงทะเบียน app ของคุณ:
 
-- In the **Category** dropdown list, select **Infrastructure Automation**.
-- In the **Functionality** section, select **OAuth 2.0**.
+- ใน dropdown list **Category** เลือก **Infrastructure Automation**
+- ในส่วน **Functionality** เลือก **OAuth 2.0**
 
-Once you **Save** your app, open the app details and [edit your app configuration](https://developer.pagerduty.com/docs/dd91fbd09a1a1-register-an-app#editing-your-app-configuration){:target=_blank .external-link} to use these settings:
+เมื่อคุณ **Save** app ของคุณแล้ว ให้เปิดรายละเอียด app และ [edit your app configuration](https://developer.pagerduty.com/docs/dd91fbd09a1a1-register-an-app#editing-your-app-configuration){:target=_blank .external-link} เพื่อใช้การตั้งค่าเหล่านี้:
 
-- Within the **OAuth 2.0** section, select **Add**.
-- Copy the **OAuth Callback URL** from n8n and paste it into the **Redirect URL** field.
-- Copy the **Client ID** and **Client Secret** from PagerDuty and add these to your n8n credentials.
-- Select **Read/Write** from the **Set Permission Scopes** dropdown list.
+- ภายในส่วน **OAuth 2.0** เลือก **Add**
+- คัดลอก **OAuth Callback URL** จาก n8n และวางลงในฟิลด์ **Redirect URL**
+- คัดลอก **Client ID** และ **Client Secret** จาก PagerDuty และเพิ่มลงใน n8n credentials ของคุณ
+- เลือก **Read/Write** จาก dropdown list **Set Permission Scopes**
 
-Refer to the instructions in [App functionality](https://developer.pagerduty.com/docs/b25fd1b8acb1b-app-functionality){:target=_blank .external-link} for more information on available functionality. Refer to the PagerDuty [OAuth Functionality documentation](https://developer.pagerduty.com/docs/f59fdbd94ceab-o-auth-functionality){:target=_blank .external-link} for more information on the OAuth flow.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับฟังก์ชันการทำงานที่มีอยู่ใน [App functionality](https://developer.pagerduty.com/docs/b25fd1b8acb1b-app-functionality){:target=_blank .external-link} ดูข้อมูลเพิ่มเติมเกี่ยวกับ OAuth flow ได้ที่ [OAuth Functionality documentation](https://developer.pagerduty.com/docs/f59fdbd94ceab-o-auth-functionality){:target=_blank .external-link} ของ PagerDuty
 
 

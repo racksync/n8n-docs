@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Mailcheck credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนใน nodes ต่อไปนี้:
 
 - [Mailcheck](/integrations/builtin/app-nodes/n8n-nodes-base.mailcheck.md)
 
 ## Prerequisites
 
-Create a [Mailcheck](https://mailcheck.co/){:target=_blank .external-link} account.
+สร้างบัญชี [Mailcheck](https://mailcheck.co/){:target=_blank .external-link}
 
 ## Supported authentication methods
 
@@ -21,11 +21,11 @@ Create a [Mailcheck](https://mailcheck.co/){:target=_blank .external-link} accou
 
 ## Related resources
 
-Refer to [Mailcheck's API documentation](https://app.mailcheck.co/docs?from=docs){:target=_blank .external-link} for more information about the service.
+อ้างอิง [Mailcheck's API documentation](https://app.mailcheck.co/docs?from=docs){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 ## Using API Key
 
-To configure this credential, you'll need:
+ในการกำหนดค่า credential นี้ คุณจะต้องมี:
 
-- An **API Key**: Generate an API Key in the API section of your dashboard. Refer to [Mailcheck's How to create an API key documentation](https://mailcheck.co/create-api-key){:target=_blank .external-link} for detailed instructions.
+- **API Key**: สร้าง API Key ในส่วน API ของ dashboard ของคุณ อ้างอิงเอกสาร [Mailcheck's How to create an API key documentation](https://mailcheck.co/create-api-key){:target=_blank .external-link} สำหรับคำแนะนำโดยละเอียด
 

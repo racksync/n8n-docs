@@ -8,49 +8,49 @@ priority: medium
 
 # FTP credentials
 
-You can use these credentials to authenticate the following nodes:
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนกับ node ต่อไปนี้:
 
 - [FTP](/integrations/builtin/core-nodes/n8n-nodes-base.ftp.md)
 
 ## Prerequisites
 
-Create an account on a File Transfer Protocol (FTP) server like [JSCAPE](https://mft.jscape.com/lp/ftp-server){:target=_blank .external-link}, [OpenSSH](https://www.openssh.com/){:target=_blank .external-link}, or [FileZilla Server](https://filezilla-project.org/){:target=_blank .external-link}.
+สร้างบัญชีบนเซิร์ฟเวอร์ File Transfer Protocol (FTP) เช่น [JSCAPE](https://mft.jscape.com/lp/ftp-server){:target=_blank .external-link}, [OpenSSH](https://www.openssh.com/){:target=_blank .external-link}, หรือ [FileZilla Server](https://filezilla-project.org/){:target=_blank .external-link}
 
 ## Supported authentication methods
 
-- **FTP account**: Use this method if your FTP server doesn't support SSH tunneling or encrypted connections.
-- **SFTP account**: Use this method if your FTP server supports SSH tunneling and encrypted connections.
+- **FTP account**: ใช้วิธีนี้หากเซิร์ฟเวอร์ FTP ของคุณไม่รองรับ SSH tunneling หรือการเชื่อมต่อที่เข้ารหัส
+- **SFTP account**: ใช้วิธีนี้หากเซิร์ฟเวอร์ FTP ของคุณรองรับ SSH tunneling และการเชื่อมต่อที่เข้ารหัส
 
 ## Related resources
 
-File Transfer Protocol (FTP) and Secure Shell File Transfer Protocol (SFTP) are protocols for transferring files directly between an FTP/SFTP client and server.
+File Transfer Protocol (FTP) และ Secure Shell File Transfer Protocol (SFTP) เป็นโปรโตคอลสำหรับการถ่ายโอนไฟล์โดยตรงระหว่าง FTP/SFTP client และ server
 
 ## Using FTP account
 
-Use this method if your FTP server doesn't support SSH tunneling or encrypted connections.
+ใช้วิธีนี้หากเซิร์ฟเวอร์ FTP ของคุณไม่รองรับ SSH tunneling หรือการเชื่อมต่อที่เข้ารหัส
 
-To configure this credential, you'll need to:
+ในการกำหนดค่า credential นี้ คุณจะต้อง:
 
-1. Enter the name or IP address of your FTP server's **Host**.
-2. Enter the **Port** number the connection should use.
-3. Enter the **Username** the credential should connect as.
-4. Enter the user's **Password**.
+1. ป้อนชื่อหรือ IP address ของ **Host** ของเซิร์ฟเวอร์ FTP ของคุณ
+2. ป้อนหมายเลข **Port** ที่การเชื่อมต่อควรใช้
+3. ป้อน **Username** ที่ credential ควรเชื่อมต่อเป็น
+4. ป้อน **Password** ของผู้ใช้
 
-Review your FTP server provider's documentation for instructions on getting the information you need.
+ตรวจสอบเอกสารของผู้ให้บริการเซิร์ฟเวอร์ FTP ของคุณสำหรับคำแนะนำในการรับข้อมูลที่คุณต้องการ
 
 ## Using SFTP account
 
-Use this method if your FTP server supports SSH tunneling and encrypted connections.
+ใช้วิธีนี้หากเซิร์ฟเวอร์ FTP ของคุณรองรับ SSH tunneling และการเชื่อมต่อที่เข้ารหัส
 
-To configure this credential, you'll need to:
+ในการกำหนดค่า credential นี้ คุณจะต้อง:
 
-1. Enter the name or IP address of your FTP server's **Host**.
-2. Enter the **Port** number the connection should use.
-3. Enter the **Username** the credential should connect as.
-4. Enter the user's **Password**.
-5. For the **Private Key**, enter a string for either key-based or host-based user authentication
-    - Enter your Private Key in OpenSSH format. This is most often generated using the ssh-keygen `-o` parameter, for example: `ssh-keygen -o -a 100 -t ed25519`.
-6. If the **Private Key** is encrypted, enter the **Passphrase** used to decrypt it.
-    - If the **Private Key** doesn't use a passphrase, leave this field blank.
+1. ป้อนชื่อหรือ IP address ของ **Host** ของเซิร์ฟเวอร์ FTP ของคุณ
+2. ป้อนหมายเลข **Port** ที่การเชื่อมต่อควรใช้
+3. ป้อน **Username** ที่ credential ควรเชื่อมต่อเป็น
+4. ป้อน **Password** ของผู้ใช้
+5. สำหรับ **Private Key** ให้ป้อนสตริงสำหรับการยืนยันตัวตนผู้ใช้แบบ key-based หรือ host-based
+    - ป้อน Private Key ของคุณในรูปแบบ OpenSSH ซึ่งส่วนใหญ่มักสร้างขึ้นโดยใช้พารามิเตอร์ `ssh-keygen -o` ตัวอย่างเช่น: `ssh-keygen -o -a 100 -t ed25519`
+6. หาก **Private Key** ถูกเข้ารหัส ให้ป้อน **Passphrase** ที่ใช้ในการถอดรหัส
+    - หาก **Private Key** ไม่ได้ใช้ passphrase ให้เว้นฟิลด์นี้ว่างไว้
 
-Review your FTP server provider's documentation for instructions on getting the information you need.
+ตรวจสอบเอกสารของผู้ให้บริการเซิร์ฟเวอร์ FTP ของคุณสำหรับคำแนะนำในการรับข้อมูลที่คุณต้องการ

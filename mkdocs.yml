@@ -1,8 +1,8 @@
-site_name: n8n Documents
-site_url: https://n8n-docs.racksync.com
+site_name: n8n Docs
+site_url: https://n8n.racksync.com/
 site_description: Documentation for n8n, a workflow automation platform.
 # Must be the docs repo for the edit page buttons to work
-repo_url: https://github.com/racksync/n8n-docs
+repo_url: https://github.com/n8n-io/n8n-docs
 edit_uri: edit/main/docs/
 validation:
   nav:
@@ -208,13 +208,4 @@ plugins:
       # links_attr_map:
       #   target: _blank
       #   rel: external
-  # Multilingual support
-  - i18n:
-      default_language: en
-      languages:
-        en: English
-        th: ไทย
-      nav_translations:
-        th: nav.yml
-        en: nav.yml
 INHERIT: ./nav.yml

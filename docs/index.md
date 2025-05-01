@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: "Explore n8n Docs: Your Resource for Workflow Automation and Integrations"
-description: Access n8n Docs for comprehensive guides on workflow automation and integrations. Learn how to integrate apps and enhance your automation capabilities.
+description: เข้าถึงเอกสารของ n8n สำหรับคำแนะนำที่ครอบคลุมเกี่ยวกับการทำงานอัตโนมัติและการผสานรวม เรียนรู้วิธีการผสานรวมแอปและเพิ่มประสิทธิภาพการทำงานอัตโนมัติของคุณ
 contentType: overview
 hide:
   - path
@@ -9,11 +9,9 @@ hide:
 
 # Welcome to n8n Docs
 
+นี่คือเอกสารสำหรับ [n8n](https://n8n.io/){:target=_blank .external-link} ซึ่งเป็นเครื่องมือทำงานอัตโนมัติที่ได้รับอนุญาตแบบ [fair-code](https://faircode.io){:target=_blank .external-link} ที่ผสมผสานความสามารถของ AI กับการทำงานอัตโนมัติในกระบวนการทางธุรกิจ
 
-This is the documentation for [n8n](https://n8n.io/){:target=_blank .external-link}, a [fair-code](https://faircode.io){:target=_blank .external-link} licensed workflow automation tool that combines AI capabilities with business process automation.
-
-It covers everything from setup to usage and development. It's a work in progress and all [contributions](/help-community/contributing.md) are welcome.
-
+ครอบคลุมทุกอย่างตั้งแต่การตั้งค่าไปจนถึงการใช้งานและการพัฒนา เป็นงานที่กำลังดำเนินการ และยินดีต้อนรับ [การมีส่วนร่วม](/help-community/contributing.md) ทุกประเภท
 
 ## Where to start
 
@@ -21,7 +19,7 @@ It covers everything from setup to usage and development. It's a work in progres
 
 -   __Quickstarts__
 
-    Jump in with n8n's quickstart guides.
+    เริ่มต้นด้วยคำแนะนำการใช้งานอย่างรวดเร็วของ n8n
 
     [:octicons-arrow-right-24: Try it out](/try-it-out/index.md)
 
@@ -31,24 +29,23 @@ It covers everything from setup to usage and development. It's a work in progres
 
     [:octicons-arrow-right-24: Options](/choose-n8n.md)
 
-
 -   __Explore integrations__
 
-    Browse n8n's integrations library.
+    สำรวจไลบรารีการผสานรวมของ n8n
 
     [:octicons-arrow-right-24: Find your apps](/integrations/index.md)
 
 -   __Build AI functionality__
 
-    n8n supports building AI functionality and tools.
+    n8n รองรับการสร้างฟังก์ชันและเครื่องมือ AI
 
     [:octicons-arrow-right-24: Advanced AI](/advanced-ai/index.md)    
 </div>
 
 ## About n8n
 
-n8n (pronounced n-eight-n) helps you to connect any app with an API with any other, and manipulate its data with little or no code.
+n8n (อ่านว่า เอ็น-เอท-เอ็น) ช่วยให้คุณเชื่อมต่อแอปใด ๆ ที่มี API กับแอปอื่น ๆ และจัดการข้อมูลได้ด้วยโค้ดน้อยหรือไม่ต้องใช้โค้ดเลย
 
-* Customizable: highly flexible workflows and the option to build custom nodes.
-* Convenient: use the npm or Docker to try out n8n, or the Cloud hosting option if you want us to handle the infrastructure.
-* Privacy-focused: self-host n8n for privacy and security.
+* Customizable: มีความยืดหยุ่นสูงในการสร้างเวิร์กโฟลว์และตัวเลือกในการสร้างโหนดที่กำหนดเอง
+* Convenient: ใช้ npm หรือ Docker เพื่อลองใช้งาน n8n หรือเลือก Cloud hosting หากคุณต้องการให้เราจัดการโครงสร้างพื้นฐานให้
+* Privacy-focused: โฮสต์ n8n ด้วยตัวเองเพื่อความเป็นส่วนตัวและความปลอดภัย

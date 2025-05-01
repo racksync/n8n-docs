@@ -13,13 +13,13 @@ contentType: reference
 
 # Keyboard shortcuts and controls
 
-n8n provides keyboard shortcuts for some actions.
+n8n มี keyboard shortcuts สำหรับบาง actions
 
 ## Workflow controls
- 
+
  - **Ctrl** + **Alt** + **n**: create new workflow
  - **Ctrl** + **o**: open workflow
- - **Ctrl** + **s**: save the current workflow 
+ - **Ctrl** + **s**: save the current workflow
  - **Ctrl** + **z**: undo
  - **Ctrl** + **shift** + **z**: redo
  - **Ctrl** + **Enter**: execute workflow
@@ -60,7 +60,7 @@ n8n provides keyboard shortcuts for some actions.
  - **Delete**: delete
  - **Enter**: open
  - **F2**: rename
- - **P**: pin data in node. Refer to [Data pinning](/data/data-pinning.md) for more information.
+ - **P**: pin data in node. โปรดดู [Data pinning](/data/data-pinning.md) สำหรับข้อมูลเพิ่มเติม
  - **Shift** + **ArrowLeft**: select all nodes left of the current one
  - **Shift** + **ArrowRight**: select all nodes right of the current one
 
@@ -73,9 +73,9 @@ n8n provides keyboard shortcuts for some actions.
 ### Node panel categories
 
 - **Enter**: insert node into workflow, collapse/expand category, open subcategory
-- **ArrowRight**: expand category, open subcategory 
+- **ArrowRight**: expand category, open subcategory
 - **ArrowLeft**: collapse category, close subcategory view
 
 ## Within nodes
 
-- **=**: in an empty parameter input, this switches to [expressions](/glossary.md#expression-n8n) mode.
+- **=**: ในช่อง input parameter ที่ว่างเปล่า จะสลับไปโหมด [expressions](/glossary.md#expression-n8n)

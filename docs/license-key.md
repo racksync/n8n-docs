@@ -7,24 +7,24 @@ contentType: howto
 
 # License Key
 
-To enable certain licensed features, you must first activate your license. You can do this either through the UI or by setting environment variables.
+เพื่อเปิดใช้งานฟีเจอร์ที่ต้องใช้ license บางอย่าง คุณต้อง activate license ของคุณก่อน คุณสามารถทำได้ผ่าน UI หรือโดยการตั้งค่า environment variables
 
 ## Add a license key using the UI
 
-In your n8n instance:
+ใน n8n instance ของคุณ:
 
-1. Log in as **Admin** or **Owner**.
-1. Select **Settings** > **Usage and plan**.
-1. Select **Enter activation key**.
-1. Paste in your license key.
-1. Select **Activate**.
+1. ล็อกอินในฐานะ **Admin** หรือ **Owner**
+1. เลือก **Settings** > **Usage and plan**
+1. เลือก **Enter activation key**
+1. วาง license key ของคุณ
+1. เลือก **Activate**
 
 ## Add a license key using an environment variables
 
-In your n8n configuration, set `N8N_LICENSE_ACTIVATION_KEY` to your license key. If the instance already has an activated license, this variable will have no effect.
+ในการกำหนดค่า n8n ของคุณ ให้ตั้งค่า `N8N_LICENSE_ACTIVATION_KEY` เป็น license key ของคุณ หาก instance มี license ที่ activate แล้ว ตัวแปรนี้จะไม่มีผล
 
-Refer to [Environment variables](/hosting/configuration/configuration-methods.md) to learn more about configuring n8n.
+โปรดดู [Environment variables](/hosting/configuration/configuration-methods.md) เพื่อเรียนรู้เพิ่มเติมเกี่ยวกับการกำหนดค่า n8n
 
 ## Allowlist the license server IP addresses
 
-n8n uses Cloudflare to host the license server. As the specific IP addresses can change, you need to allowlist the [full range of Cloudflare IP addresses](https://www.cloudflare.com/ips/) to ensure n8n can always reach the license server.
+n8n ใช้ Cloudflare เพื่อ host license server เนื่องจาก IP addresses เฉพาะอาจมีการเปลี่ยนแปลง คุณจำเป็นต้อง allowlist [ช่วง IP addresses ทั้งหมดของ Cloudflare](https://www.cloudflare.com/ips/) เพื่อให้แน่ใจว่า n8n สามารถเข้าถึง license server ได้เสมอ

@@ -7,27 +7,27 @@ contentType: reference
 
 # n8n v1.0 migration guide
 
-This document provides a summary of what you should be aware of before updating to version 1.0 of n8n.
+เอกสารนี้ให้ข้อมูลสรุปเกี่ยวกับสิ่งที่คุณควรทราบก่อนอัปเดตเป็น n8n เวอร์ชัน 1.0
 
-The release of n8n 1.0 marks a milestone in n8n's journey to make n8n available for demanding production environments. Version 1.0 represents the hard work invested over the last four years to make n8n the most accessible, powerful, and versatile automation tool. n8n 1.0 is now ready for use in production.
+การเปิดตัว n8n 1.0 ถือเป็นก้าวสำคัญในการเดินทางของ n8n เพื่อทำให้ n8n พร้อมใช้งานสำหรับสภาพแวดล้อม production ที่มีความต้องการสูง เวอร์ชัน 1.0 แสดงถึงการทำงานหนักที่ลงทุนไปตลอดสี่ปีที่ผ่านมาเพื่อทำให้ n8n เป็นเครื่องมือ automation ที่เข้าถึงได้ง่าย ทรงพลัง และหลากหลายที่สุด n8n 1.0 พร้อมใช้งานใน production แล้ว
 
 ## New features
 
 ### Python support in the Code node
 
-Although JavaScript remains the default language, you can now also select Python as an option in the [Code node](/code/code-node.md) and even make use of [many Python modules](https://pyodide.org/en/stable/usage/packages-in-pyodide.html#packages-in-pyodide){:target=_blank .external link}. Note that Python is unavailable in Code nodes added to a workflow before v1.0.
+แม้ว่า JavaScript จะยังคงเป็นภาษาเริ่มต้น แต่ตอนนี้คุณสามารถเลือก Python เป็นตัวเลือกใน [Code node](/code/code-node.md) ได้แล้ว และยังสามารถใช้ [Python modules จำนวนมาก](https://pyodide.org/en/stable/usage/packages-in-pyodide.html#packages-in-pyodide){:target=_blank .external link} ได้อีกด้วย โปรดทราบว่า Python ไม่สามารถใช้งานได้ใน Code nodes ที่เพิ่มเข้ามาใน workflow ก่อน v1.0
 
 [PR #4295](https://github.com/n8n-io/n8n/pull/4295){:target=_blank .external link}, [PR #6209](https://github.com/n8n-io/n8n/pull/6209){:target=_blank .external link}
 
 ### Execution order
 
-n8n 1.0 introduces a new execution order for multi-branch workflows:
+n8n 1.0 แนะนำลำดับการ execution ใหม่สำหรับ multi-branch workflows:
 
-In multi-branch workflows, n8n needs to determine the order in which to execute nodes on branches. Previously, n8n executed the first node of each branch, then the second of each branch, and so on (breadth-first). The new execution order ensures that each branch executes completely before starting the next one (depth-first). Branches execute based on their position on the canvas, from top to bottom. If two branches are at the same height, the leftmost one executes first.
+ใน multi-branch workflows, n8n ต้องกำหนดลำดับในการ execute nodes บน branches ก่อนหน้านี้ n8n จะ execute node แรกของแต่ละ branch จากนั้นจึง execute node ที่สองของแต่ละ branch และต่อไปเรื่อยๆ (breadth-first) ลำดับการ execution ใหม่ช่วยให้มั่นใจได้ว่าแต่ละ branch จะ execute เสร็จสมบูรณ์ก่อนที่จะเริ่ม branch ถัดไป (depth-first) Branches จะ execute ตามตำแหน่งบน canvas จากบนลงล่าง หากสอง branches อยู่ที่ความสูงเท่ากัน branch ซ้ายสุดจะ execute ก่อน
 
-n8n used to execute multi-input nodes as long as they received data on their first input. Nodes connected to the second input of multi-input nodes automatically executed regardless of whether they received data. The new execution order introduced in n8n 1.0 simplifies this behavior: Nodes are now executed only when they receive data, and multi-input nodes require data on at least one of their inputs to execute.
+n8n เคย execute multi-input nodes ตราบใดที่ได้รับข้อมูลบน input แรก Nodes ที่เชื่อมต่อกับ input ที่สองของ multi-input nodes จะ execute โดยอัตโนมัติโดยไม่คำนึงว่าได้รับข้อมูลหรือไม่ ลำดับการ execution ใหม่ที่แนะนำใน n8n 1.0 ทำให้พฤติกรรมนี้ง่ายขึ้น: Nodes ตอนนี้จะ execute เฉพาะเมื่อได้รับข้อมูลเท่านั้น และ multi-input nodes ต้องการข้อมูลบน input อย่างน้อยหนึ่งรายการเพื่อ execute
 
-Your existing workflows will use the legacy order, while new workflows will execute using the v1 order. You can configure the execution order for each workflow in [workflow settings](/workflows/settings.md).
+workflows ที่มีอยู่ของคุณจะใช้ลำดับแบบ legacy ในขณะที่ workflows ใหม่จะ execute โดยใช้ลำดับ v1 คุณสามารถกำหนดค่าลำดับการ execution สำหรับแต่ละ workflow ได้ใน [workflow settings](/workflows/settings.md)
 
 [PR #4238](https://github.com/n8n-io/n8n/pull/4238){:target=_blank .external link}, [PR #6246](https://github.com/n8n-io/n8n/pull/6246){:target=_blank .external link}, [PR #6507](https://github.com/n8n-io/n8n/pull/6507){:target=_blank .external link}
 
@@ -35,15 +35,15 @@ Your existing workflows will use the legacy order, while new workflows will exec
 
 ### MySQL and MariaDB
 
-n8n has removed support for MySQL and MariaDB as storage backends for n8n. These database systems are used by only a few users, yet they require continuous development and maintenance efforts. n8n recommends migrating to PostgreSQL for better compatibility and long-term support.
+n8n ได้ลบการรองรับ MySQL และ MariaDB ในฐานะ storage backends สำหรับ n8n ระบบฐานข้อมูลเหล่านี้มีผู้ใช้เพียงไม่กี่ราย แต่ต้องการความพยายามในการพัฒนาและบำรุงรักษาอย่างต่อเนื่อง n8n แนะนำให้ย้ายไปยัง PostgreSQL เพื่อความเข้ากันได้ที่ดีขึ้นและการสนับสนุนในระยะยาว
 
 [PR #6189](https://github.com/n8n-io/n8n/pull/6189){:target=_blank .external link}
 
 ### EXECUTIONS_PROCESS and "own" mode
 
-Previously, you could use the `EXECUTIONS_PROCESS` environment variable to specify whether executions should run in the `main` process or in their `own` processes. This option and `own` mode are now deprecated and will be removed in a future version of n8n. This is because it led to increased code complexity while offering marginal benefits. Starting from n8n 1.0, `main` will be the new default.
+ก่อนหน้านี้ คุณสามารถใช้ environment variable `EXECUTIONS_PROCESS` เพื่อระบุว่า executions ควรทำงานใน process `main` หรือใน process `own` ของตัวเอง ตัวเลือกนี้และโหมด `own` ตอนนี้ถูก deprecated และจะถูกลบออกใน n8n เวอร์ชันอนาคต เนื่องจากทำให้โค้ดมีความซับซ้อนเพิ่มขึ้นในขณะที่ให้ประโยชน์เพียงเล็กน้อย เริ่มต้นจาก n8n 1.0, `main` จะเป็นค่าเริ่มต้นใหม่
 
-Note that executions start much faster in `main` mode than in `own` mode. However, if a workflow consumes more memory than is available, it might crash the entire n8n application instead of just the worker thread. To mitigate this, make sure to allocate enough system resources or configure [queue mode](/hosting/scaling/queue-mode.md) to distribute executions among multiple workers.
+โปรดทราบว่า executions เริ่มทำงานเร็วกว่ามากในโหมด `main` มากกว่าในโหมด `own` อย่างไรก็ตาม หาก workflow ใช้หน่วยความจำมากกว่าที่มีอยู่ อาจทำให้แอปพลิเคชัน n8n ทั้งหมดล่มแทนที่จะเป็นเพียง worker thread เท่านั้น เพื่อลดปัญหานี้ ตรวจสอบให้แน่ใจว่าได้จัดสรรทรัพยากรระบบให้เพียงพอหรือกำหนดค่า [queue mode](/hosting/scaling/queue-mode.md) เพื่อกระจาย executions ไปยัง workers หลายตัว
 
 [PR #6196](https://github.com/n8n-io/n8n/pull/6196){:target=_blank .external link}
 
@@ -53,9 +53,9 @@ Note that executions start much faster in `main` mode than in `own` mode. Howeve
 
 #### Permissions change
 
-When using Docker-based deployments, the n8n process is now run by the user `node` instead of `root`. This change increases security.
+เมื่อใช้ deployments ที่ใช้ Docker, process n8n ตอนนี้จะทำงานโดย user `node` แทน `root` การเปลี่ยนแปลงนี้เพิ่มความปลอดภัย
 
-If permission errors appear in your n8n container logs when starting n8n, you may need to update the permissions by executing the following command on the Docker host:
+หากข้อผิดพลาดเกี่ยวกับ permission ปรากฏใน logs ของ n8n container ของคุณเมื่อเริ่ม n8n คุณอาจต้องอัปเดต permissions โดยการ execute คำสั่งต่อไปนี้บน Docker host:
 
 ```bash
 docker run --rm -it --user root -v ~/.n8n:/home/node/.n8n --entrypoint chown n8nio/base:16 -R node:node /home/node/.n8n
@@ -63,87 +63,87 @@ docker run --rm -it --user root -v ~/.n8n:/home/node/.n8n --entrypoint chown n8n
 
 #### Image removal
 
-We've removed the Debian and RHEL images. If you were using these you need to change the image you use. This shouldn't result in any errors unless you were making a custom image based on one of those images.
+เราได้ลบ Debian และ RHEL images ออกแล้ว หากคุณกำลังใช้สิ่งเหล่านี้ คุณต้องเปลี่ยน image ที่คุณใช้ สิ่งนี้ไม่ควรส่งผลให้เกิดข้อผิดพลาดใดๆ เว้นแต่คุณกำลังสร้าง custom image โดยอิงตาม image เหล่านั้น
 
 #### Entrypoint change
 
-The entrypoint for the container has changed and you no longer need to specify the n8n command. If you were previously running `n8n worker --concurrency=5` it's now `worker --concurrency=5`
+entrypoint สำหรับ container ได้เปลี่ยนไป และคุณไม่จำเป็นต้องระบุคำสั่ง n8n อีกต่อไป หากก่อนหน้านี้คุณรัน `n8n worker --concurrency=5` ตอนนี้จะเป็น `worker --concurrency=5`
 
 [PR #6365](https://github.com/n8n-io/n8n/pull/6365){:target=_blank .external link}
 
 ### Workflow failures due to expression errors
 
-Workflow executions may fail due to syntax or runtime errors in expressions, such as those that reference non-existent nodes. While expressions already throw errors on the frontend, this change ensures that n8n also throws errors on the backend, where they were previously silently ignored. To receive notifications of failing workflows, n8n recommends setting up an "error workflow" under workflow settings.
+Workflow executions อาจล้มเหลวเนื่องจาก syntax หรือ runtime errors ใน expressions เช่น ที่อ้างอิงถึง nodes ที่ไม่มีอยู่จริง แม้ว่า expressions จะแสดงข้อผิดพลาดบน frontend อยู่แล้ว แต่การเปลี่ยนแปลงนี้ช่วยให้มั่นใจได้ว่า n8n จะแสดงข้อผิดพลาดบน backend ด้วย ซึ่งก่อนหน้านี้ถูกละเว้นไปอย่างเงียบๆ หากต้องการรับการแจ้งเตือนเกี่ยวกับ workflows ที่ล้มเหลว n8n แนะนำให้ตั้งค่า "error workflow" ภายใต้ workflow settings
 
 [PR #6352](https://github.com/n8n-io/n8n/pull/6352){:target=_blank .external link}
 
 ### Mandatory owner account
 
-This change makes [User Management](/user-management/index.md) mandatory and removes support for other authentication methods, such as BasicAuth and External JWT. Note that the number of permitted users on [n8n.cloud](https://n8n.cloud/){:target=_blank .external link} or custom plans still varies depending on your subscription.
+การเปลี่ยนแปลงนี้ทำให้ [User Management](/user-management/index.md) เป็นข้อบังคับและลบการรองรับสำหรับ authentication methods อื่นๆ เช่น BasicAuth และ External JWT โปรดทราบว่าจำนวนผู้ใช้ที่อนุญาตบน [n8n.cloud](https://n8n.cloud/){:target=_blank .external link} หรือแผน custom ยังคงแตกต่างกันไปขึ้นอยู่กับการสมัครสมาชิกของคุณ
 
 [PR #6362](https://github.com/n8n-io/n8n/pull/6362){:target=_blank .external link}
 
 ### Directory for installing custom nodes
 
-n8n will no longer load custom nodes from its global `node_modules` directory. Instead, you must install (or link) them to `~/.n8n/custom` (or a directory defined by `N8N_CUSTOM_EXTENSIONS`). Custom nodes that are npm packages will be located in `~/.n8n/nodes`.
-If you have custom nodes that were linked using `npm link` into the global `node_modules` directory, you need to link them again, into `~/.n8n/nodes` instead.
+n8n จะไม่โหลด custom nodes จาก global `node_modules` directory อีกต่อไป แต่คุณต้องติดตั้ง (หรือ link) ไปยัง `~/.n8n/custom` (หรือ directory ที่กำหนดโดย `N8N_CUSTOM_EXTENSIONS`) Custom nodes ที่เป็น npm packages จะอยู่ใน `~/.n8n/nodes`
+หากคุณมี custom nodes ที่ถูก link โดยใช้ `npm link` เข้าไปใน global `node_modules` directory คุณต้อง link ใหม่อีกครั้ง เข้าไปใน `~/.n8n/nodes` แทน
 
 [PR #6396](https://github.com/n8n-io/n8n/pull/6396){:target=_blank .external link}
 
 ### WebSockets
 
-The `N8N_PUSH_BACKEND` environment variable can be used to configure one of two available methods for pushing updates to the user interface: `sse` and `websocket`. Starting with n8n 1.0, `websocket` is the default method.
+environment variable `N8N_PUSH_BACKEND` สามารถใช้เพื่อกำหนดค่าหนึ่งในสองวิธีที่มีอยู่สำหรับการ push updates ไปยัง user interface: `sse` และ `websocket` เริ่มต้นด้วย n8n 1.0, `websocket` เป็นวิธีเริ่มต้น
 
 [PR #6196](https://github.com/n8n-io/n8n/pull/6196){:target=_blank .external link}
 
 ### Date transformation functions
 
-n8n provides various transformation functions that operate on dates. These functions may return either a JavaScript `Date` or a Luxon `DateTime` object. With the new behavior, the return type always matches the input. If you call a date transformation function on a `Date`, it returns a `Date`. Similarly, if you call it on a `DateTime` object, it returns a `DateTime` object.
+n8n มี transformation functions ต่างๆ ที่ทำงานกับ dates ฟังก์ชันเหล่านี้อาจคืนค่าเป็น JavaScript `Date` หรือ Luxon `DateTime` object ด้วยพฤติกรรมใหม่ ประเภทการคืนค่าจะตรงกับ input เสมอ หากคุณเรียก date transformation function บน `Date` มันจะคืนค่าเป็น `Date` ในทำนองเดียวกัน หากคุณเรียกมันบน `DateTime` object มันจะคืนค่าเป็น `DateTime` object
 
-To identify any workflows and nodes that might be impacted by this change, you can use this [utility workflow](https://n8n.io/workflows/1929-v1-helper-find-params-with-affected-expressions/){:target=_blank .external link}.
+เพื่อระบุ workflows และ nodes ใดๆ ที่อาจได้รับผลกระทบจากการเปลี่ยนแปลงนี้ คุณสามารถใช้ [utility workflow](https://n8n.io/workflows/1929-v1-helper-find-params-with-affected-expressions/){:target=_blank .external link} นี้ได้
 
-For more information about date transformation functions, please refer to the [official documentation](/code/builtin/data-transformation-functions/dates.md).
+สำหรับข้อมูลเพิ่มเติมเกี่ยวกับ date transformation functions โปรดดูที่ [official documentation](/code/builtin/data-transformation-functions/dates.md)
 
 [PR #6435](https://github.com/n8n-io/n8n/pull/6435){:target=_blank .external link}
 
 ### Execution data retention
 
-Starting from n8n 1.0, all successful, failed, and manual workflow executions will be saved by default. These settings can be modified for each workflow under "Workflow Settings," or globally using the respective environment variables. Additionally, the `EXECUTIONS_DATA_PRUNE` setting will be enabled by default, with `EXECUTIONS_DATA_PRUNE_MAX_COUNT` set to 10,000. These default settings are designed to prevent performance degradation when using SQLite. Make sure to configure them according to your individual requirements and system capacity.
+เริ่มต้นจาก n8n 1.0, workflow executions ที่สำเร็จ, ล้มเหลว และ manual ทั้งหมดจะถูกบันทึกโดยค่าเริ่มต้น การตั้งค่าเหล่านี้สามารถแก้ไขได้สำหรับแต่ละ workflow ภายใต้ "Workflow Settings" หรือทั่วโลกโดยใช้ environment variables ที่เกี่ยวข้อง นอกจากนี้ การตั้งค่า `EXECUTIONS_DATA_PRUNE` จะเปิดใช้งานโดยค่าเริ่มต้น โดย `EXECUTIONS_DATA_PRUNE_MAX_COUNT` ตั้งค่าเป็น 10,000 การตั้งค่าเริ่มต้นเหล่านี้ออกแบบมาเพื่อป้องกันประสิทธิภาพที่ลดลงเมื่อใช้ SQLite ตรวจสอบให้แน่ใจว่าได้กำหนดค่าตามความต้องการและขีดความสามารถของระบบของคุณ
 
 [PR #6577](https://github.com/n8n-io/n8n/pull/6577){:target=_blank .external link}
 
 ### Removed N8N_USE_DEPRECATED_REQUEST_LIB
 
-The legacy `request` library has been deprecated for some time now. As of n8n 1.0, the ability to fall back to it in the HTTP Request node by setting the `N8N_USE_DEPRECATED_REQUEST_LIB` environment variable has been fully removed. The HTTP Request node will now always use the new `HttpRequest` interface.
+legacy `request` library ถูก deprecated มาระยะหนึ่งแล้ว ณ n8n 1.0 ความสามารถในการ fallback ไปใช้มันใน HTTP Request node โดยการตั้งค่า environment variable `N8N_USE_DEPRECATED_REQUEST_LIB` ได้ถูกลบออกไปอย่างสมบูรณ์ HTTP Request node ตอนนี้จะใช้ `HttpRequest` interface ใหม่เสมอ
 
-If you build custom nodes, refer to [HTTP request helpers](/integrations/creating-nodes/build/reference/http-helpers.md) for more information on migrating to the new interface.
+หากคุณสร้าง custom nodes โปรดดูที่ [HTTP request helpers](/integrations/creating-nodes/build/reference/http-helpers.md) สำหรับข้อมูลเพิ่มเติมเกี่ยวกับการย้ายไปยัง interface ใหม่
 
 [PR #6413](https://github.com/n8n-io/n8n/pull/6413){:target=_blank .external link}
 
 ### Removed WEBHOOK_TUNNEL_URL
 
-As of version 0.227.0, n8n has renamed the `WEBHOOK_TUNNEL_URL` configuration option to `WEBHOOK_URL`. In n8n 1.0, `WEBHOOK_TUNNEL_URL` has been removed. Update your setup to reflect the new name. For more information about this configuration option, refer to [the docs](/hosting/configuration/configuration-examples/webhook-url.md).
+ณ เวอร์ชัน 0.227.0, n8n ได้เปลี่ยนชื่อตัวเลือกการกำหนดค่า `WEBHOOK_TUNNEL_URL` เป็น `WEBHOOK_URL` ใน n8n 1.0, `WEBHOOK_TUNNEL_URL` ได้ถูกลบออกไปแล้ว อัปเดตการตั้งค่าของคุณเพื่อสะท้อนชื่อใหม่ สำหรับข้อมูลเพิ่มเติมเกี่ยวกับตัวเลือกการกำหนดค่านี้ โปรดดูที่ [the docs](/hosting/configuration/configuration-examples/webhook-url.md)
 
 [PR #1408](https://github.com/n8n-io/n8n/pull/1408){:target=_blank .external link}
 
 ### Remove Node 16 support
 
-n8n now requires Node 18.17.0 or above.
+n8n ตอนนี้ต้องการ Node 18.17.0 หรือสูงกว่า
 
 ## Updating to n8n 1.0
 
-1. Create a full backup of n8n.
-2. n8n recommends updating to the latest n8n 0.x release before updating to n8n 1.x. This will allow you to pinpoint any potential issues to the correct release. Once you have verified that n8n 0.x starts up without any issues, proceed to the next step.
-3. Carefully read the [Deprecations](#deprecations) and [Breaking Changes](#breaking-changes) sections above to assess how they may affect your setup.
-4. Update to n8n 1.0:
-	* During beta (before July 24th 2023): If using Docker, pull the `next` Docker image.
-	* After July 24th 2023: If using Docker, pull the `latest` Docker image.
-5. If you encounter any issues, redeploy the previous n8n version and restore the backup.
+1. สร้าง backup เต็มรูปแบบของ n8n
+2. n8n แนะนำให้อัปเดตเป็น n8n 0.x release ล่าสุดก่อนอัปเดตเป็น n8n 1.x สิ่งนี้จะช่วยให้คุณระบุปัญหาที่อาจเกิดขึ้นกับ release ที่ถูกต้องได้ เมื่อคุณตรวจสอบแล้วว่า n8n 0.x เริ่มทำงานโดยไม่มีปัญหาใดๆ ให้ดำเนินการขั้นตอนต่อไป
+3. อ่านส่วน [Deprecations](#deprecations) และ [Breaking Changes](#breaking-changes) ด้านบนอย่างละเอียดเพื่อประเมินว่าอาจส่งผลกระทบต่อการตั้งค่าของคุณอย่างไร
+4. อัปเดตเป็น n8n 1.0:
+	* ระหว่าง beta (ก่อนวันที่ 24 กรกฎาคม 2023): หากใช้ Docker ให้ pull `next` Docker image
+	* หลังวันที่ 24 กรกฎาคม 2023: หากใช้ Docker ให้ pull `latest` Docker image
+5. หากคุณพบปัญหาใดๆ ให้ redeploy n8n เวอร์ชันก่อนหน้าและ restore backup
 
 ## Reporting issues
 
-If you encounter any issues during the process of updating to n8n 1.0, please seek help in the community [forum](https://community.n8n.io/){:target=_blank .external link}.
+หากคุณพบปัญหาใดๆ ในระหว่างกระบวนการอัปเดตเป็น n8n 1.0 โปรดขอความช่วยเหลือใน community [forum](https://community.n8n.io/){:target=_blank .external link}
 
 ## Thank you
 
-We would like to take a moment to express our gratitude to all of our users for their continued support and feedback. Your contributions are invaluable in helping us make n8n the best possible automation tool. We're excited to continue working with you as we move forward with the release of version 1.0 and beyond. Thank you for being a part of our journey!
+เราขอใช้โอกาสนี้แสดงความขอบคุณต่อผู้ใช้ทุกคนสำหรับการสนับสนุนและข้อเสนอแนะอย่างต่อเนื่อง การมีส่วนร่วมของคุณมีค่าอย่างยิ่งในการช่วยให้เราทำให้ n8n เป็นเครื่องมือ automation ที่ดีที่สุดเท่าที่จะเป็นไปได้ เรารู้สึกตื่นเต้นที่จะได้ทำงานร่วมกับคุณต่อไปในขณะที่เราก้าวไปข้างหน้าด้วยการเปิดตัวเวอร์ชัน 1.0 และต่อๆ ไป ขอบคุณที่เป็นส่วนหนึ่งของการเดินทางของเรา!

@@ -6,36 +6,36 @@ contentType: explanation
 
 # Insights
 
-Insights gives instance owners and admins visibility into how workflows perform over time. This feature consists of three parts:
+Insights ช่วยให้เจ้าของ instance และผู้ดูแลระบบมองเห็นภาพรวมว่า workflows ทำงานอย่างไรเมื่อเวลาผ่านไป ฟีเจอร์นี้ประกอบด้วยสามส่วน:
 
-- [**Insights summary banner**](#insights-summary-banner): Shows key metrics about your instance from the last 7 days at the top of the overview space.
-- [**Insights dashboard**](#insights-dashboard): A more detailed visual breakdown with per-workflow metrics and historical comparisons.
-- **Time saved (Workflow ROI)**: For each workflow, you can set the number of minutes saved for each production execution.
+- [**Insights summary banner**](#insights-summary-banner): แสดงเมตริกสำคัญเกี่ยวกับ instance ของคุณจาก 7 วันที่ผ่านมาที่ด้านบนของพื้นที่ภาพรวม
+- [**Insights dashboard**](#insights-dashboard): การแจกแจงภาพที่ละเอียดมากขึ้นพร้อมเมตริกต่อ workflow และการเปรียบเทียบย้อนหลัง
+- **Time saved (Workflow ROI)**: สำหรับแต่ละ workflow คุณสามารถตั้งค่าจำนวนนาทีที่ประหยัดได้สำหรับการ execution ใน production แต่ละครั้ง
 
 /// info | Feature availability
-The insights summary banner displays activity from the last 7 days for all plans. The insights dashboard is only available on Pro (with limited date ranges) and Enterprise plans. 
+Insights summary banner แสดงกิจกรรมจาก 7 วันที่ผ่านมาสำหรับทุกแผน Insights dashboard มีให้ใช้งานเฉพาะในแผน Pro (พร้อมช่วงวันที่จำกัด) และ Enterprise เท่านั้น
 ///
 
 ## Insights summary banner
 
-n8n collects several metrics for both the insights summary banner and dashboard. They include:
+n8n รวบรวมเมตริกหลายรายการสำหรับทั้ง insights summary banner และ dashboard ซึ่งรวมถึง:
 
-- Total production executions (not including sub-workflow executions or manual executions)
+- Total production executions (ไม่รวม sub-workflow executions หรือ manual executions)
 - Total failed production executions
 - Production execution failure rate
-- Time saved (when set on at least one or more active workflows)
-- Run time average (including wait time from any wait nodes)
+- Time saved (เมื่อตั้งค่าไว้อย่างน้อยหนึ่ง workflow ที่ใช้งานอยู่)
+- Run time average (รวม wait time จาก wait nodes ใดๆ)
 
 ## Insights dashboard
 
-Those on the Pro and Enterprise plans can access the **Insights** section from the side navigation. Each metric from the summary banner is also clickable, taking you to the corresponding chart.
+ผู้ที่อยู่ในแผน Pro และ Enterprise สามารถเข้าถึงส่วน **Insights** ได้จากแถบนำทางด้านข้าง เมตริกแต่ละรายการจาก summary banner ยังสามารถคลิกได้ ซึ่งจะนำคุณไปยังแผนภูมิที่เกี่ยวข้อง
 
-The insights dashboard also has a table showing individual insights from each workflow including total production executions, failed production executions, failure rate, time saved, and run time average. 
+Insights dashboard ยังมีตารางที่แสดง insights แต่ละรายการจากแต่ละ workflow รวมถึง total production executions, failed production executions, failure rate, time saved และ run time average
 
 ## Insights time periods
 
-The insights summary banner and dashboard always shows a rolling 7 day window with a comparison to the previous period to show increases or decreases for each metric.
+Insights summary banner และ dashboard จะแสดงหน้าต่าง 7 วันแบบ rolling เสมอ พร้อมการเปรียบเทียบกับช่วงเวลาก่อนหน้าเพื่อแสดงการเพิ่มขึ้นหรือลดลงสำหรับแต่ละเมตริก
 
 ## Disable or configure insights metrics collection
 
-If you self-host n8n, you can disable or configure insights and metrics collection using [environment variables](/hosting/configuration/environment-variables/insights.md).
+หากคุณ self-host n8n คุณสามารถปิดใช้งานหรือกำหนดค่าการรวบรวม insights และ metrics ได้โดยใช้ [environment variables](/hosting/configuration/environment-variables/insights.md)

@@ -7,28 +7,28 @@ contentType: howto
 # Log streaming
 
 /// info | Feature availability
-Log streaming is available on Enterprise Self-hosted and Cloud plans.
+Log streaming มีให้ใช้งานในแผน Enterprise Self-hosted และ Cloud
 ///
 
-Log streaming allows you to send events from n8n to your own logging tools. This allows you to manage your n8n monitoring in your own alerting and logging processes.
+Log streaming ช่วยให้คุณสามารถส่ง events จาก n8n ไปยัง logging tools ของคุณเองได้ สิ่งนี้ช่วยให้คุณจัดการการ monitoring n8n ของคุณในกระบวนการ alerting และ logging ของคุณเอง
 
 ## Set up log streaming
 
-To use log streaming, you have to add a streaming destination.
+หากต้องการใช้ log streaming คุณต้องเพิ่ม streaming destination
 
-1. Navigate to **Settings** > **Log Streaming**.
-2. Select **Add new destination**.
-3. Choose your destination type. n8n opens the **New Event Destination** modal.
-4. In the **New Event Destination** modal, enter the configuration information for your event destination. These depend on the type of destination you're using.
-5. Select **Events** to choose which events to stream.
-6. Select **Save**.
+1. ไปที่ **Settings** > **Log Streaming**
+2. เลือก **Add new destination**
+3. เลือกประเภท destination ของคุณ n8n จะเปิด modal **New Event Destination**
+4. ใน modal **New Event Destination** ให้ป้อนข้อมูลการกำหนดค่าสำหรับ event destination ของคุณ ข้อมูลเหล่านี้ขึ้นอยู่กับประเภทของ destination ที่คุณกำลังใช้
+5. เลือก **Events** เพื่อเลือก events ที่จะ stream
+6. เลือก **Save**
 
 /// note | Self-hosted users
-If you self-host n8n, you can configure additional log streaming behavior using [Environment variables](/hosting/configuration/environment-variables/logs.md#log-streaming).
+หากคุณ self-host n8n คุณสามารถกำหนดค่าพฤติกรรม log streaming เพิ่มเติมได้โดยใช้ [Environment variables](/hosting/configuration/environment-variables/logs.md#log-streaming)
 ///
 ## Events
 
-The following events are available. You can choose which events to stream in **Settings** > **Log Streaming** > **Events**.
+มี events ต่อไปนี้ให้ใช้งาน คุณสามารถเลือก events ที่จะ stream ได้ใน **Settings** > **Log Streaming** > **Events**
 
 * Workflow
 	* Started
@@ -76,7 +76,7 @@ The following events are available. You can choose which events to stream in **S
 
 ## Destinations
 
-n8n supports three destination types:
+n8n รองรับ destination types สามประเภท:
 
 * A syslog server
 * A generic webhook

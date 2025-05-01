@@ -9,7 +9,7 @@ contentType: overview
 
 n8n provides two video courses on YouTube.
 
-For support, join the [Forum](https://community.n8n.io/){:target=_blank .external-link}.
+For support, join the [Forum](https://community.n8n.io/){:target=_blank .external-link}. หากต้องการความช่วยเหลือ เข้าร่วมได้ที่ [Forum](https://community.n8n.io/){:target=_blank .external-link}
 
 ## Beginner
 

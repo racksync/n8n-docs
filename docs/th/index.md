@@ -10,44 +10,45 @@ hide:
 # Welcome to n8n Docs
 
 
-นี่คือเอกสารสำหรับ [n8n](https://n8n.io/){:target=_blank .external-link} ซึ่งเป็นเครื่องมือ workflow automation ที่ได้รับอนุญาตแบบ [fair-code](https://faircode.io){:target=_blank .external-link} ที่ผสานความสามารถ AI กับการทำงานอัตโนมัติทางธุรกิจ
+This is the documentation for [n8n](https://n8n.io/){:target=_blank .external-link}, a [fair-code](https://faircode.io){:target=_blank .external-link} licensed workflow automation tool that combines AI capabilities with business process automation.
 
-ครอบคลุมทุกอย่างตั้งแต่การตั้งค่า การใช้งาน ไปจนถึงการพัฒนา เอกสารนี้อยู่ระหว่างการปรับปรุง และยินดีต้อนรับ [ผู้ร่วมพัฒนา](/help-community/contributing.md) ทุกท่าน
+It covers everything from setup to usage and development. It's a work in progress and all [contributions](/help-community/contributing.md) are welcome.
 
 
-## จุดเริ่มต้น
+## Where to start
 
 <div class="grid cards" markdown>
 
 -   __Quickstarts__
 
-    เริ่มต้นใช้งาน n8n ด้วยคู่มือเริ่มต้นอย่างรวดเร็ว
+    Jump in with n8n's quickstart guides.
 
-    [:octicons-arrow-right-24: ลองใช้งาน](/try-it-out/index.md)
+    [:octicons-arrow-right-24: Try it out](/try-it-out/index.md)
 
--   __เลือก n8n ที่เหมาะกับคุณ__
+-   __Choose the right n8n for you__
 
 	Cloud, npm, self-host . . . 
 
-    [:octicons-arrow-right-24: ตัวเลือก](/choose-n8n.md)
+    [:octicons-arrow-right-24: Options](/choose-n8n.md)
 
--   __สำรวจการเชื่อมต่อ (Integrations)__
 
-    ค้นหาคลัง integrations ของ n8n
+-   __Explore integrations__
 
-    [:octicons-arrow-right-24: ค้นหาแอปของคุณ](/integrations/index.md)
+    Browse n8n's integrations library.
 
--   __สร้างฟีเจอร์ AI__
+    [:octicons-arrow-right-24: Find your apps](/integrations/index.md)
 
-    n8n รองรับการสร้างฟีเจอร์และเครื่องมือ AI
+-   __Build AI functionality__
+
+    n8n supports building AI functionality and tools.
 
     [:octicons-arrow-right-24: Advanced AI](/advanced-ai/index.md)    
 </div>
 
-## เกี่ยวกับ n8n
+## About n8n
 
-n8n (อ่านว่า เอ็น-เอท-เอ็น) ช่วยให้คุณเชื่อมต่อแอปใด ๆ ที่มี API กับแอปอื่น ๆ และจัดการข้อมูลได้โดยใช้โค้ดน้อยหรือไม่ต้องเขียนโค้ดเลย
+n8n (pronounced n-eight-n) helps you to connect any app with an API with any other, and manipulate its data with little or no code.
 
-* ปรับแต่งได้: workflow ที่ยืดหยุ่นสูงและสามารถสร้าง node เองได้
-* สะดวก: ใช้งานผ่าน npm หรือ Docker หรือเลือก Cloud hosting หากต้องการให้เราดูแลโครงสร้างพื้นฐาน
-* เน้นความเป็นส่วนตัว: self-host n8n เพื่อความเป็นส่วนตัวและความปลอดภัย
+* Customizable: highly flexible workflows and the option to build custom nodes.
+* Convenient: use the npm or Docker to try out n8n, or the Cloud hosting option if you want us to handle the infrastructure.
+* Privacy-focused: self-host n8n for privacy and security.

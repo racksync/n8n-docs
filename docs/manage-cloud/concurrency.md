@@ -6,37 +6,37 @@ contentType: explanation
 # Cloud concurrency
 
 /// info | Only for n8n Cloud
-This document discusses concurrency in n8n Cloud. Read [self-hosted n8n concurrency control](/hosting/scaling/concurrency-control.md) to learn how concurrency works with self-hosted n8n instances.
+เอกสารนี้พูดถึง concurrency ใน n8n Cloud ถ้าใช้ self-hosted n8n ดู [self-hosted n8n concurrency control](/hosting/scaling/concurrency-control.md) เพื่อดูวิธีจัดการ concurrency สำหรับ self-hosted
 ///
 
-Too many concurrent executions can cause performance degradation and unresponsiveness. To prevent this and improve instance stability, n8n sets concurrency limits for production executions in regular mode.
+ถ้ามี execution พร้อมกันมากเกินไป อาจทำให้ประสิทธิภาพลดลงหรือ instance ไม่ตอบสนอง เพื่อป้องกันปัญหานี้และเพิ่มเสถียรภาพ n8n จะกำหนดขีดจำกัด concurrency สำหรับ production executions ในโหมดปกติ
 
-Any executions beyond the limits queue for later processing. These executions remain in the queue until concurrency capacity frees up, and are then processed in FIFO order.
+execution ที่เกินขีดจำกัดจะถูกนำไปเข้า queue เพื่อรอประมวลผล เมื่อมี capacity ว่าง execution จะถูกนำออกจาก queue ตามลำดับ FIFO
 
 ## Concurrency limits
 
-n8n limits the number of concurrent executions for Cloud instances according to their plan:
+n8n จำกัดจำนวน execution พร้อมกันใน Cloud ตาม plan ดังนี้:
 
-* Starter and Trial: 5
+* Starter และ Trial: 5
 * Pro (10k workflow executions, 15 active workflows): 20
 * Pro (50k workflow executions, 50 active workflows): 50
-* Enterprise (in regular mode): 200
+* Enterprise (โหมดปกติ): 200
 
-You can view the number of active executions and your plan's concurrency limit at the top of a project's or workflow's executions tab.
+คุณสามารถดูจำนวน execution ที่กำลังทำงานและขีดจำกัด concurrency ของ plan ได้ที่ด้านบนของแท็บ executions ของ project หรือ workflow
 
 ## Details
 
-Some other details about concurrency to keep in mind:
+รายละเอียดอื่นๆ เกี่ยวกับ concurrency ที่ควรรู้:
 
-- Concurrency control applies only to production executions: those started from a webhook or trigger node. It doesn't apply to any other kinds, such as manual executions, sub-workflow executions, or error executions.
-- [Test evaluations](/glossary.md#evaluation-n8n) do not count towards concurrency limits. Your test evaluation concurrency limit is equal to, but separate from, your plan's regular concurrency limit.
-- You can't retry queued executions. Cancelling or deleting a queued execution also removes it from the queue.
-- On instance startup, n8n resumes queued executions up to the concurrency limit and re-enqueues the rest.
+- concurrency control ใช้กับ production executions เท่านั้น (ที่เริ่มจาก webhook หรือ trigger node) ไม่รวม execution แบบ manual, sub-workflow หรือ error executions
+- [Test evaluations](/glossary.md#evaluation-n8n) จะไม่ถูกนับรวมในขีดจำกัด concurrency โดยขีดจำกัด test evaluation จะเท่ากับขีดจำกัด concurrency ปกติของ plan แต่แยกกัน
+- ไม่สามารถ retry execution ที่อยู่ใน queue ได้ ถ้ายกเลิกหรือลบ execution ที่อยู่ใน queue จะถูกลบออกจาก queue ทันที
+- ตอน instance เริ่มต้น n8n จะ resume execution ที่อยู่ใน queue ตามขีดจำกัด concurrency และนำที่เหลือกลับเข้า queue
 
 ## Comparison to queue mode
 
 /// info | Feature availability
-Queue mode is available for Cloud Enterprise plans. To enable it, [contact n8n](https://n8n-community.typeform.com/to/y9X2YuGa){:target=_blank .external-link}.
+queue mode มีเฉพาะใน Cloud Enterprise plan ถ้าต้องการเปิดใช้งาน [ติดต่อ n8n](https://n8n-community.typeform.com/to/y9X2YuGa){:target=_blank .external-link}
 ///
 
-Concurrency in queue mode is a separate mechanism from concurrency in regular mode. In queue mode, the concurrency settings determine how many jobs each worker can run in parallel. In regular mode, concurrency limits apply to the entire instance.
+concurrency ใน queue mode จะต่างจากโหมดปกติ โดย queue mode จะกำหนดจำนวน job ที่แต่ละ worker รันพร้อมกันได้ ส่วนโหมดปกติ ขีดจำกัด concurrency จะใช้กับทั้ง instance

@@ -7,10 +7,10 @@ contentType: howto
 
 # Troubleshooting SAML SSO
 
-If you get an error when testing your SAML setup, check the following:
+หากคุณพบข้อผิดพลาดเมื่อทดสอบการตั้งค่า SAML ของคุณ ให้ตรวจสอบสิ่งต่อไปนี้:
 
-* Does the app you created in your IdP support SAML?
-* Did you enter the n8n redirect URL and entity ID in the correct fields in your IdP?
-* Is the metadata XML correct? Check that the metadata you copied into n8n is formatted correctly.
+* App ที่คุณสร้างใน IdP ของคุณรองรับ SAML หรือไม่?
+* คุณป้อน n8n redirect URL และ entity ID ในช่องที่ถูกต้องใน IdP ของคุณหรือไม่?
+* Metadata XML ถูกต้องหรือไม่? ตรวจสอบว่า metadata ที่คุณคัดลอกมาใส่ใน n8n นั้นจัดรูปแบบถูกต้อง
 
-For more support, use the [forum](https://community.n8n.io/){:target=_blank .external-link}, or contact your support representative if you have a paid support plan.
+สำหรับการสนับสนุนเพิ่มเติม โปรดใช้ [forum](https://community.n8n.io/){:target=_blank .external-link} หรือติดต่อตัวแทนฝ่ายสนับสนุนของคุณหากคุณมี support plan แบบชำระเงิน

@@ -6,71 +6,71 @@ contentType: howto
 ---
 
 /// info | Feature availability
-RBAC is available on all plans except the Community edition. Different plans have different numbers of projects and roles. Refer to n8n's [pricing page](https://n8n.io/pricing/){:target=_blank .external-link} for plan details.
+RBAC มีให้ใช้งานในทุก plan ยกเว้น Community edition แต่ละ plan จะมีจำนวน projects และ roles ที่แตกต่างกัน โปรดดูรายละเอียด plan ได้ที่ [pricing page](https://n8n.io/pricing/){:target=_blank .external-link} ของ n8n
 ///
 
-n8n uses projects to group workflows and [credentials](/glossary.md#credential-n8n), and assigns [roles](/user-management/rbac/role-types.md) to users in each project. This means that a single user can have different roles in different projects, giving them different levels of access.
+n8n ใช้ projects เพื่อจัดกลุ่ม workflows และ [credentials](/glossary.md#credential-n8n) และกำหนด [roles](/user-management/rbac/role-types.md) ให้กับผู้ใช้ในแต่ละ project ซึ่งหมายความว่าผู้ใช้คนเดียวสามารถมี roles ที่แตกต่างกันใน projects ที่ต่างกันได้ ทำให้พวกเขามีระดับการเข้าถึงที่แตกต่างกัน
 
 ## Create a project
 
-Instance owners and instance admins can create projects.
+Instance owners และ instance admins สามารถสร้าง projects ได้
 
-To create a project:
+วิธีสร้าง project:
 
-1. Select <span class="inline-image">![Plus icon](/_images/common-icons/plus.png)</span> **Add project**.
-1. Fill out the project settings.
-1. Select **Save**.
+1. เลือก <span class="inline-image">![Plus icon](/_images/common-icons/plus.png)</span> **Add project**
+2. กรอก project settings
+3. เลือก **Save**
 
 ## Add and remove users in a project
 
-Project admins can add and remove users.
+Project admins สามารถเพิ่มและลบผู้ใช้ได้
 
-To add a user to a project:
+วิธีเพิ่มผู้ใช้ใน project:
 
-1. Select the project.
-1. Select **Project settings**.
-1. Under **Project members**, browse for users or search by username or email address.
-1. Select the user you want to add.
-1. Check the [role type](/user-management/rbac/role-types.md) and change it if needed.
-1. Select **Save**.
+1. เลือก project
+2. เลือก **Project settings**
+3. ใต้ **Project members**, ค้นหาผู้ใช้หรือค้นหาด้วย username หรือ email address
+4. เลือกผู้ใช้ที่คุณต้องการเพิ่ม
+5. ตรวจสอบ [role type](/user-management/rbac/role-types.md) และเปลี่ยนหากจำเป็น
+6. เลือก **Save**
 
-To remove a user from a project:
+วิธีลบผู้ใช้จาก project:
 
-1. Select the project.
-1. Select **Project settings**.
-1. In the role type dropdown for the user you want to remove, select **Remove access**.
-1. Select **Save**.
+1. เลือก project
+2. เลือก **Project settings**
+3. ใน dropdown ของ role type สำหรับผู้ใช้ที่คุณต้องการลบ ให้เลือก **Remove access**
+4. เลือก **Save**
 
 ## Delete a project
 
-To delete a project:
+วิธีลบ project:
 
-1. Select the project.
-1. Select **Project settings**.
-1. Select **Delete project**.
-1. Choose what to do with the workflows and credentials. You can select:
-	* **Transfer its workflows and credentials to another project**: n8n prompts you to choose a project to move the data to.
-	* **Delete its workflows and credentials**: n8n prompts you to confirm that you want to delete all the data in the project.
+1. เลือก project
+2. เลือก **Project settings**
+3. เลือก **Delete project**
+4. เลือกสิ่งที่จะทำกับ workflows และ credentials คุณสามารถเลือก:
+    * **Transfer its workflows and credentials to another project**: n8n จะแจ้งให้คุณเลือก project ที่จะย้ายข้อมูลไป
+    * **Delete its workflows and credentials**: n8n จะแจ้งให้คุณยืนยันว่าต้องการลบข้อมูลทั้งหมดใน project
 
 ## Move workflows and credentials between projects or users
 
-Workflow and credential owners can move workflows or credentials (changing ownership) to other users or projects they have access to.
+เจ้าของ Workflow และ credential สามารถย้าย workflows หรือ credentials (เปลี่ยนความเป็นเจ้าของ) ไปยังผู้ใช้อื่นหรือ projects อื่นที่พวกเขามีสิทธิ์เข้าถึงได้
 
 /// warning | Moving revokes sharing
-Moving workflows or credentials removes all existing sharing. Be aware that this could impact other workflows currently sharing these resources.
+การย้าย workflows หรือ credentials จะลบการแชร์ที่มีอยู่ทั้งหมด โปรดทราบว่าสิ่งนี้อาจส่งผลกระทบต่อ workflows อื่นๆ ที่กำลังแชร์ทรัพยากรเหล่านี้อยู่
 ///
 
-1. Select **Workflow menu** <span class="inline-image">![Workflow menu icon](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> or **Credential menu** <span class="inline-image">![Workflow menu icon](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> > **Move**.
+1. เลือก **Workflow menu** <span class="inline-image">![Workflow menu icon](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> หรือ **Credential menu** <span class="inline-image">![Workflow menu icon](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> > **Move**
 
-	/// info | Moving workflows with credentials
-	When moving a workflow with credentials you have permission to share, you can choose to share the credentials as well. This ensures that the workflow continues to have access to the credentials it needs to execute. n8n will note any credentials that can't be moved (credentials you don't have permission to share).
-	///
+    /// info | Moving workflows with credentials
+    เมื่อย้าย workflow พร้อมกับ credentials ที่คุณมีสิทธิ์แชร์ คุณสามารถเลือกที่จะแชร์ credentials ด้วยได้ สิ่งนี้ช่วยให้มั่นใจว่า workflow ยังคงสามารถเข้าถึง credentials ที่จำเป็นต้องใช้ในการ execute ได้ n8n จะบันทึก credentials ใดๆ ที่ไม่สามารถย้ายได้ (credentials ที่คุณไม่มีสิทธิ์แชร์)
+    ///
 
-1. Select the project or user you want to move to.
-1. Select **Next**.
-1. Confirm you understand the impact of the move: workflows may stop working if the credentials they need aren't available in the target project, and n8n removes any current individual sharing.
-1. Select **Confirm move to new project**.
+2. เลือก project หรือ user ที่คุณต้องการย้ายไป
+3. เลือก **Next**
+4. ยืนยันว่าคุณเข้าใจผลกระทบของการย้าย: workflows อาจหยุดทำงานหาก credentials ที่ต้องการไม่มีอยู่ใน project ปลายทาง และ n8n จะลบการแชร์ส่วนบุคคลที่มีอยู่ในปัจจุบันทั้งหมด
+5. เลือก **Confirm move to new project**
 
 ## Using external secrets in projects
 
-To use [external secrets](/external-secrets.md) in a project, you must have an [instance owner or instance admin](/user-management/account-types.md) as a member of the project.
+หากต้องการใช้ [external secrets](/external-secrets.md) ใน project คุณต้องมี [instance owner หรือ instance admin](/user-management/account-types.md) เป็นสมาชิกของ project นั้น

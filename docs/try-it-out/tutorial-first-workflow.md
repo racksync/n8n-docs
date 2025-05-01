@@ -1,4 +1,4 @@
----
+--- 
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 description: Create your first workflow in n8n and learn some key concepts.
 contentType: tutorial
@@ -6,122 +6,122 @@ contentType: tutorial
 
 # Your first workflow
 
-This guide will show you how to construct a [workflow](/glossary.md#workflow-n8n) in n8n, explaining key concepts along the way. You will:
+คู่มือนี้จะแสดงวิธีสร้าง [workflow](/glossary.md#workflow-n8n) ใน n8n พร้อมอธิบายแนวคิดหลักๆ ไปด้วย คุณจะได้เรียนรู้:
 
-* Create a workflow from scratch. 
-* Understand key concepts and skills, including:
-    * Starting workflows with trigger nodes
-    * Configuring [credentials](/glossary.md#credential-n8n)
-    * Processing data
-    * Representing logic in an n8n workflow
-    * Using [expressions](/glossary.md#expression-n8n)
+* สร้าง workflow ตั้งแต่เริ่มต้น
+* เข้าใจแนวคิดและทักษะสำคัญ เช่น:
+    * การเริ่ม workflow ด้วย trigger nodes
+    * การตั้งค่า [credentials](/glossary.md#credential-n8n)
+    * การประมวลผลข้อมูล
+    * การใส่ logic ใน n8n workflow
+    * การใช้ [expressions](/glossary.md#expression-n8n)
 
 !["Screenshot of the completed workflow"](/_images/try-it-out/tutorial-first.png)
 
-This quickstart uses [n8n Cloud](/manage-cloud/overview.md), which is recommended for new users. A free trial is available - if you haven't already done so, [sign up](https://app.n8n.cloud/register) for an account now.
+Quickstart นี้ใช้ [n8n Cloud](/manage-cloud/overview.md) ซึ่งเหมาะกับมือใหม่ มีรุ่นทดลองใช้ฟรี - ถ้ายังไม่มีบัญชี [สมัครเลย](https://app.n8n.cloud/register)
 
 ## Step one: Create a new workflow
 
-When you open n8n, you'll see either:
+เมื่อคุณเปิด n8n คุณจะเจออย่างใดอย่างหนึ่ง:
 
-* A window with a welcome message and two large buttons: Choose **Start from Scratch** to create a new workflow.
-* The **Workflows** list on the **Overview** page. Select the **Create Workflow** to create a new workflow.
+* หน้าต่างต้อนรับพร้อมปุ่มใหญ่สองปุ่ม: เลือก **Start from Scratch** เพื่อสร้าง workflow ใหม่
+* รายการ **Workflows** ในหน้า **Overview**: เลือก **Create Workflow** เพื่อสร้าง workflow ใหม่
 
 ## Step two: Add a trigger node
 
-n8n provides two ways to start a workflow:
+n8n มีสองวิธีในการเริ่ม workflow:
 
-* Manually, by selecting **Test Workflow**.
-* Automatically, using a trigger node as the first node. The trigger node runs the workflow in response to an external event, or based on your settings.
+* กดเอง โดยเลือก **Test Workflow**
+* อัตโนมัติ โดยใช้ trigger node เป็น node แรก trigger node จะรัน workflow ตามเหตุการณ์ภายนอกหรือที่คุณตั้งไว้
 
-For this tutorial, we'll use the [Schedule trigger](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/index.md). This allows you to run the workflow on a schedule:
+สำหรับ tutorial นี้ เราจะใช้ [Schedule trigger](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/index.md) เพื่อให้ workflow ทำงานตามเวลาที่กำหนด:
 
-1. Select **Add first step**.
-1. Search for **Schedule**. n8n shows a list of nodes that match the search.
-1. Select **Schedule Trigger** to add the node to the canvas. n8n opens the node.
-1. For **Trigger Interval**, select **Weeks**.
-1. For **Weeks Between Triggers**, enter `1`.
-1. Enter a time and day. For this example, select **Monday** in **Trigger on Weekdays**, select **9am** in **Trigger at Hour**, and enter `0` in **Trigger at Minute**.
-1. Close the node details view to return to the canvas.
+1. เลือก **Add first step**
+1. ค้นหา **Schedule** n8n จะแสดงรายการ nodes ที่ตรงกับที่ค้นหา
+1. เลือก **Schedule Trigger** เพื่อเพิ่ม node ลงบน canvas n8n จะเปิด node ให้เลย
+1. ที่ **Trigger Interval** เลือก **Weeks**
+1. ที่ **Weeks Between Triggers** ใส่ `1`
+1. ตั้งเวลาและวัน ตัวอย่างนี้เลือก **Monday** ใน **Trigger on Weekdays**, เลือก **9am** ใน **Trigger at Hour** และใส่ `0` ใน **Trigger at Minute**
+1. ปิดหน้ารายละเอียด node เพื่อกลับไปที่ canvas
 
 ## Step three: Add the NASA node and set up credentials
 
-The [NASA node](/integrations/builtin/app-nodes/n8n-nodes-base.nasa.md) interacts with NASA's [public APIs](https://api.nasa.gov/){:target=_blank .external-link} to fetch useful data. We will use the real-time data from the API to find solar events.
+[NASA node](/integrations/builtin/app-nodes/n8n-nodes-base.nasa.md) จะเชื่อมต่อกับ [public APIs](https://api.nasa.gov/){:target=_blank .external-link} ของ NASA เพื่อดึงข้อมูลที่น่าสนใจ เราจะใช้ข้อมูลเรียลไทม์จาก API เพื่อดูเหตุการณ์เกี่ยวกับดวงอาทิตย์
 
 ??? explanation "Credentials"
-    Credentials are private pieces of information issued by apps and services to authenticate you as a user and allow you to connect and share information between the app or service and the n8n node. The type of information required varies depending on the app/service concerned. You should be careful about sharing or revealing the credentials outside of n8n.
+    Credentials คือข้อมูลส่วนตัวที่แอปหรือบริการต่างๆ ออกให้เพื่อยืนยันตัวตนคุณ และอนุญาตให้เชื่อมต่อหรือแชร์ข้อมูลระหว่างแอป/บริการกับ n8n node ข้อมูลที่ต้องใช้จะแตกต่างกันไปตามแต่ละแอป/บริการ คุณควรระวังในการแชร์หรือเปิดเผย credentials นอก n8n
 
-1. Select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> connector on the Schedule Trigger node.
-1. Search for **NASA**. n8n shows a list of nodes that match the search.
-1. Select **NASA** to view a list of operations.
-1. Search for and select **Get a DONKI solar flare**. This operation returns a report about recent solar flares. When you select the operation, n8n adds the node to the canvas and opens it.
-1. To access the NASA APIs, you need to set up credentials:
-    1. Select the  **Credential for NASA API** dropdown.
-    1. Select **Create new credential**. n8n opens the credentials view.
-    1. Go to [NASA APIs](https://api.nasa.gov/){:target=_blank .external-link} and fill out the form from the **Generate API Key** link. The NASA site generates the key and emails it to the address you entered.
-    1. Check your email account for the API key. Copy the key, and paste it into **API Key** in n8n.
-    1. Select **Save**.
-    1. Close the credentials screen. n8n returns to the node. The new credentials should be automatically selected in **Credential for NASA API**.
+1. เลือกตัวเชื่อมต่อ **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> บน Schedule Trigger node
+1. ค้นหา **NASA** n8n จะแสดงรายการ nodes ที่ตรงกับที่ค้นหา
+1. เลือก **NASA** เพื่อดูรายการ operations
+1. ค้นหาและเลือก **Get a DONKI solar flare** อันนี้จะดึงรายงาน solar flares ล่าสุด เมื่อเลือกแล้ว n8n จะเพิ่ม node ลงบน canvas และเปิด node ให้เลย
+1. ถ้าจะใช้ NASA APIs ต้องตั้งค่า credentials:
+    1. เลือก dropdown **Credential for NASA API**
+    1. เลือก **Create new credential** n8n จะเปิดหน้าตั้งค่า credentials
+    1. ไปที่ [NASA APIs](https://api.nasa.gov/){:target=_blank .external-link} แล้วกรอกฟอร์มที่ลิงก์ **Generate API Key** เว็บไซต์ NASA จะสร้าง key และส่งไปที่อีเมลที่คุณกรอก
+    1. เช็คอีเมล หา API key แล้ว copy ไปวางใน **API Key** ใน n8n
+    1. เลือก **Save**
+    1. ปิดหน้าจอ credentials กลับมาที่ node credentials ใหม่จะถูกเลือกให้อัตโนมัติใน **Credential for NASA API**
 
-1. By default, DONKI Solar Flare provides data for the past 30 days. To limit it to just the last week, use **Additional Fields**:
-    1. Select **Add field**.
-    1. Select **Start date**.
-    1. To get a report starting from a week ago, you can use an expression: next to **Start date**, select the **Expression** tab, then select the expand button <span class="inline-image">![Add node icon](/_images/common-icons/open-expression-editor.png){.off-glb}</span> to open the full expressions editor.
-    1. In the **Expression** field, enter the following expression:
+1. โดยปกติ DONKI Solar Flare จะให้ข้อมูลย้อนหลัง 30 วัน ถ้าอยากดูแค่สัปดาห์ล่าสุด ให้ใช้ **Additional Fields**:
+    1. เลือก **Add field**
+    1. เลือก **Start date**
+    1. ถ้าอยากให้รายงานเริ่มจากหนึ่งสัปดาห์ก่อน ใช้ expression: ข้าง **Start date** เลือกแท็บ **Expression** แล้วกดปุ่มขยาย <span class="inline-image">![Add node icon](/_images/common-icons/open-expression-editor.png){.off-glb}</span> เพื่อเปิด editor เต็ม
+    1. ในช่อง **Expression** ใส่โค้ดนี้:
     ```js
     {{ $today.minus(7, 'days') }}
     ```
-    This generates a date in the correct format, seven days before the current date.
+    อันนี้จะสร้างวันที่ย้อนหลัง 7 วันจากวันนี้
 
     ![image showing the expression above generating a date](/_images/try-it-out/tutorial-date.png)
 
     ??? explanation "Date and time formats in n8n..."
-        n8n uses Luxon to work with date and time, and also provides two variables for convenience: `$now` and `$today`. For more information, refer to [Expressions > Luxon](/code/cookbook/luxon.md).
+        n8n ใช้ Luxon ในการจัดการวันที่และเวลา และมีตัวแปร `$now` กับ `$today` ให้ใช้สะดวกๆ ดูเพิ่มที่ [Expressions > Luxon](/code/cookbook/luxon.md)
 
-1. Close the **Edit Expression** modal to return to the NASA node.
-1. You can now check that the node is working and returning the expected date: select **Test step** to run the node manually. n8n calls the NASA API and displays details of solar flares in the past seven days in the **OUTPUT** section.
-1. Close the NASA node to return to the workflow canvas.
+1. ปิด modal **Edit Expression** เพื่อกลับไปที่ NASA node
+1. ตอนนี้ลองเช็คว่า node ทำงานถูกไหมและคืนวันที่ที่ต้องการหรือเปล่า: เลือก **Test step** เพื่อรัน node ด้วยตัวเอง n8n จะเรียก NASA API และแสดงรายละเอียด solar flares 7 วันที่ผ่านมาใน **OUTPUT**
+1. ปิด NASA node เพื่อกลับไปที่ workflow canvas
 
 ## Step four: Add logic with the If node
 
-n8n supports complex logic in workflows. In this tutorial we will use the [If node](/integrations/builtin/core-nodes/n8n-nodes-base.if.md) to create two branches that each generate a report from the NASA data. Solar flares have five possible classifications; we will add logic that sends a report with the lower classifications to one output, and the higher classifications to another.
+n8n รองรับ logic ที่ซับซ้อนใน workflow ใน tutorial นี้เราจะใช้ [If node](/integrations/builtin/core-nodes/n8n-nodes-base.if.md) เพื่อสร้างสอง branch ที่แต่ละอันจะสร้างรายงานจากข้อมูล NASA Solar flares มีการแบ่งคลาส 5 แบบ เราจะใส่ logic ให้รายงานคลาสต่ำไปออกทางหนึ่ง คลาสสูงไปอีกทาง
 
-Add the If node:
+เพิ่ม If node:
 
-1. Select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> connector on the NASA node.
-1. Search for **If**. n8n shows a list of nodes that match the search.
-1. Select **If** to add the node to the canvas. n8n opens the node.
-1. You need to check the value of the `classType` property in the NASA data. To do this:
-	1. Drag **classType** into **Value 1**.
+1. เลือกตัวเชื่อมต่อ **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> บน NASA node
+1. ค้นหา **If** n8n จะแสดงรายการ nodes ที่ตรงกับที่ค้นหา
+1. เลือก **If** เพื่อเพิ่ม node ลงบน canvas n8n จะเปิด node ให้เลย
+1. ต้องเช็คค่าของ property `classType` ในข้อมูล NASA ทำแบบนี้:
+    1. ลาก **classType** ไปใส่ **Value 1**
 
-		/// note | Make sure you ran the NASA node in the previous section
-		If you didn't follow the step in the previous section to run the NASA node, you won't see any data to work with in this step.
-		///
+        /// note | Make sure you ran the NASA node in the previous section
+        ถ้ายังไม่ได้รัน NASA node ในขั้นตอนก่อนหน้า จะไม่เห็นข้อมูลให้เลือกในขั้นตอนนี้
+        ///
 
-    1. Change the comparison operation to **String > Contains**.
-    1. In **Value 2**, enter **X**. This is the highest classification of solar flare. In the next step, you will create two reports: one for X class solar flares, and one for all the smaller solar flares.
-1. You can now check that the node is working and returning the expected date: select **Test step** to run the node manually. n8n tests the data against the condition, and shows which results match true or false in the **OUTPUT** panel.
+    1. เปลี่ยนการเปรียบเทียบเป็น **String > Contains**
+    1. ที่ **Value 2** ใส่ **X** อันนี้คือคลาสสูงสุดของ solar flare ขั้นถัดไปจะสร้างรายงานสองแบบ: อันหนึ่งสำหรับ solar flares คลาส X อีกอันสำหรับคลาสที่เล็กกว่า
+1. ตอนนี้ลองเช็คว่า node ทำงานถูกไหมและคืนค่าตามที่ต้องการหรือเปล่า: เลือก **Test step** เพื่อรัน node ด้วยตัวเอง n8n จะทดสอบข้อมูลกับเงื่อนไข และแสดงผลลัพธ์ที่ตรงกับ true หรือ false ใน **OUTPUT**
 
     /// note | Weeks without large solar flares
-    In this tutorial, you are working with live data. If you find there aren't any X class solar flares when you run the workflow, try replacing **X** in **Value 2** with either **A**, **B**, **C**, or **M**.
+    ใน tutorial นี้ใช้ข้อมูลสด ถ้าไม่มี solar flares คลาส X ตอนรัน workflow ให้ลองเปลี่ยน **X** ใน **Value 2** เป็น **A**, **B**, **C** หรือ **M** แทน
     ///
 
-1. Once you are happy the node will return some events, you can close the node to return to the canvas.
+1. ถ้าพอใจว่า node คืนเหตุการณ์ได้แล้ว ปิด node กลับไปที่ canvas
 
 ## Step five: Output data from your workflow
 
-The last step of the workflow is to send the two reports about solar flares. For this example, you'll send data to [Postbin](https://www.toptal.com/developers/postbin/){:target=_blank .external-link}. Postbin is a service that receives data and displays it on a temporary web page.
+ขั้นตอนสุดท้ายของ workflow คือส่งรายงานสองแบบเกี่ยวกับ solar flares ตัวอย่างนี้จะส่งข้อมูลไปที่ [Postbin](https://www.toptal.com/developers/postbin/){:target=_blank .external-link} ซึ่งเป็นบริการรับข้อมูลและแสดงผลบนเว็บชั่วคราว
 
-1. On the If node, select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> connector labeled **true**.
-1. Search for **PostBin**. n8n shows a list of nodes that match the search.
-1. Select **PostBin**.
-1. Select **Send a request**. n8n adds the node to the canvas and opens it.
-1. Go to [Postbin](https://www.toptal.com/developers/postbin/){:target=_blank .external-link} and select **Create Bin**. Leave the tab open so you can come back to it when testing the workflow.
-1. Copy the bin ID. It looks similar to `1651063625300-2016451240051`.
-1. In n8n, paste your Postbin ID into **Bin ID**.
-1. Now, configure the data to send to Postbin. Next to **Bin Content**, select the **Expression** tab (you will need to mouse-over the **Bin Content** for the tab to appear), then select the expand button <span class="inline-image">![Add node icon](/_images/common-icons/open-expression-editor.png){.off-glb}</span> to open the full expressions editor.
-1. You can now click and drag the correct field from the If Node output into the expressions editor to automatically create a reference for this label. In this case the input we want is 'classType'.
-1. Once dropped into the expressions editor it will transform into this reference: `{{$json["classType"]}}`. Add a message to it, so that the full expression is:
+1. ที่ If node เลือกตัวเชื่อมต่อ **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> ที่ป้าย **true**
+1. ค้นหา **PostBin** n8n จะแสดงรายการ nodes ที่ตรงกับที่ค้นหา
+1. เลือก **PostBin**
+1. เลือก **Send a request** n8n จะเพิ่ม node ลงบน canvas และเปิด node ให้เลย
+1. ไปที่ [Postbin](https://www.toptal.com/developers/postbin/){:target=_blank .external-link} แล้วเลือก **Create Bin** เปิดแท็บนี้ทิ้งไว้เพื่อกลับมาดูผลตอนทดสอบ workflow
+1. คัดลอก bin ID จะหน้าตาประมาณ `1651063625300-2016451240051`
+1. ใน n8n วาง Postbin ID ลงใน **Bin ID**
+1. ตั้งค่าข้อมูลที่จะส่งไป Postbin ข้าง **Bin Content** เลือกแท็บ **Expression** (ต้องเอาเมาส์ไปวางบน **Bin Content** ก่อนถึงจะเห็นแท็บนี้) แล้วกดปุ่มขยาย <span class="inline-image">![Add node icon](/_images/common-icons/open-expression-editor.png){.off-glb}</span> เพื่อเปิด editor เต็ม
+1. ตอนนี้สามารถลากฟิลด์ที่ต้องการจาก output ของ If Node ไปใส่ใน editor ได้เลยเพื่อสร้าง reference อัตโนมัติ กรณีนี้คือ 'classType'
+1. พอลากลง editor แล้วจะกลายเป็น reference แบบนี้: `{{$json["classType"]}}` เติมข้อความเข้าไปให้เต็มเป็น:
 
     ```js
     There was a solar flare of class {{$json["classType"]}}
@@ -129,40 +129,39 @@ The last step of the workflow is to send the two reports about solar flares. For
 
     ![image showing the expression above generating output](/_images/try-it-out/tutorial-expression.png)
 
-1. Close the expressions editor to return to the node.
-1. Close the Postbin node to return to the canvas.
-1. Add another Postbin node, to handle the **false** output path from the If node:
-    1. Hover over the Postbin node, then select **Node context menu** <span class="inline-image">![Node context menu icon](/_images/common-icons/node-context-menu.png){.off-glb}</span> > **Duplicate node** to duplicate the first Postbin node.
-    1. Drag the **false** connector from the If node to the left side of the new Postbin node.
+1. ปิด editor expression กลับไปที่ node
+1. ปิด Postbin node กลับไปที่ canvas
+1. เพิ่ม Postbin node อีกอันสำหรับ path **false** จาก If node:
+    1. เอาเมาส์ไปวางบน Postbin node แล้วเลือก **Node context menu** <span class="inline-image">![Node context menu icon](/_images/common-icons/node-context-menu.png){.off-glb}</span> > **Duplicate node** เพื่อก็อปปี้ Postbin node แรก
+    1. ลากตัวเชื่อมต่อ **false** จาก If node ไปที่ด้านซ้ายของ Postbin node ใหม่
 
 ## Step six: Test the workflow
 
-1. You can now test the entire workflow. Select **Test Workflow**. n8n runs the workflow, showing each stage in progress.
-1. Go back to your Postbin bin. Refresh the page to see the output.
-1. If you want to use this workflow (in other words, if you want it to run once a week automatically), you need to activate it by selecting the **Active** toggle.
+1. ตอนนี้ลองทดสอบ workflow ทั้งหมดได้เลย เลือก **Test Workflow** n8n จะรัน workflow และแสดงแต่ละขั้นตอน
+1. กลับไปที่ Postbin bin ของคุณ รีเฟรชหน้าดู output
+1. ถ้าอยากให้ workflow นี้ทำงานอัตโนมัติทุกสัปดาห์ ต้องเปิดใช้งานโดยเลือกสวิตช์ **Active**
 
 /// note | Time limit
-Postbin's bins exist for 30 minutes after creation. You may need to create a new bin and update the ID in the Postbin nodes, if you exceed this time limit.
+Bin ของ Postbin จะอยู่ได้ 30 นาทีหลังสร้าง ถ้าเกินเวลานี้อาจต้องสร้าง bin ใหม่และอัปเดต ID ใน Postbin nodes
 ///
-
 
 ## Congratulations
 
-You now have a fully functioning workflow that does something useful! It should look something like this:
+ตอนนี้คุณมี workflow ที่ใช้งานได้จริงและทำอะไรที่มีประโยชน์แล้ว! หน้าตาควรจะประมาณนี้:
 
 [[ workflowDemo("file:///try-it-out/quickstart/tutorial.json") ]]
 
-Along the way you have discovered:
+ระหว่างทางคุณได้เรียนรู้ว่า:
 
-- How to find the nodes you want and join them together
-- How to use expressions to manipulate data
-- How to create credentials and attach them to nodes
-- How to use logic in your workflows
+- วิธีหา node ที่ต้องการและเชื่อมต่อกัน
+- วิธีใช้ expressions เพื่อจัดการข้อมูล
+- วิธีสร้าง credentials และแนบกับ node
+- วิธีใส่ logic ใน workflow
 
-There are plenty of things you could add to this (perhaps add some more credentials and a node to send you an email of the results), or maybe you have a specific project in mind. Whatever your next steps, the resources linked below should help.
+คุณสามารถต่อยอดเพิ่มอะไรอีกเยอะ (เช่น เพิ่ม credentials กับ node เพื่อส่งอีเมลผลลัพธ์ให้ตัวเอง) หรืออาจมีโปรเจกต์เฉพาะในใจอยู่แล้ว ไม่ว่าขั้นตอนต่อไปจะเป็นอะไร ลองดู resources ด้านล่างนี้ได้เลย
 
 ## Next steps
 
-- Interested in what you could do with AI? Find out [how to build an AI chat agent with n8n](/advanced-ai/intro-tutorial.md).
-- Take n8n's [text courses](/courses/index.md) or [video courses](/video-courses.md).
-- Explore more examples in [workflow templates](https://n8n.io/workflows/){:target=_blank .external-link}.
+- สนใจว่า AI ทำอะไรได้บ้าง? ดู [how to build an AI chat agent with n8n](/advanced-ai/intro-tutorial.md)
+- เรียน [text courses](/courses/index.md) หรือ [video courses](/video-courses.md) ของ n8n
+- ดูตัวอย่าง workflow เพิ่มเติมใน [workflow templates](https://n8n.io/workflows/){:target=_blank .external-link}

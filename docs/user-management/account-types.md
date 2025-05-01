@@ -6,20 +6,20 @@ contentType: reference
 
 # Account types
 
-There are three account types: owner, admin, and member. The account type affects the user permissions and access.
+มี account types สามแบบ: owner, admin และ member account type จะส่งผลต่อสิทธิ์และการเข้าถึงของผู้ใช้
 
 /// info | Feature availability
-To use admin accounts, you need a pro or enterprise plan.
+หากต้องการใช้ admin accounts คุณต้องมี pro หรือ enterprise plan
 ///
 
 /// note | Account types and role types
-Account types and role types are different things. Role types are part of [RBAC](/user-management/rbac/index.md). 
+Account types และ role types เป็นคนละอย่างกัน Role types เป็นส่วนหนึ่งของ [RBAC](/user-management/rbac/index.md)
 
-Every account has one type. The account can have different [role types](/user-management/rbac/role-types.md) for different [projects](/user-management/rbac/projects.md).
+ทุก account จะมี type เพียงอย่างเดียว แต่ account นั้นสามารถมี [role types](/user-management/rbac/role-types.md) ที่แตกต่างกันสำหรับ [projects](/user-management/rbac/projects.md) ที่ต่างกันได้
 ///
 
 /// note | Create a member-level account for the owner
-n8n recommends that owners create a member-level account for themselves. Owners can see and edit all workflows, credentials, and projects. However, there is no way to see who created a particular workflow, so there is a risk of overriding other people's work if you build and edit workflows as an owner.
+n8n แนะนำให้ owners สร้าง member-level account สำหรับตนเอง Owners สามารถเห็นและแก้ไข workflows, credentials และ projects ทั้งหมดได้ อย่างไรก็ตาม ไม่มีวิธีดูว่าใครเป็นคนสร้าง workflow นั้นๆ ดังนั้นจึงมีความเสี่ยงที่จะเขียนทับงานของผู้อื่นหากคุณสร้างและแก้ไข workflows ในฐานะ owner
 ///
 
 

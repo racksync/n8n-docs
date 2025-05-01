@@ -6,8 +6,8 @@ contentType: overview
 
 # Workflow components
 
-This section contains:
+ส่วนนี้ประกอบด้วย:
 
-* [Nodes](/workflows/components/nodes.md): integrations and operations.
-* [Connections](/workflows/components/connections.md): node connectors.
-* [Sticky notes](/workflows/components/sticky-notes.md): document your workflows.
+* [Nodes](/workflows/components/nodes.md): integrations และ operations
+* [Connections](/workflows/components/connections.md): node connectors
+* [Sticky notes](/workflows/components/sticky-notes.md): บันทึกเอกสาร workflows ของคุณ

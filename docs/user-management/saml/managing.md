@@ -7,16 +7,16 @@ contentType: howto
 
 # Manage users with SAML
 
-There are some user management tasks that are affected by SAML.
+มีงานจัดการผู้ใช้บางอย่างที่ได้รับผลกระทบจาก SAML
 
 ## Exempt users from SAML
 
-You can allow users to log in without using SAML. To do this:
+คุณสามารถอนุญาตให้ผู้ใช้ login โดยไม่ต้องใช้ SAML ได้ โดยทำดังนี้:
 
-1. Go to **Settings** > **Users**.
-2. Select the menu icon by the user you want to exempt from SAML.
-3. Select **Allow Manual Login**.
+1. ไปที่ **Settings** > **Users**
+2. เลือกไอคอนเมนูข้างผู้ใช้ที่คุณต้องการยกเว้นจาก SAML
+3. เลือก **Allow Manual Login**
 
 ## Deleting users
 
-If you remove a user from your IdP, they remain logged in to n8n. You need to manually remove them from n8n as well. Refer to [Manage users](/user-management/manage-users.md) for guidance on deleting users.
+หากคุณลบผู้ใช้ออกจาก IdP ของคุณ พวกเขาจะยังคง login อยู่ใน n8n คุณต้องลบพวกเขาออกจาก n8n ด้วยตนเอง โปรดดู [Manage users](/user-management/manage-users.md) สำหรับคำแนะนำในการลบผู้ใช้

@@ -7,36 +7,36 @@ contentType: howto
 
 # Tags
 
-Workflow tags allow you to label your workflows. You can then filter workflows by tag.
+Workflow tags ช่วยให้คุณสามารถติดป้ายกำกับ workflows ของคุณได้ จากนั้นคุณสามารถกรอง workflows ตาม tag ได้
 
-Tags are global. This means when you create a tag, it's available to all users on your n8n instance.
+Tags เป็นแบบ global ซึ่งหมายความว่าเมื่อคุณสร้าง tag ขึ้นมา tag นั้นจะพร้อมใช้งานสำหรับผู้ใช้ทุกคนใน n8n instance ของคุณ
 
 ## Add a tag to a workflow
 
-To add a tag to your workflow:
+วิธีเพิ่ม tag ให้กับ workflow ของคุณ:
 
-1. In your workflow, select **+ Add tag**.
-2. Select an existing tag, or enter a new tag name.
-3. Once you select a tag and click away from the tag modal, n8n displays the tag next to the workflow name.
+1. ใน workflow ของคุณ เลือก **+ Add tag**
+2. เลือก tag ที่มีอยู่ หรือป้อนชื่อ tag ใหม่
+3. เมื่อคุณเลือก tag และคลิกออกจาก tag modal แล้ว n8n จะแสดง tag ถัดจากชื่อ workflow
 
-You can add more than one tag.
+คุณสามารถเพิ่มได้มากกว่าหนึ่ง tag
 
 ## Filter by tag
 
-When browsing the workflows on your instance, you can filter by tag.
+เมื่อเรียกดู workflows ใน instance ของคุณ คุณสามารถกรองตาม tag ได้
 
-1. On the **Workflows** page, select **Filters**.
-2. Select **Tags**.
-3. Select the tag or tags you want to filter by. n8n lists the workflows with that tag.
+1. ในหน้า **Workflows** เลือก **Filters**
+2. เลือก **Tags**
+3. เลือก tag หรือ tags ที่คุณต้องการกรอง n8n จะแสดงรายการ workflows ที่มี tag นั้น
 
 ## Manage tags
 
-You can edit existing tags. Instance owners can delete tags.
+คุณสามารถแก้ไข tags ที่มีอยู่ได้ Instance owners สามารถลบ tags ได้
 
-1. Select **Manage tags**. This is available from **Filters** > **Tags** on the **Workflows** page, or in the **+ Add tag** modal in your workflow.
-2. Hover over the tag you want to change.
-3. Select **Edit** <span class="inline-image">![Add node icon](/_images/common-icons/edit.png){.off-glb}</span> to rename it, or **Delete** <span class="inline-image">![Add node icon](/_images/common-icons/delete.png){.off-glb}</span> to delete it.
+1. เลือก **Manage tags** ตัวเลือกนี้มีให้จาก **Filters** > **Tags** ในหน้า **Workflows** หรือใน **+ Add tag** modal ใน workflow ของคุณ
+2. วางเมาส์เหนือ tag ที่คุณต้องการเปลี่ยนแปลง
+3. เลือก **Edit** <span class="inline-image">![Add node icon](/_images/common-icons/edit.png){.off-glb}</span> เพื่อเปลี่ยนชื่อ หรือ **Delete** <span class="inline-image">![Add node icon](/_images/common-icons/delete.png){.off-glb}</span> เพื่อลบ
 
 /// warning | Global tags
-Tags are global. If you edit or delete a tag, this affects all users of your n8n instance.
+Tags เป็นแบบ global หากคุณแก้ไขหรือลบ tag การเปลี่ยนแปลงนี้จะมีผลกับผู้ใช้ทุกคนใน n8n instance ของคุณ
 ///

@@ -7,17 +7,17 @@ hide:
 
 # n8n Cloud
 
-n8n Cloud is n8n's hosted solution. It provides:
+n8n Cloud คือบริการ hosted ของ n8n ที่ให้คุณใช้งาน n8n ได้โดยไม่ต้องตั้งค่าหรือดูแลระบบเอง มีจุดเด่นดังนี้:
 
-- No technical set up or maintenance for your n8n instance
-- Continual uptime monitoring
-- Managed OAuth for authentication
-- One-click upgrades to the newest n8n versions
+- ไม่ต้องตั้งค่าหรือดูแล instance เอง
+- มีการ monitor uptime ตลอดเวลา
+- จัดการ OAuth สำหรับ authentication ให้
+- อัปเกรด n8n เป็นเวอร์ชันล่าสุดได้ในคลิกเดียว
 
 [Sign up for n8n Cloud](https://www.n8n.io/){:target=_blank .external-link}
 
 /// note | Russia and Belarus
-n8n Cloud isn't available in Russia and Belarus. Refer to this blog post: [Update on n8n cloud accounts in Russia and Belarus](https://blog.n8n.io/update-on-n8n-cloud-accounts-in-russia-and-belarus/) for more information.
+n8n Cloud ยังไม่เปิดให้บริการในรัสเซียและเบลารุส ดูรายละเอียดได้ที่บล็อกนี้: [Update on n8n cloud accounts in Russia and Belarus](https://blog.n8n.io/update-on-n8n-cloud-accounts-in-russia-and-belarus/)
 ///
 
 

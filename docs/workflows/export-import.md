@@ -7,29 +7,29 @@ contentType: howto
 
 # Export and import workflows
 
-n8n saves workflows in JSON format. You can export your workflows as JSON files or import JSON files into your n8n library. 
-You can export and import workflows in several ways. 
+n8n บันทึก workflows ในรูปแบบ JSON คุณสามารถ export workflows ของคุณเป็นไฟล์ JSON หรือ import ไฟล์ JSON เข้าสู่ n8n library ของคุณได้
+คุณสามารถ export และ import workflows ได้หลายวิธี
 
 --8<-- "_snippets/workflows/sharing-credentials.md"
 
 ## Copy-Paste
 
-You can copy and paste a workflow or parts of it by selecting the nodes you want to copy to the clipboard (`Ctrl + c` or `cmd +c`) and pasting it (`Ctrl + v` or `cmd + v`) into the Editor UI.
+คุณสามารถคัดลอกและวาง workflow หรือบางส่วนของมันได้โดยการเลือก nodes ที่คุณต้องการคัดลอกไปยังคลิปบอร์ด (`Ctrl + c` หรือ `cmd +c`) และวาง (`Ctrl + v` หรือ `cmd + v`) ลงใน Editor UI
 
-To select all nodes or a group of nodes, click and drag:
+ในการเลือก nodes ทั้งหมดหรือกลุ่มของ nodes ให้คลิกและลาก:
   ![Select a group of nodes](/_images/workflows/export-import/selectingnodes.gif)
 
 ## From the Editor UI menu
 
-From the top navigation bar, select the three dots in the upper right <img alt="Workflow menu icon" class="off-glb" src="/_images/common-icons/three-dots-horizontal.png"> to see the following options: 
+จากแถบนำทางด้านบน เลือกจุดสามจุดที่มุมขวาบน <img alt="Workflow menu icon" class="off-glb" src="/_images/common-icons/three-dots-horizontal.png"> เพื่อดูตัวเลือกต่อไปนี้:
 
 <figure><img src="/_images/courses/level-one/chapter-six/l1-c6-import-export-menu.png" alt="Import/Export menu" style="width:100%"><figcaption align = "center"><i>Import & Export workflows menu</i></figcaption></figure>
 
-* **Download**: Downloads your current workflow as a JSON file to your computer.
-* **Import from URL**: Imports workflow JSON from a URL, for example, [this workflow JSON file on GitHub](https://raw.githubusercontent.com/n8n-io/demo-setup/main/n8n/backup/workflows/srOnR8PAY3u4RSwb.json){:target=_blank .external-link}. 
-* **Import from File**: Imports a workflow as a JSON file from your computer.
+* **Download**: ดาวน์โหลด workflow ปัจจุบันของคุณเป็นไฟล์ JSON ลงในคอมพิวเตอร์ของคุณ
+* **Import from URL**: นำเข้า workflow JSON จาก URL ตัวอย่างเช่น [ไฟล์ workflow JSON นี้บน GitHub](https://raw.githubusercontent.com/n8n-io/demo-setup/main/n8n/backup/workflows/srOnR8PAY3u4RSwb.json){:target=_blank .external-link}
+* **Import from File**: นำเข้า workflow เป็นไฟล์ JSON จากคอมพิวเตอร์ของคุณ
 
 ## From the command line
 
-* Export: See the [full list of commands ](/hosting/cli-commands.md#export-workflows-and-credentials){:target="_blank" .external} for exporting workflows or credentials.
-* Import: See the [full list of commands ](/hosting/cli-commands.md#import-workflows-and-credentials){:target="_blank" .external} for importing workflows or credentials.
+* Export: ดู [รายการคำสั่งทั้งหมด](/hosting/cli-commands.md#export-workflows-and-credentials){:target="_blank" .external} สำหรับการ export workflows หรือ credentials
+* Import: ดู [รายการคำสั่งทั้งหมด](/hosting/cli-commands.md#import-workflows-and-credentials){:target="_blank" .external} สำหรับการ import workflows หรือ credentials

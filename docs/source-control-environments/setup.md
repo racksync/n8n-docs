@@ -7,24 +7,24 @@ contentType: howto
 
 # Set up source control for environments
 
-Link a Git repository to an n8n instance and configure your source control.
+เชื่อม Git repository กับ n8n instance แล้วตั้งค่า source control
 
-n8n uses source control to provide environments. Refer to [Environments in n8n](/source-control-environments/understand/environments.md) for more information.
+n8n ใช้ source control เพื่อรองรับ environments ดูรายละเอียดที่ [Environments in n8n](/source-control-environments/understand/environments.md)
 
 ## Prerequisites
 
-To use source control with n8n, you need a Git repository that allows SSH access. 
+ถ้าจะใช้ source control กับ n8n คุณต้องมี Git repository ที่รองรับ SSH access
 
-This document assumes you are familiar with Git and your Git provider.
+เอกสารนี้สมมติว่าคุณคุ้นเคยกับ Git และ Git provider ของคุณ
 
 ## Step 1: Set up your repository and branches
 
-For a new setup:
+สำหรับ setup ใหม่:
 
-1. Create a new repository for use with n8n. 
-1. Create the branches you need. For example, if you plan to have different environments for test and production, set up a branch for each.
+1. สร้าง repository ใหม่สำหรับใช้กับ n8n
+1. สร้าง branch ที่ต้องใช้ เช่น ถ้าจะมี environment แยก test กับ production ให้สร้าง branch สำหรับแต่ละอัน
 
-To help decide what branches you need for your use case, refer to [Branch patterns](/source-control-environments/understand/patterns.md).
+ถ้าอยากตัดสินใจว่า use case ของคุณควรมี branch อะไรบ้าง ดูที่ [Branch patterns](/source-control-environments/understand/patterns.md)
 
 ## Step 2: Configure Git in n8n
 
@@ -32,18 +32,18 @@ To help decide what branches you need for your use case, refer to [Branch patter
 
 ## Step 3: Set up a deploy key
 
-Set up SSH access by creating a deploy key for the repository using the SSH key from n8n. The key must have write access. 
+ตั้งค่า SSH access โดยสร้าง deploy key ให้ repository โดยใช้ SSH key จาก n8n ต้องให้สิทธิ์ write ด้วย
 
-The steps depend on your Git provider. Help links for common providers:
+แต่ละ Git provider จะมีขั้นตอนต่างกัน ดูวิธีได้ที่:
 
 * [GitHub | Managing deploy keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys){:target=_blank .external-link}
 * [GitLab | Deploy keys](https://docs.gitlab.com/ee/user/project/deploy_keys/){:target=_blank .external-link}
 
 ## Step 4: Connect n8n and configure your instance
 
-1. In **Settings** > **Environments** in n8n, select **Connect**. n8n connects to your Git repository.
-1. Under **Instance settings**, choose which branch you want to use for the current n8n instance.
-1. **Optional**: select **Protected instance** to prevent users editing workflows in this instance. This is useful for protecting production instances.
-1. **Optional**: choose a custom color for the instance. This will appear in the menu next to the source control push and pull buttons. It helps users know which instance they're in.
-1. Select **Save settings**.
+1. ที่ **Settings** > **Environments** ใน n8n ให้เลือก **Connect** เพื่อเชื่อมกับ Git repository
+1. ที่ **Instance settings** เลือก branch ที่จะใช้กับ n8n instance นี้
+1. **Optional**: เลือก **Protected instance** เพื่อป้องกันไม่ให้ user แก้ workflow ใน instance นี้ เหมาะกับ production instance
+1. **Optional**: เลือกสี custom ให้ instance สีนี้จะโชว์ในเมนูข้างปุ่ม push/pull source control ช่วยให้ user รู้ว่าอยู่ instance ไหน
+1. เลือก **Save settings**
 

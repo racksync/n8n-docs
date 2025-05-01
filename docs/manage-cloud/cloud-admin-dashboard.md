@@ -6,13 +6,13 @@ contentType: howto
 
 # Cloud admin dashboard
 
-Instance owners can access the admin dashboard to manage their Cloud instance. This is where you can upgrade your n8n version and set the timezone.
+เจ้าของ instance สามารถเข้าใช้งาน admin dashboard เพื่อจัดการ Cloud instance ของตัวเองได้ ที่นี่คุณสามารถอัปเกรดเวอร์ชัน n8n และตั้งค่า timezone ได้
 
 ## Access the dashboard from the app
 
 1. [Log in to n8n](https://app.n8n.cloud/magic-link){:target=_blank .external-link}
-1. Select **Admin Dashboard**. n8n opens the dashboard.
+1. เลือก **Admin Dashboard** n8n จะเปิด dashboard ให้
 
 ## Access the dashboard if the app is offline
 
-If your instance is down, you can still access the admin dashboard. When you log in to the app, n8n will ask you if you want a magic link to access your dashboard. Select **Send magic link**, then check your email for the link.
+ถ้า instance ของคุณล่ม คุณยังสามารถเข้าใช้งาน admin dashboard ได้ เมื่อคุณล็อกอินเข้าแอป n8n จะถามว่าต้องการ magic link เพื่อเข้า dashboard หรือไม่ ให้เลือก **Send magic link** แล้วไปเช็คอีเมลเพื่อรับลิงก์นั้น

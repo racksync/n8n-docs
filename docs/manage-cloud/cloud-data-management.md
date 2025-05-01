@@ -6,16 +6,16 @@ contentType: howto
 
 # Cloud data management
 
-There are two concerns when managing data on Cloud:
+การจัดการข้อมูลบน Cloud มี 2 เรื่องหลักที่ต้องคำนึงถึง:
 
-* Memory usage: complex workflows processing large amounts of data can exceed n8n's memory limits. If this happens, the instance can crash and become inaccessible.
-* Data storage: depending on your execution settings and volume, your n8n database can grow in size and run out of storage. 
+* การใช้ memory: ถ้า workflow ซับซ้อนและประมวลผลข้อมูลเยอะ อาจใช้ memory เกินขีดจำกัดของ n8n ซึ่งจะทำให้ instance crash และเข้าใช้งานไม่ได้
+* การเก็บข้อมูล: ขึ้นอยู่กับการตั้งค่า execution และปริมาณงาน ฐานข้อมูล n8n อาจโตขึ้นจนเต็มพื้นที่ได้
 
-To avoid these issues, n8n recommends that you build your workflows with memory efficiency in mind, and don't save unnecessary data
+เพื่อป้องกันปัญหาเหล่านี้ n8n แนะนำให้คุณออกแบบ workflow ให้ใช้ memory อย่างมีประสิทธิภาพ และไม่บันทึกข้อมูลที่ไม่จำเป็น
 
 ## Memory limits on each Cloud plan
 
-Current plans:
+แต่ละ plan มีขีดจำกัดดังนี้:
 
 * Trial: 320MiB RAM, 10 millicore CPU burstable
 * Starter: 320MiB RAM, 10 millicore CPU burstable
@@ -23,61 +23,60 @@ Current plans:
 * Pro-2 (50k executions): 1280MiB RAM, 80 millicore CPU burstable
 * Enterprise: 4096MiB RAM, 80 millicore CPU burstable
 
-Legacy plans:
+แผนเก่า:
 
 * Start: 320MiB RAM, 10 millicore CPU burstable
 * Power: 1280MiB RAM, 80 millicore CPU burstable
 
-n8n gives each instance up to 100GB of data storage.
+n8n ให้พื้นที่เก็บข้อมูลสูงสุด 100GB ต่อ instance
 
 ## How to reduce memory consumption in your workflow
 
-The way you build workflows affects how much data they consume when executed. Although these guidelines aren't applicable to all cases, they provide a baseline of best practices to avoid exceeding instance memory.
+วิธีที่คุณสร้าง workflow มีผลต่อการใช้ memory ทุกครั้งที่รัน ถึงแม้ guideline เหล่านี้จะไม่เหมาะกับทุกกรณี แต่ก็เป็นแนวทางเบื้องต้นเพื่อป้องกันการใช้ memory เกินขีดจำกัด
 
 --8<-- "_snippets/self-hosting/scaling/reduce-memory-consumption.md"
 
-Note that n8n itself consumes memory to run. On average, the software alone uses around 180MiB RAM.
+อย่าลืมว่า n8n เองก็ใช้ memory ในการทำงาน โดยเฉลี่ยตัวซอฟต์แวร์ใช้ประมาณ 180MiB RAM
 
-Interactions with the UI also consume memory. Playing around with the workflow UI while it performs heavy executions could also push the memory capacity over the limit.
+การใช้งาน UI ก็ใช้ memory ด้วย ถ้าคุณเล่นกับ workflow UI ขณะ workflow กำลังรันงานหนัก อาจทำให้ memory เต็มได้
 
 ## How to manage execution data on Cloud
 
-Execution data includes node data, parameters, variables, execution context, and binary data references. It's text-based.
+execution data รวมถึงข้อมูล node, parameters, variables, execution context และ binary data references ทั้งหมดนี้เป็นข้อมูลแบบ text
 
-Binary data is non-textual data that n8n can't represent as plain text. This is files and media such as images, documents, audio files, and videos. It's much larger than textual data.
+binary data คือข้อมูลที่ไม่ใช่ text เช่น ไฟล์, รูปภาพ, เอกสาร, เสียง, วิดีโอ ซึ่งขนาดใหญ่กว่าข้อมูล text มาก
 
-If a workflow consumes a large amounts of data and is past testing stage, it's a good option to stop saving the successful executions.
+ถ้า workflow ของคุณใช้ข้อมูลเยอะและผ่านช่วงทดสอบแล้ว แนะนำให้หยุดบันทึก execution ที่สำเร็จ
 
-There are two ways you can control how much execution data n8n stores in the database:
+คุณสามารถควบคุมปริมาณ execution data ที่ n8n เก็บในฐานข้อมูลได้ 2 วิธี:
 
-In the admin dashboard:
+ใน admin dashboard:
 
-1. From your workspace or editor, navigate to **Admin Panel**.
-1. Select **Manage**.
-1. In **Executions to Save** deselect the executions you don't want to log.
+1. จาก workspace หรือ editor ไปที่ **Admin Panel**
+1. เลือก **Manage**
+1. ใน **Executions to Save** เอา execution ที่ไม่ต้องการ log ออก
 
-In your workflow settings:
+ใน workflow settings:
 
-1. Select the **Options** <span class="inline-image">![Options menu](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> menu.
-1. Select **Settings**. n8n opens the **Workflow settings** modal.
-1. Change **Save successful production executions** to **Do not save**.
+1. กด **Options** <span class="inline-image">![Options menu](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span>
+1. เลือก **Settings** n8n จะเปิด modal **Workflow settings**
+1. เปลี่ยน **Save successful production executions** เป็น **Do not save**
 
 ## Cloud data pruning and out of memory incident prevention
 
 ### Automatic data pruning
 
-n8n automatically prunes execution logs after a certain time or once you reach the max storage limit, whichever comes first. The pruning always happens from oldest to newest and the limits depend on your Could plan:
+n8n จะลบ execution log อัตโนมัติเมื่อครบเวลาที่กำหนด หรือเมื่อใช้พื้นที่ถึงขีดจำกัด โดยจะลบจากข้อมูลเก่าก่อนเสมอ ขึ้นอยู่กับ Cloud plan ของคุณ:
 
-* Start and Starter plans: max 2500 executions saved and 7 days execution log retention;
-* Pro and Power plans: max 25000 executions saved and 30 days execution log retention;
-* Enterprise plan: max 50000 executions saved and unlimited execution log retention time.
+* Start และ Starter: เก็บ execution สูงสุด 2500 รายการ และเก็บ log ได้ 7 วัน
+* Pro และ Power: เก็บ execution สูงสุด 25000 รายการ และเก็บ log ได้ 30 วัน
+* Enterprise: เก็บ execution สูงสุด 50000 รายการ และเก็บ log ได้ไม่จำกัดเวลา
 
 ### Manual data pruning
 
-Heavier executions and use cases can exceed database capacity despite the automatic pruning practices. In cases like this, n8n will manually prune data to protect instance stability.
+ถ้า execution หนักๆ หรือ use case ใหญ่ๆ ทำให้ฐานข้อมูลเต็มแม้จะมีการลบอัตโนมัติ n8n จะลบข้อมูลด้วยมือเพื่อป้องกัน instance ล่ม
 
-1. An alert system warns n8n if an instance is at 85% disk capacity.
-2. n8n prunes execution data. n8n does this by running a backup of the instance (workflows, users, credentials and execution data) and restoring it without execution data.
- 	
+1. ระบบแจ้งเตือน n8n เมื่อพื้นที่ดิสก์ถึง 85%
+2. n8n จะลบ execution data โดย backup instance (workflows, users, credentials และ execution data) แล้ว restore กลับโดยไม่เอา execution data
 
-Due to the human steps in this process, the alert system isn't perfect. If warnings are triggered after hours or if data consumption rates are high, there might not be time to prune the data before the remaining disk space fills up.
+เนื่องจากขั้นตอนนี้มีคนเกี่ยวข้อง ระบบแจ้งเตือนอาจไม่ทันใจ ถ้าแจ้งเตือนหลังเวลาทำการ หรือข้อมูลโตเร็ว อาจไม่มีเวลาลบข้อมูลก่อนพื้นที่เต็ม

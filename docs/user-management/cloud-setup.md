@@ -6,10 +6,10 @@ contentType: howto
 
 # Set up user management on n8n Cloud
 
-To access user management, upgrade to version 0.195.0 or newer.
+หากต้องการเข้าถึง user management ให้อัปเกรดเป็นเวอร์ชัน 0.195.0 หรือใหม่กว่า
 
 /// warning | Irreversible upgrade
-Once you upgrade your Cloud instance to an n8n version with user management, you can't downgrade your version.
+เมื่อคุณอัปเกรด Cloud instance ของคุณเป็นเวอร์ชัน n8n ที่มี user management แล้ว คุณจะไม่สามารถดาวน์เกรดเวอร์ชันของคุณได้
 ///
 
 ## Step one: In-app setup

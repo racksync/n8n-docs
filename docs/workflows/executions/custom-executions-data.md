@@ -6,17 +6,17 @@ contentType: howto
 
 # Custom executions data
 
-You can set custom data on your workflow using the Code node or the [Execution Data node](/integrations/builtin/core-nodes/n8n-nodes-base.executiondata.md). n8n records this with each execution. You can then use this data when filtering the executions list, or fetch it in your workflows using the Code node.
+คุณสามารถตั้งค่าข้อมูลแบบกำหนดเอง (custom data) ใน workflow ของคุณโดยใช้ Code node หรือ [Execution Data node](/integrations/builtin/core-nodes/n8n-nodes-base.executiondata.md) n8n จะบันทึกข้อมูลนี้พร้อมกับแต่ละ execution จากนั้นคุณสามารถใช้ข้อมูลนี้เมื่อกรองรายการ executions หรือดึงข้อมูลนี้ใน workflows ของคุณโดยใช้ Code node
 
 --8<-- "_snippets/workflows/executions/custom-execution-data-availability.md"
 
 ## Set and access custom data using the Code node
 
-This section describes how to set and access data using the Code node. Refer to [Execution Data node](/integrations/builtin/core-nodes/n8n-nodes-base.executiondata.md) for information on using the Execution Data node to set data. You can't retrieve custom data using the Execution Data node.
+ส่วนนี้อธิบายวิธีการตั้งค่าและเข้าถึงข้อมูลโดยใช้ Code node โปรดดู [Execution Data node](/integrations/builtin/core-nodes/n8n-nodes-base.executiondata.md) สำหรับข้อมูลเกี่ยวกับการใช้ Execution Data node เพื่อตั้งค่าข้อมูล คุณไม่สามารถดึงข้อมูลแบบกำหนดเองโดยใช้ Execution Data node ได้
 
 ### Set custom executions data
 
-Set a single piece of extra data:
+ตั้งค่าข้อมูลพิเศษชิ้นเดียว:
 
 === "JavaScript"
 	```js
@@ -27,7 +27,7 @@ Set a single piece of extra data:
 	_execution.customData.set("key", "value");
 	```
 
-Set all extra data. This overwrites the whole custom data object for this execution:
+ตั้งค่าข้อมูลพิเศษทั้งหมด การดำเนินการนี้จะเขียนทับ object ข้อมูลแบบกำหนดเองทั้งหมดสำหรับ execution นี้:
 
 === "JavaScript"
 	```js
@@ -38,32 +38,32 @@ Set all extra data. This overwrites the whole custom data object for this execut
 	_execution.customData.setAll({"key1": "value1", "key2": "value2"})
 	```
 
-There are limitations:
+มีข้อจำกัดดังนี้:
 
-* They must be strings
-* `key` has a maximum length of 50 characters
-* `value` has a maximum length of 255 characters
-* n8n supports a maximum of 10 items of custom data
+* ต้องเป็น strings
+* `key` มีความยาวสูงสุด 50 ตัวอักษร
+* `value` มีความยาวสูงสุด 255 ตัวอักษร
+* n8n รองรับข้อมูลแบบกำหนดเองสูงสุด 10 รายการ
 
 ### Access the custom data object during execution
 
-You can retrieve the custom data object, or a specific value in it, during an execution:
+คุณสามารถดึง object ข้อมูลแบบกำหนดเอง หรือค่าเฉพาะในนั้น ในระหว่าง execution:
 
 <!-- vale off -->
 === "JavaScript"
 	```js
-	// Access the current state of the object during the execution
+	// เข้าถึงสถานะปัจจุบันของ object ในระหว่างการ execution
 	const customData = $execution.customData.getAll();
 
-	// Access a specific value set during this execution
+	// เข้าถึงค่าเฉพาะที่ตั้งค่าไว้ในระหว่าง execution นี้
 	const customData = $execution.customData.get("key");
 	```
 === "Python"
 	```python
-	# Access the current state of the object during the execution
+	# เข้าถึงสถานะปัจจุบันของ object ในระหว่างการ execution
 	customData = _execution.customData.getAll();
 
-	# Access a specific value set during this execution
+	# เข้าถึงค่าเฉพาะที่ตั้งค่าไว้ในระหว่าง execution นี้
 	customData = _execution.customData.get("key");
 	```
 <!-- vale on -->

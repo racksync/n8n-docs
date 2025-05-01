@@ -7,15 +7,15 @@ contentType: howto
 
 ## Change instance ownership
 
-You can change the ownership of an instance by navigating to the **Settings** page in the owner's account and editing the **Email** field. After making the changes, scroll down and press **Save**.
-Note that for the change to be effective, the new email address can't be linked to any other n8n account.
+คุณสามารถเปลี่ยนเจ้าของ instance ได้โดยเข้าไปที่หน้า **Settings** ในบัญชีของเจ้าของ แล้วแก้ไขช่อง **Email** หลังจากเปลี่ยนแล้ว เลื่อนลงไปกด **Save**  
+หมายเหตุ: อีเมลใหม่ต้องไม่เคยผูกกับบัญชี n8n อื่นมาก่อน
 
-Changing emails will change the owner of the instance, the email you log in with, and the email your invoices and general communication gets sent to.
+การเปลี่ยนอีเมลจะเปลี่ยนเจ้าของ instance, อีเมลที่ใช้ล็อกอิน และอีเมลที่ใช้รับ invoice กับการติดต่อทั่วไป
 
-If the workspace is deactivated, there will be no **Settings** page and no possibility to change the email address or the owner info.
+ถ้า workspace ถูกปิดใช้งาน จะไม่มีหน้า **Settings** และไม่สามารถเปลี่ยนอีเมลหรือข้อมูลเจ้าของได้
 
 ## Change instance username
 
-It's not currently possible to change usernames.
+ตอนนี้ยังไม่สามารถเปลี่ยน username ได้
 
-If you want your instance to have a different name you will need to create a new account and transfer your work into it. [The import/export documentation](https://docs.n8n.io/workflows/export-import/) explains how you can transfer your work to a new n8n instance.
+ถ้าอยากให้ instance มีชื่อใหม่ ต้องสร้างบัญชีใหม่แล้วย้ายงานไปยังบัญชีใหม่ [ดูวิธี import/export ที่นี่](https://docs.n8n.io/workflows/export-import/) เพื่อย้ายงานไป instance ใหม่

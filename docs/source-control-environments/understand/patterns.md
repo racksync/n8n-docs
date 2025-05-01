@@ -7,15 +7,15 @@ contentType: explanation
 
 # Branch patterns
 
-The relationship between n8n instances and Git branches is flexible. You can create different setups depending on your needs. 
+ความสัมพันธ์ระหว่าง n8n instance กับ Git branch สามารถปรับเปลี่ยนได้ตามที่ต้องการ คุณสามารถตั้งค่าหลายแบบได้ตามความเหมาะสมของงาน
 
 --8<-- "_snippets/source-control-environments/one-direction.md"
 
 ## Multiple instances, multiple branches
 
-This pattern involves having multiple n8n instances, each one linked to its own branch. 
+รูปแบบนี้คือการมี n8n instance หลายอัน โดยแต่ละอันเชื่อมกับ branch ของตัวเอง
 
-You can use this pattern for environments. For example, create two n8n instances, development and production. Link them to their own branches. Push work from your development instance to its branch, do a pull request to move work to the production branch, then pull to the production instance.
+คุณสามารถใช้ pattern นี้กับ environments ได้ เช่น สร้าง n8n instance สองอัน คือ development กับ production แล้วเชื่อมแต่ละอันกับ branch ของตัวเอง จากนั้น push งานจาก development instance ไปที่ branch ของมัน แล้วสร้าง pull request เพื่อย้ายงานไป production branch แล้วค่อย pull เข้า production instance
 
 --8<-- "_snippets/source-control-environments/multi-instance-multi-branch-pros-cons.md"
 
@@ -23,11 +23,11 @@ You can use this pattern for environments. For example, create two n8n instances
 
 ## Multiple instances, one branch
 
-Use this pattern if you want the same workflows, tags, and variables everywhere, but want to use them in different n8n instances. 
+ใช้ pattern นี้ถ้าคุณอยากให้ workflow, tag, variable เหมือนกันทุกที่ แต่ใช้งานใน n8n instance หลายอัน
 
-You can use this pattern for environments. For example, create two n8n instances, development and production. Link them both to the same branch. Push work from development, and pull it into production.
+เหมาะกับการทำ environments เช่น สร้าง n8n instance สองอัน development กับ production แล้วเชื่อมทั้งสองอันกับ branch เดียวกัน จากนั้น push งานจาก development แล้ว pull เข้า production
 
-This pattern is also useful when testing a new version of n8n: you can create a new n8n instance with the new version, connect it to the Git branch and test it, while your production instance remains on the older version until you're confident it's safe to upgrade.
+pattern นี้ยังเหมาะกับการทดสอบ n8n เวอร์ชันใหม่ เช่น สร้าง instance ใหม่ที่เป็นเวอร์ชันใหม่ เชื่อมกับ Git branch เดิม แล้วทดสอบได้เลย ในขณะที่ production instance ยังใช้เวอร์ชันเก่าอยู่จนกว่าจะมั่นใจ
 
 --8<-- "_snippets/source-control-environments/multi-instance-one-branch-pros-cons.md"
 
@@ -35,17 +35,17 @@ This pattern is also useful when testing a new version of n8n: you can create a 
 
 ## One instance, multiple branches
 
-The instance owner can change which Git branch connects to the instance. The full setup in this case is likely to be a [Multiple instances, multiple branches](#multiple-instances-multiple-branches) pattern, but with one instance switching between branches.
+เจ้าของ instance สามารถเปลี่ยน branch ที่เชื่อมกับ instance ได้ setup แบบนี้มักจะเป็น [Multiple instances, multiple branches](#multiple-instances-multiple-branches) แต่ใช้ instance เดียวสลับ branch ไปมา
 
-This is useful to review work. For example, different users could work on their own instance and push to their own branch. The reviewer could work in a review instance, and switch between branches to load work from different users.
+เหมาะกับการ review งาน เช่น แต่ละ user ทำงานบน instance ของตัวเองแล้ว push ไป branch ของตัวเอง reviewer ใช้ review instance แล้วสลับ branch เพื่อดูงานของแต่ละคน
 
 /// note | No cleanup
-n8n doesn't clean up the existing contents of an instance when changing branches. Switching branches in this pattern results in all the workflows from each branch being in your instance.
+n8n จะไม่ลบข้อมูลเดิมใน instance ตอนเปลี่ยน branch การสลับ branch แบบนี้จะทำให้ workflow จากแต่ละ branch ไปอยู่รวมกันใน instance ของคุณ
 ///
 ![Diagram](/_images/source-control-environments/vc-one-multi.png)
 
 ## One instance, one branch
 
-This is the simplest pattern.
+นี่คือ pattern ที่ง่ายที่สุด
 
 ![Diagram](/_images/source-control-environments/vc-one-one.png)

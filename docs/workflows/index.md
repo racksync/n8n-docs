@@ -6,8 +6,7 @@ contentType: overview
 
 # Workflows
 
-A [workflow](/glossary.md#workflow-n8n) is a collection of nodes connected together to automate a process.
-
+[Workflow](/glossary.md#workflow-n8n) คือชุดของ nodes ที่เชื่อมต่อเข้าด้วยกันเพื่อทำให้กระบวนการเป็นอัตโนมัติ
 
 * [Create](/workflows/create.md) a workflow.
 * Use [Workflow templates](/workflows/templates.md) to help you get started.
@@ -15,4 +14,4 @@ A [workflow](/glossary.md#workflow-n8n) is a collection of nodes connected toget
 * Debug using the [Executions](/workflows/executions/index.md) list.
 * [Share](/workflows/sharing.md) workflows between users.
 
-If it's your first time building a workflow, you may want to use the [quickstart guides](/try-it-out/index.md) to quickly try out n8n features.
+หากนี่เป็นครั้งแรกที่คุณสร้าง workflow คุณอาจต้องการใช้ [quickstart guides](/try-it-out/index.md) เพื่อลองใช้ฟีเจอร์ต่างๆ ของ n8n อย่างรวดเร็ว

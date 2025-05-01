@@ -7,102 +7,102 @@ contentType: howto
 
 # Push and pull
 
-If your n8n instance connects to a Git repository, you need to keep your work in sync with Git.
+ถ้า n8n instance ของคุณเชื่อมกับ Git repository คุณต้อง sync งานของคุณกับ Git อยู่เสมอ
 
-This document assumes some familiarity with Git concepts and terminology. Refer to [Git and n8n](/source-control-environments/understand/git.md) for an introduction to how n8n works with Git.
+เอกสารนี้สมมติว่าคุณรู้จัก concept และคำศัพท์ของ Git มาบ้างแล้ว ดู [Git and n8n](/source-control-environments/understand/git.md) สำหรับแนะนำการทำงานของ n8n กับ Git
 
 --8<-- "_snippets/source-control-environments/one-direction.md"
 
 ## Fetch other people's work
 
 /// note | Restricted feature
-Ordinary users can't fetch work from Git. You must be an n8n instance owner, admin, or project owner to fetch work from Git.
+user ทั่วไปจะ fetch งานจาก Git ไม่ได้ คุณต้องเป็น n8n instance owner, admin หรือ project owner ถึงจะ fetch งานจาก Git ได้
 ///
-To pull work from Git, select **Pull** <span class="inline-image">![Pull icon](/_images/source-control-environments/pull-icon.png){.off-glb}</span> in the main menu.
+ถ้าจะ pull งานจาก Git ให้เลือก **Pull** <span class="inline-image">![Pull icon](/_images/source-control-environments/pull-icon.png){.off-glb}</span> ในเมนูหลัก
 
 --8<-- "_snippets/source-control-environments/push-pull-menu-state.md"
 
-n8n may display a warning about overriding local changes. Select **Pull and override** to override your local work with the content in Git.
+n8n อาจจะแจ้งเตือนว่ากำลังจะ override งาน local ของคุณ ให้เลือก **Pull and override** ถ้าต้องการ override งาน local ด้วยเนื้อหาใน Git
 
-When the changes include new variable or credential stubs, n8n notifies you that you need to populate the values for the items before using them.
+ถ้ามีการเปลี่ยนแปลงที่มี variable หรือ credential stub ใหม่ n8n จะแจ้งว่าคุณต้องเติมค่าให้กับ item เหล่านั้นก่อนใช้งาน
 
 /// info | How deleted resources are handled
-When workflows, credentials, variables, and tags are deleted from the repository, your local versions of these resources aren't deleted automatically. Instead, when you pull repository changes, n8n notifies you about any outdated resources and asks if you'd like to delete them.
+ถ้า workflow, credential, variable, tag ถูกลบจาก repository งาน local ของคุณจะไม่ถูกลบอัตโนมัติ ตอน pull n8n จะแจ้งเตือน resource ที่ตกค้างและถามว่าต้องการลบไหม
 ///
 
 ### Workflow and credential owner may change on pull
 
-When you pull from Git to an n8n instance, n8n tries to assign workflows and credentials to a matching user or project.
+เวลาคุณ pull จาก Git เข้า n8n instance, n8n จะพยายาม assign workflow กับ credential ให้กับ user หรือ project ที่ตรงกัน
 
-If the original owner is a user:
+ถ้า owner เดิมเป็น user:
 
-If the same owner is available on both instances (matching email), the owner remains the same. If the original owner isn't on the new instance, n8n sets the user performing the pull as the workflow owner.
+ถ้ามี owner เดิมอยู่ทั้งสอง instance (email ตรงกัน) owner จะเหมือนเดิม ถ้าไม่มี n8n จะตั้ง user ที่ pull เป็น owner
 
-If the original owner is a [project](/user-management/rbac/index.md):
+ถ้า owner เดิมเป็น [project](/user-management/rbac/index.md):
 
-n8n tries to match the original project name to a project name on the new instance. If no matching project exists, n8n creates a new project with the name, assigns the current user as project owner, and imports the workflows and credentials to the project.
+n8n จะพยายาม match ชื่อ project เดิมกับชื่อ project ใน instance ใหม่ ถ้าไม่มี n8n จะสร้าง project ใหม่ให้, ตั้ง user ปัจจุบันเป็น project owner แล้ว import workflow กับ credential เข้า project นั้น
 
 ### Pulling may cause brief service interruption
 
-If you pull changes to an active workflow, n8n sets the workflow to inactive while pulling, then reactivates it. This may result in a few seconds of downtime for the workflow.
+ถ้าคุณ pull งานเข้า workflow ที่กำลัง active, n8n จะ set workflow เป็น inactive ระหว่าง pull แล้วค่อย reactivate อาจจะมี downtime สั้นๆ ไม่กี่วินาที
 
 ## Send your work to Git
 
 /// note | Restricted feature
-Ordinary users can't send work to Git. You must be an n8n instance owner, admin, or project owner to send work to Git.
+user ทั่วไปจะส่งงานไป Git ไม่ได้ คุณต้องเป็น n8n instance owner, admin หรือ project owner ถึงจะ push งานไป Git ได้
 ///
 
 --8<-- "_snippets/source-control-environments/push.md"
 
 ## What gets committed
 
-n8n commits the following to Git:
+n8n จะ commit สิ่งเหล่านี้ไปที่ Git:
 
-* Workflows, including their tags and the email address of the workflow owner. You can choose which workflows to push.
-* Credential stubs (ID, name, type)
-* Variable stubs (ID and name)
-* Projects
-* Folders
+* Workflow รวม tag และ email ของ workflow owner คุณเลือกได้ว่าจะ push workflow ไหน
+* Credential stub (ID, name, type)
+* Variable stub (ID และ name)
+* Project
+* Folder
 
-You can programmatically [Manage variables](/source-control-environments/using/manage-variables.md) using the n8n API.
+คุณสามารถ [Manage variables](/source-control-environments/using/manage-variables.md) ด้วย n8n API ได้
 
 ## Merge behaviors and conflicts
 
-n8n's implementation of source control is opinionated. It resolves merge conflicts for credentials and variables automatically. n8n can't detect conflicts on workflows.
+source control ของ n8n มีแนวคิดเฉพาะตัว n8n จะ resolve merge conflict ของ credential กับ variable ให้อัตโนมัติ แต่ workflow จะตรวจ conflict ไม่ได้
 
 ### Workflows
 
-You have to explicitly tell n8n what to do about workflows when pushing or pulling. The Git repository acts as the source of truth.
+คุณต้องบอก n8n โดยตรงว่าจะให้ทำอะไรกับ workflow ตอน push หรือ pull Git repository จะเป็น source of truth
 
-When pulling, you might get warned that your local copy of a workflow differs from Git, and if you accept, your local copy would be overridden. Be careful not to lose relevant changes when pulling.
+ตอน pull อาจจะมีแจ้งเตือนว่า workflow local ของคุณต่างจาก Git ถ้ายอมรับ workflow local จะถูก override ระวังอย่าให้ข้อมูลสำคัญหาย
 
-When you push, your local workflow will override what's in Git, so make sure that you have the most up to date version or you risk overriding recent changes.
+ตอน push, workflow local ของคุณจะ override ของเดิมใน Git ดังนั้นควรแน่ใจว่าเป็นเวอร์ชันล่าสุด ไม่งั้นอาจจะทับงานใหม่
 
-To prevent the issue described above, you should immediately push your changes to a workflow once you finish working on it. Then it's safe to pull.
+เพื่อป้องกันปัญหานี้ ควร push งานทันทีหลังทำ workflow เสร็จ แล้วค่อย pull
 
-To avoid losing data:
+เพื่อไม่ให้ข้อมูลหาย:
 
-* Design your source control setup so that workflows flow in one direction. For example, make edits on a development instance, push to Git, then pull to production. Don't make edits on the production instance and push them.
-* Don't push all workflows. Select the ones you need.
-* Be cautious about manually editing files in the Git repository.
+* ออกแบบ source control ให้ workflow ไหลทางเดียว เช่น แก้ไขที่ development instance, push ไป Git แล้ว pull เข้า production อย่าแก้ไขที่ production แล้ว push กลับ
+* อย่า push workflow ทั้งหมด เลือกเฉพาะที่ต้องการ
+* ระวังการแก้ไฟล์ใน Git repository ด้วยตัวเอง
 
 ### Credentials, variables and workflow tags
 
-Credentials and variables can't have merge issues, as n8n chooses the version to keep.
+credential กับ variable จะไม่มี merge issue เพราะ n8n จะเลือกเวอร์ชันที่ต้องการให้เอง
 
-On pull:
+ตอน pull:
 
-* If the tag, variable or credential doesn't exist, n8n creates it.
-* If the tag, variable or credential already exists, n8n doesn't update it, unless:
-	* You set the value of a variable using the API or externally. The new value overwrites any existing value.
-	* The credential name has changed. n8n uses the version in Git.
-	* The name of a tag has changed. n8n updates the tag name. Be careful when renaming tags as tag names are unique and this could cause database issues when it comes to uniqueness during the pull process.
+* ถ้า tag, variable หรือ credential ยังไม่มี n8n จะสร้างใหม่
+* ถ้ามีอยู่แล้ว n8n จะไม่ update เว้นแต่:
+	* คุณ set ค่า variable ผ่าน API หรือภายนอก ค่าใหม่จะทับของเดิม
+	* credential name เปลี่ยน n8n จะใช้เวอร์ชันใน Git
+	* tag name เปลี่ยน n8n จะ update ชื่อ tag ระวังเวลา rename tag เพราะ tag name ต้อง unique อาจจะมีปัญหา database ได้
 
-On push:
+ตอน push:
 
-* n8n overwrites the entire variables and tags files.
-* If a credential already exists, n8n overwrites it with the changes, but doesn't apply these changes to existing credentials on pull.
+* n8n จะ overwrite ไฟล์ variables กับ tags ทั้งหมด
+* ถ้ามี credential อยู่แล้ว n8n จะ overwrite ด้วยของใหม่ แต่จะไม่ apply การเปลี่ยนแปลง credential ตอน pull
 
 /// note | Manage credentials with an external secrets vault
-If you need different credentials on different n8n environments, use [external secrets](/external-secrets.md).
+ถ้าคุณต้องการ credential ต่างกันในแต่ละ n8n environment ให้ใช้ [external secrets](/external-secrets.md)
 ///

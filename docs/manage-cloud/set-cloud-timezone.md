@@ -6,7 +6,7 @@ contentType: howto
 
 # Set the Cloud instance timezone
 
-You can change the timezone for your n8n instance. This affects the [Schedule Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/index.md) and [Date & Time node](/integrations/builtin/core-nodes/n8n-nodes-base.datetime.md). Users can configure the timezone for individual workflows in [Workflow settings](/workflows/settings.md).
+คุณสามารถเปลี่ยน timezone ของ n8n instance ได้ ซึ่งจะมีผลกับ [Schedule Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/index.md) และ [Date & Time node](/integrations/builtin/core-nodes/n8n-nodes-base.datetime.md) ผู้ใช้สามารถตั้ง timezone สำหรับ workflow แต่ละอันได้ใน [Workflow settings](/workflows/settings.md)
 
-1. On your dashboard, select **Manage**.
-1. Change the **Timezone** dropdown to the timezone you want.
+1. ที่ dashboard ของคุณ เลือก **Manage**
+1. เปลี่ยน **Timezone** dropdown เป็น timezone ที่ต้องการ

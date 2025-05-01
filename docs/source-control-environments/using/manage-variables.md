@@ -7,23 +7,23 @@ contentType: howto
 
 # Manage variables
 
-n8n doesn't sync variable values with Git. You must set up the credentials manually when setting up a new instance. You can choose to set up variables manually, or [using the API](#manage-variables-using-the-api).
+n8n จะไม่ sync ค่า variable กับ Git คุณต้องตั้งค่า credentials เองตอนตั้ง instance ใหม่ คุณเลือกได้ว่าจะตั้งค่า variable เอง หรือ [ใช้ API](#manage-variables-using-the-api)
 
 ## Manage variables using the API
 
-n8n syncs variable names, but doesn't push variable values to your Git provider. You can either:
+n8n จะ sync เฉพาะชื่อ variable แต่จะไม่ push ค่า variable ไปที่ Git provider คุณสามารถเลือกได้ว่า
 
-* Manually set variable values in n8n.
-* Set variable values using the n8n API, using the `/pull` endpoint. 
+* ตั้งค่า variable ใน n8n เอง
+* ตั้งค่า variable ผ่าน n8n API โดยใช้ endpoint `/pull`
 
-Managing variables using the API has several advantages:
+การจัดการ variable ผ่าน API มีข้อดีหลายอย่าง:
 
-* You can automatically update variable values using a CI (continuous integration) tool. 
-* You may also be able to protect the values. 
+* อัปเดตค่า variable อัตโนมัติได้ด้วย CI (continuous integration) tool
+* อาจจะป้องกันค่าไม่ให้รั่วไหลได้ด้วย
 
-For example, you can store values in [GitHub secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets){:target=_blank .external-link}, then populate the variables in n8n using an API call from a [GitHub Action](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions){:target=_blank .external-link}.
+เช่น คุณเก็บค่าไว้ใน [GitHub secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets){:target=_blank .external-link} แล้ว populate variable ใน n8n ด้วย API call จาก [GitHub Action](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions){:target=_blank .external-link}
 
-To manage variables using an API call, make a `POST` request to `/source-control/pull`:
+ถ้าจะจัดการ variable ด้วย API ให้ส่ง `POST` ไปที่ `/source-control/pull`:
 
 ```curl
 	curl --location '<YOUR-INSTANCE-URL>/api/v1/source-control/pull' \
@@ -39,6 +39,6 @@ To manage variables using an API call, make a `POST` request to `/source-control
 	'
 ```
 
-If the key already exists in n8n, the API call updates the value. If there is no variable with the key, it creates a new variable.
+ถ้ามี key อยู่แล้วใน n8n, API call จะ update ค่า ถ้ายังไม่มีจะสร้าง variable ใหม่
 
-After setting values using the API, you can safely edit variables in n8n, and push and pull changes. 
+หลังตั้งค่าด้วย API แล้ว คุณสามารถแก้ไข variable ใน n8n ได้ตามปกติ แล้ว push/pull ได้เหมือนเดิม

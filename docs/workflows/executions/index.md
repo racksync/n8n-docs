@@ -6,21 +6,20 @@ contentType: overview
 
 # Executions
 
-An execution is a single run of a workflow.
+Execution คือการรัน workflow หนึ่งครั้ง
 
 ## Execution modes
 
-There are two execution modes:
+มี execution modes สองแบบ:
 
-* Manual: run workflows manually when testing. Select **Test Workflow** to start a manual execution. You can do manual executions of active workflows, but n8n recommends keeping your workflow set to **Inactive** while developing and testing.
-* Production: a production workflow is one that runs automatically. To enable this, set the workflow to **Active**.
-
+* Manual: รัน workflows ด้วยตนเองเมื่อทำการทดสอบ เลือก **Test Workflow** เพื่อเริ่ม manual execution คุณสามารถทำ manual executions ของ workflows ที่ active ได้ แต่ n8n แนะนำให้ตั้งค่า workflow ของคุณเป็น **Inactive** ในขณะที่พัฒนาและทดสอบ
+* Production: production workflow คือ workflow ที่รันโดยอัตโนมัติ หากต้องการเปิดใช้งานสิ่งนี้ ให้ตั้งค่า workflow เป็น **Active**
 
 ## Execution lists
 
-n8n provides two execution lists:
+n8n มี execution lists สองรายการ:
 
-* [Workflow-level executions](/workflows/executions/single-workflow-executions.md): this execution list shows the executions for a single workflow.
-* [All executions](/workflows/executions/all-executions.md): this list shows all executions for all your workflows.
+* [Workflow-level executions](/workflows/executions/single-workflow-executions.md): execution list นี้แสดง executions สำหรับ workflow เดียว
+* [All executions](/workflows/executions/all-executions.md): รายการนี้แสดง executions ทั้งหมดสำหรับ workflows ทั้งหมดของคุณ
 
-n8n supports [adding custom data to executions](/workflows/executions/custom-executions-data.md).
+n8n รองรับ [adding custom data to executions](/workflows/executions/custom-executions-data.md)

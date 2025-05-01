@@ -6,48 +6,47 @@ contentType: howto
 
 # Nodes
 
-[Nodes](/glossary.md#node-n8n) are the key building blocks of a [workflow](/glossary.md#workflow-n8n). They perform a range of actions, including:
+[Nodes](/glossary.md#node-n8n) เป็นส่วนประกอบสำคัญของ [workflow](/glossary.md#workflow-n8n) ทำหน้าที่หลากหลาย รวมถึง:
 
-* Starting the workflow.
-* Fetching and sending data.
-* Processing and manipulating data.
+* การเริ่มต้น workflow
+* การดึงและส่งข้อมูล
+* การประมวลผลและจัดการข้อมูล
 
-n8n provides a collection of built-in nodes, as well as the ability to create your own nodes. Refer to:
+n8n มีชุดของ built-in nodes ให้ใช้งาน รวมถึงความสามารถในการสร้าง nodes ของคุณเอง โปรดดูที่:
 
-* [Built-in integrations](/integrations/builtin/node-types.md) to browse the node library.
-* [Community nodes](/integrations/community-nodes/installation/index.md) for guidance on finding and installing community-created nodes.
-* [Creating nodes](/integrations/creating-nodes/overview.md) to start building your own nodes.
-
+* [Built-in integrations](/integrations/builtin/node-types.md) เพื่อเรียกดู node library
+* [Community nodes](/integrations/community-nodes/installation/index.md) สำหรับคำแนะนำในการค้นหาและติดตั้ง nodes ที่สร้างโดย community
+* [Creating nodes](/integrations/creating-nodes/overview.md) เพื่อเริ่มต้นสร้าง nodes ของคุณเอง
 
 ## Add a node to your workflow
 
 ### Add a node to an empty workflow
 
-1. Select **Add first step**. n8n opens the nodes panel, where you can search or browse [trigger nodes](/glossary.md#trigger-node-n8n).
-2. Select the trigger you want to use.
+1. เลือก **Add first step** n8n จะเปิด nodes panel ซึ่งคุณสามารถค้นหาหรือเรียกดู [trigger nodes](/glossary.md#trigger-node-n8n) ได้
+2. เลือก trigger ที่คุณต้องการใช้
 
     /// note | Choose the correct app event
-	If you select **On App Event**, n8n shows a list of all the supported services. Use this list to browse n8n's integrations and trigger a workflow in response to an event in your chosen service. Not all integrations have triggers. To see which ones you can use as a trigger, select the node. If a trigger is available, you'll see it at the top of the available operations list.
+	หากคุณเลือก **On App Event** n8n จะแสดงรายการบริการทั้งหมดที่รองรับ ใช้รายการนี้เพื่อเรียกดู integrations ของ n8n และ trigger workflow เพื่อตอบสนองต่อ event ในบริการที่คุณเลือก ไม่ใช่ทุก integrations ที่มี triggers หากต้องการดูว่าคุณสามารถใช้ตัวใดเป็น trigger ได้ ให้เลือก node หากมี trigger ให้ใช้งาน คุณจะเห็นมันอยู่ที่ด้านบนสุดของรายการ operations ที่มีอยู่
 
-	For example, this is the trigger for Asana:
+	ตัวอย่างเช่น นี่คือ trigger สำหรับ Asana:
 
 	![Screenshot of the Asana node operations list, showing the Recommended section at the top of the list](/_images/workflows/components/nodes/recommended-trigger.png)
 	///
 
 ### Add a node to an existing workflow
 
-Select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> connector. n8n opens the nodes panel, where you can search or browse all nodes.
+เลือก connector **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> n8n จะเปิด nodes panel ซึ่งคุณสามารถค้นหาหรือเรียกดู nodes ทั้งหมดได้
 
 --8<-- "_snippets/integrations/builtin/node-operations.md"
 
 ## Node controls
 
-To view node controls, hover over the node on the canvas:
+หากต้องการดู node controls ให้วางเมาส์เหนือ node บน canvas:
 
-* **Test step** <span class="inline-image">![Test step icon](/_images/common-icons/play-node.png){.off-glb}</span>: Run the node.
-* **Deactivate** <span class="inline-image">![Deactivate node icon](/_images/common-icons/power-off.png){.off-glb}</span>: Deactivate the node.
-* **Delete** <span class="inline-image">![Delete node icon](/_images/common-icons/delete-node.png){.off-glb}</span>: Delete the node.
-* **Node context menu** <span class="inline-image">![Node context menu icon](/_images/common-icons/node-context-menu.png){.off-glb}</span>: Select node actions. Available actions:
+* **Test step** <span class="inline-image">![Test step icon](/_images/common-icons/play-node.png){.off-glb}</span>: รัน node
+* **Deactivate** <span class="inline-image">![Deactivate node icon](/_images/common-icons/power-off.png){.off-glb}</span>: ปิดการใช้งาน node
+* **Delete** <span class="inline-image">![Delete node icon](/_images/common-icons/delete-node.png){.off-glb}</span>: ลบ node
+* **Node context menu** <span class="inline-image">![Node context menu icon](/_images/common-icons/node-context-menu.png){.off-glb}</span>: เลือกการกระทำของ node การกระทำที่มีอยู่:
 	* Open node
 	* Test step
 	* Rename node
@@ -61,24 +60,24 @@ To view node controls, hover over the node on the canvas:
 
 ## Node settings
 
-The node settings under the **Settings** tab allow you to control node behaviors and add node notes.
+การตั้งค่า node ภายใต้แท็บ **Settings** ช่วยให้คุณควบคุมพฤติกรรมของ node และเพิ่มบันทึกย่อของ node ได้
 
-When active or set, they do the following:
+เมื่อเปิดใช้งานหรือตั้งค่า จะทำสิ่งต่อไปนี้:
 
-* **Request Options**: Select **Add Option** to view and select these options. 
-	- **Batching**: Control how to batch large numbers of input items.
-	- **Ignore SSL Issues**: Download the response even if SSL validation isn't possible.
-	- **Proxy**: Use this if you need to specify an HTTP proxy.
-	- **Timeout**: Set a timeout for the request in ms. 
-* **Always Output Data**: The node returns an empty item even if the node returns no data during execution. Be careful setting this on IF nodes, as it could cause an infinite loop.
-* **Execute Once**: The node executes once, with data from the first item it receives. It doesn't process any extra items.
-* **Retry On Fail**: When an execution fails, the node reruns until it succeeds. 
-* **On Error**: 
-    - **Stop Workflow**: Halts the entire workflow when an error occurs, preventing further node execution.
-    - **Continue**: Proceeds to the next node despite the error, using the last valid data.
-    - **Continue (using error output)**: Continues workflow execution, passing error information to the next node for potential handling.
+* **Request Options**: เลือก **Add Option** เพื่อดูและเลือกตัวเลือกเหล่านี้
+	- **Batching**: ควบคุมวิธีการ batch รายการ input จำนวนมาก
+	- **Ignore SSL Issues**: ดาวน์โหลด response แม้ว่าจะไม่สามารถตรวจสอบ SSL ได้
+	- **Proxy**: ใช้ตัวเลือกนี้หากคุณต้องการระบุ HTTP proxy
+	- **Timeout**: ตั้งค่า timeout สำหรับ request เป็น ms
+* **Always Output Data**: node จะคืนค่า item ว่างเปล่าแม้ว่า node จะไม่คืนข้อมูลใดๆ ในระหว่างการ execution โปรดระวังการตั้งค่านี้ใน IF nodes เนื่องจากอาจทำให้เกิด infinite loop ได้
+* **Execute Once**: node จะ execute เพียงครั้งเดียว โดยใช้ข้อมูลจาก item แรกที่ได้รับ จะไม่ประมวลผล item เพิ่มเติมใดๆ
+* **Retry On Fail**: เมื่อ execution ล้มเหลว node จะรันซ้ำจนกว่าจะสำเร็จ
+* **On Error**:
+    - **Stop Workflow**: หยุด workflow ทั้งหมดเมื่อเกิดข้อผิดพลาด ป้องกันการ execute node ต่อไป
+    - **Continue**: ดำเนินการต่อไปยัง node ถัดไปแม้จะมีข้อผิดพลาด โดยใช้ข้อมูลที่ถูกต้องล่าสุด
+    - **Continue (using error output)**: ดำเนินการ execute workflow ต่อไป โดยส่งข้อมูลข้อผิดพลาดไปยัง node ถัดไปเพื่อการจัดการที่เป็นไปได้
 
-You can document your workflow using node notes:
+คุณสามารถบันทึกเอกสาร workflow ของคุณโดยใช้ node notes:
 
-* **Notes**: Note to save with the node.
-* **Display note in flow**: If active, n8n displays the note in the workflow as a subtitle.
+* **Notes**: บันทึกย่อที่จะบันทึกพร้อมกับ node
+* **Display note in flow**: หากเปิดใช้งาน n

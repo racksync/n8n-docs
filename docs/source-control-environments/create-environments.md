@@ -9,16 +9,16 @@ contentType: tutorial
 
 --8<-- "_snippets/source-control-environments/feature-availability.md"
 
-This tutorial walks through the process of setting up environments end-to-end. You'll create two environments: development and production. It uses GitHub as the Git provider. The process is similar for other providers. 
+tutorial นี้จะพาคุณตั้งค่า environments แบบ end-to-end คุณจะสร้าง environment สองอัน: development กับ production โดยใช้ GitHub เป็น Git provider (ถ้าใช้ provider อื่นก็คล้ายๆ กัน)
 
-n8n has built its environments feature on top of Git, a version control software. You link an n8n instance to a Git branch, and use a push-pull pattern to move work between environments. You should have some understanding of environments and Git. If you need more information on these topics, refer to:
+n8n สร้างฟีเจอร์ environments บน Git ซึ่งเป็นซอฟต์แวร์ version control คุณจะเชื่อม n8n instance กับ Git branch แล้วใช้ pattern push-pull เพื่อย้ายงานระหว่าง environments ควรเข้าใจ environments กับ Git มาก่อน ถ้าอยากอ่านเพิ่มดูที่:
 
-* [Environments in n8n](/source-control-environments/understand/environments.md): the purpose of environments, and how they work in n8n. 
-* [Git and n8n](/source-control-environments/understand/git.md): Git concepts and source control in n8n.
+* [Environments in n8n](/source-control-environments/understand/environments.md): จุดประสงค์ของ environments และวิธีการทำงานใน n8n
+* [Git and n8n](/source-control-environments/understand/git.md): concept ของ Git และ source control ใน n8n
 
 ## Choose your source control pattern
 
-Before setting up source control and environments, you need to plan your environments, and how they relate to Git branches. n8n supports different [Branch patterns](/source-control-environments/understand/patterns.md). For environments, you need to choose between two patterns: multi-instance, multi-branch, or multi-instance, single-branch. This tutorial covers both patterns.
+ก่อนจะ setup source control กับ environments คุณต้องวางแผน environments กับความสัมพันธ์กับ Git branch n8n รองรับ [Branch patterns](/source-control-environments/understand/patterns.md) หลายแบบ สำหรับ environments ให้เลือกว่าจะใช้ multi-instance multi-branch หรือ multi-instance single-branch tutorial นี้จะสอนทั้งสองแบบ
 
 --8<-- "_snippets/source-control-environments/one-direction.md"
 
@@ -37,27 +37,27 @@ Before setting up source control and environments, you need to plan your environ
 
 ## Set up your repository
 
-Once you've chosen your pattern, you need to set up your GitHub repository.
+เลือก pattern เสร็จแล้ว ให้ setup GitHub repository
 
 === "Multi-branch"
 
-    1. [Create a new repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository){:target=_blank .external-link}. 
-	    * Make sure the repository is private, unless you want your workflows, tags, and variable and credential stubs exposed to the internet.
-	    * Create the new repository with a README so you can immediately create branches. 
-    1. Create one branch named `production` and another named `development`. Refer to [Creating and deleting branches within your repository](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository){:target=_blank .external-link} for guidance.
+    1. [Create a new repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository){:target=_blank .external-link}
+	    * ให้ repository เป็น private เว้นแต่คุณอยากให้ workflow, tag, variable, credential stub ของคุณเปิดเผยต่อสาธารณะ
+	    * สร้าง repository พร้อม README เพื่อจะได้สร้าง branch ได้ทันที
+    1. สร้าง branch ชื่อ `production` กับ `development` ดูวิธีที่ [Creating and deleting branches within your repository](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository){:target=_blank .external-link}
 			
 
 === "Single-branch"
 
-    [Create a new repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository){:target=_blank .external-link}. 
+    [Create a new repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository){:target=_blank .external-link}
 
-      * Make sure the repository is private, unless you want your workflows, tags, and variable and credential stubs exposed to the internet.  
-      * Create the new repository with a README. This creates the `main` branch, which you'll connect to. 		
+      * ให้ repository เป็น private เว้นแต่คุณอยากให้ workflow, tag, variable, credential stub ของคุณเปิดเผยต่อสาธารณะ  
+      * สร้าง repository พร้อม README จะได้ branch `main` ไว้เชื่อมต่อ
 		
 
 ## Connect your n8n instances to your repository
 
-Create two n8n instances, one for development, one for production. 
+สร้าง n8n instance สองอัน อันหนึ่งสำหรับ development อีกอันสำหรับ production
 
 ### Configure Git in n8n
 
@@ -65,57 +65,57 @@ Create two n8n instances, one for development, one for production.
 
 ### Set up a deploy key
 
-Set up SSH access by creating a deploy key for the repository using the SSH key from n8n. The key must have write access. Refer to [GitHub | Managing deploy keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys){:target=_blank .external-link} for guidance.
+ตั้งค่า SSH access โดยสร้าง deploy key ให้ repository โดยใช้ SSH key จาก n8n ต้องให้สิทธิ์ write ดูวิธีที่ [GitHub | Managing deploy keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys){:target=_blank .external-link}
 
 ### Connect n8n and configure your instance
 
 === "Multi-branch"
 
-    1. In **Settings** > **Environments** in n8n, select **Connect**. n8n connects to your Git repository.
-    1. Under **Instance settings**, choose which branch you want to use for the current n8n instance. Connect the production branch to the production instance, and the development branch to the development instance.
-    1. Production instance only: select **Protected instance** to prevent users editing workflows in this instance.
-    1. Select **Save settings**.
+    1. ที่ **Settings** > **Environments** ใน n8n ให้เลือก **Connect** เพื่อเชื่อมกับ Git repository
+    1. ที่ **Instance settings** เลือก branch ที่จะใช้กับ n8n instance นี้ เชื่อม production branch กับ production instance, development branch กับ development instance
+    1. production instance เท่านั้น: เลือก **Protected instance** เพื่อป้องกันไม่ให้ user แก้ workflow ใน instance นี้
+    1. เลือก **Save settings**
 
 === "Single-branch"
 
-    1. In **Settings** > **Environments** in n8n, select **Connect**. 
-	  1. Under **Instance settings**, select the main branch.
-    1. Production instance only: select **Protected instance** to prevent users editing workflows in this instance.
-    1. Select **Save settings**.
+    1. ที่ **Settings** > **Environments** ใน n8n ให้เลือก **Connect**
+	  1. ที่ **Instance settings** เลือก main branch
+    1. production instance เท่านั้น: เลือก **Protected instance** เพื่อป้องกันไม่ให้ user แก้ workflow ใน instance นี้
+    1. เลือก **Save settings**
 
 ## Push work from development
 
-In your development instance, create a few workflows, tags, variables, and credentials.
+ใน development instance ให้สร้าง workflow, tag, variable, credential ขึ้นมาสักหน่อย
 
 --8<-- "_snippets/source-control-environments/push.md"
 
 ## Pull work to production
 
-Your work is now in GitHub. If you're using a multi-branch setup, it's on the development branch. If you chose the single-branch setup, it's on main.
+ตอนนี้งานของคุณอยู่ใน GitHub แล้ว ถ้าใช้ multi-branch จะอยู่ใน development branch ถ้าใช้ single-branch จะอยู่ใน main
 
 === "Multi-branch"
 
-    1. In GitHub, create a pull request to merge development into production.
-    1. Merge the pull request.
-    1. In your production instance, select **Pull** <span class="inline-image">![Pull icon](/_images/source-control-environments/pull-icon.png){.off-glb}</span> in the main menu.
+    1. ใน GitHub ให้สร้าง pull request เพื่อ merge development เข้า production
+    1. merge pull request
+    1. ที่ production instance ให้เลือก **Pull** <span class="inline-image">![Pull icon](/_images/source-control-environments/pull-icon.png){.off-glb}</span> ในเมนูหลัก
 
 === "Single-branch"
 
-    In your production instance, select **Pull** <span class="inline-image">![Pull icon](/_images/source-control-environments/pull-icon.png){.off-glb}</span> in the main menu.
+    ที่ production instance ให้เลือก **Pull** <span class="inline-image">![Pull icon](/_images/source-control-environments/pull-icon.png){.off-glb}</span> ในเมนูหลัก
 
 --8<-- "_snippets/source-control-environments/push-pull-menu-state.md"
 
 ### Optional: Use a GitHub Action to automate pulls
 
-If you want to avoid logging in to your production instance to pull, you can use a [GitHub Action](https://docs.github.com/en/actions/creating-actions/about-custom-actions){:target=_blank .external-link} and the [n8n API](/api/index.md) to automatically pull every time you push new work to your production or main branch.
+ถ้าไม่อยาก login เข้า production instance เพื่อ pull งานเอง สามารถใช้ [GitHub Action](https://docs.github.com/en/actions/creating-actions/about-custom-actions){:target=_blank .external-link} กับ [n8n API](/api/index.md) เพื่อ pull อัตโนมัติทุกครั้งที่ push งานใหม่เข้า production หรือ main branch
 
 --8<-- "_snippets/source-control-environments/github-action.md"
 
 
 ## Next steps
 
-Learn more about:
+อ่านต่อเกี่ยวกับ:
 
-* [Environments in n8n](/source-control-environments/understand/environments.md) and [Git and n8n](/source-control-environments/understand/git.md)
+* [Environments in n8n](/source-control-environments/understand/environments.md) และ [Git and n8n](/source-control-environments/understand/git.md)
 * [Source control patterns](/source-control-environments/understand/patterns.md)
-* Reusable [Variables](/code/variables.md) and [Managing variables using the API](/source-control-environments/using/manage-variables.md) when using source control.
+* [Variables](/code/variables.md) ที่นำกลับมาใช้ซ้ำได้ และ [Managing variables using the API](/source-control-environments/using/manage-variables.md) ตอนใช้ source control

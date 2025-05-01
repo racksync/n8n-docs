@@ -11,6 +11,6 @@ hide:
 
 --8<-- "_snippets/source-control-environments/feature-availability.md"
 
-* [Push and pull](/source-control-environments/using/push-pull.md): Send work to Git, and fetch work from Git to your instance. Understand what gets committed, and how n8n handles merge conflicts.
-* [Copy work between environments](/source-control-environments/using/copy-work.md): How to copy work between different n8n instances.
-* [Manage variables](/source-control-environments/using/manage-variables.md): Manage variable values using the n8n API and source control.
+* [Push and pull](/source-control-environments/using/push-pull.md): ส่งงานไป Git และดึงงานจาก Git เข้า instance ของคุณ เข้าใจว่าอะไรถูก commit และ n8n จัดการ merge conflict ยังไง
+* [Copy work between environments](/source-control-environments/using/copy-work.md): วิธี copy งานระหว่าง n8n instance ต่างๆ
+* [Manage variables](/source-control-environments/using/manage-variables.md): จัดการค่า variable ด้วย n8n API และ source control

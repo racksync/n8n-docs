@@ -6,20 +6,19 @@ contentType: howto
 
 # Workflow templates
 
-When creating a new workflow, you can choose whether to start with an empty workflow, or use an existing [template](/glossary.md#template-n8n).
+เมื่อสร้าง workflow ใหม่ คุณสามารถเลือกได้ว่าจะเริ่มต้นด้วย workflow ว่างเปล่า หรือใช้ [template](/glossary.md#template-n8n) ที่มีอยู่
 
-Templates provide:
+Templates มีประโยชน์ดังนี้:
 
-* Help getting started: n8n might already have a template that does what you need.
-* Examples of what you can build
-* Best practices for creating your own workflows
+* ช่วยให้เริ่มต้นได้ง่ายขึ้น: n8n อาจมี template ที่ตรงกับความต้องการของคุณอยู่แล้ว
+* เป็นตัวอย่างของสิ่งที่คุณสามารถสร้างได้
+* แสดงแนวทางปฏิบัติที่ดีที่สุดสำหรับการสร้าง workflow ของคุณเอง
 
 ## Access templates
 
-Select <span class="inline-image">![View templates icon](/_images/common-icons/templates.png){.off-glb}</span> **Templates** to view the templates library.
+เลือก <span class="inline-image">![View templates icon](/_images/common-icons/templates.png){.off-glb}</span> **Templates** เพื่อดูคลัง templates
 
-If you use n8n's template library, this takes you to browse [Workflows on the n8n website](https://n8n.io/workflows/){:target=_blank .external-link}. If you use a custom library provided by your organization, you'll be able to search and browse the templates within the app.
-
+หากคุณใช้คลัง template ของ n8n ระบบจะนำคุณไปที่หน้า [Workflows บนเว็บไซต์ n8n](https://n8n.io/workflows/){:target=_blank .external-link} หากคุณใช้คลัง template ที่กำหนดเองโดยองค์กรของคุณ คุณจะสามารถค้นหาและเรียกดู templates ภายในแอปได้
 
 ## Add your workflow to the n8n library
 

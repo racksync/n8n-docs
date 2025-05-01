@@ -7,48 +7,45 @@ contentType: explanation
 
 # Git and n8n
 
-n8n uses Git to provide source control. To use this feature, it helps to have some knowledge of basic Git concepts. n8n doesn't implement all Git functionality: you shouldn't view n8n's source control as full version control.
-
+n8n ใช้ Git เพื่อจัดการ source control ถ้าคุณจะใช้ฟีเจอร์นี้ แนะนำให้รู้จักพื้นฐานของ Git ไว้บ้าง n8n ไม่ได้รองรับฟีเจอร์ Git ทั้งหมด: อย่าคิดว่า source control ของ n8n จะเหมือน version control เต็มรูปแบบ
 
 /// note | New to Git and source control?
-If you're new to Git, don't panic. You don't need to learn Git to use n8n. This document explains the concepts you need. You do need some Git knowledge to set up the source control, as this involves work in your Git provider.
+ถ้าคุณเพิ่งเริ่มใช้ Git ไม่ต้องกังวล คุณไม่จำเป็นต้องรู้ Git ลึกๆ เพื่อใช้ n8n เอกสารนี้จะอธิบาย concept ที่จำเป็น คุณจะต้องรู้ Git บ้างตอน setup source control เพราะต้องไปตั้งค่าที่ Git provider ของคุณ
 ///
 /// note | Familiar with Git and source control?
-If you're familiar with Git, don't rely on behaviors matching exactly. In particular, be aware that source control in n8n doesn't support a pull request-style review and merge process, unless you do this outside n8n in your Git provider.
+ถ้าคุณคุ้นเคยกับ Git อยู่แล้ว อย่าคาดหวังว่า behavior จะเหมือนกันเป๊ะ โดยเฉพาะ source control ใน n8n จะไม่รองรับ pull request-style review และ merge process เว้นแต่คุณจะทำเองนอก n8n ใน Git provider
 ///
 
-This page introduces the Git concepts and terminology used in n8n. It doesn't cover everything you need to set up and manage a repository. The person doing the [Setup](/source-control-environments/setup.md) should have some familiarity with Git and with their Git hosting provider.
+หน้านี้จะแนะนำ concept และคำศัพท์ Git ที่ใช้ใน n8n ไม่ได้อธิบายทุกอย่างที่ต้องรู้สำหรับ setup และจัดการ repository คนที่ทำ [Setup](/source-control-environments/setup.md) ควรคุ้นเคยกับ Git และ Git hosting provider ของตัวเอง
 
 /// note | This is a brief introduction
-Git is a complex topic. This section provides a brief introduction to the key terms you need when using environments in n8n. If you want to learn about Git in depth, refer to [GitHub | Git and GitHub learning resources](https://docs.github.com/en/get-started/quickstart/git-and-github-learning-resources){:target=_blank .external-link}.
+Git เป็นเรื่องที่ซับซ้อน ส่วนนี้จะอธิบายแค่คำสำคัญที่ต้องใช้กับ environments ใน n8n ถ้าอยากเรียนรู้ Git แบบละเอียด ดูที่ [GitHub | Git and GitHub learning resources](https://docs.github.com/en/get-started/quickstart/git-and-github-learning-resources){:target=_blank .external-link}
 ///
 ## Git overview
 
-[Git](https://git-scm.com/){:target=_blank .external-link} is a tool for managing, tracking, and collaborating on multiple versions of documents. It's the basis for widely used platforms such as [GitHub](https://github.com/){:target=_blank .external-link} and [GitLab](https://about.gitlab.com/){:target=_blank .external-link}.
+[Git](https://git-scm.com/){:target=_blank .external-link} คือเครื่องมือสำหรับจัดการ, ติดตาม, และทำงานร่วมกันบนไฟล์หลายเวอร์ชัน เป็นพื้นฐานของ platform ที่ใช้กันเยอะอย่าง [GitHub](https://github.com/){:target=_blank .external-link} และ [GitLab](https://about.gitlab.com/){:target=_blank .external-link}
 
 ## Branches: Multiple copies of a project
 
-Git uses branches to maintain multiple copies of a document alongside each other. Every branch has its own version. A common pattern is to have a main branch, and then everyone who wants to contribute to the project works on their own branch (copy). When they finish their work, their branch is merged back into the main branch.
+Git ใช้ branch เพื่อเก็บไฟล์หลายชุดไว้ขนานกัน แต่ละ branch จะมีเวอร์ชันของตัวเอง ปกติจะมี main branch แล้วใครที่อยาก contribute ก็จะทำงานบน branch ของตัวเอง (เหมือน copy) พอเสร็จแล้วก็ merge กลับเข้า main branch
 
 ![Diagram](/_images/source-control-environments/simple-git-branch.png)
 
 ## Local and remote: Moving work between your machine and a Git provider
 
-A common pattern when using Git is to install Git on your own computer, and use a Git provider such as GitHub to work with Git in the cloud. In effect, you have a Git repository (project) on GitHub, and work with copies of it on your local machine.
+ปกติการใช้ Git จะติดตั้ง Git บนเครื่องตัวเอง แล้วใช้ Git provider เช่น GitHub เพื่อเก็บไฟล์บน cloud สรุปคือคุณจะมี repository (project) บน GitHub แล้ว sync งานกับเครื่องตัวเอง
 
-n8n uses this pattern for source control: you'll work with your workflows on your n8n instance, but send them to your Git provider to store them.
+n8n ก็ใช้ pattern นี้กับ source control: คุณจะทำงานกับ workflow บน n8n instance แล้วส่งไปเก็บที่ Git provider
 
 ## Push, pull, and commit
 
-n8n uses three key Git processes:
+n8n ใช้ process หลักของ Git 3 อย่าง:
 
-* **Push**: send work from your instance to Git. This saves a copy of your workflows and tags, as well as credential and variable stubs, to Git. You can choose which workflows you want to save.
-* **Pull**: get the workflows, tags, and variables from Git and load it into n8n. You will need to populate any credentials or variable stubs included in the refreshed items.
-
+* **Push**: ส่งงานจาก instance ของคุณไปที่ Git จะเป็นการบันทึก workflow, tag, credential stub, variable stub ไปที่ Git คุณเลือกได้ว่าจะ push workflow ไหน
+* **Pull**: ดึง workflow, tag, variable จาก Git มาโหลดเข้า n8n คุณต้องเติมค่า credentials หรือ variable stub เองหลังจาก pull
     /// warning | Pulling overwrites your work
-    If you have made changes to a workflow in n8n, you must push the changes to Git before pulling. When you pull, it overwrites any changes you've made if they aren't stored in Git.
+    ถ้าคุณแก้ workflow ใน n8n แล้ว ยังไม่ได้ push ไป Git ถ้า pull จะโดน overwrite ทันที ต้อง push ก่อนค่อย pull
     ///
-		
-* **Commit**: a commit in n8n is a single occurrence of pushing work to Git. In n8n, commit and push happen at the same time.
+* **Commit**: ใน n8n commit คือการ push งานไป Git หนึ่งครั้ง ใน n8n commit กับ push จะเกิดพร้อมกัน
 
-Refer to [Push and pull](/source-control-environments/using/push-pull.md) for detailed information about how n8n interacts with Git.
+ดูรายละเอียดการ push/pull เพิ่มเติมที่ [Push and pull](/source-control-environments/using/push-pull.md)

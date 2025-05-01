@@ -7,32 +7,32 @@ contentType: howto
 
 # Copy work between environments
 
-The steps to send work from one n8n instance to another are different depending on whether you use a single Git branch or multiple branches.
+ขั้นตอนการส่งงานจาก n8n instance หนึ่งไปอีกอันจะต่างกัน ขึ้นอยู่กับว่าคุณใช้ Git branch เดียวหรือหลาย branch
 
 ## Single branch
 
-If you have a single Git branch the steps to copy work are:
+ถ้าคุณใช้ Git branch เดียว ขั้นตอน copy งานคือ:
 
-1. Push work from one instance to the Git branch.
-1. Log in to the other instance to pull the work from Git. You can [automate pulls](#automatically-send-changes-to-n8n).
+1. push งานจาก instance หนึ่งไปที่ Git branch
+1. login เข้าอีก instance เพื่อ pull งานจาก Git คุณสามารถ [automate pulls](#automatically-send-changes-to-n8n) ได้
 
 ## Multiple branches
 
-If you have more than one Git branch, you need to merge the branches in your Git provider to copy work between environments. You can't copy work directly between environments in n8n. 
+ถ้าคุณมี Git branch มากกว่าหนึ่ง คุณต้อง merge branch ใน Git provider เพื่อ copy งานระหว่าง environments คุณไม่สามารถ copy งานตรงๆ ระหว่าง environments ใน n8n ได้
 
-A common pattern is:
+pattern ที่เจอบ่อยคือ:
 
-1. Do work in your developments instance.
-1. Push the work to the development branch in Git.
-1. Merge your development branch into your production branch.	Refer to the documentation for your Git provider for guidance on doing this:  
+1. ทำงานใน development instance
+1. push งานไปที่ development branch ใน Git
+1. merge development branch เข้า production branch ดูวิธี merge ได้ที่:
 	* [GitHub: Creating a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request){:target=_blank .external-link}
 	* [GitLab: Creating merge requests](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html){:target=_blank .external-link}
 	* [Git: Basic branching and merging](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging){:target=_blank .external-link}
-1. In your production n8n instance, pull the changes. You can [automate pulls](#automatically-send-changes-to-n8n).
+1. ใน production n8n instance ให้ pull การเปลี่ยนแปลง คุณสามารถ [automate pulls](#automatically-send-changes-to-n8n) ได้
 
 ## Automatically send changes to n8n
 
-You can automate parts of the process of copying work, using the `/source-control/pull` API endpoint. Call the API after merging the changes:
+คุณสามารถ automate บางส่วนของการ copy งานได้ โดยใช้ endpoint `/source-control/pull` ของ API เรียก API หลัง merge เสร็จ:
 
 ```curl
 curl --request POST \
@@ -42,7 +42,7 @@ curl --request POST \
 	--data '{"force": true}'
 ```
 
-This means you can use a GitHub Action or GitLab CI/CD to automatically pull changes to the production instance on merge.
+แบบนี้คุณสามารถใช้ GitHub Action หรือ GitLab CI/CD เพื่อ pull งานเข้า production instance อัตโนมัติหลัง merge
 
 --8<-- "_snippets/source-control-environments/github-action.md"
 

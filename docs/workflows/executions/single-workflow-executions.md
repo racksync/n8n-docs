@@ -6,43 +6,41 @@ contentType: howto
 
 # Workflow-level executions list
 
-The **Executions** list in a workflow shows all executions for that workflow.
+รายการ **Executions** ใน workflow จะแสดง executions ทั้งหมดสำหรับ workflow นั้น
 
 /// note | Deleted workflows
-When you delete a workflow, n8n deletes its execution history as well. This means you can't view executions for deleted workflows.
+เมื่อคุณลบ workflow, n8n จะลบประวัติ execution ของมันด้วย ซึ่งหมายความว่าคุณไม่สามารถดู executions สำหรับ workflows ที่ถูกลบได้
 ///
 
 /// note | Execution history and workflow history
-Don't confuse the execution list with [Workflow history](/workflows/history.md).
+อย่าสับสนระหว่าง execution list กับ [Workflow history](/workflows/history.md)
 
-Executions are workflow runs. With the executions list, you can see previous runs of the current version of the workflow. You can copy previous executions into the editor to [Debug and re-run past executions](/workflows/executions/debug.md) in your current workflow.
+Executions คือการรัน workflow ด้วย execution list คุณสามารถดูการรันก่อนหน้าของ workflow เวอร์ชันปัจจุบันได้ คุณสามารถคัดลอก executions ก่อนหน้าไปยัง editor เพื่อ [Debug and re-run past executions](/workflows/executions/debug.md) ใน workflow ปัจจุบันของคุณ
 
-Workflow history is previous versions of the workflow: for example, a version with a different node, or different parameters set.
+Workflow history คือเวอร์ชันก่อนหน้าของ workflow: ตัวอย่างเช่น เวอร์ชันที่มี node แตกต่างกัน หรือตั้งค่า parameters ต่างกัน
 ///
-
 
 ## View executions for a single workflow
 
-In the workflow, select the **Executions** tab in the top menu. You can preview all executions of that workflow.
+ใน workflow ให้เลือกแท็บ **Executions** ในเมนูด้านบน คุณสามารถดูตัวอย่าง executions ทั้งหมดของ workflow นั้นได้
 
 ## Filter executions
 
-You can filter the executions list.
+คุณสามารถกรองรายการ executions ได้
 
-1. In your workflow, select **Executions**.	
-2. Select **Filters**.
-3. Enter your filters. You can filter by:
-	* **Status**: choose from **Failed**, **Running**, **Success**, or **Waiting**.
-	* **Execution start**: see executions that started in the given time.
-	* **Saved custom data**: this is data you create within the workflow using the Code node. Enter the key and value to filter. Refer to [Custom executions data](/workflows/executions/custom-executions-data.md) for information on adding custom data.
+1. ใน workflow ของคุณ เลือก **Executions**
+2. เลือก **Filters**
+3. ป้อนตัวกรองของคุณ คุณสามารถกรองตาม:
+	* **Status**: เลือกจาก **Failed**, **Running**, **Success**, หรือ **Waiting**
+	* **Execution start**: ดู executions ที่เริ่มต้นในเวลาที่กำหนด
+	* **Saved custom data**: นี่คือข้อมูลที่คุณสร้างขึ้นภายใน workflow โดยใช้ Code node ป้อน key และ value เพื่อกรอง โปรดดู [Custom executions data](/workflows/executions/custom-executions-data.md) สำหรับข้อมูลเกี่ยวกับการเพิ่มข้อมูลแบบกำหนดเอง
 
 		--8<-- "_snippets/workflows/executions/custom-execution-data-availability.md"
 
-
 ## Retry failed workflows
 
-If your workflow execution fails, you can retry the execution. To retry a failed workflow:
+หาก workflow execution ของคุณล้มเหลว คุณสามารถลองรัน execution นั้นใหม่ได้ วิธีลองรัน workflow ที่ล้มเหลวใหม่:
 
-1. Open the **Executions** list.
-2. For the workflow execution you want to retry, select **Refresh** <span class="inline-image">![Refresh icon](/_images/common-icons/refresh.png){.off-glb}</span>.
+1. เปิดรายการ **Executions**
+2. สำหรับ workflow execution ที่คุณต้องการลองรันใหม่ ให้เลือก **Refresh** <span class="inline-image">![Refresh icon](/_images/common-icons/refresh.png){.off-glb}</span>
 --8<-- "_snippets/workflows/executions/retry-options.md"

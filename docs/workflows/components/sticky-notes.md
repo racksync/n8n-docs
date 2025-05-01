@@ -6,45 +6,45 @@ contentType: howto
 
 # Sticky Notes
 
-Sticky Notes allow you to annotate and comment on your workflows.
+Sticky Notes ช่วยให้คุณสามารถใส่คำอธิบายประกอบและแสดงความคิดเห็นใน workflows ของคุณได้
 
-n8n recommends using Sticky Notes heavily, especially on [template workflows](/glossary.md#template-n8n), to help other users understand your workflow.
+n8n แนะนำให้ใช้ Sticky Notes อย่างสม่ำเสมอ โดยเฉพาะอย่างยิ่งใน [template workflows](/glossary.md#template-n8n) เพื่อช่วยให้ผู้ใช้คนอื่นเข้าใจ workflow ของคุณ
 
 ![Screenshot of a basic workflow with an example sticky note](/_images/workflows/components/stickies/example-sticky-note.png)
 
 ## Create a Sticky Note
 
-Sticky Notes are a core node. To add a new Sticky Note:
+Sticky Notes เป็น core node วิธีเพิ่ม Sticky Note ใหม่:
 
-1. Open the nodes panel.
-2. Search for `note`.
-3. Click the **Sticky Note** node. n8n adds a new Sticky Note to the canvas.
+1. เปิด nodes panel
+2. ค้นหา `note`
+3. คลิกที่ **Sticky Note** node n8n จะเพิ่ม Sticky Note ใหม่ลงบน canvas
 
 ## Edit a Sticky Note
 
-1. Double click the Sticky Note you want to edit.
-2. Write your note. [This guide](https://commonmark.org/help/) explains how to format your text with Markdown. n8n uses [markdown-it](https://github.com/markdown-it/markdown-it), which implements the CommonMark specification. 
-3. Click away from the note, or press `Esc`, to stop editing.
+1. ดับเบิลคลิกที่ Sticky Note ที่คุณต้องการแก้ไข
+2. เขียนบันทึกของคุณ [คู่มือนี้](https://commonmark.org/help/) อธิบายวิธีการจัดรูปแบบข้อความของคุณด้วย Markdown n8n ใช้ [markdown-it](https://github.com/markdown-it/markdown-it) ซึ่งใช้ข้อกำหนด CommonMark
+3. คลิกออกห่างจาก note หรือกด `Esc` เพื่อหยุดแก้ไข
 
 ## Change the color
 
-To change the Sticky Note color:
+วิธีเปลี่ยนสี Sticky Note:
 
-1. Hover over the Sticky Note
-1. Select **Change color** <span class="inline-image">![Change Sticky Note color icon](/_images/common-icons/change-color.png){.off-glb}</span>
+1. วางเมาส์เหนือ Sticky Note
+1. เลือก **Change color** <span class="inline-image">![Change Sticky Note color icon](/_images/common-icons/change-color.png){.off-glb}</span>
 
 ## Sticky Note positioning
 
-You can:
+คุณสามารถ:
 
-* Drag a Sticky Note anywhere on the canvas.
-* Drag Sticky Notes behind nodes. You can use this to visually group nodes.
-* Resize Sticky Notes by hovering over the edge of the note and dragging to resize.
-* Change the color: select **Options** <span class="inline-image">![Options icon](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> to open the color selector.
+* ลาก Sticky Note ไปวางที่ใดก็ได้บน canvas
+* ลาก Sticky Notes ไปไว้ด้านหลัง nodes คุณสามารถใช้สิ่งนี้เพื่อจัดกลุ่ม nodes ด้วยสายตา
+* ปรับขนาด Sticky Notes โดยวางเมาส์เหนือขอบของ note แล้วลากเพื่อปรับขนาด
+* เปลี่ยนสี: เลือก **Options** <span class="inline-image">![Options icon](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> เพื่อเปิดตัวเลือกสี
 
 ## Writing in Markdown
 
-Sticky Notes support Markdown formatting. This section describes some common options.
+Sticky Notes รองรับการจัดรูปแบบ Markdown ส่วนนี้อธิบายตัวเลือกทั่วไปบางส่วน
 
 ```
 The text in double asterisks will be **bold**
@@ -70,11 +70,11 @@ Or created ordered lists with numbers:
 2. Item two
 ```
 
-For a more detailed guide, refer to [CommonMark's help](https://commonmark.org/help/). n8n uses [markdown-it](https://github.com/markdown-it/markdown-it), which implements the CommonMark specification.
+สำหรับคำแนะนำโดยละเอียดเพิ่มเติม โปรดดูที่ [CommonMark's help](https://commonmark.org/help/) n8n ใช้ [markdown-it](https://github.com/markdown-it/markdown-it) ซึ่งใช้ข้อกำหนด CommonMark
 
 ## Make images full width
 
-You can force images to be 100% width of the sticky note by appending `#full-width` to the filename:
+คุณสามารถบังคับให้รูปภาพมีความกว้าง 100% ของ sticky note ได้โดยการเพิ่ม `#full-width` ต่อท้ายชื่อไฟล์:
 
 ```markdown
 ![Source example](https://<IMAGE-URL>/<IMAGE-NAME>.png#full-width)

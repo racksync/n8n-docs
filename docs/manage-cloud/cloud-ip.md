@@ -6,10 +6,10 @@ contentType: reference
 # Cloud IP addresses
 
 /// warning | Cloud IP addresses change without warning
-n8n can't guarantee static source IPs, as Cloud operates in a dynamic cloud provider environment and scales its infrastructure to meet demand. You should use strong authentication and secure transport protocols when connecting into and out of n8n.
+n8n ไม่สามารถรับประกัน IP ต้นทางแบบ static ได้ เพราะ Cloud ทำงานบนโครงสร้างพื้นฐานของ cloud provider ที่เปลี่ยนแปลงและขยายตัวตามการใช้งาน แนะนำให้ใช้ authentication ที่แข็งแรงและ protocol ที่ปลอดภัยเมื่อเชื่อมต่อเข้า-ออก n8n
 ///
 
-Outbound traffic may appear to originate from any of:
+ทราฟฟิกขาออกอาจมาจาก IP เหล่านี้:
 
 * 20.79.227.226/32
 * 20.113.47.122/32

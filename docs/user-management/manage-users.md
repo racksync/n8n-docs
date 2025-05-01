@@ -5,14 +5,14 @@ contentType: howto
 
 # Manage users
 
-The **Settings** > **Users** page shows all users, including ones with pending invitations.
+หน้า **Settings** > **Users** แสดงผู้ใช้ทั้งหมด รวมถึงผู้ใช้ที่คำเชิญยังรอดำเนินการอยู่
 
 ## Delete a user
 
-1. Select the menu icon by the user you want to delete.
-2. Confirm you want to delete them.
-3. If they're an active user, choose whether to copy their workflow data and credentials to a new user, or permanently delete their workflows and credentials.
+1. เลือกไอคอนเมนูข้างผู้ใช้ที่คุณต้องการลบ
+2. ยืนยันว่าคุณต้องการลบพวกเขา
+3. หากพวกเขาเป็นผู้ใช้ที่ใช้งานอยู่ ให้เลือกว่าจะคัดลอกข้อมูล workflow และ credentials ของพวกเขาไปยังผู้ใช้ใหม่ หรือลบ workflows และ credentials ของพวกเขาอย่างถาวร
 
 ## Resend an invitation to a pending user
 
-Click the menu icon by the user, then click **Resend invite**.
+คลิกไอคอนเมนูข้างผู้ใช้ จากนั้นคลิก **Resend invite**

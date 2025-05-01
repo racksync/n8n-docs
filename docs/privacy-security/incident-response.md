@@ -7,9 +7,9 @@ contentType: explanation
 <!-- vale off -->
 # Incident response
 
-n8n implements incident response best practices for identifying, documenting, resolving and communicating incidents. 
+n8n มีการนำแนวปฏิบัติที่ดีที่สุดสำหรับ Incident response มาใช้ เพื่อช่วยในการระบุ, บันทึก, แก้ไขปัญหา และสื่อสารเมื่อเกิด incident ต่างๆ
 
-n8n publishes incident notifications to a status page at [n8n Status](https://status.n8n.cloud/){:target=_blank .external-link}.
+n8n จะประกาศแจ้งเตือน incident ต่างๆ ผ่าน status page ที่ [n8n Status](https://status.n8n.cloud/){:target=_blank .external-link}
 
-n8n notifies customers of any data breaches according to the company's [Data Processing Addendum](https://n8n.io/legal/#data){:target=_blank .external-link}.
+n8n จะแจ้งลูกค้าทุกครั้งหากเกิด Data Breach ตามที่ระบุไว้ใน [Data Processing Addendum](https://n8n.io/legal/#data){:target=_blank .external-link} ของบริษัท
 <!-- vale on -->

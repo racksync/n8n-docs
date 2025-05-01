@@ -6,20 +6,19 @@ contentType: howto
 
 # Update your Cloud version
 
-n8n recommends regularly updating your Cloud version. Check the [Release notes](/release-notes.md) to learn more about changes.
+n8n แนะนำให้อัปเดต Cloud version ของคุณเป็นประจำ ดู [Release notes](/release-notes.md) เพื่อดูรายละเอียดการเปลี่ยนแปลง
 
 /// info
-Only instance owners can upgrade n8n Cloud versions. Contact your instance owner if you don't have permission to update n8n Cloud.
+เฉพาะเจ้าของ instance เท่านั้นที่สามารถอัปเกรด n8n Cloud version ได้ ถ้าคุณไม่มีสิทธิ์อัปเดต ให้ติดต่อเจ้าของ instance
 ///
 
 1. [Log in to the n8n Cloud dashboard](https://app.n8n.cloud/manage){:target=_blank .external-link}
-1. On your dashboard, select **Manage**.
-1. Use the **n8n version** dropdown to select your preferred release version: 
-	* Latest Stable: recommended for most users.
-	* Latest Beta: get the newest n8n. This may be unstable.
-1. Select **Save Changes** to restart your n8n instance and perform the update. 
-1. In the confirmation modal, select **Confirm**.
-
+1. ที่ dashboard ของคุณ เลือก **Manage**
+1. ใช้ **n8n version** dropdown เพื่อเลือก release version ที่ต้องการ:
+	* Latest Stable: แนะนำสำหรับผู้ใช้ทั่วไป
+	* Latest Beta: ได้ n8n เวอร์ชันใหม่สุด อาจไม่เสถียร
+1. กด **Save Changes** เพื่อ restart n8n instance และอัปเดต
+1. ใน modal ยืนยัน ให้เลือก **Confirm**
 
 ## Best practices for updating
 
@@ -27,6 +26,6 @@ Only instance owners can upgrade n8n Cloud versions. Contact your instance owner
 
 ## Automatic update
 
-n8n automatically updates outdated Cloud instances. 
+n8n จะอัปเดต Cloud instance ที่ล้าสมัยให้อัตโนมัติ
 
-If you don't update you instance for 120 days, n8n emails you to warn you to update. After a further 30 days, n8n automatically updates your instance.
+ถ้าคุณไม่อัปเดต instance เกิน 120 วัน n8n จะส่งอีเมลเตือนให้คุณอัปเดต หลังจากนั้นอีก 30 วัน n8n จะอัปเดต instance ของคุณให้อัตโนมัติ

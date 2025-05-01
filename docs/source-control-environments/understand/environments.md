@@ -7,38 +7,38 @@ contentType: explanation
 
 # Environments in n8n
 
-n8n has built its environments feature on top of Git, a version control software. This document helps you understand:
+n8n สร้างฟีเจอร์ environments ขึ้นมาบนพื้นฐานของ Git ซึ่งเป็นซอฟต์แวร์สำหรับ version control เอกสารนี้จะช่วยให้คุณเข้าใจว่า:
 
-* The purpose of environments.
-* How environments work in n8n.
+* จุดประสงค์ของ environments คืออะไร
+* environments ใน n8n ทำงานยังไง
 
 ## Environments: What and why
 
-In software development, the environment is all the infrastructure and tooling around the code, including the tools that run the software, and the specific configuration of those tools. For a more detailed introduction to environments in software development, refer to [Codecademy | Environments](https://www.codecademy.com/article/environments){:target=_blank .external-link}.
+ในสายงาน software development, environment คือทุกอย่างที่เป็น infrastructure และเครื่องมือรอบๆ ตัวโค้ด รวมถึงเครื่องมือที่ใช้รันซอฟต์แวร์ และการตั้งค่าต่างๆ ของเครื่องมือเหล่านั้น ถ้าอยากอ่านแนะนำเรื่อง environments ในสาย software development แบบละเอียดขึ้น ดูได้ที่ [Codecademy | Environments](https://www.codecademy.com/article/environments){:target=_blank .external-link}
 
-Low-code development in n8n is similar. n8n is where you build and run your workflows. Your instance may have particular configurations: on Cloud, n8n determines the configuration. On self-hosted instances, there are extensive [configuration options](/hosting/configuration/configuration-methods.md). You may also have made changes to the settings of your instance. This combination of n8n and your instance's specific configuration and settings is the environment your workflows run in.
+การพัฒนาแบบ low-code ใน n8n ก็คล้ายๆ กัน n8n คือที่ที่คุณสร้างและรัน workflow ของคุณ แต่ละ instance ของคุณอาจจะมีการตั้งค่าที่ต่างกัน: ถ้าใช้บน Cloud, n8n จะเป็นคนกำหนด config ให้ แต่ถ้าเป็น self-hosted instance คุณสามารถตั้งค่าได้เยอะมากๆ ดูรายละเอียดที่ [configuration options](/hosting/configuration/configuration-methods.md) คุณอาจจะมีการเปลี่ยนแปลง settings ของ instance ด้วย ซึ่งทั้งหมดนี้ (n8n + config + settings) ก็คือ environment ที่ workflow ของคุณจะรันอยู่
 
-There are advantages to having more than one environment. A common pattern is to have different environments for development and production:
+การมี environment มากกว่าหนึ่งมีข้อดี เช่น pattern ที่เจอบ่อยคือแยก environment สำหรับ development กับ production:
 
-* Development: do work and make changes.
-* Production: the live environment.
+* Development: เอาไว้ทำงานและแก้ไข
+* Production: คือ environment ที่ใช้งานจริง
 
-A setup like this helps you make changes to workflows without breaking workflows that are in use.
+การแยกแบบนี้ช่วยให้คุณแก้ไข workflow ได้โดยไม่ไปกระทบ workflow ที่กำลังใช้งานจริง
 
 ## Environments in n8n
 
-In n8n, an environment comprises two parts, an n8n instance and a Git branch:
+ใน n8n, environment จะประกอบด้วย 2 ส่วน คือ n8n instance กับ Git branch:
 
-* The n8n instance is where you build and run workflows.
-* The Git branch stores copies of the workflows, as well as tags, and variable and credential stubs.
+* n8n instance คือที่ที่คุณสร้างและรัน workflow
+* Git branch จะเก็บสำเนา workflow, tags, และ variable/credential stubs
 
-n8n doesn't sync credentials and variable values with Git. You must set up the credentials and variable values manually when setting up a new instance. For more information, refer to [Push and pull | What gets committed](/source-control-environments/using/push-pull.md#what-gets-committed) and [Manage variables](/source-control-environments/using/manage-variables.md).
+n8n จะไม่ sync credentials กับ variable values ไปที่ Git คุณต้องตั้งค่า credentials กับ variable values เองตอนตั้ง instance ใหม่ ดูรายละเอียดที่ [Push and pull | What gets committed](/source-control-environments/using/push-pull.md#what-gets-committed) และ [Manage variables](/source-control-environments/using/manage-variables.md)
 
-How you copy work between environments depends on your branch and n8n instance configuration:
+วิธีการ copy งานระหว่าง environments จะขึ้นอยู่กับการตั้งค่า branch กับ instance ของคุณ:
 
-* Multiple instances, one branch: you can push from one instance to the Git branch, then pull the work to another instance.
-* Multiple instances, multiple branches: you need to create a pull request and merge in your Git provider. For example, if you have development, test, and production branches, each linked to their own instance, you need to merge the development branch into test to make the work from the development instance available on the test instance. Refer to [Copy work between environments](/source-control-environments/using/copy-work.md) for more information, including steps to partially automate the process.
+* มีหลาย instance แต่ใช้ branch เดียว: คุณ push งานจาก instance หนึ่งไปที่ Git branch แล้วไป pull งานนั้นที่อีก instance ได้เลย
+* มีหลาย instance หลาย branch: คุณต้องสร้าง pull request และ merge ใน Git provider เช่น ถ้ามี branch สำหรับ development, test, production แต่ละอันผูกกับ instance ของตัวเอง คุณต้อง merge branch development ไป test ก่อน งานจาก development instance ถึงจะไปโผล่ที่ test instance ได้ ดูรายละเอียดที่ [Copy work between environments](/source-control-environments/using/copy-work.md) มีขั้นตอนและวิธี automate บางส่วนด้วย
 
-For detailed guidance on pushing and pulling work, refer to [Push and pull](/source-control-environments/using/push-pull.md).
+ถ้าอยากดูวิธี push/pull งานแบบละเอียด ดูที่ [Push and pull](/source-control-environments/using/push-pull.md)
 
-Refer to [Set up source control](/source-control-environments/setup.md) to learn more about linking your n8n instance to Git, or follow the [Tutorial: Create environments with source control](/source-control-environments/create-environments.md) to set up your environments using one of n8n's recommended configurations.
+ดูวิธีเชื่อม n8n instance กับ Git ได้ที่ [Set up source control](/source-control-environments/setup.md) หรือจะลองทำตาม [Tutorial: Create environments with source control](/source-control-environments/create-environments.md) ก็ได้

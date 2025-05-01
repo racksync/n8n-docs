@@ -8,21 +8,21 @@ description: How to copy execution data into your current workflow in order to d
 # Debug and re-run past executions
 
 /// info | Feature availability
-Available on n8n Cloud and registered Community plans.
+มีให้ใช้งานบน n8n Cloud และ registered Community plans
 ///
 
-You can load data from a previous execution into your current workflow. This is useful for debugging data from failed production executions: you can see a failed execution, make changes to your workflow to fix it, then re-run it with the previous execution data.
+คุณสามารถโหลดข้อมูลจาก execution ก่อนหน้าเข้ามาใน workflow ปัจจุบันของคุณได้ สิ่งนี้มีประโยชน์สำหรับการ debug ข้อมูลจาก production executions ที่ล้มเหลว: คุณสามารถดู execution ที่ล้มเหลว ทำการเปลี่ยนแปลง workflow ของคุณเพื่อแก้ไข แล้วรันซ้ำด้วยข้อมูล execution ก่อนหน้า
 
 ## Load data
 
-To load data from a previous execution:
+วิธีโหลดข้อมูลจาก execution ก่อนหน้า:
 
-1. In your workflow, select the **Executions** tab to view the **Executions** list.
-1. Select the execution you want to debug. n8n displays options depending on whether the workflow was successful or failed:
-	* For failed executions: select **Debug in editor**.
-	* For successful executions: select **Copy to editor**.
-1. n8n copies the execution data into your current workflow, and [pins the data](/data/data-pinning.md) in the first node in the workflow.
+1. ใน workflow ของคุณ เลือกแท็บ **Executions** เพื่อดูรายการ **Executions**
+1. เลือก execution ที่คุณต้องการ debug n8n จะแสดงตัวเลือกขึ้นอยู่กับว่า workflow สำเร็จหรือล้มเหลว:
+	* สำหรับ executions ที่ล้มเหลว: เลือก **Debug in editor**
+	* สำหรับ executions ที่สำเร็จ: เลือก **Copy to editor**
+1. n8n จะคัดลอกข้อมูล execution เข้ามาใน workflow ปัจจุบันของคุณ และ [pins the data](/data/data-pinning.md) ใน node แรกของ workflow
 
 /// note | Check which executions you save
-The executions available on the **Executions** list depends on your [Workflow settings](/workflows/settings.md).
+Executions ที่มีอยู่ในรายการ **Executions** ขึ้นอยู่กับ [Workflow settings](/workflows/settings.md) ของคุณ
 ///

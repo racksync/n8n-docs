@@ -6,7 +6,7 @@ contentType: howto
 
 # Find your workflow ID
 
-Your workflow ID is available in:
+Workflow ID ของคุณมีอยู่ใน:
 
-* The URL of the open workflow.
-* The workflow settings title.
+* URL ของ workflow ที่เปิดอยู่
+* หัวข้อการตั้งค่า workflow (workflow settings title)

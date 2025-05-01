@@ -8,14 +8,14 @@ description: Set up and use role-based access control (RBAC) in n8n.
 # Role-based access control (RBAC)
 
 /// info | Feature availability
-RBAC is available on all plans except the Community edition. Different plans have different numbers of projects and roles. Refer to n8n's [pricing page](https://n8n.io/pricing/){:target=_blank .external-link} for plan details.
+RBAC มีให้ใช้งานในทุก plan ยกเว้น Community edition แต่ละ plan จะมีจำนวน projects และ roles ที่แตกต่างกัน โปรดดูรายละเอียด plan ได้ที่ [pricing page](https://n8n.io/pricing/){:target=_blank .external-link} ของ n8n
 ///
 
 /// note | Role types and account types
-Role types and [account types](/user-management/account-types.md) are different things. Every account has one type. The account can have different role types for different [projects](/user-management/rbac/projects.md).
+Role types และ [account types](/user-management/account-types.md) เป็นคนละอย่างกัน ทุก account จะมี type เพียงอย่างเดียว แต่ account นั้นสามารถมี role types ที่แตกต่างกันสำหรับ [projects](/user-management/rbac/projects.md) ที่ต่างกันได้
 ///
 
-RBAC is a way of managing access to workflows and [credentials](/glossary.md#credential-n8n) based on user roles and projects. You group workflows into projects, and user access depends on the user's project role. This section provides guidance on using RBAC in n8n.
+RBAC เป็นวิธีการจัดการการเข้าถึง workflows และ [credentials](/glossary.md#credential-n8n) โดยอิงตาม user roles และ projects คุณสามารถจัดกลุ่ม workflows ลงใน projects และการเข้าถึงของผู้ใช้จะขึ้นอยู่กับ project role ของผู้ใช้นั้นๆ ส่วนนี้จะให้คำแนะนำเกี่ยวกับการใช้ RBAC ใน n8n
 
 [[% import "_macros/section-toc.html" as sectionToc %]]
 

@@ -6,63 +6,63 @@ contentType: tutorial
 
 # The very quick quickstart
 
-This quickstart gets you started using n8n as quickly as possible. Its allows you to try out the UI and introduces two key features: [workflow templates](/glossary.md#template-n8n) and [expressions](/glossary.md#expression-n8n). It doesn't include detailed explanations or explore concepts in-depth.
+Quickstart นี้จะช่วยให้คุณเริ่มต้นใช้งาน n8n ได้เร็วที่สุด ให้คุณลองใช้ UI และแนะนำฟีเจอร์หลักสองอย่าง: [workflow templates](/glossary.md#template-n8n) และ [expressions](/glossary.md#expression-n8n) โดยไม่ได้ลงรายละเอียดหรืออธิบายแนวคิดเชิงลึก
 
-In this tutorial, you will:
+ใน tutorial นี้ คุณจะได้:
 
-* Load a [workflow](/glossary.md#workflow-n8n) from the workflow templates library
-* Add a node and configure it using expressions
-* Run your first workflow
+* โหลด [workflow](/glossary.md#workflow-n8n) จาก workflow templates library
+* เพิ่ม node และตั้งค่าด้วย expressions
+* รัน workflow แรกของคุณ
 
 ## Step one: Sign up for n8n
 
-This quickstart uses [n8n Cloud](/manage-cloud/overview.md). A free trial is available for new users. If you haven't already done so, [sign up](https://app.n8n.cloud/register) for an account now.
+Quickstart นี้ใช้ [n8n Cloud](/manage-cloud/overview.md) มีรุ่นทดลองใช้ฟรีสำหรับผู้ใช้ใหม่ ถ้ายังไม่มีบัญชี [สมัครเลย](https://app.n8n.cloud/register)
 
 ## Step two: Open a workflow template
 
-n8n provides a quickstart template using training nodes. You can use this to work with fake data and avoid setting up [credentials](/glossary.md#credential-n8n).
+n8n มี quickstart template ที่ใช้ training nodes คุณสามารถใช้เพื่อทดลองกับข้อมูลจำลองและไม่ต้องตั้งค่า [credentials](/glossary.md#credential-n8n)
 
-1. Go to [Templates | Very quick quickstart](https://n8n.io/workflows/1700-very-quick-quickstart/).
-1. Select **Use workflow** to view the options for using the template.
-1. Select **Import template to <name> cloud workspace** to load the template into your Cloud instance.
+1. ไปที่ [Templates | Very quick quickstart](https://n8n.io/workflows/1700-very-quick-quickstart/)
+1. เลือก **Use workflow** เพื่อดูตัวเลือกการใช้งาน template
+1. เลือก **Import template to <name> cloud workspace** เพื่อโหลด template ไปยัง Cloud instance ของคุณ
 
-This workflow:
+Workflow นี้จะ:
 
-1. Gets example data from the [Customer Datastore](/integrations/builtin/app-nodes/n8n-nodes-base.n8ntrainingcustomerdatastore.md) node.
-2. Uses the [Edit Fields](/integrations/builtin/core-nodes/n8n-nodes-base.set.md) node to extract only the desired data and assigns that data to variables. In this example, you map the customer name, ID, and description.
+1. ดึงข้อมูลตัวอย่างจาก [Customer Datastore](/integrations/builtin/app-nodes/n8n-nodes-base.n8ntrainingcustomerdatastore.md) node
+2. ใช้ [Edit Fields](/integrations/builtin/core-nodes/n8n-nodes-base.set.md) node เพื่อดึงเฉพาะข้อมูลที่ต้องการและ map ข้อมูลนั้นให้กับตัวแปร ตัวอย่างนี้จะ map ชื่อลูกค้า, ID และคำอธิบาย
 
-The individual pieces in an n8n workflow are called [nodes](/glossary.md#node-n8n). Double click a node to explore its settings and how it processes data.
+แต่ละส่วนใน n8n workflow เรียกว่า [nodes](/glossary.md#node-n8n) ดับเบิลคลิกที่ node เพื่อดูการตั้งค่าและวิธีประมวลผลข้อมูล
 
 ## Step three: Run the workflow
 
-Select **Test Workflow**. This runs the workflow, loading the data from the Customer Datastore node, then transforming it with Edit Fields. You need this data available in the workflow so that you can work with it in the next step.
+เลือก **Test Workflow** เพื่อรัน workflow โดยโหลดข้อมูลจาก Customer Datastore node แล้วแปลงข้อมูลด้วย Edit Fields คุณต้องมีข้อมูลนี้ใน workflow เพื่อใช้ในขั้นตอนถัดไป
 
 ## Step four: Add a node
 
-Add a third node to message each customer and tell them their description. Use the Customer Messenger node to send a message to fake recipients.
+เพิ่ม node ที่สามเพื่อส่งข้อความถึงลูกค้าแต่ละคนและแจ้งคำอธิบายของเขา ใช้ Customer Messenger node เพื่อส่งข้อความไปยังผู้รับจำลอง
 
-1. Select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> connector on the Edit Fields node.
-2. Search for **Customer Messenger**. n8n shows a list of nodes that match the search.
-3. Select **Customer Messenger (n8n training)** to add the node to the [canvas](/glossary.md#canvas-n8n). n8n opens the node automatically.
-4. Use [expressions](/code/expressions.md) to map in the **Customer ID** and create the **Message**:
-	1. In the **INPUT** panel select the **Schema** tab.
-	2. Drag **Edit Fields1** > **customer_id** into the **Customer ID** field in the node settings.
-    2. Hover over **Message**. Select the **Expression** tab, then select the expand button <span class="inline-image">![Add node icon](/_images/common-icons/open-expression-editor.png){.off-glb}</span> to open the full expressions editor.
-    3. Copy this expression into the editor:
+1. เลือกตัวเชื่อมต่อ **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> บน Edit Fields node
+2. ค้นหา **Customer Messenger** n8n จะแสดงรายการ nodes ที่ตรงกับที่ค้นหา
+3. เลือก **Customer Messenger (n8n training)** เพื่อเพิ่ม node ลงบน [canvas](/glossary.md#canvas-n8n) n8n จะเปิด node ให้อัตโนมัติ
+4. ใช้ [expressions](/code/expressions.md) เพื่อ map **Customer ID** และสร้าง **Message**:
+    1. ในแผง **INPUT** เลือกแท็บ **Schema**
+    2. ลาก **Edit Fields1** > **customer_id** ไปที่ช่อง **Customer ID** ในการตั้งค่า node
+    2. เอาเมาส์ไปวางบน **Message** เลือกแท็บ **Expression** แล้วกดปุ่มขยาย <span class="inline-image">![Add node icon](/_images/common-icons/open-expression-editor.png){.off-glb}</span> เพื่อเปิด editor เต็ม
+    3. คัดลอก expression นี้ไปใส่ใน editor:
         ```
         Hi {{ $json.customer_name }}. Your description is: {{ $json.customer_description }}
         ```
-5. Close the expressions editor, then close the **Customer Messenger** node by clicking outside the node or selecting **Back to canvas**.
-6. Select **Test Workflow**. n8n runs the workflow.
+5. ปิด editor expression แล้วปิด **Customer Messenger** node โดยคลิกนอก node หรือเลือก **Back to canvas**
+6. เลือก **Test Workflow** n8n จะรัน workflow
 
-The complete workflow should look like this:
+Workflow ที่สมบูรณ์ควรจะหน้าตาแบบนี้:
 
 [[ workflowDemo("file:///try-it-out/quickstart/very-quick-quickstart-workflow.json") ]]
 
 
 ## Next steps
 
-* Read n8n's [longer try it out tutorial](/try-it-out/tutorial-first-workflow.md) for a more complex workflow, and an introduction to more features and n8n concepts.
-* Take the [text courses](/courses/index.md) or [video courses](/video-courses.md).
+* อ่าน [tutorial ลองใช้งานที่ยาวขึ้น](/try-it-out/tutorial-first-workflow.md) ของ n8n สำหรับ workflow ที่ซับซ้อนขึ้น และแนะนำฟีเจอร์กับแนวคิดของ n8n เพิ่มเติม
+* เรียน [text courses](/courses/index.md) หรือ [video courses](/video-courses.md)
 
 

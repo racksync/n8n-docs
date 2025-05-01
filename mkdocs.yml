@@ -21,7 +21,7 @@ theme:
   language: custom
   logo: _images/n8n-docs-icon.svg
   palette:
-    scheme: dark
+    scheme: light
   features:
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-header/#announcement-bar
     - announce.dismiss

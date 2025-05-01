@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # PayPal Trigger node
 
-[PayPal](https://paypal.com){:target=_blank .external-link} is a digital payment service that supports online fund transfers that customers can use when shopping online.
+[PayPal](https://paypal.com){:target=_blank .external-link} คือบริการชำระเงินดิจิทัลที่รองรับการโอนเงินออนไลน์ ลูกค้าสามารถใช้เวลาช้อปปิ้งออนไลน์ได้สะดวกขึ้น
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/paypal.md).
+คุณสามารถดูข้อมูลเกี่ยวกับการเชื่อมต่อบัญชี (authentication) สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/paypal.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [PayPal Trigger integrations](https://n8n.io/integrations/paypal-trigger/){:target=_blank .external-link} page.
+ถ้าอยากดูตัวอย่างการใช้งานหรือ template สำหรับเริ่มต้น ลองดูที่หน้า [PayPal Trigger integrations](https://n8n.io/integrations/paypal-trigger/){:target=_blank .external-link} ของ n8n ได้เลย
 ///

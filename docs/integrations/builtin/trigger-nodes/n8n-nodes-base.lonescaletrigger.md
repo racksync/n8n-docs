@@ -7,16 +7,16 @@ contentType: [integration, reference]
 
 # LoneScale Trigger node
 
-Use the LoneScale Trigger node to respond to workflow events in [LoneScale](https://www.lonescale.com/){:target=_blank .external-link} and integrate LoneScale with other applications.
+ใช้ LoneScale Trigger node เพื่อตอบสนอง workflow events ใน [LoneScale](https://www.lonescale.com/){:target=_blank .external-link} และเชื่อมต่อ LoneScale กับแอปอื่น ๆ ได้
 
-On this page, you'll find a list of operations the LoneScale node supports, and links to more resources.
+ในหน้านี้ คุณจะเห็นรายการ operations ที่ node LoneScale รองรับ และลิงก์ไปยัง resource อื่น ๆ
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/lonescale.md).
+คุณสามารถดูข้อมูลการเชื่อมต่อสำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/lonescale.md)
 ///
 
 /// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [LoneScale Trigger integrations](https://n8n.io/integrations/lonescale-trigger/){:target=_blank .external-link} page.
+สำหรับตัวอย่างการใช้งานและ template ที่จะช่วยให้คุณเริ่มต้นได้ง่ายขึ้น ดูได้ที่หน้า [LoneScale Trigger integrations](https://n8n.io/integrations/lonescale-trigger/){:target=_blank .external-link} ของ n8n
 ///
 
 ## Events
@@ -25,6 +25,6 @@ For usage examples and templates to help you get started, refer to n8n's [LoneSc
 
 ## Related resources
 
-n8n provides an app node for LoneScale. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.lonescale.md).
+n8n มี app node สำหรับ LoneScale ด้วย คุณสามารถดูเอกสาร node ได้ [ที่นี่](/integrations/builtin/app-nodes/n8n-nodes-base.lonescale.md)
 
-View [example workflows and related content](https://n8n.io/integrations/lonescale-trigger/){:target=_blank .external-link} on n8n's website.
+ดู [example workflows และเนื้อหาอื่น ๆ ที่เกี่ยวข้อง](https://n8n.io/integrations/lonescale-trigger/){:target=_blank .external-link} ได้ที่เว็บไซต์ n8n

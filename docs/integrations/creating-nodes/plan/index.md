@@ -5,11 +5,11 @@ contentType: overview
 
 # Plan a node
 
-This section provides guidance on designing your node, including key technical decisions such as choosing your node building style.
+หน้านี้จะให้คำแนะนำเกี่ยวกับการออกแบบ node ของคุณ รวมถึงการตัดสินใจทางเทคนิคที่สำคัญ เช่น การเลือกสไตล์การสร้าง node
 
-When building a node, there are design choices you need to make before you start:
+ก่อนจะเริ่มสร้าง node มีเรื่องที่ควรตัดสินใจก่อน เช่น:
 
-* Which [node type](/integrations/creating-nodes/plan/node-types.md) you need to build.
-* Which [node building style](/integrations/creating-nodes/plan/choose-node-method.md) to use.
-* Your [UI design and UX principles](/integrations/creating-nodes/plan/node-ui-design.md)
-* Your node's [file structure](/integrations/creating-nodes/build/reference/node-file-structure.md).
+* จะสร้าง [node type](/integrations/creating-nodes/plan/node-types.md) แบบไหน
+* จะใช้ [node building style](/integrations/creating-nodes/plan/choose-node-method.md) แบบไหน
+* หลักการออกแบบ [UI design และ UX principles](/integrations/creating-nodes/plan/node-ui-design.md)
+* โครงสร้างไฟล์ของ node [file structure](/integrations/creating-nodes/build/reference/node-file-structure.md)

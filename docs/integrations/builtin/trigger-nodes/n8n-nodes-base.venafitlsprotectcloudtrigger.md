@@ -7,14 +7,14 @@ contentType: [integration, reference]
 
 # Venafi TLS Protect Cloud Trigger node
 
-[Venafi](https://www.venafi.com/){:target=_blank .external-link} is a cybersecurity company providing services for machine identity management. They offer solutions to manage and protect identities for a wide range of machine types, delivering global visibility, lifecycle automation, and actionable intelligence.
+[Venafi](https://www.venafi.com/){:target=_blank .external-link} เป็นบริษัทด้าน cybersecurity ที่ให้บริการจัดการ identity ของเครื่อง (machine identity management) โดยมีโซลูชันสำหรับจัดการและปกป้อง identity ของเครื่องหลากหลายประเภท ให้การมองเห็นทั่วโลก, การจัดการวงจรอัตโนมัติ และข้อมูลเชิงลึกที่นำไปใช้ได้จริง
 
-Use the n8n Venafi TLS Protect Cloud Trigger node to start a workflow in n8n in response to events in the [cloud-based Venafi TLS Protect](https://vaas.venafi.com/){:target=_blank} service.
+ใช้ n8n Venafi TLS Protect Cloud Trigger node เพื่อเริ่ม workflow ใน n8n เมื่อมี event จากบริการ [Venafi TLS Protect บนคลาวด์](https://vaas.venafi.com/){:target=_blank}
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/venafitlsprotectcloud.md).
+คุณสามารถดูข้อมูลการตั้งค่า authentication สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/venafitlsprotectcloud.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Venafi TLS Protect Cloud Trigger integrations](https://n8n.io/integrations/venafi-tls-protect-cloud-trigger/){:target=_blank .external-link} page.
+สำหรับตัวอย่างการใช้งานและ template ที่ช่วยให้เริ่มต้นได้ง่ายขึ้น ดูได้ที่ [Venafi TLS Protect Cloud Trigger integrations ของ n8n](https://n8n.io/integrations/venafi-tls-protect-cloud-trigger/){:target=_blank .external-link}
 ///

@@ -8,14 +8,14 @@ priority: high
 
 # Google Sheets Trigger node
 
-[Google Sheets](https://www.google.com/sheets){:target=_blank} is a web-based spreadsheet program that's part of Google's office software suite within its Google Drive service.
+[Google Sheets](https://www.google.com/sheets){:target=_blank} คือโปรแกรม spreadsheet บนเว็บที่เป็นส่วนหนึ่งของ Google Drive
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/google/index.md).
+คุณสามารถดูข้อมูลเกี่ยวกับการตั้งค่า credentials สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/google/index.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Google Sheets Trigger integrations](https://n8n.io/integrations/google-sheets-trigger/){:target=_blank .external-link} page.
+สำหรับตัวอย่างการใช้งานและ template ที่จะช่วยให้คุณเริ่มต้นได้ง่ายขึ้น ดูได้ที่หน้า [Google Sheets Trigger integrations](https://n8n.io/integrations/google-sheets-trigger/){:target=_blank .external-link} ของ n8n
 ///
 
 ## Events
@@ -26,12 +26,12 @@ For usage examples and templates to help you get started, refer to n8n's [Google
 
 ## Related resources
 
-Refer to [Google Sheet's API documentation](https://developers.google.com/sheets/api){:target=_blank .external-link} for more information about the service.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับ API ได้ที่ [Google Sheet's API documentation](https://developers.google.com/sheets/api){:target=_blank .external-link}
 
-n8n provides an app node for Google Sheets. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/index.md).
+n8n มี app node สำหรับ Google Sheets ด้วย ดูเอกสาร node ได้ [ที่นี่](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/index.md)
 
-View [example workflows and related content](https://n8n.io/integrations/google-sheets-trigger/){:target=_blank .external-link} on n8n's website.
+ดู [ตัวอย่าง workflow และเนื้อหาที่เกี่ยวข้อง](https://n8n.io/integrations/google-sheets-trigger/){:target=_blank .external-link} บนเว็บไซต์ n8n
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/trigger-nodes/n8n-nodes-base.googlesheetstrigger/common-issues.md).
+สำหรับคำถามหรือปัญหาที่พบบ่อยและวิธีแก้ไข ดูได้ที่ [Common issues](/integrations/builtin/trigger-nodes/n8n-nodes-base.googlesheetstrigger/common-issues.md)

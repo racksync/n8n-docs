@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Bitbucket Trigger node
 
-[Bitbucket](https://bitbucket.org/){:target=_blank .external-link} is a web-based version control repository hosting service owned by Atlassian, for source code and development projects that use either Mercurial or Git revision control systems.
+[Bitbucket](https://bitbucket.org/){:target=_blank .external-link} เป็นบริการ repository สำหรับ version control ที่พัฒนาโดย Atlassian รองรับทั้ง Mercurial และ Git เหมาะสำหรับเก็บ source code และ project development
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/bitbucket.md).
+คุณสามารถดูข้อมูลการตั้งค่า authentication สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/bitbucket.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Bitbucket Trigger integrations](https://n8n.io/integrations/bitbucket-trigger/){:target=_blank .external-link} page.
+ถ้าต้องการดูตัวอย่างการใช้งานและ workflow template เพื่อเริ่มต้นใช้งาน ลองดูที่หน้า [Bitbucket Trigger integrations](https://n8n.io/integrations/bitbucket-trigger/){:target=_blank .external-link} ของ n8n ได้เลย
 ///

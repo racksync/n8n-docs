@@ -8,53 +8,53 @@ priority: critical
 
 # Telegram Trigger node
 
-[Telegram](https://telegram.org/){:target=_blank .external-link} is a cloud-based instant messaging and voice over IP service. Users can send messages and exchange photos, videos, stickers, audio, and files of any type. On this page, you'll find a list of events the Telegram Trigger node can respond to and links to more resources.
+[Telegram](https://telegram.org/){:target=_blank .external-link} คือบริการแชทและโทรศัพท์ผ่านอินเทอร์เน็ตแบบ cloud-based ผู้ใช้สามารถส่งข้อความ รูป วิดีโอ สติกเกอร์ เสียง และไฟล์ทุกประเภทได้ ในหน้านี้จะมีรายการ event ที่ Telegram Trigger node ตอบสนองได้ และลิงก์ไปยัง resource เพิ่มเติม
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/telegram.md).
+คุณสามารถดูข้อมูลเกี่ยวกับการตั้งค่า credentials สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/telegram.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Telegram Trigger integrations](https://n8n.io/integrations/telegram-trigger/){:target=_blank .external-link} page.
+สำหรับตัวอย่างการใช้งานและ template ที่จะช่วยให้คุณเริ่มต้นได้ง่ายขึ้น ดูได้ที่หน้า [Telegram Trigger integrations](https://n8n.io/integrations/telegram-trigger/){:target=_blank .external-link} ของ n8n
 ///
 
 ## Events
 
-- **`*`**: All updates except "Chat Member", "Message Reaction", and "Message Reaction Count" (default behavior of Telegram API as they produces a lot of calls of updates).
-- **Business Connection**: Trigger when the bot is connected to or disconnected from a business account, or a user edited an existing connection with the bot.
-- **Business Message**: Trigger on a new message from a connected business account.
-- **Callback Query**: Trigger on new incoming callback query.
-- **Channel Post**: Trigger on new incoming channel post of any kind — including text, photo, sticker, and so on.
-- **Chat Boost**: Trigger when a chat boost is added or changed. The bot must be an administrator in the chat to receive these updates.
-- **Chat Join Request**: Trigger when a request to join the chat is sent. The bot must have the `can_invite_users` administrator right in the chat to receive these updates.
-- **Chat Member**: Trigger when a chat member's status is updated. The bot must be an administrator in the chat.
-- **Chosen Inline Result**: Trigger when the result of an inline query chosen by a user is sent. Please see Telegram's API documentation on [feedback collection](https://core.telegram.org/bots/inline#collecting-feedback) for details on how to enable these updates for your bot.
-- **Deleted Business Messages**: Trigger when messages are deleted from a connected business account.
-- **Edited Business Message**: Trigger on new version of a message from a connected business account.
-- **Edited Channel Post**: Trigger on new version of a channel post that is known to the bot is edited.
-- **Edited Message**: Trigger on new version of a channel post that is known to the bot is edited.
-- **Inline Query**: Trigger on new incoming inline query.
-- **Message**: Trigger on new incoming message of any kind — text, photo, sticker, and so on.
-- **Message Reaction**: Trigger when a reaction to a message is changed by a user. The bot must be an administrator in the chat. The update isn't received for reactions set by bots.
-- **Message Reaction Count**: Trigger when reactions to a message with anonymous reactions are changed. The bot must be an administrator in the chat. The updates are grouped and can be sent with delay up to a few minutes.
-- **My Chat Member**: Trigger when the bot's chat member status is updated in a chat. For private chats, this update is received only when the bot is blocked or unblocked by the user.
-- **Poll**: Trigger on new poll state. Bots only receive updates about stopped polls and polls which are sent by the bot.
-- **Poll Answer**: Trigger when user changes their answer in a non-anonymous poll. Bots only receive new votes in polls that were sent by the bot itself.
-- **Pre-Checkout Query**: Trigger on new incoming pre-checkout query. Contains full information about checkout.
-- **Purchased Paid Media**: Trigger when a user purchases paid media with a non-empty payload sent by the bot in a non-channel chat.
-- **Removed Chat Boost**: Trigger when a boost is removed from a chat. The bot must be an administrator in the chat to receive these updates.
-- **Shipping Query**: Trigger on new incoming shipping query. Only for invoices with flexible price.
+- **`*`**: ทุก update ยกเว้น "Chat Member", "Message Reaction", และ "Message Reaction Count" (เป็น default ของ Telegram API เพราะ event เหล่านี้จะเรียกบ่อยมาก)
+- **Business Connection**: trigger เมื่อ bot เชื่อมต่อหรือถูกตัดกับ business account หรือผู้ใช้แก้ไขการเชื่อมต่อกับ bot
+- **Business Message**: trigger เมื่อมีข้อความใหม่จาก business account ที่เชื่อมต่อ
+- **Callback Query**: trigger เมื่อมี callback query ใหม่เข้ามา
+- **Channel Post**: trigger เมื่อมี channel post ใหม่เข้ามา (ทุกประเภท เช่น ข้อความ รูป สติกเกอร์ ฯลฯ)
+- **Chat Boost**: trigger เมื่อมีการเพิ่มหรือเปลี่ยนแปลง chat boost bot ต้องเป็น admin ใน chat ถึงจะรับ event นี้ได้
+- **Chat Join Request**: trigger เมื่อมี request ขอเข้าร่วม chat bot ต้องมีสิทธิ์ `can_invite_users` ใน chat
+- **Chat Member**: trigger เมื่อสถานะสมาชิกใน chat เปลี่ยนแปลง bot ต้องเป็น admin ใน chat
+- **Chosen Inline Result**: trigger เมื่อมีการเลือกผลลัพธ์ inline query ดูวิธีเปิด event นี้ใน [feedback collection](https://core.telegram.org/bots/inline#collecting-feedback) ของ Telegram
+- **Deleted Business Messages**: trigger เมื่อข้อความถูกลบจาก business account ที่เชื่อมต่อ
+- **Edited Business Message**: trigger เมื่อมีข้อความใหม่จาก business account ที่เชื่อมต่อ
+- **Edited Channel Post**: trigger เมื่อ channel post ที่ bot รู้จักถูกแก้ไข
+- **Edited Message**: trigger เมื่อ channel post ที่ bot รู้จักถูกแก้ไข
+- **Inline Query**: trigger เมื่อมี inline query ใหม่เข้ามา
+- **Message**: trigger เมื่อมีข้อความใหม่เข้ามา (ทุกประเภท เช่น ข้อความ รูป สติกเกอร์ ฯลฯ)
+- **Message Reaction**: trigger เมื่อมีการเปลี่ยนแปลง reaction ใน message โดย user bot ต้องเป็น admin ใน chat (ไม่รับ update จาก reaction ที่ bot เป็นคน set)
+- **Message Reaction Count**: trigger เมื่อ reaction ของ message ที่เป็น anonymous เปลี่ยนแปลง bot ต้องเป็น admin ใน chat (update นี้จะ grouped และอาจ delay ได้ถึงไม่กี่นาที)
+- **My Chat Member**: trigger เมื่อสถานะสมาชิกของ bot ใน chat เปลี่ยนแปลง สำหรับ private chat จะรับ update เฉพาะตอนถูก block/unblock
+- **Poll**: trigger เมื่อ poll เปลี่ยนสถานะ bot จะรับเฉพาะ poll ที่ bot เป็นคนส่งหรือ poll ที่หยุดแล้ว
+- **Poll Answer**: trigger เมื่อ user เปลี่ยนคำตอบใน poll ที่ไม่ anonymous bot จะรับเฉพาะ vote ใหม่ใน poll ที่ bot เป็นคนส่ง
+- **Pre-Checkout Query**: trigger เมื่อมี pre-checkout query ใหม่เข้ามา (ข้อมูล checkout เต็ม)
+- **Purchased Paid Media**: trigger เมื่อ user ซื้อ paid media ที่มี payload จาก bot ใน non-channel chat
+- **Removed Chat Boost**: trigger เมื่อ boost ถูกลบออกจาก chat bot ต้องเป็น admin ใน chat
+- **Shipping Query**: trigger เมื่อมี shipping query ใหม่เข้ามา (เฉพาะ invoice ที่ flexible price)
 
-Some **events may require additional permissions**, see [Telegram's API documentation](https://core.telegram.org/bots/api#getting-updates) for more information.
+**บาง event ต้องใช้ permission เพิ่มเติม** ดูรายละเอียดที่ [Telegram's API documentation](https://core.telegram.org/bots/api#getting-updates)
 
 ## Related resources
 
-n8n provides an app node for Telegram. You can find the node docs [here](/integrations/builtin/credentials/telegram.md).
+n8n มี app node สำหรับ Telegram ด้วย ดูเอกสาร node ได้ [ที่นี่](/integrations/builtin/credentials/telegram.md)
 
-View [example workflows and related content](https://n8n.io/integrations/telegram-trigger/){:target=_blank .external-link} on n8n's website.
+ดู [ตัวอย่าง workflow และเนื้อหาที่เกี่ยวข้อง](https://n8n.io/integrations/telegram-trigger/){:target=_blank .external-link} บนเว็บไซต์ n8n
 
-Refer to [Telegram's API documentation](https://core.telegram.org/bots/api){:target=_blank .external-link} for details about their API.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับ API ได้ที่ [Telegram's API documentation](https://core.telegram.org/bots/api){:target=_blank .external-link}
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/common-issues.md).
+สำหรับคำถามหรือปัญหาที่พบบ่อยและวิธีแก้ไข ดูได้ที่ [Common issues](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/common-issues.md)

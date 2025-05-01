@@ -7,10 +7,10 @@ contentType: reference
 
 # Programmatic-style execute() method
 
-The main difference between the declarative and programmatic styles is how they handle incoming data and build API requests. The programmatic style requires an `execute()` method, which reads incoming data and parameters, then builds a request. The declarative style handles requests using the `routing` key in the `operations` object.
+ความแตกต่างหลักระหว่าง declarative กับ programmatic style คือวิธีจัดการข้อมูลที่เข้ามาและการสร้าง API request แบบ programmatic จะต้องมี method `execute()` ซึ่งจะอ่านข้อมูลและ parameters ที่เข้ามา แล้วสร้าง request ขึ้นมา ส่วน declarative จะใช้ key `routing` ใน object ของ operations แทน
 
-The `execute()` method creates and returns an instance of `INodeExecutionData`.
+method `execute()` จะสร้างและ return instance ของ `INodeExecutionData`
 
 /// warning | Paired items
-You must include input and output item pairing information in the data you return. For more information, refer to [Paired items](/integrations/creating-nodes/build/reference/paired-items.md).
+คุณต้องใส่ข้อมูลการจับคู่ input และ output item ในข้อมูลที่ return ด้วย ดูรายละเอียดเพิ่มเติมที่ [Paired items](/integrations/creating-nodes/build/reference/paired-items.md)
 ///

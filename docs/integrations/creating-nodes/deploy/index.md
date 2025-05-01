@@ -5,9 +5,9 @@ contentType: overview
 
 # Deploy a node
 
-This section contains details on how to deploy and share your node.
+หน้านี้จะอธิบายรายละเอียดเกี่ยวกับวิธี Deploy และแชร์ node ของคุณ
 
-You can choose to:
+คุณสามารถเลือกได้ว่า:
 
-* [Submit your node to the community node repository](/integrations/creating-nodes/deploy/submit-community-nodes.md). This makes it available for everyone to use, and allows you to [install and use it](/integrations/community-nodes/installation/index.md) like any other community node. This is the only way to use custom nodes on cloud.
-* Install the node into your n8n instance as a [private node](/integrations/creating-nodes/deploy/install-private-nodes.md).
+* [Submit your node to the community node repository](/integrations/creating-nodes/deploy/submit-community-nodes.md) เพื่อให้ทุกคนสามารถใช้งาน node ของคุณได้ และคุณเองก็สามารถ [install and use it](/integrations/community-nodes/installation/index.md) ได้เหมือนกับ community node อื่นๆ นี่เป็นวิธีเดียวที่จะใช้ custom node บน cloud
+* ติดตั้ง node ลงใน n8n instance ของคุณเองแบบ [private node](/integrations/creating-nodes/deploy/install-private-nodes.md)

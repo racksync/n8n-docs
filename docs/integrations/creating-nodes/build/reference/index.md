@@ -5,8 +5,8 @@ contentType: overview
 
 # Node building reference
 
-This section contains reference information, including details about:
+ส่วนนี้จะให้ข้อมูลอ้างอิงเกี่ยวกับ:
 
 * [Node UI elements](/integrations/creating-nodes/build/reference/ui-elements.md)
 * [Organizing your node files](/integrations/creating-nodes/build/reference/node-file-structure.md)
-* Key parameters in your node's [base file](/integrations/creating-nodes/build/reference/node-base-files/index.md) and [credentials file](/integrations/creating-nodes/build/reference/credentials-files.md).
+* พารามิเตอร์สำคัญใน [base file](/integrations/creating-nodes/build/reference/node-base-files/index.md) และ [credentials file](/integrations/creating-nodes/build/reference/credentials-files.md) ของ node ของคุณ

@@ -8,31 +8,30 @@ priority: medium
 
 # Google Drive Trigger node common issues
 
-Here are some common errors and issues with the [Google Drive Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.googledrivetrigger/index.md) and steps to resolve or troubleshoot them.
-
+รวม error และปัญหาที่พบบ่อยกับ [Google Drive Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.googledrivetrigger/index.md) พร้อมวิธีแก้ไขหรือแนวทางตรวจสอบ
 
 ## 401 unauthorized error
 
-The full text of the error looks like this:
+ข้อความ error เต็มจะประมาณนี้:
 <!--vale off-->
 ```
 401 - {"error":"unauthorized_client","error_description":"Client is unauthorized to retrieve access tokens using this method, or client not authorized for any of the scopes requested."}
 ```
 <!--vale on-->
 
-This error occurs when there's an issue with the credential you're using and its scopes or permissions.
+error นี้เกิดจาก credential ที่ใช้มีปัญหาเรื่อง scope หรือ permission
 
-To resolve:
+วิธีแก้ไข:
 
-1. For [OAuth2](/integrations/builtin/credentials/google/oauth-single-service.md) credentials, make sure you've enabled the Google Drive API in **APIs & Services > Library**. Refer to [Google OAuth2 Single Service - Enable APIs](/integrations/builtin/credentials/google/oauth-single-service.md#enable-apis) for more information.
-2. For [Service Account](/integrations/builtin/credentials/google/service-account.md) credentials:
-    1. [Enable domain-wide delegation](/integrations/builtin/credentials/google/service-account.md#enable-domain-wide-delegation).
-    2. Make sure you add the Google Drive API as part of the domain-wide delegation configuration.
+1. ถ้าใช้ [OAuth2](/integrations/builtin/credentials/google/oauth-single-service.md) credential ให้แน่ใจว่าได้เปิด Google Drive API ใน **APIs & Services > Library** แล้ว ดูวิธีเปิดได้ที่ [Google OAuth2 Single Service - Enable APIs](/integrations/builtin/credentials/google/oauth-single-service.md#enable-apis)
+2. ถ้าใช้ [Service Account](/integrations/builtin/credentials/google/service-account.md) credential:
+    1. [Enable domain-wide delegation](/integrations/builtin/credentials/google/service-account.md#enable-domain-wide-delegation)
+    2. ตรวจสอบว่าได้เพิ่ม Google Drive API ใน domain-wide delegation configuration แล้ว
 
 ## Handling more than one file change
 
-The Google Drive Trigger node polls Google Drive for changes at a set interval (once every minute by default).
+Google Drive Trigger node จะ poll Google Drive เพื่อเช็คการเปลี่ยนแปลงตามช่วงเวลาที่ตั้งไว้ (default คือทุก 1 นาที)
 
-If multiple changes to the **Watch For** criteria occur during the polling interval, a single Google Drive Trigger event occurs containing the changes as items. To handle this, your workflow must account for times when the data might contain more than one item.
+ถ้ามีการเปลี่ยนแปลงหลายไฟล์ที่ตรงกับ **Watch For** criteria ในช่วง polling เดียว จะเกิด event เดียวที่รวมการเปลี่ยนแปลงทั้งหมดเป็น items ดังนั้น workflow ของคุณต้องรองรับกรณีที่ข้อมูลมีมากกว่า 1 item
 
-You can use an [if node](/integrations/builtin/core-nodes/n8n-nodes-base.if.md) or a [switch node](/integrations/builtin/core-nodes/n8n-nodes-base.switch.md) to change your workflow's behavior depending on whether the data from the Google Drive Trigger node contains a single item or multiple items.
+คุณสามารถใช้ [if node](/integrations/builtin/core-nodes/n8n-nodes-base.if.md) หรือ [switch node](/integrations/builtin/core-nodes/n8n-nodes-base.switch.md) เพื่อเปลี่ยนพฤติกรรม workflow ตามจำนวน item ที่ได้จาก Google Drive Trigger node

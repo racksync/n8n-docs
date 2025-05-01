@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Mailchimp Trigger node
 
-[Mailchimp](https://mailchimp.com/){:target=_blank .external-link} is an integrated marketing platform that allows business owners to automate their email campaigns and track user engagement.
+[Mailchimp](https://mailchimp.com/){:target=_blank .external-link} คือแพลตฟอร์มการตลาดแบบครบวงจรที่ช่วยให้เจ้าของธุรกิจสามารถทำ automation อีเมลแคมเปญและติดตามการมีส่วนร่วมของผู้ใช้ได้ง่ายๆ
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/mailchimp.md).
+คุณสามารถดูข้อมูลการเชื่อมต่อ (authentication) สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/mailchimp.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Mailchimp Trigger integrations](https://n8n.io/integrations/mailchimp-trigger/){:target=_blank .external-link} page.
+สำหรับตัวอย่างการใช้งานและ template เพื่อเริ่มต้นใช้งาน ดูได้ที่หน้า [Mailchimp Trigger integrations](https://n8n.io/integrations/mailchimp-trigger/){:target=_blank .external-link} ของ n8n
 ///

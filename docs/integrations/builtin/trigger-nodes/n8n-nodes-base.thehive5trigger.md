@@ -7,16 +7,16 @@ contentType: [integration, reference]
 
 # TheHive 5 Trigger node
 
-Use the TheHive 5 Trigger node to respond to events in [TheHive](https://strangebee.com/thehive/){:target=_blank .external-link} and integrate TheHive with other applications. n8n has built-in support for a wide range of TheHive events, including alerts, cases, comments, pages, and tasks.
+ใช้ TheHive 5 Trigger node เพื่อตอบสนอง event ต่าง ๆ ใน [TheHive](https://strangebee.com/thehive/){:target=_blank .external-link} และเชื่อมต่อ TheHive กับแอปอื่น ๆ ได้ n8n รองรับ event หลากหลาย เช่น alert, case, comment, page และ task
 
-On this page, you'll find a list of events the TheHive5 Trigger node can respond to and links to more resources.
+ในหน้านี้จะมีรายการ event ที่ TheHive5 Trigger node สามารถตอบสนองได้ พร้อมลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | TheHive and TheHive 5
-n8n provides two nodes for TheHive. Use this node (TheHive 5 Trigger) if you want to use TheHive's version 5 API. If you want to use version 3 or 4, use [TheHive Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.thehivetrigger.md).
+n8n มี node สำหรับ TheHive สองแบบ ใช้ node นี้ (TheHive 5 Trigger) ถ้าคุณต้องการใช้ API เวอร์ชัน 5 ของ TheHive ถ้าต้องการใช้เวอร์ชัน 3 หรือ 4 ให้ใช้ [TheHive Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.thehivetrigger.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [TheHive 5 Trigger integrations](https://n8n.io/integrations/thehive-5-trigger/){:target=_blank .external-link} page.
+สำหรับตัวอย่างการใช้งานและ template ที่ช่วยให้เริ่มต้นได้ง่ายขึ้น ดูได้ที่หน้า [TheHive 5 Trigger integrations](https://n8n.io/integrations/thehive-5-trigger/){:target=_blank .external-link} ของ n8n
 ///
 
 ## Events
@@ -52,17 +52,17 @@ For usage examples and templates to help you get started, refer to n8n's [TheHiv
 
 ## Related resources
 
-n8n provides an app node for TheHive 5. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.thehive5.md).
+n8n มี app node สำหรับ TheHive 5 คุณสามารถดูเอกสาร node ได้ [ที่นี่](/integrations/builtin/app-nodes/n8n-nodes-base.thehive5.md)
 
-Refer to TheHive's [documentation](https://docs.strangebee.com/){:target=_blank .external-link} for more information about the service.
+ดูเอกสาร [TheHive's documentation](https://docs.strangebee.com/){:target=_blank .external-link} สำหรับรายละเอียดเกี่ยวกับบริการนี้
 
 
 ## Configure a webhook in TheHive
 
-To configure the webhook for your TheHive instance:
+วิธีตั้งค่า webhook สำหรับ TheHive instance ของคุณ:
 
-1. Copy the testing and production webhook URLs from TheHive Trigger node.
-2. Add the following lines to the `application.conf` file. This is TheHive configuration file:
+1. คัดลอก URL webhook สำหรับ testing และ production จาก TheHive Trigger node
+2. เพิ่มบรรทัดต่อไปนี้ในไฟล์ `application.conf` (ไฟล์ config ของ TheHive):
 
 	```
 	notification.webhook.endpoints = [
@@ -85,10 +85,10 @@ To configure the webhook for your TheHive instance:
 	]
 	```
 
-3. Replace `TESTING_WEBHOOK_URL` and `PRODUCTION_WEBHOOK_URL` with the URLs you copied in the previous step.
-4. Replace `TESTING_WEBHOOK_NAME` and `PRODUCTION_WEBHOOK_NAME` with your preferred endpoint names.
-5. Replace `ORGANIZATION_NAME` with your organization name.
-6. Execute the following cURL command to enable notifications:
+3. แทนที่ `TESTING_WEBHOOK_URL` และ `PRODUCTION_WEBHOOK_URL` ด้วย URL ที่คัดลอกมา
+4. แทนที่ `TESTING_WEBHOOK_NAME` และ `PRODUCTION_WEBHOOK_NAME` ด้วยชื่อ endpoint ที่ต้องการ
+5. แทนที่ `ORGANIZATION_NAME` ด้วยชื่อองค์กรของคุณ
+6. รันคำสั่ง cURL ต่อไปนี้เพื่อเปิดใช้งาน notification:
 	```sh
 	curl -XPUT -uTHEHIVE_USERNAME:THEHIVE_PASSWORD -H 'Content-type: application/json' THEHIVE_URL/api/config/organisation/notification -d '
 	{

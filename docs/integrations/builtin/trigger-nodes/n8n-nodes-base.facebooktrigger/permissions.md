@@ -8,26 +8,26 @@ priority: medium
 
 # Facebook Trigger Permissions object
 
-Use this object to receive updates when a user grants or revokes a permission for your app. Refer to [Facebook Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/index.md) for more information on the trigger itself.
+ใช้ object นี้เพื่อรับการแจ้งเตือนเมื่อผู้ใช้ให้หรือเพิกถอน permission สำหรับแอปของคุณ ดูข้อมูลเพิ่มเติมเกี่ยวกับ trigger ได้ที่ [Facebook Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/index.md)
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/facebookapp.md).
+คุณสามารถดูข้อมูลเกี่ยวกับการตั้งค่า credentials สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/facebookapp.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Facebook Trigger integrations](https://n8n.io/integrations/facebook-trigger/){:target=_blank .external-link} page.
+สำหรับตัวอย่างการใช้งานและ template ที่จะช่วยให้คุณเริ่มต้นได้ง่ายขึ้น ดูได้ที่หน้า [Facebook Trigger integrations](https://n8n.io/integrations/facebook-trigger/){:target=_blank .external-link} ของ n8n
 ///
 
 ## Trigger configuration
 
-To configure the trigger with this Object:
+วิธีตั้งค่า trigger ด้วย Object นี้:
 
-1. Select the **Credential to connect with**. Select an existing or create a new [Facebook App credential](/integrations/builtin/credentials/facebookapp.md).
-1. Enter the **APP ID** of the app connected to your credential. Refer to the [Facebook App credential](/integrations/builtin/credentials/facebookapp.md) documentation for more information.
-1. Select **Permissions** as the **Object**.
-1. **Field Names or IDs**: By default, the node will trigger on all the available events using the `*` wildcard filter. If you'd like to limit the events, use the `X` to remove the star and use the dropdown or an expression to select the updates you're interested in.
-1. In **Options**, choose whether to turn on the toggle to **Include Values**. When turned on, the node includes the new values for the changes.
+1. เลือก **Credential to connect with** เลือกหรือสร้าง [Facebook App credential](/integrations/builtin/credentials/facebookapp.md) ใหม่
+1. กรอก **APP ID** ของแอปที่เชื่อมกับ credential ของคุณ ดูรายละเอียดเพิ่มเติมได้ที่ [Facebook App credential](/integrations/builtin/credentials/facebookapp.md)
+1. เลือก **Permissions** ในช่อง **Object**
+1. **Field Names or IDs**: โดยปกติ node จะ trigger กับทุก event โดยใช้ wildcard `*` ถ้าต้องการจำกัด event ให้กด X เพื่อลบดาว แล้วเลือกจาก dropdown หรือใช้ expression เพื่อเลือกเฉพาะ event ที่ต้องการ
+1. ใน **Options** เลือกว่าจะเปิด toggle **Include Values** หรือไม่ (ถ้าเปิด node จะส่งค่าที่เปลี่ยนแปลงใหม่มาด้วย)
 
 ## Related resources
 
-Refer to Meta's [Permissions](https://developers.facebook.com/docs/graph-api/webhooks/reference/permissions/){:target=_blank .external-link} Graph API reference for more information.
+ดูข้อมูลเพิ่มเติมได้ที่ [Permissions](https://developers.facebook.com/docs/graph-api/webhooks/reference/permissions/){:target=_blank .external-link} ในเอกสารของ Meta

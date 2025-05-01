@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Mailjet Trigger node
 
-[Mailjet](https://www.mailjet.com/){:target=_blank .external-link} is a cloud-based email sending and tracking system. The platform allows professionals to send both marketing emails and transactional emails. It includes tools for designing emails, sending massive volumes and tracking these messages.
+[Mailjet](https://www.mailjet.com/){:target=_blank .external-link} คือระบบส่งและติดตามอีเมลบนคลาวด์ ที่ช่วยให้มืออาชีพสามารถส่งอีเมลการตลาดและอีเมลธุรกรรมได้ในปริมาณมาก พร้อมเครื่องมือออกแบบและติดตามผลลัพธ์ของอีเมลเหล่านั้น
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/mailjet.md).
+คุณสามารถดูข้อมูลการเชื่อมต่อ (authentication) สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/mailjet.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Mailjet Trigger integrations](https://n8n.io/integrations/mailjet-trigger/){:target=_blank .external-link} page.
+สำหรับตัวอย่างการใช้งานและ template เพื่อเริ่มต้นใช้งาน ดูได้ที่หน้า [Mailjet Trigger integrations](https://n8n.io/integrations/mailjet-trigger/){:target=_blank .external-link} ของ n8n
 ///

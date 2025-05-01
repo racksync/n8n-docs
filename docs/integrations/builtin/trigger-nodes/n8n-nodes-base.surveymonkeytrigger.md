@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # SurveyMonkey Trigger node
 
-[SurveyMonkey](https://www.surveymonkey.com/){:target=_blank .external-link} is an online cloud-based SaaS survey platform that also provides a suite of paid back-end programs.
+[SurveyMonkey](https://www.surveymonkey.com/){:target=_blank .external-link} คือแพลตฟอร์ม SaaS สำหรับสร้างแบบสอบถามออนไลน์ที่มีฟีเจอร์ครบครัน และยังมีโปรแกรมเสริมสำหรับองค์กรด้วย
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/surveymonkey.md).
+คุณสามารถดูข้อมูลการตั้งค่า authentication สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/surveymonkey.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [SurveyMonkey Trigger integrations](https://n8n.io/integrations/surveymonkey-trigger/){:target=_blank .external-link} page.
+สำหรับตัวอย่างการใช้งานและ template ที่ช่วยให้เริ่มต้นได้ง่ายขึ้น ดูได้ที่หน้า [SurveyMonkey Trigger integrations](https://n8n.io/integrations/surveymonkey-trigger/){:target=_blank .external-link} ของ n8n
 ///

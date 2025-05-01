@@ -7,17 +7,17 @@ contentType: reference
 
 # Declarative-style parameters
 
-These are the parameters available for [node base file](/integrations/creating-nodes/build/reference/node-base-files/index.md) of declarative-style nodes.
+นี่คือ parameters ที่ใช้ได้กับ [node base file](/integrations/creating-nodes/build/reference/node-base-files/index.md) ของ declarative-style nodes
 
-This document gives short code snippets to help understand the code structure and concepts. For a full walk-through of building a node, including real-world code examples, refer to [Build a declarative-style node](/integrations/creating-nodes/build/declarative-style-node.md).
+เอกสารนี้จะมีโค้ดตัวอย่างสั้น ๆ เพื่อช่วยให้เข้าใจโครงสร้างและแนวคิด ถ้าต้องการดูตัวอย่างจริงแบบเต็ม ๆ ดูที่ [Build a declarative-style node](/integrations/creating-nodes/build/declarative-style-node.md)
 
-Refer to [Standard parameters](/integrations/creating-nodes/build/reference/node-base-files/standard-parameters.md) for parameters available to all nodes.
+ดู parameters ที่ใช้ได้กับ node ทุกประเภทได้ที่ [Standard parameters](/integrations/creating-nodes/build/reference/node-base-files/standard-parameters.md)
 
 ## `methods` and `loadOptions`
 
 _Object_ | _Optional_
 
-`methods` contains the `loadOptions` object. You can use `loadOptions` to query the service to get user-specific settings, then return them and render them in the GUI so the user can include them in subsequent queries. The object must include routing information for how to query the service, and output settings that define how to handle the returned options. For example:
+`methods` จะมี object `loadOptions` อยู่ข้างใน สามารถใช้ `loadOptions` เพื่อ query ข้อมูลจาก service เช่นดึงค่าต่าง ๆ ที่ user มี แล้วแสดงใน GUI ให้ user เลือกใช้ใน query ต่อไป object นี้ต้องมี routing สำหรับวิธี query service และ output สำหรับจัดการข้อมูลที่ได้ เช่น
 
 ```js
 methods : {
@@ -30,12 +30,12 @@ methods : {
 			output: {
 				postReceive: [
 					{
-						// When the returned data is nested under another property
-						// Specify that property key
-						type: 'rootProperty',
-						properties: {
-							property: 'responseData',
-						},
+							// ถ้าข้อมูลที่ได้ซ้อนอยู่ใน property อื่น
+							// ให้ระบุ key ของ property นั้น
+							type: 'rootProperty',
+							properties: {
+								property: 'responseData',
+							},
 					},
 					{
 						type: 'setKeyValue',
@@ -45,11 +45,11 @@ methods : {
 						},
 					},
 					{
-						// If incoming data is an array of objects, sort alphabetically by key
-						type: 'sort',
-						properties: {
-							key: 'name',
-						},
+							// ถ้าข้อมูลที่ได้เป็น array ของ object ให้ sort ตาม key
+							type: 'sort',
+							properties: {
+								key: 'name',
+							},
 					},
 				],
 			},
@@ -62,9 +62,9 @@ methods : {
 
 _Object_ | _Required_
 
-`routing` is an object used within an `options` array in operations and input field objects. It contains the details of an API call.
+`routing` เป็น object ที่ใช้ใน array `options` ของ operations และ input field objects จะเก็บรายละเอียดของ API call
 
-The code example below comes from the [Declarative-style tutorial](/integrations/creating-nodes/build/declarative-style-node.md). It sets up an integration with a NASA API. It shows how to use `requestDefaults` to set up the basic API call details, and `routing` to add information for each operation.
+ตัวอย่างโค้ดด้านล่างมาจาก [Declarative-style tutorial](/integrations/creating-nodes/build/declarative-style-node.md) เป็นการตั้งค่า integration กับ NASA API แสดงวิธีใช้ `requestDefaults` สำหรับตั้งค่าพื้นฐานของ API call และใช้ `routing` สำหรับแต่ละ operation
 
 ```js
 description: INodeTypeDescription = {
@@ -115,8 +115,8 @@ include postReceive actions, including ability to dynamically disable - see DOC-
 
 ## `version`
 
-_Number_ or _Array_ | _Optional_
+_Number_ หรือ _Array_ | _Optional_
 
-If you have one version of your node, this can be a number. If you want to support more than one version, turn this into an array, containing numbers for each node version.
+ถ้ามีแค่ 1 version ของ node ให้ใช้เป็นตัวเลขเดียว ถ้าต้องการรองรับหลาย version ให้ใช้ array ที่มีเลข version แต่ละอัน
 
-n8n supports two methods of node versioning, but declarative-style nodes must use the light versioning approach. Refer to [Node versioning](/integrations/creating-nodes/build/reference/node-versioning.md) for more information.
+n8n รองรับ 2 วิธีการ versioning แต่ declarative-style node ต้องใช้แบบ light versioning เท่านั้น ดูรายละเอียดที่ [Node versioning](/integrations/creating-nodes/build/reference/node-versioning.md)

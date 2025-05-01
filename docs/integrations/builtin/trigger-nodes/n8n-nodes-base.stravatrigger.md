@@ -7,14 +7,14 @@ contentType: [integration, reference]
 
 # Strava Trigger node
 
-[Strava](https://www.strava.com/){:target=_blank .external-link} is an internet service for tracking human exercise which incorporates social network features.
+[Strava](https://www.strava.com/){:target=_blank .external-link} คือบริการออนไลน์สำหรับติดตามกิจกรรมออกกำลังกายต่าง ๆ ที่มีฟีเจอร์โซเชียลเน็ตเวิร์กในตัว
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/strava.md).
+คุณสามารถดูข้อมูลการตั้งค่า authentication สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/strava.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Strava Trigger integrations](https://n8n.io/integrations/strava-trigger/){:target=_blank .external-link} page.
+สำหรับตัวอย่างการใช้งานและ template ที่ช่วยให้เริ่มต้นได้ง่ายขึ้น ดูได้ที่หน้า [Strava Trigger integrations](https://n8n.io/integrations/strava-trigger/){:target=_blank .external-link} ของ n8n
 ///
 
 ## Events

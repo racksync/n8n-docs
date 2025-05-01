@@ -7,33 +7,33 @@ contentType: reference
 
 # Standard parameters
 
-These are the standard parameters for the [node base file](/integrations/creating-nodes/build/reference/node-base-files/index.md). They're the same for all node types.
+นี่คือ parameters มาตรฐานสำหรับ [node base file](/integrations/creating-nodes/build/reference/node-base-files/index.md) ซึ่งใช้เหมือนกันกับ node ทุกประเภท
 
 ## `displayName`
 
 _String_ | _Required_
 
-This is the name users see in the n8n GUI.
+ชื่อนี้จะแสดงให้ผู้ใช้เห็นใน GUI ของ n8n
 
 ## `name`
 
 _String_ | _Required_
 
-The internal name of the object. Used to reference it from other places in the node.
+ชื่อภายในของ object ใช้สำหรับอ้างอิงจากที่อื่นใน node
 
 ## `icon`
 
-_String_ or _Object_ | _Required_
+_String_ หรือ _Object_ | _Required_
 
-Specifies an icon for a particular node. n8n recommends uploading your own image file. 
+กำหนด icon สำหรับ node นั้น ๆ แนะนำให้อัปโหลดไฟล์ภาพของตัวเอง
 
-You can provide the icon file name as a string, or as an object to handle different icons for light and dark modes.
-If the icon works in both light and dark modes, use a string that starts with `file:`, indicating the path to the icon file. For example:
+สามารถใส่ชื่อไฟล์ icon เป็น string หรือเป็น object เพื่อรองรับทั้ง light และ dark mode
+ถ้า icon ใช้ได้ทั้งสองโหมด ให้ใช้ string ที่ขึ้นต้นด้วย `file:` เพื่อบอก path ของไฟล์ icon เช่น
 
 ```
 icon: 'file:exampleNodeIcon.svg'
 ```
-To provide different icons for light and dark modes, use an object with `light` and `dark` properties. For example:
+ถ้าต้องการแยก icon สำหรับ light/dark mode ให้ใช้ object แบบนี้:
 ```
 icon: { 
   light: 'file:exampleNodeIcon.svg', 
@@ -47,116 +47,115 @@ icon: {
 
 _Array of strings_ | _Required_
 
-Tells n8n how the node behaves when the workflow runs. Options are:
+บอก n8n ว่า node นี้ทำงานแบบไหนตอน workflow รัน ตัวเลือกมีดังนี้:
 
-* `trigger`: node waits for a trigger.
-* `schedule`: node waits for a timer to expire.
-* `input`, `output`, `transform`: these currently have no effect.
-* An empty array, `[]`. Use this as the default option if you don't need `trigger` or `schedule`.
+* `trigger`: node จะรอ event trigger
+* `schedule`: node จะรอ timer หมดเวลา
+* `input`, `output`, `transform`: ตอนนี้ยังไม่มีผล
+* ถ้าไม่ต้องการ trigger หรือ schedule ให้ใช้ array ว่าง `[]` เป็นค่า default
 
 ## `description`
 
 _String_ | _Required_
 
-A short description of the node. n8n uses this in the GUI.
+คำอธิบายสั้น ๆ ของ node ซึ่งจะแสดงใน GUI ของ n8n
 
 ## `defaults`
 
 _Object_ | _Required_
 
-Contains essential brand and name settings.
+เก็บค่าต่าง ๆ ที่จำเป็นเกี่ยวกับ brand และชื่อ
 
-The object can include:
+object นี้จะมี:
 
-* `name`: String. Used as the node name on the canvas if the `displayName` is too long.
-* `color`: String. Hex color code. Provide the brand color of the integration for use in n8n.
+* `name`: String. ใช้เป็นชื่อ node บน canvas ถ้า `displayName` ยาวเกินไป
+* `color`: String. รหัสสี Hex ใส่สีประจำแบรนด์ของ integration เพื่อใช้ใน n8n
 
 ## `forceInputNodeExecution`
 
 _Boolean_ | _Optional_
 
-When building a multi-input node, you can choose to force all preceding nodes on all branches to execute before the node runs. The default is `false` (requiring only one input branch to run).
+ถ้าสร้าง node ที่มีหลาย input สามารถเลือกได้ว่าจะให้ node ก่อนหน้าทุก branch ต้อง execute ก่อน node นี้จะรันหรือไม่ ค่า default คือ `false` (แค่ branch เดียวรันก็พอ)
 
 ## `inputs`
 
 _Array of strings_ | _Required_
 
-Names the input connectors. Controls the number of connectors the node has on the input side. If you need only one connector, use `input: ['main']`.
-
+ตั้งชื่อ input connectors ควบคุมจำนวน connectors ที่ node มีฝั่ง input ถ้ามีแค่ 1 connector ให้ใช้ `input: ['main']`
 
 ## `outputs`
 
 _Array of strings_ | _Required_  
 
-Names the output connectors. Controls the number of connectors the node has on the output side. If you need only one connector, use `output: ['main']`.
+ตั้งชื่อ output connectors ควบคุมจำนวน connectors ที่ node มีฝั่ง output ถ้ามีแค่ 1 connector ให้ใช้ `output: ['main']`
 
 ## `requiredInputs`
 
-_Integer_ or _Array_ | _Optional_
+_Integer_ หรือ _Array_ | _Optional_
 
-Used for multi-input nodes. Specify inputs by number that must have data (their branches must run) before the node can execute.
+ใช้กับ node ที่มีหลาย input ระบุหมายเลข input ที่ต้องมีข้อมูล (branch นั้นต้องรัน) ก่อน node จะ execute
 
 ## `credentials`
 
 _Array of objects_ | _Required_  
 
-This parameter tells n8n the credential options. Each object defines an authentication type.
+parameter นี้บอก n8n ว่ามี credential อะไรบ้าง แต่ละ object จะกำหนดประเภท authentication
 
-The object must include:
+object ต้องมี:
 
-* `name`: the credential name. Must match the `name` property in the credential file. For example, `name: 'asanaApi'`  in [`Asana.node.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Asana/Asana.node.ts){:target=_blank .external-class} links to `name = 'asanaApi'` in [`AsanaApi.credential.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/credentials/AsanaApi.credentials.ts){:target=_blank .external-class}.
-* `required`: Boolean. Specify whether authentication is required to use this node.
+* `name`: ชื่อ credential ต้องตรงกับ property `name` ใน credential file เช่น `name: 'asanaApi'` ใน [`Asana.node.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Asana/Asana.node.ts){:target=_blank .external-class} จะลิงก์กับ `name = 'asanaApi'` ใน [`AsanaApi.credential.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/credentials/AsanaApi.credentials.ts){:target=_blank .external-class}
+* `required`: Boolean. ระบุว่า authentication จำเป็นต้องใช้กับ node นี้หรือไม่
 
 ## `requestDefaults`
 
 _Object_ | _Required_  
 
-Set up the basic information for the API calls the node makes.
+ตั้งค่าข้อมูลพื้นฐานสำหรับ API call ที่ node จะใช้
 
-This object must include:
+object นี้ต้องมี:
 
-* `baseURL`: The API base URL.
+* `baseURL`: URL หลักของ API
 
-You can also add:
+นอกจากนี้ยังเพิ่มได้:
 
-* `headers`: an object describing the API call headers, such as content type.
-* `url`: string. Appended to the `baseURL`. You can usually leave this out. It's more common to provide this in the `operations`.
+* `headers`: object สำหรับ headers ของ API call เช่น content type
+* `url`: string. ต่อท้าย `baseURL` ปกติจะไม่ต้องใส่ ตรงนี้มักจะกำหนดใน `operations` มากกว่า
 
 ## `properties`
 
 _Array of objects_ | _Required_  
 
-This contains the resource and operations objects that define node behaviors, as well as objects to set up mandatory and optional fields that can receive user input.
+เก็บ resource และ operations objects ที่กำหนดพฤติกรรมของ node รวมถึง object สำหรับตั้งค่าฟิลด์บังคับและฟิลด์เสริมที่รับ input จากผู้ใช้
 
 ### Resource objects
 
-A resource object includes the following parameters:
+object resource จะมี parameter ดังนี้:
 
-* `displayName`: String. This should always be `Resource`.
-* `name`: String. This should always be `resource`.
-* `type`: String. Tells n8n which UI element to use, and what input type to expect. For example, `options` results in n8n adding a dropdown that allows users to choose one option. Refer to [Node UI elements](/integrations/creating-nodes/build/reference/ui-elements.md) for more information.
-* `noDataExpression`: Boolean. Prevents using an expression for the parameter. Must always be `true` for `resource`. 
+* `displayName`: String. ควรเป็น `Resource` เสมอ
+* `name`: String. ควรเป็น `resource` เสมอ
+* `type`: String. บอก n8n ว่าใช้ UI element อะไร และรับ input แบบไหน เช่น `options` จะทำให้ n8n สร้าง dropdown ให้เลือก option ดูรายละเอียดที่ [Node UI elements](/integrations/creating-nodes/build/reference/ui-elements.md)
+* `noDataExpression`: Boolean. ป้องกันการใช้ expression กับ parameter นี้ ต้องเป็น `true` เสมอสำหรับ `resource`
 
 ### Operations objects
 
-The operations object defines the available operations on a resource.
+object operations จะกำหนด operation ที่ใช้ได้กับ resource
 
-* `displayName`: String. This should always be `Options`.
-* `name`: String. This should always be `option`.
-* `type`: String. Tells n8n which UI element to use, and what input type to expect. For example, `dateTime` results in n8n adding a date picker. Refer to [Node UI elements](/integrations/creating-nodes/build/reference/ui-elements.md) for more information.
-* `noDataExpression`: Boolean. Prevents using an expression for the parameter. Must always be `true` for `operation`.
-* `options`: Array of objects. Each objects describes an operation's behavior, such as its routing, the REST verb it uses, and so on. An `options` object includes:
+* `displayName`: String. ควรเป็น `Options` เสมอ
+* `name`: String. ควรเป็น `operation` เสมอ
+* `type`: String. บอก n8n ว่าใช้ UI element อะไร เช่น `dateTime` จะทำให้มี date picker ดูรายละเอียดที่ [Node UI elements](/integrations/creating-nodes/build/reference/ui-elements.md)
+* `noDataExpression`: Boolean. ป้องกันการใช้ expression กับ parameter นี้ ต้องเป็น `true` เสมอสำหรับ `operation`
+* `options`: Array of objects. แต่ละ object จะอธิบายพฤติกรรมของ operation เช่น routing, REST verb ที่ใช้ ฯลฯ โดยใน `options` object จะมี:
 	* `name`. String.
 	* `value`. String.
-	* `action`: String. This parameter combines the resource and operation. You should always include it, as n8n will use it in future versions. For example, given a resource called `"Card"` and an operation `"Get all"`, your action is `"Get all cards"`.
+	* `action`: String. parameter นี้จะรวม resource กับ operation ควรใส่ไว้เสมอ เพราะ n8n จะใช้ในอนาคต เช่น resource ชื่อ `"Card"` กับ operation `"Get all"` action จะเป็น `"Get all cards"`
 	* `description`: String.
-	* `routing`: Object containing request details.
+	* `routing`: Object ที่มีรายละเอียดของ request
 
 ### Additional fields objects
 
-These objects define optional parameters. n8n displays them under **Additional Fields** in the GUI. Users can choose which parameters to set.
+object เหล่านี้จะกำหนด parameter เสริม n8n จะแสดงใน GUI ใต้หัวข้อ **Additional Fields** ผู้ใช้เลือกได้ว่าจะตั้งค่าหรือไม่
 
-The objects must include:
+object ต้องมี:
 
 ```js
 displayName: 'Additional Fields',
@@ -178,4 +177,4 @@ displayOptions: {
 }
 ```
 
-For more information about UI element types, refer to [UI elements](/integrations/creating-nodes/build/reference/ui-elements.md).
+ดูรายละเอียด UI element types เพิ่มเติมได้ที่ [UI elements](/integrations/creating-nodes/build/reference/ui-elements.md)

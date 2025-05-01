@@ -5,22 +5,22 @@ contentType: explanation
 
 # Risks when using community nodes
 
-Using community nodes means you are installing unverified code from a public source into your n8n instance. This has some risks.
+การใช้ community nodes หมายถึงคุณกำลังติดตั้งโค้ดที่ยังไม่ได้รับการตรวจสอบจากแหล่งสาธารณะลงใน instance ของ n8n ซึ่งมีความเสี่ยงบางอย่าง
 
-Risks include:
+ความเสี่ยงที่อาจเกิดขึ้น เช่น:
 
-* System security: community nodes have full access to the machine that n8n runs on, and can do anything, including malicious actions.
-* Data security: any community node that you use has access to data in your workflows.
-* Breaking changes: node developers may introduce breaking changes in new versions of their nodes. A breaking change is an update that breaks previous functionality. Depending on the node versioning approach that a node developer chooses, upgrading to a version with a breaking change could cause all workflows using the node to break. Be careful when upgrading your nodes.
+* System security: community nodes สามารถเข้าถึงเครื่องที่รัน n8n ได้เต็มที่ และอาจทำอะไรก็ได้ รวมถึงการกระทำที่เป็นอันตราย
+* Data security: community node ที่คุณใช้สามารถเข้าถึงข้อมูลใน workflow ของคุณได้
+* Breaking changes: นักพัฒนา node อาจมี breaking changes ในเวอร์ชันใหม่ๆ ได้ (breaking change คือการอัปเดตที่ทำให้ฟังก์ชันเดิมใช้ไม่ได้) ขึ้นอยู่กับวิธีการจัดการเวอร์ชันของนักพัฒนา node ถ้าอัปเกรดไปเวอร์ชันที่มี breaking change อาจทำให้ workflow ที่ใช้ node นั้นเสียได้ ควรตรวจสอบก่อนอัปเกรด
 
 ## Report bad community nodes
 
 <!-- vale off -->
 
-You can report bad community nodes to [security@n8n.io](mailto: security@n8n.io)
+คุณสามารถแจ้ง community node ที่มีปัญหาได้ที่ [security@n8n.io](mailto: security@n8n.io)
 
 <!-- vale on -->
 
 ## Disable community nodes
 
-You can disable community nodes by setting `N8N_COMMUNITY_PACKAGES_ENABLED` to `false`.
+สามารถปิดการใช้งาน community nodes ได้โดยตั้งค่า `N8N_COMMUNITY_PACKAGES_ENABLED` เป็น `false`

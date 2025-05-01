@@ -8,15 +8,15 @@ priority: medium
 
 # Salesforce Trigger node
 
-Use the Salesforce Trigger node to respond to events in [Salesforce](https://login.salesforce.com/){:target=_blank .external-link} and integrate Salesforce with other applications. n8n has built-in support for a wide range of Salesforce events.
+ใช้ Salesforce Trigger node เพื่อตอบสนอง event ต่างๆ ใน [Salesforce](https://login.salesforce.com/){:target=_blank .external-link} และเชื่อมต่อ Salesforce กับแอปอื่นๆ ได้เลย n8n รองรับ event ของ Salesforce หลากหลายแบบในตัว
 
-On this page, you'll find a list of events the Salesforce Trigger node can respond to, and links to more resources.
+ในหน้านี้จะมีรายการ event ที่ Salesforce Trigger node สามารถตอบสนองได้ พร้อมลิงก์ไปยัง resource เพิ่มเติม
 
 ///  note  | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/salesforce.md).
+คุณสามารถดูข้อมูลเกี่ยวกับการเชื่อมต่อบัญชี (authentication) สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/salesforce.md)
 ///
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Salesforce trigger integrations](https://n8n.io/integrations/salesforce-trigger/){:target=_blank .external-link} page.
+ถ้าอยากดูตัวอย่างการใช้งานหรือ template สำหรับเริ่มต้น ลองดูที่หน้า [Salesforce trigger integrations](https://n8n.io/integrations/salesforce-trigger/){:target=_blank .external-link} ของ n8n ได้เลย
 ///
 
 ## Events
@@ -42,6 +42,6 @@ For usage examples and templates to help you get started, refer to n8n's [Salesf
 
 ## Related resources
 
-n8n provides an app node for Salesforce. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.salesforce.md).
+n8n มี app node สำหรับ Salesforce ด้วยนะ ดูเอกสาร node ได้ [ที่นี่](/integrations/builtin/app-nodes/n8n-nodes-base.salesforce.md)
 
-View [example workflows and related content](https://n8n.io/integrations/salesforce-trigger/){:target=_blank .external-link} on n8n's website.
+ดู [example workflows และเนื้อหาอื่นๆ ที่เกี่ยวข้อง](https://n8n.io/integrations/salesforce-trigger/){:target=_blank .external-link} ได้ที่เว็บไซต์ n8n

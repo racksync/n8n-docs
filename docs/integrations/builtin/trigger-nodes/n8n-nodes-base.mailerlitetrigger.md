@@ -7,16 +7,16 @@ contentType: [integration, reference]
 
 # MailerLite Trigger node
 
-[MailerLite](https://www.mailerlite.com/){:target=_blank .external-link} is an email marketing solution that provides you with a user-friendly content editor, simplified subscriber management, and campaign reports with the most important statistics.
+[MailerLite](https://www.mailerlite.com/){:target=_blank .external-link} คือโซลูชัน email marketing ที่ใช้งานง่าย มี content editor ที่เป็นมิตรกับผู้ใช้ จัดการ subscribers ได้สะดวก และมีรายงานแคมเปญที่แสดงสถิติสำคัญๆ
 
-On this page, you'll find a list of events the MailerLite Trigger node can respond to and links to more resources.
+ในหน้านี้ คุณจะเห็นรายการ events ที่ MailerLite Trigger node สามารถตอบสนองได้ พร้อมลิงก์ไปยัง resource อื่นๆ
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/mailerlite.md).
+คุณสามารถดูข้อมูลการเชื่อมต่อ (authentication) สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/mailerlite.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [MailerLite Trigger integrations](https://n8n.io/integrations/mailerlite-trigger/){:target=_blank .external-link} page.
+สำหรับตัวอย่างการใช้งานและ template เพื่อเริ่มต้นใช้งาน ดูได้ที่หน้า [MailerLite Trigger integrations](https://n8n.io/integrations/mailerlite-trigger/){:target=_blank .external-link} ของ n8n
 ///
 
 ## Events

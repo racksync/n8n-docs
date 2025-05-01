@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Eventbrite Trigger node
 
-[Eventbrite](https://www.eventbrite.com/){:target=_blank .external-link} is an event management and ticketing website. The service allows users to browse, create, and promote local events.
+[Eventbrite](https://www.eventbrite.com/){:target=_blank .external-link} เป็นเว็บไซต์สำหรับจัดการอีเวนต์และขายบัตรเข้างาน ผู้ใช้สามารถค้นหา สร้าง และโปรโมทอีเวนต์ต่างๆ ได้
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/eventbrite.md).
+คุณสามารถดูข้อมูลการเชื่อมต่อสำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/eventbrite.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Eventbrite Trigger integrations](https://n8n.io/integrations/eventbrite-trigger/){:target=_blank .external-link} page.
+สำหรับตัวอย่างการใช้งานและ template เพื่อช่วยให้คุณเริ่มต้นได้ง่ายขึ้น ดูได้ที่หน้า [Eventbrite Trigger integrations ของ n8n](https://n8n.io/integrations/eventbrite-trigger/){:target=_blank .external-link}
 ///

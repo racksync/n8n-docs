@@ -5,11 +5,11 @@ contentType: overview
 
 # Test a node
 
-This section contains information about testing your node.
+ส่วนนี้จะอธิบายเกี่ยวกับการทดสอบ node ของคุณ
 
-There are two ways to test your node:
+มี 2 วิธีในการทดสอบ node ของคุณ:
 
-* Manually, by [running it on your own machine](/integrations/creating-nodes/test/run-node-locally.md) within a local n8n instance.
-* Automatically, using the [linter](/integrations/creating-nodes/test/node-linter.md).
+* ทดสอบแบบ Manual โดย [รันบนเครื่องของคุณเอง](/integrations/creating-nodes/test/run-node-locally.md) ใน n8n instance ที่รัน local
+* ทดสอบแบบอัตโนมัติ โดยใช้ [linter](/integrations/creating-nodes/test/node-linter.md)
 
-You should use both methods before publishing your node.
+แนะนำให้ใช้ทั้งสองวิธีก่อนที่จะ publish node ของคุณ

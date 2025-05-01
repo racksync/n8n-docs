@@ -6,57 +6,57 @@ contentType: howto
 # Install community nodes in the n8n app
 
 /// note | Limited to n8n instance owners
-Only the n8n instance owner can install and manage community nodes. The instance owner is the person who sets up and manages user management.
+เฉพาะเจ้าของ instance ของ n8n เท่านั้นที่สามารถติดตั้งและจัดการ community nodes ได้ เจ้าของ instance คือคนที่ตั้งค่าและดูแล user management
 ///
 ## Install a community node
 
-To install a community node:
+วิธีติดตั้ง community node:
 
-1. Go to **Settings** > **Community Nodes**.
-2. Select **Install**.
-3. Find the node you want to install:
-    1. Select **Browse**. n8n takes you to an npm search results page, showing all npm packages tagged with the keyword `n8n-community-node-package`.
-    2. Browse the list of results. You can filter the results or add more keywords.
-    3. Once you find the package you want, make a note of the package name. If you want to install a specific version, make a note of the version number as well.
-    4. Return to n8n.
-4. Enter the npm package name, and version number if required. For example, consider a community node designed to access a weather API called "Storms." The package name is n8n-node-storms, and it has three major versions.
-    * To install the latest version of a package called n8n-node-weather: enter `n8n-nodes-storms` in **Enter npm package name**.
-    * To install version 2.3: enter `n8n-node-storms@2.3` in **Enter npm package name**.
+1. ไปที่ **Settings** > **Community Nodes**
+2. เลือก **Install**
+3. หา node ที่ต้องการติดตั้ง:
+    1. เลือก **Browse** แล้ว n8n จะพาไปที่หน้าค้นหา npm ซึ่งแสดง npm packages ทั้งหมดที่ติด tag คำว่า `n8n-community-node-package`
+    2. เลื่อนดูรายการผลลัพธ์ สามารถกรองผลลัพธ์หรือเพิ่มคีย์เวิร์ดได้
+    3. เมื่อเจอ package ที่ต้องการ ให้จดชื่อ package ไว้ ถ้าต้องการติดตั้งเวอร์ชันเฉพาะ ให้จดเวอร์ชันไว้ด้วย
+    4. กลับมาที่ n8n
+4. ใส่ชื่อ npm package และเวอร์ชันถ้าต้องการ เช่น ถ้ามี community node สำหรับดึงข้อมูล weather API ชื่อ "Storms" โดย package ชื่อ n8n-node-storms และมี 3 major versions
+    * ถ้าต้องการติดตั้งเวอร์ชันล่าสุดของ package ชื่อ n8n-node-weather: ให้ใส่ `n8n-nodes-storms` ในช่อง **Enter npm package name**
+    * ถ้าต้องการติดตั้งเวอร์ชัน 2.3: ให้ใส่ `n8n-node-storms@2.3` ในช่อง **Enter npm package name**
     <!-- vale off -->
-5. Agree to the [risks](/integrations/community-nodes/risks.md) of using community nodes: select **I understand the risks of installing unverified code from a public source.**
+5. ยอมรับ [risks](/integrations/community-nodes/risks.md) ของการใช้ community nodes: เลือก **I understand the risks of installing unverified code from a public source.**
     <!-- vale on -->
-6. Select **Install**. n8n installs the node, and returns to the **Community Nodes** list in **Settings**.
+6. เลือก **Install** n8n จะติดตั้ง node แล้วกลับไปที่รายการ **Community Nodes** ใน **Settings**
 
 /// note | Nodes on the blocklist
-n8n maintains a blocklist of community nodes that it prevents you from installing. Refer to [n8n community node blocklist](/integrations/community-nodes/blocklist.md) for more information.
+n8n มี blocklist สำหรับ community nodes ที่ไม่อนุญาตให้ติดตั้ง ดูรายละเอียดได้ที่ [n8n community node blocklist](/integrations/community-nodes/blocklist.md)
 ///
 ## Uninstall a community node
 
-To uninstall a community node:
+วิธีลบ community node:
 
-1. Go to **Settings** > **Community nodes**.
-2. On the node you want to install, select **Options** <span class="inline-image">![Three dots options menu](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span>.
-3. Select **Uninstall package**.
-4. Select **Uninstall Package** in the confirmation modal.
+1. ไปที่ **Settings** > **Community nodes**
+2. ที่ node ที่ต้องการลบ ให้เลือก **Options** <span class="inline-image">![Three dots options menu](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span>
+3. เลือก **Uninstall package**
+4. เลือก **Uninstall Package** ในหน้าต่างยืนยัน
 
 ## Upgrade a community node
 
 /// warning | Breaking changes in versions
-Node developers may introduce breaking changes in new versions of their nodes. A breaking change is an update that breaks previous functionality. Depending on the node versioning approach that a node developer chooses, upgrading to a version with a breaking change could cause all workflows using the node to break. Be careful when upgrading your nodes. If you find that an upgrade causes issues, you can [downgrade](#downgrade-a-community-node).
+นักพัฒนา node อาจมี breaking changes ในเวอร์ชันใหม่ๆ ได้ (breaking change คือการอัปเดตที่ทำให้ฟังก์ชันเดิมใช้ไม่ได้) ขึ้นอยู่กับวิธีการจัดการเวอร์ชันของนักพัฒนา node ถ้าอัปเกรดไปเวอร์ชันที่มี breaking change อาจทำให้ workflow ที่ใช้ node นั้นเสียได้ ควรตรวจสอบก่อนอัปเกรด ถ้าอัปเกรดแล้วมีปัญหา สามารถ [downgrade](#downgrade-a-community-node) กลับได้
 ///
 ### Upgrade to the latest version
 
-You can upgrade community nodes to the latest version from the node list in **Settings** > **community nodes**.
+สามารถอัปเกรด community node เป็นเวอร์ชันล่าสุดได้จากรายการ node ใน **Settings** > **community nodes**
 
-When a new version of a community node is available, n8n displays an **Update** button on the node. Click the button to upgrade to the latest version.
+ถ้ามีเวอร์ชันใหม่ของ community node นั้น n8n จะแสดงปุ่ม **Update** ที่ node นั้น กดปุ่มเพื่ออัปเกรดเป็นเวอร์ชันล่าสุด
 
 ### Upgrade to a specific version
 
-To upgrade to a specific version (a version other than the latest), uninstall the node, then reinstall it, making sure to specify the target version. Follow the [Installation](#install-a-community-node) instructions for more guidance.
+ถ้าต้องการอัปเกรดเป็นเวอร์ชันเฉพาะ (ไม่ใช่เวอร์ชันล่าสุด) ให้ลบ node เดิมออกก่อน แล้วติดตั้งใหม่โดยระบุเวอร์ชันที่ต้องการ ดูวิธีที่หัวข้อ [Installation](#install-a-community-node)
 
 ## Downgrade a community node
 
-If there is a problem with a particular version of a community node, you may want to roll back to a previous version.
+ถ้าเจอปัญหากับเวอร์ชันของ community node ที่ใช้อยู่ อาจต้อง rollback กลับไปใช้เวอร์ชันก่อนหน้า
 
-To do this, uninstall the community node, then reinstall it, targeting a specific node version. Follow the [Installation](#install-a-community-node) instructions for more guidance.
+ให้ลบ community node ออกก่อน แล้วติดตั้งใหม่โดยระบุเวอร์ชันที่ต้องการ ดูวิธีที่หัวข้อ [Installation](#install-a-community-node)
 

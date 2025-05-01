@@ -8,12 +8,12 @@ priority: medium
 
 # Shopify Trigger node
 
-[Shopify](https://www.shopify.com/){:target=_blank .external-link} is an e-commerce platform that allows users to set up an online store and sell their products.
+[Shopify](https://www.shopify.com/){:target=_blank .external-link} คือแพลตฟอร์ม e-commerce ที่ให้คุณสร้างร้านค้าออนไลน์และขายสินค้าได้ง่ายๆ
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/shopify.md).
+คุณสามารถดูข้อมูลเกี่ยวกับการเชื่อมต่อบัญชี (authentication) สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/shopify.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Shopify Trigger integrations](https://n8n.io/integrations/shopify-trigger/){:target=_blank .external-link} page.
+ถ้าอยากดูตัวอย่างการใช้งานหรือ template สำหรับเริ่มต้น ลองดูที่หน้า [Shopify Trigger integrations](https://n8n.io/integrations/shopify-trigger/){:target=_blank .external-link} ของ n8n ได้เลย
 ///

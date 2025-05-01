@@ -7,16 +7,16 @@ contentType: [integration, reference]
 
 # crowd.dev Trigger node
 
-Use the crowd.dev Trigger node to respond to events in [crowd.dev](https://www.crowd.dev/){:target=_blank .external-link} and integrate crowd.dev with other applications. n8n has built-in support for a wide range of crowd.dev events, including new activities and new members.
+ใช้ crowd.dev Trigger node เพื่อตอบสนอง event ต่าง ๆ ใน [crowd.dev](https://www.crowd.dev/){:target=_blank .external-link} และเชื่อม crowd.dev กับแอปอื่น ๆ n8n รองรับ event ของ crowd.dev หลายแบบ เช่น new activities และ new members
 
-On this page, you'll find a list of events the crowd.dev Trigger node can respond to and links to more resources.
+ในหน้านี้จะมีรายการ event ที่ crowd.dev Trigger node สามารถตอบสนองได้ พร้อมลิงก์ไปยัง resource อื่น ๆ
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/crowddev.md).
+คุณสามารถดูข้อมูลการตั้งค่า authentication สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/crowddev.md)
 ///
 
 /// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [crowd.dev Trigger integrations](https://n8n.io/integrations/crowddev-trigger/){:target="_blank" .external-link} list.
+ถ้าต้องการดูตัวอย่างการใช้งานและ workflow template เพื่อเริ่มต้นใช้งาน ลองดูที่หน้า [crowd.dev Trigger integrations](https://n8n.io/integrations/crowddev-trigger/){:target="_blank" .external-link} ของ n8n ได้เลย
 ///	
 
 ## Events
@@ -26,8 +26,8 @@ For usage examples and templates to help you get started, refer to n8n's [crowd.
 
 ## Related resources
 
-n8n provides an app node for crowd.dev. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.crowddev.md).
+n8n มี app node สำหรับ crowd.dev ด้วย ดูเอกสาร node ได้ [ที่นี่](/integrations/builtin/app-nodes/n8n-nodes-base.crowddev.md)
 
-View [example workflows and related content](https://n8n.io/integrations/crowddev/){:target=_blank .external-link} on n8n's website.
+ดู [example workflows และเนื้อหาที่เกี่ยวข้อง](https://n8n.io/integrations/crowddev/){:target=_blank .external-link} ได้ที่เว็บไซต์ n8n
 
-Refer to [crowd.dev's documentation](https://docs.crowd.dev/reference/getting-started-with-crowd-dev-api){:target=_blank .external-link} for more information about the service.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับบริการ crowd.dev ได้ที่ [crowd.dev's documentation](https://docs.crowd.dev/reference/getting-started-with-crowd-dev-api){:target=_blank .external-link}

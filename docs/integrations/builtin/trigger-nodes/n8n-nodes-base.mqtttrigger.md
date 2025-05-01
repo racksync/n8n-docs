@@ -8,12 +8,12 @@ priority: medium
 
 # MQTT Trigger node
 
-[MQTT](https://mqtt.org){:target=_blank .external-link} is an open OASIS and ISO standard lightweight, publish-subscribe network protocol that transports messages between devices.
+[MQTT](https://mqtt.org){:target=_blank .external-link} คือโปรโตคอล publish-subscribe แบบ lightweight ที่เป็นมาตรฐาน OASIS และ ISO สำหรับส่งข้อความระหว่างอุปกรณ์ต่างๆ
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/mqtt.md).
+คุณสามารถดูข้อมูลการเชื่อมต่อ (authentication) สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/mqtt.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [MQTT Trigger integrations](https://n8n.io/integrations/mqtt-trigger/){:target=_blank .external-link} page.
+สำหรับตัวอย่างการใช้งานและ template เพื่อเริ่มต้นใช้งาน ดูได้ที่หน้า [MQTT Trigger integrations](https://n8n.io/integrations/mqtt-trigger/){:target=_blank .external-link} ของ n8n
 ///

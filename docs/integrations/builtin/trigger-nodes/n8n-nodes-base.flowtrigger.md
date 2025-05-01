@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Flow Trigger node
 
-[Flow](https://www.getflow.com/){:target=_blank .external-link} is modern task and project management software for teams. It brings together tasks, projects, timelines, and conversations, and integrates with a lot of tools.
+[Flow](https://www.getflow.com/){:target=_blank .external-link} เป็นซอฟต์แวร์สำหรับจัดการงานและโปรเจกต์แบบทันสมัยสำหรับทีมงาน ช่วยรวม task, project, timeline และการสนทนาไว้ด้วยกัน และยังเชื่อมต่อกับเครื่องมืออื่นๆ ได้อีกมากมาย
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/flow.md).
+คุณสามารถดูข้อมูลการเชื่อมต่อสำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/flow.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Flow Trigger integrations](https://n8n.io/integrations/flow-trigger/){:target=_blank .external-link} page.
+สำหรับตัวอย่างการใช้งานและ template เพื่อช่วยให้คุณเริ่มต้นได้ง่ายขึ้น ดูได้ที่หน้า [Flow Trigger integrations ของ n8n](https://n8n.io/integrations/flow-trigger/){:target=_blank .external-link}
 ///

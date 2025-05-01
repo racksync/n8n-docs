@@ -8,12 +8,12 @@ priority: medium
 
 # Stripe Trigger node
 
-[Stripe](https://stripe.com/){:target=_blank .external-link} is a suite of payment APIs that powers commerce for online businesses.
+[Stripe](https://stripe.com/){:target=_blank .external-link} คือชุด API สำหรับการชำระเงินที่ช่วยให้ธุรกิจออนไลน์สามารถรับเงินได้ง่าย ๆ
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/stripe.md).
+คุณสามารถดูข้อมูลการตั้งค่า authentication สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/stripe.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Stripe Trigger integrations](https://n8n.io/integrations/stripe-trigger/){:target=_blank .external-link} page.
+สำหรับตัวอย่างการใช้งานและ template ที่ช่วยให้เริ่มต้นได้ง่ายขึ้น ดูได้ที่หน้า [Stripe Trigger integrations](https://n8n.io/integrations/stripe-trigger/){:target=_blank .external-link} ของ n8n
 ///

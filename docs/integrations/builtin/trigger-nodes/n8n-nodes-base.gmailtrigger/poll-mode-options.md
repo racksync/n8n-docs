@@ -8,10 +8,10 @@ priority: high
 
 # Gmail Trigger node Poll Mode options
 
-Use the [Gmail Trigger node's](/integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/index.md) **Poll Time** parameter to set how often to trigger the poll. Your **Mode** selection will add or remove relevant fields.
+ใช้ parameter **Poll Time** ของ [Gmail Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/index.md) เพื่อกำหนดความถี่ในการ trigger poll การเลือก **Mode** จะเพิ่มหรือลด field ที่เกี่ยวข้อง
 
 ## Poll mode options
 
-Refer to the sections below for details on using each **Mode**.
+ดูรายละเอียดการใช้งานแต่ละ **Mode** ได้ในหัวข้อด้านล่าง
 
 --8<-- "_snippets/integrations/builtin/poll-modes.md"

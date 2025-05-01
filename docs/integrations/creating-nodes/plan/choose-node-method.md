@@ -5,30 +5,30 @@ contentType: explanation
 
 # Choose your node building approach
 
-n8n has two node-building styles, declarative and programmatic.
+n8n มีสไตล์การสร้าง node อยู่ 2 แบบ คือ declarative และ programmatic
 
-You should use the declarative style for most nodes. This style:
+โดยปกติแล้วควรเลือกใช้แบบ declarative สำหรับ node ส่วนใหญ่ เพราะแบบนี้:
 
-* Uses a JSON-based syntax, making it simpler to write, with less risk of introducing bugs.
-* Is more future-proof.
-* Supports integration with REST APIs.
+* ใช้ syntax แบบ JSON-based ทำให้เขียนง่าย ลดโอกาสเกิด bug
+* รองรับอนาคตได้ดีกว่า
+* เหมาะกับการเชื่อมต่อ REST APIs
 
-The programmatic style is more verbose. You must use the programmatic style for:
+ส่วนแบบ programmatic จะเขียนเยอะกว่า และควรใช้ในกรณีต่อไปนี้:
 
 * Trigger nodes
-* Any node that isn't REST-based. This includes nodes that need to call a GraphQL API and nodes that use external dependencies.
-* Any node that needs to transform incoming data.
-* Full versioning. Refer to [Node versioning](/integrations/creating-nodes/build/reference/node-versioning.md) for more information on types of versioning.
+* Node ที่ไม่ได้เชื่อมต่อ REST API เช่น ต้องเรียก GraphQL API หรือใช้ dependency ภายนอก
+* Node ที่ต้องแปลงข้อมูลขาเข้า
+* ต้องการ versioning เต็มรูปแบบ ดูรายละเอียดที่ [Node versioning](/integrations/creating-nodes/build/reference/node-versioning.md)
 
 ## Data handling differences
 
-The main difference between the declarative and programmatic styles is how they handle incoming data and build API requests. The programmatic style requires an `execute()` method, which reads incoming data and parameters, then builds a request. The declarative style handles this using the `routing` key in the `operations` object. Refer to [Node base file](/integrations/creating-nodes/build/reference/node-base-files/index.md) for more information on node parameters and the `execute()` method.
+ความแตกต่างหลักระหว่าง declarative กับ programmatic คือวิธีจัดการข้อมูลขาเข้าและการสร้าง API request แบบ programmatic ต้องมี `execute()` method เพื่ออ่านข้อมูลและ parameter แล้วสร้าง request เอง ส่วน declarative จะใช้ key `routing` ใน object `operations` จัดการให้ ดูรายละเอียดเพิ่มเติมที่ [Node base file](/integrations/creating-nodes/build/reference/node-base-files/index.md) สำหรับ parameter และ `execute()` method
 
 ## Syntax differences
 
-To understand the difference between the declarative and programmatic styles, compare the two code snippets below. This example creates a simplified version of the SendGrid integration, called "FriendGrid." The following code snippets aren't complete: they emphasize the differences in the node building styles.
+เพื่อให้เห็นความต่างระหว่าง declarative กับ programmatic ดูตัวอย่างโค้ดด้านล่างนี้ ตัวอย่างนี้คือ node สำหรับ FriendGrid (คล้าย SendGrid แบบง่าย) โค้ดนี้ไม่สมบูรณ์ แค่เน้นให้เห็นความต่างของแต่ละสไตล์
 
-In programmatic style:
+แบบ programmatic:
 
 ```js
 import {
@@ -126,7 +126,7 @@ export class FriendGrid implements INodeType {
 }
 ```
 
-In declarative style:
+แบบ declarative:
 
 ```js
 import { INodeType, INodeTypeDescription } from 'n8n-workflow';

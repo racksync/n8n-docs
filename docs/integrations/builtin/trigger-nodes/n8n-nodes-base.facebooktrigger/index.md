@@ -8,41 +8,41 @@ priority: medium
 
 # Facebook Trigger node
 
-[Facebook](https://www.facebook.com/){:target=_blank .external-link} is a social networking site to connect and share with family and friends online.
+[Facebook](https://www.facebook.com/){:target=_blank .external-link} เป็น social network ที่ให้คุณเชื่อมต่อและแชร์กับครอบครัวและเพื่อนๆ ออนไลน์
 
-Use the Facebook Trigger node to trigger a workflow when events occur in Facebook.
+ใช้ Facebook Trigger node เพื่อ trigger workflow ของคุณเมื่อมี event ต่างๆ เกิดขึ้นใน Facebook
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/facebookapp.md).
+คุณสามารถดูข้อมูลเกี่ยวกับการตั้งค่า credentials สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/facebookapp.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Facebook Trigger integrations](https://n8n.io/integrations/facebook-trigger/){:target=_blank .external-link} page.
+สำหรับตัวอย่างการใช้งานและ template ที่จะช่วยให้คุณเริ่มต้นได้ง่ายขึ้น ดูได้ที่หน้า [Facebook Trigger integrations](https://n8n.io/integrations/facebook-trigger/){:target=_blank .external-link} ของ n8n
 ///
 
 ## Objects
 
-- [**Ad Account**](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/ad-account.md): Get updates for certain ads changes.
-- [**Application**](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/application.md): Get updates sent to the application.
-- [**Certificate Transparency**](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/certificate-transparency.md): Get updates when new security certificates are generated for your subscribed domains, including new certificates and potential phishing attempts.
-- Activity and events in a [**Group**](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/group.md)
-- [**Instagram**](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/instagram.md): Get updates when someone comments on the Media objects of your app users; @mentions your app users; or when Stories of your app users expire.
-- [**Link**](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/link.md): Get updates about the links for rich previews by an external provider
-- [**Page**](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/page.md) updates
-- [**Permissions**](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/permissions.md): Updates when granting or revoking permissions
-- [**User**](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/user.md) profile updates
+- [**Ad Account**](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/ad-account.md): รับการแจ้งเตือนเมื่อมีการเปลี่ยนแปลงโฆษณาบางอย่าง
+- [**Application**](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/application.md): รับการแจ้งเตือนที่ถูกส่งไปยังแอปของคุณ
+- [**Certificate Transparency**](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/certificate-transparency.md): รับการแจ้งเตือนเมื่อมีการสร้าง security certificate ใหม่สำหรับโดเมนที่ subscribe รวมถึง certificate ใหม่และความเสี่ยง phishing
+- กิจกรรมและ event ใน [**Group**](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/group.md)
+- [**Instagram**](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/instagram.md): รับการแจ้งเตือนเมื่อมีคน comment ใน Media ของผู้ใช้แอป, @mention ผู้ใช้แอป หรือ story หมดอายุ
+- [**Link**](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/link.md): รับการแจ้งเตือนเกี่ยวกับลิงก์สำหรับ rich preview จาก provider ภายนอก
+- [**Page**](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/page.md) อัปเดตต่างๆ ของเพจ
+- [**Permissions**](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/permissions.md): แจ้งเตือนเมื่อมีการให้หรือเพิกถอน permissions
+- [**User**](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/user.md) อัปเดตโปรไฟล์ผู้ใช้
 - [**WhatsApp Business Account**](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/whatsapp.md)
     
     /// note | Use WhatsApp Trigger
-    n8n recommends using the [WhatsApp Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.whatsapptrigger.md) with the [WhatsApp credentials](/integrations/builtin/credentials/whatsapp.md) instead of the Facebook Trigger node for these events. The WhatsApp Trigger node has more events to listen to.
+    n8n แนะนำให้ใช้ [WhatsApp Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.whatsapptrigger.md) คู่กับ [WhatsApp credentials](/integrations/builtin/credentials/whatsapp.md) แทน Facebook Trigger node สำหรับ event เหล่านี้ เพราะ WhatsApp Trigger node มี event ให้เลือกมากกว่า
     ///
 
 - [**Workplace Security**](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/workplace-security.md)
 
-For each **Object**, use the **Field Names or IDs** dropdown to select more details on what data to receive. Refer to the linked pages for more details.
+สำหรับแต่ละ **Object** ให้ใช้ dropdown **Field Names or IDs** เพื่อเลือกข้อมูลที่ต้องการรับเพิ่มเติม ดูรายละเอียดแต่ละ object ได้ที่ลิงก์ด้านบน
 
 ## Related resources
 
-View [example workflows and related content](https://n8n.io/integrations/facebook-trigger/){:target=_blank .external-link} on n8n's website.
+ดู [ตัวอย่าง workflow และเนื้อหาที่เกี่ยวข้อง](https://n8n.io/integrations/facebook-trigger/){:target=_blank .external-link} บนเว็บไซต์ n8n
 
-Refer to Meta's [Graph API documentation](https://developers.facebook.com/docs/graph-api/webhooks/reference){:target=_blank .external-link} for details about their API.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับ API ได้ที่ [Graph API documentation](https://developers.facebook.com/docs/graph-api/webhooks/reference){:target=_blank .external-link} ของ Meta

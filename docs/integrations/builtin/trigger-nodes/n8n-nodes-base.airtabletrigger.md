@@ -8,12 +8,12 @@ priority: medium
 
 # Airtable Trigger node
 
-[Airtable](https://airtable.com/){:target=_blank .external-link} is a spreadsheet-database hybrid, with the features of a database but applied to a spreadsheet. The fields in an Airtable table are similar to cells in a spreadsheet, but have types such as 'checkbox', 'phone number', and 'drop-down list', and can reference file attachments like images.
+[Airtable](https://airtable.com/){:target=_blank .external-link} เป็น hybrid ระหว่าง spreadsheet กับ database ที่ใช้งานง่ายมาก ฟีเจอร์เหมือน database แต่ใช้งานเหมือน spreadsheet เช่น field ใน table จะเหมือน cell ใน spreadsheet แต่เลือก type ได้ เช่น 'checkbox', 'phone number', 'drop-down list' หรือแนบไฟล์รูปภาพก็ได้
 
-On this page, you'll find a list of events the Airtable Trigger node can respond to and links to more resources.
+ในหน้านี้จะมีรายการ event ที่ Airtable Trigger node สามารถตอบสนองได้ พร้อมลิงก์ไปยัง resource อื่น ๆ
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/airtable.md).
+คุณสามารถดูข้อมูลการตั้งค่า authentication สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/airtable.md)
 ///
 
 ## Events
@@ -22,54 +22,54 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Related resources
 
-n8n provides an app node for Airtable. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.airtable/index.md).
+n8n มี app node สำหรับ Airtable ด้วย ดูเอกสาร node ได้ [ที่นี่](/integrations/builtin/app-nodes/n8n-nodes-base.airtable/index.md)
 
-View [example workflows and related content](https://n8n.io/integrations/airtable-trigger/) on n8n's website.
+ดู [example workflows และเนื้อหาที่เกี่ยวข้อง](https://n8n.io/integrations/airtable-trigger/) ได้ที่เว็บไซต์ n8n
 
-Refer to [Airtable's documentation](https://airtable.com/developers/web/api/introduction) for details about their API.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับ API ได้ที่ [Airtable's documentation](https://airtable.com/developers/web/api/introduction)
 
 ## Node parameters
 
-Use these parameters to configure your node.
+ใช้ parameter เหล่านี้เพื่อ config node ของคุณ
 
 ### Poll Times
 
-n8n's Airtable node uses polling for check for updates on configured Airtable resources. The **Poll Times** parameter configures the querying frequency:
+Airtable node ของ n8n ใช้ polling เพื่อตรวจสอบการอัปเดตบน resource ที่ตั้งค่าไว้ **Poll Times** จะกำหนดความถี่ในการ query:
 
 * Every Minute
 * Every Hour
 * Every Day
 * Every Week
 * Every Month
-* Every X: Check for updates every given number of minutes or hours.
-* Custom: Customize the polling interval by providing a [cron expression](https://en.wikipedia.org/wiki/Cron).
+* Every X: ตรวจสอบการอัปเดตทุก ๆ X นาทีหรือชั่วโมง
+* Custom: ปรับแต่ง interval polling โดยใส่ [cron expression](https://en.wikipedia.org/wiki/Cron)
 
-Use the **Add Poll Time** button to add more polling intervals.
+กด **Add Poll Time** เพื่อเพิ่มช่วงเวลา polling ได้
 
 ### Base
 
-The [Airtable base](https://support.airtable.com/docs/airtable-bases-overview) you want to check for updates on. You can provide your base's URL or [base ID](https://support.airtable.com/docs/finding-airtable-ids#finding-base-table-and-view-ids-from-urls).
+ใส่ [Airtable base](https://support.airtable.com/docs/airtable-bases-overview) ที่ต้องการตรวจสอบการอัปเดต จะใส่ URL หรือ [base ID](https://support.airtable.com/docs/finding-airtable-ids#finding-base-table-and-view-ids-from-urls) ก็ได้
 
 ### Table
 
-The [Airtable table](https://support.airtable.com/docs/tables-overview) within the Airtable base that you want to check for updates on. You can provide the table's URL or [table ID](https://support.airtable.com/docs/finding-airtable-ids#finding-base-table-and-view-ids-from-urls).
+เลือก [Airtable table](https://support.airtable.com/docs/tables-overview) ใน base ที่ต้องการตรวจสอบการอัปเดต ใส่ URL หรือ [table ID](https://support.airtable.com/docs/finding-airtable-ids#finding-base-table-and-view-ids-from-urls) ก็ได้
 
 ### Trigger Field
 
-A created or last modified field in your table. The Airtable Trigger node uses this to determine what updates occurred since the previous check.
+เลือก field ที่สร้างหรือแก้ไขล่าสุดใน table node จะใช้ field นี้เพื่อตรวจสอบว่ามีการอัปเดตอะไรตั้งแต่ครั้งล่าสุด
 
 ### Download Attachments
 
-Whether to download attachments from the table. When enabled, the **Download Fields** parameter defines the attachment fields.
+เลือกว่าจะดาวน์โหลดไฟล์แนบจาก table หรือไม่ ถ้าเปิดใช้งาน จะต้องกำหนด **Download Fields** ด้วย
 
 ### Download Fields
 
-When you enable the **Download Attachments** toggle, this field defines which table fields to download. Field names are case sensitive. Use a comma to separate multiple field names.
+เมื่อเปิด **Download Attachments** ให้ใส่ชื่อ field ที่ต้องการดาวน์โหลดไฟล์แนบ (case sensitive) ถ้ามีหลาย field ให้คั่นด้วย comma
 
 ### Additional Fields
 
-Use the **Add Field** button to add the following parameters:
+กด **Add Field** เพื่อเพิ่ม parameter ต่อไปนี้:
 
-* **Fields**: A comma-separated list of fields to include in the output. If you don't specify anything here, the output will contain only the **Trigger Field**.
-* **Formula**: An [Airtable formula](https://support.airtable.com/docs/formula-field-reference) to further filter the results. You can use this to add further constraints to the events that trigger the workflow. Note that formula values aren't taken into account for manual executions, only for production polling.
-* **View ID**: The name or ID of a table view. When defined, only returns records available in the given view.
+* **Fields**: รายชื่อ field ที่ต้องการให้อยู่ใน output (คั่นด้วย comma) ถ้าไม่ใส่อะไรเลย output จะมีแค่ **Trigger Field**
+* **Formula**: ใส่ [Airtable formula](https://support.airtable.com/docs/formula-field-reference) เพื่อ filter ผลลัพธ์เพิ่มเติม ใช้สำหรับ production polling เท่านั้น (manual execution ไม่สนใจ formula)
+* **View ID**: ใส่ชื่อหรือ ID ของ table view ถ้ากำหนดไว้ จะคืนค่าข้อมูลเฉพาะที่อยู่ใน view นั้น

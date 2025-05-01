@@ -5,11 +5,11 @@ contentType: reference
 
 # Node user interface elements
 
-n8n provides a set of predefined UI components (based on a JSON file) that allows users to input all sorts of data types. The following UI elements are available in n8n.
+n8n มีชุด UI component ที่เตรียมไว้ให้ (อิงจากไฟล์ JSON) เพื่อให้ผู้ใช้สามารถกรอกข้อมูลได้หลายประเภท UI element เหล่านี้สามารถใช้ใน n8n ได้เลย
 
 ## String
 
-Basic configuration:
+การตั้งค่าพื้นฐาน:
 
 ```typescript
 {
@@ -32,11 +32,9 @@ Basic configuration:
 }
 ```
 
-
 ![String](/_images/integrations/creating-nodes/string.png)
 
-
-String field for inputting passwords:
+String field สำหรับกรอก password:
 
 ```typescript
 {
@@ -64,8 +62,7 @@ String field for inputting passwords:
 
 ![Password](/_images/integrations/creating-nodes/password.png)
 
-
-String field with more than one row:
+String field ที่มีหลายบรรทัด:
 
 ```typescript
 {
@@ -95,18 +92,18 @@ String field with more than one row:
 
 ### Support drag and drop for data keys
 
-Users can drag and drop data values to map them to fields. Dragging and dropping creates an [expression](/glossary.md#expression-n8n) to load the data value. n8n supports this automatically.
+ผู้ใช้สามารถลากและวางค่าข้อมูล (data value) เพื่อ map ไปยัง field ต่างๆ ได้ การ drag & drop จะสร้าง [expression](/glossary.md#expression-n8n) เพื่อโหลดค่าข้อมูลนั้น n8n รองรับฟีเจอร์นี้อัตโนมัติ
 
-You need to add an extra configuration option to support dragging and dropping data keys:
+คุณต้องเพิ่ม option พิเศษเพื่อรองรับการ drag & drop data key:
 
-* `requiresDataPath: 'single'`: for fields that require a single string.
-* `requiresDataPath: 'multiple'`: for fields that can accept a comma-separated list of string.
+* `requiresDataPath: 'single'`: สำหรับ field ที่ต้องการ string เดียว
+* `requiresDataPath: 'multiple'`: สำหรับ field ที่รับค่าหลาย string (comma-separated)
 
-The [Compare Datasets node code](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/CompareDatasets/CompareDatasets.node.ts){:target=_blank .external-link} has examples.
+ดูตัวอย่างได้ที่ [Compare Datasets node code](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/CompareDatasets/CompareDatasets.node.ts){:target=_blank .external-link}
 
 ## Number
 
-Number field with decimal points:
+Number field ที่รองรับทศนิยม:
 
 ```typescript
 {
@@ -138,7 +135,7 @@ Number field with decimal points:
 
 ## Collection
 
-Use the `collection` type when you need to display optional fields.
+ใช้ type `collection` เมื่อคุณต้องการแสดง field ที่เป็น option เสริม
 
 ```typescript
 {
@@ -184,10 +181,9 @@ Use the `collection` type when you need to display optional fields.
 
 ![Collection](/_images/integrations/creating-nodes/collection.png)
 
-
 ## DateTime
 
-The `dateTime` type provides a date picker.
+type `dateTime` จะมี date picker ให้เลือกวันเวลา
 
 ```typescript
 {
@@ -211,11 +207,9 @@ The `dateTime` type provides a date picker.
 
 ![DateTime](/_images/integrations/creating-nodes/datetime.png)
 
-
-
 ## Boolean
 
-The `boolean` type adds a toggle for entering true or false.
+type `boolean` จะเพิ่ม toggle สำหรับเลือก true หรือ false
 
 ```typescript
 {
@@ -241,7 +235,7 @@ The `boolean` type adds a toggle for entering true or false.
 
 ## Color
 
-The `color` type provides a color selector.
+type `color` จะมีตัวเลือกสีให้เลือก
 
 ```typescript
 {
@@ -266,7 +260,7 @@ The `color` type provides a color selector.
 
 ## Options
 
-The `options` type adds an options list. Users can select a single value.
+type `options` จะเพิ่ม list ตัวเลือก ผู้ใช้เลือกได้ 1 ค่า
 
 ```typescript
 {
@@ -302,7 +296,7 @@ The `options` type adds an options list. Users can select a single value.
 
 ## Multi-options
 
-The `multiOptions` type adds an options list. Users can select more than one value.
+type `multiOptions` จะเพิ่ม list ตัวเลือก ผู้ใช้เลือกได้มากกว่า 1 ค่า
 
 ```typescript
 {
@@ -336,12 +330,11 @@ The `multiOptions` type adds an options list. Users can select more than one val
 
 ![Multi-options](/_images/integrations/creating-nodes/multioptions.png)
 
-
 ## Filter
 
-Use this component to evaluate, match, or filter incoming data.
+ใช้ component นี้เพื่อ evaluate, match หรือ filter ข้อมูลที่เข้ามา
 
-This is the code from n8n's own If node. It shows a filter component working with a [collection](#collection) component where users can configure the filter's behavior.
+นี่คือตัวอย่างโค้ดจาก If node ของ n8n ซึ่งแสดงการใช้ filter component ร่วมกับ [collection](#collection) component ที่ผู้ใช้สามารถตั้งค่า behavior ของ filter ได้
 
 ```typescript
 {
@@ -359,36 +352,35 @@ This is the code from n8n's own If node. It shows a filter component working wit
 	},
 },
 {
-displayName: 'Options',
-name: 'options',
-type: 'collection',
-placeholder: 'Add option',
-default: {},
-options: [
-	{
-		displayName: 'Ignore Case',
-		description: 'Whether to ignore letter case when evaluating conditions',
-		name: 'ignoreCase',
-		type: 'boolean',
-		default: true,
-	},
-	{
-		displayName: 'Less Strict Type Validation',
-		description: 'Whether to try casting value types based on the selected operator',
-		name: 'looseTypeValidation',
-		type: 'boolean',
-		default: true,
-	},
-],
-},
+	displayName: 'Options',
+	name: 'options',
+	type: 'collection',
+	placeholder: 'Add option',
+	default: {},
+	options: [
+		{
+			displayName: 'Ignore Case',
+			description: 'Whether to ignore letter case when evaluating conditions',
+			name: 'ignoreCase',
+			type: 'boolean',
+			default: true,
+		},
+		{
+			displayName: 'Less Strict Type Validation',
+			description: 'Whether to try casting value types based on the selected operator',
+			name: 'looseTypeValidation',
+			type: 'boolean',
+			default: true,
+		},
+	],
+}
 ```
 
 ![Filter](/_images/integrations/creating-nodes/filter.png)
 
-
 ## Assignment collection (drag and drop)
 
-Use the drag and drop component when you want users to pre-fill name and value parameters with a single drag interaction.
+ใช้ component drag & drop เมื่อคุณต้องการให้ผู้ใช้กรอก name และ value ได้ด้วยการลากเพียงครั้งเดียว
 
 ```typescript
 {
@@ -399,13 +391,13 @@ Use the drag and drop component when you want users to pre-fill name and value p
 },
 ```
 
-You can see an example in n8n's [Edit Fields (Set) node](https://github.com/n8n-io/n8n/tree/0faeab1228e26d69a2a93bdb2f89523cca1e4036/packages/nodes-base/nodes/Set/v2){:target=_blank .external-link}:
+ดูตัวอย่างได้ที่ [Edit Fields (Set) node](https://github.com/n8n-io/n8n/tree/0faeab1228e26d69a2a93bdb2f89523cca1e4036/packages/nodes-base/nodes/Set/v2){:target=_blank .external-link}:
 
 ![A gif showing the drag and drop action, as well as changing a field to fixed](/_images/integrations/builtin/core-nodes/set/drag-drop-fixed-toggle.gif)
 
 ## Fixed collection
 
-Use the `fixedCollection` type to group fields that are semantically related.
+ใช้ type `fixedCollection` เพื่อจัดกลุ่ม field ที่เกี่ยวข้องกัน
 
 ```typescript
 {
@@ -454,23 +446,21 @@ Use the `fixedCollection` type to group fields that are semantically related.
 
 ![Fixed collection](/_images/integrations/creating-nodes/fixed-collection.png)
 
-
-
 ## Resource locator
 
 ![Resource locator](/_images/integrations/creating-nodes/resource-locator.png)
 
-The resource locator element helps users find a specific resource in an external service, such as a card or label in Trello. 
+Resource locator element ช่วยให้ผู้ใช้หา resource เฉพาะใน service ภายนอก เช่น card หรือ label ใน Trello
 
-The following options are available:
+ตัวเลือกที่มีให้:
 
 * ID
 * URL
-* List: allows users to select or search from a prepopulated list. This option requires more coding, as you must populate the list, and handle searching if you choose to support it.
+* List: ให้ผู้ใช้เลือกหรือค้นหาจาก list ที่เตรียมไว้ ตัวเลือกนี้ต้องเขียนโค้ดเพิ่มเพื่อ populate list และ handle การค้นหา
 
-You can choose which types to include.
+คุณสามารถเลือกว่าจะให้มี type ไหนบ้าง
 
-Example:
+ตัวอย่าง:
 
 ```typescript
 {
@@ -551,18 +541,18 @@ Example:
 },
 ```
 
-Refer to the following for live examples:
+ดูตัวอย่างจริงได้ที่:
 
-* Refer to [`CardDescription.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Trello/CardDescription.ts){:target=_blank .external-link} and [`Trello.node.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Trello/Trello.node.ts){:target=_blank .external-link}  in n8n's Trello node for an example of a list with search that includes `searchFilterRequired: true`.
-* Refer to [`GoogleDrive.node.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Google/Drive/GoogleDrive.node.ts){:target=_blank .external-link} for an example where users can browse the list or search.
+* ดู [`CardDescription.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Trello/CardDescription.ts){:target=_blank .external-link} และ [`Trello.node.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Trello/Trello.node.ts){:target=_blank .external-link} ใน Trello node ของ n8n สำหรับตัวอย่าง list ที่มี search และ `searchFilterRequired: true`
+* ดู [`GoogleDrive.node.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Google/Drive/GoogleDrive.node.ts){:target=_blank .external-link} สำหรับตัวอย่างที่ผู้ใช้สามารถ browse หรือ search ได้
 
 ## Resource mapper
 
-If your node performs insert, update, or upsert operations, you need to send data from the node in a format supported by the service you're integrating with. A common pattern is to use a Set node before the node that sends data, to convert the data to match the schema of the service you're connecting to. The resource mapper UI component provides a way to get data into the required format directly within the node, rather than using a Set node. The resource mapper component can also validate input data against the schema provided in the node, and cast input data into the expected type.
+ถ้า node ของคุณทำ insert, update หรือ upsert คุณต้องส่งข้อมูลในรูปแบบที่ service รองรับ ปกติจะใช้ Set node ก่อน node ที่จะส่งข้อมูล เพื่อแปลงข้อมูลให้ตรง schema ของ service แต่ resource mapper UI component จะช่วยให้ map ข้อมูลใน node ได้เลยโดยไม่ต้องใช้ Set node และยัง validate ข้อมูลกับ schema ที่กำหนดใน node ได้ด้วย
 
 /// note | Mapping and matching
-Mapping is the process of setting the input data to use as values when updating row(s). Matching is the process of using column names to identify the row(s) to update. 
-///	
+Mapping คือการตั้งค่าข้อมูล input ที่จะใช้เป็น value ตอน update row ส่วน Matching คือการใช้ชื่อ column เพื่อระบุ row ที่จะ update
+///
 
 ```js
 {
@@ -599,13 +589,13 @@ Mapping is the process of setting the input data to use as values when updating 
 },
 ```
 
-Refer to the [Postgres node (version 2)](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Postgres/v2){:target=_blank .external-link} for a live example using a database schema.
+ดูตัวอย่างจริงได้ที่ [Postgres node (version 2)](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Postgres/v2){:target=_blank .external-link} สำหรับ database schema
 
-Refer to the [Google Sheets node (version 2)](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Google/Sheet/v2){:target=_blank .external-link} for a live example using a schema-less service.
+ดูตัวอย่างจริงที่ [Google Sheets node (version 2)](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Google/Sheet/v2){:target=_blank .external-link} สำหรับ schema-less service
 
 ### Resource mapper type options interface
 
-The `typeOptions` section must implement the following interface:
+section `typeOptions` ต้อง implement interface นี้:
 
 ```js
 export interface ResourceMapperTypeOptions {
@@ -642,9 +632,9 @@ export interface ResourceMapperTypeOptions {
 
 ### Resource mapper method
 
-This method contains your node-specific logic for fetching the data schema. Every node must implement its own logic for fetching the schema, and setting up each UI field according to the schema.
+method นี้จะมี logic เฉพาะ node สำหรับดึง schema ของข้อมูล ทุก node ต้อง implement logic สำหรับดึง schema และตั้งค่า UI field ตาม schema
 
-It must return a value that implements the `ResourceMapperFields` interface:
+ต้อง return ค่าเป็นไปตาม interface `ResourceMapperFields`:
 
 ```js
 interface ResourceMapperField {
@@ -673,7 +663,7 @@ interface ResourceMapperField {
 }
 ```
 
-Refer to the [Postgres resource mapping method](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Postgres/v2/methods/resourceMapping.ts){:target=_blank .external-link} and [Google Sheets resource mapping method](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Google/Sheet/v2/methods/resourceMapping.ts){:target=_blank .external-link} for live examples.
+ดูตัวอย่างจริงที่ [Postgres resource mapping method](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Postgres/v2/methods/resourceMapping.ts){:target=_blank .external-link} และ [Google Sheets resource mapping method](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Google/Sheet/v2/methods/resourceMapping.ts){:target=_blank .external-link}
 
 ## JSON
 
@@ -699,10 +689,9 @@ Refer to the [Postgres resource mapping method](https://github.com/n8n-io/n8n/bl
 
 ![JSON](/_images/integrations/creating-nodes/json.png)
 
-
 ## HTML
 
-The HTML editor allows users to create HTML templates in their workflows. The editor supports standard HTML, CSS in `<style>` tags, and expressions wrapped in `{{}}`. Users can add `<script>` tags to pull in additional JavaScript. n8n doesn't run this JavaScript during workflow execution.
+HTML editor ให้ผู้ใช้สร้าง HTML template ใน workflow ได้ Editor รองรับ HTML มาตรฐาน, CSS ใน `<style>`, และ expression ใน `{{}}` ผู้ใช้สามารถเพิ่ม `<script>` เพื่อดึง JavaScript เพิ่มเติมได้ n8n จะไม่รัน JavaScript นี้ตอน workflow ทำงาน
 
 ```js
 {
@@ -718,12 +707,11 @@ The HTML editor allows users to create HTML templates in their workflows. The ed
 },
 ```
 
-Refer to [`Html.node.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Html/Html.node.ts){:target=_blank .external-link} for a live example.
-
+ดูตัวอย่างจริงที่ [`Html.node.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Html/Html.node.ts){:target=_blank .external-link}
 
 ## Notice
 
-Display a yellow box with a hint or extra info. Refer to [Node UI design](/integrations/creating-nodes/plan/node-ui-design.md) for guidance on writing good hints and info text.
+แสดงกล่องเหลืองพร้อม hint หรือข้อมูลเสริม ดูแนวทางการเขียน hint ที่ดีได้ที่ [Node UI design](/integrations/creating-nodes/plan/node-ui-design.md)
 
 ```js
 {
@@ -737,14 +725,14 @@ Display a yellow box with a hint or extra info. Refer to [Node UI design](/integ
 
 ## Hints
 
-There are two types of hints: parameter hints and node hints:
+hint มี 2 แบบ: parameter hint และ node hint
 
-* Parameter hints are small lines of text below a user input field.
-* Node hints are a more powerful and flexible option than [Notice](#notice). Use them to display longer hints, in the input panel, output panel, or node details view. 
+* Parameter hint คือข้อความสั้นใต้ input field
+* Node hint เป็นตัวเลือกที่ยืดหยุ่นกว่า [Notice](#notice) ใช้แสดง hint ยาวๆ ใน input panel, output panel หรือ node details view
 
 ### Add a parameter hint
 
-Add the `hint` parameter to a UI element:
+เพิ่ม parameter `hint` ใน UI element:
 
 ```ts
 {
@@ -758,7 +746,7 @@ Add the `hint` parameter to a UI element:
 
 ### Add a node hint
 
-Define the node's hints in the `hints` property within the node `description`:
+กำหนด hint ของ node ใน property `hints` ใน node `description`:
 
 ```ts
 description: INodeTypeDescription = {
@@ -784,7 +772,7 @@ description: INodeTypeDescription = {
 
 ### Add a dynamic hint to a programmatic-style node
 
-In programmatic-style nodes you can create a dynamic message that includes information from the node execution. As it relies on the node output data, you can't display this type of hint until after execution.
+ใน node แบบ programmatic-style สามารถสร้างข้อความ hint แบบ dynamic ที่มีข้อมูลจากการ execute node ได้ (ต้อง execute ก่อนถึงจะแสดงได้)
 
 ```ts
 if (operation === 'select' && items.length > 1 && !node.executeOnce) {
@@ -802,4 +790,4 @@ if (operation === 'select' && items.length > 1 && !node.executeOnce) {
 return [returnData];
 ```
 
-For a live example of a dynamic hint in a programmatic-style node, view the [Split Out node code](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Transform/SplitOut/SplitOut.node.ts#L266){:target=_blank .external-link}.
+ดูตัวอย่างจริงของ dynamic hint ใน programmatic-style node ได้ที่ [Split Out node code](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Transform/SplitOut/SplitOut.node.ts#L266){:target=_blank .external-link}

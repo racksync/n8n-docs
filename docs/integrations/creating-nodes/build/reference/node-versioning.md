@@ -5,26 +5,26 @@ contentType: howto
 
 # Node versioning
 
-n8n supports node versioning. You can make changes to existing nodes without breaking the existing behavior by introducing a new version.
+n8n รองรับการทำ node versioning คุณสามารถเปลี่ยนแปลง node ที่มีอยู่โดยไม่ทำให้พฤติกรรมเดิมเสียหาย ด้วยการเพิ่มเวอร์ชันใหม่
 
-Be aware of how n8n decides which node version to load:
+โปรดระวังวิธีที่ n8n เลือกโหลด node version:
 
-* If a user builds and saves a workflow using version 1, n8n continues to use version 1 in that workflow, even if you create and publish a version 2 of the node.
-* When a user creates a new workflow and browses for nodes, n8n always loads the latest version of the node.
+* ถ้าผู้ใช้สร้างและบันทึก workflow โดยใช้เวอร์ชัน 1 n8n จะยังคงใช้เวอร์ชัน 1 ใน workflow นั้น แม้ว่าคุณจะสร้างและ publish เวอร์ชัน 2 ของ node แล้วก็ตาม
+* เมื่อผู้ใช้สร้าง workflow ใหม่และเลือก node n8n จะโหลด node เวอร์ชันล่าสุดเสมอ
 
 /// note | Versioning type restricted by node style
-If you build a node using the declarative style, you can't use full versioning.
+ถ้าคุณสร้าง node แบบ declarative จะไม่สามารถใช้ full versioning ได้
 ///
 ## Light versioning
 
-This is available for all node types.
+ใช้ได้กับ node ทุกประเภท
 
-One node can contain more than one version, allowing small version increments without code duplication. To use this feature: 
+node หนึ่งตัวสามารถมีได้หลายเวอร์ชันในไฟล์เดียวกัน เหมาะสำหรับการอัปเดตเล็กๆ โดยไม่ต้อง duplicate code วิธีใช้:
 
-1. Change the main `version` parameter to an array, and add your version numbers, including your existing version. 
-2. You can then access the version parameter with `@version` in your `displayOptions` in any object (to control which versions n8n displays the object with). You can also query the version from a function using `const nodeVersion = this.getNode().typeVersion;`.
+1. เปลี่ยนพารามิเตอร์ `version` หลักให้เป็น array แล้วใส่หมายเลขเวอร์ชันทั้งหมด รวมถึงเวอร์ชันที่มีอยู่
+2. คุณสามารถเข้าถึงพารามิเตอร์ version ด้วย `@version` ใน `displayOptions` ของ object ใดๆ (เพื่อควบคุมว่า object ไหนจะแสดงกับเวอร์ชันไหน) หรือ query version จากฟังก์ชันด้วย `const nodeVersion = this.getNode().typeVersion;`
 
-As an example, say you want to add versioning to the NasaPics node from the [Declarative node tutorial](/integrations/creating-nodes/build/declarative-style-node.md), then configure a resource so that n8n only displays it in version 2 of the node. In your base `NasaPics.node.ts` file:
+ตัวอย่างเช่น ถ้าคุณต้องการเพิ่ม versioning ให้กับ NasaPics node จาก [Declarative node tutorial](/integrations/creating-nodes/build/declarative-style-node.md) แล้วตั้งค่า resource ให้แสดงเฉพาะในเวอร์ชัน 2 ในไฟล์ `NasaPics.node.ts`:
 
 ```js
 {
@@ -51,14 +51,14 @@ As an example, say you want to add versioning to the NasaPics node from the [Dec
 
 ## Full versioning
 
-This isn't available for declarative-style nodes.
+ใช้ไม่ได้กับ declarative-style nodes
 
-As an example, refer to the [Mattermost node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Mattermost){:target=_blank .external-link}.
+ตัวอย่างดูได้ที่ [Mattermost node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Mattermost){:target=_blank .external-link}
 
-Full versioning summary:
+สรุป full versioning:
 
-- The base node file should extend `NodeVersionedType` instead of `INodeType`.
-- The base node file should contain a description including the `defaultVersion` (usually the latest), other basic node metadata such as name, and a list of versions. It shouldn't contain any node functionality.
-- n8n recommends using `v1`, `v2`, and so on, for version folder names.
+- base node file ควร extend `NodeVersionedType` แทนที่จะเป็น `INodeType`
+- base node file ควรมี description ที่รวม `defaultVersion` (ปกติเป็นเวอร์ชันล่าสุด) ข้อมูล metadata อื่นๆ เช่น name และ list ของเวอร์ชัน ไม่ควรมีฟังก์ชัน node
+- n8n แนะนำให้ตั้งชื่อโฟลเดอร์เวอร์ชันเป็น `v1`, `v2` เป็นต้น
 
 

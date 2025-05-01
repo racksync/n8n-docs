@@ -5,27 +5,27 @@ contentType: reference
 
 # Code standards
 
-Following defined code standards when building your node makes your code more readable and maintainable, and helps avoid errors. This document provides guidance on good code practices for node building. It focuses on code details. For UI standards and UX guidance, refer to [Node UI design](/integrations/creating-nodes/plan/node-ui-design.md).
+การทำตามมาตรฐานการเขียนโค้ดที่กำหนดไว้ตอนสร้าง node จะช่วยให้โค้ดของคุณอ่านง่าย ดูแลรักษาง่าย และช่วยลดข้อผิดพลาดต่างๆ เอกสารนี้จะให้คำแนะนำเกี่ยวกับแนวปฏิบัติที่ดีในการเขียน node โดยจะเน้นไปที่รายละเอียดของโค้ด ถ้าต้องการดูมาตรฐานด้าน UI และ UX ให้ดูที่ [Node UI design](/integrations/creating-nodes/plan/node-ui-design.md)
 
 ## Use the linter
 
-The n8n node linter provides automatic checking for many of the node-building standards. You should ensure your node passes the linter's checks before publishing it. Refer to the [n8n node linter](/integrations/creating-nodes/test/node-linter.md) documentation for more information.
+n8n node linter จะช่วยตรวจสอบโค้ดของคุณให้อัตโนมัติในหลายๆ มาตรฐานที่เกี่ยวกับการสร้าง node คุณควรแน่ใจว่า node ของคุณผ่านการตรวจสอบของ linter ก่อนจะ publish ดูรายละเอียดเพิ่มเติมได้ที่ [n8n node linter](/integrations/creating-nodes/test/node-linter.md)
 
 ## Use the starter
 
-The n8n node starter project includes a recommended setup, dependencies (including the linter), and examples to help you get started. Begin new projects with the [starter](https://github.com/n8n-io/n8n-nodes-starter){:target=_blank .external-link}.
+n8n node starter project มีการตั้งค่าที่แนะนำ, dependencies (รวมถึง linter) และตัวอย่างต่างๆ เพื่อช่วยให้คุณเริ่มต้นได้ง่ายขึ้น เวลาจะเริ่มโปรเจกต์ใหม่ให้ใช้ [starter](https://github.com/n8n-io/n8n-nodes-starter){:target=_blank .external-link} นี้
 
 ## Write in TypeScript
 
-All n8n code is TypeScript. Writing your nodes in TypeScript can speed up development and reduce bugs.
+โค้ดของ n8n ทั้งหมดใช้ TypeScript การเขียน node ของคุณด้วย TypeScript จะช่วยให้พัฒนาได้เร็วขึ้นและลด bug ได้
 
 ## Detailed guidelines for writing a node
 
-These guidelines apply to any node you build. 
+แนวทางเหล่านี้ใช้กับ node ทุกตัวที่คุณสร้าง
 
 ### Resources and operations
 
-If your node can perform several operations, call the parameter that sets the operation `Operation`. If your node can do these operations on more than one resource, create a `Resource` parameter. The following code sample shows a basic resource and operations setup:
+ถ้า node ของคุณสามารถทำงานได้หลายอย่าง ให้ตั้งชื่อ parameter ที่เลือก operation ว่า `Operation` ถ้า node ของคุณทำ operation เหล่านี้ได้กับ resource หลายตัว ให้สร้าง parameter ชื่อ `Resource` ตัวอย่างโค้ดด้านล่างนี้แสดงการตั้งค่า resource และ operation แบบพื้นฐาน:
 
 ```js
 export const ExampleNode implements INodeType {
@@ -76,26 +76,25 @@ export const ExampleNode implements INodeType {
 
 ### Reuse internal parameter names
 
-All resource and operation fields in an n8n node have two settings: a display name, set using the `name` parameter, and an internal name, set using the `value` parameter. Reusing the internal name for fields allows n8n to preserve user-entered data if a user switches operations. 
+field resource และ operation ทุกตัวใน node ของ n8n จะมี 2 ค่า: display name (ตั้งด้วย `name`) และ internal name (ตั้งด้วย `value`) การใช้ internal name ซ้ำกันในแต่ละ field จะช่วยให้ n8n เก็บข้อมูลที่ user กรอกไว้ได้ ถ้า user เปลี่ยน operation
 
-For example: you're building a node with a resource named 'Order'. This resource has several operations, including Get, Edit, and Delete. Each of these operations uses an order ID to perform the operation on the specified order. You need to display an ID field for the user. This field has a display label, and an internal name. By using the same internal name (set in `value`) for the operation ID field on each resource, a user can enter the ID with the Get operation selected, and not lose it if they switch to Edit.
+เช่น ถ้าคุณสร้าง node ที่มี resource ชื่อ 'Order' ซึ่งมี operation หลายอย่าง เช่น Get, Edit, Delete แต่ละ operation ต้องใช้ order ID คุณต้องแสดง field สำหรับกรอก ID ให้ user โดยใช้ internal name เดียวกัน (ตั้งใน `value`) ในแต่ละ operation แบบนี้ user จะกรอก ID ในตอนเลือก Get แล้วถ้าเปลี่ยนไป Edit ข้อมูลก็ยังอยู่
 
-When reusing the internal name, you must ensure that only one field is visible to the user at a time. You can control this using `displayOptions`.
+เวลาจะใช้ internal name ซ้ำกัน ต้องแน่ใจว่ามี field เดียวที่แสดงให้ user เห็นในแต่ละครั้ง ควบคุมได้ด้วย `displayOptions`
 
 ## Detailed guidelines for writing a programmatic-style node
 
-These guidelines apply when building nodes using the programmatic node-building style. They aren't relevant when using the declarative style. For more information on different node-building styles, refer to [Choose your node building approach](/integrations/creating-nodes/plan/choose-node-method.md).
+แนวทางนี้ใช้กับ node ที่สร้างแบบ programmatic เท่านั้น ถ้าใช้ declarative style ไม่ต้องสนใจส่วนนี้ ดูข้อมูลเพิ่มเติมเกี่ยวกับ style ได้ที่ [Choose your node building approach](/integrations/creating-nodes/plan/choose-node-method.md)
 
 ### Don't change incoming data
 
-Never change the incoming data a node receives (data accessible with `this.getInputData()`) as all nodes share it. If you need to add, change, or delete data, clone the incoming data and return the new data. If you don't do this, sibling nodes that execute after the current one will operate on the altered data and process incorrect data.
+ห้ามแก้ไขข้อมูลที่ node ได้รับเข้ามา (ใช้ `this.getInputData()`) เพราะ node อื่นๆ ก็ใช้ข้อมูลเดียวกัน ถ้าต้องการเพิ่ม/แก้ไข/ลบข้อมูล ให้ clone ข้อมูลเข้ามาก่อนแล้วค่อย return ข้อมูลใหม่ ถ้าไม่ทำแบบนี้ node อื่นที่รันทีหลังจะได้ข้อมูลผิด
 
-It's not necessary to always clone all the data. For example, if a node changes the binary data but not the JSON data, you can create a new item that reuses the reference to the JSON item.
-
+ไม่จำเป็นต้อง clone ข้อมูลทุกอย่างเสมอไป เช่น ถ้า node เปลี่ยนแค่ binary data แต่ไม่แตะ JSON data ก็สร้าง item ใหม่ที่อ้างอิง JSON เดิมได้
 
 ### Use the built in request library
 
-Some third-party services have their own libraries on npm, which make it easier to create an integration. The problem with these packages is that you add another dependency (plus all the dependencies of the dependencies). This adds more and more code, which has to be loaded, can introduce security vulnerabilities, bugs, and so on. Instead, use the built-in module:
+บางบริการ third-party มี library ของตัวเองใน npm ซึ่งอาจช่วยให้เขียน integration ง่ายขึ้น แต่การใช้ package เหล่านี้จะเพิ่ม dependency (รวมถึง dependency ซ้อนๆ) ทำให้โค้ดใหญ่ขึ้น โหลดช้าขึ้น เสี่ยงเรื่อง security และ bug มากขึ้น แนะนำให้ใช้ module ที่ built-in มาให้:
 
 ```typescript
 // If no auth needed
@@ -109,6 +108,6 @@ const response = await this.helpers.httpRequestWithAuthentication.call(
 );
 ```
 
-This uses the npm package [Axios](https://www.npmjs.com/package/axios){:target=_blank .external-link}.
+อันนี้ใช้ npm package [Axios](https://www.npmjs.com/package/axios){:target=_blank .external-link}
 
-Refer to [HTTP helpers](/integrations/creating-nodes/build/reference/http-helpers.md) for more information, and for migration instructions for the removed `this.helpers.request`.
+ดูรายละเอียดเพิ่มเติมและวิธี migrate จาก `this.helpers.request` ที่ถูกถอดออกแล้ว ได้ที่ [HTTP helpers](/integrations/creating-nodes/build/reference/http-helpers.md)

@@ -5,22 +5,22 @@ contentType: overview
 
 # Node base file
 
-The node base file contains the core code of your node. All nodes must have a base file. The contents of this file are different depending on whether you're building a declarative-style or programmatic-style node. For guidance on which style to use, refer to [Choose your node building approach](/integrations/creating-nodes/plan/choose-node-method.md).
+node base file คือไฟล์หลักที่เก็บโค้ด core ของ node ทุก node ต้องมี base file โดยเนื้อหาของไฟล์นี้จะแตกต่างกันไปตามว่าเป็น declarative-style หรือ programmatic-style ถ้าต้องการเลือกว่าจะใช้แบบไหน ดูที่ [Choose your node building approach](/integrations/creating-nodes/plan/choose-node-method.md)
 
-These documents give short code snippets to help understand the code structure and concepts. For full walk-throughs of building a node, including real-world code examples, refer to [Build a declarative-style node](/integrations/creating-nodes/build/declarative-style-node.md) or [Build a programmatic-style node](/integrations/creating-nodes/build/programmatic-style-node.md).
+เอกสารนี้จะมีโค้ดตัวอย่างสั้น ๆ เพื่อช่วยให้เข้าใจโครงสร้างและแนวคิด ถ้าต้องการดูตัวอย่างจริงแบบเต็ม ๆ ดูที่ [Build a declarative-style node](/integrations/creating-nodes/build/declarative-style-node.md) หรือ [Build a programmatic-style node](/integrations/creating-nodes/build/programmatic-style-node.md)
 
-You can also explore the [n8n-nodes-starter](https://github.com/n8n-io/n8n-nodes-starter){:target=_blank .external-link} and n8n's own [nodes](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes){:target=_blank .external-link} for a wider range of examples. The starter contains basic examples that you can build on. The n8n [Mattermost node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Mattermost) is a good example of a more complex programmatic-style node, including versioning.
+คุณยังสามารถดูตัวอย่างเพิ่มเติมได้ที่ [n8n-nodes-starter](https://github.com/n8n-io/n8n-nodes-starter){:target=_blank .external-link} และ [nodes ของ n8n](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes){:target=_blank .external-link} ตัว starter จะมีตัวอย่างพื้นฐานที่นำไปต่อยอดได้ ส่วน [Mattermost node ของ n8n](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Mattermost) เป็นตัวอย่าง node แบบ programmatic-style ที่ซับซ้อนขึ้นและมีการ versioning
 
-For all nodes, refer to the:
+สำหรับ node ทุกประเภท ดูที่:
 
 * [Structure of the node base file](/integrations/creating-nodes/build/reference/node-base-files/structure.md)
 * [Standard parameters](/integrations/creating-nodes/build/reference/node-base-files/standard-parameters.md)
 
-For declarative-style nodes, refer to the:
+สำหรับ declarative-style nodes ดูที่:
 
 * [Declarative-style parameters](/integrations/creating-nodes/build/reference/node-base-files/declarative-style-parameters.md)
 
-For programmatic-style nodes, refer to the:
+สำหรับ programmatic-style nodes ดูที่:
 
 * [Programmatic-style parameters](/integrations/creating-nodes/build/reference/node-base-files/programmatic-style-parameters.md)
 * [Programmatic-style execute() method](/integrations/creating-nodes/build/reference/node-base-files/programmatic-style-execute-method.md)

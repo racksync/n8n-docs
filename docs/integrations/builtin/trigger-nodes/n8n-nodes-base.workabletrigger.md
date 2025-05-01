@@ -7,16 +7,16 @@ contentType: [integration, reference]
 
 # Workable Trigger node
 
-Use the Workable Trigger node to respond to events in the [Workable](https://www.workable.com/){:target=_blank .external-link} recruiting platform and integrate Workable with other applications. n8n has built-in support for a wide range of Workable events, including candidate created and moved.
+ใช้ Workable Trigger node เพื่อตอบสนอง event ต่างๆ ใน [Workable](https://www.workable.com/){:target=_blank .external-link} ซึ่งเป็นแพลตฟอร์มสำหรับการสรรหาบุคลากร และสามารถเชื่อมต่อ Workable กับแอปอื่นๆ ได้ n8n รองรับ event ของ Workable หลากหลาย เช่น candidate created และ moved
 
-On this page, you'll find a list of events the Workable Trigger node can respond to and links to more resources.
+ในหน้านี้ คุณจะเห็นรายการ event ที่ Workable Trigger node สามารถตอบสนองได้ พร้อมลิงก์ไปยัง resource เพิ่มเติม
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/workable.md).
+คุณสามารถดูข้อมูลการเชื่อมต่อ (authentication) สำหรับ node นี้ได้ที่ [ที่นี่](/integrations/builtin/credentials/workable.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Workable Trigger integrations](https://n8n.io/integrations/workable-trigger/){:target=_blank .external-link} page.
+ถ้าต้องการดูตัวอย่างการใช้งานและ template สำหรับเริ่มต้นใช้งาน ลองดูที่หน้า [Workable Trigger integrations](https://n8n.io/integrations/workable-trigger/){:target=_blank .external-link} ของ n8n ได้เลย
 ///
 
 ## Events
@@ -26,6 +26,6 @@ For usage examples and templates to help you get started, refer to n8n's [Workab
 
 ## Related resources
 
-View [example workflows and related content](https://n8n.io/integrations/workable-trigger/){:target=_blank .external-link} on n8n's website.
+ดู [example workflows และเนื้อหาที่เกี่ยวข้อง](https://n8n.io/integrations/workable-trigger/){:target=_blank .external-link} ได้ที่เว็บไซต์ n8n
 
-Refer to [Workable's API documentation](https://developers.workable.com/){:target=_blank .external-link} for details about using the service.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับการใช้งาน service นี้ได้ที่ [Workable's API documentation](https://developers.workable.com/){:target=_blank .external-link}

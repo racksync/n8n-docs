@@ -5,19 +5,19 @@ contentType: reference
 
 # Design your node's user interface
 
-Most nodes are a GUI (graphical user interface) representation of an API. Designing the interface means finding a user-friendly way to represent API endpoints and parameters. Directly translating an entire API into form fields in a node may not result in a good user experience.
+Node ส่วนใหญ่จะเป็น GUI (graphical user interface) ที่แสดง API ในรูปแบบที่ใช้งานง่าย การออกแบบ UI หมายถึงการหาวิธีที่ user-friendly ในการนำเสนอ endpoint และ parameter ของ API การแปลง API ทั้งหมดเป็นฟอร์ม field ใน node อาจไม่ได้ให้ประสบการณ์ที่ดีสำหรับผู้ใช้เสมอไป
 
-This document provides design guidance and standards to follow. These guidelines are the same as those used by n8n. This helps provide a smooth and consistent user experience for users mixing community and built-in nodes.
+เอกสารนี้ให้แนวทางการออกแบบและมาตรฐานที่ควรปฏิบัติตาม ซึ่งเป็นแนวทางเดียวกับที่ n8n ใช้ เพื่อให้ผู้ใช้ได้รับประสบการณ์ที่ราบรื่นและสอดคล้องกัน ไม่ว่าจะใช้ node ที่สร้างโดย community หรือ built-in
 
 ## Design guidance
 
-All node's use n8n's [node UI elements](/integrations/creating-nodes/build/reference/ui-elements.md), so you don't need to consider style details such as colors, borders, and so on. However, it's still useful to go through a basic design process:
+Node ทุกตัวจะใช้ [node UI elements](/integrations/creating-nodes/build/reference/ui-elements.md) ของ n8n อยู่แล้ว ดังนั้นคุณไม่ต้องกังวลเรื่องรายละเอียดสไตล์ เช่น สี, ขอบ ฯลฯ แต่ก็ยังควรผ่านกระบวนการออกแบบพื้นฐานดังนี้:
 
-* Review the documentation for the API you're integrating. Ask yourself:
-    * What can you leave out? 
-    * What can you simplify?
-    * Which parts of the API are confusing? How can you help users understand them?
-* Use a wireframe tool to try out your field layout. If you find your node has a lot of fields and is getting confusing, consider n8n's guidance on [showing and hiding fields](#showing-and-hiding-fields).
+* อ่านเอกสารของ API ที่คุณจะเชื่อมต่อ แล้วถามตัวเองว่า:
+    * อะไรที่ตัดออกได้บ้าง?
+    * อะไรที่ทำให้เรียบง่ายขึ้นได้?
+    * ส่วนไหนของ API ที่ดูงง? คุณจะช่วยให้ user เข้าใจได้ยังไง?
+* ใช้ wireframe tool เพื่อจัด layout ของ field ถ้าคุณพบว่า node ของคุณมี field เยอะและเริ่มซับซ้อน ลองดูแนวทางของ n8n เรื่อง [showing and hiding fields](#showing-and-hiding-fields)
 
 ## Standards
 
@@ -27,109 +27,108 @@ All node's use n8n's [node UI elements](/integrations/creating-nodes/build/refer
 | ------- | ----- |
 | Drop-down value | Title case |
 | Hint | Sentence case |
-| Info box | Sentence case. Don't use a period (`.`) for one-sentence information. Always use a period if there's more than one sentence. This field can include links, which should open in a new tab. |
+| Info box | Sentence case. ไม่ต้องใส่จุด (`.`) ถ้ามีแค่ประโยคเดียว ถ้ามีมากกว่าหนึ่งประโยคให้ใส่จุดเสมอ ช่องนี้สามารถใส่ลิงก์ได้ และควรเปิดในแท็บใหม่ |
 | Node name | Title case |
 | Parameter name | Title case |
 | Subtitle | Title case |
-| Tooltip | Sentence case. Don't use a period (`.`) for one-sentence tooltips. Always use a period if there's more than one sentence. This field can include links, which should open in a new tab. |
+| Tooltip | Sentence case. ไม่ต้องใส่จุด (`.`) ถ้ามีแค่ประโยคเดียว ถ้ามีมากกว่าหนึ่งประโยคให้ใส่จุดเสมอ ช่องนี้สามารถใส่ลิงก์ได้ และควรเปิดในแท็บใหม่ |
 
 ### UI text terminology
 
-* Use the same terminology as the service the node connects to. For example, a Notion node should refer to Notion blocks, not Notion paragraphs, because Notion calls these elements blocks. There are exceptions to this rule, usually to avoid technical terms (for example, refer to the guidance on [name and description for upsert operations](#upsert-operations)).
-* Sometimes a service has different terms for something in its API and in its GUI. Use the GUI language in your node, as this is what most users are familiar with. If you think some users may need to refer to the service's API docs, consider including this information in a hint.
-* Don't use technical jargon when there are simpler alternatives.
-* Be consistent when naming things. For example, choose one of `directory` or `folder` then stick to it. 
+* ใช้คำศัพท์เดียวกับ service ที่ node เชื่อมต่อ เช่น node ของ Notion ก็ควรใช้คำว่า block ตามที่ Notion ใช้ ไม่ใช่ paragraph (แม้จะหมายถึงสิ่งเดียวกัน) ยกเว้นกรณีที่ต้องหลีกเลี่ยงศัพท์เทคนิค (ดูหัวข้อ [name and description for upsert operations](#upsert-operations))
+* บางที service จะใช้คำศัพท์ต่างกันระหว่าง API กับ GUI ให้ใช้ภาษาที่ปรากฏใน GUI เพราะ user ส่วนใหญ่คุ้นเคยกับคำเหล่านั้น ถ้าคิดว่าผู้ใช้อาจต้องอ้างอิงเอกสาร API ให้ใส่ข้อมูลนี้ใน hint ได้
+* อย่าใช้ศัพท์เทคนิคถ้ามีคำที่ง่ายกว่า
+* ตั้งชื่อให้สอดคล้องกัน เช่น เลือกใช้ `directory` หรือ `folder` อย่างใดอย่างหนึ่งแล้วใช้ให้เหมือนกันตลอด
 
 ### Node naming conventions
 
 | Convention | Correct | Incorrect |
 | ---------- | ------- | --------- |
-| If a node is a trigger node, <br>the displayed name should have 'Trigger' at the end, <br>with a space before. | Shopify Trigger | ShopifyTrigger, Shopify trigger |
-| Don't include 'node' in the name. | Asana | Asana Node, Asana node |
+| ถ้า node เป็น trigger node <br>ชื่อที่แสดงควรลงท้ายด้วย 'Trigger' และมีเว้นวรรคก่อน | Shopify Trigger | ShopifyTrigger, Shopify trigger |
+| อย่าใส่คำว่า 'node' ในชื่อ | Asana | Asana Node, Asana node |
 
 ### Showing and hiding fields
 
-Fields can either be:
+Field สามารถ:
 
-* Displayed when the node opens: use this for resources and operations, and required fields.
-* Hidden in the **Optional fields** section until a user clicks on that section: use this for optional fields.
+* แสดงทันทีเมื่อเปิด node: ใช้กับ resource, operation และ field ที่จำเป็น
+* ซ่อนไว้ใน **Optional fields** จนกว่าผู้ใช้จะคลิก: ใช้กับ field ที่ไม่จำเป็น
 
-Progressively disclose complexity: hide a field until any earlier fields it depends on have values. For example, if you have a **Filter by date** toggle, and a **Date to filter by** datepicker, don't display **Date to filter by** until the user enables **Filter by date**.
-
+เปิดเผยความซับซ้อนทีละน้อย: ซ่อน field จนกว่า field ก่อนหน้าที่เกี่ยวข้องจะมีค่า เช่น ถ้ามี toggle **Filter by date** และ datepicker **Date to filter by** ให้แสดง datepicker ก็ต่อเมื่อ user เปิด toggle **Filter by date**
 
 ### Conventions by field type
 
 #### Credentials
 
-n8n automatically displays credential fields as the top fields in the node.
+n8n จะโชว์ credential field ไว้ด้านบนสุดของ node ให้อัตโนมัติ
 
 #### Resources and operations
 
-APIs usually involve doing something to data. For example, "get all tasks." In this example, "task" is the resource, and "get all" is the operation.
+API ส่วนใหญ่จะเกี่ยวกับการจัดการข้อมูล เช่น "get all tasks" ในตัวอย่างนี้ "task" คือ resource, "get all" คือ operation
 
-When your node has this resource and operation pattern, your first field should be **Resource**, and your second field should be **Operation**.
+ถ้า node ของคุณมี pattern แบบ resource-operation ให้ field แรกเป็น **Resource** และ field ที่สองเป็น **Operation**
 
 #### Required fields
 
-Order fields by:
+เรียง field ตามลำดับ:
 
-* Most important to least important.
-* Scope: from broad to narrow. For example, you have fields for **Document**, **Page**, and **Text to insert**, put them in that order.
+* สำคัญมากไปหาน้อย
+* ขอบเขต: กว้างไปแคบ เช่น มี field **Document**, **Page**, **Text to insert** ให้เรียงตามนี้
 
 #### Optional fields
 
-* Order fields alphabetically. To group similar things together, you can rename them. For example, rename **Email** and **Secondary Email** to **Email (primary)** and **Email (secondary)**.
-* If an optional field has a default value that the node uses when the value isn't set, load the field with that value. Explain this in the field description. For example, **Defaults to false**.
-* Connected fields: if one optional fields is dependent on another, bundle them together. They should both be under a single option that shows both fields when selected.
-* If you have a lot of optional fields, consider grouping them by theme.
+* เรียง field ตามตัวอักษร ถ้าอยากจัดกลุ่ม field ที่คล้ายกัน ให้เปลี่ยนชื่อ เช่น **Email** กับ **Secondary Email** เปลี่ยนเป็น **Email (primary)** กับ **Email (secondary)**
+* ถ้า optional field มีค่า default ที่ node จะใช้เมื่อไม่ได้ตั้งค่า ให้ใส่ค่านั้นไว้ใน field และอธิบายไว้ใน description เช่น **Defaults to false**
+* Field ที่เกี่ยวข้องกัน: ถ้า optional field หนึ่งขึ้นกับอีก field หนึ่ง ให้รวมไว้ด้วยกัน ใต้ option เดียวกันที่โชว์ทั้งสอง field เมื่อเลือก
+* ถ้ามี optional field เยอะมาก ให้ลองจัดกลุ่มตามธีม
 
 #### Help
 
-There are five types of help built in to the GUI:
+GUI มี help อยู่ 5 แบบ:
 
-* Info boxes: yellow boxes that appear between fields. Refer to [UI elements | Notice](/integrations/creating-nodes/build/reference/ui-elements.md#notice) for more information.
-  * Use info boxes for essential information. Don't over-use them. By making them rare, they stand out more and grab the user's attention.
-* Parameter hints: lines of text displayed beneath a user input field. Use this when there's something the user needs to know, but an info box would be excessive.
-* Node hints: provide help in the input panel, output panel, or node details view. Refer to [UI elements | Hints](/integrations/creating-nodes/build/reference/ui-elements.md#hints) for more information.
-* Tooltips: callouts that appear when the user hovers over the tooltip icon !["Screenshot of the tooltip icon. The icon is a ? in a grey circle"](/_images/common-icons/help-tooltip.png). Use tooltips for extra information that the user might need.
-  * You don't have to provide a tooltip for every field. Only add one if it contains useful information. 
-  * When writing tooltips, think about what the user needs. Don't just copy-paste API parameter descriptions. If the description doesn't make sense, or has errors, improve it.
-* Placeholder text: n8n can display placeholder text in a field where the user hasn't entered a value. This can help the user know what's expected in that field.
+* Info boxes: กล่องเหลืองระหว่าง field ดู [UI elements | Notice](/integrations/creating-nodes/build/reference/ui-elements.md#notice) สำหรับรายละเอียด
+  * ใช้ info box กับข้อมูลสำคัญเท่านั้น อย่าใช้เยอะเกินไป จะได้เด่นและดึงดูดความสนใจ
+* Parameter hints: ข้อความใต้ input field ใช้เมื่อมีข้อมูลที่ user ควรรู้ แต่ไม่ถึงกับต้องใช้ info box
+* Node hints: ให้ความช่วยเหลือใน input panel, output panel หรือ node details ดู [UI elements | Hints](/integrations/creating-nodes/build/reference/ui-elements.md#hints)
+* Tooltips: ข้อความที่โชว์เมื่อ hover ไอคอน !["Screenshot of the tooltip icon. The icon is a ? in a grey circle"](/_images/common-icons/help-tooltip.png) ใช้สำหรับข้อมูลเสริมที่ user อาจต้องการ
+  * ไม่จำเป็นต้องมี tooltip ทุก field ให้ใส่เฉพาะที่มีประโยชน์
+  * เขียน tooltip โดยคิดถึงสิ่งที่ user ต้องการ อย่า copy-paste จาก API ตรงๆ ถ้าอธิบายไม่ดีหรือผิด ให้ปรับปรุง
+* Placeholder text: n8n สามารถโชว์ placeholder ใน field ที่ user ยังไม่ได้กรอก เพื่อช่วยให้ user เข้าใจว่าควรกรอกอะไร
 
-Info boxes, hints, and tooltips can contain links to more information.
+Info box, hint, tooltip สามารถใส่ลิงก์ได้
 
 #### Errors
 
-Make it clear which fields are required.
+ทำให้ชัดเจนว่า field ไหนจำเป็น
 
-Add validation rules to fields if possible. For example, check for valid email patterns if the field expects an email.
+เพิ่ม validation rule ให้ field ถ้าเป็นไปได้ เช่น ถ้า field รับ email ให้เช็ค pattern ด้วย
 
-When displaying errors, make sure only the main error message displays in the red error title. More information should go in **Details**.
+เวลาขึ้น error ให้โชว์ข้อความหลักใน title สีแดง ข้อมูลเพิ่มเติมใส่ใน **Details**
 
 #### Toggles
 
-* Tooltips for binary states should start with something like **Whether to . . . **.
-* You may need a list rather than a toggle:
-    * Use toggles when it's clear what happens in a false state. For example, **Simplify Output?**. The alternative (don't simplify output) is clear.
-    * Use a dropdown list with named options when you need more clarity. For example, **Append?**. What happens if you don't append is unclear (it could be that nothing happens, or information is overwritten, or discarded).
+* Tooltip สำหรับ toggle ควรขึ้นต้นด้วย **Whether to . . . **
+* บางทีควรใช้ list แทน toggle:
+    * ใช้ toggle เมื่อสถานะ false ชัดเจน เช่น **Simplify Output?** (ถ้าไม่ simplify ก็เข้าใจได้)
+    * ใช้ dropdown list ที่มีชื่อ option ชัดเจนเมื่อจำเป็น เช่น **Append?** (ถ้าไม่ append อาจไม่ชัดว่าเกิดอะไรขึ้น)
 
 #### Lists
 
-* Set default values for lists whenever possible. The default should be the most-used option.
-* Sort list options alphabetically.
-* You can include list option descriptions. Only add descriptions if they provide useful information.
-* If there is an option like **All**, use the word **All**, not shorthand like *****.
+* ตั้งค่า default ให้ list เสมอถ้าเป็นไปได้ โดยเลือก option ที่ใช้บ่อยที่สุด
+* เรียง option ใน list ตามตัวอักษร
+* ใส่คำอธิบาย option ได้ถ้ามีประโยชน์
+* ถ้ามี option แบบ **All** ให้ใช้คำว่า **All** หลีกเลี่ยง ***** หรือคำย่ออื่น
 
 #### Trigger node inputs
 
-When a trigger node has a parameter for specifying which events to trigger on:
+ถ้า trigger node มี parameter สำหรับเลือก event ที่จะ trigger:
 
-* Name the parameter **Trigger on**.
-* Don't include a tooltip.
+* ตั้งชื่อ parameter ว่า **Trigger on**
+* ไม่ต้องใส่ tooltip
 
 #### Subtitles
 
-Set subtitles based on the values of the main parameters. For example:
+ตั้ง subtitle ตามค่าของ parameter หลัก เช่น:
 
 ```js
 subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
@@ -137,62 +136,59 @@ subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
 
 #### IDs
 
-When performing an operation on a specific record, such as "update a task comment" you need a way to specify which record you want to change.
+เวลาทำ operation กับ record เฉพาะ เช่น "update a task comment" ต้องให้ user ระบุ record ที่ต้องการ
 
-* Wherever possible, provide two ways to specify a record:
-    * By choosing from a pre-populated list. You can generate this list using the `loadOptions` parameter. Refer to [Base files](/integrations/creating-nodes/build/reference/node-base-files/index.md) for more information.
-    * By entering an ID.
-* Name the field `<Record name> name or ID`. For example, **Workspace Name or ID**. Add a tooltip saying "Choose a name from the list, or specify an ID using an expression." Link to n8n's [Expressions](/code/expressions.md) documentation.
-* Build your node so that it can handle users providing more information than required. For example:
-    * If you need a relative path, handle the user pasting in the absolute path.
-    * If the user needs to get an ID from a URL, handle the user pasting in the entire URL.
+* ถ้าเป็นไปได้ ให้ user เลือก record ได้ 2 วิธี:
+    * เลือกจาก list ที่ดึงมา (ใช้ `loadOptions` parameter ดู [Base files](/integrations/creating-nodes/build/reference/node-base-files/index.md))
+    * กรอก ID เอง
+* ตั้งชื่อ field ว่า `<Record name> name or ID` เช่น **Workspace Name or ID** ใส่ tooltip ว่า "Choose a name from the list, or specify an ID using an expression." พร้อมลิงก์ไป [Expressions](/code/expressions.md) ของ n8n
+* สร้าง node ให้รองรับข้อมูลที่ user ใส่มากกว่าที่ต้องการ เช่น:
+    * ถ้าต้องการ relative path ให้รองรับกรณี user วาง absolute path
+    * ถ้าต้องการ ID จาก URL ให้รองรับกรณี user วางทั้ง URL
 
 #### Dates and timestamps
 
-n8n uses [ISO timestamp strings](https://en.wikipedia.org/wiki/ISO_8601){:target=_blank class=.external-link} for dates and times. Make sure that any date or timestamp field you add supports all ISO 8601 formats.
+n8n ใช้ [ISO timestamp strings](https://en.wikipedia.org/wiki/ISO_8601){:target=_blank class=.external-link} สำหรับวันที่และเวลา ให้แน่ใจว่า field ที่เกี่ยวข้องรองรับ format นี้
 
 #### JSON
 
-You should support two ways of specifying the content of a text input that expects JSON:
+ควรให้ user กรอก JSON ได้ 2 แบบ:
 
-* Typing JSON directly into the text input: you need to parse the resulting string into a JSON object.
-* Using an expression that returns JSON.
-
-
+* พิมพ์ JSON ตรงๆ ใน text input: ต้อง parse string เป็น JSON object
+* ใช้ expression ที่ return JSON
 
 #### Node icons
 
 --8<-- "_snippets/integrations/node-icons.md"
 
-
 ### Common patterns and exceptions
 
-This section provides guidance on handling common design patterns, including some edge cases and exceptions to the main standards.
+ส่วนนี้ให้แนวทางสำหรับ pattern ที่พบบ่อย รวมถึงกรณี edge case และข้อยกเว้น
 
 #### Simplify responses
 
-APIs can return a lot of data that isn't useful. Consider adding a toggle that allows users to choose to simplify the response data:
+API มักจะคืนข้อมูลเยอะเกินจำเป็น ลองเพิ่ม toggle ให้ user เลือกว่าจะ simplify response หรือไม่:
 
   * Name: **Simplify Response**
   * Description: **Whether to return a simplified version of the response instead of the raw data**
 
 #### Upsert operations
 
-This should always be a separate operation with:
+ควรเป็น operation แยกต่างหากเสมอ โดยมี:
 
   * Name: **Create or Update**
   * Description: **Create a new record, or update the current one if it already exists (upsert)**
 
 #### Boolean operators
 <!-- vale off -->
-n8n doesn't have good support for combining boolean operators, such as AND and OR, in the GUI. Whenever possible, provide options for all ANDs or all ORs.
+n8n ยังไม่รองรับการ combine boolean operator (AND, OR) ใน GUI ได้ดีนัก ถ้าเป็นไปได้ ให้มี option สำหรับ AND ทั้งหมด หรือ OR ทั้งหมด
 <!-- vale on -->
 
-For example, you have a field called **Must match** to test if values match. Include options to test for **Any** and **All**, as separate options.
+เช่น มี field ชื่อ **Must match** สำหรับเช็คค่าตรงกัน ให้มี option **Any** กับ **All** แยกกัน
 
 #### Source keys or binary properties
 
-Binary data is file data, such as spreadsheets or images. In n8n, you need a named key to reference the data. Don't use the terms "binary data" or "binary property" for this field. Instead, use a more descriptive name: **Input data field name** / **Output data field name**.
+Binary data คือไฟล์ เช่น spreadsheet หรือรูปภาพ ใน n8n ต้องมี key สำหรับอ้างอิงข้อมูลนี้ อย่าใช้คำว่า "binary data" หรือ "binary property" สำหรับ field นี้ ให้ใช้ชื่อที่อธิบายได้ชัดเจนกว่า เช่น **Input data field name** / **Output data field name**
 
 
 

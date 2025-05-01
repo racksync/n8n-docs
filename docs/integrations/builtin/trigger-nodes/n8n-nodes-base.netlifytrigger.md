@@ -7,19 +7,19 @@ contentType: [integration, reference]
 
 # Netlify Trigger node
 
-[Netlify](https://netlify.com/){:target=_blank .external-link} offers hosting and serverless backend services for web applications and static websites.
+[Netlify](https://netlify.com/){:target=_blank .external-link} ให้บริการ hosting และ serverless backend สำหรับเว็บแอปและเว็บไซต์ static
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/netlify.md).
+คุณสามารถดูข้อมูลการเชื่อมต่อ (authentication) สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/netlify.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Netlify Trigger integrations](https://n8n.io/integrations/netlify-trigger/){:target=_blank .external-link} page.
+สำหรับตัวอย่างการใช้งานและ template เพื่อเริ่มต้นใช้งาน ดูได้ที่หน้า [Netlify Trigger integrations](https://n8n.io/integrations/netlify-trigger/){:target=_blank .external-link} ของ n8n
 ///
 
 ## Related resources
 
-n8n provides an app node for Netlify. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.netlify.md).
+n8n มี app node สำหรับ Netlify ด้วย ดูเอกสาร node ได้ [ที่นี่](/integrations/builtin/app-nodes/n8n-nodes-base.netlify.md)
 
-View [example workflows and related content](https://n8n.io/integrations/netlify/){:target=_blank .external-link} on n8n's website.
+ดู [example workflows และเนื้อหาที่เกี่ยวข้อง](https://n8n.io/integrations/netlify/){:target=_blank .external-link} ได้ที่เว็บไซต์ n8n
 

@@ -5,28 +5,28 @@ contentType: reference
 
 # HTTP request helper for node builders
 
-n8n provides a flexible helper for making HTTP requests, which abstracts away most of the complexity.
+n8n มี helper สำหรับการทำ HTTP request ที่ยืดหยุ่นและช่วยลดความซับซ้อน
 
 /// note | Programmatic style only
-The information in this document is for node building using the programmatic style. It doesn't apply to declarative style nodes.
+ข้อมูลในเอกสารนี้ใช้กับ node ที่สร้างแบบ programmatic เท่านั้น ไม่ใช้กับ declarative style node
 ///
 ## Usage
 
-Call the helper inside the `execute` function. 
+เรียก helper นี้ในฟังก์ชัน `execute` 
 
 ```typescript
-// If no auth needed
+// ถ้าไม่ต้องการ auth
 const response = await this.helpers.httpRequest(options);
 
-// If auth needed
+// ถ้าต้องการ auth
 const response = await this.helpers.httpRequestWithAuthentication.call(
 	this, 
-	'credentialTypeName', // For example: pipedriveApi
+	'credentialTypeName', // เช่น pipedriveApi
 	options,
 );
 ```
 
-`options` is an object:
+`options` เป็น object:
 
 ```typescript
 {
@@ -58,46 +58,46 @@ const response = await this.helpers.httpRequestWithAuthentication.call(
 }	
 ```
 
-`url` is required. The other fields are optional. The default method is `GET`.
+`url` จำเป็นต้องมี ฟิลด์อื่นๆ เป็น optional method เริ่มต้นคือ `GET`
 
-Some notes about the possible fields:
+หมายเหตุเกี่ยวกับแต่ละฟิลด์:
 
-- `body`: you can use a regular JavaScript object for JSON payload, a buffer for file uploads, an instance of FormData for `multipart/form-data`, and `URLSearchParams` for `application/x-www-form-urlencoded`.
-- `headers`: a key-value pair.  
-	* If `body` is an instance of `FormData` then n8n adds `content-type: multipart/form-data` automatically.  
-	* If `body` is an instance of `URLSearchParams`, then n8n adds `content-type: application/x-www-form-urlencoded`.  
-	* To override this behavior, set a `content-type` header.
-- `arrayFormat`: if your query string contains an array of data, such as `const qs = {IDs: [15,17]}`, the value of `arrayFormat` defines how n8n formats it.  
-	* `indices` (default):  `{ a: ['b', 'c'] }` as `a[0]=b&a[1]=c`  
-	* `brackets`: `{ a: ['b', 'c'] }` as `a[]=b&a[]=c`  
-	* `repeat`: `{ a: ['b', 'c'] }` as `a=b&a=c`  
-	* `comma`: `{ a: ['b', 'c'] }` as `a=b,c`
-- `auth`: Used for Basic auth. Provide `username` and `password`. n8n recommends omitting this, and using `helpers.httpRequestWithAuthentication(...)` instead.
-- `disableFollowRedirect`: By default, n8n follows redirects. You can set this to true to prevent this from happening.
-- `skipSslCertificateValidation`: Used for calling HTTPS services without proper certificate
-- `returnFullResponse`: Instead of returning just the body, returns an object with more data in the following format: `{body: body, headers: object, statusCode: 200, statusMessage: 'OK'}`
-- `encoding`: n8n can detect the content type, but you can specify `arrayBuffer` to receive a Buffer you can read from and interact with.
+- `body`: สามารถใช้ object ปกติสำหรับ JSON payload, buffer สำหรับ file upload, FormData สำหรับ `multipart/form-data` และ `URLSearchParams` สำหรับ `application/x-www-form-urlencoded`
+- `headers`: key-value pair  
+	* ถ้า `body` เป็น FormData n8n จะเพิ่ม `content-type: multipart/form-data` ให้อัตโนมัติ  
+	* ถ้า `body` เป็น `URLSearchParams` n8n จะเพิ่ม `content-type: application/x-www-form-urlencoded` ให้อัตโนมัติ  
+	* ถ้าต้องการ override ให้ตั้ง header `content-type` เอง
+- `arrayFormat`: ถ้า query string มี array เช่น `const qs = {IDs: [15,17]}` ค่านี้จะกำหนดรูปแบบ
+	* `indices` (default):  `{ a: ['b', 'c'] }` เป็น `a[0]=b&a[1]=c`  
+	* `brackets`: `{ a: ['b', 'c'] }` เป็น `a[]=b&a[]=c`  
+	* `repeat`: `{ a: ['b', 'c'] }` เป็น `a=b&a=c`  
+	* `comma`: `{ a: ['b', 'c'] }` เป็น `a=b,c`
+- `auth`: ใช้สำหรับ Basic auth ให้ใส่ `username` และ `password` n8n แนะนำให้ใช้ `helpers.httpRequestWithAuthentication(...)` แทน
+- `disableFollowRedirect`: โดยปกติ n8n จะตาม redirect ถ้าไม่ต้องการให้ตั้งค่านี้เป็น true
+- `skipSslCertificateValidation`: ใช้สำหรับเรียก HTTPS ที่ไม่มี certificate ที่ถูกต้อง
+- `returnFullResponse`: ถ้าต้องการให้ return object ที่มีข้อมูลมากกว่า body เช่น `{body: body, headers: object, statusCode: 200, statusMessage: 'OK'}`
+- `encoding`: n8n จะตรวจสอบ content type ให้อัตโนมัติ แต่สามารถระบุ `arrayBuffer` เพื่อรับ Buffer ที่สามารถอ่านและใช้งานต่อได้
 
 ## Example
 
-For an example, refer to the [Mattermost node](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Mattermost/v1/MattermostV1.node.ts){:target=_blank .external-link}.
+ดูตัวอย่างได้ที่ [Mattermost node](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Mattermost/v1/MattermostV1.node.ts){:target=_blank .external-link}
 
 ## Deprecation of the previous helper
 
-The previous helper implementation using `this.helpers.request(options)` used and exposed the `request-promise` library. This was removed in version 1.
+helper แบบเก่าที่ใช้ `this.helpers.request(options)` และ expose ไลบรารี `request-promise` ถูกถอดออกในเวอร์ชัน 1
 
-To minimize incompatibility, n8n made a transparent conversion to another library called `Axios`.
+เพื่อให้เข้ากันได้ n8n จึงเปลี่ยนไปใช้ไลบรารี `Axios` แบบโปร่งใส
 
-If you are having issues, please report them in the [Community Forums](https://community.n8n.io/){:target=_blank .external-link} or on [GitHub](https://github.com/n8n-io/n8n/issues){:target=_blank .external-link}.
+ถ้าคุณเจอปัญหา สามารถแจ้งได้ที่ [Community Forums](https://community.n8n.io/){:target=_blank .external-link} หรือ [GitHub](https://github.com/n8n-io/n8n/issues){:target=_blank .external-link}
 
 ## Migration guide to the new helper
 
-The new helper is much more robust, library agnostic, and easier to use.
+helper ตัวใหม่ robust ขึ้น ใช้งานง่ายขึ้น และไม่ผูกกับไลบรารีใดๆ
 
-New nodes should all use the new helper. You should strongly consider migrating existing custom nodes to the new helper. These are the main considerations when migrating:
+node ใหม่ควรใช้ helper ตัวนี้ทั้งหมด และควรพิจารณา migrate node เดิมด้วย ข้อควรระวังหลักๆ:
 
-- Accepts `url`. Doesn't accept `uri`.
-- `encoding: null` now must be `encoding: arrayBuffer`.
-- `rejectUnauthorized: false` is now `skipSslCertificateValidation: true`
-- Use `body` according to `content-type` headers to clarify the payload.
-- `resolveWithFullResponse` is now `returnFullResponse` and has similar behavior
+- ต้องใช้ `url` ไม่รองรับ `uri`
+- `encoding: null` ต้องเปลี่ยนเป็น `encoding: arrayBuffer`
+- `rejectUnauthorized: false` ต้องเปลี่ยนเป็น `skipSslCertificateValidation: true`
+- ใช้ `body` ให้ตรงกับ `content-type` header เพื่อความชัดเจน
+- `resolveWithFullResponse` เปลี่ยนเป็น `returnFullResponse` และมีพฤติกรรมคล้ายกัน

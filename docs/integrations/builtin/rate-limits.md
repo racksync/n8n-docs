@@ -7,57 +7,57 @@ description: How to handle API rate limits when using n8n integrations.
 
 # Handling API rate limits
 
-[API](/glossary.md#api) rate limits are restrictions on request frequency. For example, an API may limit the number of requests you can make per minute, or per day.
+[API](/glossary.md#api) rate limits คือข้อจำกัดในการส่ง request ไปยัง API ในช่วงเวลาหนึ่ง เช่น บาง API อาจจำกัดจำนวน request ที่ส่งได้ต่อ 1 นาที หรือ 1 วัน
 
-APIs can also limits how much data you can send in one request, or how much data the API sends in a single response.
+API บางตัวอาจจำกัดปริมาณข้อมูลที่ส่งได้ในแต่ละ request หรือจำกัดข้อมูลที่ API ส่งกลับมาในแต่ละ response ด้วย
 
 ## Identify rate limit issues
 
-When an n8n node hits a rate limit, it errors. n8n displays the error message in the node output panel. This includes the error message from the service.
+เมื่อ node ของ n8n เจอ rate limit จะเกิด error ขึ้น โดย n8n จะแสดงข้อความ error ใน output panel ของ node นั้น ซึ่งจะมีข้อความ error ที่ได้จาก service ด้วย
 
-If n8n received error 429 (too many requests) from the service, the error message is **The service is receiving too many requests from you**.
+ถ้า n8n ได้รับ error 429 (too many requests) จาก service ข้อความ error จะเป็น **The service is receiving too many requests from you**
 
-To check the rate limits for the service you're using, refer to the API documentation for the service.
+ถ้าอยากรู้ว่า service ที่ใช้อยู่มี rate limit เท่าไหร่ ให้ดูที่เอกสาร API ของ service นั้น
 
 ## Handle rate limits for integrations
 
-There are two ways to handle rate limits in n8n's integrations: using the Retry On Fail setting, or using a combination of the [Loop Over Items](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches.md) and [Wait](/integrations/builtin/core-nodes/n8n-nodes-base.wait.md) nodes: 
+มี 2 วิธีในการจัดการ rate limits ใน integration ของ n8n: ใช้ Retry On Fail หรือใช้ [Loop Over Items](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches.md) ร่วมกับ [Wait](/integrations/builtin/core-nodes/n8n-nodes-base.wait.md) node
 
-* Retry On Fail adds a pause between API request attempts.
-* With Loop Over Items and Wait you can break you request data into smaller chunks, as well as pausing between requests.
+* Retry On Fail จะเพิ่มการหน่วงเวลา (pause) ระหว่างการลองส่ง request ใหม่
+* การใช้ Loop Over Items กับ Wait จะช่วยแบ่งข้อมูลที่ต้องส่งออกเป็นชุดเล็ก ๆ และหยุดรอระหว่างแต่ละ request
 
 ### Enable Retry On Fail
 
-When you enable Retry On Fail, the node automatically tries the request again if it fails the first time.
+ถ้าเปิด Retry On Fail node จะลองส่ง request ใหม่ให้อัตโนมัติถ้าครั้งแรกไม่สำเร็จ
 
-1. Open the node.
-1. Select **Settings**.
-1. Enable the **Retry On Fail** toggle.
-1. Configure the retry settings: if using this to work around rate limits, set **Wait Between Tries (ms)** to more than the rate limit. For example, if the API you're using allows one request per second, set **Wait Between Tries (ms)** to `1000` to allow a 1 second wait.
+1. เปิด node ที่ต้องการ
+1. เลือก **Settings**
+1. เปิด toggle **Retry On Fail**
+1. ตั้งค่าการ retry: ถ้าใช้เพื่อจัดการ rate limit ให้ตั้ง **Wait Between Tries (ms)** มากกว่าค่าที่ API กำหนด เช่น ถ้า API อนุญาต 1 request ต่อวินาที ให้ตั้ง **Wait Between Tries (ms)** เป็น `1000` เพื่อรอ 1 วินาที
 
 ### Use Loop Over Items and Wait
 
-Use the Loop Over Items node to batch the input items, and the Wait node to introduce a pause between each request.
+ใช้ Loop Over Items node เพื่อแบ่งข้อมูล input ออกเป็น batch และใช้ Wait node เพื่อหยุดรอระหว่างแต่ละ request
 
-1. Add the Loop Over Items node before the node that calls the API. Refer to [Loop Over Items](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches.md) for information on how to configure the node.
-1. Add the Wait node after the node that calls the API, and connect it back to the Loop Over Items node. Refer to [Wait](/integrations/builtin/core-nodes/n8n-nodes-base.wait.md) for information on how to configure the node.
+1. เพิ่ม Loop Over Items node ไว้ก่อน node ที่จะเรียก API ดูวิธีตั้งค่าที่ [Loop Over Items](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches.md)
+1. เพิ่ม Wait node หลัง node ที่เรียก API แล้วเชื่อมกลับไปที่ Loop Over Items node ดูวิธีตั้งค่าที่ [Wait](/integrations/builtin/core-nodes/n8n-nodes-base.wait.md)
 
-For example, to handle rate limits when using OpenAI:
+ตัวอย่างการจัดการ rate limit กับ OpenAI:
 
 !["Screenshot of a workflow using the Loop Over Items node and Wait node to handle API rate limits for the OpenAI APIs"](/_images/integrations/builtin/rate-limits/loop-wait.png)
 
 ## Handle rate limits in the HTTP Request node
 
-The HTTP Request node has built-in settings for handling rate limits and large amounts of data.
+HTTP Request node มี option สำหรับจัดการ rate limit และข้อมูลจำนวนมากในตัว
 
 ### Batch requests
 
-Use the Batching option to send more than one request, reducing the request size, and introducing a pause between requests. This is the equivalent of using Loop Over Items and Wait.
+ใช้ option Batching เพื่อส่ง request หลายครั้ง ลดขนาด request และเพิ่มการหน่วงระหว่างแต่ละ request ซึ่งเหมือนกับการใช้ Loop Over Items กับ Wait
 
-1. In the HTTP Request node, select **Add Option** > **Batching**.
-1. Set **Items per Batch**: this is the number of input items to include in each request.
-1. Set **Batch Interval (ms)** to introduce a delay between requests. For example, if the API you're using allows one request per second, set **Wait Between Tries (ms)** to `1000` to allow a 1 second wait.
+1. ใน HTTP Request node เลือก **Add Option** > **Batching**
+1. ตั้งค่า **Items per Batch** คือจำนวน input ที่จะรวมในแต่ละ request
+1. ตั้งค่า **Batch Interval (ms)** เพื่อหน่วงระหว่างแต่ละ request เช่น ถ้า API อนุญาต 1 request ต่อวินาที ให้ตั้ง **Wait Between Tries (ms)** เป็น `1000` เพื่อรอ 1 วินาที
 
 ### Paginate results
 
-APIs paginate their results when they need to send more data than they can handle in a single response. For more information on pagination in the HTTP Request node, refer to [HTTP Request node | Pagination](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md#pagination).
+API หลายตัวจะ paginate ข้อมูลถ้าต้องส่งข้อมูลเยอะเกินกว่าที่จะส่งใน response เดียว ดูข้อมูลเพิ่มเติมเกี่ยวกับ pagination ใน HTTP Request node ได้ที่ [HTTP Request node | Pagination](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md#pagination)

@@ -7,25 +7,25 @@ contentType: [integration, reference]
 
 # Figma Trigger (Beta) node
 
-[Figma](https://www.figma.com/){:target=_blank .external-link} is a prototyping tool which is primarily web-based, with more offline features enabled by desktop applications for macOS and Windows.
+[Figma](https://www.figma.com/){:target=_blank .external-link} เป็นเครื่องมือสำหรับออกแบบ prototype ที่เน้นการใช้งานผ่านเว็บ และมีแอปสำหรับ macOS กับ Windows เพื่อใช้งานแบบออฟไลน์ได้มากขึ้น
 
 /// warning | Supported Figma Plans
-Figma doesn't support webhooks on the free "Starter" plan. Your team needs to be on the "Professional" plan to use this node.
+Figma ไม่รองรับ webhook บนแผนฟรี "Starter" ทีมของคุณต้องใช้แผน "Professional" ขึ้นไปถึงจะใช้ node นี้ได้
 ///
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/figma.md).
+คุณสามารถดูข้อมูลการเชื่อมต่อสำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/figma.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Figma Trigger integrations](https://n8n.io/integrations/figma-trigger-beta/){:target=_blank .external-link} page.
+สำหรับตัวอย่างการใช้งานและ template เพื่อช่วยให้คุณเริ่มต้นได้ง่ายขึ้น ดูได้ที่หน้า [Figma Trigger integrations ของ n8n](https://n8n.io/integrations/figma-trigger-beta/){:target=_blank .external-link}
 ///
 
 ## Events
 
-- **File Commented**: Triggers when someone comments on a file.
-- **File Deleted**: Triggers when someone deletes an individual file, but not when someone deletes an entire folder with all files.
-- **File Updated**: Triggers when someone saves or deletes a file. A save occurs when someone closes a file within 30 seconds after making changes.
-- **File Version Updated**: Triggers when someone creates a named version in the version history of a file.
-- **Library Publish**: Triggers when someone publishes a library file.
+- **File Commented**: แจ้งเตือนเมื่อมีคนคอมเมนต์ในไฟล์
+- **File Deleted**: แจ้งเตือนเมื่อมีคนลบไฟล์เดี่ยว (ไม่แจ้งเตือนถ้าลบทั้งโฟลเดอร์)
+- **File Updated**: แจ้งเตือนเมื่อมีการบันทึกหรือการลบไฟล์ การบันทึกจะเกิดขึ้นเมื่อมีคนปิดไฟล์หลังจากแก้ไขภายใน 30 วินาที
+- **File Version Updated**: แจ้งเตือนเมื่อมีการสร้าง named version ในประวัติไฟล์
+- **Library Publish**: แจ้งเตือนเมื่อมีการ publish library file
 

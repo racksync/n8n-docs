@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Keap Trigger node
 
-[Keap](https://keap.com/){:target=_blank .external-link} is an e-mail marketing and sales platform for small businesses, including products to manage and optimize the customer lifecycle, customer relationship management, marketing automation, lead capture, and e-commerce.
+[Keap](https://keap.com/){:target=_blank .external-link} เป็นแพลตฟอร์ม e-mail marketing และ sales สำหรับธุรกิจขนาดเล็ก มีเครื่องมือสำหรับจัดการและเพิ่มประสิทธิภาพ customer lifecycle, CRM, marketing automation, lead capture และ e-commerce
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/keap.md).
+คุณสามารถดูข้อมูลการเชื่อมต่อสำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/keap.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Keap Trigger integrations](https://n8n.io/integrations/keap-trigger/){:target=_blank .external-link} page.
+สำหรับตัวอย่างการใช้งานและ template ที่จะช่วยให้คุณเริ่มต้นได้ง่ายขึ้น ดูได้ที่หน้า [Keap Trigger integrations](https://n8n.io/integrations/keap-trigger/){:target=_blank .external-link} ของ n8n
 ///

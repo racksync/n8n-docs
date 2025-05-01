@@ -11,7 +11,7 @@ contentType: howto
 ### Error message: 'Credentials of type "*" aren't known'
 <!-- vale on -->
 
-Check that the name in the credentials array matches the name used in the property name of the credentials' class.
+ตรวจสอบว่า ชื่อใน credentials array ตรงกับชื่อที่ใช้ใน property name ของ credentials class หรือไม่
 
 ![Troubleshooting credentials](/_images/integrations/creating-nodes/troubleshooting-credentials-1.png)
 
@@ -23,32 +23,32 @@ Check that the name in the credentials array matches the name used in the proper
 ### Error message: 'There was a problem loading init data: API-Server can not be reached. It's probably down'
 <!-- vale on -->
 
-- Check that the names of the node file, node folder, and class match the path added to `packages/nodes-base/package.json`.
-- Check that the names used in the `displayOptions` property are names used by UI elements in the node.
+- ตรวจสอบว่าชื่อไฟล์ node, โฟลเดอร์ node และชื่อ class ตรงกับ path ที่เพิ่มใน `packages/nodes-base/package.json`
+- ตรวจสอบว่าชื่อที่ใช้ใน property `displayOptions` ตรงกับชื่อที่ใช้ใน UI elements ของ node
 
 <!-- vale off -->
 ### Node icon doesn't show up in the Add Node menu and the Editor UI
 <!-- vale on -->
 
-- Check that the icon is in the same folder as the node.
-- Check that it's either in PNG or SVG format.
-- When the `icon` property references the icon file, check that it includes the logo extension (`.png` or `.svg`) and that it prefixes it with `file:`. For example, `file:friendGrid.png` or `file:friendGrid.svg`.
+- ตรวจสอบว่า icon อยู่ในโฟลเดอร์เดียวกับ node
+- ตรวจสอบว่าเป็นไฟล์ PNG หรือ SVG
+- เวลาอ้างอิงไฟล์ icon ใน property `icon` ให้ใส่นามสกุลไฟล์ (`.png` หรือ `.svg`) และเติม `file:` ข้างหน้า เช่น `file:friendGrid.png` หรือ `file:friendGrid.svg`
 
 ### Node icon doesn't fit
 
-- If you use an SVG file, make sure the canvas size is square. You can find instructions to change the canvas size of an SVG file using GIMP [here](https://docs.gimp.org/2.10/en/gimp-image-resize.html).
-- If you use a PNG file, make sure that it's 60x60 pixels.
+- ถ้าใช้ไฟล์ SVG ให้แน่ใจว่า canvas เป็นสี่เหลี่ยมจัตุรัส ดูวิธีปรับขนาด canvas ของ SVG ด้วย GIMP [ที่นี่](https://docs.gimp.org/2.10/en/gimp-image-resize.html)
+- ถ้าใช้ PNG ให้แน่ใจว่าขนาด 60x60 พิกเซล
 
 ### Node doesn't show up in the Add Node menu
 
-Check that you registered the node in the `package.json` file in your project.
+ตรวจสอบว่าคุณได้ register node ในไฟล์ `package.json` ของโปรเจกต์แล้ว
 
 <!-- vale off -->
 ### Changes to the description properties don't show in the UI on refreshing
 <!-- vale on -->
 
-Every time you change the description properties, you have to stop the current n8n process (`ctrl` + `c`) and run it again. You may also need to re-run `npm link`.
+ทุกครั้งที่เปลี่ยน description properties ต้องหยุด process n8n ที่รันอยู่ (`ctrl` + `c`) แล้วรันใหม่ อาจต้องรัน `npm link` ใหม่ด้วย
 
 ### Linter incorrectly warning about file name case
 
-The node linter has rules for file names, including what case they should be. Windows users may encounter an issue when renaming files that causes the linter to continue giving warnings, even after you rename the files. This is due to a [known Windows issue](https://answers.microsoft.com/en-us/windows/forum/all/file-renaming-when-changing-case-doesnt-work/aa15ff7c-dd2d-4ed3-bcce-799ca90d4e58) with changing case when renaming files.
+node linter มีกฎเกี่ยวกับชื่อไฟล์ รวมถึงรูปแบบตัวพิมพ์ (case) ผู้ใช้ Windows อาจเจอปัญหาเวลา rename ไฟล์แล้ว linter ยังแจ้งเตือนเหมือนเดิม ทั้งที่ rename แล้ว สาเหตุเพราะ [ปัญหาใน Windows](https://answers.microsoft.com/en-us/windows/forum/all/file-renaming-when-changing-case-doesnt-work/aa15ff7c-dd2d-4ed3-bcce-799ca90d4e58) เวลาตั้งชื่อไฟล์ใหม่แค่เปลี่ยน case

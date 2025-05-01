@@ -8,18 +8,18 @@ priority: medium
 
 # RabbitMQ Trigger node
 
-[RabbitMQ](https://www.rabbitmq.com){:target=_blank .external-link} is an open-source message broker that accepts and forwards messages.
+[RabbitMQ](https://www.rabbitmq.com){:target=_blank .external-link} คือ message broker แบบ open-source ที่รับและส่งต่อ message ได้
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/rabbitmq.md).
+คุณสามารถดูข้อมูลเกี่ยวกับการเชื่อมต่อบัญชี (authentication) สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/rabbitmq.md)
 ///
 
 /// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Rabbit MQ Trigger integrations](https://n8n.io/integrations/rabbitmq-trigger/){:target=_blank .external-link} page.
+ถ้าอยากดูตัวอย่างการใช้งานหรือ template สำหรับเริ่มต้น ลองดูที่หน้า [Rabbit MQ Trigger integrations](https://n8n.io/integrations/rabbitmq-trigger/){:target=_blank .external-link} ของ n8n ได้เลย
 ///
 
 ## Related resources
 
-n8n provides an app node for RabbitMQ. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.rabbitmq.md).
+n8n มี app node สำหรับ RabbitMQ ด้วยนะ ดูเอกสาร node ได้ [ที่นี่](/integrations/builtin/app-nodes/n8n-nodes-base.rabbitmq.md)
 
-View [example workflows and related content](https://n8n.io/integrations/rabbitmq-trigger/){:target=_blank .external-link} on n8n's website.
+ดู [example workflows และเนื้อหาอื่นๆ ที่เกี่ยวข้อง](https://n8n.io/integrations/rabbitmq-trigger/){:target=_blank .external-link} ได้ที่เว็บไซต์ n8n

@@ -7,24 +7,24 @@ contentType: [integration, reference]
 
 # Emelia Trigger node
 
-[Emelia](https://emelia.io){:target=_blank .external-link} is a cold-mailing tool.
+[Emelia](https://emelia.io){:target=_blank .external-link} เป็นเครื่องมือสำหรับ cold-mailing
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/emelia.md).
+คุณสามารถดูข้อมูลการเชื่อมต่อสำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/emelia.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Emelia Trigger integrations](https://n8n.io/integrations/emelia-trigger/){:target=_blank .external-link} page.
+สำหรับตัวอย่างการใช้งานและ template เพื่อช่วยให้คุณเริ่มต้นได้ง่ายขึ้น ดูได้ที่หน้า [Emelia Trigger integrations ของ n8n](https://n8n.io/integrations/emelia-trigger/){:target=_blank .external-link}
 ///
 
 ## Events
 
-- Email Bounced
-- Email Opened
-- Email Replied
-- Email Sent
-- Link Clicked
-- Unsubscribed Contact
+- Email Bounced: แจ้งเตือนเมื่ออีเมลตีกลับ
+- Email Opened: แจ้งเตือนเมื่ออีเมลถูกเปิดอ่าน
+- Email Replied: แจ้งเตือนเมื่อมีการตอบกลับอีเมล
+- Email Sent: แจ้งเตือนเมื่อส่งอีเมลสำเร็จ
+- Link Clicked: แจ้งเตือนเมื่อมีการคลิกลิงก์ในอีเมล
+- Unsubscribed Contact: แจ้งเตือนเมื่อมีผู้ยกเลิกการรับอีเมล
 
 
 

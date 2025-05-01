@@ -8,43 +8,43 @@ priority: critical
 
 # Telegram Trigger node common issues
 
-Here are some common errors and issues with the [Telegram Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/index.md) and steps to resolve or troubleshoot them.
+รวม error และปัญหาที่พบบ่อยกับ [Telegram Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/index.md) พร้อมวิธีแก้ไขหรือแนวทางตรวจสอบ
 
 ## Stuck waiting for trigger event
 
-When testing the Telegram Trigger node with the **Test step** or or **Test workflow** buttons, the execution may appear stuck and unable to stop listening for events. If this occurs, you may need to exit the workflow and open it again to reset the canvas.
+เวลาทดสอบ Telegram Trigger node ด้วยปุ่ม **Test step** หรือ **Test workflow** อาจเจอ workflow ค้างและหยุดฟัง event ไม่ได้ ถ้าเกิดแบบนี้ให้ลองออกจาก workflow แล้วเข้าใหม่เพื่อ reset canvas
 
-Stuck listening events often occur due to issues with your network configuration outside of n8n. Specifically, this behavior often occurs when you run n8n behind a reverse proxy without configuring websocket proxying.
+ปัญหานี้มักเกิดจาก network configuration ภายนอก n8n โดยเฉพาะถ้าคุณ run n8n หลัง reverse proxy ที่ไม่ได้ตั้งค่า websocket proxying
 
-To resolve this issue, check your reverse proxy configuration (Nginx, Caddy, Apache HTTP Server, Traefik, etc.) to enable websocket support.
+วิธีแก้ไข ให้เช็ค config reverse proxy (Nginx, Caddy, Apache HTTP Server, Traefik ฯลฯ) ให้รองรับ websocket
 
 <!-- vale off -->
 ## Bad request: bad webhook: An HTTPS URL must be provided for webhook
 <!-- vale on -->
 
-This error occurs when you run n8n behind a reverse proxy and there is a problem with your instance's webhook URL.
+error นี้เกิดเมื่อคุณ run n8n หลัง reverse proxy แล้ว webhook URL มีปัญหา
 
-When running n8n behind a reverse proxy, you must [configure the `WEBHOOK_URL` environment variable](/hosting/configuration/configuration-examples/webhook-url.md) with the public URL where your n8n instance is running. For Telegram, this URL must use HTTPS.
+ถ้า run n8n หลัง reverse proxy ต้อง [ตั้งค่า environment variable `WEBHOOK_URL`](/hosting/configuration/configuration-examples/webhook-url.md) ให้เป็น public URL ที่ instance ของคุณใช้งาน สำหรับ Telegram URL นี้ต้องเป็น HTTPS
 
-To fix this issue, configure TLS/SSL termination in your reverse proxy. Afterward, update your `WEBHOOK_URL` environment variable to use the HTTPS address.
+วิธีแก้ไข ให้ตั้งค่า TLS/SSL termination ใน reverse proxy แล้วอัปเดต `WEBHOOK_URL` ให้เป็น HTTPS
 
 ## Workflow only works in testing or production
 
-Telegram only allows you to register a single webhook per app. This means that every time you switch from using the testing URL to the production URL (and vice versa), Telegram overwrites the registered webhook URL. 
+Telegram อนุญาตให้ register webhook ได้แค่ 1 อันต่อ app ทุกครั้งที่สลับจาก testing URL ไป production URL (หรือกลับกัน) Telegram จะ overwrite webhook URL เดิม
 
-You may have trouble with this if you try to test a workflow that's also active in production. The Telegram bot will only send events to one of the two webhook URLs, so the other will never receive event notifications.
+ถ้าคุณทดสอบ workflow ที่เปิดใช้งานใน production อยู่ อาจเจอปัญหา Telegram bot ส่ง event ไปแค่ 1 URL อีกอันจะไม่ได้รับ event
 
-To work around this, you can either disable your workflow when testing or create separate Telegram bots for testing and production.
+วิธี workaround คือปิด workflow ตอนทดสอบ หรือสร้าง Telegram bot แยกสำหรับ test กับ production
 
-To create a separate telegram bot for testing, repeat the process you completed to create your first bot. Reference [Telegram's bot documentation](https://core.telegram.org/bots) and the [Telegram bot API reference](https://core.telegram.org/bots/api) for more information.
+ถ้าจะสร้าง Telegram bot สำหรับ test ให้ทำเหมือนตอนสร้าง bot แรก ดูวิธีที่ [Telegram's bot documentation](https://core.telegram.org/bots) และ [Telegram bot API reference](https://core.telegram.org/bots/api)
 
-To disable your workflow when testing, try the following:
+ถ้าจะปิด workflow ตอนทดสอบ ให้ทำตามนี้:
 
 /// warning | Halts production traffic
-This workaround temporarily disables your production workflow for testing. Your workflow will no longer receive production traffic while it's deactivated.
+workaround นี้จะปิด workflow production ชั่วคราวระหว่างทดสอบ workflow จะไม่ได้รับ traffic production ขณะ inactive
 ///
 
-1. Go to your workflow page.
-2. Toggle the **Active** switch in the top panel to disable the workflow temporarily.
-3. Test your workflow using the test webhook URL.
-4. When you finish testing, toggle the **Inactive** toggle to enable the workflow again. The production webhook URL should resume working.
+1. ไปที่หน้า workflow ของคุณ
+2. ปิด **Active** toggle ด้านบนเพื่อปิด workflow ชั่วคราว
+3. ทดสอบ workflow ด้วย test webhook URL
+4. ทดสอบเสร็จแล้วเปิด toggle **Inactive** เพื่อเปิด workflow อีกครั้ง production webhook URL จะกลับมาใช้งานได้

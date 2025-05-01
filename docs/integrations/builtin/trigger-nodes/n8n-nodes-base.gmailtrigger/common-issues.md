@@ -8,23 +8,22 @@ priority: _priority-from-main-node_
 
 # Gmail Trigger node common issues
 
-Here are some common errors and issues with the [Gmail Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/index.md) and steps to resolve or troubleshoot them.
-
+รวม error และปัญหาที่พบบ่อยกับ [Gmail Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/index.md) พร้อมวิธีแก้ไขหรือแนวทางตรวจสอบ
 
 ## 401 unauthorized error
 
-The full text of the error looks like this:
+ข้อความ error เต็มจะประมาณนี้:
 <!--vale off-->
 ```
 401 - {"error":"unauthorized_client","error_description":"Client is unauthorized to retrieve access tokens using this method, or client not authorized for any of the scopes requested."}
 ```
 <!--vale on-->
 
-This error occurs when there's an issue with the credential you're using and its scopes or permissions.
+error นี้เกิดจาก credential ที่ใช้มีปัญหาเรื่อง scope หรือ permission
 
-To resolve:
+วิธีแก้ไข:
 
-1. For [OAuth2](/integrations/builtin/credentials/google/oauth-single-service.md) credentials, make sure you've enabled the Gmail API in **APIs & Services > Library**. Refer to [Google OAuth2 Single Service - Enable APIs](/integrations/builtin/credentials/google/oauth-single-service.md#enable-apis) for more information.
-2. For [Service Account](/integrations/builtin/credentials/google/service-account.md) credentials:
-    1. [Enable domain-wide delegation](/integrations/builtin/credentials/google/service-account.md#enable-domain-wide-delegation).
-    2. Make sure you add the Gmail API as part of the domain-wide delegation configuration.
+1. ถ้าใช้ [OAuth2](/integrations/builtin/credentials/google/oauth-single-service.md) credential ให้แน่ใจว่าได้เปิด Gmail API ใน **APIs & Services > Library** แล้ว ดูวิธีเปิดได้ที่ [Google OAuth2 Single Service - Enable APIs](/integrations/builtin/credentials/google/oauth-single-service.md#enable-apis)
+2. ถ้าใช้ [Service Account](/integrations/builtin/credentials/google/service-account.md) credential:
+    1. [Enable domain-wide delegation](/integrations/builtin/credentials/google/service-account.md#enable-domain-wide-delegation)
+    2. ตรวจสอบว่าได้เพิ่ม Gmail API ใน domain-wide delegation configuration แล้ว

@@ -8,18 +8,18 @@ priority: medium
 
 # HubSpot Trigger node
 
-[HubSpot](https://www.hubspot.com/){:target=_blank .external-link} provides tools for social media marketing, content management, web analytics, landing pages, customer support, and search engine optimization.
+[HubSpot](https://www.hubspot.com/){:target=_blank .external-link} ให้บริการเครื่องมือสำหรับ social media marketing, content management, web analytics, landing pages, customer support และ search engine optimization
 
 /// warning | Webhooks
-If you activate a second trigger, the previous trigger stops working. This is because the trigger registers a new webhook with HubSpot when activated. HubSpot only allows one webhook at a time. 
+ถ้าคุณเปิดใช้งาน trigger ตัวที่สอง ตัวก่อนหน้าจะหยุดทำงานทันที เพราะ trigger จะลงทะเบียน webhook ใหม่กับ HubSpot ทุกครั้งที่เปิดใช้งาน และ HubSpot อนุญาตให้มี webhook ได้แค่หนึ่งอันในแต่ละครั้ง
 ///
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/hubspot.md).
+คุณสามารถดูข้อมูลการเชื่อมต่อสำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/hubspot.md)
 ///
 
 /// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [HubSpot Trigger integrations](https://n8n.io/integrations/hubspot-trigger/){:target=_blank .external-link} page.
+สำหรับตัวอย่างการใช้งานและ template ที่จะช่วยให้คุณเริ่มต้นได้ง่ายขึ้น ดูได้ที่หน้า [HubSpot Trigger integrations](https://n8n.io/integrations/hubspot-trigger/){:target=_blank .external-link} ของ n8n
 ///
 
 ## Events
@@ -50,9 +50,9 @@ For usage examples and templates to help you get started, refer to n8n's [HubSpo
 
 ## Related resources
 
-n8n provides an app node for HubSpot. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot.md).
+n8n มี app node สำหรับ HubSpot ด้วย คุณสามารถดูเอกสาร node ได้ [ที่นี่](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot.md)
 
-View [example workflows and related content](https://n8n.io/integrations/hubspot-trigger/){:target=_blank .external-link} on n8n's website.
+ดู [example workflows และเนื้อหาอื่น ๆ ที่เกี่ยวข้อง](https://n8n.io/integrations/hubspot-trigger/){:target=_blank .external-link} ได้ที่เว็บไซต์ n8n
 
-Refer to [HubSpot's documentation](https://developers.hubspot.com/docs/api/overview){:target=_blank .external-link} for details about their API.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับ API ได้ที่ [HubSpot's documentation](https://developers.hubspot.com/docs/api/overview){:target=_blank .external-link}
 

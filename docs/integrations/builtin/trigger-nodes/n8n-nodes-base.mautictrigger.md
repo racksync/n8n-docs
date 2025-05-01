@@ -7,19 +7,19 @@ contentType: [integration, reference]
 
 # Mautic Trigger node
 
-[Mautic](https://www.mautic.org/){:target=_blank .external-link} is an open-source marketing automation software that helps online businesses automate their repetitive marketing tasks such as lead generation, contact scoring, contact segmentation, and marketing campaigns.
+[Mautic](https://www.mautic.org/){:target=_blank .external-link} คือซอฟต์แวร์ automation การตลาดแบบ open-source ที่ช่วยให้ธุรกิจออนไลน์สามารถ automate งานการตลาดซ้ำๆ เช่น การสร้าง lead, การให้คะแนน contact, การแบ่งกลุ่ม contact และแคมเปญการตลาดต่างๆ
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/mautic.md).
+คุณสามารถดูข้อมูลการเชื่อมต่อ (authentication) สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/mautic.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Mautic Trigger integrations](https://n8n.io/integrations/mautic-trigger/){:target=_blank .external-link} page.
+สำหรับตัวอย่างการใช้งานและ template เพื่อเริ่มต้นใช้งาน ดูได้ที่หน้า [Mautic Trigger integrations](https://n8n.io/integrations/mautic-trigger/){:target=_blank .external-link} ของ n8n
 ///
 
 ## Related resources
 
-n8n provides an app node for Mautic. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.mautic.md).
+n8n มี app node สำหรับ Mautic ด้วย ดูเอกสาร node ได้ [ที่นี่](/integrations/builtin/app-nodes/n8n-nodes-base.mautic.md)
 
-View [example workflows and related content](https://n8n.io/integrations/mautic/){:target=_blank .external-link} on n8n's website.
+ดู [example workflows และเนื้อหาที่เกี่ยวข้อง](https://n8n.io/integrations/mautic/){:target=_blank .external-link} ได้ที่เว็บไซต์ n8n
 

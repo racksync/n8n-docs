@@ -8,13 +8,13 @@ priority: medium
 
 # Kafka Trigger node
 
-[Kafka](https://kafka.apache.org/){:target=_blank .external-link} is an open-source distributed event streaming platform that one can use for high-performance data pipelines, streaming analytics, data integration, and mission-critical applications.
+[Kafka](https://kafka.apache.org/){:target=_blank .external-link} เป็นแพลตฟอร์ม event streaming แบบ distributed ที่เป็น open-source ใช้สำหรับ data pipeline ประสิทธิภาพสูง, การวิเคราะห์ข้อมูลแบบ streaming, การเชื่อมต่อข้อมูล และแอปพลิเคชันที่ต้องการความเสถียรสูง
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/kafka.md).
+คุณสามารถดูข้อมูลการเชื่อมต่อสำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/kafka.md)
 ///
 
 /// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Kafka Trigger integrations](https://n8n.io/integrations/kafka-trigger/){:target=_blank .external-link} page.
+สำหรับตัวอย่างการใช้งานและ template ที่จะช่วยให้คุณเริ่มต้นได้ง่ายขึ้น ดูได้ที่หน้า [Kafka Trigger integrations](https://n8n.io/integrations/kafka-trigger/){:target=_blank .external-link} ของ n8n
 ///
 

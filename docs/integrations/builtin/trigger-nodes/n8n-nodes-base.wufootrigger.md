@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Wufoo Trigger node
 
-[Wufoo](https://wufoo.com){:target=_blank .external-link} is an online form builder that helps you create custom HTML forms without writing code.
+[Wufoo](https://wufoo.com){:target=_blank .external-link} คือเครื่องมือสร้างฟอร์มออนไลน์ที่ช่วยให้คุณสร้างฟอร์ม HTML แบบ custom ได้โดยไม่ต้องเขียนโค้ดเอง
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/wufoo.md).
+คุณสามารถดูข้อมูลการเชื่อมต่อ (authentication) สำหรับ node นี้ได้ที่ [ที่นี่](/integrations/builtin/credentials/wufoo.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Wufoo Trigger integrations](https://n8n.io/integrations/wufoo-trigger/){:target=_blank .external-link} page.
+ถ้าต้องการดูตัวอย่างการใช้งานและ template สำหรับเริ่มต้นใช้งาน ลองดูที่หน้า [Wufoo Trigger integrations](https://n8n.io/integrations/wufoo-trigger/){:target=_blank .external-link} ของ n8n ได้เลย
 ///

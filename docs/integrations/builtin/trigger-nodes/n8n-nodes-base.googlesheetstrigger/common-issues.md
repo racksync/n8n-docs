@@ -8,29 +8,29 @@ priority: high
 
 # Google Sheets Trigger node common issues
 
-Here are some common errors and issues with the [Google Sheets Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.googlesheetstrigger/index.md) and steps to resolve or troubleshoot them.
+รวม error และปัญหาที่พบบ่อยกับ [Google Sheets Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.googlesheetstrigger/index.md) พร้อมวิธีแก้ไขหรือแนวทางตรวจสอบ
 
 ## Stuck waiting for trigger event
 
-When testing the Google Sheets Trigger node with the **Test step** or or **Test workflow** buttons, the execution may appear stuck and unable to stop listening for events. If this occurs, you may need to exit the workflow and open it again to reset the canvas.
+เวลาทดสอบ Google Sheets Trigger node ด้วยปุ่ม **Test step** หรือ **Test workflow** อาจเจอ workflow ค้างและหยุดฟัง event ไม่ได้ ถ้าเกิดแบบนี้ให้ลองออกจาก workflow แล้วเข้าใหม่เพื่อ reset canvas
 
-Stuck listening events often occur due to issues with your network configuration outside of n8n. Specifically, this behavior often occurs when you run n8n behind a reverse proxy without configuring websocket proxying.
+ปัญหานี้มักเกิดจาก network configuration ภายนอก n8n โดยเฉพาะถ้าคุณ run n8n หลัง reverse proxy ที่ไม่ได้ตั้งค่า websocket proxying
 
-To resolve this issue, check your reverse proxy configuration (Nginx, Caddy, Apache HTTP Server, Traefik, etc.) to enable websocket support.
+วิธีแก้ไข ให้เช็ค config reverse proxy (Nginx, Caddy, Apache HTTP Server, Traefik ฯลฯ) ให้รองรับ websocket
 
 ## Date and time columns are rendering as numbers
 
-Google Sheets can render dates and times a few different ways.
+Google Sheets อาจแสดงวันที่และเวลาได้หลายแบบ
 
-The [**serial number** format](https://developers.google.com/sheets/api/reference/rest/v4/DateTimeRenderOption), popularized by Lotus 1-2-3 and used my types of spreadsheet software, represents dates as a decimal number. The whole number component (the part left of the decimal) represents the number of days since December 30, 1899. The decimal portion (the part right of the decimal) represents time as a portion of a 24-hour period (for example, `.5` represents noon).
+[**serial number** format](https://developers.google.com/sheets/api/reference/rest/v4/DateTimeRenderOption) (ที่ Lotus 1-2-3 ทำให้ฮิตและ spreadsheet อื่นๆ ก็ใช้) จะเก็บวันที่เป็นเลขทศนิยม ส่วนที่เป็นจำนวนเต็ม (ซ้ายจุดทศนิยม) คือจำนวนวันนับจาก 30 ธันวาคม 1899 ส่วนที่เป็นทศนิยม (ขวาจุด) คือเวลาใน 24 ชั่วโมง (เช่น `.5` คือเที่ยงตรง)
 
-To use a different format for date and time values, adjust the format in your Google Sheet Trigger node. This is available when **Trigger On** is set to **Row Added**:
+ถ้าอยากได้ format อื่นสำหรับวันที่และเวลา ให้เปลี่ยน format ใน Google Sheet Trigger node โดยตั้งค่า **Trigger On** เป็น **Row Added**:
 
-1. Open the Google Sheet Trigger node on your canvas.
-2. Select **Add option**.
-3. Select **DateTime Render**.
-4. Change **DateTime Render** to **Formatted String**.
+1. เปิด Google Sheet Trigger node บน canvas
+2. เลือก **Add option**
+3. เลือก **DateTime Render**
+4. เปลี่ยน **DateTime Render** เป็น **Formatted String**
 
-The Google Sheets Trigger node will now format date, time, datetime, and duration fields as strings according to their number format.
+Google Sheets Trigger node จะส่งค่าประเภท date, time, datetime, duration เป็น string ตาม number format
 
-The number format depends on the spreadsheet's locale settings. You can change the local by opening the spreadsheet and selecting **File > Settings**. In the **General** tab, set **Locale** to your preferred locale. Select **Save settings** to adjust the value.
+number format จะขึ้นกับ locale ของ spreadsheet สามารถเปลี่ยน locale ได้ที่ **File > Settings** ใน Google Sheets แล้วเลือก **Locale** ที่ต้องการ กด **Save settings** เพื่อเปลี่ยนค่า

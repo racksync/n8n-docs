@@ -7,19 +7,19 @@ contentType: [integration, reference]
 
 # Onfleet Trigger node
 
-[Onfleet](https://onfleet.com/){:target=_blank .external-link} is a logistics platform offering a last-mile delivery solution.
+[Onfleet](https://onfleet.com/){:target=_blank .external-link} คือแพลตฟอร์มด้านโลจิสติกส์ที่ให้บริการโซลูชันสำหรับการจัดส่งระยะสุดท้าย (last-mile delivery)
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/onfleet.md).
+คุณสามารถดูข้อมูลการเชื่อมต่อ (authentication) สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/onfleet.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Onfleet Trigger integrations](https://n8n.io/integrations/onfleet-trigger/){:target=_blank .external-link} page.
+สำหรับตัวอย่างการใช้งานและ workflow template เพื่อเริ่มต้นใช้งาน ดูได้ที่หน้า [Onfleet Trigger integrations](https://n8n.io/integrations/onfleet-trigger/){:target=_blank .external-link} ของ n8n
 ///
 
 ## Events
 
-Trigger a workflow on:
+Trigger workflow เมื่อเกิดเหตุการณ์เหล่านี้:
 
 * SMS recipient opt out
 * SMS recipient response missed

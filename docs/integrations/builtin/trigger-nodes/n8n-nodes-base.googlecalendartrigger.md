@@ -8,30 +8,30 @@ priority: medium
 
 # Google Calendar Trigger node
 
-[Google Calendar](https://www.google.com/calendar/){:target=_blank .external-link} is a time-management and scheduling calendar service developed by Google.
+[Google Calendar](https://www.google.com/calendar/){:target=_blank .external-link} เป็นบริการปฏิทินสำหรับจัดการเวลาและนัดหมายที่พัฒนาโดย Google
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/google/index.md).
+คุณสามารถดูข้อมูลการเชื่อมต่อสำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/google/index.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Google Calendar Trigger integrations](https://n8n.io/integrations/google-calendar-trigger/){:target=_blank .external-link} page.
+สำหรับตัวอย่างการใช้งานและ template เพื่อช่วยให้คุณเริ่มต้นได้ง่ายขึ้น ดูได้ที่หน้า [Google Calendar Trigger integrations ของ n8n](https://n8n.io/integrations/google-calendar-trigger/){:target=_blank .external-link}
 ///
 
 ## Events
 
-- **Event Cancelled**
-- **Event Created**
-- **Event Ended**
-- **Event Started**
-- **Event Updated**
+- **Event Cancelled**: แจ้งเตือนเมื่อมีการยกเลิก event
+- **Event Created**: แจ้งเตือนเมื่อมีการสร้าง event ใหม่
+- **Event Ended**: แจ้งเตือนเมื่อ event สิ้นสุด
+- **Event Started**: แจ้งเตือนเมื่อ event เริ่มต้น
+- **Event Updated**: แจ้งเตือนเมื่อมีการแก้ไข event
 
 [[ templatesWidget(page.title, 'google-calendar-trigger') ]]
 
 ## Related resources
 
-n8n provides an app node for Google Calendar. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/index.md).
+n8n มี app node สำหรับ Google Calendar ดูเอกสาร node ได้ [ที่นี่](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/index.md)
 
-View [example workflows and related content](https://n8n.io/integrations/google-calendar-trigger/){:target=_blank .external-link} on n8n's website.
+ดู [ตัวอย่าง workflow และเนื้อหาที่เกี่ยวข้อง](https://n8n.io/integrations/google-calendar-trigger/){:target=_blank .external-link} บนเว็บไซต์ n8n
 
-Refer to [Google Calendar's documentation](https://developers.google.com/calendar/api/v3/reference){:target=_blank .external-link} for details about their API.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับ API ได้ที่ [Google Calendar's documentation](https://developers.google.com/calendar/api/v3/reference){:target=_blank .external-link}

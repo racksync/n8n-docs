@@ -8,16 +8,16 @@ priority: medium
 
 # Microsoft OneDrive Trigger node
 
-Use the Microsoft OneDrive Trigger node to respond to events in [Microsoft OneDrive](https://www.microsoft.com/en-us/microsoft-365/onedrive/online-cloud-storage){:target=_blank .external-link} and integrate Microsoft OneDrive with other applications. n8n has built-in support for file and folder events in OneDrive.
+ใช้ Microsoft OneDrive Trigger node เพื่อตอบสนอง event ต่างๆ ใน [Microsoft OneDrive](https://www.microsoft.com/en-us/microsoft-365/onedrive/online-cloud-storage){:target=_blank .external-link} และเชื่อมต่อ OneDrive กับแอปอื่นๆ ได้ง่ายๆ n8n รองรับ event ของไฟล์และโฟลเดอร์ใน OneDrive โดยตรง
 
-On this page, you'll find a list of events the Microsoft OneDrive Trigger node can respond to and links to more resources.
+ในหน้านี้ คุณจะเห็นรายการ events ที่ Microsoft OneDrive Trigger node สามารถตอบสนองได้ พร้อมลิงก์ไปยัง resource อื่นๆ
 
 ///  note  | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/microsoft.md).
+คุณสามารถดูข้อมูลการเชื่อมต่อ (authentication) สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/microsoft.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Microsoft OneDrive integrations](https://n8n.io/integrations/microsoft-onedrive-trigger/){:target=_blank .external-link} page.
+สำหรับตัวอย่างการใช้งานและ template เพื่อเริ่มต้นใช้งาน ดูได้ที่หน้า [Microsoft OneDrive integrations](https://n8n.io/integrations/microsoft-onedrive-trigger/){:target=_blank .external-link} ของ n8n
 ///
 
 ## Events
@@ -29,8 +29,8 @@ For usage examples and templates to help you get started, refer to n8n's [Micros
 
 ## Related resources
 
-n8n provides an app node for Microsoft OneDrive. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftonedrive.md).
+n8n มี app node สำหรับ Microsoft OneDrive ด้วย ดูเอกสาร node ได้ [ที่นี่](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftonedrive.md)
 
-View [example workflows and related content](https://n8n.io/integrations/microsoft-onedrive-trigger/){:target=_blank .external-link} on n8n's website.
+ดู [example workflows และเนื้อหาที่เกี่ยวข้อง](https://n8n.io/integrations/microsoft-onedrive-trigger/){:target=_blank .external-link} ได้ที่เว็บไซต์ n8n
 
-Refer to [Microsoft's OneDrive API documentation](https://learn.microsoft.com/en-us/onedrive/developer/rest-api/){:target=_blank .external-link} for more information about the service.
+ดูรายละเอียดเกี่ยวกับ API ของ OneDrive ได้ที่ [Microsoft's OneDrive API documentation](https://learn.microsoft.com/en-us/onedrive/developer/rest-api/){:target=_blank .external-link}

@@ -5,11 +5,11 @@ contentType: overview
 
 # Install and manage community nodes
 
-There are two ways to install community nodes:
+มี 2 วิธีในการติดตั้ง community nodes:
 
-* Within n8n [using the GUI](/integrations/community-nodes/installation/gui-install.md).
-* [Manually from the command line](/integrations/community-nodes/installation/manual-install.md): use this method if your n8n instance doesn't support installation through the in-app GUI.
+* ติดตั้งผ่าน n8n [โดยใช้ GUI](/integrations/community-nodes/installation/gui-install.md)
+* [ติดตั้งเองผ่าน command line](/integrations/community-nodes/installation/manual-install.md): ใช้วิธีนี้ถ้า instance ของ n8n ไม่รองรับการติดตั้งผ่าน GUI ในแอป
 
 /// note | Only available on self-hosted instances
-Community nodes aren't available on n8n cloud and require [self-hosting](/hosting/index.md) n8n.
+community nodes ใช้ได้เฉพาะบน n8n ที่ self-hosting เท่านั้น (n8n cloud ยังไม่รองรับ) ดูวิธี [self-hosting](/hosting/index.md) n8n
 ///

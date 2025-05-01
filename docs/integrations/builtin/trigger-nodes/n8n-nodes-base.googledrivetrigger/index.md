@@ -8,20 +8,20 @@ priority: medium
 
 # Google Drive Trigger node
 
-[Google Drive](https://drive.google.com){:target=_blank .external-link} is a file storage and synchronization service developed by Google. It allows users to store files on their servers, synchronize files across devices, and share files.
+[Google Drive](https://drive.google.com){:target=_blank .external-link} คือบริการเก็บไฟล์และ sync ไฟล์ของ Google ให้ผู้ใช้เก็บไฟล์บน server, sync ไฟล์ข้ามอุปกรณ์ และแชร์ไฟล์ได้
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/google/index.md).
+คุณสามารถดูข้อมูลเกี่ยวกับการตั้งค่า credentials สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/google/index.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Google Drive Trigger integrations](https://n8n.io/integrations/google-drive-trigger/){:target=_blank .external-link} page.
+สำหรับตัวอย่างการใช้งานและ template ที่จะช่วยให้คุณเริ่มต้นได้ง่ายขึ้น ดูได้ที่หน้า [Google Drive Trigger integrations](https://n8n.io/integrations/google-drive-trigger/){:target=_blank .external-link} ของ n8n
 ///
 
 /// note | Manual Executions vs. Activation
-On manual executions this node will return the last event matching its search criteria. If no event matches the criteria (for example because you are watching for files to be created but no files have been created so far), an error is thrown. Once saved and activated, the node will regularly check for any matching events and will trigger your workflow for each event found.
+ถ้า run แบบ manual node นี้จะคืน event ล่าสุดที่ตรงกับ search criteria ถ้าไม่มี event ตรง (เช่นดูไฟล์ที่ถูกสร้างแต่ยังไม่มีไฟล์ใหม่) จะ error ทันที แต่ถ้า save และ activate node จะเช็ค event ที่ตรงกับ criteria เป็นระยะและ trigger workflow ให้ทุก event ที่เจอ
 ///
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/trigger-nodes/n8n-nodes-base.googledrivetrigger/common-issues.md).
+สำหรับคำถามหรือปัญหาที่พบบ่อยและวิธีแก้ไข ดูได้ที่ [Common issues](/integrations/builtin/trigger-nodes/n8n-nodes-base.googledrivetrigger/common-issues.md)

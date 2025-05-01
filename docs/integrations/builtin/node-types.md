@@ -5,13 +5,13 @@ contentType: overview
 
 # Built-in integrations
 
-This section contains the [node](/glossary.md#node-n8n) library: reference documentation for every built-in node in n8n, and their credentials.
+ส่วนนี้คือ [node](/glossary.md#node-n8n) library: เป็นเอกสารอ้างอิงสำหรับ node ที่มีใน n8n และ credential ที่ใช้กับ node เหล่านั้น
 
 --8<-- "_snippets/integrations/builtin/node-operations.md"
 
 ## Core nodes
 
-Core nodes can be actions or [triggers](/glossary.md#trigger-node-n8n). Whereas most nodes connect to a specific external service, core nodes provide functionality such as logic, scheduling, or generic API calls.
+Core node สามารถเป็น action หรือ [trigger](/glossary.md#trigger-node-n8n) ก็ได้ โดยส่วนใหญ่ node จะเชื่อมต่อกับ service ภายนอกแบบเฉพาะเจาะจง แต่ core node จะให้ฟีเจอร์ทั่วไป เช่น logic, scheduling หรือการเรียก API แบบ generic
 
 ## Cluster nodes
 
@@ -19,16 +19,16 @@ Core nodes can be actions or [triggers](/glossary.md#trigger-node-n8n). Whereas 
 
 ## Credentials
 
-External services need a way to identify and authenticate users. This data can range from an API key over an email/password combination to a long multi-line private key. You can save these in n8n as [credentials](/glossary.md#credential-n8n).
+service ภายนอกต้องการวิธีระบุตัวตนและยืนยันตัวผู้ใช้ ข้อมูล credential อาจเป็น API key, อีเมล/รหัสผ่าน หรือ private key แบบหลายบรรทัดก็ได้ คุณสามารถบันทึก credential เหล่านี้ใน n8n ได้ที่ [credentials](/glossary.md#credential-n8n)
 
-Nodes in n8n can then request that credential information. As another layer of security, only node types with specific access rights can access the credentials.
+node ใน n8n สามารถร้องขอข้อมูล credential ได้ และเพื่อความปลอดภัย node แต่ละประเภทจะเข้าถึง credential ได้เฉพาะที่มีสิทธิ์เท่านั้น
 
-To make sure that the data is secure, it gets saved to the database encrypted. n8n uses a random personal encryption key, which it automatically generates on the first run of n8n and then saved under `~/.n8n/config`.
+เพื่อความปลอดภัย ข้อมูล credential จะถูกบันทึกในฐานข้อมูลแบบเข้ารหัส n8n จะสร้าง personal encryption key แบบสุ่มให้อัตโนมัติเมื่อรัน n8n ครั้งแรก และบันทึกไว้ที่ `~/.n8n/config`
 
-To learn more about creating, managing, and sharing credentials, refer to [Manage credentials](/credentials/index.md).
+ถ้าอยากรู้วิธีสร้าง จัดการ และแชร์ credential ดูได้ที่ [Manage credentials](/credentials/index.md)
 
 ## Community nodes
 
-n8n supports custom nodes built by the community. Refer to [Community nodes](/integrations/community-nodes/installation/index.md) for guidance on installing and using these nodes.
+n8n รองรับ custom node ที่สร้างโดย community ดูวิธีติดตั้งและใช้งานได้ที่ [Community nodes](/integrations/community-nodes/installation/index.md)
 
-For help building your own custom nodes, and publish them to [npm](https://www.npmjs.com/){:target=_blank .external-link}, refer to [Creating nodes](/integrations/creating-nodes/overview.md) for more information.
+ถ้าอยากสร้าง custom node เองและ publish ไปที่ [npm](https://www.npmjs.com/){:target=_blank .external-link} ดูวิธีได้ที่ [Creating nodes](/integrations/creating-nodes/overview.md)

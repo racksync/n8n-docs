@@ -8,12 +8,12 @@ priority: medium
 
 # Typeform Trigger node
 
-[Typeform](https://www.typeform.com/){:target=_blank .external-link} is an online software as a service company that specializes in online form building and online surveys. Its main software creates dynamic forms based on user needs.
+[Typeform](https://www.typeform.com/){:target=_blank .external-link} เป็นซอฟต์แวร์ออนไลน์แบบ SaaS ที่เน้นการสร้างฟอร์มออนไลน์และแบบสำรวจออนไลน์ ซอฟต์แวร์หลักของ Typeform จะสร้างฟอร์มแบบไดนามิกตามความต้องการของผู้ใช้
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/typeform.md).
+คุณสามารถดูข้อมูลการตั้งค่า authentication สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/typeform.md)
 ///
 
 /// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Typeform Trigger integrations](https://n8n.io/integrations/typeform-trigger/){:target=_blank .external-link} page.
+สำหรับตัวอย่างการใช้งานและ template ที่ช่วยให้เริ่มต้นได้ง่ายขึ้น ดูได้ที่ [Typeform Trigger integrations ของ n8n](https://n8n.io/integrations/typeform-trigger/){:target=_blank .external-link}
 ///

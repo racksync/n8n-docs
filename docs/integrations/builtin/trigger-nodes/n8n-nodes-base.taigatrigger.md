@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Taiga Trigger node
 
-[Taiga](https://www.taiga.io/){:target=_blank .external-link} is a free and open-source project management platform for startups, agile developers, and designers.
+[Taiga](https://www.taiga.io/){:target=_blank .external-link} คือแพลตฟอร์ม project management แบบ open-source ที่เหมาะกับ startup, นักพัฒนา agile และนักออกแบบ
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/taiga.md).
+คุณสามารถดูข้อมูลการตั้งค่า authentication สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/taiga.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Taiga Trigger integrations](https://n8n.io/integrations/taiga-trigger/){:target=_blank .external-link} page.
+สำหรับตัวอย่างการใช้งานและ template ที่ช่วยให้เริ่มต้นได้ง่ายขึ้น ดูได้ที่หน้า [Taiga Trigger integrations](https://n8n.io/integrations/taiga-trigger/){:target=_blank .external-link} ของ n8n
 ///

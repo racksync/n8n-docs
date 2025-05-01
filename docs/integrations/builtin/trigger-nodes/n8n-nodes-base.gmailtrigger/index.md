@@ -8,47 +8,47 @@ priority: high
 
 # Gmail Trigger node
 
-[Gmail](https://www.gmail.com){:target=_blank .external-link} is an email service developed by Google. The Gmail Trigger node can start a workflow based on events in Gmail.
+[Gmail](https://www.gmail.com){:target=_blank .external-link} คือบริการอีเมลที่พัฒนาโดย Google โดย Gmail Trigger node สามารถเริ่ม workflow ได้เมื่อเกิด event ต่างๆ ใน Gmail
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/google/index.md).
+คุณสามารถดูข้อมูลเกี่ยวกับการตั้งค่า credentials สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/google/index.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Gmail Trigger integrations](https://n8n.io/integrations/gmail-trigger/){:target=_blank .external-link} page.
+สำหรับตัวอย่างการใช้งานและ template ที่จะช่วยให้คุณเริ่มต้นได้ง่ายขึ้น ดูได้ที่หน้า [Gmail Trigger integrations](https://n8n.io/integrations/gmail-trigger/){:target=_blank .external-link} ของ n8n
 ///
 
 ## Events
 
-* **Message Received**: The node triggers for new messages at the selected **Poll Time**.
+* **Message Received**: node จะ trigger เมื่อมีข้อความใหม่ตาม **Poll Time** ที่เลือก
 
 ## Node parameters
 
-Configure the node with these parameters:
+ตั้งค่า node นี้ด้วย parameter เหล่านี้:
 
-* **Credential to connect with**: Select or create a new Google credential to use for the trigger. Refer to [Google credentials](/integrations/builtin/credentials/google/index.md) for more information on setting up a new credential.
-* **Poll Times**: Select a poll **Mode** to set how often to trigger the poll. Your **Mode** selection will add or remove relevant fields. Refer to [Poll Mode options](/integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/poll-mode-options.md) to configure the parameters for each mode type.
-* **Simplify**: Choose whether to return a simplified version of the response (turned on, default) or the raw data (turned off).
-    * The simplified version returns email message IDs, labels, and email headers, including: From, To, CC, BCC, and Subject.
+* **Credential to connect with**: เลือกหรือสร้าง Google credential ใหม่เพื่อใช้กับ trigger ดูรายละเอียดการตั้งค่า credential ได้ที่ [Google credentials](/integrations/builtin/credentials/google/index.md)
+* **Poll Times**: เลือก poll **Mode** เพื่อกำหนดความถี่ในการ trigger poll การเลือก **Mode** จะเพิ่มหรือลด field ที่เกี่ยวข้อง ดูวิธีตั้งค่า parameter สำหรับแต่ละ mode ได้ที่ [Poll Mode options](/integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/poll-mode-options.md)
+* **Simplify**: เลือกว่าจะให้ node ส่งข้อมูลแบบ simplified (เปิดไว้เป็นค่า default) หรือส่ง raw data (ปิด)
+    * แบบ simplified จะส่งเฉพาะ email message ID, labels และ email headers เช่น From, To, CC, BCC, Subject
 
 ## Node filters
 
-Use these filters to further refine the node's behavior:
+ใช้ filter เหล่านี้เพื่อปรับแต่งการทำงานของ node:
 
-* **Include Spam and Trash**: Select whether the node should trigger on new messages in the Spam and Trash folders (turned on) or not (turned off).
-* **Label Names or IDs**: Only trigger on messages with the selected labels added to them. Select the Label names you want to apply or enter an expression to specify IDs. The dropdown populates based on the **Credential** you selected.
-* **Search**: Enter Gmail search refine filters, like `from:`, to trigger the node on the filtered conditions only. Refer to [Refine searches in Gmail](https://support.google.com/mail/answer/7190?hl=en){:target=_blank .external-link} for more information.
-* **Read Status**: Choose whether to receive **Unread and read emails**, **Unread emails only** (default), or **Read emails only**.
-* **Sender**: Enter an email or a part of a sender name to trigger only on messages from that sender.
+* **Include Spam and Trash**: เลือกว่าจะให้ node trigger กับข้อความใหม่ในโฟลเดอร์ Spam และ Trash ด้วยหรือไม่ (เปิด/ปิด)
+* **Label Names or IDs**: trigger เฉพาะข้อความที่มี label ที่เลือก สามารถเลือกชื่อ label หรือใส่ expression เพื่อระบุ ID dropdown จะเปลี่ยนตาม **Credential** ที่เลือก
+* **Search**: ใส่ Gmail search filter เช่น `from:` เพื่อให้ node trigger เฉพาะเงื่อนไขที่กรองไว้ ดูตัวอย่าง filter ได้ที่ [Refine searches in Gmail](https://support.google.com/mail/answer/7190?hl=en){:target=_blank .external-link}
+* **Read Status**: เลือกว่าจะรับอีเมล **Unread and read emails**, **Unread emails only** (default) หรือ **Read emails only**
+* **Sender**: ใส่อีเมลหรือบางส่วนของชื่อผู้ส่งเพื่อ trigger เฉพาะข้อความจาก sender นั้น
 
 ## Related resources
 
-n8n provides an app node for Gmail. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/index.md).
+n8n มี app node สำหรับ Gmail ด้วย ดูเอกสาร node ได้ [ที่นี่](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/index.md)
 
-View [example workflows and related content](https://n8n.io/integrations/gmail-trigger/){:target=_blank .external-link} on n8n's website.
+ดู [ตัวอย่าง workflow และเนื้อหาที่เกี่ยวข้อง](https://n8n.io/integrations/gmail-trigger/){:target=_blank .external-link} บนเว็บไซต์ n8n
 
-Refer to [Google's Gmail API documentation](https://developers.google.com/gmail/api/guides){:target=_blank .external-link} for details about their API.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับ API ได้ที่ [Google's Gmail API documentation](https://developers.google.com/gmail/api/guides){:target=_blank .external-link}
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/common-issues.md).
+สำหรับคำถามหรือปัญหาที่พบบ่อยและวิธีแก้ไข ดูได้ที่ [Common issues](/integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/common-issues.md)

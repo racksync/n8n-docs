@@ -5,15 +5,15 @@ contentType: tutorial
 
 # Build a declarative-style node
 
-This tutorial walks through building a declarative-style node. Before you begin, make sure this is the node style you need. Refer to [Choose your node building approach](/integrations/creating-nodes/plan/choose-node-method.md) for more information.
+tutorial นี้จะพาไปดูวิธีสร้าง node แบบ declarative-style ก่อนเริ่ม แนะนำให้แน่ใจว่านี่คือ style ที่คุณต้องการใช้ ดูรายละเอียดเพิ่มเติมได้ที่ [Choose your node building approach](/integrations/creating-nodes/plan/choose-node-method.md)
 
 ## Prerequisites
 
-You need the following installed on your development machine:
+คุณต้องติดตั้งสิ่งเหล่านี้ในเครื่องสำหรับพัฒนา:
 
 --8<-- "_snippets/integrations/creating-nodes/prerequisites.md"
 
-You need some understanding of:
+คุณควรมีความเข้าใจพื้นฐานเกี่ยวกับ:
 
 - JavaScript/TypeScript
 - REST APIs
@@ -21,42 +21,41 @@ You need some understanding of:
 
 ## Build your node
 
-In this section, you'll clone n8n's node starter repository, and build a node that integrates the [NASA API](https://api.nasa.gov/){:target=_blank .external-link}. You'll create a node that uses two of NASA's services: APOD (Astronomy Picture of the Day) and Mars Rover Photos. To keep the code examples short, the node won't implement every available option for the Mars Rover Photos endpoint.
+ในส่วนนี้ คุณจะ clone node starter repository ของ n8n และสร้าง node ที่เชื่อมต่อกับ [NASA API](https://api.nasa.gov/){:target=_blank .external-link} โดยจะสร้าง node ที่ใช้บริการของ NASA สองตัวคือ APOD (Astronomy Picture of the Day) และ Mars Rover Photos เพื่อให้ตัวอย่างโค้ดสั้น node นี้จะไม่ได้ implement ทุก option ของ Mars Rover Photos endpoint
 
 /// note | Existing node
-n8n has a built-in NASA node. To avoid clashing with the existing node, you'll give your version a different name.
+n8n มี NASA node ที่ built-in มาอยู่แล้ว เพื่อไม่ให้ชนกับ node เดิม คุณจะต้องตั้งชื่อ node ของคุณให้ต่างออกไป
 ///
 ### Step 1: Set up the project
 
+n8n มี starter repository สำหรับพัฒนา node การใช้ starter จะช่วยให้คุณมี dependencies ที่จำเป็นครบ และมี linter ให้ด้วย
 
-n8n provides a starter repository for node development. Using the starter ensures you have all necessary dependencies. It also provides a linter. 
+Clone repository แล้วเข้าไปใน directory:
 
-Clone the repository and navigate into the directory:
-
-1. [Generate a new repository](https://github.com/n8n-io/n8n-nodes-starter/generate) from the template repository.
-2. Clone your new repository:
+1. [Generate a new repository](https://github.com/n8n-io/n8n-nodes-starter/generate) จาก template repository
+2. Clone repository ใหม่ของคุณ:
 		```shell
 		git clone https://github.com/<your-organization>/<your-repo-name>.git n8n-nodes-nasa-pics
 		cd n8n-nodes-nasa-pics
 		```
 
-The starter contains example nodes and credentials. Delete the following directories and files:
+starter จะมีตัวอย่าง node และ credentials มาให้ ลบ directory และไฟล์เหล่านี้ออก:
 
 * `nodes/ExampleNode`
 * `nodes/HTTPBin`
 * `credentials/ExampleCredentials.credentials.ts`
 * `credentials/HttpBinApi.credentials.ts`
 
-Now create the following directories and files:
+จากนั้นสร้าง directory และไฟล์เหล่านี้:
 
 `nodes/NasaPics`  
 `nodes/NasaPics/NasaPics.node.json`  
 `nodes/NasaPics/NasaPics.node.ts`  
 `credentials/NasaPicsApi.credentials.ts`  
 
-These are the key files required for any node. Refer to [Node file structure](/integrations/creating-nodes/build/reference/node-file-structure.md) for more information on required files and recommended organization.
+ไฟล์เหล่านี้คือไฟล์หลักที่ node ทุกตัวต้องมี ดูรายละเอียดเพิ่มเติมได้ที่ [Node file structure](/integrations/creating-nodes/build/reference/node-file-structure.md)
 
-Now install the project dependencies:
+ติดตั้ง dependencies ของโปรเจกต์:
 
 ```shell
 npm i
@@ -64,21 +63,19 @@ npm i
 
 ### Step 2: Add an icon
 
-Save the NASA SVG logo from [here](https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg){:target=_blank .external-link} as `nasapics.svg` in `nodes/NasaPics/`.
-
+เซฟโลโก้ NASA แบบ SVG จาก [ที่นี่](https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg){:target=_blank .external-link} แล้วตั้งชื่อว่า `nasapics.svg` ไว้ใน `nodes/NasaPics/`
 
 --8<-- "_snippets/integrations/creating-nodes/node-icons.md"
 
-
 ### Step 3: Create the node
 
-Every node must have a base file. Refer to [Node base file](/integrations/creating-nodes/build/reference/node-base-files/index.md) for detailed information about base file parameters.
+node ทุกตัวต้องมี base file ดูรายละเอียด parameter ของ base file ได้ที่ [Node base file](/integrations/creating-nodes/build/reference/node-base-files/index.md)
 
-In this example, the file is `NasaPics.node.ts`. To keep this tutorial short, you'll place all the node functionality in this one file. When building more complex nodes, you should consider splitting out your functionality into modules. Refer to [Node file structure](/integrations/creating-nodes/build/reference/node-file-structure.md) for more information.
+ในตัวอย่างนี้ใช้ไฟล์ `NasaPics.node.ts` เพื่อให้ง่ายจะใส่โค้ดทุกอย่างไว้ในไฟล์เดียว ถ้า node ซับซ้อนกว่านี้ควรแยก module ดูรายละเอียดที่ [Node file structure](/integrations/creating-nodes/build/reference/node-file-structure.md)
 
 #### Step 3.1: Imports
 
-Start by adding the import statements:
+เริ่มจาก import module ที่ต้องใช้:
 
 ```typescript
 import { INodeType, INodeTypeDescription } from 'n8n-workflow';
@@ -86,11 +83,11 @@ import { INodeType, INodeTypeDescription } from 'n8n-workflow';
 
 #### Step 3.2: Create the main class
 
-The node must export an interface that implements INodeType. This interface must include a `description` interface, which in turn contains the `properties` array.
+node ต้อง export interface ที่ implements INodeType ซึ่งต้องมี `description` interface และ `properties` array
 
 /// note | Class names and file names
-Make sure the class name and the file name match. For example, given a class `NasaPics`, the filename must be `NasaPics.node.ts`.
-///
+ชื่อ class กับชื่อไฟล์ต้องตรงกัน เช่น class `NasaPics` ไฟล์ต้องชื่อ `NasaPics.node.ts`
+/// 
 ```typescript
 export class NasaPics implements INodeType {
 	description: INodeTypeDescription = {
@@ -104,7 +101,7 @@ export class NasaPics implements INodeType {
 
 #### Step 3.3: Add node details
 
-All nodes need some basic parameters, such as their display name, icon, and the basic information for making a request using the node. Add the following to the `description`:
+node ทุกตัวต้องมี parameter พื้นฐาน เช่น display name, icon และข้อมูลพื้นฐานสำหรับ request เพิ่มโค้ดนี้ใน `description`:
 
 ```typescript
 displayName: 'NASA Pics',
@@ -134,11 +131,11 @@ requestDefaults: {
 },
 ```
 
-n8n uses some of the properties set in `description` to render the node in the Editor UI. These properties are `displayName`, `icon`, `description`, and `subtitle`.
+n8n จะใช้ property ใน `description` บางตัว เช่น `displayName`, `icon`, `description`, `subtitle` เพื่อแสดง node ใน Editor UI
 
 #### Step 3.4: Add resources
 
-The resource object defines the API resource that the node uses. In this tutorial, you're creating a node to access two of NASA's API endpoints: `planetary/apod` and `mars-photos`. This means you need to define two resource options in `NasaPics.node.ts`. Update the `properties` array with the resource object:
+resource object จะกำหนดว่า node นี้ใช้ API resource อะไร ในตัวอย่างนี้จะใช้ endpoint `planetary/apod` และ `mars-photos` ของ NASA ให้เพิ่ม resource options สองตัวใน `NasaPics.node.ts` อัปเดต `properties` array ด้วย resource object:
 
 ```typescript
 properties: [
@@ -164,15 +161,15 @@ properties: [
 ]
 ```
 
-`type` controls which UI element n8n displays for the resource, and tells n8n what type of data to expect from the user. `options` results in n8n adding a dropdown that allows users to choose one option. Refer to [Node UI elements](/integrations/creating-nodes/build/reference/ui-elements.md) for more information.
+`type` จะกำหนดว่า UI ของ n8n จะแสดง element แบบไหน และบอก n8n ว่าควรรับข้อมูลแบบไหนจาก user `options` จะทำให้มี dropdown ให้เลือก ดูรายละเอียดที่ [Node UI elements](/integrations/creating-nodes/build/reference/ui-elements.md)
 
 #### Step 3.5: Add operations
 
-The operations object defines the available operations on a resource.
+operations object จะกำหนด operation ที่ใช้กับ resource ได้
 
-In a declarative-style node, the operations object includes `routing` (within the `options` array). This sets up the details of the API call.
+ใน declarative-style node, operations object จะมี `routing` (ใน `options` array) เพื่อกำหนดรายละเอียด API call
 
-Add the following to the `properties` array, after the `resource` object:
+เพิ่มโค้ดนี้ใน `properties` array หลัง resource object:
 
 ```typescript
 {
@@ -282,15 +279,13 @@ Add the following to the `properties` array, after the `resource` object:
 // Optional/additional fields will go here
 ```
 
-This code creates two operations: one to get today's APOD image, and another to send a get request for photos from one of the Mars Rovers. The object named `roverName` requires the user to choose which Rover they want photos from. The `routing` object in the Mars Rover operation references this to create the URL for the API call.
+โค้ดนี้จะสร้าง operation สองตัว: ตัวหนึ่งสำหรับดึง APOD ของวันนี้ และอีกตัวสำหรับดึงรูปจาก Mars Rover โดย object ชื่อ `roverName` จะให้ user เลือกว่าจะเอารูปจาก Rover ตัวไหน routing object ใน Mars Rover operation จะใช้ค่านี้สร้าง URL สำหรับ API call
 
 #### Step 3.6: Optional fields
 
-Most APIs, including the NASA API that you're using in this example, have optional fields you can use to refine your query.
+API ส่วนใหญ่รวมถึง NASA API จะมี field เสริมที่ไม่บังคับ เพื่อให้ user ไม่งง n8n จะซ่อน field เหล่านี้ไว้ใน **Additional Fields** ใน UI
 
-To avoid overwhelming users, n8n displays these under **Additional Fields** in the UI.
-
-For this tutorial, you'll add one additional field, to allow users to pick a date to use with the APOD endpoint. Add the following to the properties array:
+ในตัวอย่างนี้จะเพิ่ม field เสริมให้ user เลือกวันที่สำหรับ APOD endpoint เพิ่มโค้ดนี้ใน properties array:
 
 ```typescript
 {
@@ -328,12 +323,11 @@ For this tutorial, you'll add one additional field, to allow users to pick a dat
 }
 ```
 
-
 ### Step 4: Set up authentication
 
-The NASA API requires users to authenticate with an API key.
+NASA API ต้องใช้ API key ในการ auth
 
-Add the following to `nasaPicsApi.credentials.ts`:
+เพิ่มโค้ดนี้ใน `nasaPicsApi.credentials.ts`:
 
 ```typescript
 import {
@@ -367,14 +361,13 @@ export class NasaPicsApi implements ICredentialType {
 }
 ```
 
-For more information about credentials files and options, refer to [Credentials file](/integrations/creating-nodes/build/reference/credentials-files.md).
-
+ดูรายละเอียดเกี่ยวกับ credentials file และ options ได้ที่ [Credentials file](/integrations/creating-nodes/build/reference/credentials-files.md)
 
 ### Step 5: Add node metadata
 
-Metadata about your node goes in the JSON file at the root of your node. n8n refers to this as the codex file. In this example, the file is `NasaPics.node.json`.
+metadata ของ node จะอยู่ในไฟล์ JSON ที่ root ของ node n8n เรียกไฟล์นี้ว่า codex file ในตัวอย่างนี้คือ `NasaPics.node.json`
 
-Add the following code to the JSON file:
+เพิ่มโค้ดนี้ในไฟล์ JSON:
 
 ```json
 {
@@ -399,11 +392,11 @@ Add the following code to the JSON file:
 }
 ```
 
-For more information on these parameters, refer to [Node codex files](/integrations/creating-nodes/build/reference/node-codex-files.md).
+ดูรายละเอียด parameter เหล่านี้ได้ที่ [Node codex files](/integrations/creating-nodes/build/reference/node-codex-files.md)
 
 ### Step 6: Update the npm package details
 
-Your npm package details are in the `package.json` at the root of the project. It's essential to include the `n8n` object with links to the credentials and base node file. Update this file to include the following information:
+รายละเอียด npm package จะอยู่ใน `package.json` ที่ root ของโปรเจกต์ ต้องใส่ object `n8n` ที่ลิงก์ไปยัง credentials และ base node file อัปเดตไฟล์นี้ให้มีข้อมูลแบบนี้:
 
 ```json
 {
@@ -453,7 +446,7 @@ Your npm package details are in the `package.json` at the root of the project. I
 }
 ```
 
-You need to update the `package.json` to include your own information, such as your name and repository URL. For more information on npm `package.json` files, refer to [npm's package.json documentation](https://docs.npmjs.com/cli/v8/configuring-npm/package-json){:target=_blank .external-link}.
+คุณต้องอัปเดต `package.json` ให้มีข้อมูลของคุณเอง เช่น ชื่อและ repository URL ดูรายละเอียดเพิ่มเติมเกี่ยวกับไฟล์ `package.json` ได้ที่ [npm's package.json documentation](https://docs.npmjs.com/cli/v8/configuring-npm/package-json){:target=_blank .external-link}
 
 ## Test your node
 
@@ -461,7 +454,7 @@ You need to update the `package.json` to include your own information, such as y
 
 ## Next steps
 
-* [Deploy your node](/integrations/creating-nodes/deploy/index.md).
-* View an example of a declarative node: n8n's [Brevo node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Brevo){:target=_blank .external-link}. Note that the main node is declarative, while the trigger node is in programmatic style.
-* Learn about [node versioning](/integrations/creating-nodes/build/reference/node-versioning.md).
+* [Deploy your node](/integrations/creating-nodes/deploy/index.md)
+* ดูตัวอย่าง declarative node: n8n's [Brevo node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Brevo){:target=_blank .external-link} (main node เป็น declarative, trigger node เป็น programmatic)
+* ศึกษาเรื่อง [node versioning](/integrations/creating-nodes/build/reference/node-versioning.md)
 

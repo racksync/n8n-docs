@@ -5,15 +5,15 @@ contentType: explanation
 
 # n8n community node blocklist
 
-n8n maintains a blocklist of community nodes. You can't install any node on this list.
+n8n มี blocklist สำหรับ community nodes คุณจะไม่สามารถติดตั้ง node ที่อยู่ในรายการนี้ได้
 
-n8n may add community nodes to the blocklist for a range of reasons, including:
+n8n อาจเพิ่ม community node เข้า blocklist ด้วยเหตุผลต่างๆ เช่น:
 
-* The node is intentionally malicious
-* It's low quality (low enough to be harmful)
+* node มีเจตนาร้าย
+* คุณภาพต่ำ (จนเป็นอันตราย)
 
 <!-- vale off -->
 
-If you are a community node creator whose node is on the blocklist, and you believe this is a mistake, contact [hello@n8n.io](mailto: hello@n8n.io).
+ถ้าคุณเป็นผู้สร้าง community node ที่ถูก blocklist และคิดว่าเป็นความผิดพลาด ติดต่อ [hello@n8n.io](mailto: hello@n8n.io)
 
 <!-- vale on -->

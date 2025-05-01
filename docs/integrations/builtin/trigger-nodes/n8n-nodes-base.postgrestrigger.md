@@ -8,28 +8,28 @@ priority: medium
 
 # Postgres Trigger node
 
-Use the Postgres Trigger node to respond to events in [Postgres](https://www.postgresql.org/){:target=_blank .external-link} and integrate Postgres with other applications. n8n has built-in support responding to insert, update, and delete events.
+ใช้ Postgres Trigger node เพื่อตอบสนอง event ต่างๆ ใน [Postgres](https://www.postgresql.org/){:target=_blank .external-link} และเชื่อมต่อ Postgres กับแอปอื่นๆ ได้เลย n8n รองรับ event insert, update, และ delete ในตัว
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/postgres.md).
+คุณสามารถดูข้อมูลเกี่ยวกับการเชื่อมต่อบัญชี (authentication) สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/postgres.md)
 ///
 
 /// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Postgres Trigger integrations](https://n8n.io/integrations/postgres-trigger/){:target=_blank .external-link} page.
+ถ้าอยากดูตัวอย่างการใช้งานหรือ template สำหรับเริ่มต้น ลองดูที่หน้า [Postgres Trigger integrations](https://n8n.io/integrations/postgres-trigger/){:target=_blank .external-link} ของ n8n ได้เลย
 ///
 
 ## Events
 
-You can configure how the node listens for events.
+คุณสามารถตั้งค่าได้ว่า node จะฟัง event แบบไหน
 
-* Select **Listen and Create Trigger Rule**, then choose the events to listen for:
+* เลือก **Listen and Create Trigger Rule** แล้วเลือก event ที่ต้องการฟัง:
 	* Insert
 	* Update
 	* Delete
-* Select **Listen to Channel**, then enter a channel name that the node should monitor.
+* เลือก **Listen to Channel** แล้วใส่ชื่อ channel ที่ node ควร monitor
 
 ## Related resources
 
-n8n provides an app node for Postgres. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.postgres/index.md).
+n8n มี app node สำหรับ Postgres ด้วยนะ ดูเอกสาร node ได้ [ที่นี่](/integrations/builtin/app-nodes/n8n-nodes-base.postgres/index.md)
 
-View [example workflows and related content](https://n8n.io/integrations/postgres-trigger/){:target=_blank .external-link} on n8n's website.
+ดู [example workflows และเนื้อหาอื่นๆ ที่เกี่ยวข้อง](https://n8n.io/integrations/postgres-trigger/){:target=_blank .external-link} ได้ที่เว็บไซต์ n8n

@@ -8,45 +8,45 @@ priority: medium
 
 # Facebook Lead Ads Trigger node
 
-Use the Facebook Lead Ads Trigger node to respond to events in [Facebook Lead Ads](https://www.facebook.com/business/ads/lead-ads/){:target=_blank .external-link} and integrate Facebook Lead Ads with other applications. n8n has built-in support for responding to new leads.
+ใช้ Facebook Lead Ads Trigger node เพื่อตอบสนองต่อ event ต่างๆ ใน [Facebook Lead Ads](https://www.facebook.com/business/ads/lead-ads/){:target=_blank .external-link} และเชื่อมต่อ Facebook Lead Ads กับแอปอื่นๆ ได้โดยตรง n8n รองรับการแจ้งเตือนเมื่อมี lead ใหม่เข้ามา
 
-On this page, you'll find a list of events the Facebook Lead Ads Trigger node can respond to, and links to more resources.
+ในหน้านี้ คุณจะพบรายการ event ที่ Facebook Lead Ads Trigger node สามารถตอบสนองได้ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/facebookleadads.md).
+คุณสามารถดูข้อมูลการเชื่อมต่อสำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/facebookleadads.md)
 ///
 
 /// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Facebook Lead Ads Trigger integrations](https://n8n.io/integrations/facebook-lead-ads-trigger/){:target=_blank .external-link} page.
+สำหรับตัวอย่างการใช้งานและ template เพื่อช่วยให้คุณเริ่มต้นได้ง่ายขึ้น ดูได้ที่หน้า [Facebook Lead Ads Trigger integrations ของ n8n](https://n8n.io/integrations/facebook-lead-ads-trigger/){:target=_blank .external-link}
 ///
 
 ## Events
 
-* New lead
+* New lead: แจ้งเตือนเมื่อมี lead ใหม่เข้ามา
 
 ## Related resources
 
-View [example workflows and related content](https://n8n.io/integrations/facebook-lead-ads-trigger/){:target=_blank .external-link} on n8n's website.
+ดู [ตัวอย่าง workflow และเนื้อหาที่เกี่ยวข้อง](https://n8n.io/integrations/facebook-lead-ads-trigger/){:target=_blank .external-link} บนเว็บไซต์ n8n
 
-Refer to [Facebook Lead Ads' documentation](https://developers.facebook.com/docs/marketing-api/guides/lead-ads/){:target=_blank .external-link} for details about their API.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับ API ได้ที่ [Facebook Lead Ads' documentation](https://developers.facebook.com/docs/marketing-api/guides/lead-ads/){:target=_blank .external-link}
 
 ## Common issues
 
-Here are some common errors and issues with the Facebook Lead Ads Trigger node and steps to resolve or troubleshoot them.
+นี่คือตัวอย่างปัญหาที่พบบ่อยกับ Facebook Lead Ads Trigger node และวิธีแก้ไขหรือแนวทางการตรวจสอบ
 
 ### Workflow only works in testing or production
 
-Facebook Lead Ads only allows you to register a single webhook per app. This means that every time you switch from using the testing URL to the production URL (and vice versa), Facebook Lead Ads overwrites the registered webhook URL. 
+Facebook Lead Ads อนุญาตให้ลงทะเบียน webhook ได้เพียงอันเดียวต่อแอปเท่านั้น หมายความว่าทุกครั้งที่คุณสลับจาก URL สำหรับทดสอบไปยัง URL สำหรับ production (หรือกลับกัน) Facebook Lead Ads จะเขียนทับ webhook URL ที่ลงทะเบียนไว้
 
-You may have trouble with this if you try to test a workflow that's also active in production. Facebook Lead Ads will only send events to one of the two webhook URLs, so the other will never receive event notifications.
+คุณอาจเจอปัญหานี้ถ้าคุณพยายามทดสอบ workflow ที่เปิดใช้งานอยู่ใน production ด้วย Facebook Lead Ads จะส่ง event ไปยัง webhook URL เพียงอันเดียวเท่านั้น อีกอันจะไม่ได้รับการแจ้งเตือน
 
-To work around this, you can disable your workflow when testing:
+วิธีแก้ไขเบื้องต้นคือให้ปิด workflow ของคุณขณะทดสอบ:
 
 /// warning | Halts production traffic
-This workaround temporarily disables your production workflow for testing. Your workflow will no longer receive production traffic while it's deactivated.
+วิธีนี้จะหยุดการรับ traffic จริงใน production ชั่วคราว Workflow ของคุณจะไม่ได้รับ event จาก production ขณะปิดอยู่
 ///
 
-1. Go to your workflow page.
-2. Toggle the **Active** switch in the top panel to disable the workflow temporarily.
-3. Test your workflow using the test webhook URL.
-4. When you finish testing, toggle the **Inactive** toggle to enable the workflow again. The production webhook URL should resume working.
+1. ไปที่หน้า workflow ของคุณ
+2. ปิดสวิตช์ **Active** ด้านบนเพื่อปิดใช้งาน workflow ชั่วคราว
+3. ทดสอบ workflow ของคุณโดยใช้ test webhook URL
+4. เมื่อทดสอบเสร็จแล้ว เปิดสวิตช์ **Inactive** เพื่อเปิดใช้งาน workflow อีกครั้ง Production webhook URL จะกลับมาใช้งานได้ตามปกติ

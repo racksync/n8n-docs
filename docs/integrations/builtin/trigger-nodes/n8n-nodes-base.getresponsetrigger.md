@@ -7,21 +7,21 @@ contentType: [integration, reference]
 
 # GetResponse Trigger node
 
-[GetResponse](https://www.getresponse.com/){:target=_blank .external-link} is an online platform that offers email marketing software, landing page creator, webinar hosting, and much more.
+[GetResponse](https://www.getresponse.com/){:target=_blank .external-link} เป็นแพลตฟอร์มออนไลน์ที่มีทั้งซอฟต์แวร์ email marketing, เครื่องมือสร้าง landing page, จัด webinar และอื่นๆ อีกมากมาย
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/getresponse.md).
+คุณสามารถดูข้อมูลการเชื่อมต่อสำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/getresponse.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [GetResponse Trigger integrations](https://n8n.io/integrations/getresponse-trigger/){:target=_blank .external-link} page.
+สำหรับตัวอย่างการใช้งานและ template เพื่อช่วยให้คุณเริ่มต้นได้ง่ายขึ้น ดูได้ที่หน้า [GetResponse Trigger integrations ของ n8n](https://n8n.io/integrations/getresponse-trigger/){:target=_blank .external-link}
 ///
 
 ## Events
 
-- Receive notifications when a customer is subscribed to a list
-- Receive notifications when a customer is unsubscribed from a list
-- Receive notifications when an email is opened
-- Receive notifications when an email is clicked
-- Receive notifications when a survey is submitted
+- รับการแจ้งเตือนเมื่อมีลูกค้า subscribe เข้ารายการ
+- รับการแจ้งเตือนเมื่อมีลูกค้า unsubscribe ออกจากรายการ
+- รับการแจ้งเตือนเมื่ออีเมลถูกเปิดอ่าน
+- รับการแจ้งเตือนเมื่อมีการคลิกลิงก์ในอีเมล
+- รับการแจ้งเตือนเมื่อมีการส่งแบบสอบถาม (survey) สำเร็จ
 

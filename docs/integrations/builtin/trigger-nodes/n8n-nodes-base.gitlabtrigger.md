@@ -8,12 +8,12 @@ priority: medium
 
 # GitLab Trigger node
 
-[GitLab](https://gitlab.com/){:target=_blank .external-link} is a web-based DevOps lifecycle tool that provides a Git-repository manager providing wiki, issue-tracking, and continuous integration/continuous installation pipeline features.
+[GitLab](https://gitlab.com/){:target=_blank .external-link} เป็นเครื่องมือ DevOps แบบ web-based ที่มีทั้ง Git repository manager, wiki, issue-tracking และ pipeline สำหรับ continuous integration/continuous installation
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/gitlab.md).
+คุณสามารถดูข้อมูลการเชื่อมต่อสำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/gitlab.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [GitLab Trigger integrations](https://n8n.io/integrations/gitlab-trigger/){:target=_blank .external-link} page.
+สำหรับตัวอย่างการใช้งานและ template เพื่อช่วยให้คุณเริ่มต้นได้ง่ายขึ้น ดูได้ที่หน้า [GitLab Trigger integrations ของ n8n](https://n8n.io/integrations/gitlab-trigger/){:target=_blank .external-link}
 ///

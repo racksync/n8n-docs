@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Help Scout Trigger node
 
-[Help Scout](https://www.helpscout.com/){:target=_blank .external-link} is a help desk software that provides an email-based customer support platform, knowledge base tool, and an embeddable search/contact widget for customer service professionals.
+[Help Scout](https://www.helpscout.com/){:target=_blank .external-link} เป็นซอฟต์แวร์ help desk ที่ให้บริการแพลตฟอร์ม customer support ผ่านอีเมล, เครื่องมือ knowledge base และ widget สำหรับค้นหา/ติดต่อที่ฝังในเว็บไซต์ เหมาะสำหรับทีม customer service
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/helpscout.md).
+คุณสามารถดูข้อมูลการเชื่อมต่อสำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/helpscout.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Help Scout Trigger integrations](https://n8n.io/integrations/helpscout-trigger/){:target=_blank .external-link} page.
+สำหรับตัวอย่างการใช้งานและ template ที่จะช่วยให้คุณเริ่มต้นได้ง่ายขึ้น ดูได้ที่หน้า [Help Scout Trigger integrations](https://n8n.io/integrations/helpscout-trigger/){:target=_blank .external-link} ของ n8n
 ///

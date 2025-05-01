@@ -9,20 +9,19 @@ contentType: explanation
 
 ## Predefined credential types
 
-A predefined credential type is a credential that already exists in n8n. You can use predefined credential types instead of generic credentials in the HTTP Request node.
+Predefined credential type คือ credential ที่มีอยู่แล้วใน n8n คุณสามารถใช้ predefined credential type แทน generic credentials ใน HTTP Request node ได้
 
-For example: you create an Asana credential, for use with the Asana node. Later, you want to perform an operation that isn't supported by the Asana node, using Asana's API. You can use your existing Asana credential in the HTTP Request node to perform the operation, without additional authentication setup.
+ตัวอย่างเช่น: คุณสร้าง Asana credential สำหรับใช้กับ Asana node ต่อมา คุณอยากใช้งาน API ของ Asana ใน operation ที่ node ยังไม่รองรับ คุณก็สามารถใช้ Asana credential เดิมใน HTTP Request node ได้เลย โดยไม่ต้องตั้งค่าการ authentication เพิ่มเติม
 
 ### Using predefined credential types
 
 --8<-- "_snippets/integrations/predefined-credential-type-how-to.md"
 
-
 ### Credential scopes
 
-Some existing credential types have specific scopes: endpoints that they work with. n8n warns you about this when you select the credential type.
+credential type บางตัวจะมี scope เฉพาะ คือ endpoint ที่ credential นั้นใช้ได้ n8n จะแจ้งเตือนคุณเมื่อเลือก credential type เหล่านี้
 
-For example, follow the steps in [Using predefined credential types](#using-predefined-credential-types), and select **Google Calendar OAuth2 API** as your **Credential Type**. n8n displays a box listing the two endpoints you can use this credential type with:
+ตัวอย่างเช่น ทำตามขั้นตอนใน [Using predefined credential types](#using-predefined-credential-types) แล้วเลือก **Google Calendar OAuth2 API** เป็น **Credential Type** n8n จะแสดงกล่องที่มี endpoint สองตัวที่ credential นี้ใช้ได้:
 
 ![The scopes box](/_images/integrations/custom-operations/scopes.png)
 

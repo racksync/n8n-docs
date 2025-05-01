@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Formstack Trigger node
 
-[Formstack](https://www.formstack.com/){:target=_blank .external-link} is a workplace productivity platform that helps organizations streamline digital work through no-code online forms, documents, and signatures.
+[Formstack](https://www.formstack.com/){:target=_blank .external-link} เป็นแพลตฟอร์มสำหรับเพิ่มประสิทธิภาพการทำงานในองค์กร ช่วยให้สร้างฟอร์มออนไลน์, เอกสาร และลายเซ็นแบบ no-code ได้ง่ายๆ
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/formstacktrigger.md).
+คุณสามารถดูข้อมูลการเชื่อมต่อสำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/formstacktrigger.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Formstack Trigger integrations](https://n8n.io/integrations/formstack-trigger/){:target=_blank .external-link} page.
+สำหรับตัวอย่างการใช้งานและ template เพื่อช่วยให้คุณเริ่มต้นได้ง่ายขึ้น ดูได้ที่หน้า [Formstack Trigger integrations ของ n8n](https://n8n.io/integrations/formstack-trigger/){:target=_blank .external-link}
 ///

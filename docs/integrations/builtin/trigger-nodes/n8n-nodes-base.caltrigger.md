@@ -7,14 +7,14 @@ contentType: [integration, reference]
 
 # Cal Trigger node
 
-[Cal](https://cal.com/) is the event-juggling scheduler for everyone. Focus on meeting, not making meetings.
+[Cal](https://cal.com/) เป็น scheduler สำหรับจัดการนัดหมายที่ใช้งานง่าย เหมาะกับทุกคน เน้นให้คุณโฟกัสกับ meeting ไม่ต้องเสียเวลาจัดตาราง
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/cal.md).
+คุณสามารถดูข้อมูลการตั้งค่า authentication สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/cal.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Cal Trigger integrations](https://n8n.io/integrations/cal-trigger/){:target=_blank .external-link} page.
+ถ้าต้องการดูตัวอย่างการใช้งานและ workflow template เพื่อเริ่มต้นใช้งาน ลองดูที่หน้า [Cal Trigger integrations](https://n8n.io/integrations/cal-trigger/){:target=_blank .external-link} ของ n8n ได้เลย
 ///
 
 

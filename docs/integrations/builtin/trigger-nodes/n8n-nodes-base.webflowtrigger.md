@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Webflow Trigger node
 
-[Webflow](https://webflow.com){:target=_blank .external-link} is an application that allows you to build responsive websites with browser-based visual editing software.
+[Webflow](https://webflow.com){:target=_blank .external-link} เป็นแอปที่ช่วยให้คุณสร้างเว็บไซต์ responsive ได้ง่ายๆ ด้วยซอฟต์แวร์แก้ไขแบบ visual ผ่าน browser
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/webflow.md).
+คุณสามารถดูข้อมูลการตั้งค่า authentication สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/webflow.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Webflow Trigger integrations](https://n8n.io/integrations/webflow-trigger/){:target=_blank .external-link} page.
+สำหรับตัวอย่างการใช้งานและ template ที่ช่วยให้เริ่มต้นได้ง่ายขึ้น ดูได้ที่ [Webflow Trigger integrations ของ n8n](https://n8n.io/integrations/webflow-trigger/){:target=_blank .external-link}
 ///

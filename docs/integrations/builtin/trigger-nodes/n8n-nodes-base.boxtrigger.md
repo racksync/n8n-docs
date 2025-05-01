@@ -7,21 +7,21 @@ contentType: [integration, reference]
 
 # Box Trigger node
 
-[Box](https://www.box.com/){:target=_blank .external-link} is a cloud computing company which provides file sharing, collaborating, and other tools for working with files uploaded to its servers.
+[Box](https://www.box.com/){:target=_blank .external-link} เป็นบริษัท cloud computing ที่ให้บริการแชร์ไฟล์, ทำงานร่วมกัน และเครื่องมืออื่น ๆ สำหรับจัดการไฟล์ที่อัปโหลดไว้บน server ของ Box
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/box.md).
+คุณสามารถดูข้อมูลการตั้งค่า authentication สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/box.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Box Trigger integrations](https://n8n.io/integrations/box-trigger/){:target=_blank .external-link} page.
+ถ้าต้องการดูตัวอย่างการใช้งานและ workflow template เพื่อเริ่มต้นใช้งาน ลองดูที่หน้า [Box Trigger integrations](https://n8n.io/integrations/box-trigger/){:target=_blank .external-link} ของ n8n ได้เลย
 ///
 
 ## Find your Box Target ID
 
-To get your Target ID in Box:
+วิธีหา Target ID ใน Box:
 
-1. Open the file/folder that you would like to monitor.
-2. Copy the string of characters after `folder/` in your URL. This is the target ID. For example, if the URL is `https://app.box.com/folder/12345`, then `12345` is the target ID.
-3. Paste it in the **Target ID** field in n8n.
+1. เปิดไฟล์หรือโฟลเดอร์ที่ต้องการ monitor
+2. คัดลอก string หลัง `folder/` ใน URL ตัวอย่างเช่น `https://app.box.com/folder/12345` เลข `12345` คือ target ID
+3. นำไปวางในช่อง **Target ID** ใน n8n
 

@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Pipedrive Trigger node
 
-[Pipedrive](https://www.pipedrive.com/){:target=_blank .external-link} is a cloud-based sales software company that aims to improve the productivity of businesses through the use of their software.
+[Pipedrive](https://www.pipedrive.com/){:target=_blank .external-link} คือซอฟต์แวร์ sales บน cloud ที่ช่วยให้ธุรกิจทำงานได้มีประสิทธิภาพมากขึ้นผ่านซอฟต์แวร์ของเขา
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/pipedrive.md).
+คุณสามารถดูข้อมูลเกี่ยวกับการเชื่อมต่อบัญชี (authentication) สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/pipedrive.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Pipedrive Trigger integrations](https://n8n.io/integrations/pipedrive-trigger/){:target=_blank .external-link} page.
+ถ้าอยากดูตัวอย่างการใช้งานหรือ template สำหรับเริ่มต้น ลองดูที่หน้า [Pipedrive Trigger integrations](https://n8n.io/integrations/pipedrive-trigger/){:target=_blank .external-link} ของ n8n ได้เลย
 ///

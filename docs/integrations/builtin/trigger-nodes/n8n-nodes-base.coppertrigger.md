@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Copper Trigger node
 
-[Copper](https://www.copper.com/){:target=_blank .external-link} is a CRM that focuses on strong integration with Google Workspace. It's mainly targeted towards small and medium-sized businesses.
+[Copper](https://www.copper.com/){:target=_blank .external-link} เป็น CRM ที่เน้น integration กับ Google Workspace เหมาะกับธุรกิจขนาดเล็กและกลาง
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/copper.md).
+คุณสามารถดูข้อมูลการตั้งค่า authentication สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/copper.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Copper Trigger integrations](https://n8n.io/integrations/copper-trigger/){:target=_blank .external-link} page.
+ถ้าต้องการดูตัวอย่างการใช้งานและ workflow template เพื่อเริ่มต้นใช้งาน ลองดูที่หน้า [Copper Trigger integrations](https://n8n.io/integrations/copper-trigger/){:target=_blank .external-link} ของ n8n ได้เลย
 ///

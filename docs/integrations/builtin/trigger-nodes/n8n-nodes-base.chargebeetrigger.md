@@ -7,23 +7,23 @@ contentType: [integration, reference]
 
 # Chargebee Trigger node
 
-[Chargebee](https://www.chargebee.com/){:target=_blank .external-link} is a billing platform for subscription based SaaS and eCommerce businesses. Chargebee integrates with payment gateways to let you automate recurring payment collection along with invoicing, taxes, accounting, email notifications, SaaS Metrics and customer management.
+[Chargebee](https://www.chargebee.com/){:target=_blank .external-link} เป็นแพลตฟอร์ม billing สำหรับธุรกิจ SaaS และ eCommerce แบบ subscription ช่วยให้คุณ automate การเก็บเงิน recurring, ออก invoice, คำนวณภาษี, ทำบัญชี, ส่งอีเมลแจ้งเตือน, ดู SaaS Metrics และจัดการลูกค้าได้ครบจบในที่เดียว
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/chargebee.md).
+คุณสามารถดูข้อมูลการตั้งค่า authentication สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/chargebee.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Chargebee Trigger integrations](https://n8n.io/integrations/chargebee-trigger/){:target=_blank .external-link} page.
+ถ้าต้องการดูตัวอย่างการใช้งานและ workflow template เพื่อเริ่มต้นใช้งาน ลองดูที่หน้า [Chargebee Trigger integrations](https://n8n.io/integrations/chargebee-trigger/){:target=_blank .external-link} ของ n8n ได้เลย
 ///
 
 ## Add webhook URL in Chargebee
 
-To add a Webhook URL in Chargebee:
+วิธีเพิ่ม Webhook URL ใน Chargebee:
 
-1. Open your Chargebee dashboard.
-2. Go to **Settings** > **Configure Chargebee**.
-4. Scroll down and select **Webhooks**.
-5. Select the **Add Webhook** button.
-6. Enter the **Webhook Name** and the **Webhook URL**.
-7. Select **Create**.
+1. เปิด Chargebee dashboard ของคุณ
+2. ไปที่ **Settings** > **Configure Chargebee**
+4. เลื่อนลงแล้วเลือก **Webhooks**
+5. กดปุ่ม **Add Webhook**
+6. ใส่ **Webhook Name** และ **Webhook URL**
+7. กด **Create**

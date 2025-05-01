@@ -8,14 +8,14 @@ priority: high
 
 # Notion Trigger node
 
-[Notion](https://notion.so){:target=_blank .external-link} is an all-in-one workspace for your notes, tasks, wikis, and databases.
+[Notion](https://notion.so){:target=_blank .external-link} คือ all-in-one workspace สำหรับจดโน้ต, จัดการงาน, wiki และฐานข้อมูลต่างๆ
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/notion.md).
+คุณสามารถดูข้อมูลการเชื่อมต่อ (authentication) สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/notion.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Notion Trigger integrations](https://n8n.io/integrations/notion-trigger-beta/){:target=_blank .external-link} page.
+สำหรับตัวอย่างการใช้งานและ template เพื่อเริ่มต้นใช้งาน ดูได้ที่หน้า [Notion Trigger integrations](https://n8n.io/integrations/notion-trigger-beta/){:target=_blank .external-link} ของ n8n
 ///
 
 ## Events
@@ -25,9 +25,9 @@ For usage examples and templates to help you get started, refer to n8n's [Notion
 
 ## Related resources
 
-n8n provides an app node for Notion. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.notion/index.md).
+n8n มี app node สำหรับ Notion ด้วย ดูเอกสาร node ได้ [ที่นี่](/integrations/builtin/app-nodes/n8n-nodes-base.notion/index.md)
 
-View [example workflows and related content](https://n8n.io/integrations/notion-trigger/){:target=_blank .external-link} on n8n's website.
+ดู [example workflows และเนื้อหาที่เกี่ยวข้อง](https://n8n.io/integrations/notion-trigger/){:target=_blank .external-link} ได้ที่เว็บไซต์ n8n
 
-Refer to [Notion's documentation](https://developers.notion.com/){:target=_blank .external-link} for details about their API.
+ดูรายละเอียดเกี่ยวกับ API ของ Notion ได้ที่ [Notion's documentation](https://developers.notion.com/){:target=_blank .external-link}
 

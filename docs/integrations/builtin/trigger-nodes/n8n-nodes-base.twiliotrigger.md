@@ -7,16 +7,16 @@ contentType: [integration, reference]
 
 # Twilio Trigger node
 
-Use the Twilio Trigger node to respond to events in [Twilio](https://www.twilio.com){:target=_blank .external-link} and integrate Twilio with other applications. n8n has built-in support for a wide range of Twilio events, including new SMS and calls.
+ใช้ Twilio Trigger node เพื่อตอบสนองต่อ event ต่างๆ ใน [Twilio](https://www.twilio.com){:target=_blank .external-link} และเชื่อมต่อ Twilio กับแอปอื่นๆ ได้ n8n รองรับ event ของ Twilio หลากหลาย เช่น ข้อความ SMS ใหม่ หรือสายโทรเข้าใหม่
 
-On this page, you'll find a list of events the Twilio Trigger node can respond to and links to more resources.
+ในหน้านี้ คุณจะเห็นรายการ event ที่ Twilio Trigger node สามารถตอบสนองได้ พร้อมลิงก์ไปยัง resource อื่นๆ
 
 ///  note  | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/twilio.md).
+คุณสามารถดูข้อมูลการตั้งค่า authentication สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/twilio.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Twilio integrations](https://n8n.io/integrations/twilio-trigger/){:target=_blank .external-link} page.
+สำหรับตัวอย่างการใช้งานและ template ที่ช่วยให้เริ่มต้นได้ง่ายขึ้น ดูได้ที่ [Twilio integrations ของ n8n](https://n8n.io/integrations/twilio-trigger/){:target=_blank .external-link}
 ///
 
 ## Events
@@ -25,13 +25,13 @@ For usage examples and templates to help you get started, refer to n8n's [Twilio
 * On New Call
 
 ///  note  | New Call Delay
-It can take Twilio up to thirty minutes to generate a summary for a completed call.
+Twilio อาจใช้เวลาสูงสุด 30 นาทีในการสร้างสรุปสำหรับสายที่เสร็จสมบูรณ์
 ///
 
 ## Related resources
 
-n8n provides an app node for Twilio. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.twilio.md).
+n8n มี app node สำหรับ Twilio ด้วย ดูเอกสาร node ได้ [ที่นี่](/integrations/builtin/app-nodes/n8n-nodes-base.twilio.md)
 
-View [example workflows and related content](https://n8n.io/integrations/twilio/){:target=_blank .external-link} on n8n's website.
+ดู [example workflows และเนื้อหาอื่นๆ ที่เกี่ยวข้อง](https://n8n.io/integrations/twilio/){:target=_blank .external-link} บนเว็บไซต์ n8n
 
-Refer to [Twilio's documentation](https://www.twilio.com/docs){:target=_blank .external-link} for details about their API.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับ API ของ Twilio ได้ที่ [Twilio's documentation](https://www.twilio.com/docs){:target=_blank .external-link}

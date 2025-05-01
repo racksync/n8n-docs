@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # AMQP Trigger node
 
-[AMQP](https://www.amqp.org/){:target=_blank .external-link} is an open standard application layer protocol for message-oriented middleware. The defining features of AMQP are message orientation, queuing, routing, reliability and security. This node supports AMQP 1.0 compatible message brokers.
+[AMQP](https://www.amqp.org/){:target=_blank .external-link} เป็น protocol มาตรฐานเปิดสำหรับ message-oriented middleware จุดเด่นคือรองรับ message, queue, routing, reliability และ security node นี้รองรับ message broker ที่ compatible กับ AMQP 1.0
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/amqp.md).
+คุณสามารถดูข้อมูลการตั้งค่า authentication สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/amqp.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [AMQP integrations](https://n8n.io/integrations/amqp-trigger/){:target=_blank .external-link} page.
+ถ้าต้องการดูตัวอย่างการใช้งานและ workflow template เพื่อเริ่มต้นใช้งาน ลองดูที่หน้า [AMQP integrations](https://n8n.io/integrations/amqp-trigger/){:target=_blank .external-link} ของ n8n ได้เลย
 ///

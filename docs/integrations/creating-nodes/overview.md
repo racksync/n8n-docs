@@ -5,21 +5,21 @@ contentType: overview
 
 # Creating nodes
 
-Learn how to build your own custom [nodes](/glossary.md#node-n8n).
+เรียนรู้วิธีสร้าง [nodes](/glossary.md#node-n8n) ของคุณเองในแบบ custom
 
 This section includes:
 
-* Guidance on planning your build, including [which style to use](/integrations/creating-nodes/plan/choose-node-method.md).
-* [Tutorials](/integrations/creating-nodes/build/index.md) for different node building styles.
-* Instructions for [testing your node](/integrations/creating-nodes/test/index.md), including how to use the n8n [node linter](/integrations/creating-nodes/test/node-linter.md) and [troubleshooting](/integrations/creating-nodes/test/troubleshooting-node-development.md) support.
-* How to [share your node](/integrations/creating-nodes/deploy/submit-community-nodes.md) with the community, or use it as a [private node](/integrations/creating-nodes/deploy/install-private-nodes.md).
-* [Reference material](/integrations/creating-nodes/build/reference/index.md), including UI elements and information on the individual files that make up a node.
+* คำแนะนำเกี่ยวกับการวางแผนการสร้าง node ของคุณ รวมถึง [เลือก style ที่จะใช้](/integrations/creating-nodes/plan/choose-node-method.md)
+* [Tutorials](/integrations/creating-nodes/build/index.md) สำหรับแต่ละ style ของการสร้าง node
+* วิธี [ทดสอบ node ของคุณ](/integrations/creating-nodes/test/index.md) รวมถึงวิธีใช้ n8n [node linter](/integrations/creating-nodes/test/node-linter.md) และ [troubleshooting](/integrations/creating-nodes/test/troubleshooting-node-development.md) เพื่อช่วยแก้ปัญหา
+* วิธี [แชร์ node ของคุณ](/integrations/creating-nodes/deploy/submit-community-nodes.md) กับ community หรือใช้เป็น [private node](/integrations/creating-nodes/deploy/install-private-nodes.md)
+* [Reference material](/integrations/creating-nodes/build/reference/index.md) รวมถึง UI elements และข้อมูลเกี่ยวกับไฟล์ต่างๆ ที่ประกอบเป็น node
 
 ## Prerequisites
 
 This section assumes the following:
 
-* Some familiarity with JavaScript and TypeScript.
-* Ability to manage your own development environment, including git.
-* Knowledge of npm, including creating and submitting packages.
-* Familiarity with n8n, including a good understanding of [data structures](/data/data-structure.md) and [item linking](/data/data-mapping/data-item-linking/index.md).
+* คุณควรมีพื้นฐาน JavaScript และ TypeScript มาบ้าง
+* สามารถจัดการ environment สำหรับพัฒนาเองได้ รวมถึงการใช้ git
+* รู้จัก npm และการสร้าง/ส่ง package
+* คุ้นเคยกับ n8n โดยเฉพาะ [data structures](/data/data-structure.md) และ [item linking](/data/data-mapping/data-item-linking/index.md)

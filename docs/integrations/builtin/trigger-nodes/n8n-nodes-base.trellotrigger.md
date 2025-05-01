@@ -8,25 +8,25 @@ priority: medium
 
 # Trello Trigger node
 
-[Trello](https://trello.com/){:target=_blank .external-link} is a web-based Kanban-style list-making application which is a subsidiary of Atlassian. Users can create their task boards with different columns and move the tasks between them.
+[Trello](https://trello.com/){:target=_blank .external-link} คือแอป Kanban ออนไลน์สำหรับจัดการงาน ที่เป็นบริษัทลูกของ Atlassian ผู้ใช้สามารถสร้างบอร์ดงานที่มีหลายคอลัมน์ และย้าย task ระหว่างคอลัมน์ได้
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/trello.md).
+คุณสามารถดูข้อมูลการตั้งค่า authentication สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/trello.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Trello Trigger integrations](https://n8n.io/integrations/trello-trigger/){:target=_blank .external-link} page.
+สำหรับตัวอย่างการใช้งานและ template ที่ช่วยให้เริ่มต้นได้ง่ายขึ้น ดูได้ที่หน้า [Trello Trigger integrations](https://n8n.io/integrations/trello-trigger/){:target=_blank .external-link} ของ n8n
 ///
 
 ## Find the Model ID
 
-The model ID is the ID of any model in Trello. Depending on the use-case, it could be the User ID, List ID, and so on.
+Model ID คือรหัสของ model ใด ๆ ใน Trello แล้วแต่ use-case เช่น อาจเป็น User ID, List ID ฯลฯ
 
-For this specific example, the List ID would be the Model ID:
+สำหรับตัวอย่างนี้ List ID จะเป็น Model ID:
 
-1. Open the Trello board that contains the list.
-2. If the list doesn't have any cards, add a card to the list.
-3. Open the card, add `.json` at the end of the URL, and press enter.
-4. In the JSON file, you will see a field called `idList`.
-5. Copy `idList`and paste it in the **Model ID** field in n8n.
+1. เปิด Trello board ที่มี list ที่ต้องการ
+2. ถ้า list นั้นยังไม่มี card ให้เพิ่ม card เข้าไปก่อน
+3. เปิด card แล้วเติม `.json` ต่อท้าย URL จากนั้นกด enter
+4. ในไฟล์ JSON จะมี field ชื่อ `idList`
+5. คัดลอก `idList` แล้วนำไปวางในช่อง **Model ID** ใน n8n
 

@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Zendesk Trigger node
 
-[Zendesk](https://www.zendesk.com/){:target=_blank .external-link} is a support ticketing system, designed to help track, prioritize, and solve customer support interactions. More than just a help desk, Zendesk Support helps nurture customer relationships with personalized, responsive support across any channel.
+[Zendesk](https://www.zendesk.com/){:target=_blank .external-link} คือระบบ ticket สำหรับซัพพอร์ตลูกค้า ช่วยให้คุณติดตาม จัดลำดับความสำคัญ และแก้ไขปัญหาการติดต่อกับลูกค้าได้ง่ายขึ้น Zendesk Support ไม่ได้เป็นแค่ help desk ธรรมดา แต่ยังช่วยสร้างความสัมพันธ์กับลูกค้าด้วยการซัพพอร์ตที่ตอบสนองและปรับแต่งได้ตามแต่ละช่องทาง
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/zendesk.md).
+คุณสามารถดูข้อมูลการเชื่อมต่อ (authentication) สำหรับ node นี้ได้ที่ [ที่นี่](/integrations/builtin/credentials/zendesk.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Zendesk Trigger integrations](https://n8n.io/integrations/zendesk-trigger/){:target=_blank .external-link} page.
+ถ้าต้องการดูตัวอย่างการใช้งานและ template สำหรับเริ่มต้นใช้งาน ลองดูที่หน้า [Zendesk Trigger integrations](https://n8n.io/integrations/zendesk-trigger/){:target=_blank .external-link} ของ n8n ได้เลย
 ///

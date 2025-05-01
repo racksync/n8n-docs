@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Toggl Trigger node
 
-[Toggl](https://toggl.com/){:target=_blank .external-link} is a time tracking app that offers online time tracking and reporting services through their website along with mobile and desktop applications.
+[Toggl](https://toggl.com/){:target=_blank .external-link} คือแอปสำหรับติดตามเวลา (time tracking) ที่ให้บริการผ่านเว็บไซต์ รวมถึงแอปบนมือถือและเดสก์ท็อป
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/toggl.md).
+คุณสามารถดูข้อมูลการตั้งค่า authentication สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/toggl.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Toggl Trigger integrations](https://n8n.io/integrations/toggl-trigger/){:target=_blank .external-link} page.
+สำหรับตัวอย่างการใช้งานและ template ที่ช่วยให้เริ่มต้นได้ง่ายขึ้น ดูได้ที่หน้า [Toggl Trigger integrations](https://n8n.io/integrations/toggl-trigger/){:target=_blank .external-link} ของ n8n
 ///

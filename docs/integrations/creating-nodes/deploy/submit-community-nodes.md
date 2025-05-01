@@ -3,6 +3,6 @@
 contentType: howto
 ---
 
-# Submit community nodes
+# Summit your node to the community node repository
 
 --8<-- "_snippets/integrations/submit-community-node.md"

@@ -5,17 +5,17 @@ contentType: reference
 
 # Credentials file
 
-The credentials file defines the authorization methods for the node. The settings in this file affect what n8n displays in the **Credentials** modal, and must reflect the authentication requirements of the service you're connecting to.
+ไฟล์ Credentials จะกำหนดวิธีการ authorize สำหรับ node ของคุณ การตั้งค่าในไฟล์นี้จะมีผลกับสิ่งที่ n8n แสดงใน **Credentials** modal และต้องตรงกับความต้องการ authentication ของ service ที่คุณจะเชื่อมต่อ
 
-In the credentials file, you can use all the [n8n UI elements](/integrations/creating-nodes/build/reference/ui-elements.md). n8n encrypts the data that's stored using credentials using an encryption key.
+ในไฟล์ credentials คุณสามารถใช้ [n8n UI elements](/integrations/creating-nodes/build/reference/ui-elements.md) ได้ทั้งหมด n8n จะเข้ารหัสข้อมูลที่ถูกเก็บไว้ใน credentials ด้วย encryption key
 
 ## Structure of the credentials file
 
-The credentials file follows this basic structure:
+ไฟล์ credentials จะมีโครงสร้างพื้นฐานดังนี้:
 
 1. Import statements
-2. Create a class for the credentials
-3. Within the class, define the properties that control authentication for the node.
+2. สร้าง class สำหรับ credentials
+3. ใน class ให้กำหนด properties ที่ควบคุม authentication สำหรับ node
 
 ### Outline structure
 
@@ -42,9 +42,9 @@ export class ExampleNode implements ICredentialType {
 	authenticate: IAuthenticateGeneric = {
 		type: 'generic',
 		properties: {
-    		// Can be body, header, qs or auth
+    			// สามารถเป็น body, header, qs หรือ auth
 			qs: {
-        		// Use the value from `apiKey` above
+        			// ใช้ค่าจาก `apiKey` ข้างบน
 				'api_key': '={{$credentials.apiKey}}'
 			}
 
@@ -59,43 +59,42 @@ export class ExampleNode implements ICredentialType {
 }
 ```
 
-
 ## Parameters
 
 ### `name`
 
-String. The internal name of the object. Used to reference it from other places in the node.
+String. ชื่อภายในของ object นี้ ใช้อ้างอิงจากที่อื่นใน node
 
 ### `displayName`
 
-String. The name n8n uses in the GUI.
+String. ชื่อที่ n8n ใช้แสดงใน GUI
 
 ### `documentationUrl`
 
-String. URL to your credentials documentation.
+String. URL ไปยังเอกสาร credentials ของคุณ
 
 ### `properties`
 
-Each object contains:
+แต่ละ object จะมี:
 
-* `displayName`: the name n8n uses in the GUI.
-* `name`: the internal name of the object. Used to reference it from other places in the node.
-* `type`: the data type expected, such as `string`.
-* `default`: the URL that n8n should use to test credentials.
+* `displayName`: ชื่อที่ n8n ใช้แสดงใน GUI
+* `name`: ชื่อภายในของ object นี้ ใช้อ้างอิงจากที่อื่นใน node
+* `type`: ประเภทข้อมูลที่ต้องการ เช่น `string`
+* `default`: URL ที่ n8n จะใช้ทดสอบ credentials
 
 ### `authenticate`
 
-* `authenticate`: Object. Contains objects that tell n8n how to inject the authentication data as part of the API request. 
+* `authenticate`: Object. มี object ที่บอก n8n ว่าจะ inject ข้อมูล authentication เข้าไปใน API request อย่างไร
 
 #### `type`
 
-String. If you're using an authentication method that sends data in the header, body, or query string, set this to `'generic'`. 
+String. ถ้าใช้ authentication แบบส่งข้อมูลใน header, body หรือ query string ให้ตั้งเป็น `'generic'`
 
 #### `properties`
 
-Object. Defines the authentication methods. Options are:
+Object. กำหนดวิธี authentication ตัวเลือกมี:
 
-* `body`: Object. Sends authentication data in the request body. Can contain nested objects.
+* `body`: Object. ส่งข้อมูล authentication ใน request body สามารถมี object ซ้อนกันได้
 ```typescript
 authenticate: IAuthenticateGeneric = {
 	type: 'generic',
@@ -108,7 +107,7 @@ authenticate: IAuthenticateGeneric = {
 };
 ``` 
 
-* `header`: Object. Send authentication data in the request header.
+* `header`: Object. ส่งข้อมูล authentication ใน request header
 ```typescript
 authenticate: IAuthenticateGeneric = {
 	type: 'generic',
@@ -120,7 +119,7 @@ authenticate: IAuthenticateGeneric = {
 };
 ``` 
 
-* `qs`: Object. Stands for "query string." Send authentication data in the request query string.
+* `qs`: Object. ย่อมาจาก "query string" ส่งข้อมูล authentication ใน query string ของ request
 ```typescript
 authenticate: IAuthenticateGeneric = {
 	type: 'generic',
@@ -132,7 +131,7 @@ authenticate: IAuthenticateGeneric = {
 };
 ``` 
 
-* `auth`: Object. Used for Basic Auth. Requires `username` and `password` as the key names.
+* `auth`: Object. ใช้สำหรับ Basic Auth ต้องมี `username` และ `password` เป็น key
 ```typescript
 authenticate: IAuthenticateGeneric = {
 	type: 'generic',
@@ -147,7 +146,7 @@ authenticate: IAuthenticateGeneric = {
 
 ### `test`
 
-Provide a `request` object containing a URL and authentication type that n8n can use to test the credential.
+ให้ใส่ object `request` ที่มี URL และประเภท authentication ที่ n8n จะใช้ทดสอบ credential
 
 ```typescript
 test: ICredentialTestRequest = {

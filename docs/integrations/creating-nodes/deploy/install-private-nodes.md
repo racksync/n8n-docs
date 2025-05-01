@@ -5,15 +5,15 @@ contentType: howto
 
 # Install private nodes
 
-You can build your own nodes and install them in your n8n instance without publishing them on npm. This is useful for nodes that you create for internal use only at your company.
+คุณสามารถสร้าง node ของตัวเองและติดตั้งใน n8n instance ของคุณได้โดยไม่ต้อง publish ขึ้น npm เหมาะสำหรับ node ที่ใช้ภายในบริษัทหรือองค์กรเท่านั้น
 
 ## Install your node in a Docker n8n instance
 
-If you're running n8n using Docker, you need to create a Docker image with the node installed in n8n. 
+ถ้าคุณรัน n8n ด้วย Docker คุณต้องสร้าง Docker image ที่มี node ของคุณติดตั้งอยู่ใน n8n
 
-1. Create a Dockerfile and paste the code from [this Dockerfile](https://github.com/n8n-io/n8n/blob/master/docker/images/n8n/Dockerfile).
+1. สร้างไฟล์ Dockerfile แล้ววางโค้ดจาก [Dockerfile นี้](https://github.com/n8n-io/n8n/blob/master/docker/images/n8n/Dockerfile)
 
-	Your Dockerfile should look like this:
+	ตัวอย่าง Dockerfile จะหน้าตาประมาณนี้:
 
 	```Dockerfile
 	FROM node:16-alpine
@@ -54,20 +54,19 @@ If you're running n8n using Docker, you need to create a Docker image with the n
 	EXPOSE 5678/tcp
 	```
 
-2. Compile your custom node code (`npm run build` if you are using nodes starter). Copy the **node** and **credential** folders from within the **dist** folder into your container's `~/.n8n/custom/` directory. This makes them available to Docker.
+2. Compile โค้ด custom node ของคุณ (`npm run build` ถ้าใช้ nodes starter) แล้ว copy โฟลเดอร์ **node** และ **credential** จากใน **dist** ไปไว้ใน `~/.n8n/custom/` ของ container เพื่อให้ Docker มองเห็น node เหล่านี้
 
-3. Download the [docker-entrypoint.sh](https://github.com/n8n-io/n8n/blob/master/docker/images/n8n/docker-entrypoint.sh) file, and place it in the same directory as your Dockerfile.
+3. ดาวน์โหลดไฟล์ [docker-entrypoint.sh](https://github.com/n8n-io/n8n/blob/master/docker/images/n8n/docker-entrypoint.sh) แล้ววางไว้ใน directory เดียวกับ Dockerfile
 
-4. Build your Docker image:
+4. Build Docker image ของคุณ:
 
 	```Dockerfile
-	# Replace <n8n-version-number> with the n8n release version number. 
-	# For example, N8N_VERSION=0.177.0
+	# เปลี่ยน <n8n-version-number> เป็นเวอร์ชัน n8n ที่ต้องการ เช่น N8N_VERSION=0.177.0
 	docker build --build-arg N8N_VERSION=<n8n-version-number> --tag=customizedn8n .
 	```
 
-You can now use your node in Docker.
+ตอนนี้คุณก็สามารถใช้ node ของคุณใน Docker ได้แล้ว
 
 ## Install your node in a global n8n instance
 
-If you've installed n8n globally, make sure that you install your node inside n8n. n8n will find the module and load it automatically.
+ถ้าคุณติดตั้ง n8n แบบ global ให้แน่ใจว่าคุณติดตั้ง node ของคุณไว้ใน n8n ด้วย n8n จะค้นหา module และโหลดให้อัตโนมัติ

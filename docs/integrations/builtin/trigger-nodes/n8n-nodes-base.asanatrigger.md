@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Asana Trigger node
 
-[Asana](https://asana.com/){:target=_blank .external-link} is a web and mobile application designed to help teams organize, track, and manage their work.
+[Asana](https://asana.com/){:target=_blank .external-link} เป็นแอปบนเว็บและมือถือที่ช่วยให้ทีมจัดการงานและติดตามงานได้ง่ายขึ้น
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/asana.md).
+คุณสามารถดูข้อมูลการตั้งค่า authentication สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/asana.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Asana Trigger integrations](https://n8n.io/integrations/asana-trigger/){:target=_blank .external-link} page.
+ถ้าต้องการดูตัวอย่างการใช้งานและ workflow template เพื่อเริ่มต้นใช้งาน ลองดูที่หน้า [Asana Trigger integrations](https://n8n.io/integrations/asana-trigger/){:target=_blank .external-link} ของ n8n ได้เลย
 ///

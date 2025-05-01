@@ -5,44 +5,44 @@ contentType: howto
 
 # Manually install community nodes
 
-You can manually install community nodes on self-hosted n8n.
+คุณสามารถติดตั้ง community nodes ด้วยตัวเองบน n8n ที่ self-hosted ได้
 
-You need to manually install community nodes in the following circumstances:
+กรณีที่ต้องติดตั้ง community nodes ด้วยตัวเอง เช่น:
 
-* Your n8n instance runs in queue mode.
-* You want to install [private packages](https://docs.npmjs.com/creating-and-publishing-private-packages){:target=_blank .external-link}.
+* instance ของ n8n ของคุณรันใน queue mode
+* คุณต้องการติดตั้ง [private packages](https://docs.npmjs.com/creating-and-publishing-private-packages){:target=_blank .external-link}
 
 ## Install a community node
 
-Access your Docker shell:
+เข้า shell ของ Docker:
 
 ```sh
 docker exec -it n8n sh
 ```
 
-Create `~/.n8n/nodes` if it doesn't already exist, and navigate into it:
+สร้าง `~/.n8n/nodes` ถ้ายังไม่มี และเข้าไปในโฟลเดอร์นี้:
 
 ```sh
 mkdir ~/.n8n/nodes
 cd ~/.n8n/nodes
 ```
 
-Install the node:
+ติดตั้ง node:
 
 ```sh
 npm i n8n-nodes-nodeName
 ```
-Then restart n8n.
+จากนั้น restart n8n
 
 ## Uninstall a community node
 
-Access your Docker shell:
+เข้า shell ของ Docker:
 
 ```sh
 docker exec -it n8n sh
 ```
 
-Run npm uninstall:
+รันคำสั่ง npm uninstall:
 
 ```sh
 npm uninstall n8n-nodes-nodeName
@@ -51,17 +51,17 @@ npm uninstall n8n-nodes-nodeName
 ## Upgrade a community node
 
 /// warning | Breaking changes in versions
-Node developers may introduce breaking changes in new versions of their nodes. A breaking change is an update that breaks previous functionality. Depending on the node versioning approach that a node developer chooses, upgrading to a version with a breaking change could cause all workflows using the node to break. Be careful when upgrading your nodes. If you find that an upgrade causes issues, you can [downgrade](#upgrade-or-downgrade-to-a-specific-version).
+นักพัฒนา node อาจมี breaking changes ในเวอร์ชันใหม่ๆ ได้ (breaking change คือการอัปเดตที่ทำให้ฟังก์ชันเดิมใช้ไม่ได้) ขึ้นอยู่กับวิธีการจัดการเวอร์ชันของนักพัฒนา node ถ้าอัปเกรดไปเวอร์ชันที่มี breaking change อาจทำให้ workflow ที่ใช้ node นั้นเสียได้ ควรตรวจสอบก่อนอัปเกรด ถ้าอัปเกรดแล้วมีปัญหา สามารถ [downgrade](#upgrade-or-downgrade-to-a-specific-version) กลับได้
 ///
 ### Upgrade to the latest version
 
-Access your Docker shell:
+เข้า shell ของ Docker:
 
 ```sh
 docker exec -it n8n sh
 ```
 
-Run npm update:
+รันคำสั่ง npm update:
 
 ```sh
 npm update n8n-nodes-nodeName
@@ -69,21 +69,21 @@ npm update n8n-nodes-nodeName
 
 ### Upgrade or downgrade to a specific version
 
-Access your Docker shell:
+เข้า shell ของ Docker:
 
 ```sh
 docker exec -it n8n sh
 ```
 
-Run npm uninstall to remove the current version:
+รัน npm uninstall เพื่อลบเวอร์ชันปัจจุบัน:
 
 ```sh
 npm uninstall n8n-nodes-nodeName
 ```
 
-Run npm install with the version specified:
+รัน npm install พร้อมระบุเวอร์ชันที่ต้องการ:
 
 ```sh
-# Replace 2.1.0 with your version number
+# เปลี่ยน 2.1.0 เป็นหมายเลขเวอร์ชันที่ต้องการ
 npm install n8n-nodes-nodeName@2.1.0
 ```

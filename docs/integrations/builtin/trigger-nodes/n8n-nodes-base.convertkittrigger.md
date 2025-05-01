@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # ConvertKit Trigger node
 
-[ConvertKit](https://www.convertkit.com/){:target=_blank .external-link} is a fully featured email marketing platform. Use ConvertKit to build an email list, send email broadcasts, automate sequences, create segments, and build landing pages.
+[ConvertKit](https://www.convertkit.com/){:target=_blank .external-link} เป็นแพลตฟอร์ม email marketing ที่ครบเครื่อง ใช้สร้าง email list, ส่ง broadcast, ทำ automation, segment, และสร้าง landing page ได้
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/convertkit.md).
+คุณสามารถดูข้อมูลการตั้งค่า authentication สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/convertkit.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [ConvertKit Trigger integrations](https://n8n.io/integrations/convertkit-trigger/){:target=_blank .external-link} page.
+ถ้าต้องการดูตัวอย่างการใช้งานและ workflow template เพื่อเริ่มต้นใช้งาน ลองดูที่หน้า [ConvertKit Trigger integrations](https://n8n.io/integrations/convertkit-trigger/){:target=_blank .external-link} ของ n8n ได้เลย
 ///

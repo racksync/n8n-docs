@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # AWS SNS Trigger node
 
-[AWS SNS](https://aws.amazon.com/sns/){:target=_blank .external-link} is a notification service provided as part of Amazon Web Services. It provides a low-cost infrastructure for the mass delivery of messages, predominantly to mobile users.
+[AWS SNS](https://aws.amazon.com/sns/){:target=_blank .external-link} เป็นบริการ notification ของ Amazon Web Services ที่ช่วยให้ส่งข้อความจำนวนมากไปยังผู้ใช้มือถือหรือ endpoint อื่น ๆ ได้ในต้นทุนต่ำ
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/aws.md).
+คุณสามารถดูข้อมูลการตั้งค่า authentication สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/aws.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [AWS SNS Trigger integrations](https://n8n.io/integrations/aws-sns-trigger/){:target=_blank .external-link} page.
+ถ้าต้องการดูตัวอย่างการใช้งานและ workflow template เพื่อเริ่มต้นใช้งาน ลองดูที่หน้า [AWS SNS Trigger integrations](https://n8n.io/integrations/aws-sns-trigger/){:target=_blank .external-link} ของ n8n ได้เลย
 ///

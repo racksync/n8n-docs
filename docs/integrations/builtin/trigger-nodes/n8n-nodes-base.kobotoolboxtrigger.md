@@ -7,16 +7,16 @@ contentType: [integration, reference]
 
 # KoboToolbox Trigger node
 
-[KoboToolbox](https://www.kobotoolbox.org/){:target=_blank .external-link} is a field survey and data collection tool to design interactive forms to be completed offline from mobile devices. It's available both as a free cloud solution or as a self-hosted version.
+[KoboToolbox](https://www.kobotoolbox.org/){:target=_blank .external-link} เป็นเครื่องมือสำหรับสำรวจภาคสนามและเก็บข้อมูล ช่วยให้คุณออกแบบฟอร์มแบบ interactive ที่สามารถกรอกแบบออฟไลน์ผ่านมือถือได้ มีทั้งแบบ cloud ฟรีและ self-hosted
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/kobotoolbox.md).
+คุณสามารถดูข้อมูลการเชื่อมต่อสำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/kobotoolbox.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [KoboToolbox Trigger integrations](https://n8n.io/integrations/kobotoolbox-trigger/){:target=_blank .external-link} page.
+สำหรับตัวอย่างการใช้งานและ template ที่จะช่วยให้คุณเริ่มต้นได้ง่ายขึ้น ดูได้ที่หน้า [KoboToolbox Trigger integrations](https://n8n.io/integrations/kobotoolbox-trigger/){:target=_blank .external-link} ของ n8n
 ///
 
-This node starts a workflow upon new submissions of a specified form. The trigger node handles the creation/deletion of the hook, so you don't need to do any setup in KoboToolbox.
+node นี้จะเริ่ม workflow เมื่อมี submission ใหม่ในฟอร์มที่กำหนด ตัว trigger จะจัดการสร้าง/ลบ webhook ให้อัตโนมัติ คุณไม่ต้องตั้งค่าอะไรใน KoboToolbox เพิ่มเติม
 
-It works the same way as the Get Submission operation in the [KoboToolbox](/integrations/builtin/app-nodes/n8n-nodes-base.kobotoolbox.md) node, including supporting the same reformatting options.
+การทำงานจะเหมือนกับ operation Get Submission ใน [KoboToolbox](/integrations/builtin/app-nodes/n8n-nodes-base.kobotoolbox.md) node รวมถึงรองรับตัวเลือกการจัดรูปแบบข้อมูลแบบเดียวกันด้วย

@@ -7,17 +7,17 @@ contentType: reference
 
 # Structure of the node base file
 
-The node base file follows this basic structure:
+ไฟล์ node base จะมีโครงสร้างหลัก ๆ ดังนี้:
 
-1. Add import statements.
-2. Create a class for the node.
-3. Within the node class, create a `description` object, which defines the node.
+1. ใส่ import statements.
+2. สร้าง class สำหรับ node.
+3. ใน class node ให้สร้าง object ที่ชื่อว่า `description` ซึ่งจะกำหนดรายละเอียดของ node
 
-A programmatic-style node also has an `execute()` method, which reads incoming data and parameters, then builds a request. The declarative style handles this using the `routing` key in the `properties` object, within `descriptions`.
+ถ้าเป็น node แบบ programmatic-style จะต้องมี method `execute()` ด้วย ซึ่ง method นี้จะอ่านข้อมูลที่เข้ามาและ parameters แล้วสร้าง request ขึ้นมา ส่วนแบบ declarative จะใช้ key `routing` ใน object `properties` ที่อยู่ใน `descriptions` แทน
 
 ## Outline structure for a declarative-style node
 
-This code snippet gives an outline of the node structure. 
+โค้ดตัวอย่างนี้เป็นโครงสร้างของ node แบบ declarative
 
 ```js
 import { INodeType, INodeTypeDescription } from 'n8n-workflow';
@@ -31,11 +31,11 @@ export class ExampleNode implements INodeType {
 	};
 }
 ```
-Refer to [Standard parameters](/integrations/creating-nodes/build/reference/node-base-files/standard-parameters.md) for information on parameters available to all node types. Refer to [Declarative-style parameters](/integrations/creating-nodes/build/reference/node-base-files/declarative-style-parameters.md) for the parameters available for declarative-style nodes.
+ดูรายละเอียด parameters ที่ใช้ได้กับ node ทุกประเภทได้ที่ [Standard parameters](/integrations/creating-nodes/build/reference/node-base-files/standard-parameters.md) และสำหรับ parameters ที่ใช้กับ declarative-style nodes ดูที่ [Declarative-style parameters](/integrations/creating-nodes/build/reference/node-base-files/declarative-style-parameters.md)
 
 ## Outline structure for a programmatic-style node
 
-This code snippet gives an outline of the node structure. 
+โค้ดตัวอย่างนี้เป็นโครงสร้างของ node แบบ programmatic
 
 ```js
 import { IExecuteFunctions } from 'n8n-core';
@@ -55,4 +55,4 @@ export class ExampleNode implements INodeType {
 };
 ```
 
-Refer to [Standard parameters](/integrations/creating-nodes/build/reference/node-base-files/standard-parameters.md) for information on parameters available to all node types. Refer to [Programmatic-style parameters](/integrations/creating-nodes/build/reference/node-base-files/programmatic-style-parameters.md) and [Programmatic-style execute method](/integrations/creating-nodes/build/reference/node-base-files/programmatic-style-execute-method.md) for more information on working with programmatic-style nodes.
+ดูรายละเอียด parameters ที่ใช้ได้กับ node ทุกประเภทได้ที่ [Standard parameters](/integrations/creating-nodes/build/reference/node-base-files/standard-parameters.md) และสำหรับ programmatic-style nodes ดูที่ [Programmatic-style parameters](/integrations/creating-nodes/build/reference/node-base-files/programmatic-style-parameters.md) และ [Programmatic-style execute method](/integrations/creating-nodes/build/reference/node-base-files/programmatic-style-execute-method.md)

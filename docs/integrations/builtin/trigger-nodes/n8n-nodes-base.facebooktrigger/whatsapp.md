@@ -8,40 +8,40 @@ priority: medium
 
 # Facebook Trigger WhatsApp Business Account object
 
-Use this object to receive updates when your WhatsApp Business Account (WABA) changes. Refer to [Facebook Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/index.md) for more information on the trigger itself.
+ใช้ object นี้เพื่อรับการแจ้งเตือนเมื่อ WhatsApp Business Account (WABA) ของคุณมีการเปลี่ยนแปลง ดูข้อมูลเพิ่มเติมเกี่ยวกับ trigger ได้ที่ [Facebook Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/index.md)
 
 /// warning | Use WhatsApp trigger
-n8n recommends using the [WhatsApp Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.whatsapptrigger.md) with the [WhatsApp credentials](/integrations/builtin/credentials/whatsapp.md) instead of the Facebook Trigger node. That trigger node includes twice the events to subscribe to.
+n8n แนะนำให้ใช้ [WhatsApp Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.whatsapptrigger.md) คู่กับ [WhatsApp credentials](/integrations/builtin/credentials/whatsapp.md) แทน Facebook Trigger node เพราะ node นี้มี event ให้ subscribe ได้มากกว่า 2 เท่า
 ///
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/facebookapp.md).
+คุณสามารถดูข้อมูลเกี่ยวกับการตั้งค่า credentials สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/facebookapp.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Facebook Trigger integrations](https://n8n.io/integrations/facebook-trigger/){:target=_blank .external-link} page.
+สำหรับตัวอย่างการใช้งานและ template ที่จะช่วยให้คุณเริ่มต้นได้ง่ายขึ้น ดูได้ที่หน้า [Facebook Trigger integrations](https://n8n.io/integrations/facebook-trigger/){:target=_blank .external-link} ของ n8n
 ///
 
 ## Prerequisites
 
-This Object requires some configuration in your app and WhatsApp account before you can use the trigger:
+Object นี้ต้องมีการตั้งค่าบางอย่างในแอปและบัญชี WhatsApp ของคุณก่อนใช้งาน trigger:
 
-1. Subscribe your app under your WhatsApp business account. You must subscribe an app owned by your business. Apps shared with your business can't receive webhook notifications.
-1. If you are working as a Solution Partner, make sure your app has completed App Review and requested the `whatsapp_business_management` permission.
+1. ต้อง subscribe แอปของคุณภายใต้ WhatsApp business account ของคุณเอง ต้องเป็นแอปที่ business ของคุณเป็นเจ้าของ (แอปที่แชร์กับ business อื่นจะไม่ได้รับ webhook)
+1. ถ้าคุณเป็น Solution Partner ต้องให้แอปผ่าน App Review และขอ permission `whatsapp_business_management`
 
 ## Trigger configuration
 
-To configure the trigger with this Object:
+วิธีตั้งค่า trigger ด้วย Object นี้:
 
-1. Select the **Credential to connect with**. Select an existing or create a new [Facebook App credential](/integrations/builtin/credentials/facebookapp.md).
-1. Enter the **APP ID** of the app connected to your credential. Refer to the [Facebook App credential](/integrations/builtin/credentials/facebookapp.md) documentation for more information.
-1. Select **WhatsApp Business Account** as the **Object**.
-1. **Field Names or IDs**: By default, the node will trigger on all the available events using the `*` wildcard filter. If you'd like to limit the events, use the `X` to remove the star and use the dropdown or an expression to select the updates you're interested in. Options include:
+1. เลือก **Credential to connect with** เลือกหรือสร้าง [Facebook App credential](/integrations/builtin/credentials/facebookapp.md) ใหม่
+1. กรอก **APP ID** ของแอปที่เชื่อมกับ credential ของคุณ ดูรายละเอียดเพิ่มเติมได้ที่ [Facebook App credential](/integrations/builtin/credentials/facebookapp.md)
+1. เลือก **WhatsApp Business Account** ในช่อง **Object**
+1. **Field Names or IDs**: โดยปกติ node จะ trigger กับทุก event โดยใช้ wildcard `*` ถ้าต้องการจำกัด event ให้กด X เพื่อลบดาว แล้วเลือกจาก dropdown หรือใช้ expression เพื่อเลือกเฉพาะ event ที่ต้องการ ตัวเลือกเช่น:
     * **Message Template Status Update**
     * **Phone Number Name Update**
     * **Phone Number Quality Update**
     * **Account Review Update**
     * **Account Update**
-1. In **Options**, turn on the toggle to **Include Values**. This Object type fails without the option enabled.
+1. ใน **Options** ให้เปิด toggle **Include Values** (object นี้จะ error ถ้าไม่เปิด option นี้)
 
-Refer to [Webhooks for WhatsApp Business Accounts](https://developers.facebook.com/docs/graph-api/webhooks/getting-started/webhooks-for-whatsapp){:target=_blank .external-link} and Meta's [WhatsApp Business Account](https://developers.facebook.com/docs/graph-api/webhooks/reference/whatsapp-business-account/){:target=_blank .external-link} Graph API reference for more information.
+ดูข้อมูลเพิ่มเติมได้ที่ [Webhooks for WhatsApp Business Accounts](https://developers.facebook.com/docs/graph-api/webhooks/getting-started/webhooks-for-whatsapp){:target=_blank .external-link} และ [WhatsApp Business Account](https://developers.facebook.com/docs/graph-api/webhooks/reference/whatsapp-business-account/){:target=_blank .external-link} ในเอกสารของ Meta

@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Acuity Scheduling Trigger node
 
-[Acuity Scheduling](https://acuityscheduling.com/){:target=_blank .external-link} is a cloud-based appointment scheduling software solution that enables business owners to manage their appointments online. It has the capability to automatically sync calendars according to users' time zones and can send regular alerts and reminders to users regarding their appointment schedules.
+[Acuity Scheduling](https://acuityscheduling.com/){:target=_blank .external-link} คือซอฟต์แวร์สำหรับจัดการนัดหมายแบบออนไลน์บนคลาวด์ ที่ช่วยให้เจ้าของธุรกิจสามารถจัดการนัดหมายต่างๆ ได้สะดวกผ่านระบบออนไลน์ สามารถซิงค์ปฏิทินอัตโนมัติตามโซนเวลา และส่งการแจ้งเตือนหรือ reminder เกี่ยวกับตารางนัดหมายให้ผู้ใช้ได้เป็นประจำ
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/acuityscheduling.md).
+คุณสามารถดูข้อมูลเกี่ยวกับการยืนยันตัวตน (authentication) สำหรับ node นี้ได้ที่ [ที่นี่](/integrations/builtin/credentials/acuityscheduling.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Acuity Scheduling Trigger integrations](https://n8n.io/integrations/acuity-scheduling-trigger/){:target=_blank .external-link} page.
+ถ้าต้องการดูตัวอย่างการใช้งานและ template เพื่อเริ่มต้นใช้งาน สามารถดูได้ที่หน้า [Acuity Scheduling Trigger integrations](https://n8n.io/integrations/acuity-scheduling-trigger/){:target=_blank .external-link} ของ n8n
 ///

@@ -5,5 +5,5 @@ contentType: overview
 
 # Triggers library
 
-This section provides information about [n8n's Triggers](/glossary.md#trigger-node-n8n).
+ส่วนนี้จะให้ข้อมูลเกี่ยวกับ [n8n's Triggers](/glossary.md#trigger-node-n8n) หรือ node ประเภท Trigger ใน n8n ที่ใช้สำหรับเริ่มต้น workflow อัตโนมัติเมื่อมีเหตุการณ์บางอย่างเกิดขึ้น เช่น มีข้อมูลใหม่เข้ามา, มีการอัปเดต, หรือมีการแจ้งเตือนจากแอปอื่น ๆ ที่เชื่อมต่อกับ n8n
 

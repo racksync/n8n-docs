@@ -7,14 +7,14 @@ contentType: [integration, reference]
 
 # Clockify Trigger node
 
-[Clockify](https://clockify.me/){:target=_blank .external-link} is a free time tracker and timesheet app for tracking work hours across projects.
+[Clockify](https://clockify.me/){:target=_blank .external-link} เป็นแอป time tracker และ timesheet ฟรี สำหรับติดตามเวลาทำงานในแต่ละโปรเจกต์
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/clockify.md).
+คุณสามารถดูข้อมูลการตั้งค่า authentication สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/clockify.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Clockify Trigger integrations](https://n8n.io/integrations/clockify-trigger/){:target=_blank .external-link} page.
+ถ้าต้องการดูตัวอย่างการใช้งานและ workflow template เพื่อเริ่มต้นใช้งาน ลองดูที่หน้า [Clockify Trigger integrations](https://n8n.io/integrations/clockify-trigger/){:target=_blank .external-link} ของ n8n ได้เลย
 ///
 
-This node uses the workflow timezone setting to specify the range of time entries starting time. Configure the timezone in your [Workflow Settings](/workflows/settings.md) if you want this trigger node to retrieve the right time entries.
+node นี้จะใช้ timezone ที่ตั้งไว้ใน workflow เพื่อกำหนดช่วงเวลาเริ่มต้นของ time entry ถ้าต้องการให้ trigger node นี้ดึงข้อมูล time entry ได้ถูกต้อง ให้ตั้งค่า timezone ใน [Workflow Settings](/workflows/settings.md)

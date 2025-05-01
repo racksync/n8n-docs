@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Affinity Trigger node
 
-[Affinity](https://www.affinity.co/){:target=_blank .external-link} is a powerful relationship intelligence platform enabling teams to leverage their network to close the next big deal.
+[Affinity](https://www.affinity.co/){:target=_blank .external-link} คือแพลตฟอร์มด้าน relationship intelligence ที่ช่วยให้ทีมงานใช้ประโยชน์จาก network ของตัวเองเพื่อปิดดีลใหญ่ๆ ได้ง่ายขึ้น
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/affinity.md).
+คุณสามารถดูข้อมูลการตั้งค่า authentication สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/affinity.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Affinity Trigger integrations](https://n8n.io/integrations/affinity-trigger/){:target=_blank .external-link} page.
+ถ้าต้องการดูตัวอย่างการใช้งานและ workflow template เพื่อเริ่มต้นใช้งาน ลองดูที่หน้า [Affinity Trigger integrations](https://n8n.io/integrations/affinity-trigger/){:target=_blank .external-link} ของ n8n ได้เลย
 ///

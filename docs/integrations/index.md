@@ -7,31 +7,31 @@ contentType: overview
 
 # Integrations
 
-n8n calls integrations nodes.
+n8n เรียก integrations ว่า nodes
 
-Nodes are the building blocks of workflows in n8n. They're an entry point for retrieving data, a function to process data, or an exit for sending data. The data process includes filtering, recomposing, and changing data. There can be one or several nodes for your API, service or app. You can connect multiple nodes, which allows you to create complex workflows.
+Nodes คือส่วนประกอบหลักของ workflow ใน n8n โดย nodes จะเป็นจุดเริ่มต้นสำหรับดึงข้อมูล, ฟังก์ชันสำหรับประมวลผลข้อมูล หรือจุดสิ้นสุดสำหรับส่งข้อมูลออกไป การประมวลผลข้อมูลนี้รวมถึงการกรอง, การจัดรูปแบบใหม่ และการเปลี่ยนแปลงข้อมูล คุณสามารถมี node เดียวหรือหลาย node สำหรับ API, service หรือ app ของคุณก็ได้ และสามารถเชื่อมต่อ node หลายๆ ตัวเข้าด้วยกัน เพื่อสร้าง workflow ที่ซับซ้อนได้
 
 ## Built-in nodes
 
-n8n includes a collection of built-in integrations. Refer to [Built-in nodes](/integrations/builtin/node-types.md) for documentation on all n8n's built-in nodes.
+n8n มี built-in integrations ให้เลือกใช้งานมากมาย ดูรายละเอียดได้ที่ [Built-in nodes](/integrations/builtin/node-types.md) สำหรับเอกสารเกี่ยวกับ built-in nodes ทั้งหมดของ n8n
 
 ## Community nodes
 
-As well as using the built-in nodes, you can also install community-built nodes. Refer to [Community nodes](/integrations/community-nodes/installation/index.md) for more information.
+นอกจาก built-in nodes แล้ว คุณยังสามารถติดตั้ง community-built nodes ได้ด้วย ดูรายละเอียดเพิ่มเติมที่ [Community nodes](/integrations/community-nodes/installation/index.md)
 
 ## Credential-only nodes and custom operations
 
 --8<-- "_snippets/integrations/credential-only-intro.md"
 
-Refer to [Custom operations](/integrations/custom-operations.md) for more information.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับ [Custom operations](/integrations/custom-operations.md)
 
 ## Generic integrations
 
-If you need to connect to a service where n8n doesn't have a node, or a credential-only node, you can still use the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) node. Refer to the node page for details on how to set up authentication and create your API call.
+ถ้าคุณต้องการเชื่อมต่อกับ service ที่ n8n ยังไม่มี node หรือมีแค่ credential-only node คุณก็ยังสามารถใช้ [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) node ได้ ดูรายละเอียดวิธีตั้งค่าการ authentication และสร้าง API call ได้ที่หน้า node นี้
 
 ## Where to go next
 
-* If you want to create your own node, head over to the [Creating Nodes](/integrations/creating-nodes/overview.md) section.
-* Check out [Community nodes](/integrations/community-nodes/usage.md) to learn about installing and managing community-built nodes.
-* If you'd like to learn more about the different nodes in n8n, their functionalities and example usage, check out n8n's node libraries: [Core nodes](/integrations/builtin/core-nodes/index.md), [Actions](/integrations/builtin/app-nodes/index.md), and [Triggers](/integrations/builtin/trigger-nodes/index.md).
-* If you'd like to learn how to add the credentials for the different nodes, head over to the [Credentials](/integrations/builtin/credentials/index.md) section.
+* ถ้าคุณอยากสร้าง node ของตัวเอง ไปที่หัวข้อ [Creating Nodes](/integrations/creating-nodes/overview.md)
+* ดู [Community nodes](/integrations/community-nodes/usage.md) เพื่อเรียนรู้วิธีติดตั้งและจัดการ community-built nodes
+* ถ้าอยากรู้จัก nodes ต่างๆ ใน n8n, ฟังก์ชันการทำงาน และตัวอย่างการใช้งาน ดูได้ที่ node libraries ของ n8n: [Core nodes](/integrations/builtin/core-nodes/index.md), [Actions](/integrations/builtin/app-nodes/index.md), และ [Triggers](/integrations/builtin/trigger-nodes/index.md)
+* ถ้าอยากรู้วิธีเพิ่ม credentials สำหรับแต่ละ node ไปที่หัวข้อ [Credentials](/integrations/builtin/credentials/index.md)

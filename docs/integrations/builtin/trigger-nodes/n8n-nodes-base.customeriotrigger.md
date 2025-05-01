@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Customer.io Trigger node
 
-[Customer.io](https://customer.io/){:target=_blank .external-link} enables users to send newsletters to selected segments of customers using their website data. You can send targeted emails, push notifications, and SMS to lower churn, create stronger relationships, and drive subscriptions.
+[Customer.io](https://customer.io/){:target=_blank .external-link} เป็นแพลตฟอร์มที่ช่วยให้คุณส่งจดหมายข่าว (Newsletter) ไปยังกลุ่มลูกค้าที่เลือกไว้โดยใช้ข้อมูลจากเว็บไซต์ของคุณเอง คุณสามารถส่งอีเมลแบบเจาะจง, push notification และ SMS เพื่อช่วยลด churn, สร้างความสัมพันธ์ที่แข็งแกร่งขึ้น และกระตุ้นให้เกิดการสมัครสมาชิก
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/customerio.md).
+คุณสามารถดูข้อมูลการเชื่อมต่อสำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/customerio.md)
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Customer.io Trigger integrations](https://n8n.io/integrations/customerio-trigger/){:target=_blank .external-link} page.
+สำหรับตัวอย่างการใช้งานและ template เพื่อช่วยให้คุณเริ่มต้นได้ง่ายขึ้น ดูได้ที่หน้า [Customer.io Trigger integrations ของ n8n](https://n8n.io/integrations/customerio-trigger/){:target=_blank .external-link}
 ///

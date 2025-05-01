@@ -7,11 +7,11 @@ contentType: howto
 
 ## Error: Missing packages
 
-n8n installs community nodes directly onto the hard disk. The files must be available at startup for n8n to load them. If the packages aren't available at startup, you get an error warning of missing packages.
+n8n จะติดตั้ง community nodes ลงบน hard disk โดยตรง ไฟล์เหล่านี้ต้องมีอยู่ตอนที่ n8n เริ่มทำงาน ไม่งั้นจะเจอ error แจ้งว่า missing packages
 
-If running n8n using Docker: depending on your Docker setup, you may lose the packages when you recreate your container or upgrade your n8n version. You must either:
+ถ้าใช้งาน n8n ผ่าน Docker: ขึ้นอยู่กับการตั้งค่า Docker ของคุณ อาจทำให้ package หายไปตอนสร้าง container ใหม่หรืออัปเกรด n8n คุณต้องเลือกวิธีใดวิธีหนึ่งต่อไปนี้:
 
-* Persist the contents of the `~/.n8n/nodes` directory. This is the best option. If you follow the [Docker installation](/hosting/installation/docker.md) guide, the setup steps include persisting this directory.
-* Set the `N8N_REINSTALL_MISSING_PACKAGES` environment variable to `true`.
+* เก็บข้อมูลในโฟลเดอร์ `~/.n8n/nodes` ให้คงอยู่เสมอ วิธีนี้ดีที่สุด ถ้าทำตามคู่มือ [Docker installation](/hosting/installation/docker.md) จะมีขั้นตอนให้เก็บโฟลเดอร์นี้ไว้
+* ตั้งค่า environment variable `N8N_REINSTALL_MISSING_PACKAGES` เป็น `true`
 
-The second option might increase startup time and may cause health checks to fail.
+วิธีที่สองอาจทำให้เวลาเริ่มต้นนานขึ้น และอาจทำให้ health check ล้มเหลวได้

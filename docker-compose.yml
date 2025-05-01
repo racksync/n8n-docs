@@ -1,0 +1,18 @@
+services:
+  n8n-docs:
+    image: nginx:latest
+    container_name: n8n-docs-static
+    ports:
+      - "8080:80"
+    volumes:
+      - ./site:/usr/share/nginx/html:ro
+    restart: always
+    environment:
+      - NGINX_HOST=localhost
+      - NGINX_PORT=8080
+    networks:
+      - mkdocs-n8n
+
+networks:
+  mkdocs-n8n:
+    driver: bridge

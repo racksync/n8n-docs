@@ -1,0 +1,1 @@
+pip install mkdocs mkdocs-material && mkdocs build && echo "--- Listing current directory contents (repo root) ---" && ls -la && echo "--- Listing site directory contents ---" && ls -la site && rm -rf site/_redirects

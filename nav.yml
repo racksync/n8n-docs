@@ -164,8 +164,6 @@ nav:
           - Incident response: privacy-security/incident-response.md
           - What you can do: privacy-security/what-you-can-do.md
       - Sustainable use license: sustainable-use-license.md
-  - การใช้งาน n8n:
-    - ยินดีต้อนรับ: th/index.md
   - Integrations:
     - integrations/index.md
     - Built-in nodes:

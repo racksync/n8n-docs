@@ -20,7 +20,8 @@ theme:
   favicon: _images/favicon.ico
   font: false
   language: custom
-  logo: _images/n8n-docs-icon.svg
+  #logo: _images/n8n-docs-icon.svg
+  logo: _images/n8n.png
   icon:
     repo: fontawesome/brands/git-alt
   palette:

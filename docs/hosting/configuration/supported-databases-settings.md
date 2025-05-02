@@ -5,17 +5,17 @@ contentType: reference
 
 # Supported databases
 
-By default, n8n uses SQLite to save credentials, past executions, and workflows. n8n also supports PostgresDB.
+โดยปกติ n8n จะใช้ SQLite สำหรับเก็บ credentials, execution ที่ผ่านมา และ workflows ต่าง ๆ แต่ก็รองรับ PostgresDB ด้วย
 
 ## Shared settings
 
-The following environment variables get used by all databases:
+environment variables เหล่านี้ใช้ได้กับทุก database:
 
- - `DB_TABLE_PREFIX` (default: -) - Prefix for table names
+ - `DB_TABLE_PREFIX` (default: -) - prefix สำหรับชื่อ table
 
 ## PostgresDB
 
-To use PostgresDB as the database, you can provide the following environment variables:
+ถ้าต้องการใช้ PostgresDB เป็น database ให้ตั้ง environment variables เหล่านี้
 
  - `DB_TYPE=postgresdb`
  - `DB_POSTGRESDB_DATABASE` (default: 'n8n')
@@ -24,10 +24,10 @@ To use PostgresDB as the database, you can provide the following environment var
  - `DB_POSTGRESDB_USER` (default: 'postgres')
  - `DB_POSTGRESDB_PASSWORD` (default: empty)
  - `DB_POSTGRESDB_SCHEMA` (default: 'public')
- - `DB_POSTGRESDB_SSL_CA` (default: undefined): Path to the server's CA certificate used to validate the connection (opportunistic encryption isn't supported)
- - `DB_POSTGRESDB_SSL_CERT` (default: undefined): Path to the client's TLS certificate
- - `DB_POSTGRESDB_SSL_KEY` (default: undefined): Path to the client's private key corresponding to the certificate
- - `DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED` (default: true): If TLS connections that fail validation should be rejected
+ - `DB_POSTGRESDB_SSL_CA` (default: undefined): path ไปยัง CA certificate ของ server สำหรับ validate connection (ไม่รองรับ opportunistic encryption)
+ - `DB_POSTGRESDB_SSL_CERT` (default: undefined): path ไปยัง TLS certificate ของ client
+ - `DB_POSTGRESDB_SSL_KEY` (default: undefined): path ไปยัง private key ของ client ที่ตรงกับ certificate
+ - `DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED` (default: true): จะ reject TLS connection ที่ validate ไม่ผ่านหรือไม่
 
 ```bash
 export DB_TYPE=postgresdb
@@ -47,9 +47,9 @@ n8n start
 
 ### Required permissions
 
-n8n needs to create and modify the schemas of the tables it uses.
+n8n ต้องสร้างและแก้ไข schema ของ table ที่ใช้งาน
 
-Recommended permissions:
+สิทธิที่แนะนำ:
 
 ```sql
 CREATE DATABASE n8n-db;
@@ -59,15 +59,15 @@ GRANT ALL PRIVILEGES ON DATABASE n8n-db TO n8n-user;
 
 ### TLS
 
-You can choose between these configurations:
+เลือก config ได้ตามนี้:
 
-- Not declaring (default): Connect with `SSL=off`
-- Declaring only the CA and unauthorized flag: Connect with `SSL=on` and verify the server's signature
-- Declaring `_{CERT,KEY}` and the above: Use the certificate and key for client TLS authentication
+- ไม่กำหนดอะไร (default): เชื่อมต่อแบบ `SSL=off`
+- กำหนดแค่ CA กับ unauthorized flag: เชื่อมต่อแบบ `SSL=on` และตรวจสอบลายเซ็น server
+- กำหนด `_{CERT,KEY}` ด้วย: ใช้ certificate กับ key สำหรับ client TLS authentication
 
 ## SQLite
 
-This is the default database that gets used if nothing is defined.
+นี่คือ database ที่ถูกใช้เป็น default ถ้าไม่ได้กำหนดอะไร
 
-The database file is located at:
+ไฟล์ database จะอยู่ที่:
 `~/.n8n/database.sqlite`

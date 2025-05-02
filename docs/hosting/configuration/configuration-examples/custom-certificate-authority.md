@@ -7,20 +7,20 @@ contentType: howto
 
 # Configure n8n to use your own certificate authority or self-signed certificate
 
-You can add your own certificate authority (CA) or self-signed certificate to n8n. This means you are able to trust a certain SSL certificate instead of trusting all invalid certificates, which is a potential security risk.
+คุณสามารถเพิ่ม certificate authority (CA) หรือ self-signed certificate ของตัวเองให้กับ n8n ได้ หมายความว่าคุณสามารถเลือก trust SSL certificate เฉพาะที่ต้องการ แทนที่จะ trust ทุก certificate ที่ไม่ถูกต้อง (ซึ่งเสี่ยงเรื่อง security)
 
 /// note | Available in version 1.42.0
-This feature is only available in version 1.42.0+.
+ฟีเจอร์นี้ใช้ได้เฉพาะใน n8n เวอร์ชัน 1.42.0 ขึ้นไปเท่านั้น
 ///
 
-To use this feature you need to place your certificates in a folder and mount the folder to `/opt/custom-certificates` in the container.
+ถ้าจะใช้ฟีเจอร์นี้ ให้นำ certificate ไปไว้ในโฟลเดอร์ แล้ว mount โฟลเดอร์นั้นเข้าไปที่ `/opt/custom-certificates` ใน container
 
 ## Docker
 
-The examples below assume you have a folder called `pki` that contains your certificates in either the directory you run the command from or next to your docker compose file.
+ตัวอย่างด้านล่างนี้ สมมติว่าคุณมีโฟลเดอร์ชื่อ `pki` ที่เก็บ certificate อยู่ใน directory เดียวกับที่รันคำสั่ง หรืออยู่ข้าง ๆ ไฟล์ docker compose
 
 ### Docker CLI
-When using the CLI you can use the `-v` flag from the command line:
+ถ้าใช้ CLI ให้ใช้ flag `-v` แบบนี้:
 
 ```bash
 docker run -it --rm \
@@ -44,7 +44,7 @@ services:
         image: docker.n8n.io/n8nio/n8n
 ```
 
-You should also give the right permissions to the imported certs. You can do this once the container is running (assuming n8n as the container name):
+ควรตั้ง permission ให้ cert ที่ import เข้าไปด้วย สามารถสั่งใน container ได้เลย (สมมติชื่อ container คือ n8n):
 
 ```bash
 docker exec --user 0 n8n chown -R 1000:1000 /opt/custom-certificates

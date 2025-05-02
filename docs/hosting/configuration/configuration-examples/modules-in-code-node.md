@@ -7,22 +7,22 @@ contentType: howto
 
 # Enable modules in Code node
 
-For security reasons, the Code node restricts importing modules. It's possible to lift that restriction for built-in and external modules by setting the following environment variables:
+ด้วยเหตุผลด้านความปลอดภัย Code node จะไม่อนุญาตให้ import module ต่าง ๆ โดย default แต่คุณสามารถยกเลิกข้อจำกัดนี้สำหรับ built-in และ external module ได้โดยตั้ง environment variables เหล่านี้:
 
-- `NODE_FUNCTION_ALLOW_BUILTIN`: For built-in modules
-- `NODE_FUNCTION_ALLOW_EXTERNAL`: For external modules sourced from n8n/node_modules directory. External module support is disabled when an environment variable isn't set.
+- `NODE_FUNCTION_ALLOW_BUILTIN`: สำหรับ built-in modules
+- `NODE_FUNCTION_ALLOW_EXTERNAL`: สำหรับ external modules ที่อยู่ใน n8n/node_modules ถ้าไม่ตั้ง environment variable นี้จะไม่สามารถใช้ external module ได้
 
 ```bash
-# Allows usage of all builtin modules
+# อนุญาตให้ใช้ built-in module ทั้งหมด
 export NODE_FUNCTION_ALLOW_BUILTIN=*
 
-# Allows usage of only crypto
+# อนุญาตให้ใช้เฉพาะ crypto
 export NODE_FUNCTION_ALLOW_BUILTIN=crypto
 
-# Allows usage of only crypto and fs
+# อนุญาตให้ใช้ crypto และ fs
 export NODE_FUNCTION_ALLOW_BUILTIN=crypto,fs
 
-# Allow usage of external npm modules.
+# อนุญาตให้ใช้ external npm modules
 export NODE_FUNCTION_ALLOW_EXTERNAL=moment,lodash
 ```
-Refer to [Environment variables reference](/hosting/configuration/environment-variables/nodes.md) for more information on these variables.
+ดูรายละเอียดตัวแปรเหล่านี้เพิ่มเติมได้ที่ [Environment variables reference](/hosting/configuration/environment-variables/nodes.md)

@@ -14,8 +14,8 @@ hide:
 
 --8<-- "_snippets/self-hosting/file-based-configuration.md"
 
-You can use an external secrets store to manage credentials for n8n. Refer to [External secrets](/external-secrets.md) for details.
+คุณสามารถใช้ external secrets store เพื่อจัดการ credentials ของ n8n ดูรายละเอียดที่ [External secrets](/external-secrets.md)
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
-| `N8N_EXTERNAL_SECRETS_UPDATE_INTERVAL` | Number | `300` (5 minutes) | How often (in seconds) to check for secret updates. |
+| `N8N_EXTERNAL_SECRETS_UPDATE_INTERVAL` | Number | `300` (5 นาที) | ความถี่ (วินาที) ที่จะเช็ค secret update |

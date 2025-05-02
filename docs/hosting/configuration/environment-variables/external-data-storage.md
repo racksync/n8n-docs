@@ -16,13 +16,13 @@ hide:
 
 --8<-- "_snippets/self-hosting/file-based-configuration.md"
 
-Refer to [External storage](/hosting/scaling/external-storage.md) for more information on using external storage for binary data.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับการใช้ external storage สำหรับ binary data ได้ที่ [External storage](/hosting/scaling/external-storage.md)
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
-| `N8N_EXTERNAL_STORAGE_S3_HOST` | String | - | Host of the n8n bucket in S3-compatible external storage. For example, `s3.us-east-1.amazonaws.com` |
-| `N8N_EXTERNAL_STORAGE_S3_BUCKET_NAME` | String | - | Name of the n8n bucket in S3-compatible external storage. |
-| `N8N_EXTERNAL_STORAGE_S3_BUCKET_REGION` | String | - | Region of the n8n bucket in S3-compatible external storage. For example, `us-east-1`|
-| `N8N_EXTERNAL_STORAGE_S3_ACCESS_KEY` | String | - | Access key in S3-compatible external storage |
-| `N8N_EXTERNAL_STORAGE_S3_ACCESS_SECRET` | String | - | Access secret in S3-compatible external storage. |
-| `N8N_EXTERNAL_STORAGE_S3_AUTH_AUTO_DETECT` | Boolean | - | Use automatic credential detection to authenticate S3 calls for external storage. This will ignore the access key and access secret and use the default [credential provider chain](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/setting-credentials-node.html#credchain). |
+| `N8N_EXTERNAL_STORAGE_S3_HOST` | String | - | host ของ bucket n8n ใน S3-compatible external storage เช่น `s3.us-east-1.amazonaws.com` |
+| `N8N_EXTERNAL_STORAGE_S3_BUCKET_NAME` | String | - | ชื่อ bucket n8n ใน S3-compatible external storage |
+| `N8N_EXTERNAL_STORAGE_S3_BUCKET_REGION` | String | - | region ของ bucket n8n ใน S3-compatible external storage เช่น `us-east-1`|
+| `N8N_EXTERNAL_STORAGE_S3_ACCESS_KEY` | String | - | access key ใน S3-compatible external storage |
+| `N8N_EXTERNAL_STORAGE_S3_ACCESS_SECRET` | String | - | access secret ใน S3-compatible external storage |
+| `N8N_EXTERNAL_STORAGE_S3_AUTH_AUTO_DETECT` | Boolean | - | ใช้ automatic credential detection สำหรับ S3 external storage จะไม่สนใจ access key/secret แล้วใช้ [credential provider chain](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/setting-credentials-node.html#credchain) แทน |

@@ -7,38 +7,38 @@ contentType: howto
 
 # Enable Prometheus metrics 
 
-To collect and expose metrics, n8n uses the [prom-client](https://www.npmjs.com/package/prom-client){:target="_blank" .external-link} library.
+n8n ใช้ library [prom-client](https://www.npmjs.com/package/prom-client){:target="_blank" .external-link} สำหรับเก็บและเปิดเผย metrics
 
-The `/metrics` endpoint is disabled by default, but it's possible to enable it using the `N8N_METRICS` environment variable.
+endpoint `/metrics` จะถูกปิดไว้โดย default แต่สามารถเปิดได้ด้วย environment variable `N8N_METRICS`
 
 ```bash
 export N8N_METRICS=true
 ```
 
-Refer to the respective [Environment Variables](/hosting/configuration/environment-variables/endpoints.md) (`N8N_METRICS_INCLUDE_*`) for configuring which metrics and labels should get exposed.
+ดูรายละเอียดการตั้งค่า metrics และ label ที่จะเปิดเผยได้ที่ [Environment Variables](/hosting/configuration/environment-variables/endpoints.md) (`N8N_METRICS_INCLUDE_*`)
 
-Both `main` and `worker` instances are able to expose metrics.
+ทั้ง instance แบบ `main` และ `worker` สามารถเปิด metrics ได้
 
 ## Queue metrics
 
-To enable queue metrics, set the `N8N_METRICS_INCLUDE_QUEUE_METRICS` env var to `true`. You can adjust the refresh rate with `N8N_METRICS_QUEUE_METRICS_INTERVAL`.
+ถ้าอยากเปิด queue metrics ให้ตั้ง `N8N_METRICS_INCLUDE_QUEUE_METRICS` เป็น `true` และปรับ refresh rate ได้ด้วย `N8N_METRICS_QUEUE_METRICS_INTERVAL`
 
-Queue metrics are only available for the `main` instance in single-main mode.
+queue metrics ใช้ได้เฉพาะกับ instance แบบ `main` ใน single-main mode เท่านั้น
 
 ```
-# HELP n8n_scaling_mode_queue_jobs_active Current number of jobs being processed across all workers in scaling mode.
+# HELP n8n_scaling_mode_queue_jobs_active จำนวน job ที่กำลังถูก process อยู่ใน scaling mode
 # TYPE n8n_scaling_mode_queue_jobs_active gauge
 n8n_scaling_mode_queue_jobs_active 0
 
-# HELP n8n_scaling_mode_queue_jobs_completed Total number of jobs completed across all workers in scaling mode since instance start.
+# HELP n8n_scaling_mode_queue_jobs_completed จำนวน job ที่สำเร็จใน scaling mode ตั้งแต่เริ่ม instance
 # TYPE n8n_scaling_mode_queue_jobs_completed counter
 n8n_scaling_mode_queue_jobs_completed 0
 
-# HELP n8n_scaling_mode_queue_jobs_failed Total number of jobs failed across all workers in scaling mode since instance start.
+# HELP n8n_scaling_mode_queue_jobs_failed จำนวน job ที่ fail ใน scaling mode ตั้งแต่เริ่ม instance
 # TYPE n8n_scaling_mode_queue_jobs_failed counter
 n8n_scaling_mode_queue_jobs_failed 0
 
-# HELP n8n_scaling_mode_queue_jobs_waiting Current number of enqueued jobs waiting for pickup in scaling mode.
+# HELP n8n_scaling_mode_queue_jobs_waiting จำนวน job ที่รออยู่ใน queue ใน scaling mode
 # TYPE n8n_scaling_mode_queue_jobs_waiting gauge
 n8n_scaling_mode_queue_jobs_waiting 0
 ```

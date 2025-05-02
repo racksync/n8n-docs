@@ -14,14 +14,14 @@ hide:
 
 --8<-- "_snippets/self-hosting/file-based-configuration.md"
 
-Insights gives instance owners and admins visibility into how workflows perform over time. Refer to [Insights](/insights.md) for details.
+Insights ช่วยให้เจ้าของ instance และ admin เห็น performance ของ workflow ย้อนหลัง ดูรายละเอียดที่ [Insights](/insights.md)
 
  | Variable                                                 | Type   | Default | Description                                                                             |
  |:---------------------------------------------------------|:-------|:--------|:----------------------------------------------------------------------------------------|
- | `N8N_DISABLED_MODULES`                                   | String | -       | Set to `insights` to disable the feature and metrics collection for an instance.        |
- | `N8N_INSIGHTS_COMPACTION_BATCH_SIZE`                     | Number | 500     | The number of raw insights data to compact in a single batch.                           |
- | `N8N_INSIGHTS_COMPACTION_DAILY_TO_WEEKLY_THRESHOLD_DAYS` | Number | 180     | The maximum age (in days) of daily insights data to compact.                            |
- | `N8N_INSIGHTS_COMPACTION_HOURLY_TO_DAILY_THRESHOLD_DAYS` | Number | 90      | The maximum age (in days) of hourly insights data to compact.                           |
- | `N8N_INSIGHTS_COMPACTION_INTERVAL_MINUTES`               | Number | 60      | Interval (in minutes) at which compaction should run.                                   |
- | `N8N_INSIGHTS_FLUSH_BATCH_SIZE`                          | Number | 1000    | The maximum number of insights data to keep in the buffer before flushing.              |
- | `N8N_INSIGHTS_FLUSH_INTERVAL_SECONDS`                    | Number | 30      | The interval (in seconds) at which the insights data should be flushed to the database. |
+ | `N8N_DISABLED_MODULES`                                   | String | -       | ตั้งเป็น `insights` เพื่อปิดฟีเจอร์นี้และหยุดเก็บ metrics สำหรับ instance             |
+ | `N8N_INSIGHTS_COMPACTION_BATCH_SIZE`                     | Number | 500     | จำนวน raw insights data ที่จะ compact ในแต่ละ batch                                      |
+ | `N8N_INSIGHTS_COMPACTION_DAILY_TO_WEEKLY_THRESHOLD_DAYS` | Number | 180     | อายุสูงสุด (วัน) ของ daily insights data ที่จะ compact                                  |
+ | `N8N_INSIGHTS_COMPACTION_HOURLY_TO_DAILY_THRESHOLD_DAYS` | Number | 90      | อายุสูงสุด (วัน) ของ hourly insights data ที่จะ compact                                 |
+ | `N8N_INSIGHTS_COMPACTION_INTERVAL_MINUTES`               | Number | 60      | ความถี่ (นาที) ที่จะรัน compaction                                                      |
+ | `N8N_INSIGHTS_FLUSH_BATCH_SIZE`                          | Number | 1000    | จำนวน insights data สูงสุดที่เก็บใน buffer ก่อน flush                                   |
+ | `N8N_INSIGHTS_FLUSH_INTERVAL_SECONDS`                    | Number | 30      | ความถี่ (วินาที) ที่ insights data จะถูก flush ลง database                              |

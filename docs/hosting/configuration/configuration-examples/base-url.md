@@ -8,12 +8,12 @@ contentType: howto
 # Configure the Base URL for n8n's front end access
 
 /// warning | Requires manual UI build
-This use case involves configuring the `VUE_APP_URL_BASE_API` environmental variable which requires a manual build of the `n8n-editor-ui` package. You can't use it with the default n8n Docker image where the default setting for this variable is `/`, meaning that it uses the root-domain.
+กรณีนี้ต้องตั้งค่า environment variable `VUE_APP_URL_BASE_API` ซึ่งต้อง build `n8n-editor-ui` ด้วยตัวเอง ไม่สามารถใช้กับ Docker image ของ n8n ที่ตั้งค่า default เป็น `/` (ใช้ root-domain) ได้
 ///
 
-You can configure the Base URL that the front end uses to connect to the back end's REST API. This is relevant when you want to host n8n's front end and back end separately. 
+คุณสามารถตั้งค่า Base URL ที่ front end ของ n8n จะใช้เชื่อมต่อกับ backend REST API ได้ เหมาะกับกรณีที่ต้องการแยก host front end กับ back end ของ n8n ออกจากกัน
 
 ```bash
 export VUE_APP_URL_BASE_API=https://n8n.example.com/
 ```
-Refer to [Environment variables reference](/hosting/configuration/environment-variables/deployment.md) for more information on this variable.
+ดูรายละเอียดตัวแปรนี้เพิ่มเติมได้ที่ [Environment variables reference](/hosting/configuration/environment-variables/deployment.md)

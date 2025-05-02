@@ -14,11 +14,10 @@ hide:
 
 --8<-- "_snippets/self-hosting/file-based-configuration.md"
 
-By default, n8n uses memory to store binary data. Enterprise users can choose to use an external service instead. Refer to [External storage](/hosting/scaling/external-storage.md) for more information on using external storage for binary data. 
-
+โดยปกติ n8n จะเก็บ binary data ไว้ใน memory ถ้าใช้ Enterprise จะสามารถเลือกเก็บใน external service ได้ด้วย ดูรายละเอียดเพิ่มเติมที่ [External storage](/hosting/scaling/external-storage.md) สำหรับการตั้งค่า external storage เพื่อเก็บ binary data
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
-| `N8N_AVAILABLE_BINARY_DATA_MODES` | String | `filesystem` | A comma separated list of available binary data modes. |
-| `N8N_BINARY_DATA_STORAGE_PATH` | String | `N8N_USER_FOLDER/binaryData` | The path where n8n stores binary data. |
-| `N8N_DEFAULT_BINARY_DATA_MODE` | String | `default` | The default binary data mode. `default` keeps binary data in memory. Set to `filesystem` to use the filesystem, or `s3` to AWS S3. Note that binary data pruning operates on the active binary data mode. For example, if your instance stored data in S3, and you later switched to filesystem mode, n8n only prunes binary data in the filesystem. This may change in future. |
+| `N8N_AVAILABLE_BINARY_DATA_MODES` | String | `filesystem` | รายการ binary data modes ที่ใช้ได้ (คั่นด้วย comma) |
+| `N8N_BINARY_DATA_STORAGE_PATH` | String | `N8N_USER_FOLDER/binaryData` | path ที่ n8n จะเก็บ binary data |
+| `N8N_DEFAULT_BINARY_DATA_MODE` | String | `default` | binary data mode ที่ใช้เป็นค่าเริ่มต้น `default` จะเก็บ binary data ใน memory ถ้าตั้งเป็น `filesystem` จะเก็บในไฟล์ หรือ `s3` จะเก็บใน AWS S3 หมายเหตุ: การ prune binary data จะทำกับ mode ที่ใช้งานอยู่เท่านั้น เช่น ถ้าเคยเก็บใน S3 แล้วเปลี่ยนมา filesystem n8n จะ prune เฉพาะใน filesystem (อาจเปลี่ยนแปลงในอนาคต) |

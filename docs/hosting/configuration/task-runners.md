@@ -7,79 +7,79 @@ contentType: howto
 
 # Task runners
 
-Task runners are a generic mechanism to execute tasks in a secure and performant way. They're used to execute user-provided JavaScript code in the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md).
+Task runners คือกลไกกลางที่ใช้สำหรับรัน task ต่าง ๆ ให้ปลอดภัยและมีประสิทธิภาพ โดยจะใช้สำหรับรัน JavaScript ที่ผู้ใช้เขียนเองใน [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md)
 
-This document describes how task runners work and how you can configure them.
+หน้านี้จะอธิบายว่า task runners ทำงานยังไง และวิธีตั้งค่าใช้งาน
 
 ## How it works
 
-The task runner feature consists of three components: a task runner, a task broker, and a task requester.
+Task runner จะประกอบด้วย 3 ส่วนหลัก ๆ คือ task runner, task broker, และ task requester
 
 ![Task runner overview](/_images/hosting/configuration/task-runner-concept.png)
 
-Task runners connect to the task broker using a websocket connection. A task requester submits a task request to the broker where an available task runner can pick it up for execution.
+Task runner จะเชื่อมต่อกับ task broker ผ่าน websocket ส่วน task requester จะส่งคำขอ task ไปที่ broker แล้ว task runner ที่ว่างจะมารับไปประมวลผล
 
-The runner executes the task and submits the results to the task requester. The task broker coordinates communication between the runner and the requester.
+runner จะรัน task แล้วส่งผลลัพธ์กลับไปที่ task requester โดยมี task broker เป็นตัวกลางประสานงานระหว่าง runner กับ requester
 
-The n8n instance (main and worker) acts as the broker. The Code node in this case is the task requester.
+instance ของ n8n (ทั้ง main และ worker) จะทำหน้าที่เป็น broker ส่วน Code node จะเป็น task requester
 
 ## Task runner modes
 
-You can use task runners in two different modes: internal and external.
+Task runner มี 2 โหมดให้เลือกใช้: internal และ external
 
 ### Internal mode
 
-In internal mode, the n8n instance launches the task runner as a child process. The n8n process monitors and manages the life cycle of the task runner. The task runner process shares the same `uid` and `gid` as n8n.
+ในโหมด internal ตัว n8n จะเป็นคนสั่งรัน task runner เป็น child process โดย n8n จะคอยดูแลและจัดการ lifecycle ของ task runner process นี้ ซึ่ง process จะใช้ `uid` และ `gid` เดียวกับ n8n
 
 ### External mode
 
-In external mode, an external orchestrator (for example, Kubernetes) launches the task runner instead of n8n. Typically, this means you would configure the task runner to run as a side-car container next to n8n.
+ในโหมด external จะให้ orchestrator ภายนอก (เช่น Kubernetes) เป็นคนสั่งรัน task runner แทน n8n ปกติจะตั้งให้ task runner รันเป็น side-car container คู่กับ n8n
 
 ![Task runner deployed as a side-car container](/_images/hosting/configuration/task-runner-external-mode.png)
 
-In this mode, the orchestrator monitors and manages the life cycle of the task runner container. The task runner is fully isolated from the n8n instance.
+ในโหมดนี้ orchestrator จะเป็นคนดูแล lifecycle ของ task runner container เอง ทำให้ task runner แยกขาดจาก instance ของ n8n
 
-When using the [Queue mode](/hosting/scaling/queue-mode.md), each n8n container (main and workers) needs to have its own task runner.
+ถ้าใช้ [Queue mode](/hosting/scaling/queue-mode.md) แต่ละ container ของ n8n (main และ worker) ต้องมี task runner ของตัวเอง
 
 ## Setting up external mode
 
-Use the following details to configure task runners in external mode
+รายละเอียดการตั้งค่า task runner ใน external mode มีดังนี้
 
 ### Configuring n8n instance in external mode
 
-You can configure n8n to use external task runners by setting the following environment variables:
+ตั้งค่า n8n ให้ใช้ external task runner โดยกำหนด environment variables เหล่านี้
 
 | Environment variables                                  | Description                                                |
 |--------------------------------------------------------|------------------------------------------------------------|
-| `N8N_RUNNERS_ENABLED=true`                             | Enables task runners.                                      |
-| `N8N_RUNNERS_MODE=external`                            | Use task runners in external mode.                         |
-| `N8N_RUNNERS_AUTH_TOKEN=<random secure shared secret>` | A shared secret task runners use to connect to the broker. |
-| `N8N_RUNNERS_BROKER_LISTEN_ADDRESS=0.0.0.0` | By default, the task broker only listens to localhost. When using multiple containers (for example, with Docker Compose), it needs to be able to accept external connections. |
+| `N8N_RUNNERS_ENABLED=true`                             | เปิดใช้งาน task runners                                   |
+| `N8N_RUNNERS_MODE=external`                            | ใช้ task runners ในโหมด external                          |
+| `N8N_RUNNERS_AUTH_TOKEN=<random secure shared secret>` | shared secret ที่ task runner ใช้เชื่อมต่อกับ broker      |
+| `N8N_RUNNERS_BROKER_LISTEN_ADDRESS=0.0.0.0` | ปกติ task broker จะฟังแค่ localhost ถ้าใช้หลาย container (เช่น Docker Compose) ต้องตั้งให้รับ connection จากข้างนอกได้ |
 
-For full list of environment variables see [task runner environment variables](/hosting/configuration/environment-variables/task-runners.md).
+ดู environment variables ทั้งหมดได้ที่ [task runner environment variables](/hosting/configuration/environment-variables/task-runners.md)
 
 ### Configuring task runners in external mode
 
-The task runner comes bundled within the n8n Docker image. The Docker image also includes the task runner launcher.
+task runner จะถูกรวมมาใน Docker image ของ n8n อยู่แล้ว และมี launcher สำหรับ task runner ด้วย
 
-The launcher can start the runner on-demand, which means lower memory usage when there's no work needed, but a short delay (few hundred ms) in cold-start. The launcher also monitors the runner and restarts it in case of infinite loops or other issues.
+launcher จะสั่งรัน runner ตามต้องการ ทำให้ใช้ memory ต่ำถ้าไม่มีงาน และจะมี delay เล็กน้อย (หลักร้อย ms) ตอน cold-start launcher จะคอย monitor และ restart runner ถ้าเกิด infinite loop หรือปัญหาอื่น ๆ
 
-Run a task runner container from the n8n Docker image by setting the following properties:
+สั่งรัน task runner container จาก Docker image ของ n8n โดยตั้งค่าดังนี้
 
 | Configuration   | Description                                             |
 |-----------------|---------------------------------------------------------|
 | `command`       | `["/usr/local/bin/task-runner-launcher", "javascript"]` |
 | `livenessProbe` | `GET /healthz`, port `5680`                             |
 
-Set the following environment variables for the container, adjusted to fit your needs:
+ตั้ง environment variables สำหรับ container ตามนี้ (ปรับตามที่ต้องการ):
 
 | Environment variables | Description |
 | ------ | ----- |
-| `N8N_RUNNERS_AUTH_TOKEN=<random secure shared secret>` | The shared secret the task runner uses to connect to the broker. |
-| `N8N_RUNNERS_MAX_CONCURRENCY=5` | The number of concurrent tasks the runner can execute. |
-| `N8N_RUNNERS_TASK_BROKER_URI=localhost:5679` | The address of the task broker server within the n8n instance. |
-| `N8N_RUNNERS_AUTO_SHUTDOWN_TIMEOUT=15` | Number of seconds of inactivity to wait before shutting down the task runner process. The launcher will automatically start the runner again when there are new tasks to execute. Set to `0` to disable automatic shutdown. |
-| `NODE_OPTIONS=--max-old-space-size=<limit>` | The memory limit for the task runner Node.js process. This should be lower than the limit for container so that the runner runs out of memory before the container. That way, the launcher is able to monitor the runner. |
-| `GENERIC_TIMEZONE` | The [same default timezone as configured for the n8n instance](/hosting/configuration/environment-variables/timezone-localization.md). |
+| `N8N_RUNNERS_AUTH_TOKEN=<random secure shared secret>` | shared secret ที่ task runner ใช้เชื่อมต่อกับ broker |
+| `N8N_RUNNERS_MAX_CONCURRENCY=5` | จำนวน task ที่ runner จะรันพร้อมกันได้ |
+| `N8N_RUNNERS_TASK_BROKER_URI=localhost:5679` | address ของ task broker server ใน instance ของ n8n |
+| `N8N_RUNNERS_AUTO_SHUTDOWN_TIMEOUT=15` | เวลารอ (วินาที) ถ้าไม่มีงานจะปิด process runner อัตโนมัติ launcher จะสั่งรันใหม่ถ้ามีงานเข้า ตั้งเป็น `0` เพื่อปิดฟีเจอร์นี้ |
+| `NODE_OPTIONS=--max-old-space-size=<limit>` | จำกัด memory ของ process Node.js ที่ใช้รัน task runner ควรตั้งให้ต่ำกว่า limit ของ container เพื่อให้ runner เด้งก่อน container จะตาย launcher จะได้ monitor ได้ |
+| `GENERIC_TIMEZONE` | [timezone เริ่มต้นเดียวกับที่ตั้งใน n8n instance](/hosting/configuration/environment-variables/timezone-localization.md) |
 
-For full list of environment variables see [task runner environment variables](/hosting/configuration/environment-variables/task-runners.md).
+ดู environment variables ทั้งหมดได้ที่ [task runner environment variables](/hosting/configuration/environment-variables/task-runners.md)

@@ -7,12 +7,11 @@ contentType: howto
 
 # Specify location for your custom nodes
 
-Every user can add custom nodes that get loaded by n8n on startup. The default
-location is in the subfolder `.n8n/custom` of the user who started n8n.
+ผู้ใช้แต่ละคนสามารถเพิ่ม custom node ของตัวเองได้ n8n จะโหลด node เหล่านี้ตอน startup โดย default จะอยู่ใน subfolder `.n8n/custom` ของ user ที่รัน n8n
 
-You can define more folders with an environment variable:
+ถ้าอยากเพิ่มโฟลเดอร์อื่น ๆ ให้ใช้ environment variable นี้:
 
 ```bash
 export N8N_CUSTOM_EXTENSIONS="/home/jim/n8n/custom-nodes;/data/n8n/nodes"
 ```
-Refer to [Environment variables reference](/hosting/configuration/environment-variables/nodes.md) for more information on this variable.
+ดูรายละเอียดตัวแปรนี้เพิ่มเติมได้ที่ [Environment variables reference](/hosting/configuration/environment-variables/nodes.md)

@@ -16,5 +16,5 @@ hide:
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
-| `GENERIC_TIMEZONE` | * | `America/New_York` |The n8n instance timezone. Important for schedule nodes (such as Cron). |
-| `N8N_DEFAULT_LOCALE` | String | `en` | A locale identifier, compatible with the [Accept-Language header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language){:target="_blank" .external-link}. n8n doesn't support regional identifiers, such as `de-AT`. When running in a locale other than the default, n8n displays UI strings in the selected locale, and falls back to `en` for any untranslated strings. |
+| `GENERIC_TIMEZONE` | * | `America/New_York` | timezone ของ n8n instance สำคัญสำหรับ schedule node (เช่น Cron) |
+| `N8N_DEFAULT_LOCALE` | String | `en` | locale identifier ที่ compatible กับ [Accept-Language header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language){:target="_blank" .external-link} n8n ไม่รองรับ regional identifier เช่น `de-AT` ถ้าใช้ locale อื่นที่ไม่ใช่ default n8n จะแสดง UI เป็นภาษานั้น ถ้าไม่มีจะแสดงเป็น `en` |

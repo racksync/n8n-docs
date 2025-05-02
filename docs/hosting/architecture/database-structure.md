@@ -6,119 +6,119 @@ contentType: explanation
 
 # Database structure
 
-This page describes the purpose of each table in the n8n database.
+หน้านี้จะอธิบายจุดประสงค์ของแต่ละ table ในฐานข้อมูลของ n8n
 
 ## Database and query technology
 
-By default, n8n uses SQLite as the database. If you are using another database the structure will be similar, but the data-types may be different depending on the database.
+โดยปกติแล้ว n8n จะใช้ SQLite เป็นฐานข้อมูลหลัก ถ้าคุณใช้ฐานข้อมูลอื่น โครงสร้างจะคล้ายกัน แต่ data-types อาจแตกต่างกันไปตามแต่ละฐานข้อมูล
 
-n8n uses [TypeORM](https://github.com/typeorm/typeorm){:target=_blank .external-link} for queries and migrations.
+n8n ใช้ [TypeORM](https://github.com/typeorm/typeorm){:target=_blank .external-link} สำหรับ query และ migration ต่างๆ
 
-To inspect the n8n database, you can use [DBeaver](https://dbeaver.io){:target=_blank .external-link}, which is an open-source universal database tool.
+ถ้าคุณอยากดูข้อมูลในฐานข้อมูล n8n สามารถใช้ [DBeaver](https://dbeaver.io){:target=_blank .external-link} ซึ่งเป็นเครื่องมือจัดการฐานข้อมูลแบบ open-source
 
 ## Tables
 
-These are the tables n8n creates during setup.
+นี่คือตาราง (table) ที่ n8n สร้างขึ้นตอน setup
 <!-- vale off -->
 ### auth_identity
 
-Stores details of external authentication providers when using [SAML](/user-management/saml/index.md).
+เก็บรายละเอียดของ external authentication providers เวลาที่ใช้ [SAML](/user-management/saml/index.md)
 
 ### auth_provider_sync_history
 
-Stores the history of a SAML connection.
+เก็บประวัติการเชื่อมต่อ SAML
 
 ### credentials_entity
 
-Stores the [credentials](/glossary.md#credential-n8n) used to authenticate with integrations.
+เก็บ [credentials](/glossary.md#credential-n8n) ที่ใช้สำหรับเชื่อมต่อกับ integration ต่างๆ
 
 ### event_destinations
 
-Contains the destination configurations for [Log streaming](/log-streaming.md).
+เก็บ configuration ของปลายทางสำหรับ [Log streaming](/log-streaming.md)
 
 ### execution_data
 
-Contains the workflow at time of running, and the execution data.
+เก็บ workflow ขณะที่รันอยู่ และ execution data
 
 ### execution_entity
 
-Stores all saved workflow executions. Workflow settings can affect which executions n8n saves.
+เก็บ execution ของ workflow ทั้งหมดที่บันทึกไว้ การตั้งค่า workflow จะมีผลกับ execution ที่ n8n จะบันทึก
 
 ### execution_metadata
 
-Stores [Custom executions data](/workflows/executions/custom-executions-data.md).
+เก็บ [Custom executions data](/workflows/executions/custom-executions-data.md)
 
 ### installed_nodes
 
-Lists the [community nodes](/integrations/community-nodes/installation/index.md) installed in your n8n instance.
+แสดงรายการ [community nodes](/integrations/community-nodes/installation/index.md) ที่ติดตั้งใน n8n instance ของคุณ
 
 ### installed_packages
 
-Details of npm community nodes packages installed in your n8n instance. [installed_nodes](#installed_nodes) lists each individual node. `installed_packages` lists npm packages, which may contain more than one node.
+รายละเอียด npm community nodes packages ที่ติดตั้งใน n8n instance ของคุณ [installed_nodes](#installed_nodes) จะเป็นรายชื่อ node แต่ละตัว ส่วน `installed_packages` จะเป็น npm package ซึ่งอาจมีหลาย node อยู่ใน package เดียว
 
 ### migrations
 
-A log of all database migrations. Read more about [Migrations](https://github.com/typeorm/typeorm/blob/master/docs/migrations.md){:target=_blank .external-link} in TypeORM's documentation.
+บันทึก log ของ database migration ทั้งหมด อ่านเพิ่มเติมเกี่ยวกับ [Migrations](https://github.com/typeorm/typeorm/blob/master/docs/migrations.md){:target=_blank .external-link} ในเอกสารของ TypeORM
 
 ### project
 
-Lists the [projects](/user-management/rbac/projects.md) in your instance.
+แสดงรายการ [projects](/user-management/rbac/projects.md) ใน instance ของคุณ
 
 ### project_relation
 
-Describes the relationship between a user and a [project](/user-management/rbac/projects.md), including the user's [role type](/user-management/rbac/role-types.md).
+อธิบายความสัมพันธ์ระหว่าง user กับ [project](/user-management/rbac/projects.md) รวมถึง [role type](/user-management/rbac/role-types.md) ของ user ด้วย
 
 ### role
 
-Not currently used. Foruse in future work on custom roles. 
+ตอนนี้ยังไม่ได้ใช้งาน จะใช้ในอนาคตสำหรับ custom roles
 
 ### settings
 
-Records custom instance settings. These are settings that you can't control using environment variables. They include:
+บันทึก custom instance settings ซึ่งเป็น setting ที่คุณไม่สามารถตั้งค่าผ่าน environment variable ได้ เช่น
 
-* Whether the instance owner is set up
-* Whether the user chose to skip owner and user management setup
+* ตั้งค่า instance owner แล้วหรือยัง
+* ผู้ใช้เลือกข้ามการตั้งค่า owner และ user management หรือไม่
 * License key
 
 ### shared_credentials
 
-Maps credentials to users.
+เชื่อมโยง credentials กับ user
 
 ### shared_workflow
 
-Maps workflows to users.
+เชื่อมโยง workflow กับ user
 
 ### tag_entity
 
-All workflow tags created in the n8n instance. This table lists the tags. [workflows_tags](#workflows_tags) records which workflows have which tags.
+เก็บ tag ของ workflow ทั้งหมดที่สร้างใน n8n instance ตารางนี้จะเก็บรายละเอียด tag ส่วน [workflows_tags](#workflows_tags) จะบันทึกว่า workflow ไหนมี tag อะไรบ้าง
 
 ### user
 
-Contains user data.
+เก็บข้อมูล user
 
 ### variables
 
-Store [variables](/code/variables.md).
+เก็บ [variables](/code/variables.md)
 
 ### webhook_entity
 
-Records the active webhooks in your n8n instance's workflows. This isn't just webhooks uses in the Webhook node. It includes all active webhooks used by any trigger node.
+บันทึก webhook ที่ active ใน workflow ของ n8n instance ของคุณ ไม่ได้จำกัดแค่ Webhook node แต่รวมถึง webhook ที่ใช้ใน trigger node อื่นๆ ด้วย
 
 ### workflow_entity
 
-Your n8n instance's saved workflows.
+เก็บ workflow ที่บันทึกไว้ใน n8n instance ของคุณ
 
 ### workflow_history
 
-Store previous versions of workflows.
+เก็บเวอร์ชันก่อนหน้าของ workflow
 
 ### workflow_statistics
 
-Counts workflow IDs and their status.
+นับ workflow ID และสถานะของ workflow
 
 ### workflows_tags
 
-Maps tags to workflows. [tag_entity](#tag_entity) contains tag details.
+เชื่อมโยง tag กับ workflow [tag_entity](#tag_entity) จะเก็บรายละเอียด tag
 
 ## Entity Relationship Diagram (ERD)
 

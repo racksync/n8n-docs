@@ -14,10 +14,10 @@ hide:
 
 --8<-- "_snippets/self-hosting/file-based-configuration.md"
 
-Enable credential overwrites using the following environment variables. Refer to [Credential overwrites](/embed/configuration.md#credential-overwrites) for details.
+เปิดใช้ credential overwrites ได้ด้วย environment variables เหล่านี้ ดูรายละเอียดที่ [Credential overwrites](/embed/configuration.md#credential-overwrites)
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
-| `CREDENTIALS_OVERWRITE_DATA`<br>/`_FILE` | * | - | Overwrites for credentials. |
-| `CREDENTIALS_OVERWRITE_ENDPOINT` | String | - | The API endpoint to fetch credentials. |
-| `CREDENTIALS_DEFAULT_NAME` | String | `My credentials` | The default name for credentials. |
+| `CREDENTIALS_OVERWRITE_DATA`<br>/`_FILE` | * | - | ข้อมูล overwrite สำหรับ credentials |
+| `CREDENTIALS_OVERWRITE_ENDPOINT` | String | - | endpoint API สำหรับดึง credentials |
+| `CREDENTIALS_DEFAULT_NAME` | String | `My credentials` | ชื่อ default สำหรับ credentials |

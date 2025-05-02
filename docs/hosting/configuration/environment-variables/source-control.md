@@ -14,8 +14,8 @@ hide:
 
 --8<-- "_snippets/self-hosting/file-based-configuration.md"
 
-n8n uses Git-based source control to support environments. Refer to [Source control and environments](/source-control-environments/setup.md) for more information on how to link a Git repository to an n8n instance and configure your source control.
+n8n ใช้ Git-based source control เพื่อรองรับ environments ดูรายละเอียดที่ [Source control and environments](/source-control-environments/setup.md) สำหรับวิธีเชื่อม Git repo กับ n8n instance และตั้งค่า source control
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
-| `N8N_SOURCECONTROL_DEFAULT_SSH_KEY_TYPE` | String | `ed25519` | Set to `rsa` to make RSA the default SSH key type for [Source control setup](/source-control-environments/setup.md). |
+| `N8N_SOURCECONTROL_DEFAULT_SSH_KEY_TYPE` | String | `ed25519` | ตั้งเป็น `rsa` เพื่อให้ RSA เป็น SSH key type default สำหรับ [Source control setup](/source-control-environments/setup.md) |

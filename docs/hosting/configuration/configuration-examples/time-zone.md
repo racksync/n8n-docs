@@ -7,12 +7,12 @@ contentType: howto
 
 # Set the self-hosted instance timezone
 
-The default timezone is America/New_York. For instance, the Schedule node uses it to know at what time the workflow should start. To set a different default timezone, set `GENERIC_TIMEZONE` to the appropriate value. For example, if you want to set the timezone to Berlin (Germany):
+timezone default ของ n8n คือ America/New_York เช่น Schedule node จะใช้ timezone นี้ในการกำหนดเวลารัน workflow ถ้าอยากเปลี่ยน timezone default ให้ตั้งค่า `GENERIC_TIMEZONE` เป็นค่าที่ต้องการ เช่น ถ้าอยากใช้ timezone ของ Berlin (Germany):
 
 ```bash
 export GENERIC_TIMEZONE=Europe/Berlin
 ```
 
-You can find the name of your timezone [here](https://momentjs.com/timezone/){:target="_blank" .external-link}.
+ดูชื่อ timezone ของคุณได้ที่ [ที่นี่](https://momentjs.com/timezone/){:target="_blank" .external-link}
 
-Refer to [Environment variables reference](/hosting/configuration/environment-variables/timezone-localization.md) for more information on this variable.
+ดูรายละเอียดตัวแปรนี้เพิ่มเติมได้ที่ [Environment variables reference](/hosting/configuration/environment-variables/timezone-localization.md)

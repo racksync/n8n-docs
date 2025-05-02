@@ -7,17 +7,17 @@ contentType: howto
 
 # Configure workflow timeout settings
 
-A workflow times out and gets canceled after this time (in seconds). If the workflow runs in the main process, a soft timeout happens (takes effect after the current node finishes). If a workflow runs in its own process, n8n attempts a soft timeout first, then kills the process after waiting for a fifth of the given timeout duration.
+workflow จะ timeout และถูก cancel หลังจากเวลาที่กำหนด (หน่วยเป็นวินาที) ถ้า workflow รันใน main process จะเป็น soft timeout (รอให้ node ปัจจุบันจบก่อน) ถ้ารันใน process แยก n8n จะพยายาม soft timeout ก่อน แล้ว kill process หลังจากรอ 1/5 ของเวลาที่ตั้งไว้
 
-`EXECUTIONS_TIMEOUT` default is `-1`. For example, if you want to set the timeout to one hour:
+ค่า default ของ `EXECUTIONS_TIMEOUT` คือ `-1` ตัวอย่างเช่น ถ้าอยากให้ timeout เป็น 1 ชั่วโมง:
 
 ```bash
 export EXECUTIONS_TIMEOUT=3600
 ```
 
-You can also set maximum execution time (in seconds) for each workflow individually. For example, if you want to set maximum execution time to two hours:
+คุณสามารถตั้งเวลาสูงสุด (วินาที) สำหรับแต่ละ workflow แยกกันได้ เช่น ถ้าอยากให้ workflow ใด ๆ รันได้นานสุด 2 ชั่วโมง:
 
 ```bash
 export EXECUTIONS_TIMEOUT_MAX=7200
 ```
-Refer to [Environment variables reference](/hosting/configuration/environment-variables/executions.md) for more information on these variables.
+ดูรายละเอียดตัวแปรนี้เพิ่มเติมได้ที่ [Environment variables reference](/hosting/configuration/environment-variables/executions.md)

@@ -14,15 +14,15 @@ hide:
 
 --8<-- "_snippets/self-hosting/file-based-configuration.md"
 
-This page lists the environment variables configuration options for managing [nodes](/glossary.md#node-n8n) in n8n, including specifying which nodes to load or exclude, importing built-in or external modules in the Code node, and enabling community nodes.
+หน้านี้จะสรุป environment variables สำหรับจัดการ [nodes](/glossary.md#node-n8n) ใน n8n เช่น เลือก node ที่จะโหลด/ไม่โหลด, import module ใน Code node, และเปิด community nodes
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
-| `NODES_INCLUDE` | Array of strings | - | Specify which nodes to load. |
-| `NODES_EXCLUDE` | Array of strings | - | Specify which nodes not to load. For example, to block nodes that can be a security risk if users aren't trustworthy: `NODES_EXCLUDE: "[\"n8n-nodes-base.executeCommand\", \"n8n-nodes-base.readWriteFile\"]"` |
-| `NODE_FUNCTION_ALLOW_BUILTIN` | String | - | Permit users to import specific built-in modules in the Code node. Use * to allow all. n8n disables importing modules by default. |
-| `NODE_FUNCTION_ALLOW_EXTERNAL` | String | - | Permit users to import specific external modules (from `n8n/node_modules`) in the Code node. n8n disables importing modules by default. |
-| `NODES_ERROR_TRIGGER_TYPE` | String | `n8n-nodes-base.errorTrigger` | Specify which node type to use as Error Trigger. |
-| `N8N_CUSTOM_EXTENSIONS` | String | - | Specify the path to directories containing your custom nodes. |
-| `N8N_COMMUNITY_PACKAGES_ENABLED` | Boolean | `true` | Enables (true) or disables (false) community nodes. |
-| `N8N_COMMUNITY_PACKAGES_REGISTRY` | String | `https://registry.npmjs.org` | NPM registry URL to pull community packages from (license required). |
+| `NODES_INCLUDE` | Array of strings | - | ระบุ node ที่จะโหลด |
+| `NODES_EXCLUDE` | Array of strings | - | ระบุ node ที่ไม่ต้องโหลด เช่น ถ้าอยาก block node ที่เสี่ยงกับ security: `NODES_EXCLUDE: "[\"n8n-nodes-base.executeCommand\", \"n8n-nodes-base.readWriteFile\"]"` |
+| `NODE_FUNCTION_ALLOW_BUILTIN` | String | - | อนุญาตให้ import built-in module ใน Code node (ใส่ * เพื่อเปิดหมด) ปกติจะปิดหมด |
+| `NODE_FUNCTION_ALLOW_EXTERNAL` | String | - | อนุญาตให้ import external module (จาก `n8n/node_modules`) ใน Code node ปกติจะปิดหมด |
+| `NODES_ERROR_TRIGGER_TYPE` | String | `n8n-nodes-base.errorTrigger` | ระบุ node type ที่ใช้เป็น Error Trigger |
+| `N8N_CUSTOM_EXTENSIONS` | String | - | path ไปยังโฟลเดอร์ custom nodes |
+| `N8N_COMMUNITY_PACKAGES_ENABLED` | Boolean | `true` | เปิด/ปิด community nodes |
+| `N8N_COMMUNITY_PACKAGES_REGISTRY` | String | `https://registry.npmjs.org` | NPM registry URL สำหรับ community packages (ต้องมี license) |

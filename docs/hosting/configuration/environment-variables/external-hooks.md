@@ -14,9 +14,9 @@ hide:
 
 --8<-- "_snippets/self-hosting/file-based-configuration.md"
 
-You can define external hooks that n8n executes whenever a specific operation runs. Refer to [Backend hooks](/embed/configuration.md#backend-hooks) for examples of available hooks and [Hook files](/embed/configuration.md#backend-hook-files) for information on file formatting. 
+คุณสามารถกำหนด external hooks ที่ n8n จะรันทุกครั้งที่มี operation บางอย่างเกิดขึ้น ดูตัวอย่าง hooks ได้ที่ [Backend hooks](/embed/configuration.md#backend-hooks) และดูวิธีเขียนไฟล์ได้ที่ [Hook files](/embed/configuration.md#backend-hook-files)
 
 | Variable | Type  | Description |
 | :------- | :---- | :---------- |
-| `EXTERNAL_HOOK_FILES` | String | Files containing backend external hooks. Provide multiple files as a colon-separated list ("`:`"). |
-| `EXTERNAL_FRONTEND_HOOKS_URLS` | String | URLs to files containing frontend external hooks. Provide multiple URLs as a colon-separated list ("`:`"). |
+| `EXTERNAL_HOOK_FILES` | String | ไฟล์ที่เก็บ backend external hooks (คั่นหลายไฟล์ด้วย colon ":") |
+| `EXTERNAL_FRONTEND_HOOKS_URLS` | String | URL ของไฟล์ frontend external hooks (คั่นหลาย URL ด้วย colon ":") |

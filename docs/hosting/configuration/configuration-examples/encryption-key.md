@@ -7,15 +7,11 @@ contentType: howto
 
 # Set a custom encryption key
 
-n8n creates a random encryption key automatically on the first launch and saves
-it in the `~/.n8n` folder. n8n uses that key to encrypt the credentials before
-they get saved to the database. If the key isn't yet in the settings file,
-you can set it using an environment variable, so that n8n 
-uses your custom key instead of generating a new one.
+n8n จะสร้าง encryption key แบบสุ่มให้อัตโนมัติเมื่อรันครั้งแรก แล้วเก็บไว้ใน `~/.n8n` โดยใช้ key นี้สำหรับ encrypt credentials ก่อนบันทึกลง database ถ้า key ยังไม่มีใน settings file คุณสามารถตั้งค่าเองผ่าน environment variable เพื่อให้ n8n ใช้ key ที่คุณกำหนดเอง แทนที่จะสร้างใหม่
 
-In [queue mode](/hosting/scaling/queue-mode.md), you must specify the encryption key environment variable for all workers.
+ถ้าใช้ [queue mode](/hosting/scaling/queue-mode.md) ต้องตั้ง environment variable นี้ให้กับ worker ทุกตัวด้วย
 
 ```bash
 export N8N_ENCRYPTION_KEY=<SOME RANDOM STRING>
 ```
-Refer to [Environment variables reference](/hosting/configuration/environment-variables/deployment.md) for more information on this variable.
+ดูรายละเอียดตัวแปรนี้เพิ่มเติมได้ที่ [Environment variables reference](/hosting/configuration/environment-variables/deployment.md)

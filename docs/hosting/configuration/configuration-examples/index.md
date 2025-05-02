@@ -7,7 +7,7 @@ contentType: overview
 
 # Configuration examples
 
-This section contains examples for how to configure n8n to solve particular use cases.
+หน้านี้รวมตัวอย่างการตั้งค่า n8n สำหรับ use case ต่าง ๆ
 
 [[% import "_macros/section-toc.html" as sectionToc %]]
 

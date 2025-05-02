@@ -16,8 +16,8 @@ hide:
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
-| `N8N_ONBOARDING_FLOW_DISABLED` | Boolean | `false` | Whether to disable onboarding tips when creating a new workflow (true) or not (false). |
-| `N8N_WORKFLOW_ACTIVATION_BATCH_SIZE` | Number | `1` | How many workflows to activate simultaneously during startup. 
-| `N8N_WORKFLOW_CALLER_POLICY_DEFAULT_OPTION` | String | `workflowsFromSameOwner` | Which workflows can call a workflow. Options are: `any`, `none`, `workflowsFromAList`, `workflowsFromSameOwner`. This feature requires [Workflow sharing](/workflows/sharing.md). |
-| `N8N_WORKFLOW_TAGS_DISABLED` | Boolean | `false` | Whether to disable workflow tags (true) or enable tags (false). |
-| `WORKFLOWS_DEFAULT_NAME` | String | `My workflow` | The default name used for new workflows. |
+| `N8N_ONBOARDING_FLOW_DISABLED` | Boolean | `false` | ปิด onboarding tips ตอนสร้าง workflow ใหม่ (true = ปิด, false = เปิด) |
+| `N8N_WORKFLOW_ACTIVATION_BATCH_SIZE` | Number | `1` | จำนวน workflow ที่จะ activate พร้อมกันตอน startup |
+| `N8N_WORKFLOW_CALLER_POLICY_DEFAULT_OPTION` | String | `workflowsFromSameOwner` | กำหนดว่า workflow ไหนเรียก workflow นี้ได้บ้าง ตัวเลือก: `any`, `none`, `workflowsFromAList`, `workflowsFromSameOwner` ฟีเจอร์นี้ต้องเปิด [Workflow sharing](/workflows/sharing.md) |
+| `N8N_WORKFLOW_TAGS_DISABLED` | Boolean | `false` | ปิด workflow tags (true = ปิด, false = เปิด) |
+| `WORKFLOWS_DEFAULT_NAME` | String | `My workflow` | ชื่อ default สำหรับ workflow ใหม่ |

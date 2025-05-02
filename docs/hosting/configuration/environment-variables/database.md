@@ -14,36 +14,36 @@ hide:
 
 --8<-- "_snippets/self-hosting/file-based-configuration.md"
 
-By default, n8n uses SQLite. n8n also supports PostgreSQL. n8n [removed support for MySQL and MariaDB](/1-0-migration-checklist.md#mysql-and-mariadb) in v1.0.
+โดยปกติ n8n จะใช้ SQLite เป็น database หลัก แต่ก็รองรับ PostgreSQL ด้วย n8n [เลิก support MySQL และ MariaDB](/1-0-migration-checklist.md#mysql-and-mariadb) ตั้งแต่ v1.0
 
-This page outlines environment variables to configure your chosen database for your self-hosted n8n instance.
+หน้านี้จะสรุป environment variables สำหรับตั้งค่า database ที่ต้องการใช้กับ n8n
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
-| `DB_TYPE`<br>/`_FILE` | Enum string:<br> `sqlite`, `postgresdb` | `sqlite` | The database to use. |
-| `DB_TABLE_PREFIX` | * | - | Prefix to use for table names. |
+| `DB_TYPE`<br>/`_FILE` | Enum string:<br> `sqlite`, `postgresdb` | `sqlite` | เลือก database ที่จะใช้ |
+| `DB_TABLE_PREFIX` | * | - | prefix สำหรับชื่อ table |
 
 ## PostgreSQL
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
-| `DB_POSTGRESDB_DATABASE`<br>/`_FILE` | String | `n8n` | The name of the PostgreSQL database. |
-| `DB_POSTGRESDB_HOST`<br>/`_FILE` | String | `localhost` | The PostgreSQL host. |
-| `DB_POSTGRESDB_PORT`<br>/`_FILE` | Number | `5432` | The PostgreSQL port. |
-| `DB_POSTGRESDB_USER`<br>/`_FILE` | String | `postgres` | The PostgreSQL user. |
-| `DB_POSTGRESDB_PASSWORD`<br>/`_FILE` | String | - | The PostgreSQL password. |
-| `DB_POSTGRESDB_POOL_SIZE`<br>/`_FILE` | Number | `2` | Control how many parallel open Postgres connections n8n should have. Increasing it may help with resource utilization, but too many connections may degrade performance. |
-| `DB_POSTGRESDB_CONNECTION_TIMEOUT`<br>/`_FILE` | Number | `20000` | Postgres connection timeout (ms).
-| `DB_POSTGRESDB_SCHEMA`<br>/`_FILE` | String | `public` | The PostgreSQL schema. |
-| `DB_POSTGRESDB_SSL_ENABLED`<br>/`_FILE` | Boolean | `false` | Whether to enable SSL. Automatically enabled if `DB_POSTGRESDB_SSL_CA`, `DB_POSTGRESDB_SSL_CERT` or `DB_POSTGRESDB_SSL_KEY` is defined. |
-| `DB_POSTGRESDB_SSL_CA`<br>/`_FILE` | String | - | The PostgreSQL SSL certificate authority. |
-| `DB_POSTGRESDB_SSL_CERT`<br>/`_FILE` | String | - | The PostgreSQL SSL certificate. |
-| `DB_POSTGRESDB_SSL_KEY`<br>/`_FILE` | String | - | The PostgreSQL SSL key. |
-| `DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED`<br>/`_FILE` | Boolean | `true` | If n8n should reject unauthorized SSL connections (true) or not (false). |
+| `DB_POSTGRESDB_DATABASE`<br>/`_FILE` | String | `n8n` | ชื่อ database ของ PostgreSQL |
+| `DB_POSTGRESDB_HOST`<br>/`_FILE` | String | `localhost` | host ของ PostgreSQL |
+| `DB_POSTGRESDB_PORT`<br>/`_FILE` | Number | `5432` | port ของ PostgreSQL |
+| `DB_POSTGRESDB_USER`<br>/`_FILE` | String | `postgres` | user ของ PostgreSQL |
+| `DB_POSTGRESDB_PASSWORD`<br>/`_FILE` | String | - | password ของ PostgreSQL |
+| `DB_POSTGRESDB_POOL_SIZE`<br>/`_FILE` | Number | `2` | จำนวน connection ที่ n8n จะเปิดกับ Postgres พร้อมกัน เพิ่มได้ถ้าอยากให้ใช้ resource เต็มที่ แต่ถ้าเยอะเกินอาจช้าลง |
+| `DB_POSTGRESDB_CONNECTION_TIMEOUT`<br>/`_FILE` | Number | `20000` | timeout ของการเชื่อมต่อ Postgres (ms) |
+| `DB_POSTGRESDB_SCHEMA`<br>/`_FILE` | String | `public` | schema ของ PostgreSQL |
+| `DB_POSTGRESDB_SSL_ENABLED`<br>/`_FILE` | Boolean | `false` | เปิด SSL หรือไม่ จะเปิดอัตโนมัติถ้ากำหนด `DB_POSTGRESDB_SSL_CA`, `DB_POSTGRESDB_SSL_CERT` หรือ `DB_POSTGRESDB_SSL_KEY` |
+| `DB_POSTGRESDB_SSL_CA`<br>/`_FILE` | String | - | CA certificate ของ PostgreSQL |
+| `DB_POSTGRESDB_SSL_CERT`<br>/`_FILE` | String | - | SSL certificate ของ PostgreSQL |
+| `DB_POSTGRESDB_SSL_KEY`<br>/`_FILE` | String | - | SSL key ของ PostgreSQL |
+| `DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED`<br>/`_FILE` | Boolean | `true` | จะ reject SSL connection ที่ไม่ผ่าน validation หรือไม่ |
 
 ## SQLite
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
-| `DB_SQLITE_POOL_SIZE` | Number | `0` | Controls whether to open the SQLite file in [WAL mode](https://www.sqlite.org/wal.html) or [rollback journal mode](https://www.sqlite.org/lockingv3.html#rollback). Uses rollback journal mode when set to zero. When greater than zero, uses WAL mode with the value determining the number of parallel SQL read connections to configure. WAL mode is much more performant and reliable than the rollback journal mode. |
-| `DB_SQLITE_VACUUM_ON_STARTUP` | Boolean | `false` | Runs [VACUUM](https://www.sqlite.org/lang_vacuum.html){:target="_blank" .external-link} operation on startup to rebuild the database. Reduces file size and optimizes indexes. This is a long running blocking operation and increases start-up time. |
+| `DB_SQLITE_POOL_SIZE` | Number | `0` | ถ้าเป็น 0 จะเปิด SQLite แบบ [rollback journal mode](https://www.sqlite.org/lockingv3.html#rollback) ถ้ามากกว่า 0 จะใช้ [WAL mode](https://www.sqlite.org/wal.html) และกำหนดจำนวน read connection ที่เปิดพร้อมกัน WAL mode จะเร็วและเสถียรกว่า rollback |
+| `DB_SQLITE_VACUUM_ON_STARTUP` | Boolean | `false` | สั่ง [VACUUM](https://www.sqlite.org/lang_vacuum.html){:target="_blank" .external-link} ตอนเริ่มต้นเพื่อลดขนาดไฟล์และ optimize index (จะใช้เวลานานขึ้นตอน start) |

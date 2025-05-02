@@ -7,13 +7,13 @@ contentType: howto
 
 # Configuration
 
-You can change n8n's settings using environment variables. For a full list of available configurations see [Environment Variables](/hosting/configuration/environment-variables/index.md).
+คุณสามารถเปลี่ยนค่าต่าง ๆ ของ n8n ได้ด้วย environment variables ดูรายการ config ทั้งหมดได้ที่ [Environment Variables](/hosting/configuration/environment-variables/index.md)
 
 ## Set environment variables by command line
 
 ### npm
 
-For npm, set your desired environment variables in terminal using the `export` command as shown below:
+ถ้าใช้ npm ให้ตั้ง environment variables ที่ต้องการใน terminal ด้วยคำสั่ง `export` แบบนี้
 
 ```bash
 export <variable>=<value>
@@ -21,7 +21,7 @@ export <variable>=<value>
 
 ### Docker
 
-In Docker you can use the `-e` flag from the command line:
+ถ้าใช้ Docker ให้ใช้ flag `-e` ตอนสั่งรันจาก command line
 
 ```bash
 docker run -it --rm \
@@ -33,26 +33,26 @@ docker run -it --rm \
 
 ## Set environment variables using a file
 
-You can also configure n8n using a configuration file.
+คุณสามารถตั้งค่า n8n ด้วยไฟล์ config ได้เหมือนกัน
 
-Only define the values that need to be different from the default in your configuration file. You can use multiple files. For example, you can have a file with generic base settings, and files with specific values for different environments.
+ในไฟล์ config ให้ใส่เฉพาะค่าที่ต่างจาก default ก็พอ คุณสามารถใช้หลายไฟล์ได้ เช่น มีไฟล์ base สำหรับค่ากลาง และไฟล์แยกสำหรับ environment ต่าง ๆ
 
 ### npm
 
-Set the path to the JSON configuration file using the environment variable `N8N_CONFIG_FILES`:
+ตั้ง path ไปยังไฟล์ JSON config ด้วย environment variable `N8N_CONFIG_FILES`:
 
 ```shell
-# Bash - Single file
+# Bash - ไฟล์เดียว
 export N8N_CONFIG_FILES=/<path-to-config>/my-config.json
-# Bash - Multiple files are comma-separated
+# Bash - หลายไฟล์คั่นด้วย comma
 export N8N_CONFIG_FILES=/<path-to-config>/my-config.json,/<path-to-config>/production.json
 
-# PowerShell - Single file, persist for current user
-# Note that setting scope (Process, User, Machine) has no effect on Unix systems
+# PowerShell - ไฟล์เดียว, ใช้กับ user ปัจจุบัน
+# การตั้ง scope (Process, User, Machine) ไม่มีผลบน Unix
 [Environment]::SetEnvironmentVariable('N8N_CONFIG_FILES', '<path-to-config>\config.json', 'User')
 ```
 
-Example file:
+ตัวอย่างไฟล์:
 
 ```json
 {
@@ -69,7 +69,7 @@ Example file:
 ```
 
 /// note | Formatting as JSON
-You can't always work out the correct JSON from the [Environment variables reference](/hosting/configuration/environment-variables/index.md). For example, to set `N8N_METRICS` to `true`, you need to do:
+บางทีดูจาก [Environment variables reference](/hosting/configuration/environment-variables/index.md) แล้วอาจจะไม่รู้ว่าต้องเขียน JSON ยังไง เช่น ถ้าจะตั้ง `N8N_METRICS` ให้เป็น `true` ต้องเขียนแบบนี้
 
 ```json
 {
@@ -81,15 +81,14 @@ You can't always work out the correct JSON from the [Environment variables refer
 }
 ```
 
-Refer to the [Schema file in the source code](https://github.com/n8n-io/n8n/blob/master/packages/cli/src/config/schema.ts){:target=_blank .external-link} for full details of the expected settings.
+ดูรายละเอียด schema เต็ม ๆ ได้ที่ [Schema file ใน source code](https://github.com/n8n-io/n8n/blob/master/packages/cli/src/config/schema.ts){:target=_blank .external-link}
 ///
-
 
 ### Docker
 
-In Docker, you can set your environment variables in the `n8n: environment:` element of your `docker-compose.yaml` file.
+ถ้าใช้ Docker ให้ตั้ง environment variables ใน `n8n: environment:` ของไฟล์ `docker-compose.yaml`
 
-For example:
+ตัวอย่าง:
 
 ```yaml
 n8n:
@@ -99,11 +98,11 @@ n8n:
 
 ### Keeping sensitive data in separate files
 
-You can append `_FILE` to individual environment variables to provide their configuration in a separate file, enabling you to avoid passing sensitive details using environment variables. n8n loads the data from the file with the given name, making it possible to load data from [Docker-Secrets](https://docs.docker.com/engine/swarm/secrets/){:target=_blank .external-link} and [Kubernetes-Secrets](https://kubernetes.io/docs/concepts/configuration/secret/){:target=_blank .external-link}. 
+คุณสามารถเติม `_FILE` ต่อท้าย environment variable เพื่อให้ค่า config ถูกอ่านมาจากไฟล์แยก ช่วยให้ไม่ต้องส่งข้อมูลสำคัญผ่าน environment variable โดยตรง n8n จะโหลดค่าจากไฟล์ที่กำหนด ทำให้ใช้กับ [Docker-Secrets](https://docs.docker.com/engine/swarm/secrets/){:target=_blank .external-link} และ [Kubernetes-Secrets](https://kubernetes.io/docs/concepts/configuration/secret/){:target=_blank .external-link} ได้
 
-Refer to [Environment variables](/hosting/configuration/environment-variables/index.md) for details on each variable.
+ดูรายละเอียดแต่ละตัวแปรได้ที่ [Environment variables](/hosting/configuration/environment-variables/index.md)
 
-While most environment variables can use the `_FILE` suffix, it's more beneficial for sensitive data such as [credentials](/glossary.md#credential-n8n) and database configuration. Here are some examples: 
+ส่วนใหญ่ environment variable จะใช้ `_FILE` ได้ โดยเหมาะกับข้อมูลสำคัญ เช่น [credentials](/glossary.md#credential-n8n) หรือ config database ตัวอย่างเช่น
 
 ```yaml
 CREDENTIALS_OVERWRITE_DATA_FILE=/path/to/credentials_data

@@ -12,10 +12,10 @@ hide:
 
 # Environment variables overview
 
-This section lists of environment variables that you can use to change n8n's configuration settings when self-hosting n8n.
+หน้านี้จะสรุป environment variables ที่ใช้เปลี่ยน config ของ n8n เวลารันแบบ self-hosted
 
 /// note | File-based configuration
-You can provide a [configuration file](/hosting/configuration/configuration-methods.md) for n8n. You can also append `_FILE` to certain variables to provide their configuration in a separate file. 
+คุณสามารถกำหนด [configuration file](/hosting/configuration/configuration-methods.md) ให้ n8n ได้ หรือจะเติม `_FILE` ต่อท้ายตัวแปรบางตัวเพื่อให้ค่า config ถูกอ่านจากไฟล์แยก
 ///
 
 [[% import "_macros/section-toc.html" as sectionToc %]]

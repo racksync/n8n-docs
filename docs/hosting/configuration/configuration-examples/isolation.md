@@ -7,9 +7,9 @@ contentType: howto
 
 # Isolate n8n
 
-By default, a self-hosted n8n instance sends data to n8n's servers. It notifies users about available updates, workflow templates, and diagnostics. 
+โดยปกติ n8n ที่รันแบบ self-hosted จะส่งข้อมูลบางอย่างกลับไปที่ server ของ n8n เช่น แจ้งเตือน update, workflow templates, และ diagnostics
 
-To prevent your n8n instance from connecting to n8n's servers, set these environment variables to false: 
+ถ้าอยากป้องกันไม่ให้ n8n เชื่อมต่อกับ server ของ n8n ให้ตั้ง environment variables เหล่านี้เป็น false:
 
 ```
 N8N_DIAGNOSTICS_ENABLED=false
@@ -17,7 +17,7 @@ N8N_VERSION_NOTIFICATIONS_ENABLED=false
 N8N_TEMPLATES_ENABLED=false
 ```
 
-Unset n8n's diagnostics configuration:
+และ unset config diagnostics ของ n8n:
 
 ```
 EXTERNAL_FRONTEND_HOOKS_URLS=
@@ -25,4 +25,4 @@ N8N_DIAGNOSTICS_CONFIG_FRONTEND=
 N8N_DIAGNOSTICS_CONFIG_BACKEND=
 ```
 
-Refer to [Environment variables reference](/hosting/configuration/environment-variables/deployment.md) for more information on these variables.
+ดูรายละเอียดตัวแปรเหล่านี้เพิ่มเติมได้ที่ [Environment variables reference](/hosting/configuration/environment-variables/deployment.md)

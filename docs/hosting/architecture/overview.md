@@ -6,9 +6,9 @@ contentType: overview
 
 # Architecture
 
-Understanding n8n's underlying architecture is helpful if you need to:
+การเข้าใจโครงสร้างสถาปัตยกรรม (architecture) ของ n8n จะช่วยให้คุณสามารถ:
 
-* Embed n8n
-* Customize n8n's default databases
+* ฝัง (Embed) n8n เข้าไปในระบบของคุณ
+* ปรับแต่งฐานข้อมูล (database) ของ n8n ให้เหมาะกับความต้องการ
 
-This section is a work in progress. If you have questions, please try the [forum](https://community.n8n.io/){:target=_blank .external-link} and let n8n know which architecture documents would be useful for you.
+หน้านี้ยังอยู่ระหว่างการปรับปรุง ถ้าคุณมีคำถามเพิ่มเติม ลองเข้าไปที่ [forum](https://community.n8n.io){:target=_blank .external-link} แล้วแจ้งให้ทีม n8n ทราบว่าคุณอยากได้เอกสารเกี่ยวกับ architecture เรื่องไหนเพิ่มเติมบ้าง

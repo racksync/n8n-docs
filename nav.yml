@@ -1,10 +1,10 @@
 nav:
-  - มาใช้ n8n กัน:
+  - มาใช้ n8n กันคร้าบ 😊:
     - ยินดีต้อนรับ: index.md
     - เริ่มต้นใช้งาน:
       - เส้นทางการเรียนรู้: learning-path.md
-      - เลือก n8n ของคุณ: choose-n8n.md
-      - เริ่มต้นอย่างรวดเร็ว:
+      - เลือก n8n ในแบบของคุณ: choose-n8n.md
+      - เริ่มต้นแบบเร็ว!:
         - try-it-out/index.md
         - เริ่มต้นแบบเร็วสุดๆ: try-it-out/quickstart.md
         - บทนำแบบละเอียด: try-it-out/tutorial-first-workflow.md

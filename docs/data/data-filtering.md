@@ -6,16 +6,16 @@ contentType: howto
 # Data filtering
 
 /// info | Feature availability
-Available on Cloud Pro and Enterprise plans.
+มีให้ใช้งานในแผน Cloud Pro และ Enterprise
 ///
 
-Search and filter data in the node **INPUT** and **OUTPUT** panels. Use this to check your node's data.
+ค้นหาและกรองข้อมูลใน panel **INPUT** และ **OUTPUT** ของ node ใช้สิ่งนี้เพื่อตรวจสอบข้อมูลของ node ของคุณ
 
-To search:
+วิธีค้นหา:
 
-1. In a node, select **Search** <span class="inline-image">![Search icon](/_images/common-icons/search.png){.off-glb}</span> in the **INPUT** or **OUTPUT** panel.
-1. Enter your search term.
+1. ใน node เลือก **Search** <span class="inline-image">![Search icon](/_images/common-icons/search.png){.off-glb}</span> ใน panel **INPUT** หรือ **OUTPUT**
+1. ป้อนคำค้นหาของคุณ
 
-n8n filters as you type your search, displaying the objects or rows containing the term.
+n8n จะกรองขณะที่คุณพิมพ์คำค้นหา โดยแสดง objects หรือ rows ที่มีคำนั้น
 
-Filtering is purely visual: n8n doesn't change or delete data. The filter resets when you close and reopen the node.
+การกรองเป็นการแสดงผลเท่านั้น: n8n ไม่ได้เปลี่ยนแปลงหรือลบข้อมูล ตัวกรองจะรีเซ็ตเมื่อคุณปิดและเปิด node ใหม่

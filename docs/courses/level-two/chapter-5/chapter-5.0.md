@@ -5,35 +5,35 @@ contentType: tutorial
 
 # Automating a business workflow
 
-Remember [our friend Nathan](/courses/level-one/chapter-3.md)?
+จำ [our friend Nathan](/courses/level-one/chapter-3.md) ได้ไหม?
 
-**Nathan 🙋:** Hello, it's me again. My manager was so impressed with my first workflow automation solution that she entrusted me with more responsibility.<br/>
-**You 👩‍🔧:** More work and responsibility. Congratulations, I guess. What do you need to do now?<br/>
-**Nathan 🙋:** I got access to all our sales data and I'm now responsible for creating two reports: one for regional sales and one for orders prices. They're based on data from different sources and come in different formats.<br/>
-**You 👩‍🔧:** Sounds like a lot of manual work, but the kind that can be automated. Let's do it!
+**Nathan 🙋:** สวัสดีครับ ผมเองครับ ผู้จัดการของผมประทับใจกับโซลูชัน workflow automation แรกของผมมาก จนเธอมอบหมายความรับผิดชอบให้ผมมากขึ้น<br/>
+**You 👩‍🔧:** งานและความรับผิดชอบมากขึ้น ยินดีด้วยนะคะ แล้วตอนนี้คุณต้องทำอะไรบ้าง?<br/>
+**Nathan 🙋:** ผมเข้าถึงข้อมูลการขายทั้งหมดของเราได้แล้ว และตอนนี้ผมรับผิดชอบในการสร้างรายงานสองฉบับ: ฉบับหนึ่งสำหรับยอดขายตามภูมิภาค และอีกฉบับสำหรับราคา orders ข้อมูลมาจากแหล่งต่างๆ และอยู่ในรูปแบบที่แตกต่างกัน<br/>
+**You 👩‍🔧:** ฟังดูเหมือนงาน manual เยอะเลย แต่เป็นประเภทที่สามารถทำ automation ได้ มาทำกันเถอะ!
 
 
 ## Workflow design
 
-Now that we know what Nathan wants to automate, let's list the steps he needs to take to achieve this:
+ตอนนี้เรารู้แล้วว่า Nathan ต้องการทำ automation อะไร มาลิสต์ขั้นตอนที่เขาต้องทำเพื่อให้บรรลุเป้าหมายนี้กัน:
 
-1. Get and combine data from all necessary sources.
-2. Sort the data and format the dates.
-3. Write binary files.
-4. Send notifications using email and Discord.
+1. รับและรวมข้อมูลจากแหล่งที่จำเป็นทั้งหมด
+2. เรียงลำดับข้อมูลและจัดรูปแบบวันที่
+3. เขียน binary files
+4. ส่งการแจ้งเตือนโดยใช้อีเมลและ Discord
 
-n8n provides [core nodes](/integrations/builtin/node-types.md#core-nodes) for all these steps. This use case is somewhat complex. We should build it from three separate workflows:
+n8n มี [core nodes](/integrations/builtin/node-types.md#core-nodes) สำหรับขั้นตอนเหล่านี้ทั้งหมด use case นี้ค่อนข้างซับซ้อน เราควรสร้างจากสาม workflows แยกกัน:
 
-1. A workflow that merges the company data with external information.
-2. A workflow that generates the reports.
-3. A workflow that monitors errors in the second workflow.
+1. workflow ที่รวมข้อมูลบริษัทกับข้อมูลภายนอก
+2. workflow ที่สร้างรายงาน
+3. workflow ที่ monitor errors ใน workflow ที่สอง
 
 ## Workflow prerequisites
 
-To build the workflows, you will need the following:
+ในการสร้าง workflows คุณจะต้องมีสิ่งต่อไปนี้:
 
-* An [Airtable](https://airtable.com/){:target="_blank" .external-link} account and [credentials](/integrations/builtin/credentials/airtable.md).
-* A [Google](https://www.google.com/account/about/){:target="_blank" .external-link} account and [credentials](/integrations/builtin/credentials/google/index.md) to access Gmail.
-* A [Discord](https://discord.com/){:target="_blank" .external-link} account and webhook URL (you receive this using email when you sign up for this course).
+* บัญชี [Airtable](https://airtable.com/){:target="_blank" .external-link} และ [credentials](/integrations/builtin/credentials/airtable.md)
+* บัญชี [Google](https://www.google.com/account/about/){:target="_blank" .external-link} และ [credentials](/integrations/builtin/credentials/google/index.md) เพื่อเข้าถึง Gmail
+* บัญชี [Discord](https://discord.com/){:target="_blank" .external-link} และ webhook URL (คุณได้รับสิ่งนี้ทางอีเมลเมื่อคุณลงทะเบียนสำหรับคอร์สนี้)
 
-Next, you will build these three workflows with step-by-step instructions.
+ถัดไป คุณจะสร้างสาม workflows เหล่านี้พร้อมคำแนะนำทีละขั้นตอน

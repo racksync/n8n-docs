@@ -5,39 +5,39 @@ contentType: explanation
 
 # Item linking concepts
 
-Each output item created by a node includes metadata that links them to the input item (or items) that the node used to generate them. This creates a chain of items that you can work back along to access previous items. This can be complicated to understand, especially if the node splits or merges data. You need to understand item linking when building your own programmatic nodes, or in some scenarios using the Code node. 
+แต่ละ output item ที่สร้างโดย node จะมี metadata ที่ link พวกมันไปยัง input item (หรือ item ต่างๆ) ที่ node ใช้ในการสร้างพวกมันขึ้นมา สิ่งนี้สร้างสายโซ่ของ item ที่คุณสามารถทำงานย้อนกลับไปเพื่อเข้าถึง item ก่อนหน้าได้ สิ่งนี้อาจซับซ้อนในการทำความเข้าใจ โดยเฉพาะอย่างยิ่งหาก node แยก (split) หรือรวม (merge) ข้อมูล คุณจำเป็นต้องเข้าใจ item linking เมื่อสร้าง node แบบ programmatic ของคุณเอง หรือในบางสถานการณ์ที่ใช้ Code node
 
-This document provides a conceptual overview of this feature. For usage details, refer to:
+เอกสารนี้ให้ภาพรวมแนวคิดของคุณลักษณะนี้ สำหรับรายละเอียดการใช้งาน โปรดดูที่:
 
-* [Item linking for node creators](/data/data-mapping/data-item-linking/item-linking-node-building.md), for details on how to handle item linking when building a node.
-* [Item linking in the Code node](/data/data-mapping/data-item-linking/item-linking-code-node.md), to learn how to handle item linking in the Code node.
-* [Item linking errors](/data/data-mapping/data-item-linking/item-linking-errors.md), to understand the errors you may encounter in the editor UI.
+*   [Item linking for node creators](/data/data-mapping/data-item-linking/item-linking-node-building.md), สำหรับรายละเอียดเกี่ยวกับวิธีจัดการ item linking เมื่อสร้าง node
+*   [Item linking in the Code node](/data/data-mapping/data-item-linking/item-linking-code-node.md), เพื่อเรียนรู้วิธีจัดการ item linking ใน Code node
+*   [Item linking errors](/data/data-mapping/data-item-linking/item-linking-errors.md), เพื่อทำความเข้าใจข้อผิดพลาดที่คุณอาจพบใน editor UI
 
 ## n8n's automatic item linking
 
-If a node doesn't control how to link input items to output items, n8n tries to guess how to link the items automatically:
+หาก node ไม่ได้ควบคุมวิธีการ link input item ไปยัง output item n8n จะพยายามเดาว่าจะ link item โดยอัตโนมัติอย่างไร:
 
-* Single input, single output: the output links to the input.
-* Single input, multiple outputs: all outputs link to that input.
-* Multiple inputs and outputs:
-	* If you keep the input items, but change the order (or remove some but keep others), n8n can automatically add the correct linked item information.
-	* If the number of inputs and outputs is equal, n8n links the items in order. This means that output-1 links to input-1, output-2 to input-2, and so on.
-	* If the number isn't equal, or you create completely new items, n8n can't automatically link items.
+*   Single input, single output: output จะ link ไปยัง input
+*   Single input, multiple outputs: output ทั้งหมดจะ link ไปยัง input นั้น
+*   Multiple inputs and outputs:
+    *   หากคุณเก็บ input item ไว้ แต่เปลี่ยนลำดับ (หรือลบบางส่วนออกแต่เก็บส่วนอื่นไว้) n8n สามารถเพิ่มข้อมูล linked item ที่ถูกต้องได้โดยอัตโนมัติ
+    *   หากจำนวน input และ output เท่ากัน n8n จะ link item ตามลำดับ ซึ่งหมายความว่า output-1 link ไปยัง input-1, output-2 link ไปยัง input-2 และต่อไปเรื่อยๆ
+    *   หากจำนวนไม่เท่ากัน หรือคุณสร้าง item ใหม่ทั้งหมด n8n จะไม่สามารถ link item โดยอัตโนมัติได้
 
-If n8n can't link items automatically, and the node doesn't handle the item linking, n8n displays an error. Refer to [Item linking errors](/data/data-mapping/data-item-linking/item-linking-errors.md) for more information.
+หาก n8n ไม่สามารถ link item โดยอัตโนมัติ และ node ไม่ได้จัดการ item linking n8n จะแสดงข้อผิดพลาด โปรดดู [Item linking errors](/data/data-mapping/data-item-linking/item-linking-errors.md) สำหรับข้อมูลเพิ่มเติม
 
 ## Item linking example
 
 ![A diagram showing the threads linking multiple items back through a workflow](/_images/data/data-mapping/data-item-linking/item-linking-multiple-lines.png)
 
-In this example, it's possible for n8n to link an item in one node back several steps, despite the item order changing. This means the node that sorts movies alphabetically can access information about the linked item in the node that gets famous movie actors.
+ในตัวอย่างนี้ เป็นไปได้ที่ n8n จะ link item ใน node หนึ่งย้อนกลับไปหลายขั้นตอน แม้ว่าลำดับ item จะเปลี่ยนไป ซึ่งหมายความว่า node ที่จัดเรียงภาพยนตร์ตามตัวอักษรสามารถเข้าถึงข้อมูลเกี่ยวกับ linked item ใน node ที่ดึงข้อมูลนักแสดงภาพยนตร์ชื่อดังได้
 
-The methods for accessing linked items are different depending on whether you're using the UI, expressions, or the code node. Explore the following resources:
+วิธีการเข้าถึง linked item จะแตกต่างกันไปขึ้นอยู่กับว่าคุณกำลังใช้ UI, expressions หรือ Code node สำรวจแหล่งข้อมูลต่อไปนี้:
 
-* [Mapping in the UI](/data/data-mapping/data-mapping-ui.md)
-* [Mapping in the expressions editor](/data/data-mapping/data-mapping-expressions.md)
-* [Item linking in the Code node](/data/data-mapping/data-item-linking/item-linking-code-node.md)
-* [Item linking errors](/data/data-mapping/data-item-linking/item-linking-errors.md)
+*   [Mapping in the UI](/data/data-mapping/data-mapping-ui.md)
+*   [Mapping in the expressions editor](/data/data-mapping/data-mapping-expressions.md)
+*   [Item linking in the Code node](/data/data-mapping/data-item-linking/item-linking-code-node.md)
+*   [Item linking errors](/data/data-mapping/data-item-linking/item-linking-errors.md)
 
 
 

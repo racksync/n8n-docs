@@ -5,9 +5,9 @@ contentType: overview
 
 # Data mapping
 
-Data mapping means referencing data from previous nodes. 
+Data mapping หมายถึงการอ้างอิงข้อมูลจาก node ก่อนหน้า
 
-This section contains guidance on:
+ส่วนนี้ประกอบด้วยคำแนะนำเกี่ยวกับ:
 
-* Mapping data in most scenarios: [Data mapping in the UI](/data/data-mapping/data-mapping-ui.md) and [Data mapping in expression](/data/data-mapping/data-mapping-expressions.md)
-* How to handle [item linking](/data/data-mapping/data-item-linking/index.md) when using the Code node or building your own nodes. 
+* การ map ข้อมูลในสถานการณ์ส่วนใหญ่: [Data mapping in the UI](/data/data-mapping/data-mapping-ui.md) และ [Data mapping in expression](/data/data-mapping/data-mapping-expressions.md)
+* วิธีจัดการ [item linking](/data/data-mapping/data-item-linking/index.md) เมื่อใช้ Code node หรือสร้าง node ของคุณเอง

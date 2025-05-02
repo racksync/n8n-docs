@@ -5,83 +5,83 @@ contentType: tutorial
 
 # Workflow 2: Generating reports
 
-In this workflow, you will merge data from different sources, transform binary data, generate files, and send notifications about them. The final workflow should look like this:
+ใน workflow นี้ คุณจะรวมข้อมูลจากแหล่งต่างๆ, แปลง binary data, สร้างไฟล์, และส่งการแจ้งเตือนเกี่ยวกับไฟล์เหล่านั้น workflow สุดท้ายควรมีลักษณะดังนี้:
 
 <figure><img src="/_images/courses/level-two/chapter-five/workflow2.png" alt="Workflow 2 for aggregating data and generating files" style="width:100%"><figcaption align = "center"><i>Workflow 2 for aggregating data and generating files</i></figcaption></figure>
 
-To make things easier, let's split the workflow into three parts.
+เพื่อให้ง่ายขึ้น มาแบ่ง workflow ออกเป็นสามส่วนกัน
 
 ## Part 1: Getting data from different sources
 
-The first part of the workflow consists of five nodes:
+ส่วนแรกของ workflow ประกอบด้วยห้า nodes:
 
 <figure><img src="/_images/courses/level-two/chapter-five/workflow2_1.png" alt="Workflow 1: Getting data from different sources" style="width:100%"><figcaption align = "center"><i>Workflow 1: Getting data from different sources</i></figcaption></figure>
 
-1. Use the [**HTTP Request node**](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) to get data from the API endpoint that stores company data. Configure the following node parameters:
+1. ใช้ [**HTTP Request node**](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) เพื่อรับข้อมูลจาก API endpoint ที่เก็บข้อมูลบริษัท กำหนดค่า node parameters ต่อไปนี้:
 
     - **Method**: Get
-    - **URL**: The **Dataset URL** you received in the email when you signed up for this course.
+    - **URL**: **Dataset URL** ที่คุณได้รับในอีเมลเมื่อคุณลงทะเบียนสำหรับคอร์สนี้
     - **Authentication**: Generic Credential Type
         - **Generic Auth Type**: Header Auth
-        - **Credentials for Header Auth**: The Header Auth name and Header Auth value you received in the email when you signed up for this course.
-    - **Send Headers**: Toggle to true
-        - **Specify Headers**: Select `Using Fields Below`
+        - **Credentials for Header Auth**: Header Auth name และ Header Auth value ที่คุณได้รับในอีเมลเมื่อคุณลงทะเบียนสำหรับคอร์สนี้
+    - **Send Headers**: สลับเป็น true
+        - **Specify Headers**: เลือก `Using Fields Below`
         - **Name**: `unique_id`
-        - **Value**: The unique ID you received in the email when you signed up for this course.
+        - **Value**: unique ID ที่คุณได้รับในอีเมลเมื่อคุณลงทะเบียนสำหรับคอร์สนี้
 
-2. Use the [**Airtable node**](/integrations/builtin/app-nodes/n8n-nodes-base.airtable/index.md) to list data from the `customers` table (where you updated the fields `region` and `subregion`).
-3. Use the [**Merge node**](/integrations/builtin/core-nodes/n8n-nodes-base.merge.md) to merge data from the Airtable and HTTP Request node, based on matching the input fields for `customerID`.
-4. Use the [**Sort node**](/integrations/builtin/core-nodes/n8n-nodes-base.sort.md) to sort data by `orderPrice` in descending order.
+2. ใช้ [**Airtable node**](/integrations/builtin/app-nodes/n8n-nodes-base.airtable/index.md) เพื่อ list ข้อมูลจากตาราง `customers` (ที่คุณอัปเดต fields `region` และ `subregion`)
+3. ใช้ [**Merge node**](/integrations/builtin/core-nodes/n8n-nodes-base.merge.md) เพื่อรวมข้อมูลจาก Airtable และ HTTP Request node โดยอิงจากการจับคู่ input fields สำหรับ `customerID`
+4. ใช้ [**Sort node**](/integrations/builtin/core-nodes/n8n-nodes-base.sort.md) เพื่อเรียงลำดับข้อมูลตาม `orderPrice` จากมากไปน้อย
 
 /// question | Quiz questions
-* What's the name of the employee assigned to customer 1?
-* What's the order status of customer 2?
-* What's the highest order price?
+* ชื่อของพนักงานที่ได้รับมอบหมายให้ดูแล customer 1 คืออะไร?
+* สถานะ order ของ customer 2 คืออะไร?
+* ราคา order สูงสุดคือเท่าไหร่?
 ///
 
 ## Part 2: Generating file for regional sales
 
-The second part of the workflow consists of four nodes:
+ส่วนที่สองของ workflow ประกอบด้วยสี่ nodes:
 
 <figure><img src="/_images/courses/level-two/chapter-five/workflow2_2.png" alt="Workflow 2: Generating file for regional sales" style="width:100%"><figcaption align = "center"><i>Workflow 2: Generating file for regional sales</i></figcaption></figure>
 
-1. Use the [**If node**](/integrations/builtin/core-nodes/n8n-nodes-base.if.md) to filter to only display orders from the region `Americas`.
-2. Use the [**Convert to File**](/integrations/builtin/core-nodes/n8n-nodes-base.converttofile.md) to transform the incoming data from JSON to binary format. Convert each item to a separate file. (Bonus points if you can figure out how to name each report based on the orderID!)
-3. Use the [**Gmail node**](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/index.md) (or another email node) to send the files using email to an address you have access to. Note that you need to add an attachment with the data property.
-4. Use the [**Discord node**](/integrations/builtin/app-nodes/n8n-nodes-base.discord/index.md) to send a message in the n8n Discord channel `#course-level-two`. In the node, configure the following parameters:
-    * **Webhook URL**: The Discord URL you received in the email when you signed up for this course.
-    * **Text**: "I sent the file using email with the label ID `{label ID}`. My ID: " followed by the unique ID emailed to you when you registered for this course. <br/> Note that you need to replace the text in curly braces `{}` with [expressions](/glossary.md#expression-n8n) that reference the data from the nodes.
+1. ใช้ [**If node**](/integrations/builtin/core-nodes/n8n-nodes-base.if.md) เพื่อกรองให้แสดงเฉพาะ orders จาก region `Americas`
+2. ใช้ [**Convert to File**](/integrations/builtin/core-nodes/n8n-nodes-base.converttofile.md) เพื่อแปลงข้อมูลขาเข้าจากรูปแบบ JSON เป็น binary แปลงแต่ละ item เป็นไฟล์แยกกัน (คะแนนโบนัสถ้าคุณสามารถหาวิธีตั้งชื่อแต่ละ report ตาม orderID ได้!)
+3. ใช้ [**Gmail node**](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/index.md) (หรือ email node อื่น) เพื่อส่งไฟล์ทางอีเมลไปยังที่อยู่ที่คุณเข้าถึงได้ โปรดทราบว่าคุณต้องเพิ่ม attachment ด้วย data property
+4. ใช้ [**Discord node**](/integrations/builtin/app-nodes/n8n-nodes-base.discord/index.md) เพื่อส่งข้อความในช่อง Discord ของ n8n `#course-level-two` ใน node ให้กำหนดค่า parameters ต่อไปนี้:
+    * **Webhook URL**: Discord URL ที่คุณได้รับในอีเมลเมื่อคุณลงทะเบียนสำหรับคอร์สนี้
+    * **Text**: "I sent the file using email with the label ID `{label ID}`. My ID: " ตามด้วย unique ID ที่ส่งให้คุณทางอีเมลเมื่อคุณลงทะเบียนสำหรับคอร์สนี้ <br/> โปรดทราบว่าคุณต้องแทนที่ข้อความในวงเล็บปีกกา `{}` ด้วย [expressions](/glossary.md#expression-n8n) ที่อ้างอิงข้อมูลจาก nodes
 
 /// question | Quiz questions
-* How many orders are assigned to the `Americas` region?
-* What's the total price of the orders in the `Americas` region?
-* How many items does the **Write Binary File node** return?
+* มี orders กี่รายการที่ถูกกำหนดให้กับ region `Americas`?
+* ราคารวมของ orders ใน region `Americas` คือเท่าไหร่?
+* **Write Binary File node** คืนค่ากี่ items?
 ///
 
 ## Part 3: Generating files for total sales
 
-The third part of the workflow consists of five nodes:
+ส่วนที่สามของ workflow ประกอบด้วยห้า nodes:
 
 <figure><img src="/_images/courses/level-two/chapter-five/workflow2_3.png" alt="Workflow 3: Generating files for total sales" style="width:100%"><figcaption align = "center"><i>Workflow 3: Generating files for total sales</i></figcaption></figure>
 
-1. Use the [**Loop Over Items node**](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches.md) to split data from the Item Lists node into batches of 5.
-2. Use the [**Set node**](/integrations/builtin/core-nodes/n8n-nodes-base.set.md) to set four values, referenced with expressions from the previous node: `customerEmail`, `customerRegion`, `customerSince`, and `orderPrice`.
-3. Use the [**Date & Time node**](/integrations/builtin/core-nodes/n8n-nodes-base.datetime.md) to change the date format of the field `customerSince` to the format MM/DD/YYYY.
-    - Set the **Include Input Fields** option to keep all the data together.
-4. Use the [**Convert to File node**](/integrations/builtin/core-nodes/n8n-nodes-base.converttofile.md) to create a CSV spreadsheet with the file name set as the expression: `{{$runIndex > 0 ? 'file_low_orders':'file_high_orders'}}`.
-5. Use the [**Discord node**](/integrations/builtin/app-nodes/n8n-nodes-base.discord/index.md) to send a message in the n8n Discord channel `#course-level-two`. In the node, configure the following parameters:
-    * **Webhook URL**: The Discord URL you received in the email when you signed up for this course.
-    * **Text**: "I created the spreadsheet `{file name}`. My ID:" followed by the unique ID emailed to you when you registered for this course. <br/> Note that you need to replace `{file name}` with an expression that references data from the previous **Convert to File node**.<br/>
+1. ใช้ [**Loop Over Items node**](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches.md) เพื่อแบ่งข้อมูลจาก Item Lists node ออกเป็น batches ละ 5 รายการ
+2. ใช้ [**Set node**](/integrations/builtin/core-nodes/n8n-nodes-base.set.md) เพื่อตั้งค่าสี่ values โดยอ้างอิงด้วย expressions จาก node ก่อนหน้า: `customerEmail`, `customerRegion`, `customerSince`, และ `orderPrice`
+3. ใช้ [**Date & Time node**](/integrations/builtin/core-nodes/n8n-nodes-base.datetime.md) เพื่อเปลี่ยนรูปแบบวันที่ของ field `customerSince` เป็นรูปแบบ MM/DD/YYYY
+    - ตั้งค่า option **Include Input Fields** เพื่อเก็บข้อมูลทั้งหมดไว้ด้วยกัน
+4. ใช้ [**Convert to File node**](/integrations/builtin/core-nodes/n8n-nodes-base.converttofile.md) เพื่อสร้าง spreadsheet CSV โดยตั้งชื่อไฟล์เป็น expression: `{{$runIndex > 0 ? 'file_low_orders':'file_high_orders'}}`
+5. ใช้ [**Discord node**](/integrations/builtin/app-nodes/n8n-nodes-base.discord/index.md) เพื่อส่งข้อความในช่อง Discord ของ n8n `#course-level-two` ใน node ให้กำหนดค่า parameters ต่อไปนี้:
+    * **Webhook URL**: Discord URL ที่คุณได้รับในอีเมลเมื่อคุณลงทะเบียนสำหรับคอร์สนี้
+    * **Text**: "I created the spreadsheet `{file name}`. My ID:" ตามด้วย unique ID ที่ส่งให้คุณทางอีเมลเมื่อคุณลงทะเบียนสำหรับคอร์สนี้ <br/> โปรดทราบว่าคุณต้องแทนที่ `{file name}` ด้วย expression ที่อ้างอิงข้อมูลจาก **Convert to File node** ก่อนหน้า<br/>
 
 /// question | Quiz questions
-* What's the lowest order price in the first batch of items?
-* What's the formatted date of customer 7?
-* How many items does the **Convert to File node** return?
+* ราคา order ต่ำสุดใน batch แรกของ items คือเท่าไหร่?
+* วันที่ที่จัดรูปแบบแล้วของ customer 7 คืออะไร?
+* **Convert to File node** คืนค่ากี่ items?
 ///
 
 ??? note "Show me the solution"
 
-	To check the configuration of the nodes, you can copy the JSON workflow code below and paste it into your Editor UI:
+	หากต้องการตรวจสอบการกำหนดค่าของ nodes คุณสามารถคัดลอกโค้ด JSON workflow ด้านล่างและวางลงใน Editor UI ของคุณ:
 
 	```json
     {

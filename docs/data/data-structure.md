@@ -5,7 +5,7 @@ contentType: explanation
 
 # Data structure
 
-In n8n, all data passed between nodes is an array of objects. It has the following structure:
+ใน n8n ข้อมูลทั้งหมดที่ส่งผ่านระหว่าง nodes เป็น array ของ objects มีโครงสร้างดังนี้:
 
 ```json
 [
@@ -35,7 +35,7 @@ In n8n, all data passed between nodes is an array of objects. It has the followi
 ```
 
 /// note | Skipping the `json` key and array syntax
-From 0.166.0 on, when using the Function node or Code node, n8n automatically adds the `json` key if it's missing. It also automatically wraps your items in an array (`[]`) if needed. This is only the case when using the Function or Code nodes. When building your own nodes, you must still make sure the node returns data with the `json` key.
+ตั้งแต่เวอร์ชัน 0.166.0 เป็นต้นไป เมื่อใช้ Function node หรือ Code node, n8n จะเพิ่ม `json` key โดยอัตโนมัติหากไม่มีอยู่ นอกจากนี้ยังจะห่อ items ของคุณใน array (`[]`) โดยอัตโนมัติหากจำเป็น สิ่งนี้ใช้ได้เฉพาะเมื่อใช้ Function หรือ Code nodes เท่านั้น เมื่อสร้าง nodes ของคุณเอง คุณยังคงต้องตรวจสอบให้แน่ใจว่า node ส่งคืนข้อมูลพร้อมกับ `json` key
 ///
 ## Data item processing
 

@@ -5,19 +5,19 @@ contentType: overview
 
 # Data item linking
 
-An item is a single piece of data. Nodes receive one or more items, operate on them, and output new items. Each item links back to previous items. 
+Item คือข้อมูลชิ้นเดียว node จะรับ item หนึ่งรายการหรือมากกว่า ประมวลผล และส่งออก item ใหม่ แต่ละ item จะ link กลับไปยัง item ก่อนหน้า
 
-You need to understand this behavior if you're:
+คุณจำเป็นต้องเข้าใจพฤติกรรมนี้หากคุณกำลัง:
 
-* Building a programmatic-style node that implements complex behaviors with its input and output data.
-* Using the Code node or expressions editor to access data from earlier items in the workflow. 
-* Using the Code node for complex behaviors with input and output data.
+*   สร้าง node แบบ programmatic ที่ใช้พฤติกรรมที่ซับซ้อนกับข้อมูล input และ output
+*   ใช้ Code node หรือ expressions editor เพื่อเข้าถึงข้อมูลจาก item ก่อนหน้าใน workflow
+*   ใช้ Code node สำหรับพฤติกรรมที่ซับซ้อนกับข้อมูล input และ output
 
-This section provides:
+ส่วนนี้ให้ข้อมูล:
 
-* A conceptual overview of [Item linking concepts](/data/data-mapping/data-item-linking/item-linking-concepts.md). 
-* Information on [Item linking for node creators](/data/data-mapping/data-item-linking/item-linking-node-building.md).
-* Support for end users who need to [Work with the data path](/data/data-mapping/data-item-linking/item-linking-code-node.md) to retrieve item data from previous nodes, and link items when using the Code node.
-* Guidance on troubleshooting [Errors](/data/data-mapping/data-item-linking/item-linking-errors.md).
+*   ภาพรวมแนวคิดของ [Item linking concepts](/data/data-mapping/data-item-linking/item-linking-concepts.md)
+*   ข้อมูลเกี่ยวกับ [Item linking for node creators](/data/data-mapping/data-item-linking/item-linking-node-building.md)
+*   การสนับสนุนสำหรับผู้ใช้ปลายทางที่ต้องการ [Work with the data path](/data/data-mapping/data-item-linking/item-linking-code-node.md) เพื่อดึงข้อมูล item จาก node ก่อนหน้า และ link item เมื่อใช้ Code node
+*   คำแนะนำในการแก้ไขปัญหา [Errors](/data/data-mapping/data-item-linking/item-linking-errors.md)
 
 

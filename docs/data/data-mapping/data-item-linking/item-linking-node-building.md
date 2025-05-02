@@ -3,6 +3,6 @@
 contentType: howto
 ---
 
-# Item linking for node creators
+# Item linking สำหรับผู้สร้าง node
 
 --8<-- "_snippets/data/data-mapping/item-linking-node-creators.md"

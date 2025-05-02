@@ -11,46 +11,46 @@ hide:
 
 # Binary data
 
-Binary data is any file-type data, such as image files or documents.
+Binary data คือข้อมูลประเภทไฟล์ใดๆ เช่น ไฟล์รูปภาพ หรือเอกสาร
 
-This page collects resources relating to binary data in n8n.
+หน้านี้รวบรวมแหล่งข้อมูลที่เกี่ยวข้องกับ binary data ใน n8n
 
 ## Working with binary data in your workflows
 
-You can process binary data in n8n workflows. n8n provides nodes to help you work with binary data. You can also use code.
+คุณสามารถประมวลผล binary data ใน n8n workflows ได้ n8n มี nodes ที่ช่วยให้คุณทำงานกับ binary data คุณยังสามารถใช้ code ได้อีกด้วย
 
 ### Nodes
 
-There are three key nodes dedicated to handling binary data files:
+มี nodes หลักสามตัวที่ใช้สำหรับจัดการไฟล์ binary data โดยเฉพาะ:
 
-- [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md) to read and write files from/to the machine where n8n is running.
-- [Convert to File](/integrations/builtin/core-nodes/n8n-nodes-base.converttofile.md) to take input data and output it as a file.
-- [Extract From File](/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile.md) to get data from a binary format and convert it to JSON.
+- [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md) เพื่ออ่านและเขียนไฟล์จาก/ไปยังเครื่องที่ n8n กำลังทำงานอยู่
+- [Convert to File](/integrations/builtin/core-nodes/n8n-nodes-base.converttofile.md) เพื่อรับ input data และส่งออกเป็นไฟล์
+- [Extract From File](/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile.md) เพื่อดึงข้อมูลจากรูปแบบ binary และแปลงเป็น JSON
 
-There are separate nodes for working with XML and HTML data:
+มี nodes แยกต่างหากสำหรับทำงานกับข้อมูล XML และ HTML:
 
 * [HTML](/integrations/builtin/core-nodes/n8n-nodes-base.html.md)
 * [XML](/integrations/builtin/core-nodes/n8n-nodes-base.xml.md)
 
-And nodes for performing common tasks:
+และ nodes สำหรับทำงานทั่วไป:
 
 * [Compression](/integrations/builtin/core-nodes/n8n-nodes-base.compression.md)
 * [Edit Image](/integrations/builtin/core-nodes/n8n-nodes-base.editimage.md)
 * [FTP](/integrations/builtin/core-nodes/n8n-nodes-base.ftp.md)
 
-You can trigger a workflow based on changes to a local file using the [Local File trigger](/integrations/builtin/core-nodes/n8n-nodes-base.localfiletrigger.md).
+คุณสามารถ trigger workflow ตามการเปลี่ยนแปลงของไฟล์ในเครื่องโดยใช้ [Local File trigger](/integrations/builtin/core-nodes/n8n-nodes-base.localfiletrigger.md)
 
-To split or concatenate binary data items, use the [data transformation nodes](/data/index.md#data-transformation-nodes).
+หากต้องการแยกหรือเชื่อมต่อ binary data items ให้ใช้ [data transformation nodes](/data/index.md#data-transformation-nodes)
 
 ### Code
 
-You can use the [Code node](/code/code-node.md) to manipulate binary data in your workflows. For example, [Get the binary data buffer](/code/cookbook/code-node/get-binary-data-buffer.md): get the binary data available in your workflow.
+คุณสามารถใช้ [Code node](/code/code-node.md) เพื่อจัดการ binary data ใน workflows ของคุณ ตัวอย่างเช่น [Get the binary data buffer](/code/cookbook/code-node/get-binary-data-buffer.md): ดึงข้อมูล binary data ที่มีอยู่ใน workflow ของคุณ
 
 
 ## Configure binary data mode when self-hosting
 
-You can configure how your self-hosted n8n instance handles binary data using the [Binary data environment variables](/hosting/configuration/environment-variables/binary-data.md). This includes tasks such as setting the storage path and choosing how to store binary data.
+คุณสามารถกำหนดค่าว่า n8n instance ที่ self-host ของคุณจัดการ binary data อย่างไรโดยใช้ [Binary data environment variables](/hosting/configuration/environment-variables/binary-data.md) ซึ่งรวมถึงงานต่างๆ เช่น การตั้งค่าเส้นทางการจัดเก็บ และการเลือกวิธีการจัดเก็บ binary data
 
-Your configuration affects how well n8n scales: [Scaling | Binary data filesystem mode](/hosting/scaling/binary-data.md).
+การกำหนดค่าของคุณมีผลต่อความสามารถในการ scale ของ n8n: [Scaling | Binary data filesystem mode](/hosting/scaling/binary-data.md)
 
-Reading and writing binary files can have security implications. If you want to disable reading and writing binary data, use the `NODES_EXCLUDE` environment variable. Refer to [Environment variables | Nodes](/hosting/configuration/environment-variables/nodes.md) for more information.
+การอ่านและเขียนไฟล์ binary อาจมีผลกระทบด้านความปลอดภัย หากคุณต้องการปิดใช้งานการอ่านและเขียน binary data ให้ใช้ environment variable `NODES_EXCLUDE` อ้างอิงถึง [Environment variables | Nodes](/hosting/configuration/environment-variables/nodes.md) สำหรับข้อมูลเพิ่มเติม

@@ -7,4 +7,6 @@ contentType: explanation
 
 # Data flow within nodes
 
+วิธีการที่ nodes ประมวลผล data items
+
 --8<-- "_snippets/flow-logic/data-flow-nodes.md"

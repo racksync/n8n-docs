@@ -6,38 +6,38 @@ contentType: howto
 
 # Create and edit credentials
 
-Credentials are securely stored authentication information used to connect n8n workflows to external services such as APIs, or databases.
+Credentials คือข้อมูลการยืนยันตัวตนที่จัดเก็บอย่างปลอดภัย ใช้เพื่อเชื่อมต่อ n8n workflows กับบริการภายนอก เช่น APIs หรือ databases
 
 ## Create a credential
 
-1. Select the <span class="inline-image">![universal create resource icon](/_images/common-icons/universal-resource-button.png){.off-glb}</span> **button** in the upper-left corner of the side menu. Select credential. 
-2. If your n8n instance supports [projects](/glossary.md#project-n8n), you'll also need to choose whether to create the credential inside your personal space or a specific project you have access to. If you're using the community version, you'll create the credential inside your personal space.
-3. Select the app or service you wish to connect to.
+1. เลือก <span class="inline-image">![universal create resource icon](/_images/common-icons/universal-resource-button.png){.off-glb}</span> **button** ที่มุมบนซ้ายของเมนูด้านข้าง เลือก credential
+2. หาก n8n instance ของคุณรองรับ [projects](/glossary.md#project-n8n) คุณจะต้องเลือกว่าจะสร้าง credential ในพื้นที่ส่วนตัวของคุณหรือใน project เฉพาะที่คุณมีสิทธิ์เข้าถึง หากคุณใช้เวอร์ชัน community คุณจะสร้าง credential ในพื้นที่ส่วนตัวของคุณ
+3. เลือกแอปหรือบริการที่คุณต้องการเชื่อมต่อ
 
-Or:
+หรือ:
 
-1. Using the <span class="inline-image">![universal create resource icon](/_images/common-icons/universal-resource-button.png){.off-glb}</span> **Create** button in the upper-right corner from either the **Overview** page or a specific project. Select Credential.
-2.  If you're doing this from the **Overview** page, you'll create the credential inside your personal space. If you're doing this from inside a project, you'll create the credential inside that specific project.
-3. Select the app or service you wish to connect to.
+1. ใช้ปุ่ม <span class="inline-image">![universal create resource icon](/_images/common-icons/universal-resource-button.png){.off-glb}</span> **Create** ที่มุมบนขวาจากหน้า **Overview** หรือจาก project เฉพาะ เลือก Credential
+2. หากคุณทำสิ่งนี้จากหน้า **Overview** คุณจะสร้าง credential ในพื้นที่ส่วนตัวของคุณ หากคุณทำสิ่งนี้จากภายใน project คุณจะสร้าง credential ภายใน project นั้น
+3. เลือกแอปหรือบริการที่คุณต้องการเชื่อมต่อ
 
-You can also create new credential in the credential drop down when editing a node on the workflow editor.
+คุณยังสามารถสร้าง credential ใหม่ได้ในดรอปดาวน์ credential เมื่อแก้ไข node บน workflow editor
 
-Once in the credential modal, enter the details required by your service. Refer to your service's page in the [credentials library](/integrations/builtin/credentials/index.md) for guidance.
+เมื่ออยู่ใน credential modal ให้ป้อนรายละเอียดที่บริการของคุณต้องการ อ้างอิงหน้าของบริการของคุณใน [credentials library](/integrations/builtin/credentials/index.md) สำหรับคำแนะนำ
 
-When you save a credential, n8n tests it to confirm it works.
+เมื่อคุณบันทึก credential แล้ว n8n จะทดสอบเพื่อยืนยันว่าใช้งานได้
 
 /// note | Credentials naming
-n8n names new credentials "*node name* account" by default. You can rename the credentials by clicking on the name, similarly to renaming nodes. It's good practice to give them names that identify the app or service, type, and purpose of the credential. A naming convention makes it easier to keep track of and identify your credentials.
+n8n จะตั้งชื่อ credentials ใหม่เป็น "*node name* account" ตามค่าเริ่มต้น คุณสามารถเปลี่ยนชื่อ credentials ได้โดยคลิกที่ชื่อ เช่นเดียวกับการเปลี่ยนชื่อ nodes เป็นแนวทางปฏิบัติที่ดีในการตั้งชื่อที่ระบุแอปหรือบริการ ประเภท และวัตถุประสงค์ของ credential การมีแบบแผนการตั้งชื่อจะช่วยให้ติดตามและระบุ credentials ของคุณได้ง่ายขึ้น
 ///
 
 ## Expressions in credentials
 
-You can use [expressions](/glossary.md#expression-n8n) to set credentials dynamically as your workflow runs:
+คุณสามารถใช้ [expressions](/glossary.md#expression-n8n) เพื่อตั้งค่า credentials แบบไดนามิกขณะที่ workflow ของคุณทำงาน:
 
-1. In your workflow, find the data path containing the credential. This varies depending on the exact parameter names in your data. Make sure that the data containing the credential is available in the workflow when you get to the node that needs it.
-1. When creating your credential, hover over the field where you want to use an expression.
-1. Toggle **Expression** on.
-1. Enter your expression.
+1. ใน workflow ของคุณ ค้นหา data path ที่มี credential ซึ่งจะแตกต่างกันไปขึ้นอยู่กับชื่อ parameter ที่แน่นอนในข้อมูลของคุณ ตรวจสอบให้แน่ใจว่าข้อมูลที่มี credential นั้นพร้อมใช้งานใน workflow เมื่อคุณไปถึง node ที่ต้องการ
+1. เมื่อสร้าง credential ของคุณ ให้วางเมาส์เหนือฟิลด์ที่คุณต้องการใช้ expression
+1. สลับเปิด **Expression**
+1. ป้อน expression ของคุณ
 
 ### Example workflow
 

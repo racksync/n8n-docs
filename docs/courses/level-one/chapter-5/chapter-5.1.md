@@ -7,48 +7,48 @@ contentType: tutorial
 <!-- vale from-microsoft.FirstPerson = NO -->
 # 1. Getting data from the data warehouse
 
-In this part of the workflow, you will learn how to get data by making HTTP requests with the [**HTTP Request**](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) node.
+ในส่วนนี้ของ workflow คุณจะได้เรียนรู้วิธีรับข้อมูลโดยการทำ HTTP requests ด้วย [**HTTP Request**](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) node
 
-After completing this section, your workflow will look like this:
+หลังจากทำส่วนนี้เสร็จแล้ว workflow ของคุณจะมีลักษณะดังนี้:
 
 [[ workflowDemo("file:////courses/level-one/chapter-5/chapter-5.1.json") ]]
 
-First, let's set the scene for building Nathan's workflow.
+ขั้นแรก มาเตรียมฉากสำหรับการสร้าง workflow ของ Nathan กัน
 
 ## Create new workflow
 
-Open your Editor UI and create a new workflow with one of the two possible commands:
+เปิด Editor UI ของคุณและสร้าง workflow ใหม่ด้วยหนึ่งในสองคำสั่งที่เป็นไปได้:
 
 - Select ++ctrl+alt+n++ or ++cmd+option+n++ on your keyboard.
 - Open the left menu, navigate to **Workflows**, and select **Add workflow**.
 
-Name this new workflow "Nathan's workflow."
+ตั้งชื่อ workflow ใหม่นี้ว่า "Nathan's workflow"
 
-The first thing you need to do is get data from ABCorp's old data warehouse.
+สิ่งแรกที่คุณต้องทำคือรับข้อมูลจาก data warehouse เก่าของ ABCorp
 
-In a previous chapter, you used an action node designed for a specific service (Hacker News). But not all apps or services have dedicated nodes, like the legacy data warehouse from Nathan's company.
+ในบทก่อนหน้า คุณได้ใช้ action node ที่ออกแบบมาสำหรับบริการเฉพาะ (Hacker News) แต่ไม่ใช่ทุก apps หรือ services ที่มี dedicated nodes เช่น legacy data warehouse จากบริษัทของ Nathan
 
-Though we can't directly export the data, Nathan told us that the data warehouse has a couple of API endpoints. That's all we need to access the data using the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) node in n8n.
+แม้ว่าเราจะไม่สามารถ export ข้อมูลได้โดยตรง แต่ Nathan บอกเราว่า data warehouse มี API endpoints สองสามตัว นั่นคือทั้งหมดที่เราต้องการเพื่อเข้าถึงข้อมูลโดยใช้ [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) node ใน n8n
 
 /// note | No node for that service?
-The HTTP Request node is one of the most versatile nodes, allowing you to make HTTP requests to query data from apps and services. You can use it to access data from apps or services that don't have a dedicated node in n8n.
+HTTP Request node เป็นหนึ่งใน nodes ที่หลากหลายที่สุด ช่วยให้คุณสามารถทำ HTTP requests เพื่อ query ข้อมูลจาก apps และ services ได้ คุณสามารถใช้เพื่อเข้าถึงข้อมูลจาก apps หรือ services ที่ไม่มี dedicated node ใน n8n
 ///
 
 ## Add an HTTP Request node
 
-Now, in your Editor UI, add an HTTP Request node like you learned in the lesson [Adding nodes](/courses/level-one/chapter-1.md#adding-nodes). The node window will open, where you need to configure some parameters.
+ตอนนี้ ใน Editor UI ของคุณ ให้เพิ่ม HTTP Request node เหมือนที่คุณเรียนรู้ในบทเรียน [Adding nodes](/courses/level-one/chapter-1.md#adding-nodes) หน้าต่าง node จะเปิดขึ้น ซึ่งคุณต้องกำหนดค่า parameters บางอย่าง
 
 <figure><img src="/_images/courses/level-one/chapter-five/l1-c5-5-1-http-request-node.png" alt="HTTP Request node" style="width:100%"><figcaption align = "center"><i>HTTP Request node</i></figcaption></figure>
 
-This node will use credentials.
+node นี้จะใช้ credentials
 
 /// note | Credentials
-[Credentials](/glossary.md#credential-n8n) are unique pieces of information that identify a user or a service and allow them to access apps or services (in our case, represented as n8n nodes). A common form of credentials is a username and a password, but they can take other forms depending on the service.
+[Credentials](/glossary.md#credential-n8n) คือข้อมูลเฉพาะที่ระบุ user หรือ service และอนุญาตให้เข้าถึง apps หรือ services (ในกรณีของเรา แสดงเป็น n8n nodes) รูปแบบทั่วไปของ credentials คือ username และ password แต่อาจอยู่ในรูปแบบอื่นได้ขึ้นอยู่กับ service
 ///
 
-In this case, you'll need the credentials for the ABCorp data warehouse API included in the email from n8n you received when you signed up for this course. If you haven't signed up yet, [sign up here](https://n8n-community.typeform.com/to/PDEMrevI){:target="_blank" .external-link}.
+ในกรณีนี้ คุณจะต้องใช้ credentials สำหรับ ABCorp data warehouse API ที่รวมอยู่ในอีเมลจาก n8n ที่คุณได้รับเมื่อคุณสมัครเข้าร่วมคอร์สนี้ หากคุณยังไม่ได้สมัคร [sign up here](https://n8n-community.typeform.com/to/PDEMrevI){:target="_blank" .external-link}
 
-In the **Parameters** of the HTTP Request node, make the following adjustments:
+ใน **Parameters** ของ HTTP Request node ให้ทำการปรับเปลี่ยนต่อไปนี้:
 
 - **Method**: This should default to GET. Make sure it's set to GET.
 - **URL**: Add the **Dataset URL** you received in the email when you signed up for this course.
@@ -64,20 +64,20 @@ In the **Parameters** of the HTTP Request node, make the following adjustments:
     <figure><img src="/_images/courses/level-one/chapter-five/l1-c5-5-1-http-request-node-credentials.png" alt="HTTP Request node credentials" style="width:100%"><figcaption align = "center"><i>HTTP Request node credentials</i></figcaption></figure>
 
 /// note | Credentials naming
-New credential names follow the "<node name> account" format by default. You can rename the credentials by clicking on the name, similarly to renaming nodes. It's good practice to give them names that identify the app/service, type, and purpose of the credential. A naming convention makes it easier to keep track of and identify your credentials.
+ชื่อ credential ใหม่จะเป็นไปตามรูปแบบ "<node name> account" โดยค่าเริ่มต้น คุณสามารถเปลี่ยนชื่อ credentials ได้โดยคลิกที่ชื่อ คล้ายกับการเปลี่ยนชื่อ nodes เป็นแนวปฏิบัติที่ดีที่จะตั้งชื่อที่ระบุ app/service, type และ purpose ของ credential การตั้งชื่อตามแบบแผนช่วยให้ติดตามและระบุ credentials ของคุณได้ง่ายขึ้น
 ///
 
-Once you save, exit out of the Credentials window to return to the HTTP Request node.
+เมื่อคุณบันทึกแล้ว ให้ออกจากหน้าต่าง Credentials เพื่อกลับไปยัง HTTP Request node
 
 ## Get the data
 
-Select the **Test step** button in the HTTP Request node window. The table view of the HTTP request results should look like this:
+เลือกปุ่ม **Test step** ในหน้าต่าง HTTP Request node มุมมองตารางของผลลัพธ์ HTTP request ควรมีลักษณะดังนี้:
 
 <figure><img src="/_images/courses/level-one/chapter-five/l1-c5-5-1-http-request-node-window.png" alt="HTTP Request node output" style="width:100%"><figcaption align = "center"><i>HTTP Request node output</i></figcaption></figure>
 
-This view should be familiar to you from the [Building a mini-workflow](/courses/level-one/chapter-2.md) page.
+มุมมองนี้ควรจะคุ้นเคยกับคุณจากหน้า [Building a mini-workflow](/courses/level-one/chapter-2.md)
 
-This is the data from ABCorp's data warehouse that Nathan needs to work with. This data set includes sales information from 30 customers with five columns:
+นี่คือข้อมูลจาก data warehouse ของ ABCorp ที่ Nathan ต้องใช้ทำงานด้วย ชุดข้อมูลนี้รวมถึงข้อมูลการขายจากลูกค้า 30 ราย โดยมีห้าคอลัมน์:
 
 - `orderID`: The unique id of each order.
 - `customerID`: The unique id of each customer.
@@ -87,6 +87,6 @@ This is the data from ABCorp's data warehouse that Nathan needs to work with. Th
 
 ## What's next?
 
-**Nathan 🙋**: This is great! You already automated an important part of my job with only one node. Now instead of manually accessing the data every time I need it, I can use the HTTP Request Node to automatically get the information.
+**Nathan 🙋**: เยี่ยมมาก! คุณ automate ส่วนสำคัญของงานของฉันไปแล้วด้วย node เพียงตัวเดียว ตอนนี้แทนที่จะต้องเข้าถึงข้อมูลด้วยตนเองทุกครั้งที่ฉันต้องการ ฉันสามารถใช้ HTTP Request Node เพื่อรับข้อมูลโดยอัตโนมัติได้
 
-**You 👩‍🔧**: Exactly! In the next step, I'll help you one step further and insert the data you retrieved into Airtable.
+**You 👩‍🔧**: ถูกต้อง! ในขั้นตอนถัดไป ฉันจะช่วยคุณอีกขั้นหนึ่งและแทรกข้อมูลที่คุณดึงมาลงใน Airtable

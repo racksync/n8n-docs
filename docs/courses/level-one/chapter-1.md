@@ -7,145 +7,145 @@ contentType: tutorial
 <!-- vale from-microsoft.FirstPerson = NO -->
 # Navigating the Editor UI
 
-In this lesson you will learn how to navigate the [Editor UI](/glossary.md#editor-n8n). We will walk through the [canvas](/glossary.md#canvas-n8n) and show you what each icon means and where to find things you will need while building workflows in n8n.
+ในบทเรียนนี้ คุณจะได้เรียนรู้วิธีนำทาง [Editor UI](/glossary.md#editor-n8n) เราจะพาคุณชม [canvas](/glossary.md#canvas-n8n) และแสดงให้คุณเห็นว่าแต่ละไอคอนหมายถึงอะไร และจะหาสิ่งที่คุณต้องการได้ที่ไหนขณะสร้าง workflows ใน n8n
 
 /// warning | n8n version
-This course is based on n8n version 1.82.1. In other versions, some user interfaces might look different, but this shouldn't impact the core functionality.
+คอร์สนี้อิงตาม n8n เวอร์ชัน 1.82.1 ในเวอร์ชันอื่น user interfaces บางอย่างอาจดูแตกต่างออกไป แต่สิ่งนี้ไม่ควรส่งผลกระทบต่อฟังก์ชันการทำงานหลัก
 ///
 
 ## Getting started
 
-Begin by setting up n8n.
+เริ่มต้นด้วยการตั้งค่า n8n
 
-We recommend starting with [n8n Cloud](https://app.n8n.cloud/register), a hosted solution that doesn't require installation and includes a free trial.
+เราแนะนำให้เริ่มต้นด้วย [n8n Cloud](https://app.n8n.cloud/register) ซึ่งเป็น hosted solution ที่ไม่ต้องติดตั้งและมี free trial
 
 /// note | Alternative set up
-If n8n Cloud isn't a good option for you, you can [self-host with Docker](/hosting/installation/docker.md). This is an advanced option recommended only for technical users familiar with hosting services, Docker, and the command line.
+หาก n8n Cloud ไม่ใช่ตัวเลือกที่ดีสำหรับคุณ คุณสามารถ [self-host with Docker](/hosting/installation/docker.md) ได้ นี่เป็นตัวเลือกขั้นสูงที่แนะนำสำหรับผู้ใช้ทางเทคนิคที่คุ้นเคยกับการโฮสต์บริการ, Docker และ command line เท่านั้น
 ///
 
-For more details on the different ways to set up n8n, see our [platforms documentation](/choose-n8n.md#platforms).
+สำหรับรายละเอียดเพิ่มเติมเกี่ยวกับวิธีการต่างๆ ในการตั้งค่า n8n โปรดดู [platforms documentation](/choose-n8n.md#platforms) ของเรา
 
-Once you have n8n running, open the Editor UI in a browser window. Log in to your n8n instance. Select **Overview** and then **Create Workflow** to view the main canvas.
+เมื่อคุณมี n8n ทำงานแล้ว ให้เปิด Editor UI ในหน้าต่างเบราว์เซอร์ ล็อกอินเข้าสู่ n8n instance ของคุณ เลือก **Overview** จากนั้นเลือก **Create Workflow** เพื่อดู canvas หลัก
 
-It should look like this:
+ควรมีลักษณะดังนี้:
 
 <figure><img src="/_images/courses/level-one/chapter-one/l1-c1-editor-ui.png" alt="Editor UI" style="width:100%"><figcaption align = "center"><i>Editor UI</i></figcaption></figure>
 
 ## Editor UI settings
 
-The editor UI is the web interface where you build [workflows](/workflows/index.md). You can access all your workflows and [credentials](/glossary.md#credential-n8n), as well as support pages, from the Editor UI.
+Editor UI คือ web interface ที่คุณใช้สร้าง [workflows](/workflows/index.md) คุณสามารถเข้าถึง workflows และ [credentials](/glossary.md#credential-n8n) ทั้งหมดของคุณ รวมถึงหน้า support ได้จาก Editor UI
 
 ### Left-side panel
 
-On the left side of the **Editor UI**, there is a panel which contains the core functionalities and settings for managing your workflows. Expand and collapse it by selecting the small arrow icon.
+ทางด้านซ้ายของ **Editor UI** มี panel ที่มีฟังก์ชันการทำงานหลักและ settings สำหรับจัดการ workflows ของคุณ ขยายและยุบได้โดยเลือกไอคอนลูกศรเล็กๆ
 
-The panel contains the following sections:
+panel ประกอบด้วยส่วนต่างๆ ดังนี้:
 
-- **Overview**: Contains all the workflows and credentials you have access to. During this course, create new workflows here.
-- **Projects**: (Not available on Community edition) Projects group workflows and credentials. You can assign [roles](/user-management/rbac/role-types.md) to users in a project to control what they can do in a project. A **Personal** project is available by default.
-- **Admin Panel**: n8n Cloud only. Access your n8n instance usage, billing, and version settings.
-- **Templates**: A collection of pre-made workflows. Great place to get started with common use cases.
-- **Variables**: Used to store and access fixed data across your workflows. This feature is available on the Pro and Enterprise Plans.
-- **All executions**: Contains information about your workflow executions.
-- **Help**: Contains resources around n8n product and community.
-- **Update**: (When updates are available) Indicator for any recent product updates.
-- **Settings**: Under the ellipsis (`...`) menu by your username. Manage users and access settings for a variety of features.
+- **Overview**: ประกอบด้วย workflows และ credentials ทั้งหมดที่คุณเข้าถึงได้ ในระหว่างคอร์สนี้ ให้สร้าง workflows ใหม่ที่นี่
+- **Projects**: (ไม่มีใน Community edition) Projects ใช้จัดกลุ่ม workflows และ credentials คุณสามารถกำหนด [roles](/user-management/rbac/role-types.md) ให้กับ users ใน project เพื่อควบคุมสิ่งที่พวกเขาสามารถทำได้ใน project โดยค่าเริ่มต้นจะมี **Personal** project ให้ใช้งาน
+- **Admin Panel**: n8n Cloud เท่านั้น เข้าถึงการใช้งาน n8n instance, billing และ version settings ของคุณ
+- **Templates**: คอลเลกชันของ workflows ที่สร้างไว้ล่วงหน้า เป็นจุดเริ่มต้นที่ดีสำหรับ use cases ทั่วไป
+- **Variables**: ใช้เพื่อจัดเก็บและเข้าถึงข้อมูลคงที่ใน workflows ของคุณ ฟีเจอร์นี้มีให้ใน Pro และ Enterprise Plans
+- **All executions**: ประกอบด้วยข้อมูลเกี่ยวกับ workflow executions ของคุณ
+- **Help**: ประกอบด้วยแหล่งข้อมูลเกี่ยวกับผลิตภัณฑ์และชุมชน n8n
+- **Update**: (เมื่อมีการอัปเดต) ตัวบ่งชี้สำหรับการอัปเดตผลิตภัณฑ์ล่าสุด
+- **Settings**: ใต้เมนูจุดไข่ปลา (`...`) ข้างชื่อผู้ใช้ของคุณ จัดการ users และเข้าถึง settings สำหรับฟีเจอร์ต่างๆ
 
 <figure style="text-align: center;"><img src="/_images/courses/level-one/chapter-one/l1-c1-side-panel.png" alt="Editor UI left-side menu" style="height: 600px;"><figcaption align = "center"><i>Editor UI left-side menu</i></figcaption></figure>
 
 ### Top bar
 
-The top bar of the **Editor UI** contains the following information:
+แถบด้านบนของ **Editor UI** ประกอบด้วยข้อมูลต่อไปนี้:
 
-- **Workflow Name**: By default, n8n names a new workflow as "My workflow", but you can edit the name at any time.
-- **+ Add Tag**: Tags help you organise your workflows by category, use case, or whatever is relevant for you. Tags are optional.
-- **Inactive/active toggle**: This button activates or deactivates the current workflow. By default, workflows are deactivated.
-- **Share**: You can share and collaborate with others on workflows on the Starter, Pro, and Enterprise plans.
-- **Save**: This button saves the current workflow.
-- **History**: Once you save your workflow, you can view previous versions here.
+- **Workflow Name**: โดยค่าเริ่มต้น n8n จะตั้งชื่อ workflow ใหม่ว่า "My workflow" แต่คุณสามารถแก้ไขชื่อได้ตลอดเวลา
+- **+ Add Tag**: Tags ช่วยให้คุณจัดระเบียบ workflows ตามหมวดหมู่, use case หรืออะไรก็ตามที่เกี่ยวข้องกับคุณ Tags เป็นทางเลือก
+- **Inactive/active toggle**: ปุ่มนี้เปิดหรือปิดใช้งาน workflow ปัจจุบัน โดยค่าเริ่มต้น workflows จะถูกปิดใช้งาน
+- **Share**: คุณสามารถแชร์และทำงานร่วมกับผู้อื่นบน workflows ได้ในแผน Starter, Pro และ Enterprise
+- **Save**: ปุ่มนี้บันทึก workflow ปัจจุบัน
+- **History**: เมื่อคุณบันทึก workflow ของคุณแล้ว คุณสามารถดูเวอร์ชันก่อนหน้าได้ที่นี่
 
 <figure><img src="/_images/courses/level-one/chapter-one/l1-c1-top-bar.png" alt="Editor UI top bar" style="width:100%"><figcaption align = "center"><i>Editor UI top bar</i></figcaption></figure>
 
 ### Canvas
 
-The **canvas** is the gray dotted grid background in the Editor UI. It displays several icons and a node with different functionalities:
+**canvas** คือพื้นหลังตารางกริดลายจุดสีเทาใน Editor UI จะแสดงไอคอนหลายอย่างและ node ที่มีฟังก์ชันการทำงานต่างๆ:
 
-- Buttons to zoom the canvas to fit the screen, zoom in or out of the canvas, and tidy up the nodes on screen.
-- A button to **Test workflow** once you add your first node. When you click on it, n8n executes all nodes on the canvas in sequence.
-- A button with a **+** sign inside. This button opens the nodes panel.
-- A button with a note icon inside. This button adds a [sticky note](/workflows/components/sticky-notes.md) to the canvas (visible when hovering on the top right + icon).
-- A dotted square with the text "Add first step." This is where you add your first node.
+- ปุ่มสำหรับซูม canvas ให้พอดีกับหน้าจอ, ซูมเข้าหรือออกจาก canvas และจัดระเบียบ nodes บนหน้าจอ
+- ปุ่ม **Test workflow** เมื่อคุณเพิ่ม node แรกของคุณ เมื่อคุณคลิก n8n จะ εκτέλεση (execute) nodes ทั้งหมดบน canvas ตามลำดับ
+- ปุ่มที่มีเครื่องหมาย **+** อยู่ข้างใน ปุ่มนี้จะเปิด nodes panel
+- ปุ่มที่มีไอคอนโน้ตอยู่ข้างใน ปุ่มนี้จะเพิ่ม [sticky note](/workflows/components/sticky-notes.md) ลงใน canvas (มองเห็นได้เมื่อวางเมาส์เหนือไอคอน + ที่มุมขวาบน)
+- สี่เหลี่ยมลายจุดพร้อมข้อความ "Add first step" นี่คือที่ที่คุณเพิ่ม node แรกของคุณ
 
 <figure><img src="/_images/courses/level-one/chapter-one/l1-c1-canvas.png" alt="Workflow canvas" style="width:100%"><figcaption align = "center"><i>Workflow canvas</i></figcaption></figure>
 
 /// note | Moving the canvas
-You can move the workflow canvas around in three ways:
+คุณสามารถย้าย workflow canvas ไปมาได้สามวิธี:
 
-- Select ++ctrl+left-button++ on the canvas and move it around.
-- Select ++middle-button++ on the canvas and move it around.
-- Place two fingers on your touchpad and slide.
+- เลือก ++ctrl+left-button++ บน canvas แล้วเลื่อนไปมา
+- เลือก ++middle-button++ บน canvas แล้วเลื่อนไปมา
+- วางสองนิ้วบน touchpad ของคุณแล้วเลื่อน
 ///
 
 
-Don't worry about workflow execution and activation for now; we'll explain these concepts later on in the course.
+ไม่ต้องกังวลเกี่ยวกับ workflow execution และ activation ในตอนนี้ เราจะอธิบายแนวคิดเหล่านี้ในภายหลังในคอร์ส
 
 ## Nodes
 
-You can think of nodes as building blocks that serve different functions that, when put together, make up a functioning machine: an automated workflow.
+คุณสามารถคิดว่า nodes เป็นเหมือน building blocks ที่ทำหน้าที่ต่างๆ กัน ซึ่งเมื่อนำมารวมกันแล้ว จะกลายเป็นเครื่องจักรที่ทำงานได้: automated workflow
 
 /// note | Node
-A node is an individual step in your workflow: one that either (a) loads, (b) processes, or (c) sends data.
+Node คือขั้นตอนแต่ละขั้นตอนใน workflow ของคุณ: ขั้นตอนที่ (a) โหลด, (b) ประมวลผล หรือ (c) ส่งข้อมูล
 ///
 
-Based on their function, n8n classifies nodes into four types:
+ตามฟังก์ชันการทำงาน n8n แบ่งประเภท nodes ออกเป็นสี่ประเภท:
 
-- **App** or **Action Nodes** add, remove, and edit data; request and send external data; and trigger events in other systems. Refer to the [Action nodes library](/integrations/builtin/app-nodes/index.md) for a full list of these nodes.
-- **Trigger Nodes** start a workflow and supply the initial data. Refer to the [Trigger nodes library](/integrations/builtin/trigger-nodes/index.md) for a list of trigger nodes.
-- **Core Nodes** can be trigger or app nodes. Whereas most nodes connect to a specific external service, core nodes provide functionality such as logic, scheduling, or generic API calls. Refer to the [Core Nodes library](/integrations/builtin/core-nodes/index.md) for a full list of core nodes.
-- **Cluster Nodes** are node groups that work together to provide functionality in a workflow, primarily for AI workflows. Refer to [Cluster nodes](/integrations/builtin/cluster-nodes/index.md) for more information.
+- **App** or **Action Nodes** เพิ่ม ลบ และแก้ไขข้อมูล; ร้องขอและส่งข้อมูลภายนอก; และ trigger events ในระบบอื่น อ้างอิง [Action nodes library](/integrations/builtin/app-nodes/index.md) สำหรับรายการ nodes เหล่านี้ทั้งหมด
+- **Trigger Nodes** เริ่มต้น workflow และให้ข้อมูลเริ่มต้น อ้างอิง [Trigger nodes library](/integrations/builtin/trigger-nodes/index.md) สำหรับรายการ trigger nodes
+- **Core Nodes** สามารถเป็น trigger หรือ app nodes ได้ ในขณะที่ nodes ส่วนใหญ่เชื่อมต่อกับบริการภายนอกที่เฉพาะเจาะจง core nodes ให้ฟังก์ชันการทำงาน เช่น logic, scheduling หรือ generic API calls อ้างอิง [Core Nodes library](/integrations/builtin/core-nodes/index.md) สำหรับรายการ core nodes ทั้งหมด
+- **Cluster Nodes** คือกลุ่มของ nodes ที่ทำงานร่วมกันเพื่อให้ฟังก์ชันการทำงานใน workflow โดยหลักสำหรับ AI workflows อ้างอิง [Cluster nodes](/integrations/builtin/cluster-nodes/index.md) สำหรับข้อมูลเพิ่มเติม
 
 /// note | Learn more
-Refer to [Node types](/integrations/builtin/node-types.md) for a more detailed explanation of all node types.
+อ้างอิง [Node types](/integrations/builtin/node-types.md) สำหรับคำอธิบายโดยละเอียดเพิ่มเติมเกี่ยวกับ node types ทั้งหมด
 ///
 
 ### Finding nodes
 
-You can find all available nodes in the **nodes panel** on the right side of the Editor UI. There are three ways in which you can open the nodes panel:
+คุณสามารถค้นหา nodes ที่มีอยู่ทั้งหมดได้ใน **nodes panel** ทางด้านขวาของ Editor UI มีสามวิธีที่คุณสามารถเปิด nodes panel ได้:
 
-- Click the **+** icon in the top right corner of the canvas.
-- Click the **+** icon on the right side of an existing node on the canvas (the node to which you want to add another one).
-- Click the ++tab++ key on your keyboard.
+- คลิกไอคอน **+** ที่มุมขวาบนของ canvas
+- คลิกไอคอน **+** ทางด้านขวาของ node ที่มีอยู่บน canvas (node ที่คุณต้องการเพิ่ม node อื่นเข้าไป)
+- คลิกปุ่ม ++tab++ บนคีย์บอร์ดของคุณ
 
 <figure style="text-align: center; width:50%; margin:auto;"><img src="/_images/courses/level-one/chapter-one/l1-c1-node-menu-drilldown.gif" alt="Nodes panel"><figcaption align = "center"><i>Nodes panel</i></figcaption></figure>
 
-In the nodes panel, notice that when adding your first node, you will see the different trigger node categories. After you have added your trigger node, you'll see that the nodes panel changes to show Advanced AI, Actions in an App, Data transformation, Flow, Core, and Human in the loop nodes.
+ใน nodes panel สังเกตว่าเมื่อเพิ่ม node แรกของคุณ คุณจะเห็นหมวดหมู่ trigger node ต่างๆ หลังจากที่คุณเพิ่ม trigger node ของคุณแล้ว คุณจะเห็นว่า nodes panel เปลี่ยนไปเพื่อแสดง Advanced AI, Actions in an App, Data transformation, Flow, Core และ Human in the loop nodes
 
-If you want to find a specific node, use the search input at the top of the nodes panel.
+หากคุณต้องการค้นหา node ที่เฉพาะเจาะจง ให้ใช้ช่องค้นหาที่ด้านบนของ nodes panel
 
 
 ### Adding nodes
 
-There are two ways to add nodes to your canvas:
+มีสองวิธีในการเพิ่ม nodes ลงใน canvas ของคุณ:
 
-- Select the node you want in the nodes panel. The new node will automatically connect to the selected node on the canvas.
-- Drag and drop the node from the nodes panel to the canvas.
+- เลือก node ที่คุณต้องการใน nodes panel node ใหม่จะเชื่อมต่อกับ node ที่เลือกบน canvas โดยอัตโนมัติ
+- ลากและวาง node จาก nodes panel ไปยัง canvas
 
 ### Node buttons
 
-If you hover on a node, you'll notice that three icons appear on top:
+หากคุณวางเมาส์เหนือ node คุณจะสังเกตเห็นว่ามีไอคอนสามอันปรากฏขึ้นด้านบน:
 
 - Execute the node (Play icon)
 - Deactivate/Activate the node (Power icon)
 - Delete the node (Trash icon)
 
-There will also be an ellipsis icon, which opens a context menu containing other [node options](/workflows/components/nodes.md#node-controls).
+นอกจากนี้ยังมีไอคอนจุดไข่ปลา ซึ่งจะเปิด context menu ที่มี [node options](/workflows/components/nodes.md#node-controls) อื่นๆ
 
 /// note | Moving a workflow
-To move a workflow around the canvas, select all nodes with your mouse or ++ctrl+a++, select and hold on a node, then drag it to any point you want on the canvas.
+หากต้องการย้าย workflow ไปรอบๆ canvas ให้เลือก nodes ทั้งหมดด้วยเมาส์ของคุณหรือ ++ctrl+a++ เลือกค้างไว้ที่ node จากนั้นลากไปยังจุดใดก็ได้ที่คุณต้องการบน canvas
 ///
 
 ## Summary
 
-In this lesson you learned how to navigate the Editor UI, what the icons mean, how to access the left-side and node panels, and how to add nodes to the canvas.
+ในบทเรียนนี้ คุณได้เรียนรู้วิธีนำทาง Editor UI, ความหมายของไอคอนต่างๆ, วิธีเข้าถึง left-side panel และ node panels และวิธีเพิ่ม nodes ลงใน canvas
 
-In the next lesson, you will build a mini-workflow to put into practice what you've learned so far.
+ในบทเรียนถัดไป คุณจะได้สร้าง mini-workflow เพื่อฝึกฝนสิ่งที่คุณได้เรียนรู้มาจนถึงตอนนี้

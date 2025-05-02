@@ -5,48 +5,48 @@ contentType: reference
 
 # Item linking errors
 
-In n8n you can reference data from any previous node. This doesn't have to be the node just before: it can be any previous node in the chain. When referencing nodes further back, you use the expression syntax `$(node_name).item`. 
+ใน n8n คุณสามารถอ้างอิงข้อมูลจาก node ก่อนหน้าใดก็ได้ ไม่จำเป็นต้องเป็น node ที่อยู่ก่อนหน้าทันที: สามารถเป็น node ใดก็ได้ที่อยู่ก่อนหน้าในสายโซ่ เมื่ออ้างอิง node ที่อยู่ห่างออกไป คุณจะใช้ expression syntax `$(node_name).item`
 
 <figure markdown>
 ![A diagram showing the threads linking multiple items back through a workflow](/_images/data/data-mapping/data-item-linking/item-linking-multiple-lines.png)
-<figcaption markdown>Diagram of threads for different items. Due to the item linking, you can get the actor for each movie using `$('Get famous movie actors').item`.</figcaption>
+<figcaption markdown>แผนภาพแสดงสายใย (threads) สำหรับ item ต่างๆ เนื่องจากการ link item คุณสามารถรับนักแสดงสำหรับภาพยนตร์แต่ละเรื่องได้โดยใช้ `$('Get famous movie actors').item`</figcaption>
 </figure>
 
-Since the previous node can have multiple items in it, n8n needs to know which one to use. When using `.item`, n8n figures this out for you behind the scenes. Refer to [Item linking concepts](/data/data-mapping/data-item-linking/item-linking-concepts.md) for detailed information on how this works.
+เนื่องจาก node ก่อนหน้าสามารถมี item ได้หลายรายการ n8n จึงจำเป็นต้องรู้ว่าจะใช้รายการใด เมื่อใช้ `.item` n8n จะคำนวณสิ่งนี้ให้คุณเบื้องหลัง โปรดดู [Item linking concepts](/data/data-mapping/data-item-linking/item-linking-concepts.md) สำหรับข้อมูลโดยละเอียดเกี่ยวกับวิธีการทำงานนี้
 
-`.item` fails if information is missing. To figure out which item to use, n8n maintains a thread back through the workflow's nodes for each item. For a given item, this thread tells n8n which items in previous nodes generated it. To find the matching item in a given previous node, n8n follows this thread back until it reaches the node in question.
+`.item` จะล้มเหลวหากข้อมูลหายไป ในการหาว่า item ใดที่จะใช้ n8n จะรักษา thread ย้อนกลับไปผ่าน node ต่างๆ ของ workflow สำหรับแต่ละ item สำหรับ item ที่กำหนด thread นี้จะบอก n8n ว่า item ใดใน node ก่อนหน้าที่สร้างมันขึ้นมา ในการค้นหา item ที่ตรงกันใน node ก่อนหน้าที่กำหนด n8n จะตาม thread นี้ย้อนกลับไปจนกว่าจะถึง node ดังกล่าว
 
-When using `.item`, n8n displays an error when:
+เมื่อใช้ `.item` n8n จะแสดงข้อผิดพลาดเมื่อ:
 
-- The thread is broken
-- The thread points to more than one item in the previous node (as it's unclear which one to use)
+-   thread ขาดหาย
+-   thread ชี้ไปยัง item มากกว่าหนึ่งรายการใน node ก่อนหน้า (เนื่องจากไม่ชัดเจนว่าจะใช้รายการใด)
 
-To solve these errors, you can either avoid using `.item`, or fix the root cause.
+ในการแก้ไขข้อผิดพลาดเหล่านี้ คุณสามารถหลีกเลี่ยงการใช้ `.item` หรือแก้ไขสาเหตุที่แท้จริง
 
-You can avoid `.item` by using `.first()`, `.last()` or `.all()[index]` instead. They require you to know the position of the item that you’re targeting within the target node's output items. Refer to [Built in methods and variables | Output of other nodes](/code/builtin/output-other-nodes.md) for more detail on these methods.
+คุณสามารถหลีกเลี่ยง `.item` ได้โดยใช้ `.first()`, `.last()` หรือ `.all()[index]` แทน วิธีการเหล่านี้ต้องการให้คุณทราบตำแหน่งของ item ที่คุณกำลังกำหนดเป้าหมายภายใน output item ของ node เป้าหมาย โปรดดู [Built in methods and variables | Output of other nodes](/code/builtin/output-other-nodes.md) สำหรับรายละเอียดเพิ่มเติมเกี่ยวกับ method เหล่านี้
 
-The fix for the root cause depends on the exact error.
+การแก้ไขสาเหตุที่แท้จริงขึ้นอยู่กับข้อผิดพลาดที่แน่นอน
 
 ### Fix for 'Info for expressions missing from previous node'
 
-If you see this error message:
+หากคุณเห็นข้อความแสดงข้อผิดพลาดนี้:
 
 > ERROR: Info for expression missing from previous node
 
-There's a node in the chain that doesn't return pairing information. The solution here depends on the type of the previous node:
+มี node ในสายโซ่ที่ไม่ส่งคืนข้อมูลการจับคู่ (pairing information) วิธีแก้ปัญหาที่นี่ขึ้นอยู่กับประเภทของ node ก่อนหน้า:
 
-- Code nodes: make sure you return which input items the node used to produce each output item. Refer to [Item linking in the code node](/data/data-mapping/data-item-linking/item-linking-code-node.md) for more information.
-- Custom or community nodes: the node creator needs to update the node to return which input items it uses to produce each output item. Refer to [Item linking for node creators](/data/data-mapping/data-item-linking/item-linking-node-building.md) for more information.
+-   Code nodes: ตรวจสอบให้แน่ใจว่าคุณส่งคืน input item ใดที่ node ใช้ในการผลิตแต่ละ output item โปรดดู [Item linking in the code node](/data/data-mapping/data-item-linking/item-linking-code-node.md) สำหรับข้อมูลเพิ่มเติม
+-   Custom หรือ community nodes: ผู้สร้าง node จำเป็นต้องอัปเดต node เพื่อส่งคืน input item ใดที่ใช้ในการผลิตแต่ละ output item โปรดดู [Item linking for node creators](/data/data-mapping/data-item-linking/item-linking-node-building.md) สำหรับข้อมูลเพิ่มเติม
 
 ### Fix for 'Multiple matching items for expression'
 
-This is the error message:
+นี่คือข้อความแสดงข้อผิดพลาด:
 
 > ERROR: Multiple matching items for expression
 
-Sometimes n8n uses multiple items to create a single item. Examples include the Summarize, Aggregate, and Merge nodes. These nodes can combine information from multiple items.
+บางครั้ง n8n ใช้หลาย item เพื่อสร้าง item เดียว ตัวอย่างเช่น node Summarize, Aggregate และ Merge node เหล่านี้สามารถรวมข้อมูลจากหลาย item ได้
 
-When you use `.item` and there are multiple possible matches, n8n doesn't know which one to use. To solve this you can either:
+เมื่อคุณใช้ `.item` และมีรายการที่ตรงกันหลายรายการที่เป็นไปได้ n8n จะไม่รู้ว่าจะใช้รายการใด ในการแก้ปัญหานี้ คุณสามารถ:
 
-- Use `.first()`, `.last()` or `.all()[index]` instead. Refer to [Built in methods and variables | Output of other nodes](/code/builtin/output-other-nodes.md) for more detail on these methods.
-- Reference a different node that contains the same information, but doesn't have multiple matching items.
+-   ใช้ `.first()`, `.last()` หรือ `.all()[index]` แทน โปรดดู [Built in methods and variables | Output of other nodes](/code/builtin/output-other-nodes.md) สำหรับรายละเอียดเพิ่มเติมเกี่ยวกับ method เหล่านี้
+-   อ้างอิง node อื่นที่มีข้อมูลเดียวกัน แต่ไม่มี item ที่ตรงกันหลายรายการ

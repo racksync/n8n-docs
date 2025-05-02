@@ -5,63 +5,63 @@ contentType: tutorial
 
 # Dealing with errors in workflows
 
-Sometimes you build a nice workflow, but it fails when you try to execute it. Workflow executions may fail for a variety of reasons, ranging from straightforward problems with incorrectly configuring a node or a failure in a third-party service to more mysterious errors.
+บางครั้งคุณสร้าง workflow ที่ดี แต่กลับล้มเหลวเมื่อพยายาม execute มัน การ execute workflow อาจล้มเหลวได้จากหลายสาเหตุ ตั้งแต่ปัญหาตรงไปตรงมา เช่น การตั้งค่า node ไม่ถูกต้อง หรือความล้มเหลวใน third-party service ไปจนถึง error ที่ลึกลับกว่านั้น
 
-But don't panic. In this lesson, you'll learn how you can troubleshoot errors so you can get your workflow up and running as soon as possible.
+แต่อย่าเพิ่งตกใจ ในบทเรียนนี้ คุณจะได้เรียนรู้วิธีแก้ไขปัญหา error เพื่อให้ workflow ของคุณกลับมาทำงานได้โดยเร็วที่สุด
 
 
 ## Checking failed workflows
 
-n8n tracks executions of your workflows.
+n8n จะติดตามการ executions ของ workflows ของคุณ
 
-When one of your workflows fails, you can check the Executions log to see what went wrong. The Executions log shows you a list of the latest execution time, status, mode, and running time of your saved workflows.
+เมื่อ workflow ของคุณล้มเหลว คุณสามารถตรวจสอบ Executions log เพื่อดูว่าเกิดอะไรขึ้น Executions log จะแสดงรายการของเวลา execution ล่าสุด, status, mode, และ running time ของ workflows ที่คุณบันทึกไว้
 
-Open the Executions log by selecting [**Executions**](/workflows/executions/index.md#execution-modes) in the left-side panel. 
+เปิด Executions log โดยเลือก [**Executions**](/workflows/executions/index.md#execution-modes) ในแผงด้านซ้าย
 
-To investigate a specific failed execution from the list, select the name or the **View** button that appears when you hover over the row of the respective execution.
+หากต้องการตรวจสอบ execution ที่ล้มเหลวจากรายการ ให้เลือกชื่อหรือปุ่ม **View** ที่ปรากฏขึ้นเมื่อคุณวางเมาส์เหนือแถวของ execution นั้นๆ
 
 <figure><img src="/_images/courses/level-two/chapter-four/explanation_workflowexecutions.png" alt="Executions log" style="width:100%"><figcaption align = "center"><i>Executions log</i></figcaption></figure>
 
 
-This will open the workflow in read-only mode, where you can see the execution of each node. This representation can help you identify at what point the workflow ran into issues.
+การทำเช่นนี้จะเปิด workflow ในโหมด read-only ซึ่งคุณสามารถดู execution ของแต่ละ node ได้ การแสดงผลแบบนี้สามารถช่วยให้คุณระบุได้ว่า workflow เกิดปัญหาที่จุดใด
 
-To toggle between viewing the execution and the editor, select the **Editor | Executions** button at the top of the page.
+หากต้องการสลับระหว่างการดู execution และ editor ให้เลือกปุ่ม **Editor | Executions** ที่ด้านบนของหน้า
 
 <figure><img src="/_images/courses/level-two/chapter-four/explanation_workflowexecutions_readonly.png" alt="Workflow execution view" style="width:100%"><figcaption align = "center"><i>Workflow execution view</i></figcaption></figure>
 
 ## Catching erroring workflows
 
-To catch failed workflows, create a separate [**Error Workflow**](/flow-logic/error-handling.md) with the [**Error Trigger node**](/integrations/builtin/core-nodes/n8n-nodes-base.errortrigger.md). This workflow will only execute if the main workflow execution fails.
+หากต้องการดักจับ workflows ที่ล้มเหลว ให้สร้าง [**Error Workflow**](/flow-logic/error-handling.md) แยกต่างหากด้วย [**Error Trigger node**](/integrations/builtin/core-nodes/n8n-nodes-base.errortrigger.md) workflow นี้จะ execute ก็ต่อเมื่อ main workflow execution ล้มเหลวเท่านั้น
 
-Use additional nodes in your **Error Workflow** that make sense, like sending notifications about the failed workflow and its errors using email or Slack.
+ใช้ nodes เพิ่มเติมใน **Error Workflow** ของคุณตามความเหมาะสม เช่น การส่งการแจ้งเตือนเกี่ยวกับ workflow ที่ล้มเหลวและ errors ของมันโดยใช้อีเมลหรือ Slack
 
-To receive error messages for a failed workflow, set the **Error Workflow** in the [Workflow Settings](/workflows/settings.md) to an Error Workflow that uses an **Error Trigger node**.
+หากต้องการรับ error messages สำหรับ workflow ที่ล้มเหลว ให้ตั้งค่า **Error Workflow** ใน [Workflow Settings](/workflows/settings.md) เป็น Error Workflow ที่ใช้ **Error Trigger node**
 
-The only difference between a regular workflow and an Error Workflow is that the latter contains an **Error Trigger node**. Make sure to create this node before you set this as another workflow's designated Error Workflow.
+ความแตกต่างเพียงอย่างเดียวระหว่าง workflow ปกติและ Error Workflow คือ workflow หลังจะมี **Error Trigger node** ตรวจสอบให้แน่ใจว่าคุณสร้าง node นี้ก่อนที่จะตั้งค่าให้เป็น Error Workflow ที่กำหนดสำหรับ workflow อื่น
 
 /// note | Error workflows
-- If a workflow uses the Error Trigger node, you don't have to activate the workflow.
-- If a workflow contains the Error Trigger node, by default, the workflow uses itself as the error workflow.
-- You can't test error workflows when running workflows manually. The Error trigger only runs when an automatic workflow errors.
-- You can set the same Error Workflow for multiple workflows.
+- หาก workflow ใช้ Error Trigger node คุณไม่จำเป็นต้อง activate workflow นั้น
+- หาก workflow มี Error Trigger node โดย default แล้ว workflow นั้นจะใช้ตัวเองเป็น error workflow
+- คุณไม่สามารถทดสอบ error workflows เมื่อรัน workflows ด้วยตนเองได้ Error trigger จะทำงานก็ต่อเมื่อ workflow อัตโนมัติเกิด error เท่านั้น
+- คุณสามารถตั้งค่า Error Workflow เดียวกันสำหรับหลาย workflows ได้
 ///
 
 ### Exercise
 
-In the previous chapters, you've built several small workflows. Now, pick one of them that you want to monitor and create an Error Workflow for it:
+ในบทก่อนหน้านี้ คุณได้สร้าง workflows เล็กๆ หลายอัน ตอนนี้ เลือก workflow หนึ่งที่คุณต้องการ monitor และสร้าง Error Workflow สำหรับมัน:
 
-1. Create a new Error Workflow.
-2. Add the **Error Trigger node**.
-3. Connect a node for the communication platform of your choice to the Error Trigger node, like [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack.md), [Discord](/integrations/builtin/app-nodes/n8n-nodes-base.discord/index.md), [Telegram](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/index.md), or even [Gmail](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/index.md) or a more generic [Send Email](/integrations/builtin/core-nodes/n8n-nodes-base.sendemail.md).
-4. In the workflow you want to monitor, open the [Workflow Settings](/workflows/settings.md) and select the new Error Workflow you just created. Note that this workflow needs to run automatically to trigger the error workflow.
+1. สร้าง Error Workflow ใหม่
+2. เพิ่ม **Error Trigger node**
+3. เชื่อมต่อ node สำหรับ communication platform ที่คุณเลือกเข้ากับ Error Trigger node เช่น [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack.md), [Discord](/integrations/builtin/app-nodes/n8n-nodes-base.discord/index.md), [Telegram](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/index.md), หรือแม้แต่ [Gmail](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/index.md) หรือ [Send Email](/integrations/builtin/core-nodes/n8n-nodes-base.sendemail.md) ทั่วไป
+4. ใน workflow ที่คุณต้องการ monitor ให้เปิด [Workflow Settings](/workflows/settings.md) และเลือก Error Workflow ใหม่ที่คุณเพิ่งสร้าง โปรดทราบว่า workflow นี้ต้องทำงานโดยอัตโนมัติเพื่อ trigger error workflow
 
 ??? note "Show me the solution"
 
-	The workflow for this exercise looks like this:
+	workflow สำหรับแบบฝึกหัดนี้มีลักษณะดังนี้:
 
 	<figure><img src="/_images/courses/level-two/chapter-four/exercise_errors_errortriggernode_workflow.png" alt="" style="width:100%"><figcaption align = "center"><i>Error workflow</i></figcaption></figure>
 
-	To check the configuration of the nodes, you can copy the JSON workflow code below and paste it into your Editor UI:
+	หากต้องการตรวจสอบการกำหนดค่าของ nodes คุณสามารถคัดลอกโค้ด JSON workflow ด้านล่างและวางลงใน Editor UI ของคุณ:
 
 	```json
 	{
@@ -118,24 +118,24 @@ In the previous chapters, you've built several small workflows. Now, pick one of
 
 ## Throwing exceptions in workflows
 
-Another way of troubleshooting workflows is to include a [**Stop and Error node**](/integrations/builtin/core-nodes/n8n-nodes-base.stopanderror.md) in your workflow. This node throws an error. You can specify the error type:
+อีกวิธีในการแก้ไขปัญหา workflows คือการใส่ [**Stop and Error node**](/integrations/builtin/core-nodes/n8n-nodes-base.stopanderror.md) ใน workflow ของคุณ node นี้จะ throw error คุณสามารถระบุประเภทของ error ได้:
 
-- **Error Message**: returns a custom message about the error
-- **Error Object**: returns the type of error
+- **Error Message**: คืนค่า custom message เกี่ยวกับ error
+- **Error Object**: คืนค่าประเภทของ error
 
-You can only use the **Stop and Error node** as the last node in a workflow.
+คุณสามารถใช้ **Stop and Error node** เป็น node สุดท้ายใน workflow เท่านั้น
 
 /// note | When to throw errors
-Throwing exceptions with the **Stop and Error node** is useful for verifying the data (or assumptions about the data) from a node and returning custom error messages.
+การ throw exceptions ด้วย **Stop and Error node** มีประโยชน์สำหรับการตรวจสอบข้อมูล (หรือสมมติฐานเกี่ยวกับข้อมูล) จาก node และคืนค่า custom error messages
 
-If you are working with data from a third-party service, you may come across problems such as:
+หากคุณกำลังทำงานกับข้อมูลจาก third-party service คุณอาจพบปัญหาเช่น:
 
-- Wrongly formatted JSON output
-- Data with the wrong type (for example, numeric data that has a non-numeric value)
-- Missing values
-- Errors from remote servers
+- ผลลัพธ์ JSON ที่จัดรูปแบบไม่ถูกต้อง
+- ข้อมูลที่มีประเภทผิด (เช่น ข้อมูลตัวเลขที่มีค่าที่ไม่ใช่ตัวเลข)
+- ค่าที่หายไป
+- Errors จาก remote servers
 
-Though this kind of invalid data might not cause the workflow to fail right away, it could cause problems later on, and then it can become difficult to track the source error. This is why it's better to throw an error at the time you know there might be a problem.
+แม้ว่าข้อมูลที่ไม่ถูกต้องประเภทนี้อาจไม่ทำให้ workflow ล้มเหลวในทันที แต่อาจทำให้เกิดปัญหาในภายหลัง และจากนั้นอาจเป็นเรื่องยากที่จะติดตาม source error นี่คือเหตุผลว่าทำไมจึงควร throw error ณ เวลาที่คุณรู้ว่าอาจมีปัญหา
 
 <figure><img src="/_images/courses/level-two/chapter-four/exercise_errors_stopanderror.png" alt="Stop and Error node with error message" style="width:100%"><figcaption align = "center"><i>Stop and Error node with error message</i></figcaption></figure>
 ///

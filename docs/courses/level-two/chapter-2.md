@@ -5,39 +5,39 @@ contentType: tutorial
 
 # Processing different data types
 
-In this chapter, you will learn how to process different types of data using [n8n core nodes](/workflows/components/nodes.md).
+ในบทนี้ คุณจะได้เรียนรู้วิธีการประมวลผลข้อมูลประเภทต่างๆ โดยใช้ [n8n core nodes](/workflows/components/nodes.md)
 
 
 ## HTML and XML data
 
-You're most likely familiar with HTML and XML.
+คุณน่าจะคุ้นเคยกับ HTML และ XML อยู่แล้ว
 
 /// note | HTML vs. XML
-HTML is a markup language used to describe the structure and semantics of a web page. XML looks similar to HTML, but the tag names are different, as they describe the kind of data they hold.
+HTML เป็น markup language ที่ใช้ในการอธิบายโครงสร้างและความหมายของหน้าเว็บ XML ดูคล้ายกับ HTML แต่ชื่อ tag จะแตกต่างกัน เนื่องจากใช้อธิบายประเภทของข้อมูลที่เก็บอยู่
 ///
-If you need to process HTML or XML data in your n8n workflows, use the [**HTML node**](/integrations/builtin/core-nodes/n8n-nodes-base.html.md) or the [**XML node**](/integrations/builtin/core-nodes/n8n-nodes-base.xml.md).
+หากคุณต้องการประมวลผลข้อมูล HTML หรือ XML ใน n8n workflows ของคุณ ให้ใช้ [**HTML node**](/integrations/builtin/core-nodes/n8n-nodes-base.html.md) หรือ [**XML node**](/integrations/builtin/core-nodes/n8n-nodes-base.xml.md)
 
-Use the **HTML node** to extract HTML content of a webpage by referencing CSS selectors. This is useful if you want to collect structured information from a website (web-scraping).
+ใช้ **HTML node** เพื่อดึงเนื้อหา HTML ของหน้าเว็บโดยอ้างอิง CSS selectors ซึ่งมีประโยชน์หากคุณต้องการรวบรวมข้อมูลที่มีโครงสร้างจากเว็บไซต์ (web-scraping)
 
 ### HTML Exercise
 
-Let's get the title of the latest n8n blog post:
+มาลองดึง title ของโพสต์ล่าสุดในบล็อก n8n กัน:
 
-1. Use the **HTTP Request node** to make a GET request to the URL `https://blog.n8n.io/` (this endpoint requires no authentication).
-2. Connect an **HTML node** and configure it to extract the title of the first blog post on the page.
-	- Hint: If you're not familiar with CSS selectors or reading HTML, the CSS selector `.post .item-title  a` should help!
+1. ใช้ **HTTP Request node** เพื่อส่ง GET request ไปยัง URL `https://blog.n8n.io/` (endpoint นี้ไม่ต้องใช้ authentication)
+2. เชื่อมต่อ **HTML node** และกำหนดค่าให้ดึง title ของโพสต์แรกบนหน้าเว็บ
+	- คำใบ้: หากคุณไม่คุ้นเคยกับ CSS selectors หรือการอ่าน HTML, CSS selector `.post .item-title  a` น่าจะช่วยได้!
 
 ??? note "Show me the solution"
 
-	1. Configure the HTTP Request node with the following parameters:
+	1. กำหนดค่า HTTP Request node ด้วย parameters ต่อไปนี้:
 		- **Authentication**: None
 		- **Request Method**: GET
 		- **URL**: https://blog.n8n.io/
-	The result should look like this:
+	ผลลัพธ์ควรมีลักษณะดังนี้:
 
 	<figure><img src="/_images/courses/level-two/chapter-two/exercise_html_httprequestnode.png" alt="Result of HTTP Request node" style="width:100%"><figcaption align = "center"><i>Result of HTTP Request node</i></figcaption></figure>
 
-	2. Connect an **HTML node** to the **HTTP Request node** and configure the former's parameters:
+	2. เชื่อมต่อ **HTML node** เข้ากับ **HTTP Request node** และกำหนดค่า parameters ของ HTML node ดังนี้:
 		- **Operation**: Extract HTML Content
 		- **Source Data**: JSON
 		- **JSON Property**: data
@@ -46,42 +46,42 @@ Let's get the title of the latest n8n blog post:
 			- **CSS Selector**: `.post .item-title  a`
 			- **Return Value**: HTML
 
-	You can add more values to extract more data.
+	คุณสามารถเพิ่ม values เพิ่มเติมเพื่อดึงข้อมูลอื่นๆ ได้
 
-	The result should look like this:
+	ผลลัพธ์ควรมีลักษณะดังนี้:
 
 	<figure><img src="/_images/courses/level-two/chapter-two/exercise_html_htmlextractnode.png" alt="Result of HTML Extract node" style="width:100%"><figcaption align = "center"><i>Result of HTML Extract node</i></figcaption></figure>
 
 
-Use the **XML node** to convert XML to JSON and JSON to XML. This operation is useful if you work with different web services that use either XML or JSON and need to get and submit data between them in the two formats.
+ใช้ **XML node** เพื่อแปลง XML เป็น JSON และ JSON เป็น XML การดำเนินการนี้มีประโยชน์หากคุณทำงานกับ web services ต่างๆ ที่ใช้ XML หรือ JSON และต้องการรับและส่งข้อมูลระหว่างกันในสองรูปแบบนี้
 
 ### XML Exercise
 
-In the [final exercise of Chapter 1](/courses/level-two/chapter-1.md#exercise_2), you used an **HTTP Request node** to make a request to the PokéAPI. In this exercise, we'll return to that same API but we'll convert the output to XML:
+ใน [final exercise of Chapter 1](/courses/level-two/chapter-1.md#exercise_2) คุณได้ใช้ **HTTP Request node** เพื่อส่ง request ไปยัง PokéAPI ในแบบฝึกหัดนี้ เราจะกลับไปที่ API เดิม แต่เราจะแปลง output เป็น XML:
 
-1. Add an **HTTP Request node** that makes the same request to the PokéAPI at `https://pokeapi.co/api/v2/pokemon`.
-2. Use the XML node to convert the JSON output to XML.
+1. เพิ่ม **HTTP Request node** ที่ส่ง request เดิมไปยัง PokéAPI ที่ `https://pokeapi.co/api/v2/pokemon`
+2. ใช้ XML node เพื่อแปลง JSON output เป็น XML
 
 ??? note "Show me the solution"
 
-	1. To get the pokemon from the PokéAPI, execute the **HTTP Request node** with the following parameters:
+	1. หากต้องการรับ pokemon จาก PokéAPI ให้ execute **HTTP Request node** ด้วย parameters ต่อไปนี้:
 		- **Authentication**: None
 		- **Request Method**: GET
 		- **URL**: https://pokeapi.co/api/v2/pokemon
-	2. Connect an **XML node** to it with the following parameters:
+	2. เชื่อมต่อ **XML node** เข้ากับมันด้วย parameters ต่อไปนี้:
 		- **Mode**: JSON to XML
 		- **Property name**: data
 
-	The result should look like this:
+	ผลลัพธ์ควรมีลักษณะดังนี้:
 
 	<figure><img src="/_images/courses/level-two/chapter-two/exercise_html_xmlnode_table.png" alt="Table view of XML Node (JSON to XML)" style="width:100%"><figcaption align = "center"><i>XML node (JSON to XML) – Table View</i></figcaption></figure>
 
-	To transform data the other way around, select the mode **XML to JSON**.
+	หากต้องการแปลงข้อมูลในทิศทางตรงกันข้าม ให้เลือก mode **XML to JSON**
 
 
 ## Date, time, and interval data
 
-Date and time data types include `DATE`, `TIME`, `DATETIME`, `TIMESTAMP`, and `YEAR`. The dates and times can be passed in different formats, for example:
+ประเภทข้อมูล Date และ time รวมถึง `DATE`, `TIME`, `DATETIME`, `TIMESTAMP`, และ `YEAR` วันที่และเวลาสามารถส่งผ่านในรูปแบบต่างๆ ได้ ตัวอย่างเช่น:
 <!-- vale off -->
 - `DATE`: March 29 2022, 29-03-2022, 2022/03/29
 - `TIME`: 08:30:00, 8:30, 20:30
@@ -89,67 +89,67 @@ Date and time data types include `DATE`, `TIME`, `DATETIME`, `TIMESTAMP`, and `Y
 - `TIMESTAMP`: 1616108400 (Unix timestamp), 1616108400000 (Unix ms timestamp)
 - `YEAR`: 2022, 22
 <!-- vale on -->
-There are a few ways you can work with dates and times:
+มีสองสามวิธีที่คุณสามารถทำงานกับวันที่และเวลาได้:
 
-- Use the [**Date & Time node**](/integrations/builtin/core-nodes/n8n-nodes-base.datetime.md) to convert date and time data to different formats and calculate dates.
-- Use [**Schedule Trigger node**](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/index.md) to schedule workflows to run at a specific time, interval, or duration.
+- ใช้ [**Date & Time node**](/integrations/builtin/core-nodes/n8n-nodes-base.datetime.md) เพื่อแปลงข้อมูลวันที่และเวลาเป็นรูปแบบต่างๆ และคำนวณวันที่
+- ใช้ [**Schedule Trigger node**](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/index.md) เพื่อกำหนดเวลาให้ workflows ทำงานในเวลา, ช่วงเวลา, หรือระยะเวลาที่ระบุ
 
-Sometimes, you might need to pause the workflow execution. This might be necessary if you know that a service doesn't process the data instantly or it's slow to return all the results. In these cases, you don't want n8n to pass incomplete data to the next node.
+บางครั้ง คุณอาจต้องหยุดการ execute workflow ชั่วคราว ซึ่งอาจจำเป็นหากคุณรู้ว่า service ไม่ได้ประมวลผลข้อมูลทันที หรือใช้เวลานานในการคืนผลลัพธ์ทั้งหมด ในกรณีเหล่านี้ คุณไม่ต้องการให้ n8n ส่งข้อมูลที่ไม่สมบูรณ์ไปยัง node ถัดไป
 
-If you run into situations like this, use the [**Wait node**](/integrations/builtin/core-nodes/n8n-nodes-base.wait.md) after the node that you want to delay. The **Wait node** pauses the workflow execution and will resume execution:
+หากคุณเจอกับสถานการณ์เช่นนี้ ให้ใช้ [**Wait node**](/integrations/builtin/core-nodes/n8n-nodes-base.wait.md) หลังจาก node ที่คุณต้องการหน่วงเวลา **Wait node** จะหยุดการ execute workflow ชั่วคราวและจะกลับมาทำงานต่อ:
 
-- At a specific time.
-- After a specified time interval.
-- On a webhook call.
+- ณ เวลาที่ระบุ
+- หลังจากช่วงเวลาที่ระบุ
+- เมื่อมีการเรียก webhook
 
 
 
 ### Date Exercise
 
-Build a workflow that adds five days to an input date from the Customer Datastore node that you used before. Then, if the calculated date occurred after 1959, the workflow waits 1 minute before [setting](/integrations/builtin/core-nodes/n8n-nodes-base.set.md) the calculated date as a value. The workflow should be triggered every 30 minutes.
+สร้าง workflow ที่เพิ่มห้าวันให้กับ input date จาก Customer Datastore node ที่คุณเคยใช้ก่อนหน้านี้ จากนั้น หากวันที่ที่คำนวณได้เกิดขึ้นหลังปี 1959 workflow จะรอ 1 นาทีก่อนที่จะ [setting](/integrations/builtin/core-nodes/n8n-nodes-base.set.md) วันที่ที่คำนวณได้เป็น value workflow ควรถูก trigger ทุกๆ 30 นาที
 
 
-To begin:
+ในการเริ่มต้น:
 <!-- To do: need to figure out what the actual desired output is here since Date & Time options have changed and I'm unclear what the Set node should be doing-->
-1. Add the **Customer Datastore (n8n training) node** with the **Get All People** action selected. Return All.
-2. Add the **Date & Time node** to Round Up the created Date from the datastore to End of Month. Output this to field new-date. Include all input fields.
-3. Add the **If node** to check if that new rounded date is after `1960-01-01 00:00:00`.
-4. Add the **Wait node** to the True output of that node and set it to wait for one minute.
-5. Add the **Edit Fields (Set) node** to set a new field called outputValue to a String containing new-date. Include all input fields.
-6. Add the **Schedule Trigger node** at the beginning of the workflow to trigger it every 30 minutes. (You can keep the [Manual Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger.md) for testing!)
+1. เพิ่ม **Customer Datastore (n8n training) node** โดยเลือก action **Get All People** Return All
+2. เพิ่ม **Date & Time node** เพื่อ Round Up วันที่ created จาก datastore เป็น End of Month ส่ง output นี้ไปยัง field new-date รวม input fields ทั้งหมด
+3. เพิ่ม **If node** เพื่อตรวจสอบว่าวันที่ที่ปัดเศษใหม่นั้นอยู่หลัง `1960-01-01 00:00:00` หรือไม่
+4. เพิ่ม **Wait node** ไปยัง True output ของ node นั้นและตั้งค่าให้รอหนึ่งนาที
+5. เพิ่ม **Edit Fields (Set) node** เพื่อตั้งค่า field ใหม่ชื่อ outputValue เป็น String ที่มี new-date รวม input fields ทั้งหมด
+6. เพิ่ม **Schedule Trigger node** ที่จุดเริ่มต้นของ workflow เพื่อ trigger ทุกๆ 30 นาที (คุณสามารถเก็บ [Manual Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger.md) ไว้สำหรับการทดสอบได้!)
 
 ??? note "Show me the solution"
 
-	1. Add the **Customer Datastore (n8n training) node** with the **Get All People** action selected.
-		- Select the option to **Return All**.
-	2. Add a **Date & Time node** connected to the Customer Datastore node. Select the option to **Round a Date**.
-		- Add the `created` date as the **Date** to round.
-		- Select `Round Up` as the **Mode** and `End of Month` as the **To**.
-		- Set the **Output Field Name** as `new-date`.
-		- In **Options**, select **Add Option** and use the control to **Include Input Fields**
-	3. Add an **If node** connected to the **Date & Time node**.
-		- Add the new-date field as the first part of the condition.
-		- Set the comparison to **Date &Time > is after**
-		- Add `1960-01-01 00:00:00` as the second part of the expression. (This should produce 3 items in the True Branch and 2 items in the False Branch)
-	4. Add a **Wait node** to the True output of the **If node**.
-		- Set **Resume** to `After Time interval`.
-		- Set **Wait Amount** to `1.00`.
-		- Set **Wait Unit** to `Minutes`.
-	5. Add an **Edit Fields (Set) node** to the **Wait node**.
-		- Use either JSON or Manual Mapping **Mode**.
-		- Set a new field called `outputValue` to be the value of the new-date field.
-		- Select the option to **Include Other Input Fields** and include **All** fields.
-	6. Add a **Schedule Trigger node** at the beginning of the workflow.
-		- Set the **Trigger Interval** to use `Minutes`.
-		- Set the **Minutes Between Triggers** to 30.
-		- To test your schedule, be sure to activate the workflow.
-		- Be sure to connect this node to the **Customer Datastore (n8n training) node** you began with!
+	1. เพิ่ม **Customer Datastore (n8n training) node** โดยเลือก action **Get All People**
+		- เลือก option **Return All**
+	2. เพิ่ม **Date & Time node** ที่เชื่อมต่อกับ Customer Datastore node เลือก option **Round a Date**
+		- เพิ่ม `created` date เป็น **Date** ที่จะปัดเศษ
+		- เลือก `Round Up` เป็น **Mode** และ `End of Month` เป็น **To**
+		- ตั้งค่า **Output Field Name** เป็น `new-date`
+		- ใน **Options** เลือก **Add Option** และใช้ control เพื่อ **Include Input Fields**
+	3. เพิ่ม **If node** ที่เชื่อมต่อกับ **Date & Time node**
+		- เพิ่ม field new-date เป็นส่วนแรกของ condition
+		- ตั้งค่า comparison เป็น **Date &Time > is after**
+		- เพิ่ม `1960-01-01 00:00:00` เป็นส่วนที่สองของ expression (ควรจะได้ 3 items ใน True Branch และ 2 items ใน False Branch)
+	4. เพิ่ม **Wait node** ไปยัง True output ของ **If node**
+		- ตั้งค่า **Resume** เป็น `After Time interval`
+		- ตั้งค่า **Wait Amount** เป็น `1.00`
+		- ตั้งค่า **Wait Unit** เป็น `Minutes`
+	5. เพิ่ม **Edit Fields (Set) node** ไปยัง **Wait node**
+		- ใช้ **Mode** เป็น JSON หรือ Manual Mapping อย่างใดอย่างหนึ่ง
+		- ตั้งค่า field ใหม่ชื่อ `outputValue` ให้เป็น value ของ field new-date
+		- เลือก option **Include Other Input Fields** และ include **All** fields
+	6. เพิ่ม **Schedule Trigger node** ที่จุดเริ่มต้นของ workflow
+		- ตั้งค่า **Trigger Interval** ให้ใช้ `Minutes`
+		- ตั้งค่า **Minutes Between Triggers** เป็น 30
+		- หากต้องการทดสอบ schedule ของคุณ อย่าลืม activate workflow
+		- อย่าลืมเชื่อมต่อ node นี้กับ **Customer Datastore (n8n training) node** ที่คุณเริ่มต้นด้วย!
 
-	The workflow should look like this:
+	workflow ควรมีลักษณะดังนี้:
 
 	<figure><img src="/_images/courses/level-two/chapter-two/exercise_datetime.png" alt="Workflow for transforming dates" style="width:100%"><figcaption align = "center"><i>Workflow for transforming dates</i></figcaption></figure>
 
-	To check the configuration of each node, you can copy the JSON code of this workflow and either paste it into the Editor UI or save it as a file and import from file into a new workflow. See [Export and import workflows](/workflows/export-import.md) for more information.
+	หากต้องการตรวจสอบการกำหนดค่าของแต่ละ node คุณสามารถคัดลอกโค้ด JSON ของ workflow นี้และวางลงใน Editor UI หรือบันทึกเป็นไฟล์และ import จากไฟล์ลงใน workflow ใหม่ ดู [Export and import workflows](/workflows/export-import.md) สำหรับข้อมูลเพิ่มเติม
 
 	```json
 	{
@@ -366,23 +366,23 @@ To begin:
 
 ## Binary data
 
-Up to now, you have mainly worked with text data. But what if you want to process data that's not text, like images or PDF files? These types of files are represented in the binary numeral system, so they're considered binary data. In this form, binary data doesn't offer you useful information, so you'll need to convert it into a readable form.
+จนถึงตอนนี้ คุณได้ทำงานกับข้อมูล text เป็นหลัก แต่ถ้าคุณต้องการประมวลผลข้อมูลที่ไม่ใช่ text เช่น รูปภาพหรือไฟล์ PDF ล่ะ? ไฟล์ประเภทนี้จะถูกแสดงในระบบเลขฐานสอง ดังนั้นจึงถือว่าเป็น binary data ในรูปแบบนี้ binary data ไม่ได้ให้ข้อมูลที่เป็นประโยชน์แก่คุณ ดังนั้นคุณจะต้องแปลงให้อยู่ในรูปแบบที่อ่านได้
 
-In n8n, you can process binary data with the following nodes:
+ใน n8n คุณสามารถประมวลผล binary data ด้วย nodes ต่อไปนี้:
 
-- [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) to request and send files from/to web resources and APIs.
-- [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md) to read and write files from/to the machine where n8n is running.
-- [Convert to File](/integrations/builtin/core-nodes/n8n-nodes-base.converttofile.md) to take input data and output it as a file.
-- [Extract From File](/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile.md) to get data from a binary format and convert it to JSON.
+- [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) เพื่อ request และส่งไฟล์จาก/ไปยัง web resources และ APIs
+- [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md) เพื่ออ่านและเขียนไฟล์จาก/ไปยังเครื่องที่ n8n กำลังทำงานอยู่
+- [Convert to File](/integrations/builtin/core-nodes/n8n-nodes-base.converttofile.md) เพื่อรับ input data และส่ง output เป็นไฟล์
+- [Extract From File](/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile.md) เพื่อรับข้อมูลจากรูปแบบ binary และแปลงเป็น JSON
 
 /// note | Reading and writing files is only available on self-hosted n8n
-Reading and writing files to disk isn't available on n8n Cloud. You'll read and write to the machine where you installed n8n. If you run n8n in Docker, your command runs in the n8n container and not the Docker host. The Read/Write Files From Disk node looks for files relative to the n8n install path. n8n recommends using absolute file paths to prevent any errors.
+การอ่านและเขียนไฟล์ไปยัง disk ไม่สามารถใช้งานได้บน n8n Cloud คุณจะอ่านและเขียนไปยังเครื่องที่คุณติดตั้ง n8n หากคุณรัน n8n ใน Docker คำสั่งของคุณจะทำงานใน n8n container ไม่ใช่ Docker host Read/Write Files From Disk node จะมองหาไฟล์ที่สัมพันธ์กับ n8n install path n8n แนะนำให้ใช้ absolute file paths เพื่อป้องกันข้อผิดพลาดใดๆ
 ///
 
-To read or write a binary file, you need to write the path (location) of the file in the node's `File(s) Selector` parameter (for the Read operation) or in the node's `File Path and Name` parameter (for the Write operation).
+ในการอ่านหรือเขียน binary file คุณต้องเขียน path (ตำแหน่ง) ของไฟล์ใน parameter `File(s) Selector` ของ node (สำหรับการดำเนินการ Read) หรือใน parameter `File Path and Name` ของ node (สำหรับการดำเนินการ Write)
 
 /// warning | Naming the right path
-The file path looks slightly different depending on how you are running n8n:
+file path จะดูแตกต่างกันเล็กน้อยขึ้นอยู่กับว่าคุณกำลังรัน n8n อย่างไร:
 
 - npm: `~/my_file.json`
 - n8n cloud / Docker: `/tmp/my_file.json`
@@ -392,22 +392,22 @@ The file path looks slightly different depending on how you are running n8n:
 
 ### Binary Exercise 1
 
-For our first binary exercise, let's convert a PDF file to JSON:
+สำหรับแบบฝึกหัด binary แรกของเรา มาแปลงไฟล์ PDF เป็น JSON กัน:
 
-1. Make an HTTP request to get this PDF file: `https://media.kaspersky.com/pdf/Kaspersky_Lab_Whitepaper_Anti_blocker.pdf.`
-2. Use the **Extract From File node** to convert the file from binary to JSON.
+1. ส่ง HTTP request เพื่อรับไฟล์ PDF นี้: `https://media.kaspersky.com/pdf/Kaspersky_Lab_Whitepaper_Anti_blocker.pdf.`
+2. ใช้ **Extract From File node** เพื่อแปลงไฟล์จาก binary เป็น JSON
 
 ??? note "Show me the solution"
 
-	In the **HTTP Request node**, you should see the PDF file, like this:
+	ใน **HTTP Request node** คุณควรเห็นไฟล์ PDF ดังนี้:
 
 	<figure><img src="/_images/courses/level-two/chapter-two/exercise_binarydata_httprequest_file.png" alt="HTTP Request node to get PDF" style="width:100%"><figcaption align = "center"><i>HTTP Request node to get PDF</i></figcaption></figure>
 
-	When you convert the PDF from binary to JSON using the **Extract From File node**, the result should look like this:
+	เมื่อคุณแปลง PDF จาก binary เป็น JSON โดยใช้ **Extract From File node** ผลลัพธ์ควรมีลักษณะดังนี้:
 
 	<figure><img src="/_images/courses/level-two/chapter-two/exercise_binarydata_movedata_btoj.png" alt="Extract From File node" style="width:100%"><figcaption align = "center"><i>Extract From File node</i></figcaption></figure>
 
-	To check the configuration of the nodes, you can copy the JSON workflow code below and paste it into your Editor UI:
+	หากต้องการตรวจสอบการกำหนดค่าของ nodes คุณสามารถคัดลอกโค้ด JSON workflow ด้านล่างและวางลงใน Editor UI ของคุณ:
 
 	```json
 	{
@@ -485,20 +485,20 @@ For our first binary exercise, let's convert a PDF file to JSON:
 
 ### Binary Exercise 2
 
-For our second binary exercise, let's convert some JSON data to binary:
+สำหรับแบบฝึกหัด binary ที่สองของเรา มาแปลงข้อมูล JSON บางส่วนเป็น binary กัน:
 
-1. Make an HTTP request to the Poetry DB API `https://poetrydb.org/random/1`.
-2. Convert the returned data from JSON to binary using the **Convert to File node**.
-3. Write the new binary file data to the machine where n8n is running using the **Read/Write Files From Disk node**.
-4. To check that it worked out, use the **Read/Write Files From Disk node** to read the generated binary file.
+1. ส่ง HTTP request ไปยัง Poetry DB API `https://poetrydb.org/random/1`
+2. แปลงข้อมูลที่ส่งคืนจาก JSON เป็น binary โดยใช้ **Convert to File node**
+3. เขียนข้อมูล binary file ใหม่ไปยังเครื่องที่ n8n กำลังทำงานอยู่โดยใช้ **Read/Write Files From Disk node**
+4. หากต้องการตรวจสอบว่าทำงานได้หรือไม่ ให้ใช้ **Read/Write Files From Disk node** เพื่ออ่าน binary file ที่สร้างขึ้น
 
 ??? note "Show me the solution"
 
-	The workflow for this exercise looks like this:
+	workflow สำหรับแบบฝึกหัดนี้มีลักษณะดังนี้:
 
 	<figure><img src="/_images/courses/level-two/chapter-two/exercise_binarydata.png" alt="Workflow for moving JSON to binary data" style="width:100%"><figcaption align = "center"><i>Workflow for moving JSON to binary data</i></figcaption></figure>
 
-	To check the configuration of the nodes, you can copy the JSON workflow code below and paste it into your Editor UI:
+	หากต้องการตรวจสอบการกำหนดค่าของ nodes คุณสามารถคัดลอกโค้ด JSON workflow ด้านล่างและวางลงใน Editor UI ของคุณ:
 
 	```json
 	{

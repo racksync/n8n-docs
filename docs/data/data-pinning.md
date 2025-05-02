@@ -5,18 +5,18 @@ contentType: howto
 
 # Data pinning
 
-You can 'pin' data during workflow development. Data pinning means saving the output data of a node, and using the saved data instead of fetching fresh data in future workflow executions. 
+คุณสามารถ 'pin' ข้อมูลระหว่างการพัฒนา workflow ได้ Data pinning หมายถึงการบันทึกข้อมูล output ของ node และใช้ข้อมูลที่บันทึกไว้แทนการดึงข้อมูลใหม่ในการ execute workflow ในอนาคต
 
-You can use this when working with data from external sources to avoid having to repeat requests to the external system. This can save time and resources:
+คุณสามารถใช้สิ่งนี้เมื่อทำงานกับข้อมูลจากแหล่งภายนอกเพื่อหลีกเลี่ยงการต้องทำ requests ซ้ำไปยังระบบภายนอก ซึ่งสามารถประหยัดเวลาและทรัพยากรได้:
 
-* If your workflow relies on an external system to trigger it, such as a webhook call, being able to pin data means you don't need to use the external system every time you test the workflow.
-* If the external resource has data or usage limits, pinning data during tests avoids consuming your resource limits.
-* You can fetch and pin the data you want to test, then have confidence that the data is consistent in all your workflow tests.
+* หาก workflow ของคุณต้องอาศัยระบบภายนอกในการ trigger เช่น webhook call การสามารถ pin ข้อมูลได้หมายความว่าคุณไม่จำเป็นต้องใช้ระบบภายนอกทุกครั้งที่คุณทดสอบ workflow
+* หากแหล่งข้อมูลภายนอกมีข้อจำกัดด้านข้อมูลหรือการใช้งาน การ pin ข้อมูลระหว่างการทดสอบจะช่วยหลีกเลี่ยงการใช้ขีดจำกัดทรัพยากรของคุณ
+* คุณสามารถดึงและ pin ข้อมูลที่คุณต้องการทดสอบ จากนั้นมั่นใจได้ว่าข้อมูลมีความสอดคล้องกันในการทดสอบ workflow ทั้งหมดของคุณ
 
-You can only pin data for nodes that have a single main output ("error" outputs don't count for this purpose).
+คุณสามารถ pin ข้อมูลได้เฉพาะสำหรับ nodes ที่มี output หลักเพียงช่องเดียว (output "error" ไม่นับสำหรับวัตถุประสงค์นี้)
 
 /// note | For development only
-Data pinning isn't available for production workflow executions. It's a feature to help test workflows during development.
+Data pinning ไม่สามารถใช้ได้กับการ execute workflow ใน production เป็นฟีเจอร์ที่ช่วยทดสอบ workflow ระหว่างการพัฒนาเท่านั้น
 ///
 
 ## Pin data
@@ -25,4 +25,4 @@ Data pinning isn't available for production workflow executions. It's a feature 
 
 ## Unpin data
 
-When data pinning is active, a banner appears at the top of the node's output panel indicating that n8n has pinned the data. To unpin data and fetch fresh data on the next execution, select the **Unpin** link in the banner.
+เมื่อ data pinning ทำงานอยู่ จะมี banner ปรากฏที่ด้านบนของ panel output ของ node เพื่อระบุว่า n8n ได้ pin ข้อมูลไว้ หากต้องการ unpin ข้อมูลและดึงข้อมูลใหม่ในการ execute ครั้งถัดไป ให้เลือก link **Unpin** ใน banner

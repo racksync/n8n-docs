@@ -5,28 +5,28 @@ contentType: howto
 
 # Mapping in the UI
 
-Data mapping means referencing data from previous nodes. It doesn't include changing (transforming) data, just referencing it.
+Data mapping หมายถึงการอ้างอิงข้อมูลจาก node ก่อนหน้า ไม่รวมถึงการเปลี่ยนแปลง (transform) ข้อมูล เป็นเพียงการอ้างอิงเท่านั้น
 
-You can map data in the following ways:
+คุณสามารถ map ข้อมูลได้ด้วยวิธีต่อไปนี้:
 
-* Using the expressions editor.
-* By dragging and dropping data from the **INPUT** into parameters. This generates the expression for you.
+* การใช้ expressions editor
+* โดยการลากและวางข้อมูลจาก **INPUT** ไปยัง parameters วิธีนี้จะสร้าง expression ให้คุณโดยอัตโนมัติ
 
-For information on errors with mapping and linking items, refer to [Item linking errors](/data/data-mapping/data-item-linking/item-linking-errors.md).
+สำหรับข้อมูลเกี่ยวกับข้อผิดพลาดในการ map และการ link item โปรดดูที่ [Item linking errors](/data/data-mapping/data-item-linking/item-linking-errors.md)
 
 ## How to drag and drop data
 
-1. Run your workflow to load data.
-2. Open the node where you need to map data.
-3. You can map in table, JSON, and schema view:
-	* In table view: click and hold a table heading to map top level data, or a field in the table to map nested data.
-	* In JSON view: click and hold a key. 
-	* In schema view: click and hold a key.
-4. Drag the item into the field where you want to use the data.
+1.  Run workflow ของคุณเพื่อโหลดข้อมูล
+2.  เปิด node ที่คุณต้องการ map ข้อมูล
+3.  คุณสามารถ map ในมุมมอง table, JSON และ schema:
+    *   ในมุมมอง table: คลิกค้างที่หัวตารางเพื่อ map ข้อมูลระดับบนสุด หรือคลิกค้างที่ field ในตารางเพื่อ map ข้อมูลที่ซ้อนกัน (nested data)
+    *   ในมุมมอง JSON: คลิกค้างที่ key
+    *   ในมุมมอง schema: คลิกค้างที่ key
+4.  ลาก item ไปยัง field ที่คุณต้องการใช้ข้อมูล
 
 ### Understand what you're mapping with drag and drop
 
-Data mapping maps the key path, and loads the key's value into the field. For example, given the following data:
+Data mapping จะ map เส้นทางของ key (key path) และโหลดค่าของ key นั้นไปยัง field ตัวอย่างเช่น หากมีข้อมูลดังต่อไปนี้:
 
 ```js
 [
@@ -37,11 +37,11 @@ Data mapping maps the key path, and loads the key's value into the field. For ex
 ]
 ```
 
-You can map `fruit` by dragging and dropping **fruit** from the **INPUT** into the field where you want to use its value. This creates an expression, `{{ $json.fruit }}`. When the node iterates over input items, the value of the field becomes the value of `fruit` for each item.
+คุณสามารถ map `fruit` โดยการลากและวาง **fruit** จาก **INPUT** ไปยัง field ที่คุณต้องการใช้ค่าของมัน การทำเช่นนี้จะสร้าง expression `{{ $json.fruit }}` ขึ้นมา เมื่อ node วนซ้ำ (iterate) ผ่าน input item ค่าของ field จะกลายเป็นค่าของ `fruit` สำหรับแต่ละ item
 
 ### Understand nested data
 
-Given the following data:
+หากมีข้อมูลดังต่อไปนี้:
 
 ```js
 [
@@ -62,7 +62,7 @@ Given the following data:
 ]
 ```
 
-n8n displays it in table form like this:
+n8n จะแสดงข้อมูลในรูปแบบตารางดังนี้:
 
 !["Screenshot of a table in the INPUT panel. It includes a top level field named "nested." This field contains nested data, which is indicated in bold."](/_images/data/data-mapping/nested-data.png)
 

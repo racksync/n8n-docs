@@ -5,50 +5,50 @@ contentType: overview
 
 # Level two: Introduction
 
-Welcome to the **n8n Course Level 2**!
+ยินดีต้อนรับสู่ **n8n Course Level 2**!
 
 
 ## Is this course right for me?
 
-This course is for you if you:
+คอร์สนี้เหมาะสำหรับคุณ ถ้าคุณ:
 
-- Want to automate somewhat complex business processes.
-- Want to dive deeper into n8n after taking the [Level 1 course](/courses/level-one/index.md).
+- ต้องการทำ automation ให้กับกระบวนการทางธุรกิจที่ค่อนข้างซับซ้อน
+- ต้องการเรียนรู้ n8n ให้ลึกซึ้งยิ่งขึ้นหลังจากเรียน [Level 1 course](/courses/level-one/index.md) จบแล้ว
 
 ## What will I learn in this course?
 
-The focus in this course is on working with data. You will learn how to:
+คอร์สนี้จะเน้นเรื่องการทำงานกับข้อมูล คุณจะได้เรียนรู้วิธีการ:
 
-- Use the data structure of n8n correctly.
-- Process different data types (for example, XML, HTML, date, time, and binary data).
-- Merge data from different sources (for example, a database, spreadsheet, or CRM).
-- Use functions and JavaScript code in the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md).
-- Deal with error workflows and workflow errors.
+- ใช้โครงสร้างข้อมูล (data structure) ของ n8n อย่างถูกต้อง
+- ประมวลผลข้อมูลประเภทต่างๆ (เช่น XML, HTML, date, time, และ binary data)
+- รวมข้อมูล (merge data) จากแหล่งต่างๆ (เช่น database, spreadsheet, หรือ CRM)
+- ใช้ functions และ JavaScript code ใน [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md)
+- จัดการกับ error workflows และ workflow errors
 
-You will learn all this by completing short practical exercises after the theoretical explanations and building a business workflow following instructions.
+คุณจะได้เรียนรู้ทั้งหมดนี้โดยการทำแบบฝึกหัดสั้นๆ หลังจากการอธิบายทฤษฎี และสร้าง business workflow ตามคำแนะนำ
 
 ## What do I need to get started?
 
-To follow along this course (at a comfortable pace) you will need the following:
+เพื่อให้สามารถเรียนตามคอร์สนี้ได้อย่างราบรื่น คุณจะต้องมีสิ่งต่อไปนี้:
 
-- **n8n set up**: You can use the [self-hosted version](/hosting/installation/npm.md) or [n8n Cloud](/manage-cloud/overview.md).
-- **A user ID**: [Sign up here](https://n8n-community.typeform.com/to/HQoQ7nXg){:target="_blank" .external-link} to get your unique ID and other credentials you will need in the course.
-- **Basic n8n skills**: We strongly recommend taking the [Level 1 course](/courses/level-one/index.md) before this one.
+- **n8n set up**: คุณสามารถใช้ [self-hosted version](/hosting/installation/npm.md) หรือ [n8n Cloud](/manage-cloud/overview.md) ก็ได้
+- **A user ID**: [Sign up here](https://n8n-community.typeform.com/to/HQoQ7nXg){:target="_blank" .external-link} เพื่อรับ unique ID และ credentials อื่นๆ ที่คุณจะต้องใช้ในคอร์ส
+- **Basic n8n skills**: เราขอแนะนำอย่างยิ่งให้เรียน [Level 1 course](/courses/level-one/index.md) ก่อนคอร์สนี้
 - **Basic JavaScript understanding**
 
 ## How long does the course take?
 
-Completing the course should take around **two hours**. You don't have to complete it in one go; feel free to take breaks and resume whenever you are ready.
+การเรียนคอร์สนี้ให้จบควรใช้เวลาประมาณ **สองชั่วโมง** คุณไม่จำเป็นต้องเรียนให้จบในครั้งเดียว สามารถพักและกลับมาเรียนต่อเมื่อพร้อมได้
 
 ## How do I complete the course?
 
-There are two milestones in this course that test your knowledge of what you have learned in the lessons:
+มี milestones สองอย่างในคอร์สนี้ที่จะทดสอบความรู้ของคุณจากบทเรียนต่างๆ:
 
-- [x] Building the [main workflow](/courses/level-two/chapter-5/chapter-5.0.md)
-- [x] Passing the [quiz](https://n8n-community.typeform.com/to/r9hDbytg){:target="_blank" .external} at the end of the course
+- [x] การสร้าง [main workflow](/courses/level-two/chapter-5/chapter-5.0.md)
+- [x] การผ่าน [quiz](https://n8n-community.typeform.com/to/r9hDbytg){:target="_blank" .external} ตอนท้ายคอร์ส
 
-You can always **check your progress** throughout the course by entering your unique ID [here](https://internal.users.n8n.cloud/webhook/course-level-2/verify){:target="_blank" .external-link}.
+คุณสามารถ **check your progress** ตลอดทั้งคอร์สได้โดยการกรอก unique ID ของคุณ [here](https://internal.users.n8n.cloud/webhook/course-level-2/verify){:target="_blank" .external-link}
 
-If you successfully complete the milestones above, you will get [**a badge and an avatar**](https://community.n8n.io/badges/105/completed-n8n-course-level-2){:target="_blank" .external} in your forum profile. You can then share your profile and course verification ID to showcase your n8n skills to others.
+หากคุณทำ milestones ข้างต้นสำเร็จ คุณจะได้รับ [**a badge and an avatar**](https://community.n8n.io/badges/105/completed-n8n-course-level-2){:target="_blank" .external} ในโปรไฟล์ forum ของคุณ จากนั้นคุณสามารถแชร์โปรไฟล์และ course verification ID ของคุณเพื่อแสดงทักษะ n8n ของคุณให้ผู้อื่นเห็นได้
 
 [Let's get started!](/courses/level-two/chapter-1.md){ .md-button }

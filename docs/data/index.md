@@ -5,30 +5,30 @@ contentType: overview
 
 # Data
 
-Data is the information that n8n nodes receive and process. For basic usage of n8n you don't need to understand data structures and manipulation. However, it becomes important if you want to:
+Data คือข้อมูลที่ n8n nodes รับและประมวลผล สำหรับการใช้งาน n8n ขั้นพื้นฐาน คุณไม่จำเป็นต้องเข้าใจโครงสร้างข้อมูลและการจัดการข้อมูล อย่างไรก็ตาม มันจะมีความสำคัญหากคุณต้องการ:
 
- - Create your own node
- - Write custom [expressions](/glossary.md#expression-n8n)
- - Use the Function or Function Item node
+ - สร้าง node ของคุณเอง
+ - เขียน [expressions](/glossary.md#expression-n8n) แบบกำหนดเอง
+ - ใช้ Function หรือ Function Item node
 
-This section covers: 
+ส่วนนี้ครอบคลุม:
 
 * [Data structure](/data/data-structure.md)
 * [Data flow within nodes](/data/data-flow-nodes.md)
 * [Transforming data](/data/transforming-data.md)
 * [Process data using code](/data/code.md)
-* [Pinning](/data/data-pinning.md) and [editing](/data/data-editing.md) data during workflow development.
-* [Data mapping](/data/data-mapping/index.md) and [Item linking](/data/data-mapping/data-item-linking/index.md): how data items link to each other.
+* [Pinning](/data/data-pinning.md) และ [editing](/data/data-editing.md) data ระหว่างการพัฒนา workflow
+* [Data mapping](/data/data-mapping/index.md) และ [Item linking](/data/data-mapping/data-item-linking/index.md): วิธีที่ data items เชื่อมโยงถึงกัน
 
 ## Related resources
 
 ### Data transformation nodes
 
-n8n provides a collection of nodes to transform data:
+n8n มีชุดของ nodes สำหรับแปลงข้อมูล:
 
-* [Aggregate](/integrations/builtin/core-nodes/n8n-nodes-base.aggregate.md): take separate items, or portions of them, and group them together into individual items.
-* [Limit](/integrations/builtin/core-nodes/n8n-nodes-base.aggregate.md): remove items beyond a defined maximum number.
-* [Remove Duplicates](/integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/index.md): identify and delete items that are identical across all fields or a subset of fields.
-* [Sort](/integrations/builtin/core-nodes/n8n-nodes-base.sort.md): organize lists of in a desired ordering, or generate a random selection.
-* [Split Out](/integrations/builtin/core-nodes/n8n-nodes-base.splitout.md): separate a single data item containing a list into multiple items.
-* [Summarize](/integrations/builtin/core-nodes/n8n-nodes-base.summarize.md): aggregate items together, in a manner similar to Excel pivot tables. 
+* [Aggregate](/integrations/builtin/core-nodes/n8n-nodes-base.aggregate.md): นำรายการแยกกัน หรือบางส่วนของรายการ มารวมกลุ่มกันเป็นรายการเดี่ยว
+* [Limit](/integrations/builtin/core-nodes/n8n-nodes-base.aggregate.md): ลบรายการที่เกินจำนวนสูงสุดที่กำหนด
+* [Remove Duplicates](/integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/index.md): ระบุและลบรายการที่เหมือนกันทุกประการในทุก field หรือในชุดของ field ที่กำหนด
+* [Sort](/integrations/builtin/core-nodes/n8n-nodes-base.sort.md): จัดระเบียบรายการตามลำดับที่ต้องการ หรือสร้างการสุ่มเลือก
+* [Split Out](/integrations/builtin/core-nodes/n8n-nodes-base.splitout.md): แยกรายการข้อมูลเดียวที่มี list ออกเป็นหลายรายการ
+* [Summarize](/integrations/builtin/core-nodes/n8n-nodes-base.summarize.md): รวบรวมรายการเข้าด้วยกัน คล้ายกับ pivot tables ใน Excel

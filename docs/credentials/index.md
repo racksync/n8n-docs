@@ -6,9 +6,9 @@ contentType: overview
 
 # Credentials
 
-[Credentials](/glossary.md#credential-n8n) are private pieces of information issued by apps and services to authenticate you as a user and allow you to connect and share information between the app or service and the n8n node.
+[Credentials](/glossary.md#credential-n8n) คือข้อมูลส่วนตัวที่ออกโดยแอปและบริการต่างๆ เพื่อยืนยันตัวตนของคุณในฐานะผู้ใช้ และอนุญาตให้คุณเชื่อมต่อและแชร์ข้อมูลระหว่างแอปหรือบริการนั้นกับ n8n node
 
-Access the credentials UI by opening the left menu and selecting **Credentials**. n8n lists credentials you created on the **My credentials** tab. The **All credentials** tab shows all credentials you can use, included credentials shared with you by other users.
+เข้าถึงหน้าจอ credentials โดยเปิดเมนูด้านซ้ายและเลือก **Credentials** n8n จะแสดงรายการ credentials ที่คุณสร้างไว้ในแท็บ **My credentials** ส่วนแท็บ **All credentials** จะแสดง credentials ทั้งหมดที่คุณสามารถใช้ได้ รวมถึง credentials ที่ผู้ใช้อื่นแชร์ให้คุณ
 
 * [Create and edit credentials](/credentials/add-edit-credentials.md).
 * Learn about [credential sharing](/credentials/credential-sharing.md).

@@ -5,19 +5,19 @@ contentType: tutorial
 
 # Understanding the data structure
 
-In this chapter, you will learn about the data structure of n8n and how to use the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md){:target="_blank"} to transform data and simulate node outputs.
+ในบทนี้ คุณจะได้เรียนรู้เกี่ยวกับโครงสร้างข้อมูล (data structure) ของ n8n และวิธีใช้ [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md){:target="_blank"} เพื่อแปลงข้อมูลและจำลอง output ของ node
 
 
 ## Data structure of n8n
 
-In a basic sense, n8n nodes function as an Extract, Transform, Load (ETL) tool. The nodes allow you to access (extract) data from multiple disparate sources, modify (transform) that data in a particular way, and pass (load) it along to where it needs to be.
+โดยพื้นฐานแล้ว n8n nodes ทำหน้าที่เป็นเครื่องมือ Extract, Transform, Load (ETL) nodes ช่วยให้คุณเข้าถึง (extract) ข้อมูลจากแหล่งต่างๆ ที่หลากหลาย, แก้ไข (transform) ข้อมูลนั้นในลักษณะเฉพาะ, และส่งต่อ (load) ไปยังที่ที่ต้องการ
 
-The data that moves along from node to node in your workflow must be in a format (structure) that can be recognized and interpreted by each node. In n8n, this required structure is an array of objects.
+ข้อมูลที่เคลื่อนที่จาก node หนึ่งไปยังอีก node หนึ่งใน workflow ของคุณจะต้องอยู่ในรูปแบบ (โครงสร้าง) ที่แต่ละ node สามารถรับรู้และตีความได้ ใน n8n โครงสร้างที่ต้องการนี้คือ array of objects
 
 /// note | About array of objects
-An array is a list of values. The array can be empty or contain several elements. Each element is stored at a position (index) in the list, starting at 0, and can be referenced by the index number. For example, in the array `["Leonardo", "Michelangelo", "Donatello", "Raphael"];` the element `Donatello` is stored at index 2.
+Array คือรายการของค่าต่างๆ array อาจว่างเปล่าหรือมีหลาย elements ก็ได้ แต่ละ element จะถูกเก็บไว้ที่ตำแหน่ง (index) ในรายการ โดยเริ่มจาก 0 และสามารถอ้างอิงได้ด้วยหมายเลข index ตัวอย่างเช่น ใน array `["Leonardo", "Michelangelo", "Donatello", "Raphael"];` element `Donatello` ถูกเก็บไว้ที่ index 2
 
-An object stores key-value pairs, instead of values at numbered indexes as in arrays. The order of the pairs isn't important, as the values can be accessed by referencing the key name. For example, the object below contains two properties (`name` and `color`):
+Object เก็บ key-value pairs แทนที่จะเป็นค่าที่ index ที่มีหมายเลขเหมือนใน arrays ลำดับของ pairs ไม่สำคัญ เนื่องจากสามารถเข้าถึงค่าได้โดยการอ้างอิงชื่อ key ตัวอย่างเช่น object ด้านล่างมีสอง properties (`name` และ `color`):
 
 ```json
 {
@@ -26,7 +26,7 @@ An object stores key-value pairs, instead of values at numbered indexes as in ar
 }
 ```
 
-An array of objects is an array that contains one or more objects. For example, the array `turtles` below contains four objects:
+Array of objects คือ array ที่มี object หนึ่งหรือหลาย object ตัวอย่างเช่น array `turtles` ด้านล่างมีสี่ objects:
 
 ```javascript
 var turtles = [
@@ -49,22 +49,22 @@ var turtles = [
 ];
 ```
 
-You can access the properties of an object using dot notation with the syntax `object.property`. For example, `turtles[1].color` gets the color of the second turtle.
+คุณสามารถเข้าถึง properties ของ object โดยใช้ dot notation ด้วย syntax `object.property` ตัวอย่างเช่น `turtles[1].color` จะได้สีของเต่าตัวที่สอง
 ///
 
 
-Data sent from one node to another is sent as an array of JSON objects. The elements in this collection are called items.
+ข้อมูลที่ส่งจาก node หนึ่งไปยังอีก node หนึ่งจะถูกส่งเป็น array of JSON objects elements ใน collection นี้เรียกว่า items
 
 <figure><img src="/_images/courses/level-two/chapter-one/explanation_items.png" alt="" style="width:100%"><figcaption align = "center"><i>Items</i></figcaption></figure>
 
-An n8n node performs its action on each item of incoming data.
+n8n node จะดำเนินการกับแต่ละ item ของข้อมูลขาเข้า
 
 <figure><img src="/_images/flow-logic/looping/customer_datastore_node.png"><figcaption align = "center"><i>Items in the Customer Datastore node</i></figcaption></figure>
 
 
 ## Creating data sets with the Code node
 
-Now that you are familiar with the n8n data structure, you can use it to create your own data sets or simulate node outputs. To do this, use the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md){:target="_blank"} to write JavaScript code defining your array of objects with the following structure:
+ตอนนี้คุณคุ้นเคยกับโครงสร้างข้อมูล n8n แล้ว คุณสามารถใช้มันเพื่อสร้าง data sets ของคุณเองหรือจำลอง node outputs ได้ ในการทำเช่นนี้ ให้ใช้ [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md){:target="_blank"} เพื่อเขียน JavaScript code กำหนด array of objects ของคุณด้วยโครงสร้างต่อไปนี้:
 
 ```javascript
 return [
@@ -76,22 +76,22 @@ return [
 ];
 ```
 
-For example, the array of objects representing the Ninja turtles would look like this in the Code node:
+ตัวอย่างเช่น array of objects ที่แสดงถึง Ninja turtles จะมีลักษณะดังนี้ใน Code node:
 
 <figure><img src="/_images/courses/level-two/chapter-one/exercise_function_notnested.png" alt="" style="width:100%"><figcaption align = "center"><i>Array of objects in the Code node</i></figcaption></figure>
 
 /// warning | JSON objects
-Notice that this array of objects contains an extra key: `json`. n8n expects you to wrap each object in an array in another object, with the key `json`.
+สังเกตว่า array of objects นี้มี key เพิ่มเติม: `json` n8n คาดหวังให้คุณห่อหุ้มแต่ละ object ใน array ด้วย object อีกอัน โดยมี key เป็น `json`
 
 <figure><img src="/_images/courses/level-two/chapter-one/explanation_datastructure.png" alt="" style="width:100%"><figcaption align = "center"><i>Illustration of data structure in n8n</i></figcaption></figure>
 
-It's good practice to pass the data in the right structure used by n8n. But don't worry if you forget to add the `json` key to an item, n8n (version 0.166.0 and above) adds it automatically.
+เป็นแนวปฏิบัติที่ดีที่จะส่งข้อมูลในโครงสร้างที่ถูกต้องที่ n8n ใช้ แต่ไม่ต้องกังวลหากคุณลืมเพิ่ม `json` key ให้กับ item, n8n (เวอร์ชัน 0.166.0 ขึ้นไป) จะเพิ่มให้โดยอัตโนมัติ
 ///
 
-You can also have nested pairs, for example if you want to define a primary and a secondary color. In this case, you need to further wrap the key-value pairs in curly braces `{}`.
+คุณยังสามารถมี nested pairs ได้ ตัวอย่างเช่น หากคุณต้องการกำหนดสีหลักและสีรอง ในกรณีนี้ คุณต้องห่อหุ้ม key-value pairs เพิ่มเติมด้วยวงเล็บปีกกา `{}`
 
 /// note | n8n data structure video
-[This talk](https://www.youtube.com/watch?v=mQHT3Unn4tY) offers a more detailed explanation of data structure in n8n.
+[This talk](https://www.youtube.com/watch?v=mQHT3Unn4tY) นำเสนอคำอธิบายโดยละเอียดเพิ่มเติมเกี่ยวกับโครงสร้างข้อมูลใน n8n
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mQHT3Unn4tY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ///
@@ -99,11 +99,11 @@ You can also have nested pairs, for example if you want to define a primary and 
 
 ### Exercise
 
-In a Code node, create an array of objects named `myContacts` that contains the properties `name` and `email`, and the `email` property is further split into `personal` and `work`.
+ใน Code node ให้สร้าง array of objects ชื่อ `myContacts` ที่มี properties `name` และ `email` และ property `email` ถูกแบ่งย่อยออกเป็น `personal` และ `work`
 
 ??? note "Show me the solution"
 
-	In the **Code node**, in the JavaScript Code field you have to write the following code:
+	ใน **Code node** ในช่อง JavaScript Code คุณต้องเขียนโค้ดต่อไปนี้:
 
 	```javascript
 	var myContacts = [
@@ -130,7 +130,7 @@ In a Code node, create an array of objects named `myContacts` that contains the 
 	return myContacts;
 	```
 
-	When you execute the **Code node**, the result should look like this:
+	เมื่อคุณ execute **Code node** ผลลัพธ์ควรมีลักษณะดังนี้:
 
 	<figure><img src="/_images/courses/level-two/chapter-one/exercise_function.png" alt="" style="width:100%"><figcaption align = "center"><i>Result of Code node</i></figcaption></figure>
 
@@ -138,16 +138,16 @@ In a Code node, create an array of objects named `myContacts` that contains the 
 
 ## Referencing node data with the Code node
 
-Just like you can use [expressions](/code/expressions.md) to reference data from other nodes, you can also use some [methods and variables](/code/builtin/overview.md) in the **Code node**.
+เช่นเดียวกับที่คุณสามารถใช้ [expressions](/code/expressions.md) เพื่ออ้างอิงข้อมูลจาก nodes อื่นๆ คุณยังสามารถใช้ [methods and variables](/code/builtin/overview.md) บางอย่างใน **Code node** ได้
 
-Please make sure you read these pages before continuing to the next exercise.
+โปรดตรวจสอบให้แน่ใจว่าคุณได้อ่านหน้าเหล่านี้ก่อนที่จะทำแบบฝึกหัดถัดไป
 
 ### Exercise
 
-Let's build on the previous exercise, in which you used the Code node to create a data set of two contacts with their names and emails. Now, connect a second Code node to the first one. In the new node, write code to create a new column named `workEmail` that references the work email of the first contact.
+มาต่อยอดจากแบบฝึกหัดก่อนหน้านี้ ซึ่งคุณใช้ Code node เพื่อสร้าง data set ของสอง contacts พร้อมชื่อและอีเมลของพวกเขา ตอนนี้ เชื่อมต่อ Code node ที่สองเข้ากับ node แรก ใน node ใหม่ ให้เขียนโค้ดเพื่อสร้าง column ใหม่ชื่อ `workEmail` ที่อ้างอิงถึง work email ของ contact แรก
 
 ??? note "Show me the solution"
-	In the **Code node**, in the JavaScript Code field you have to write the following code:
+	ใน **Code node** ในช่อง JavaScript Code คุณต้องเขียนโค้ดต่อไปนี้:
 
 	```javascript
 	let items = $input.all();
@@ -155,27 +155,27 @@ Let's build on the previous exercise, in which you used the Code node to create 
 	return items;
 	```
 
-	When you execute the **Code node**, the result should look like this:
+	เมื่อคุณ execute **Code node** ผลลัพธ์ควรมีลักษณะดังนี้:
 
 	<figure><img src="/_images/courses/level-two/chapter-one/exercise_function_reference.png" alt="" style="width:100%"><figcaption align = "center"><i>Code node reference</i></figcaption></figure>
 
 
 ## Transforming data
 
-The incoming data from some nodes may have a different data structure than the one used in n8n. In this case, you need to [transform the data](/data/transforming-data.md){:target="_blank" .external}, so that each item can be processed individually.
+ข้อมูลขาเข้าจากบาง nodes อาจมีโครงสร้างข้อมูลที่แตกต่างจากที่ใช้ใน n8n ในกรณีนี้ คุณต้อง [transform the data](/data/transforming-data.md){:target="_blank" .external} เพื่อให้แต่ละ item สามารถประมวลผลแยกกันได้
 
-The two most common operations for data transformation are:
+การดำเนินการที่พบบ่อยที่สุดสองอย่างสำหรับการแปลงข้อมูลคือ:
 
-- Creating multiple items from one item
-- Creating a single item from multiple items
+- การสร้าง multiple items จาก one item
+- การสร้าง a single item จาก multiple items
 
-There are several ways to transform data for the purposes mentioned above:
+มีหลายวิธีในการแปลงข้อมูลเพื่อวัตถุประสงค์ที่กล่าวถึงข้างต้น:
 
-- Use n8n's [data transformation nodes](/data/index.md#data-transformation-nodes). Use these nodes to modify the structure of incoming data that contain lists (arrays) without needing to use JavaScript code in the **Code node**:
-	- Use the [**Split Out node**](/integrations/builtin/core-nodes/n8n-nodes-base.splitout.md) to separate a single data item containing a list into multiple items.
-	- Use the [**Aggregate node**](/integrations/builtin/core-nodes/n8n-nodes-base.aggregate.md) to take separate items, or portions of them, and group them together into individual items.
-- Use the **Code node** to write JavaScript functions to modify the data structure of incoming data using the **Run Once for All Items** mode:
-    - To create multiple items from a single item, you can use JavaScript code like this. This example assumes that the item has a key named `data` set to an array of items in the form of: `[{ "data": [{<item_1>}, {<item_2>}, ...] }]`:
+- ใช้ [data transformation nodes](/data/index.md#data-transformation-nodes) ของ n8n ใช้ nodes เหล่านี้เพื่อแก้ไขโครงสร้างของข้อมูลขาเข้าที่มี lists (arrays) โดยไม่จำเป็นต้องใช้ JavaScript code ใน **Code node**:
+	- ใช้ [**Split Out node**](/integrations/builtin/core-nodes/n8n-nodes-base.splitout.md) เพื่อแยก data item เดียวที่มี list ออกเป็น multiple items
+	- ใช้ [**Aggregate node**](/integrations/builtin/core-nodes/n8n-nodes-base.aggregate.md) เพื่อนำ items แยกกัน หรือบางส่วนของมัน มารวมกลุ่มกันเป็น individual items
+- ใช้ **Code node** เพื่อเขียน JavaScript functions เพื่อแก้ไขโครงสร้างข้อมูลของข้อมูลขาเข้าโดยใช้โหมด **Run Once for All Items**:
+    - หากต้องการสร้าง multiple items จาก single item คุณสามารถใช้ JavaScript code เช่นนี้ ตัวอย่างนี้สมมติว่า item มี key ชื่อ `data` ที่ตั้งค่าเป็น array of items ในรูปแบบ: `[{ "data": [{<item_1>}, {<item_2>}, ...] }]`:
 	```javascript
 	return $input.first().json.data.map(item => {
         return {
@@ -183,7 +183,7 @@ There are several ways to transform data for the purposes mentioned above:
         }
     });
 	```
-	- To create a single item from multiple items, you can use this JavaScript code:
+	- หากต้องการสร้าง single item จาก multiple items คุณสามารถใช้ JavaScript code นี้:
 	```javascript
     return [
     	{
@@ -194,7 +194,7 @@ There are several ways to transform data for the purposes mentioned above:
       ];
 	```
 
-These JavaScript examples assume your entire input is what you want to transform. As in the exercise above, you can also execute either operation on a specific field by identifying that in the items list, for example, if our workEmail example had multiple emails in a single field, we could run some code like this:
+ตัวอย่าง JavaScript เหล่านี้สมมติว่า input ทั้งหมดของคุณคือสิ่งที่คุณต้องการแปลง เช่นเดียวกับในแบบฝึกหัดข้างต้น คุณยังสามารถ execute การดำเนินการอย่างใดอย่างหนึ่งบน field เฉพาะได้โดยระบุสิ่งนั้นใน items list ตัวอย่างเช่น หากตัวอย่าง workEmail ของเรามีหลายอีเมลใน field เดียว เราสามารถรันโค้ดเช่นนี้ได้:
 ```javascript
 let items = $input.all();
 return items[0].json.workEmail.map(item => {
@@ -206,21 +206,21 @@ return items[0].json.workEmail.map(item => {
 
 ### Exercise
 
-1. Use the **HTTP Request node** to make a GET request to the PokéAPI `https://pokeapi.co/api/v2/pokemon`. (This API requires no authentication).
-2. Transform the data in the `results` field with the **Split Out node**.
-3. Transform the data in the `results` field with the **Code node**.
+1. ใช้ **HTTP Request node** เพื่อส่ง GET request ไปยัง PokéAPI `https://pokeapi.co/api/v2/pokemon` (API นี้ไม่ต้องใช้ authentication)
+2. แปลงข้อมูลใน `results` field ด้วย **Split Out node**
+3. แปลงข้อมูลใน `results` field ด้วย **Code node**
 
 
 ??? note "Show me the solution"
 
-	1. To get the pokemon from the PokéAPI, execute the **HTTP Request node** with the following parameters:
+	1. หากต้องการรับ pokemon จาก PokéAPI ให้ execute **HTTP Request node** ด้วย parameters ต่อไปนี้:
 		- **Authentication**: None
 		- **Request Method**: GET
 		- **URL**: https://pokeapi.co/api/v2/pokemon
-	2. To transform the data with the **Split Out node**, connect this node to the **HTTP Request node** and set the following parameters:
+	2. หากต้องการแปลงข้อมูลด้วย **Split Out node** ให้เชื่อมต่อ node นี้กับ **HTTP Request node** และตั้งค่า parameters ต่อไปนี้:
 		- **Field To Split Out**: results
 		- **Include**: No Other Fields
-	3. To transform the data with the **Code node**, connect this node to the **HTTP Request node** and write the following code in the JavaScript Code field:
+	3. หากต้องการแปลงข้อมูลด้วย **Code node** ให้เชื่อมต่อ node นี้กับ **HTTP Request node** และเขียนโค้ดต่อไปนี้ในช่อง JavaScript Code:
 		```javascript
 		let items = $input.all();
 		return items[0].json.results.map(item => {

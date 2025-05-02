@@ -7,10 +7,10 @@ contentType: overview
 
 # Schema Preview
 
-Schema Preview exposes expected schema data from the previous node in the Node Editor without the user having to provide credentials or execute the node. This makes it possible to construct workflows without having to provide credentials in advance. The preview doesn't include mock data, but it does expose the expected fields, making it possible to select and incorporate them into the input of subsequent nodes.
+Schema Preview แสดงข้อมูล schema ที่คาดหวังจาก node ก่อนหน้าใน Node Editor โดยที่ผู้ใช้ไม่ต้องให้ข้อมูล credentials หรือ execute node ซึ่งทำให้สามารถสร้าง workflow ได้โดยไม่ต้องให้ข้อมูล credentials ล่วงหน้า การ preview ไม่ได้รวมข้อมูล mock data แต่จะแสดง field ที่คาดหวัง ทำให้สามารถเลือกและรวมเข้ากับ input ของ node ถัดไปได้
 
 ## Using the preview 
 
-1. There must be a node with Schema Preview available in your workflow.
-1. When clicking on the details of the next node in the sequence, the Schema Preview data will show up in the Node Editor where schema data would typically be exposed.
-1. Use data from the Schema Preview just as you would other schemas - drag and drop fields as input into your node parameters and settings.
+1. ต้องมี node ที่มี Schema Preview อยู่ใน workflow ของคุณ
+1. เมื่อคลิกที่รายละเอียดของ node ถัดไปในลำดับ ข้อมูล Schema Preview จะปรากฏขึ้นใน Node Editor ซึ่งเป็นที่ที่ข้อมูล schema จะแสดงตามปกติ
+1. ใช้ข้อมูลจาก Schema Preview เช่นเดียวกับที่คุณใช้ schema อื่นๆ - ลากและวาง field เป็น input ลงใน parameters และ settings ของ node ของคุณ

@@ -7,7 +7,7 @@ contentType: tutorial
 <!-- vale from-microsoft.FirstPerson = NO -->
 # Building a Mini-workflow
 
-In this lesson, you will build a small [workflow](/glossary.md#workflow-n8n) that gets 10 articles about automation from Hacker News. The process consists of five steps:
+ในบทเรียนนี้ คุณจะได้สร้าง [workflow](/glossary.md#workflow-n8n) เล็กๆ ที่ดึงบทความ 10 บทความเกี่ยวกับ automation จาก Hacker News กระบวนการประกอบด้วยห้าขั้นตอน:
 
 1. [Add a Manual Trigger node](#1-add-a-manual-trigger-node)
 2. [Add the Hacker News node](#2-add-the-hacker-news-node)
@@ -15,106 +15,106 @@ In this lesson, you will build a small [workflow](/glossary.md#workflow-n8n) tha
 4. [Execute the node](#4-execute-the-node)
 5. [Save the workflow](#5-save-the-workflow)
 
-The finished workflow will look like this:
+workflow ที่เสร็จแล้วจะมีลักษณะดังนี้:
 
 [[ workflowDemo("file:////courses/level-one/chapter-2.json") ]]
 
 ## 1. Add a Manual Trigger node
 
-Open the nodes panel (reminder: you can open this by selecting the **+** icon in the top right corner of the [canvas](/glossary.md#canvas-n8n) or selecting ++tab++ on your keyboard).
+เปิด nodes panel (เตือนความจำ: คุณสามารถเปิดได้โดยเลือกไอคอน **+** ที่มุมขวาบนของ [canvas](/glossary.md#canvas-n8n) หรือกด ++tab++ บนคีย์บอร์ดของคุณ)
 
-Then:
+จากนั้น:
 
 1. Search for the **Manual Trigger** node.
 2. Select it when it appears in the search.
 
-This will add the [Manual Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger.md) node to your canvas, which allows you to run the workflow at any time by selecting the **Test workflow** button.
+การดำเนินการนี้จะเพิ่ม [Manual Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger.md) node ลงใน canvas ของคุณ ซึ่งช่วยให้คุณสามารถรัน workflow ได้ตลอดเวลาโดยเลือกปุ่ม **Test workflow**
 
 /// note | Manual triggers
-For faster workflow creation, you can skip this step in the future. Adding any other node without a trigger will add the Manual Trigger node to the workflow.
+เพื่อการสร้าง workflow ที่เร็วขึ้น คุณสามารถข้ามขั้นตอนนี้ได้ในอนาคต การเพิ่ม node อื่นๆ โดยไม่มี trigger จะเป็นการเพิ่ม Manual Trigger node เข้าไปใน workflow โดยอัตโนมัติ
 
-In a real-world scenario, you would probably want to set up a schedule or some other [trigger](/glossary.md#trigger-node-n8n) to run the workflow.
+ในสถานการณ์จริง คุณอาจต้องการตั้งค่า schedule หรือ [trigger](/glossary.md#trigger-node-n8n) อื่นๆ เพื่อรัน workflow
 ///
 
 ## 2. Add the Hacker News node
 
-Select the **+** icon to the right of the Manual Trigger node to open the nodes panel.
+เลือกไอคอน **+** ทางด้านขวาของ Manual Trigger node เพื่อเปิด nodes panel
 
-Then:
+จากนั้น:
 
 1. Search for the **Hacker News** node.
 2. Select it when it appears in the search.
 3. In the **Actions** section, select **Get many items**.
 
-n8n adds the node to your canvas and the node window opens to display its configuration details.
+n8n จะเพิ่ม node ลงใน canvas ของคุณ และหน้าต่าง node จะเปิดขึ้นเพื่อแสดงรายละเอียดการกำหนดค่า
 
 ## 3. Configure the Hacker News node
 
-When you add a new node to the Editor UI, the node is automatically activated. The node details will open in a window with several options:
+เมื่อคุณเพิ่ม node ใหม่ลงใน Editor UI, node นั้นจะถูกเปิดใช้งานโดยอัตโนมัติ รายละเอียด node จะเปิดขึ้นในหน้าต่างพร้อมตัวเลือกหลายอย่าง:
 
-- **Parameters**: Adjust parameters to refine and control the node's functionality.
-- **Settings**: Adjust settings to control the node's design and executions.
-- **Docs**: Open the n8n documentation for this node in a new window.
+- **Parameters**: ปรับ parameters เพื่อปรับแต่งและควบคุมฟังก์ชันการทำงานของ node
+- **Settings**: ปรับ settings เพื่อควบคุมการออกแบบและการ εκτέλεση (execution) ของ node
+- **Docs**: เปิดเอกสาร n8n สำหรับ node นี้ในหน้าต่างใหม่
 
 
 /// note | Parameters vs. Settings
-* **Parameters** are different for each node, depending on its functionality.
-* **Settings** are the same for all nodes.
+* **Parameters** จะแตกต่างกันไปในแต่ละ node ขึ้นอยู่กับฟังก์ชันการทำงานของมัน
+* **Settings** จะเหมือนกันสำหรับทุก nodes
 ///
 
 
 ### Parameters
 
-We need to configure several parameters for the Hacker News node to make it work:
+เราต้องกำหนดค่า parameters หลายอย่างสำหรับ Hacker News node เพื่อให้ทำงานได้:
 
 - **Resource**: All <br/>
-This resource selects all data records (articles).
+Resource นี้จะเลือก data records (บทความ) ทั้งหมด
 - **Operation**: Get Many <br/>
-This operation fetches all the selected articles.
+Operation นี้จะดึงบทความที่เลือกทั้งหมด
 - **Limit**: 10 <br/>
-This parameter sets a limit to the number of results the Get Many operation returns.
+Parameter นี้จะกำหนดขีดจำกัดจำนวนผลลัพธ์ที่ Get Many operation ส่งคืน
 - **Additional Fields** > **Add Field** > **Keyword**: automation <br/>
-**Additional fields** are options that you can add to certain nodes to make your request more specific or filter the results. For this example, we want to get only articles that include the keyword "automation." <br/>
+**Additional fields** เป็นตัวเลือกที่คุณสามารถเพิ่มลงใน nodes บางตัวเพื่อทำให้ request ของคุณเฉพาะเจาะจงมากขึ้นหรือกรองผลลัพธ์ สำหรับตัวอย่างนี้ เราต้องการรับเฉพาะบทความที่มี keyword "automation" <br/>
 
-The configuration of the parameters for the Hacker News node should now look like this:
+การกำหนดค่า parameters สำหรับ Hacker News node ควรมีลักษณะดังนี้:
 
 <figure><img src="/_images/courses/level-one/chapter-two/l1-c-2-hacker-news-node-parameters.png" alt="Hacker News node parameters" style="width:100%"><figcaption align = "center"><i>Hacker News node parameters</i></figcaption></figure>
 
 ### Settings
 
-The **Settings** section includes several options for node design and executions. In this case, we'll configure only the final two settings, which set the node's appearance in the Editor UI canvas.
+ส่วน **Settings** มีตัวเลือกหลายอย่างสำหรับการออกแบบและการ εκτέλεση (execution) ของ node ในกรณีนี้ เราจะกำหนดค่าเฉพาะสอง settings สุดท้าย ซึ่งกำหนดลักษณะที่ปรากฏของ node ใน Editor UI canvas
 
-In the Hacker News node Settings, edit:
+ใน Hacker News node Settings, แก้ไข:
 
 - **Notes**: Get the 10 latest articles.
 
     /// note | Node notes
-    It's often helpful to add a short description in the node about what it does. This is helpful for complex or shared workflows in particular!
+    การเพิ่มคำอธิบายสั้นๆ ใน node เกี่ยวกับสิ่งที่มันทำมักจะมีประโยชน์ สิ่งนี้มีประโยชน์อย่างยิ่งสำหรับ workflows ที่ซับซ้อนหรือแชร์กัน!
     ///
 
 - **Display note in flow?**: toggle to true<br/>
-This option will display the Note under the node in the canvas.
+ตัวเลือกนี้จะแสดง Note ใต้ node ใน canvas
 
-The configuration of the settings for the Hacker News node should now look like this:
+การกำหนดค่า settings สำหรับ Hacker News node ควรมีลักษณะดังนี้:
 
 <figure><img src="/_images/courses/level-one/chapter-two/l1-c2-hacker-news-node-setting-configuration.png" alt="Hacker News node settings" style="width:100%"><figcaption align = "center"><i>Hacker News node settings</i></figcaption></figure>
 
 
 /// note | Renaming a node
-You can rename the node with a name that's more descriptive for your use case. There are three ways to do this:
+คุณสามารถเปลี่ยนชื่อ node ด้วยชื่อที่สื่อความหมายมากขึ้นสำหรับ use case ของคุณ มีสามวิธีในการทำเช่นนี้:
 
-- Select the node you want to rename and at the same time press the F2 key on your keyboard.
-- Double-click on the node to open the node window. Click on the name of the node in the top left corner of the window, rename it as you like, then click **Rename** to save the node under the new name.
-- Right-click on the node and select the **Rename** option, or select the node and press F2 on your keyboard.
+- เลือก node ที่คุณต้องการเปลี่ยนชื่อและกดปุ่ม F2 บนคีย์บอร์ดของคุณพร้อมกัน
+- ดับเบิลคลิกที่ node เพื่อเปิดหน้าต่าง node คลิกที่ชื่อของ node ที่มุมซ้ายบนของหน้าต่าง เปลี่ยนชื่อตามที่คุณต้องการ จากนั้นคลิก **Rename** เพื่อบันทึก node ภายใต้ชื่อใหม่
+- คลิกขวาที่ node และเลือกตัวเลือก **Rename** หรือเลือก node แล้วกด F2 บนคีย์บอร์ดของคุณ
 
 <figure><img src="/_images/courses/level-one/chapter-two/l1-c2-renaming-a-node-from-the-keyboard.png" alt="Renaming a node" style="width:100%"><figcaption align = "center"><i>Renaming a node from the keyboard</i></figcaption></figure>
 
-To find the original node name (the type of node), open the node window and select **Settings**. The bottom of the page contains the node type and version.
+หากต้องการค้นหาชื่อ node ดั้งเดิม (ประเภทของ node) ให้เปิดหน้าต่าง node และเลือก **Settings** ด้านล่างของหน้าจะมีประเภทและเวอร์ชันของ node
 ///
 
 ## 4. Execute the node
 
-Select the **Test step** button in the node details window. You should see 10 results in the Output **Table** view.
+เลือกปุ่ม **Test step** ในหน้าต่างรายละเอียด node คุณควรเห็นผลลัพธ์ 10 รายการในมุมมอง **Table** ของ Output
 
 <!--This screenshot needs updating now that the button says "Test step" rather than "Execute node"-->
 <figure><img src="/_images/courses/level-one/chapter-two/l1-c2-results-in-table-view-for-the-hacker-news-node.png" alt="Results in Table view for the Hacker News node" style="width:100%"><figcaption align = "center"><i>Results in Table view for the Hacker News node</i></figcaption></figure>
@@ -122,59 +122,59 @@ Select the **Test step** button in the node details window. You should see 10 re
 ### Node executions
 
 /// note | Node execution
-A node execution represents a run of that node to retrieve or process the specified data.
+Node execution หมายถึงการรัน node นั้นเพื่อดึงหรือประมวลผลข้อมูลที่ระบุ
 ///
 
-If a node executes successfully, a small green checkmark appears on top of the node in the canvas
+หาก node ทำงานสำเร็จ เครื่องหมายถูกสีเขียวเล็กๆ จะปรากฏขึ้นที่ด้านบนของ node ใน canvas
 
 <figure><img src="/_images/courses/level-one/chapter-two/l1-c2-successfully-executed-workflow.png" alt="Successfully executed workflow" style="width:100%"><figcaption align = "center"><i>Successfully executed workflow</i></figcaption></figure>
 
-If there are no problems with the parameters and everything works fine, the requested data displays in the node window in **Table**, **JSON**, and **Schema** format. You can switch between these views by selecting the one you want from the **Table | JSON | Schema** button at the top of the node window.
+หากไม่มีปัญหากับ parameters และทุกอย่างทำงานได้ดี ข้อมูลที่ร้องขอจะแสดงในหน้าต่าง node ในรูปแบบ **Table**, **JSON**, และ **Schema** คุณสามารถสลับระหว่างมุมมองเหล่านี้ได้โดยเลือกมุมมองที่คุณต้องการจากปุ่ม **Table | JSON | Schema** ที่ด้านบนของหน้าต่าง node
 
 /// note | Table vs JSON views
-The **Table** view is the default. It displays the requested data in a table, where the rows are the records and the columns are the available attributes of those records.
+มุมมอง **Table** เป็นค่าเริ่มต้น จะแสดงข้อมูลที่ร้องขอในตาราง โดยที่แถวคือ records และคอลัมน์คือ attributes ที่มีอยู่ของ records เหล่านั้น
 ///
 
-Here's our Hacker News output in JSON view:
+นี่คือ output ของ Hacker News ของเราในมุมมอง JSON:
 
 <figure><img src="/_images/courses/level-one/chapter-two/l1-c2-results-in-json-view-for-the-hacker-news-node.png" alt="Results in JSON view for the Hacker News node" style="width:100%"><figcaption align = "center"><i>Results in JSON view for the Hacker News node</i></figcaption></figure>
 
-The node window displays more information about the node execution:
+หน้าต่าง node จะแสดงข้อมูลเพิ่มเติมเกี่ยวกับการ εκτέλεση (execution) ของ node:
 
-- Next to the **Output** title, notice a small icon (this will be a green checkmark if the node execution succeeded). Beside it, there is an info icon. If you hover on it, you'll get two more pieces of information that can provide insights into the performance of each individual node in a workflow:
-    - **Start Time**: When the node execution started.
-    - **Execution Time**: How long it took for the node to return the results from the moment it started executing.
-- Just below the **Output** title, you'll notice another piece of information: **10 items**. This field displays the number of items (records) that the node request returned. In this example, it's expected to be 10, since this is the limit we set in step 2. But if you don't set a limit, it's useful to see how many records are actually returned.
+- ถัดจากชื่อ **Output** สังเกตไอคอนเล็กๆ (จะเป็นเครื่องหมายถูกสีเขียวหากการ εκτέλεση (execution) ของ node สำเร็จ) ข้างๆ กันมีไอคอนข้อมูล หากคุณวางเมาส์เหนือไอคอนนั้น คุณจะได้รับข้อมูลเพิ่มเติมอีกสองส่วนที่สามารถให้ข้อมูลเชิงลึกเกี่ยวกับประสิทธิภาพของแต่ละ node ใน workflow:
+    - **Start Time**: เวลาที่การ εκτέλεση (execution) ของ node เริ่มต้น
+    - **Execution Time**: ระยะเวลาที่ node ใช้ในการส่งคืนผลลัพธ์นับตั้งแต่เริ่มทำงาน
+- ด้านล่างชื่อ **Output** คุณจะสังเกตเห็นข้อมูลอีกส่วนหนึ่ง: **10 items** ฟิลด์นี้แสดงจำนวน items (records) ที่ node request ส่งคืน ในตัวอย่างนี้ คาดว่าจะเป็น 10 เนื่องจากเป็นขีดจำกัดที่เราตั้งไว้ในขั้นตอนที่ 2 แต่ถ้าคุณไม่ได้ตั้งค่าขีดจำกัด การดูว่ามี records กี่รายการที่ส่งคืนจริงก็มีประโยชน์
 
 
 /// warning | Error in nodes
-A red warning icon on a node means that the node has errors. This might happen if the node credentials are missing or incorrect or the node parameters aren't configured correctly.
+ไอคอนคำเตือนสีแดงบน node หมายความว่า node มีข้อผิดพลาด สิ่งนี้อาจเกิดขึ้นหาก credentials ของ node หายไปหรือไม่ถูกต้อง หรือ parameters ของ node ไม่ได้กำหนดค่าอย่างถูกต้อง
 ///
 <figure style="text-align:center;"><img src="/_images/courses/level-one/chapter-one/error-node.png" alt="Error in nodes" style="width:30%" align="center"><figcaption align = "center"><i>Error in nodes</i></figcaption></figure>
 
 ## 5. Save the workflow
 
-Once you're finished editing the node, select **Back to canvas** to return to the main canvas.
+เมื่อคุณแก้ไข node เสร็จแล้ว ให้เลือก **Back to canvas** เพื่อกลับไปยัง canvas หลัก
 
-By default, your workflow is automatically saved as "My workflow."
+โดยค่าเริ่มต้น workflow ของคุณจะถูกบันทึกโดยอัตโนมัติเป็น "My workflow"
 
-For this lesson, rename the workflow to be "Hacker News workflow."
+สำหรับบทเรียนนี้ ให้เปลี่ยนชื่อ workflow เป็น "Hacker News workflow"
 
 /// note | Reminder
-You can rename a workflow by clicking on the workflow's name at the top of the Editor UI.
+คุณสามารถเปลี่ยนชื่อ workflow ได้โดยคลิกที่ชื่อ workflow ที่ด้านบนของ Editor UI
 ///
 
-Once you've renamed the workflow, be sure to save it.
+เมื่อคุณเปลี่ยนชื่อ workflow แล้ว อย่าลืมบันทึก
 
-There are two ways in which you can save a workflow:
+มีสองวิธีที่คุณสามารถบันทึก workflow ได้:
 
-- From the Canvas in Editor UI, click **Ctrl + S** or **Cmd + S** on your keyboard.
-- Select the **Save** button in the top right corner of the Editor UI. You may need to leave the node editor first by clicking outside the dialog.
+- จาก Canvas ใน Editor UI คลิก **Ctrl + S** หรือ **Cmd + S** บนคีย์บอร์ดของคุณ
+- เลือกปุ่ม **Save** ที่มุมขวาบนของ Editor UI คุณอาจต้องออกจาก node editor ก่อนโดยคลิกนอกกล่องโต้ตอบ
 
-If you see a grey **Saved** text instead of the **Save** button, your workflow was automatically saved.
+หากคุณเห็นข้อความ **Saved** สีเทาแทนปุ่ม **Save** แสดงว่า workflow ของคุณถูกบันทึกโดยอัตโนมัติแล้ว
 
 ## Summary
 
-Congratulations, you just built your first workflow! In this lesson, you learned how to use actions in app nodes, configure their parameters and settings, and save and execute your workflow.
+ขอแสดงความยินดี คุณเพิ่งสร้าง workflow แรกของคุณสำเร็จ! ในบทเรียนนี้ คุณได้เรียนรู้วิธีใช้ actions ใน app nodes, กำหนดค่า parameters และ settings, และบันทึกและ εκτέλεση (execute) workflow ของคุณ
 
-In the next lesson, you'll meet your new client, Nathan, who needs to automate his sales reporting work. You will build a more complex workflow for his use case, helping him become more productive at work.
+ในบทเรียนถัดไป คุณจะได้พบกับลูกค้าใหม่ของคุณ Nathan ผู้ซึ่งต้องการ automate งานรายงานการขายของเขา คุณจะได้สร้าง workflow ที่ซับซ้อนมากขึ้นสำหรับ use case ของเขา ซึ่งจะช่วยให้เขามีประสิทธิผลในการทำงานมากขึ้น

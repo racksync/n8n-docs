@@ -7,32 +7,32 @@ contentType: howto
 
 # Data mocking
 
-Data mocking is simulating or faking data. It's useful when developing a workflow. By mocking data, you can:
+Data mocking คือการจำลองหรือสร้างข้อมูลปลอมขึ้นมา มีประโยชน์เมื่อพัฒนา workflow โดยการ mock data คุณสามารถ:
 
-- Avoid making repeated calls to your data source. This saves time and costs.
-- Work with a small, predictable dataset during initial development.
-- Avoid the risk of overwriting live data: in the early stages of building your workflow, you don't need to connect your real data source.
+- หลีกเลี่ยงการเรียกซ้ำไปยังแหล่งข้อมูลของคุณ ซึ่งช่วยประหยัดเวลาและค่าใช้จ่าย
+- ทำงานกับชุดข้อมูลขนาดเล็กที่คาดเดาได้ในระหว่างการพัฒนาเบื้องต้น
+- หลีกเลี่ยงความเสี่ยงในการเขียนทับข้อมูลจริง (live data): ในช่วงแรกของการสร้าง workflow คุณไม่จำเป็นต้องเชื่อมต่อกับแหล่งข้อมูลจริงของคุณ
 
 
 ## Mocking with real data using data pinning
 
-Using [data pinning](/data/data-pinning.md), you load real data into your workflow, then pin it in the output panel of a node. Using this approach you have realistic data, with only one call to your data source. You can [edit pinned data](/data/data-editing.md).
+การใช้ [data pinning](/data/data-pinning.md) คุณโหลดข้อมูลจริงเข้ามาใน workflow ของคุณ จากนั้น pin ข้อมูลนั้นใน output panel ของ node การใช้วิธีนี้ทำให้คุณมีข้อมูลที่สมจริง โดยมีการเรียกไปยังแหล่งข้อมูลของคุณเพียงครั้งเดียว คุณสามารถ [edit pinned data](/data/data-editing.md) ได้
 
-Use this approach when you need to configure your workflow to handle the exact data structure and parameters provided by your data source.
+ใช้วิธีนี้เมื่อคุณต้องการกำหนดค่า workflow ของคุณเพื่อจัดการกับโครงสร้างข้อมูลและ parameters ที่แน่นอนที่มาจากแหล่งข้อมูลของคุณ
 
 --8<-- "_snippets/data/how-to-pin-data.md"
 
 
 ## Generate custom data using the Code or Edit Fields nodes
 
-You can create a custom dataset in your workflow using either the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md) or the [Edit Fields (Set) node](/integrations/builtin/core-nodes/n8n-nodes-base.set.md).
+คุณสามารถสร้างชุดข้อมูลแบบกำหนดเองใน workflow ของคุณโดยใช้ [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md) หรือ [Edit Fields (Set) node](/integrations/builtin/core-nodes/n8n-nodes-base.set.md)
 
-In the Code node, you can create any data set you want, and return it as the node output. In the Edit Fields node, select **Add fields** to add your custom data.
+ใน Code node คุณสามารถสร้างชุดข้อมูลใดก็ได้ที่คุณต้องการ และส่งคืนเป็น output ของ node ใน Edit Fields node เลือก **Add fields** เพื่อเพิ่มข้อมูลที่คุณกำหนดเอง
 
-The Edit Fields node is a good choice for small tests. To create more complex datasets, use the Code node.
+Edit Fields node เป็นตัวเลือกที่ดีสำหรับการทดสอบเล็กๆ หากต้องการสร้างชุดข้อมูลที่ซับซ้อนมากขึ้น ให้ใช้ Code node
 
 ## Output a sample data set from the Customer Datastore node
 
-The Customer Datastore node provides a fake dataset to work with. Add and execute the node to explore the data.
+Customer Datastore node มีชุดข้อมูลปลอมให้ใช้งาน เพิ่มและ execute node เพื่อสำรวจข้อมูล
 
-Use this approach if you need some test data when exploring n8n, and you don't have a real use-case to work with.
+ใช้วิธีนี้หากคุณต้องการข้อมูลทดสอบบางอย่างเมื่อสำรวจ n8n และคุณยังไม่มี use-case จริงที่จะทำงานด้วย

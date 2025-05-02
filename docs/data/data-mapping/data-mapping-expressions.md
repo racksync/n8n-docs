@@ -5,20 +5,20 @@ contentType: howto
 
 # Mapping in the expressions editor
 
-These examples show how to access linked items in the expressions editor. Refer to [expressions](/code/expressions.md) for more information on expressions, including built in variables and methods.
+ตัวอย่างเหล่านี้แสดงวิธีการเข้าถึง linked item ใน expressions editor โปรดดู [expressions](/code/expressions.md) สำหรับข้อมูลเพิ่มเติมเกี่ยวกับ expressions รวมถึงตัวแปรและ method ที่มีอยู่แล้ว (built-in)
 
-For information on errors with mapping and linking items, refer to [Item linking errors](/data/data-mapping/data-item-linking/item-linking-errors.md).
+สำหรับข้อมูลเกี่ยวกับข้อผิดพลาดในการ map และการ link item โปรดดูที่ [Item linking errors](/data/data-mapping/data-item-linking/item-linking-errors.md)
 
 ## Access the linked item in a previous node's output
 
-When you use this, n8n works back up the item linking chain, to find the parent item in the given node.
+เมื่อคุณใช้สิ่งนี้ n8n จะทำงานย้อนกลับไปตามสายโซ่ของ item linking เพื่อค้นหา parent item ใน node ที่ระบุ
 
 ```js
 // Returns the linked item
 {{$("<node-name>").item}}
 ```
 
-As a longer example, consider a scenario where a node earlier in the workflow has the following output data:
+ตัวอย่างที่ยาวขึ้น ลองพิจารณาสถานการณ์ที่ node ก่อนหน้าใน workflow มีข้อมูล output ดังนี้:
 
 ```json
 [
@@ -45,23 +45,22 @@ As a longer example, consider a scenario where a node earlier in the workflow ha
 ]
 ```
 
-To extract the name, use the following expression:
+ในการดึงชื่อออกมา ให้ใช้ expression ต่อไปนี้:
 
 ```js
 {{$("<node-name>").item.json.name}}
 ```
 
-
 ### Access the linked item in the current node's input
 
-In this case, the item linking is within the node: find the input item that the node links to an output item.
+ในกรณีนี้ item linking จะอยู่ภายใน node: ค้นหา input item ที่ node link ไปยัง output item
 
 ```js
 // Returns the linked item
 {{$input.item}}
 ```
 
-As a longer example, consider a scenario where the current node has the following input data:
+ตัวอย่างที่ยาวขึ้น ลองพิจารณาสถานการณ์ที่ node ปัจจุบันมีข้อมูล input ดังนี้:
 
 ```json
 [
@@ -88,7 +87,7 @@ As a longer example, consider a scenario where the current node has the followin
 ]
 ```
 
-To extract the name, you'd normally use drag-and-drop [Data mapping](/data/data-mapping/index.md), but you could also write the following expression:
+ในการดึงชื่อออกมา ปกติคุณจะใช้การลากและวาง [Data mapping](/data/data-mapping/index.md) แต่คุณก็สามารถเขียน expression ต่อไปนี้ได้เช่นกัน:
 
 ```js
 {{$input.item.json.name}}

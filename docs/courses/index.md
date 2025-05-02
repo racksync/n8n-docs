@@ -7,11 +7,11 @@ contentType: overview
 
 # Text courses
 
-If you've found your way here, it means you're serious about your interest in automation. Maybe you're tired of manually entering data into the same spreadsheet every day, of clicking through a series of tabs and buttons for that one piece of information you need, of managing tens of different tools and systems.
+ถ้าคุณมาถึงหน้านี้แล้ว แสดงว่าคุณสนใจเรื่อง automation อย่างจริงจัง บางทีคุณอาจจะเบื่อกับการกรอกข้อมูลลงใน spreadsheet เดิมๆ ทุกวัน หรือเบื่อกับการคลิกผ่านแท็บและปุ่มต่างๆ เพื่อหาข้อมูลชิ้นเดียวที่คุณต้องการ หรือเบื่อกับการจัดการเครื่องมือและระบบต่างๆ มากมาย
 
-Whatever the reason, one thing is clear: you shouldn't spend precious time doing things that don't spark joy or contribute to your personal and professional growth.
+ไม่ว่าเหตุผลจะเป็นอะไร สิ่งหนึ่งที่ชัดเจนคือ: คุณไม่ควรเสียเวลาอันมีค่าไปกับสิ่งที่ไม่ได้ทำให้คุณมีความสุข หรือไม่ได้ช่วยให้คุณเติบโตทั้งในด้านส่วนตัวและอาชีพการงาน
 
-These tasks can and should be automated! And you don't need advanced technical knowledge or excellent coding skills to do this–with no-code tools like n8n, automation is for everyone.
+งานเหล่านี้สามารถและควรทำให้เป็นอัตโนมัติ! และคุณไม่จำเป็นต้องมีความรู้ทางเทคนิคขั้นสูงหรือทักษะการเขียนโค้ดที่ยอดเยี่ยมเพื่อทำสิ่งนี้ ด้วยเครื่องมือ no-code อย่าง n8n การทำ automation เป็นเรื่องสำหรับทุกคน
 
 ## Available courses
 

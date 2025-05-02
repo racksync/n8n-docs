@@ -7,7 +7,7 @@ contentType: tutorial
 <!-- vale from-microsoft.FirstPerson = NO -->
 # Designing the Workflow
 
-Now that we know what Nathan wants to automate, let's consider the steps he needs to take to achieve his goals:
+ตอนนี้เรารู้แล้วว่า Nathan ต้องการ automate อะไรบ้าง ลองพิจารณาขั้นตอนที่เขาต้องทำเพื่อให้บรรลุเป้าหมาย:
 
 1. Get the relevant data (order id, order status, order value, employee name) from the data warehouse
 2. Filter the orders by their status (Processing or Booked)
@@ -16,18 +16,18 @@ Now that we know what Nathan wants to automate, let's consider the steps he need
 5. Insert the details about the Processing orders in Airtable for follow-up
 6. Schedule this workflow to run every Monday morning
 
-Nathan's workflow involves sending data from the company's data warehouse to two external services:
+Workflow ของ Nathan เกี่ยวข้องกับการส่งข้อมูลจาก data warehouse ของบริษัทไปยังบริการภายนอกสองแห่ง:
 
 - Discord
 - Airtable
 
-Before that, the data has to be wrangled with general functions (conditional filtering, calculation, scheduling).
+ก่อนหน้านั้น ข้อมูลจะต้องถูกจัดการด้วยฟังก์ชันทั่วไป (การกรองตามเงื่อนไข การคำนวณ การตั้งเวลา)
 
-n8n provides integrations for all these steps, so Nathan's workflow in n8n would look like this:
+n8n มี integrations สำหรับขั้นตอนเหล่านี้ทั้งหมด ดังนั้น workflow ของ Nathan ใน n8n จะมีลักษณะดังนี้:
 
 [[ workflowDemo("file:////courses/level-one/finished.json") ]]
 
-You will build this workflow in eight steps:
+คุณจะสร้าง workflow นี้ในแปดขั้นตอน:
 
 1. [Getting data from the data warehouse](/courses/level-one/chapter-5/chapter-5.1.md)
 2. [Inserting data into Airtable](/courses/level-one/chapter-5/chapter-5.2.md)
@@ -38,6 +38,6 @@ You will build this workflow in eight steps:
 7. [Scheduling the workflow](/courses/level-one/chapter-5/chapter-5.7.md)
 8. [Activating and examining the workflow](/courses/level-one/chapter-5/chapter-5.8.md)
 
-To build this workflow, you will need the credentials found in the email you received from n8n when you signed up for this course. If you haven't signed up already, you can do it [here](https://n8n-community.typeform.com/to/PDEMrevI?typeform-source=127.0.0.1){:target="_blank" .external-link}. If you haven't received a confirmation email after signing up, [contact us](mailto:help@n8n.io).
+ในการสร้าง workflow นี้ คุณจะต้องใช้ credentials ที่อยู่ในอีเมลที่คุณได้รับจาก n8n เมื่อคุณสมัครเข้าร่วมคอร์สนี้ หากคุณยังไม่ได้สมัคร คุณสามารถทำได้ [ที่นี่](https://n8n-community.typeform.com/to/PDEMrevI?typeform-source=127.0.0.1){:target="_blank" .external-link} หากคุณไม่ได้รับอีเมลยืนยันหลังจากสมัคร โปรด [ติดต่อเรา](mailto:help@n8n.io)
 
 [Start building!](/courses/level-one/chapter-5/chapter-5.1.md){ .md-button }

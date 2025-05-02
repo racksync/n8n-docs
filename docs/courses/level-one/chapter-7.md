@@ -7,11 +7,11 @@ contentType: tutorial
 <!-- vale from-microsoft.FirstPerson = NO -->
 # Test your knowledge
 
-Congratulations, you finished the n8n Course Level 1!
+ขอแสดงความยินดี คุณเรียนจบ n8n Course Level 1 แล้ว!
 
-You've learned a lot about workflow automation and built your first business workflow. Why not showcase your skills?
+คุณได้เรียนรู้มากมายเกี่ยวกับ workflow automation และสร้าง business workflow แรกของคุณแล้ว ทำไมไม่ลองแสดงทักษะของคุณดูล่ะ?
 
-You can test your knowledge by taking a **quiz**, which consists of questions about the theoretical concepts and workflows covered in this course.
+คุณสามารถทดสอบความรู้ของคุณได้โดยการทำ **quiz** ซึ่งประกอบด้วยคำถามเกี่ยวกับแนวคิดเชิงทฤษฎีและ workflows ที่ครอบคลุมในคอร์สนี้
 
 - You need to have at least 80% correct answers in each part to pass the quiz.
 - You can take the quiz as many times as you want.

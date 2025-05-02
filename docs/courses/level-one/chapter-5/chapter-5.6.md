@@ -7,46 +7,46 @@ contentType: tutorial
 <!-- vale from-microsoft.FirstPerson = NO -->
 # 6. Notifying the Team
 
-In this step of the workflow, you will learn how to send messages to a Discord channel using the [Discord node](/integrations/builtin/app-nodes/n8n-nodes-base.discord/index.md). After this step, your workflow should look like this:
+ในขั้นตอนนี้ของ workflow คุณจะได้เรียนรู้วิธีส่งข้อความไปยัง Discord channel โดยใช้ [Discord node](/integrations/builtin/app-nodes/n8n-nodes-base.discord/index.md) หลังจากขั้นตอนนี้ workflow ของคุณควรมีลักษณะดังนี้:
 
 [[ workflowDemo("file:////courses/level-one/chapter-5/chapter-5.6.json") ]]
 
-Now that you have a calculated summary of the booked orders, you need to notify Nathan's team in their Discord channel. For this workflow, you will send messages to the [n8n server](https://discord.gg/G98WXzsjky) on Discord.
+ตอนนี้คุณมีสรุปการคำนวณของ booked orders แล้ว คุณต้องแจ้งทีมของ Nathan ใน Discord channel ของพวกเขา สำหรับ workflow นี้ คุณจะส่งข้อความไปยัง [n8n server](https://discord.gg/G98WXzsjky) บน Discord
 
-Before you begin the steps below, use the link above to connect to the n8n server on Discord. Be sure you can access the `#course-level-1` channel.
+ก่อนที่คุณจะเริ่มขั้นตอนด้านล่าง ให้ใช้ลิงก์ด้านบนเพื่อเชื่อมต่อกับ n8n server บน Discord ตรวจสอบให้แน่ใจว่าคุณสามารถเข้าถึง channel `#course-level-1` ได้
 
 /// note | Communication app nodes
-You can replace the Discord node with another communication app. For example, n8n also has nodes for [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack.md) and [Mattermost](/integrations/builtin/app-nodes/n8n-nodes-base.mattermost.md).
+คุณสามารถแทนที่ Discord node ด้วย communication app อื่นได้ ตัวอย่างเช่น n8n ยังมี nodes สำหรับ [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack.md) และ [Mattermost](/integrations/builtin/app-nodes/n8n-nodes-base.mattermost.md)
 ///
 
-In your workflow, add a Discord node connected to the Code node.
+ใน workflow ของคุณ ให้เพิ่ม Discord node ที่เชื่อมต่อกับ Code node
 
-When you search for the Discord node, look for **Message Actions** and select **Send a message** to add the node.
+เมื่อคุณค้นหา Discord node ให้มองหา **Message Actions** และเลือก **Send a message** เพื่อเพิ่ม node
 
-In the Discord node window, configure these parameters:
+ในหน้าต่าง Discord node กำหนดค่า parameters เหล่านี้:
 
 - **Connection Type**: Select **Webhook**.
 - **Credential for Discord Webhook**: Select **- Create New Credential -**.
-    - Copy the **Webhook URL** from the email you received when you signed up for this course and paste it into the **Webhook URL** field of the credentials.
-    - Select **Save** and then close the credentials dialog.
+    - คัดลอก **Webhook URL** จากอีเมลที่คุณได้รับเมื่อคุณสมัครเข้าร่วมคอร์สนี้และวางลงในฟิลด์ **Webhook URL** ของ credentials
+    - เลือก **Save** จากนั้นปิดกล่องโต้ตอบ credentials
 - **Operation**: Select **Send a Message**.
 - **Message**:
-    - Select the **Expression** tab on the right side of the Message field.
-    - Copy the text below and paste it into the **Expression** window, or construct it manually using the **Expression Editor**.
+    - เลือกแท็บ **Expression** ทางด้านขวาของฟิลด์ Message
+    - คัดลอกข้อความด้านล่างและวางลงในหน้าต่าง **Expression** หรือสร้างด้วยตนเองโดยใช้ **Expression Editor**
 		```
 		This week we've {{$json["totalBooked"]}} booked orders with a total value of {{$json["bookedSum"]}}. My Unique ID: {{ $('HTTP Request').params["headerParameters"]["parameters"][0]["value"] }}
 		```
 
-Now select **Test step** in the Discord node. If all works well, you should see this output in n8n:
+ตอนนี้เลือก **Test step** ใน Discord node หากทุกอย่างทำงานได้ดี คุณควรเห็น output นี้ใน n8n:
 
 <figure><img src="/_images/courses/level-one/chapter-five/l1-c5-5-6-discord-output.png" alt="Discord node output" style="width:100%"><figcaption align = "center"><i>Discord node output</i></figcaption></figure>
 
-And your message should appear in the Discord channel #course-level-1:
+และข้อความของคุณควรปรากฏใน Discord channel #course-level-1:
 
 <figure><img src="/_images/courses/level-one/chapter-two/discord-output.png" alt="Discord message" style="width:100%"><figcaption align = "center"><i>Discord message</i></figcaption></figure>
 
 ## What's next?
 
-**Nathan 🙋**: Incredible, you've saved me hours of tedious work already! Now I can execute this workflow when I need it. I just need to remember to run it every Monday morning at 9 AM.
+**Nathan 🙋**: เหลือเชื่อ คุณช่วยประหยัดเวลาทำงานที่น่าเบื่อของฉันไปหลายชั่วโมงแล้ว! ตอนนี้ฉันสามารถ εκτέλεση (execute) workflow นี้ได้เมื่อฉันต้องการ ฉันแค่ต้องจำไว้ว่าต้องรันมันทุกเช้าวันจันทร์ เวลา 9.00 น.
 
-**You 👩‍🔧**: Don't worry about that, you can actually schedule the workflow to run on a specific day, time, or interval. I'll set this up in the next step.
+**You 👩‍🔧**: ไม่ต้องกังวลเรื่องนั้น คุณสามารถ schedule workflow ให้ทำงานในวัน เวลา หรือช่วงเวลาที่ระบุได้จริง ฉันจะตั้งค่านี้ในขั้นตอนถัดไป

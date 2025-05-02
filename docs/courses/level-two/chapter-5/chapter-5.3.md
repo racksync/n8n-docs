@@ -5,29 +5,29 @@ contentType: tutorial
 
 # Workflow 3: Monitoring workflow errors
 
-Last but not least, let's help Nathan know if there are any errors running the workflow.
+สุดท้ายแต่ไม่ท้ายสุด มาช่วย Nathan ให้รู้ว่ามี errors ใดๆ เกิดขึ้นในการรัน workflow หรือไม่
 
-To accomplish this task, create an Error workflow that monitors the main workflow:
+เพื่อให้งานนี้สำเร็จ ให้สร้าง Error workflow ที่ monitor main workflow:
 
-1. Create a new workflow.
-2. Add an **Error Trigger node** (and execute it as a test).
-3. Connect a **Discord node** to the **Error Trigger node** and configure these fields:<br/>
+1. สร้าง workflow ใหม่
+2. เพิ่ม **Error Trigger node** (และ execute เพื่อทดสอบ)
+3. เชื่อมต่อ **Discord node** เข้ากับ **Error Trigger node** และกำหนดค่า fields เหล่านี้:<br/>
 
-	* **Webhook URL**: The Discord URL that you received in the email from n8n when you signed up for this course.
-	* **Text**: "The workflow `{workflow name}` failed, with the error message: `{execution error message}`. Last node executed: `{name of the last executed node}`. Check this workflow execution here: `{execution URL}` My Unique ID: " followed by the unique ID emailed to you when you registered for this course.
+	* **Webhook URL**: Discord URL ที่คุณได้รับในอีเมลจาก n8n เมื่อคุณลงทะเบียนสำหรับคอร์สนี้
+	* **Text**: "The workflow `{workflow name}` failed, with the error message: `{execution error message}`. Last node executed: `{name of the last executed node}`. Check this workflow execution here: `{execution URL}` My Unique ID: " ตามด้วย unique ID ที่ส่งให้คุณทางอีเมลเมื่อคุณลงทะเบียนสำหรับคอร์สนี้
 
-		Note that you need to replace the text in curly brackets `{}` with expressions that take the respective information from the Error Trigger node.<br/>
+		โปรดทราบว่าคุณต้องแทนที่ข้อความในวงเล็บปีกกา `{}` ด้วย expressions ที่ดึงข้อมูลที่เกี่ยวข้องจาก Error Trigger node<br/>
 
-4. Execute the Discord node.
-5. Set the newly created workflow as the **Error Workflow** for the main workflow you created in the previous lesson.
+4. Execute Discord node
+5. ตั้งค่า workflow ที่สร้างขึ้นใหม่ให้เป็น **Error Workflow** สำหรับ main workflow ที่คุณสร้างในบทเรียนก่อนหน้า
 
-The workflow should look like this:
+workflow ควรมีลักษณะดังนี้:
 
 <figure><img src="/_images/courses/level-two/chapter-five/workflow3.png" alt="Workflow 3 for monitoring workflow errors" style="width:100%"><figcaption align = "center"><i>Workflow 3 for monitoring workflow errors</i></figcaption></figure>
 
 /// question | Quiz questions
-* What fields does the **Error Trigger node** return?
-* What information about the execution does the **Error Trigger node** return?
-* What information about the workflow does the **Error Trigger node** return?
-* What's the expression to reference the workflow name?
+* **Error Trigger node** คืนค่า fields อะไรบ้าง?
+* **Error Trigger node** คืนค่าข้อมูลอะไรเกี่ยวกับ execution?
+* **Error Trigger node** คืนค่าข้อมูลอะไรเกี่ยวกับ workflow?
+* expression สำหรับอ้างอิง workflow name คืออะไร?
 ///

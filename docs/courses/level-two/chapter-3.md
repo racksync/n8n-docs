@@ -5,70 +5,70 @@ contentType: tutorial
 
 # Merging and splitting data
 
-In this chapter, you will learn how to merge and split data, and in what cases it might be useful to perform these operations.
+ในบทนี้ คุณจะได้เรียนรู้วิธีการรวม (merge) และแบ่ง (split) ข้อมูล และในกรณีใดบ้างที่อาจเป็นประโยชน์ในการดำเนินการเหล่านี้
 
 
 ## Merging data
 
-In some cases, you might need to merge (combine) and process data from different sources.
+ในบางกรณี คุณอาจต้องรวม (combine) และประมวลผลข้อมูลจากแหล่งต่างๆ
 
-Merging data can involve:
+การรวมข้อมูลอาจเกี่ยวข้องกับ:
 
-- Creating one data set from multiple sources.
-- Synchronizing data between multiple systems. This could include removing duplicate data or updating data in one system when it changes in another.
+- การสร้าง data set หนึ่งชุดจากหลายแหล่ง
+- การซิงโครไนซ์ข้อมูลระหว่างหลายระบบ ซึ่งอาจรวมถึงการลบข้อมูลที่ซ้ำซ้อน หรือการอัปเดตข้อมูลในระบบหนึ่งเมื่อมีการเปลี่ยนแปลงในอีกระบบหนึ่ง
 
 /// note | One-way vs. two-way sync
-In a one-way sync, data is synchronized in one direction. One system serves as the single source of truth. When information changes in that main system, it automatically changes in the secondary system; but if information changes in the secondary system, the changes aren't reflected in the main system.
+ในการซิงค์แบบ one-way ข้อมูลจะถูกซิงโครไนซ์ในทิศทางเดียว ระบบหนึ่งทำหน้าที่เป็น single source of truth เมื่อข้อมูลในระบบหลักนั้นเปลี่ยนแปลง มันจะเปลี่ยนแปลงในระบบรองโดยอัตโนมัติ แต่ถ้าข้อมูลในระบบรองเปลี่ยนแปลง การเปลี่ยนแปลงนั้นจะไม่สะท้อนในระบบหลัก
 
-In a two-way sync, data is synchronized in both directions (between both systems). When information changes in either of the two systems, it automatically changes in the other one as well.
+ในการซิงค์แบบ two-way ข้อมูลจะถูกซิงโครไนซ์ทั้งสองทิศทาง (ระหว่างทั้งสองระบบ) เมื่อข้อมูลในระบบใดระบบหนึ่งเปลี่ยนแปลง มันจะเปลี่ยนแปลงในอีกระบบหนึ่งโดยอัตโนมัติเช่นกัน
 
-[This blog tutorial](https://blog.n8n.io/how-to-sync-data-between-two-systems/) explains how to sync data one-way and two-way between two CRMs.
+[This blog tutorial](https://blog.n8n.io/how-to-sync-data-between-two-systems/) อธิบายวิธีการซิงค์ข้อมูลแบบ one-way และ two-way ระหว่าง CRM สองระบบ
 ///
 
 
-In n8n, you can merge data from two different nodes using the [Merge node](/integrations/builtin/core-nodes/n8n-nodes-base.merge.md){:target="_blank"}, which provides several merging options:
+ใน n8n คุณสามารถรวมข้อมูลจากสอง nodes ที่แตกต่างกันโดยใช้ [Merge node](/integrations/builtin/core-nodes/n8n-nodes-base.merge.md){:target="_blank"} ซึ่งมีตัวเลือกการรวมหลายแบบ:
 
 - [Append](/integrations/builtin/core-nodes/n8n-nodes-base.merge.md#append){:target="_blank"}
 - [Combine](/integrations/builtin/core-nodes/n8n-nodes-base.merge.md#combine){:target="_blank"}
-	- [Merge by Fields](/integrations/builtin/core-nodes/n8n-nodes-base.merge.md#combine-by-matching-fields){:target="_blank"}: requires input fields to match on
+	- [Merge by Fields](/integrations/builtin/core-nodes/n8n-nodes-base.merge.md#combine-by-matching-fields){:target="_blank"}: ต้องการ input fields ที่จะใช้จับคู่
 	- [Merge by Position](/integrations/builtin/core-nodes/n8n-nodes-base.merge.md#combine-by-position){:target="_blank"}
 	- [Combine all possible combinations](/integrations/builtin/core-nodes/n8n-nodes-base.merge.md#combine-by-all-possible-combinations){:target="_blank"}
 - [Choose Branch](/integrations/builtin/core-nodes/n8n-nodes-base.merge.md#choose-branch){:target="_blank"}
 
-Notice that Combine > Merge by Fields requires you enter input fields to match on. These fields should contain identical values between the data sources so n8n can properly match data together. In the **Merge node**, they're called `Input 1 Field` and `Input 2 Field`.
+สังเกตว่า Combine > Merge by Fields ต้องการให้คุณป้อน input fields เพื่อใช้จับคู่ fields เหล่านี้ควรมีค่าที่เหมือนกันระหว่าง data sources เพื่อให้ n8n สามารถจับคู่ข้อมูลได้อย่างถูกต้อง ใน **Merge node** จะเรียกว่า `Input 1 Field` และ `Input 2 Field`
 
 <figure><img src="/_images/courses/level-two/chapter-three/explanation_mergepropertyinput.png" alt="Property Input fields in the Merge node" style="width:100%"><figcaption align = "center"><i>Property Input fields in the Merge node</i></figcaption></figure>
 
 /// warning | Property Input in dot notation
-If you want to reference nested values in the **Merge node** parameters `Input 1 Field` and `Input 2 Field`, you need to enter the property key in dot-notation format (as text, not as an expression).
+หากคุณต้องการอ้างอิงค่าที่ซ้อนกัน (nested values) ใน parameters `Input 1 Field` และ `Input 2 Field` ของ **Merge node** คุณต้องป้อน property key ในรูปแบบ dot-notation (เป็น text ไม่ใช่ expression)
 ///
 
 /// note
-You can also find the **Merge node** under the alias Join. This might be more intuitive if you're familiar with SQL joins.
+คุณยังสามารถค้นหา **Merge node** ได้ภายใต้ชื่อ alias ว่า Join ซึ่งอาจจะเข้าใจง่ายกว่าหากคุณคุ้นเคยกับ SQL joins
 ///
 
 ### Merge Exercise
 
-Build a workflow that merges data from the Customer Datastore node and Code node.
+สร้าง workflow ที่รวมข้อมูลจาก Customer Datastore node และ Code node
 
-1. Add a **Merge node** that takes `Input 1` from a **Customer Datastore node** and `Input 2` from a **Code node**.
-2. In the **Customer Datastore node**, run the operation **Get All People**.
-3. In the **Code node**, create an array of two objects with three properties: `name`, `language`, and `country`, where the property `country` has two sub-properties `code` and `name`.
-	- Fill out the values of these properties with the information of two characters from the Customer Database.
-	- For example, Jay Gatsby's language is English and country name is United States.
-4. In the **Merge node**, try out different merge options.
+1. เพิ่ม **Merge node** ที่รับ `Input 1` จาก **Customer Datastore node** และ `Input 2` จาก **Code node**
+2. ใน **Customer Datastore node** ให้รัน operation **Get All People**
+3. ใน **Code node** ให้สร้าง array ของสอง objects ที่มีสาม properties: `name`, `language`, และ `country` โดยที่ property `country` มีสอง sub-properties คือ `code` และ `name`
+	- กรอกค่าของ properties เหล่านี้ด้วยข้อมูลของตัวละครสองตัวจาก Customer Database
+	- ตัวอย่างเช่น ภาษาของ Jay Gatsby คือ English และชื่อประเทศคือ United States
+4. ใน **Merge node** ให้ลองใช้ merge options ต่างๆ
 
 ??? note "Show me the solution"
 
-	The workflow for this exercise looks like this:
+	workflow สำหรับแบบฝึกหัดนี้มีลักษณะดังนี้:
 
 	<figure><img src="/_images/courses/level-two/chapter-three/exercise_merge.png" alt="Workflow exercise for merging data" style="width:100%"><figcaption align = "center"><i>Workflow exercise for merging data</i></figcaption></figure>
 
-	If you merge data with the option **Keep Matches** using the name as the input fields to match, the result should look like this (note this example only contains Jay Gatsby; yours might look different depending on which characters you selected):
+	หากคุณรวมข้อมูลด้วย option **Keep Matches** โดยใช้ name เป็น input fields เพื่อจับคู่ ผลลัพธ์ควรมีลักษณะดังนี้ (โปรดทราบว่าตัวอย่างนี้มีเพียง Jay Gatsby; ของคุณอาจดูแตกต่างกันไปขึ้นอยู่กับตัวละครที่คุณเลือก):
 
 	<figure><img src="/_images/courses/level-two/chapter-three/exercise_merge_kkm.png" alt="Output of Merge node with option to keep matches" style="width:100%"><figcaption align = "center"><i>Output of Merge node with option to keep matches</i></figcaption></figure>
 
-	To check the configuration of the nodes, you can copy the JSON workflow code below and paste it into your Editor UI:
+	หากต้องการตรวจสอบการกำหนดค่าของ nodes คุณสามารถคัดลอกโค้ด JSON workflow ด้านล่างและวางลงใน Editor UI ของคุณ:
 
 	```json
 	{
@@ -184,39 +184,39 @@ Build a workflow that merges data from the Customer Datastore node and Code node
 
 ## Looping
 
-In some cases, you might need to perform the same operation on each element of an array or each data item (for example sending a message to every contact in your address book). In technical terms, you need to iterate through the data (with loops).
+ในบางกรณี คุณอาจต้องดำเนินการเดียวกันกับแต่ละ element ของ array หรือแต่ละ data item (เช่น การส่งข้อความไปยังทุก contact ใน address book ของคุณ) ในทางเทคนิค คุณต้อง iterate ผ่านข้อมูล (ด้วย loops)
 
-n8n generally handles this repetitive processing automatically, as the nodes run once for each item, so you don't need to build loops into your workflows.
+โดยทั่วไป n8n จะจัดการกับการประมวลผลซ้ำๆ นี้โดยอัตโนมัติ เนื่องจาก nodes จะทำงานหนึ่งครั้งสำหรับแต่ละ item ดังนั้นคุณไม่จำเป็นต้องสร้าง loops ใน workflows ของคุณ
 
-However, there are some [exceptions of nodes and operations](/flow-logic/looping.md#node-exceptions){:target="_blank"} that will require you to build a loop into your workflow.
+อย่างไรก็ตาม มี [exceptions ของ nodes และ operations](/flow-logic/looping.md#node-exceptions){:target="_blank"} บางอย่างที่จะต้องให้คุณสร้าง loop ใน workflow ของคุณ
 
-To [create a loop in an n8n workflow](/flow-logic/looping.md#using-loops-in-n8n){:target="_blank"}, you need to connect the output of one node to the input of a previous node, and add an **If node** to check when to stop the loop.
+ในการ [create a loop in an n8n workflow](/flow-logic/looping.md#using-loops-in-n8n){:target="_blank"} คุณต้องเชื่อมต่อ output ของ node หนึ่งไปยัง input ของ node ก่อนหน้า และเพิ่ม **If node** เพื่อตรวจสอบว่าจะหยุด loop เมื่อใด
 
 ## Splitting data in batches
 
-If you need to process large volumes of incoming data, execute the **Code node** multiple times, or avoid API rate limits, it's best to split the data into batches (groups) and process these batches.
+หากคุณต้องการประมวลผลข้อมูลขาเข้าจำนวนมาก, execute **Code node** หลายครั้ง, หรือหลีกเลี่ยง API rate limits วิธีที่ดีที่สุดคือการแบ่งข้อมูลออกเป็น batches (กลุ่ม) และประมวลผล batches เหล่านี้
 
-For these processes, use the [**Loop Over Items node**](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches.md){:target="_blank"}. This node splits input data into a specified batch size and, with each iteration, returns a predefined amount of data.
+สำหรับกระบวนการเหล่านี้ ให้ใช้ [**Loop Over Items node**](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches.md){:target="_blank"} node นี้จะแบ่งข้อมูล input ออกเป็น batch size ที่ระบุ และในแต่ละ iteration จะคืนค่าข้อมูลตามจำนวนที่กำหนดไว้ล่วงหน้า
 
 /// warning | Execution of Loop Over Items node
-The **Loop Over Items node** stops executing after all the incoming items get divided into batches and passed on to the next node in the workflow, so it's not necessary to add an **If node** to stop the loop.
+**Loop Over Items node** จะหยุด executing หลังจากที่ items ขาเข้าทั้งหมดถูกแบ่งออกเป็น batches และส่งต่อไปยัง node ถัดไปใน workflow ดังนั้นจึงไม่จำเป็นต้องเพิ่ม **If node** เพื่อหยุด loop
 ///
 
 ### Loop/Batch Exercise
 
-Build a workflow that reads the RSS feed from Medium and dev.to. The workflow should consist of three nodes:
+สร้าง workflow ที่อ่าน RSS feed จาก Medium และ dev.to workflow ควรประกอบด้วยสาม nodes:
 
-1. A **Code node** that returns the URLs of the RSS feeds of Medium (`https://medium.com/feed/n8n-io`) and dev.to (`https://dev.to/feed/n8n`).
-2. A **Loop Over Items node** with `Batch Size: 1`, that takes in the inputs from the **Code node** and **RSS Read node** and iterates over the items.
-3. An **RSS Read node** that gets the URL of the Medium RSS feed, passed as an expression: `{{ $json.url }}`.
-	- The **RSS Read node** is one of the [exception nodes](/flow-logic/looping.md#node-exceptions){:target="_blank"} which processes only the first item it receives, so the **Loop Over Items node** is necessary for iterating over multiple items.
+1. **Code node** ที่คืนค่า URLs ของ RSS feeds ของ Medium (`https://medium.com/feed/n8n-io`) และ dev.to (`https://dev.to/feed/n8n`)
+2. **Loop Over Items node** ที่มี `Batch Size: 1` ซึ่งรับ inputs จาก **Code node** และ **RSS Read node** และ iterates เหนือ items
+3. **RSS Read node** ที่รับ URL ของ Medium RSS feed ซึ่งส่งผ่านเป็น expression: `{{ $json.url }}`
+	- **RSS Read node** เป็นหนึ่งใน [exception nodes](/flow-logic/looping.md#node-exceptions){:target="_blank"} ซึ่งประมวลผลเฉพาะ item แรกที่ได้รับ ดังนั้น **Loop Over Items node** จึงจำเป็นสำหรับการ iterating เหนือ multiple items
 
 ??? note "Show me the solution"
 
-	1. Add a **Code Node**. You can format the code in several ways, one way is:
-		- Set **Mode** to `Run Once for All Items`.
-		- Set **Language** to `JavaScript`.
-		- Copy the code below and paste it into the JavaScript Code editor:
+	1. เพิ่ม **Code Node** คุณสามารถจัดรูปแบบโค้ดได้หลายวิธี วิธีหนึ่งคือ:
+		- ตั้งค่า **Mode** เป็น `Run Once for All Items`
+		- ตั้งค่า **Language** เป็น `JavaScript`
+		- คัดลอกโค้ดด้านล่างและวางลงใน JavaScript Code editor:
 			```javascript
 			let urls = [
 				{
@@ -232,16 +232,16 @@ Build a workflow that reads the RSS feed from Medium and dev.to. The workflow sh
 			]
 			return urls;
 			```
-	2. Add a **Loop Over Items node** connected to the **Code node**.
-		- Set **Batch Size** to `1`.
-	3. The **Loop Over Items node** automatically adds a node called "Replace Me". Replace that node with an **RSS Read node**.
-		- Set the **URL** to use the url from the Code Node: `{{ $json.url }}`.
+	2. เพิ่ม **Loop Over Items node** ที่เชื่อมต่อกับ **Code node**
+		- ตั้งค่า **Batch Size** เป็น `1`
+	3. **Loop Over Items node** จะเพิ่ม node ที่ชื่อ "Replace Me" โดยอัตโนมัติ ให้แทนที่ node นั้นด้วย **RSS Read node**
+		- ตั้งค่า **URL** ให้ใช้ url จาก Code Node: `{{ $json.url }}`
 	
-	The workflow for this exercise looks like this:
+	workflow สำหรับแบบฝึกหัดนี้มีลักษณะดังนี้:
 
 	<figure><img src="/_images/courses/level-two/chapter-three/exercise_splitinbatches.png" alt="Workflow for getting RSS feeds from two blogs" style="width:100%"><figcaption align = "center"><i>Workflow for getting RSS feeds from two blogs</i></figcaption></figure>
 
-	To check the configuration of the nodes, you can copy the JSON workflow code below and paste it into your Editor UI:
+	หากต้องการตรวจสอบการกำหนดค่าของ nodes คุณสามารถคัดลอกโค้ด JSON workflow ด้านล่างและวางลงใน Editor UI ของคุณ:
 
 	```json
 	{

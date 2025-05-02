@@ -5,61 +5,60 @@ contentType: howto
 
 # Looping in n8n
 
-Looping is useful when you want to process multiple items or perform an action repeatedly, such as sending a message to every contact in your address book. n8n handles this repetitive processing automatically, meaning you don't need to specifically build loops into your workflows. There are [some nodes](#node-exceptions) where this isn't true.
+Looping มีประโยชน์เวลาคุณต้องการ process ข้อมูลหลายรายการ หรือทำ action เดิมซ้ำๆ เช่น ส่งข้อความหาทุก contact ใน address book ของคุณ n8n จะจัดการการวน loop ให้โดยอัตโนมัติ คุณไม่ต้องสร้าง loop เองใน workflow (ยกเว้นบาง node ดู [node exceptions](#node-exceptions))
 
 ## Using loops in n8n
 
-n8n nodes take any number of items as input, process these items, and output the results. You can think of each item as a single data point, or a single row in the output table of a node.
+node ใน n8n จะรับข้อมูลเข้ามากี่ item ก็ได้ แล้ว process ทีละ item จากนั้นส่งผลลัพธ์ออกไป คุณสามารถนึกถึงแต่ละ item ว่าเป็นข้อมูลหนึ่งแถวในตาราง output ของ node
 
 ![The Customer Datastore node output](/_images/flow-logic/looping/customer_datastore_node.png)
 
-Nodes usually run once for each item. For example, if you wanted to send the name and notes of the customers in the Customer Datastore node as a message on Slack, you would:
+โดยปกติ node จะทำงานหนึ่งครั้งต่อหนึ่ง item เช่น ถ้าคุณต้องการส่งชื่อและ note ของลูกค้าแต่ละคนใน Customer Datastore node ไปที่ Slack คุณแค่
 
-1. Connect the Slack node to the Customer Datastore node.
-2. Configure the parameters.
-3. Execute the node. 
+1. เชื่อม Slack node กับ Customer Datastore node
+2. ตั้งค่าพารามิเตอร์
+3. Execute node
 
-You would receive five messages: one for each item.
+คุณจะได้รับข้อความ 5 ข้อความ (ถ้ามี 5 item) คือ 1 ข้อความต่อ 1 ลูกค้า
 
-This is how you can process multiple items without having to explicitly connect nodes in a loop.
+นี่คือวิธีที่คุณ process ข้อมูลหลายรายการโดยไม่ต้องสร้าง loop เอง
 
 ### Executing nodes once
 
-For situations where you don't want a node to process all received items, for example sending a Slack message only to the first customer, you can do so by toggling the **Execute Once** parameter in the **Settings** tab of that node This setting is helpful when the incoming data contains multiple items and you want to only process the first one. 
-
+ถ้าคุณไม่ต้องการให้ node process ทุก item เช่น อยากส่ง Slack message แค่ลูกค้าคนแรก ให้เปิด **Execute Once** ใน **Settings** ของ node นั้น เหมาะกับกรณีที่ข้อมูลเข้ามาหลาย item แต่คุณอยาก process แค่ตัวแรก
 
 ## Creating loops
 
-n8n typically handles the iteration for all incoming items. However, there are certain scenarios where you will have to create a loop to iterate through all items. Refer to [Node exceptions](#node-exceptions) for a list of nodes that don't automatically iterate over all incoming items.
+โดยปกติ n8n จะวน loop ให้ทุก item ที่เข้ามา แต่บางกรณีคุณต้องสร้าง loop เอง ดู [Node exceptions](#node-exceptions) สำหรับ node ที่ไม่วน loop อัตโนมัติ
 
 ### Loop until a condition is met
 
-To create a loop in an n8n workflow, connect the output of one node to the input of a previous node. Add an [IF](/integrations/builtin/core-nodes/n8n-nodes-base.if.md) node to check when to stop the loop. 
+ถ้าต้องการวน loop จนกว่าจะตรงเงื่อนไข ให้เชื่อม output ของ node หนึ่งกลับไป input ของ node ก่อนหน้า แล้วใช้ [IF](/integrations/builtin/core-nodes/n8n-nodes-base.if.md) node เพื่อตรวจสอบว่าจะหยุด loop เมื่อไหร่
 
-Here is an [example workflow](https://n8n.io/workflows/1130) that implements a loop with an `IF` node:
+ดู [ตัวอย่าง workflow](https://n8n.io/workflows/1130) ที่ใช้ IF node สร้าง loop:
 
 ![Editor UI view of sample workflow](/_images/flow-logic/looping/example_workflow.png)
 
 ### Loop until all items are processed
 
-Use the [Loop Over Items](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches.md) node when you want to loop until all items are processed. To process each item individually, set **Batch Size** to `1`.
+ใช้ [Loop Over Items](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches.md) node ถ้าต้องการวน loop จนครบทุก item ถ้าอยาก process ทีละ item ให้ตั้ง **Batch Size** เป็น `1`
 
-You can batch the data in groups and process these batches. This approach is useful for avoiding API rate limits when processing large incoming data or when you want to process a specific group of returned items.
+คุณสามารถแบ่งข้อมูลเป็นกลุ่มๆ เพื่อ process ทีละ batch วิธีนี้เหมาะกับกรณีที่ต้องการหลีกเลี่ยง API rate limit หรืออยาก process ข้อมูลเป็นกลุ่ม
 
-The Loop Over Items node stops executing after all the incoming items get divided into batches and passed on to the next node in the workflow so it's not necessary to add an IF node to stop the loop.
+Loop Over Items node จะหยุดทำงานเมื่อแบ่งข้อมูลครบทุก batch แล้วส่งต่อไป node ถัดไป ดังนั้นไม่ต้องใช้ IF node เพื่อหยุด loop
 
 ## Node exceptions
 
-Nodes and operations where you need to design a loop into your workflow:
+node และ operation ที่คุณต้องออกแบบ loop เองใน workflow:
 
-* [CrateDB](/integrations/builtin/app-nodes/n8n-nodes-base.cratedb.md) executes once for `insert` and `update`.
-* [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md) node in **Run Once for All Items** mode: processes all the items based on the entered code snippet.
-* [Execute Workflow](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow.md) node in **Run Once for All Items** mode.
-* [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md): you must handle pagination yourself. If your API call returns paginated results you must create a loop to fetch one page at a time.
-* [Microsoft SQL](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftsql.md) executes once for `insert`, `update`, and `delete`.
-* [MongoDB](/integrations/builtin/app-nodes/n8n-nodes-base.mongodb.md) executes once for `insert` and `update`.
-* [QuestDB](/integrations/builtin/app-nodes/n8n-nodes-base.questdb.md) executes once for `insert`.
+* [CrateDB](/integrations/builtin/app-nodes/n8n-nodes-base.cratedb.md) execute ครั้งเดียวสำหรับ `insert` และ `update`
+* [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md) node ในโหมด **Run Once for All Items**: process ทุก item ตาม code ที่เขียน
+* [Execute Workflow](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow.md) node ในโหมด **Run Once for All Items**
+* [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md): คุณต้อง handle pagination เอง ถ้า API คืนข้อมูลแบบแบ่งหน้า ต้องสร้าง loop เพื่อดึงทีละหน้า
+* [Microsoft SQL](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftsql.md) execute ครั้งเดียวสำหรับ `insert`, `update`, และ `delete`
+* [MongoDB](/integrations/builtin/app-nodes/n8n-nodes-base.mongodb.md) execute ครั้งเดียวสำหรับ `insert` และ `update`
+* [QuestDB](/integrations/builtin/app-nodes/n8n-nodes-base.questdb.md) execute ครั้งเดียวสำหรับ `insert`
 * [Redis](/integrations/builtin/app-nodes/n8n-nodes-base.redis.md):
-	* Info: this operation executes only once, regardless of the number of items in the incoming data.
-* [RSS Read](/integrations/builtin/core-nodes/n8n-nodes-base.rssfeedread.md) executes once for the requested URL.
-* [TimescaleDB](/integrations/builtin/app-nodes/n8n-nodes-base.timescaledb.md) executes once for `insert` and `update`.
+	* Info: operation นี้ execute แค่ครั้งเดียว ไม่ว่าจะมี item กี่ตัวในข้อมูลเข้า
+* [RSS Read](/integrations/builtin/core-nodes/n8n-nodes-base.rssfeedread.md) execute ครั้งเดียวต่อ 1 URL ที่ขอ
+* [TimescaleDB](/integrations/builtin/app-nodes/n8n-nodes-base.timescaledb.md) execute ครั้งเดียวสำหรับ `insert` และ `update`

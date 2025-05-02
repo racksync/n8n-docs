@@ -7,18 +7,18 @@ contentType: explanation
 
 --8<-- "_snippets/embed-license.md"
 
-See the [hosting documentation](https://docs.n8n.io/reference/server-setup.html) for detailed setup options.
+ดู [hosting documentation](https://docs.n8n.io/reference/server-setup.html) สำหรับตัวเลือกการ setup แบบละเอียด
 
 ## User data
 
-n8n recommends that you follow the same or similar practices used internally for n8n Cloud: Save user data using [Rook](https://rook.io/) and, if an n8n server goes down, a new instance starts on another machine using the same data.
+n8n แนะนำให้คุณใช้แนวทางเดียวกับที่ใช้ใน n8n Cloud คือเก็บ user data ด้วย [Rook](https://rook.io/) และถ้า server n8n ล่ม ก็ให้ instance ใหม่รันบนเครื่องอื่นโดยใช้ข้อมูลเดิม
 
-Due to this, you don't need to use backups except in case of a catastrophic failure, or when a user wants to reactivate their account within your prescribed retention period (two weeks for n8n Cloud).
+ด้วยวิธีนี้ คุณไม่จำเป็นต้อง backup ข้อมูล ยกเว้นกรณีเกิดเหตุร้ายแรง หรือผู้ใช้ต้องการกู้บัญชีในช่วงเวลาที่กำหนด (n8n Cloud กำหนดไว้สองสัปดาห์)
 
 ## Backups
 
-n8n recommends creating nightly backups by attaching another container, and copying all data to this second container. In this manner, RAM usage is negligible, and so doesn't impact the amount of users you can place on the server.
+n8n แนะนำให้ backup ข้อมูลทุกคืน โดยแนบ container อีกตัวแล้ว copy ข้อมูลทั้งหมดไปยัง container ที่สอง วิธีนี้ใช้ RAM น้อยมาก และไม่กระทบจำนวนผู้ใช้ที่วางบน server
 
 ## Restarting
 
-If your instance is down or restarting, missed executions (for example, Cron or Webhook nodes) during this time aren't recoverable. If it's important for you to maintain 100% uptime, you need to build another proxy in front of it which caches the data.
+ถ้า instance ของคุณล่มหรือ restart การรันที่พลาดไป (เช่น Cron หรือ Webhook node) ในช่วงนั้นจะไม่สามารถกู้คืนได้ ถ้าคุณต้องการ uptime 100% จริงๆ ต้องสร้าง proxy อีกตัวไว้ข้างหน้าเพื่อ cache ข้อมูล

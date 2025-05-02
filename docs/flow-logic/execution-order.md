@@ -7,10 +7,10 @@ contentType: explanation
 
 # Execution order in multi-branch workflows
 
-n8n's node execution order depends on the version of n8n you're using:
+ลำดับการ execute node ใน n8n ขึ้นอยู่กับ version ที่คุณใช้:
 
-* For workflows created before version 1.0: n8n executes the first node of each branch, then the second node of each branch, and so on.
-* For workflows created in version 1.0 and above: executes each branch in turn, completing one branch before starting another. n8n orders the branches based on their position on the [canvas](/glossary.md#canvas-n8n), from topmost to bottommost. If two branches are at the same height, the leftmost branch executes first.
+* ถ้า workflow ถูกสร้างก่อน version 1.0: n8n จะ execute node แรกของแต่ละ branch ก่อน แล้วค่อย execute node ที่สองของแต่ละ branch ต่อไปเรื่อยๆ
+* ถ้า workflow ถูกสร้างใน version 1.0 ขึ้นไป: จะ execute ทีละ branch ให้จบ branch นั้นก่อน แล้วค่อยไป branch ถัดไป โดยเรียง branch จากบนลงล่างบน [canvas](/glossary.md#canvas-n8n) ถ้าสูงเท่ากัน branch ที่อยู่ซ้ายสุดจะ execute ก่อน
 
-You can change the execution order in your [workflow settings](/workflows/settings.md).
+คุณสามารถเปลี่ยนลำดับ execution ได้ใน [workflow settings](/workflows/settings.md)
 

@@ -7,11 +7,11 @@ contentType: howto
 
 --8<-- "_snippets/embed-license.md"
 
-n8n provides a library of workflow [templates](/glossary.md#template-n8n). When embedding n8n, you can:
+n8n มีคลัง workflow [templates](/glossary.md#template-n8n) ให้เลือกใช้ สำหรับการ embed n8n คุณสามารถ:
 
-* Continue to use n8n's workflow templates library (this is the default behavior)
-* Disable workflow templates
-* Create your own workflow templates library
+* ใช้ workflow templates library ของ n8n ต่อไป (นี่คือค่าตั้งต้น)
+* ปิดการใช้งาน workflow templates
+* สร้าง workflow templates library ของคุณเอง
 
 ## Disable workflow templates
 

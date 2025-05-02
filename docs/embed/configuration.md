@@ -11,43 +11,43 @@ contentType: howto
 
 ## Authentication
 
-You can secure n8n by setting up [User management](/user-management/index.md), n8n's built-in authentication feature.
+คุณสามารถตั้งค่าความปลอดภัยให้ n8n ได้ด้วยการเปิดใช้ [User management](/user-management/index.md) ซึ่งเป็นฟีเจอร์ authentication ที่มีมาให้ในตัว
 
-n8n supports [LDAP](/user-management/ldap.md) and [SAML](/user-management/saml/index.md).
+n8n รองรับ [LDAP](/user-management/ldap.md) และ [SAML](/user-management/saml/index.md)
 
 ### Credential overwrites
 
-To offer OAuth login to users, it's possible to overwrite [credentials](/glossary.md#credential-n8n) on a global basis. This credential data isn't visible to users but the backend uses it automatically.
+ถ้าคุณอยากให้ผู้ใช้ login ด้วย OAuth ได้ สามารถ overwrite [credentials](/glossary.md#credential-n8n) แบบ global ได้เลย Credential ที่ถูก overwrite นี้ผู้ใช้จะไม่เห็นข้อมูล แต่ backend จะนำไปใช้ให้อัตโนมัติ
 
-In the Editor UI, n8n hides all overwritten fields by default. This means that users are able to authenticate using  OAuth by pressing the "connect" button on the credentials.
+ใน Editor UI, n8n จะซ่อน field ที่ถูก overwrite ไว้เสมอ หมายความว่าผู้ใช้จะสามารถ authenticate ด้วย OAuth แค่กดปุ่ม "connect" บน credentials ได้เลย
 
-n8n offers two ways to apply credential overwrites: using Environment Variable and using the REST API.
+n8n มี 2 วิธีในการ apply credential overwrites: ใช้ Environment Variable หรือใช้ REST API
 
 #### Using environment variables
 
-You can set credential overwrites using environment variable by setting the `CREDENTIALS_OVERWRITE_DATA` to `{ CREDENTIAL_NAME: { PARAMETER: VALUE }}`.
+คุณสามารถตั้งค่า credential overwrites ด้วย environment variable โดยตั้ง `CREDENTIALS_OVERWRITE_DATA` เป็น `{ CREDENTIAL_NAME: { PARAMETER: VALUE }}`
 
 /// warning
-Even though this is possible, it isn't recommended. Environment variables aren't protected in n8n, so the data can leak to users.
+ถึงจะทำได้ แต่ไม่แนะนำให้ใช้วิธีนี้ เพราะ environment variables ใน n8n ไม่ได้ถูกป้องกัน ข้อมูลอาจรั่วถึงผู้ใช้ได้
 ///
 
 #### Using REST APIs
 
-The recommended way is to load the data using a custom REST endpoint. Set the `CREDENTIALS_OVERWRITE_ENDPOINT` to a path under which this endpoint should be made available.
+วิธีที่แนะนำคือโหลดข้อมูลผ่าน custom REST endpoint โดยตั้ง `CREDENTIALS_OVERWRITE_ENDPOINT` เป็น path ที่ endpoint นี้จะถูกเปิดใช้งาน
 
 /// note
-The endpoints can be called just one at a time for security reasons.
+endpoint นี้จะถูกเรียกได้ทีละอันเท่านั้นเพื่อความปลอดภัย
 ///
 
-For example:
+ตัวอย่างเช่น:
 
-1. Activate the endpoint by setting the environment variable in the environment n8n runs under:
+1. เปิดใช้งาน endpoint โดยตั้ง environment variable ใน environment ที่ n8n รันอยู่:
 
     ```sh
     export CREDENTIALS_OVERWRITE_ENDPOINT=send-credentials
     ```
 
-2. A JSON file with the credentials to overwrite is then needed. For example, a `oauth-credentials.json` file to overwrite credentials for Asana and GitHub could look like this:
+2. เตรียมไฟล์ JSON ที่มี credentials ที่จะ overwrite เช่น `oauth-credentials.json` สำหรับ overwrite credentials ของ Asana และ GitHub อาจหน้าตาแบบนี้:
 
     ```json
     {
@@ -62,73 +62,73 @@ For example:
     }
     ```
 
-3. Then apply it to the instance by sending it using curl:
+3. ส่งไฟล์นี้เข้า instance ด้วย curl:
 
     ```sh
     curl -H "Content-Type: application/json" --data @oauth-credentials.json http://localhost:5678/send-credentials
     ```
 
 /// note
-There are cases when credentials are based on others. For example, the `googleSheetsOAuth2Api` extends the `googleOAuth2Api`.
-In this case, you can set parameters on the parent credentials (`googleOAuth2Api`) for all child-credentials (`googleSheetsOAuth2Api`) to use.
+บางกรณี credentials อาจ extend กัน เช่น `googleSheetsOAuth2Api` สืบทอดจาก `googleOAuth2Api`
+ถ้าเป็นแบบนี้ สามารถตั้งค่าที่ parent credentials (`googleOAuth2Api`) แล้ว child credentials (`googleSheetsOAuth2Api`) จะใช้ค่าตามนั้น
 ///
 
 ## Environment variables
 
-n8n has many [environment variables](/hosting/configuration/environment-variables/index.md) you can configure. Here are the most relevant environment variables for your hosted solution:
+n8n มี [environment variables](/hosting/configuration/environment-variables/index.md) ให้ตั้งค่าหลายตัว ด้านล่างนี้คือ environment variables ที่สำคัญสำหรับการ host แบบนี้:
 
 | Variable | Type | Default | Description |
 | :------- | :--- | :------ | :---------- |
-| `EXECUTIONS_TIMEOUT` | Number | `-1` | Sets a default timeout (in seconds) to all workflows after which n8n stops their execution. Users can override this for individual workflows up to the duration set in `EXECUTIONS_TIMEOUT_MAX`. Set `EXECUTIONS_TIMEOUT` to `-1` to disable. |
-| `EXECUTIONS_DATA_PRUNE` | Boolean | `true` | Whether to delete data of past executions on a rolling basis. |
-| `EXECUTIONS_DATA_MAX_AGE` | Number | `336` | The execution age (in hours) before it's deleted. |
-| `EXECUTIONS_DATA_PRUNE_MAX_COUNT` | Number | `10000` | Maximum number of executions to keep in the database. 0 = no limit |
-| `NODES_EXCLUDE` | Array of strings | - | Specify which nodes not to load. For example, to block nodes that can be a security risk if users aren't trustworthy: `NODES_EXCLUDE: "[\"n8n-nodes-base.executeCommand\", \"n8n-nodes-base.readWriteFile\"]"` |
-| `NODES_INCLUDE` | Array of strings | - | Specify which nodes to load. |
-| `N8N_TEMPLATES_ENABLED` | Boolean | `true` | Enable [workflow templates](/glossary.md#template-n8n) (true) or disable (false). |
-| `N8N_TEMPLATES_HOST` | String | `https://api.n8n.io` | Change this if creating your own workflow template library. Note that to use your own workflow templates library, your API must provide the same endpoints and response structure as n8n's. Refer to [Workflow templates](/workflows/templates.md) for more information. |
+| `EXECUTIONS_TIMEOUT` | Number | `-1` | ตั้ง timeout (วินาที) ให้ workflow ทุกตัว ถ้าเกินนี้ n8n จะหยุด execution ผู้ใช้สามารถ override ได้ในแต่ละ workflow แต่ต้องไม่เกินค่าที่ตั้งใน `EXECUTIONS_TIMEOUT_MAX` ถ้าตั้ง `-1` คือปิดการใช้งาน |
+| `EXECUTIONS_DATA_PRUNE` | Boolean | `true` | ลบข้อมูล execution เก่าๆ อัตโนมัติแบบ rolling |
+| `EXECUTIONS_DATA_MAX_AGE` | Number | `336` | อายุ execution (ชั่วโมง) ก่อนจะถูกลบ |
+| `EXECUTIONS_DATA_PRUNE_MAX_COUNT` | Number | `10000` | จำนวน execution สูงสุดที่จะเก็บใน database 0 = ไม่จำกัด |
+| `NODES_EXCLUDE` | Array of strings | - | ระบุ node ที่ไม่ต้องการโหลด เช่น node ที่เสี่ยงด้าน security: `NODES_EXCLUDE: "[\"n8n-nodes-base.executeCommand\", \"n8n-nodes-base.readWriteFile\"]"` |
+| `NODES_INCLUDE` | Array of strings | - | ระบุ node ที่ต้องการโหลดเท่านั้น |
+| `N8N_TEMPLATES_ENABLED` | Boolean | `true` | เปิด/ปิด [workflow templates](/glossary.md#template-n8n) (true = เปิด, false = ปิด) |
+| `N8N_TEMPLATES_HOST` | String | `https://api.n8n.io` | เปลี่ยน endpoint ถ้าจะใช้ workflow template library ของตัวเอง API ที่ใช้ต้องมี endpoint และ response structure แบบเดียวกับของ n8n ดูรายละเอียดที่ [Workflow templates](/workflows/templates.md) |
 
 ## Backend hooks
 
-It's possible to define external hooks that n8n executes whenever a specific operation runs. You can use these, for example, to log data, change data, or forbid an action by throwing an error.
+คุณสามารถกำหนด external hooks ที่ n8n จะ execute ทุกครั้งที่มี operation เฉพาะเกิดขึ้น ใช้สำหรับ log, เปลี่ยนแปลงข้อมูล หรือป้องกัน action โดย throw error ก็ได้
 
 ### Available hooks
 
 | Hook     | Arguments | Description |
 | :------- | :---------| :---------- |
-| `credentials.create` | `[credentialData: ICredentialsDb]` | Called before new credentials get created. Use to restrict the number of credentials. |
-| `credentials.delete` | `[id: credentialId]` | Called before credentials get deleted. |
-| `credentials.update` | `[credentialData: ICredentialsDb]` | Called before existing credentials are saved. |
-| `frontend.settings` | `[frontendSettings: IN8nUISettings]` | Gets called on n8n startup. Allows you to, for example, overwrite frontend data like the displayed OAuth URL. |
-| `n8n.ready` | `[app: App]` | Called once n8n is ready. Use to, for example, register custom API endpoints. |
-| `n8n.stop` |  | Called when an n8n process gets stopped. Allows you to save some process data. |
-| `oauth1.authenticate` | `[oAuthOptions: clientOAuth1.Options, oauthRequestData: {oauth_callback: string}]` | Called before an OAuth1 authentication. Use to overwrite an OAuth callback URL. |
-| `oauth2.callback` | `[oAuth2Parameters: {clientId: string, clientSecret: string \| undefined, accessTokenUri: string, authorizationUri: string, redirectUri: string, scopes: string[]}]` | Called in an OAuth2 callback. Use to overwrite an OAuth callback URL. |
-| `workflow.activate` | `[workflowData: IWorkflowDb]` | Called before a workflow gets activated. Use to restrict the number of active workflows. |
-| `workflow.afterDelete` | `[workflowId: string]` | Called after a workflow gets deleted. |
-| `workflow.afterUpdate` | `[workflowData: IWorkflowBase]` | Called after an existing workflow gets saved. |
-| `workflow.create` | `[workflowData: IWorkflowBase]` | Called before a workflow gets created. Use to restrict the number of saved workflows. |
-| `workflow.delete` | `[workflowId: string]` | Called before a workflow gets delete. |
-| `workflow.postExecute` | `[run: IRun, workflowData: IWorkflowBase]` | Called after a workflow gets executed. |
-| `workflow.preExecute` | `[workflow: Workflow: mode: WorkflowExecuteMode]` | Called before a workflow gets executed. Allows you to count or limit the number of workflow executions. |
-| `workflow.update` | `[workflowData: IWorkflowBase]` | Called before an existing workflow gets saved. |
+| `credentials.create` | `[credentialData: ICredentialsDb]` | เรียกก่อนสร้าง credentials ใหม่ ใช้จำกัดจำนวน credentials ได้ |
+| `credentials.delete` | `[id: credentialId]` | เรียกก่อนลบ credentials |
+| `credentials.update` | `[credentialData: ICredentialsDb]` | เรียกก่อนบันทึก credentials ที่มีอยู่ |
+| `frontend.settings` | `[frontendSettings: IN8nUISettings]` | เรียกตอน n8n startup ใช้ overwrite frontend data เช่น OAuth URL |
+| `n8n.ready` | `[app: App]` | เรียกเมื่อ n8n พร้อมใช้งานแล้ว ใช้สำหรับ register custom API endpoint |
+| `n8n.stop` |  | เรียกเมื่อ process n8n หยุด ใช้สำหรับบันทึก process data |
+| `oauth1.authenticate` | `[oAuthOptions: clientOAuth1.Options, oauthRequestData: {oauth_callback: string}]` | เรียกก่อน OAuth1 authentication ใช้ overwrite OAuth callback URL |
+| `oauth2.callback` | `[oAuth2Parameters: {clientId: string, clientSecret: string \| undefined, accessTokenUri: string, authorizationUri: string, redirectUri: string, scopes: string[]}]` | เรียกใน OAuth2 callback ใช้ overwrite OAuth callback URL |
+| `workflow.activate` | `[workflowData: IWorkflowDb]` | เรียกก่อน activate workflow ใช้จำกัดจำนวน workflow ที่ active ได้ |
+| `workflow.afterDelete` | `[workflowId: string]` | เรียกหลัง workflow ถูกลบ |
+| `workflow.afterUpdate` | `[workflowData: IWorkflowBase]` | เรียกหลัง workflow ถูกบันทึก |
+| `workflow.create` | `[workflowData: IWorkflowBase]` | เรียกก่อนสร้าง workflow ใช้จำกัดจำนวน workflow ที่บันทึกได้ |
+| `workflow.delete` | `[workflowId: string]` | เรียกก่อนลบ workflow |
+| `workflow.postExecute` | `[run: IRun, workflowData: IWorkflowBase]` | เรียกหลัง workflow execute เสร็จ |
+| `workflow.preExecute` | `[workflow: Workflow: mode: WorkflowExecuteMode]` | เรียกก่อน workflow execute ใช้นับหรือจำกัดจำนวน execution ได้ |
+| `workflow.update` | `[workflowData: IWorkflowBase]` | เรียกก่อนบันทึก workflow ที่มีอยู่ |
 
 ### Registering hooks
 
-Set hooks by registering a hook file that contains the hook functions.
-To register a hook, set the environment variable `EXTERNAL_HOOK_FILES`.
+ตั้งค่า hook โดย register hook file ที่มีฟังก์ชัน hook ที่ต้องการ
+register hook โดยตั้ง environment variable `EXTERNAL_HOOK_FILES`
 
-You can set the variable to a single file:
+ตั้งเป็นไฟล์เดียว:
 
 `EXTERNAL_HOOK_FILES=/data/hook.js`
 
-Or to contain multiple files separated by a semicolon:
+หรือหลายไฟล์คั่นด้วย semicolon:
 
 `EXTERNAL_HOOK_FILES=/data/hook1.js;/data/hook2.js`
 
 ### Backend hook files
 
-Hook files are regular JavaScript files that have the following format:
+hook file เป็นไฟล์ JavaScript ปกติ รูปแบบประมาณนี้:
 
 ```js
 module.exports = {
@@ -158,31 +158,31 @@ module.exports = {
 
 ### Backend hook functions
 
-A hook or a hook file can contain multiple hook functions, with all functions executed one after another.
+hook หรือ hook file สามารถมีฟังก์ชัน hook หลายตัวได้ ทุกตัวจะถูก execute ต่อกัน
 
-If the parameters of the hook function are objects, it's possible to change the data of that parameter to change the behavior of n8n.
+ถ้าพารามิเตอร์ของ hook function เป็น object สามารถเปลี่ยนค่าพารามิเตอร์นั้นเพื่อเปลี่ยนพฤติกรรมของ n8n ได้
 
-You can also access the database in any hook function using `this.dbCollections` (refer to the code sample in [Backend hook files](#backend-hook-files).
+ในฟังก์ชัน hook สามารถเข้าถึง database ได้ด้วย `this.dbCollections` (ดูตัวอย่างใน [Backend hook files](#backend-hook-files))
 
 ## Frontend external hooks
 
-Like backend external hooks, it's possible to define external hooks in the frontend code that get executed by n8n whenever a user performs a specific operation. You can use them, for example, to log data and change data.
+เหมือน backend external hooks, คุณสามารถกำหนด external hooks ใน frontend code ได้ n8n จะ execute ทุกครั้งที่ผู้ใช้ทำ operation เฉพาะ ใช้ log หรือเปลี่ยนแปลงข้อมูลได้
 
 ### Available hooks
 
 | Hook     | Description |
 | :------- | :---------- |
-| `credentialsEdit.credentialTypeChanged` | Called when an existing credential's type changes. |
-| `credentials.create` | Called when someone creates a new credential. |
+| `credentialsEdit.credentialTypeChanged` | เรียกเมื่อ credential type เปลี่ยน |
+| `credentials.create` | เรียกเมื่อมีการสร้าง credential ใหม่ |
 | `credentialsList.dialogVisibleChanged` |  |
 | `dataDisplay.nodeTypeChanged` |  |
-| `dataDisplay.onDocumentationUrlClick` | Called when someone selects the help documentation link. |
-| `execution.open` | Called when an existing execution opens. |
-| `executionsList.openDialog` | Called when someone selects an execution from existing Workflow Executions. |
+| `dataDisplay.onDocumentationUrlClick` | เรียกเมื่อคลิก help documentation link |
+| `execution.open` | เรียกเมื่อเปิด execution ที่มีอยู่ |
+| `executionsList.openDialog` | เรียกเมื่อเลือก execution จาก Workflow Executions |
 | `expressionEdit.itemSelected` |  |
 | `expressionEdit.dialogVisibleChanged` |  |
 | `nodeCreateList.filteredNodeTypesComputed` |  |
-| `nodeCreateList.nodeFilterChanged` | Called when someone makes any changes to the node panel filter. |
+| `nodeCreateList.nodeFilterChanged` | เรียกเมื่อเปลี่ยน filter ใน node panel |
 | `nodeCreateList.selectedTypeChanged` |  |
 | `nodeCreateList.mounted` |  |
 | `nodeCreateList.destroyed` |  |
@@ -197,16 +197,16 @@ Like backend external hooks, it's possible to define external hooks in the front
 | `runData.displayModeChanged` |  |
 | `workflow.activeChange` |  |
 | `workflow.activeChangeCurrent` |  |
-| `workflow.afterUpdate` | Called when someone updates an existing workflow. |
+| `workflow.afterUpdate` | เรียกเมื่อ workflow ถูก update |
 | `workflow.open` |  |
 | `workflowRun.runError` |  |
-| `workflowRun.runWorkflow` | Called when a workflow executes. |
+| `workflowRun.runWorkflow` | เรียกเมื่อ workflow execute |
 | `workflowSettings.dialogVisibleChanged` |  |
-| `workflowSettings.saveSettings` | Called when someone saves the settings of a workflow. |
+| `workflowSettings.saveSettings` | เรียกเมื่อ save workflow settings |
 
 ### Registering hooks
 
-You can set hooks by loading the hooks script on the page. One way to do this is by creating a hooks file in the project and adding a script tag in your `editor-ui/public/index.html` file:
+ตั้ง hook โดยโหลด hooks script ในหน้าเว็บ วิธีหนึ่งคือสร้าง hooks file ในโปรเจกต์ แล้วเพิ่ม script tag ใน `editor-ui/public/index.html`:
 
 ```html
 <script src="frontend-hooks.js"></script>
@@ -214,27 +214,27 @@ You can set hooks by loading the hooks script on the page. One way to do this is
 
 ### Frontend hook files
 
-Frontend external hook files are regular JavaScript files which have the following format:
+frontend external hook file เป็นไฟล์ JavaScript ปกติ รูปแบบประมาณนี้:
 
 ```js
 window.n8nExternalHooks = {
   nodeView: {
     mount: [
       function (store, meta) {
-        // do something
+        // ทำอะไรบางอย่าง
       },
     ],
     createNodeActiveChanged: [
       function (store, meta) {
-        // do something
+        // ทำอะไรบางอย่าง
       },
       function (store, meta) {
-        // do something else
+        // ทำอย่างอื่น
       },
     ],
     addNodeButton: [
       function (store, meta) {
-        // do something
+        // ทำอะไรบางอย่าง
       },
     ],
   },
@@ -243,7 +243,7 @@ window.n8nExternalHooks = {
 
 ### Frontend hook functions
 
-You can define multiple hook functions per hook. Each hook function is invoked with the following arguments arguments:
+สามารถกำหนด hook function หลายตัวต่อ hook ได้ แต่ละตัวจะถูกเรียกพร้อม argument ดังนี้:
 
-* `store`: The Vuex store object. You can use this to change or get data from the store.
-* `metadata`: The object that contains any data provided by the hook. To see what's passed, search for the hook in the `editor-ui` package.
+* `store`: คือ Vuex store object ใช้เปลี่ยนหรืออ่านข้อมูลจาก store ได้
+* `metadata`: object ที่มีข้อมูลจาก hook ดูว่ามีอะไรส่งมาบ้างให้ค้นหา hook นั้นใน package `editor-ui`

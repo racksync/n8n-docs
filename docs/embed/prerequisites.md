@@ -7,38 +7,38 @@ contentType: explanation
 
 --8<-- "_snippets/embed-license.md"
 
-The requirements provided here are an example based on n8n Cloud and are for illustrative purposes only. Your requirements may vary depending on the number of users, workflows, and executions. Contact n8n for more information.
+ข้อกำหนดที่ให้ไว้ตรงนี้เป็นตัวอย่างที่อ้างอิงจาก n8n Cloud เพื่อให้เห็นภาพเท่านั้น ความต้องการจริงอาจแตกต่างกันไปขึ้นอยู่กับจำนวนผู้ใช้, workflows, และ executions ของคุณ ถ้าต้องการข้อมูลเพิ่มเติมสามารถติดต่อ n8n ได้เลย
 
 | Component | Sizing | Supported |
 | :-------- | :----- | :-------- |
-| CPU/vCPU  | Minimum 10 CPU cycles, scaling as needed | Any public or private cloud |
-| Database  | 512 MB - 4 GB SSD | SQLite or PostgreSQL |
+| CPU/vCPU  | ขั้นต่ำ 10 CPU cycles, สามารถปรับขนาดได้ตามต้องการ | ใช้ได้กับ public หรือ private cloud ทุกเจ้า |
+| Database  | 512 MB - 4 GB SSD | SQLite หรือ PostgreSQL |
 | Memory    | 320 MB - 2 GB | |
 
 ## CPU considerations
 
-n8n isn't CPU intensive so even small instances (of providers such as AWS and GCP) should be enough for most use cases. Usually, memory requirements supersede CPU requirements, so focus resources there when planning your infrastructure.
+n8n ไม่ได้ใช้ CPU หนักมาก ดังนั้น instance ขนาดเล็ก (เช่นของ AWS หรือ GCP) ก็เพียงพอสำหรับการใช้งานส่วนใหญ่ โดยปกติแล้ว memory จะสำคัญกว่า CPU เวลาวางแผน infrastructure ให้เน้นไปที่ memory เป็นหลัก
 
 ## Database considerations
 
-n8n uses its database to store [credentials](/glossary.md#credential-n8n), past executions, and workflows.
+n8n ใช้ database เพื่อเก็บ [credentials](/glossary.md#credential-n8n), ประวัติการรัน, และ workflows
 
-A core feature of n8n is the flexibility to choose a database. All the supported databases have different advantages and disadvantages, which you have to consider individually and pick the one that best suits your needs. By default n8n creates an SQLite database if no database exists at the given location.
+จุดเด่นของ n8n คือความยืดหยุ่นในการเลือก database ได้เอง ฐานข้อมูลแต่ละแบบที่รองรับจะมีข้อดีข้อเสียต่างกัน คุณควรพิจารณาและเลือกแบบที่เหมาะกับงานของคุณมากที่สุด โดยปกติถ้าไม่มี database อยู่ที่ path ที่กำหนด n8n จะสร้าง SQLite database ให้เอง
 
-n8n recommends that every n8n instance have a dedicated database. This helps to prevent dependencies and potential performance degradation. If it isn't possible to provide a dedicated database for every n8n instance, n8n recommends making use of Postgres's schema feature.
+แนะนำให้แต่ละ instance ของ n8n มี database แยกกัน จะช่วยลดปัญหา dependency และปัญหาด้าน performance ถ้าไม่สามารถแยก database ได้จริงๆ แนะนำให้ใช้ feature schema ของ Postgres แทน
 
-For Postgres, the database must already exist on the DB-instance. The database user for the n8n process needs to have full permissions on all tables that they're using or creating. n8n creates and maintains the database schema.
+สำหรับ Postgres, database ต้องถูกสร้างไว้ก่อนแล้วใน DB-instance และ user ที่ใช้รัน n8n ต้องมีสิทธิ์เต็มกับทุก table ที่ใช้หรือสร้าง n8n จะสร้างและดูแล schema เอง
 
 ### Best practices
 
-* SSD storage.
-* In containerized cloud environments, ensure that the volume is persisted and mounted when stopping/starting a container. If not, all data is lost.
-* If using Postgres, don't use the `tablePrefix` configuration option. It will be deprecated in the near future.
-* Pay attention to the changelog of new versions and consider reverting migrations before downgrading.
-* Set up at least the basic database security and stability mechanisms such as IP allow lists and backups.
+* ใช้ SSD storage
+* ถ้าอยู่ใน containerized cloud environment ให้แน่ใจว่า volume ถูก persist และ mount ทุกครั้งที่หยุด/เริ่ม container ไม่งั้นข้อมูลจะหายหมด
+* ถ้าใช้ Postgres ไม่ควรใช้ option `tablePrefix` เพราะจะถูกยกเลิกในอนาคต
+* คอยดู changelog เวอร์ชันใหม่ๆ และถ้าจะ downgrade ให้พิจารณา revert migration ด้วย
+* ตั้งค่าความปลอดภัยและเสถียรภาพของ database อย่างน้อย เช่น IP allow list และ backup
 
 ## Memory considerations
 
-An n8n instance doesn't typically require large amounts of available memory. For example an n8n Cloud instance at idle requires ~100MB. It's the nature of your workflows and the data being processed that determines your memory requirements.
+โดยปกติ n8n instance ไม่ต้องใช้ memory เยอะมาก เช่น n8n Cloud ที่ idle ใช้แค่ประมาณ 100MB ขึ้นอยู่กับลักษณะ workflow และข้อมูลที่ process
 
-For example, while most nodes just pass data to the next node in the workflow, the [Code node](/code/code-node.md) creates a pre-processing and post-processing copy of the data. When dealing will large binary files, this can consume all available resources.
+ตัวอย่างเช่น ส่วนใหญ่ node จะส่งข้อมูลต่อไปยัง node ถัดไป แต่ [Code node](/code/code-node.md) จะสร้างสำเนาข้อมูลทั้งก่อนและหลังประมวลผล ถ้าต้องจัดการไฟล์ binary ขนาดใหญ่ อาจใช้ resource เยอะจนหมดได้

@@ -6,20 +6,20 @@ description: How to handle execution errors.
 
 # Error handling
 
-When designing your flow logic, it's a good practice to consider potential errors, and set up methods to handle them gracefully. With an error workflow, you can control how n8n responds to a workflow execution failure.
+เวลาคุณออกแบบ flow logic ควรคิดถึงกรณี error และเตรียมวิธีรับมือไว้ด้วย ด้วย error workflow คุณสามารถควบคุมได้ว่า n8n จะทำอะไรเมื่อ workflow execution ล้มเหลว
 
 /// note | Investigating errors
-To investigate failed executions, you can:
+ถ้าต้องการตรวจสอบ execution ที่ล้มเหลว คุณสามารถ:
 
-* Review your [Executions](/workflows/executions/index.md), for a [single workflow](/workflows/executions/single-workflow-executions.md) or [all workflows you have access to](/workflows/executions/all-executions.md). You can [load data from previous execution](/workflows/executions/debug.md) into your current workflow.
-* Enable [Log streaming](/log-streaming.md).
+* ดู [Executions](/workflows/executions/index.md) ของ [workflow เดียว](/workflows/executions/single-workflow-executions.md) หรือ [ทุก workflow ที่คุณเข้าถึงได้](/workflows/executions/all-executions.md) คุณสามารถ [โหลดข้อมูลจาก execution ก่อนหน้า](/workflows/executions/debug.md) มาใช้ใน workflow ปัจจุบันได้
+* เปิดใช้ [Log streaming](/log-streaming.md)
 ///
 
 ## Create and set an error workflow
 
-For each workflow, you can set an error workflow in **Workflow Settings**. It runs if an execution fails. This means you can, for example, send email or Slack alerts when a workflow execution errors. The error workflow must start with the [Error Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.errortrigger.md).
+แต่ละ workflow สามารถตั้ง error workflow ได้ใน **Workflow Settings** ถ้า execution ล้มเหลว error workflow จะถูกรัน เช่น คุณอาจตั้งให้ส่ง email หรือ Slack alert เมื่อ workflow error โดย error workflow ต้องเริ่มด้วย [Error Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.errortrigger.md)
 
-You can use the same error workflow for multiple workflows.
+คุณสามารถใช้ error workflow เดียวกับหลาย workflow ก็ได้
 
 --8<-- "_snippets/flow-logic/create-set-error-workflow.md"
 
@@ -29,6 +29,6 @@ You can use the same error workflow for multiple workflows.
 
 ## Cause a workflow execution failure using Stop And Error
 
-When you create and set an error workflow, n8n runs it when an execution fails. Usually, this is due to things like errors in node settings, or the workflow running out of memory.
+เมื่อคุณสร้างและตั้ง error workflow แล้ว n8n จะรัน workflow นี้เมื่อ execution ล้มเหลว ปกติจะเกิดจาก error ใน node หรือ workflow ใช้ memory เกิน
 
-You can add the [Stop And Error](/integrations/builtin/core-nodes/n8n-nodes-base.stopanderror.md) node to your workflow to force executions to fail under your chosen circumstances, and trigger the error workflow.
+คุณสามารถเพิ่ม [Stop And Error](/integrations/builtin/core-nodes/n8n-nodes-base.stopanderror.md) node ใน workflow เพื่อบังคับให้ execution ล้มเหลวตามเงื่อนไขที่คุณกำหนด และ trigger error workflow

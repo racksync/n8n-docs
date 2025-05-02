@@ -6,12 +6,12 @@ contentType: howto
 
 # Splitting workflows with conditional nodes
 
-Splitting uses the [IF](/integrations/builtin/core-nodes/n8n-nodes-base.if.md) or [Switch](/integrations/builtin/core-nodes/n8n-nodes-base.switch.md) nodes. It turns a single-branch workflow into a multi-branch workflow. This is a key piece of representing complex logic in n8n.
+Splitting ใช้ [IF](/integrations/builtin/core-nodes/n8n-nodes-base.if.md) หรือ [Switch](/integrations/builtin/core-nodes/n8n-nodes-base.switch.md) node เพื่อแยก workflow จากเส้นทางเดียวให้เป็นหลายเส้นทาง เหมาะกับการสร้าง logic ที่ซับซ้อนใน n8n
 
-Compare these workflows:
+ลองดูตัวอย่าง workflow เหล่านี้:
 
 !["Diagram representing two workflows. One has three steps and follows a linear process, with a user submitting a bug, and the workflow emailing a support team. The second workflow starts the same way, but then splits depending on whether the user marked the issue as urgent. It then splits again depending on the user's support plan"](/_images/flow-logic/splitting/single-multi-branch-workflow.png)
 
-This is the power of splitting and conditional nodes in n8n.
+นี่คือจุดเด่นของการ splitting และการใช้ conditional node ใน n8n
 
-Refer to the [IF](/integrations/builtin/core-nodes/n8n-nodes-base.if.md) or [Switch](/integrations/builtin/core-nodes/n8n-nodes-base.switch.md) documentation for usage details.
+ดูรายละเอียดการใช้งานได้ที่ [IF](/integrations/builtin/core-nodes/n8n-nodes-base.if.md) หรือ [Switch](/integrations/builtin/core-nodes/n8n-nodes-base.switch.md)

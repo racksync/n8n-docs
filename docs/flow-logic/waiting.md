@@ -7,8 +7,8 @@ contentType: howto
 
 # Waiting
 
-Waiting allows you to pause a workflow mid-execution, then resume where the workflow left off, with the same data. This is useful if you need to rate limit your calls to a service, or wait for an external event to complete. You can wait for a specified duration, or until a webhook fires.
+Waiting คือการหยุด workflow ชั่วคราวระหว่าง execution แล้ว resume ต่อจากจุดเดิมพร้อมข้อมูลเดิม เหมาะกับกรณีที่ต้องการ rate limit การเรียก service หรือรอ event ภายนอกเสร็จสิ้น คุณสามารถรอเป็นระยะเวลาที่กำหนด หรือรอจน webhook ถูกเรียกก็ได้
 
-Making a workflow wait uses the [Wait](/integrations/builtin/core-nodes/n8n-nodes-base.wait.md) node. Refer to the node documentation for usage details.
+การทำให้ workflow รอ ใช้ [Wait](/integrations/builtin/core-nodes/n8n-nodes-base.wait.md) node ดูรายละเอียดการใช้งานได้ที่เอกสาร node
 
-n8n provides a workflow template with a basic example of [Rate limiting and waiting for external events](https://n8n.io/workflows/1749-rate-limiting-and-waiting-for-external-events/){:target=_blank .external-link}.
+n8n มี workflow template ตัวอย่าง [Rate limiting and waiting for external events](https://n8n.io/workflows/1749-rate-limiting-and-waiting-for-external-events/){:target=_blank .external-link}

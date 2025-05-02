@@ -7,25 +7,25 @@ contentType: howto
 
 --8<-- "_snippets/embed-license.md"
 
-White labelling n8n means customizing the frontend styling and assets to match your brand identity. The process involves changing two packages in n8n's source code [github.com/n8n-io/n8n](https://github.com/n8n-io/n8n){:target=_blank .external-link}:
+White labelling n8n คือการปรับแต่ง frontend styling และ asset ต่างๆ ให้ตรงกับ brand ของคุณเอง วิธีนี้ต้องแก้ไข 2 package ใน source code ของ n8n [github.com/n8n-io/n8n](https://github.com/n8n-io/n8n){:target=_blank .external-link}:
 
-* [packages/design-system](https://github.com/n8n-io/n8n/tree/master/packages/design-system){:target=_blank .external-link}: n8n's [storybook](https://storybook.js.org/){:target=_blank .external-link} design system with CSS styles and Vue.js components
-* [packages/editor-ui](https://github.com/n8n-io/n8n/tree/master/packages/editor-ui){:target=_blank .external-link}: n8n's [Vue.js](https://vuejs.org/){:target=_blank .external-link} frontend build with [Vite.js](https://vitejs.dev){:target=_blank .external-link}
+* [packages/design-system](https://github.com/n8n-io/n8n/tree/master/packages/design-system){:target=_blank .external-link}: เป็น [storybook](https://storybook.js.org/){:target=_blank .external-link} design system ของ n8n ที่รวม CSS style และ Vue.js component
+* [packages/editor-ui](https://github.com/n8n-io/n8n/tree/master/packages/editor-ui){:target=_blank .external-link}: เป็น frontend ของ n8n ที่ build ด้วย [Vue.js](https://vuejs.org/){:target=_blank .external-link} และ [Vite.js](https://vitejs.dev){:target=_blank .external-link}
 
 ## Prerequisites
 
-You need the following installed on your development machine:
+เครื่องที่ใช้พัฒนาต้องติดตั้งสิ่งเหล่านี้:
 
 --8<-- "_snippets/integrations/creating-nodes/prerequisites.md"
 
-Create a fork of [n8n's repository](https://github.com/n8n-io/n8n){:target=_blank .external-link} and clone your new repository.
+สร้าง fork ของ [repository n8n](https://github.com/n8n-io/n8n){:target=_blank .external-link} แล้ว clone repository ของคุณ
 
 ```shell
 git clone https://github.com/<your-organization>/n8n.git n8n
 cd n8n
 ```
 
-Install all dependencies, build and start n8n.
+ติดตั้ง dependency ทั้งหมด, build และ start n8n
 
 ```shell
 npm install
@@ -33,16 +33,16 @@ npm run build
 npm run start
 ```
 
-Whenever you make changes you need to rebuild and restart n8n. While developing you can use `npm run dev` to automatically rebuild and restart n8n anytime you make code changes. 
+ทุกครั้งที่แก้ไข code ต้อง build และ restart n8n ใหม่ ขณะพัฒนาใช้ `npm run dev` เพื่อ rebuild/restart อัตโนมัติทุกครั้งที่แก้ไข code
 
 ## Theme colors
 
-To customize theme colors open [packages/design-system](https://github.com/n8n-io/n8n/tree/master/packages/design-system){:target=_blank .external-link} and start with:
+ถ้าจะเปลี่ยนสี theme ให้เปิด [packages/design-system](https://github.com/n8n-io/n8n/tree/master/packages/design-system){:target=_blank .external-link} แล้วเริ่มที่ไฟล์:
 
 - [packages/design-system/src/css/_tokens.scss](https://github.com/n8n-io/n8n/blob/master/packages/design-system/src/css/_tokens.scss){:target=_blank .external-link}
 - [packages/design-system/src/css/_tokens.dark.scss](https://github.com/n8n-io/n8n/blob/master/packages/design-system/src/css/_tokens.dark.scss){:target=_blank .external-link}
 
-At the top of `_tokens.scss` you will find `--color-primary` variables as HSL colors:
+ด้านบนของ `_tokens.scss` จะมีตัวแปร `--color-primary` เป็น HSL เช่นนี้:
 
 ```scss
 @mixin theme {
@@ -51,7 +51,7 @@ At the top of `_tokens.scss` you will find `--color-primary` variables as HSL co
 	--color-primary-l: 67.6%;
 ```
 
-In the following example the primary color changes to <span style="color:#0099ff">#0099ff</span>. To convert to HSL you can use a [color converter tool](https://www.w3schools.com/colors/colors_converter.asp){:target=_blank .external-link}.
+ตัวอย่างนี้เปลี่ยน primary color เป็น <span style="color:#0099ff">#0099ff</span> ถ้าจะ convert เป็น HSL ใช้ [color converter tool](https://www.w3schools.com/colors/colors_converter.asp){:target=_blank .external-link} ได้เลย
 
 ```scss
 @mixin theme {
@@ -65,7 +65,7 @@ In the following example the primary color changes to <span style="color:#0099ff
 
 ## Theme logos
 
-To change the editor’s logo assets look into [packages/editor-ui/public](https://github.com/n8n-io/n8n/tree/master/packages/editor-ui/public){:target=_blank .external-link} and replace:
+ถ้าจะเปลี่ยน logo asset ของ editor ให้ดูที่ [packages/editor-ui/public](https://github.com/n8n-io/n8n/tree/master/packages/editor-ui/public){:target=_blank .external-link} แล้วแทนที่ไฟล์เหล่านี้:
 
 - favicon-16x16.png
 - favicon-32x32.png
@@ -74,16 +74,16 @@ To change the editor’s logo assets look into [packages/editor-ui/public](https
 - n8n-logo-collapsed.svg
 - n8n-logo-expanded.svg
 
-Replace these logo assets. n8n uses them in Vue.js components, including:
+แทนที่ logo asset เหล่านี้ n8n จะใช้ใน Vue.js component หลายตัว เช่น:
 
-* [MainSidebar.vue](https://github.com/n8n-io/n8n/blob/master/packages/editor-ui/src/components/MainSidebar.vue){:target=_blank .external-link}: top/left logo in the main sidebar.
-* [Logo.vue](https://github.com/n8n-io/n8n/blob/master/packages/editor-ui/src/components/Logo.vue): reused in other components.
+* [MainSidebar.vue](https://github.com/n8n-io/n8n/blob/master/packages/editor-ui/src/components/MainSidebar.vue){:target=_blank .external-link}: โลโก้ด้านบน/ซ้ายใน sidebar หลัก
+* [Logo.vue](https://github.com/n8n-io/n8n/blob/master/packages/editor-ui/src/components/Logo.vue): ใช้ซ้ำใน component อื่นๆ
 
-In the following example replace `n8n-logo-collapsed.svg` and `n8n-logo-expanded.svg` to update the main sidebar's logo assets.
+ตัวอย่างนี้เปลี่ยน `n8n-logo-collapsed.svg` และ `n8n-logo-expanded.svg` เพื่ออัปเดตโลโก้ใน sidebar หลัก
 
 ![Example Logo Main Sidebar](/_images/embed/white-label/logo-main-sidebar.png)
 
-If your logo assets require different sizing or placement you can customize SCSS styles at the bottom of [MainSidebar.vue](https://github.com/n8n-io/n8n/blob/master/packages/editor-ui/src/components/MainSidebar.vue){:target=_blank .external-link}.
+ถ้า logo ของคุณต้องการขนาดหรือการจัดวางต่างจากเดิม สามารถแก้ SCSS style ด้านล่างของ [MainSidebar.vue](https://github.com/n8n-io/n8n/blob/master/packages/editor-ui/src/components/MainSidebar.vue){:target=_blank .external-link} ได้
 
 ```scss
 .logoItem {
@@ -112,11 +112,11 @@ If your logo assets require different sizing or placement you can customize SCSS
 
 ## Text localization
 
-To change all text occurrences like `n8n` or `n8n.io` to your brand identity you can customize n8n's English internationalization file: [packages/editor-ui/src/plugins/i18n/locales/en.json](https://github.com/n8n-io/n8n/blob/master/packages/editor-ui/src/plugins/i18n/locales/en.json){:target=_blank .external-link}.
+ถ้าจะเปลี่ยนข้อความเช่น `n8n` หรือ `n8n.io` ให้เป็น brand ของคุณเอง ให้แก้ไฟล์ internationalization ภาษาอังกฤษของ n8n: [packages/editor-ui/src/plugins/i18n/locales/en.json](https://github.com/n8n-io/n8n/blob/master/packages/editor-ui/src/plugins/i18n/locales/en.json){:target=_blank .external-link}
 
-n8n uses the [Vue I18n](https://kazupon.github.io/vue-i18n/){:target=_blank .external-link} internationalization plugin for Vue.js to translate the majority of UI texts. To search and replace text occurrences inside `en.json` you can use [Linked locale messages](https://kazupon.github.io/vue-i18n/guide/messages.html#linked-locale-messages){:target=_blank .external-link}.
+n8n ใช้ [Vue I18n](https://kazupon.github.io/vue-i18n/){:target=_blank .external-link} สำหรับแปลข้อความ UI ส่วนใหญ่ ถ้าจะค้นหาและแทนที่ข้อความใน `en.json` ใช้ [Linked locale messages](https://kazupon.github.io/vue-i18n/guide/messages.html#linked-locale-messages){:target=_blank .external-link} ได้
 
-In the following example add the `_brand.name` translation key to white label n8n's [AboutModal.vue](https://github.com/n8n-io/n8n/blob/master/packages/editor-ui/src/components/AboutModal.vue){:target=_blank .external-link}.
+ตัวอย่างนี้เพิ่ม key `_brand.name` เพื่อ white label n8n ใน [AboutModal.vue](https://github.com/n8n-io/n8n/blob/master/packages/editor-ui/src/components/AboutModal.vue){:target=_blank .external-link}
 
 ```js
 {
@@ -131,12 +131,12 @@ In the following example add the `_brand.name` translation key to white label n8
 
 ### Window title
 
-To change n8n's window title to your brand name, edit the following:
+ถ้าจะเปลี่ยน window title ของ n8n ให้เป็นชื่อ brand ของคุณ ให้แก้ไฟล์เหล่านี้:
 
 - [packages/editor-ui/index.html](https://github.com/n8n-io/n8n/blob/master/packages/editor-ui/index.html){:target=_blank .external-link}
 - [packages/editor-ui/src/components/mixins/titleChange.ts](https://github.com/n8n-io/n8n/blob/master/packages/editor-ui/src/components/mixins/titleChange.ts){:target=_blank .external-link}
 
-The following example replaces all occurrences of `n8n` and `n8n.io` with `My Brand` in `index.html` and `titleChange.ts`.
+ตัวอย่างนี้แทนที่ `n8n` และ `n8n.io` ด้วย `My Brand` ใน `index.html` และ `titleChange.ts`
 
 ```html
 <!DOCTYPE html>

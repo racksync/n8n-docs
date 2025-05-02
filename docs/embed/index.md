@@ -7,14 +7,14 @@ contentType: overview
 
 # n8n Embed
 
-n8n Embed is part of n8n's paid offering. Using Embed, you can white label n8n, or incorporate it in your software as part of your commercial product.
+n8n Embed เป็นส่วนหนึ่งของบริการแบบเสียเงินของ n8n โดยคุณสามารถใช้ Embed เพื่อ white label n8n หรือรวมเข้าไปในซอฟต์แวร์ของคุณให้เป็นส่วนหนึ่งของผลิตภัณฑ์เชิงพาณิชย์ได้
 
-For more information about when to use Embed, as well as costs and licensing processes, refer to [Embed](https://n8n.io/embed/){:target=_blank .external-link} on the n8n website.
+สำหรับข้อมูลเพิ่มเติมเกี่ยวกับกรณีการใช้งาน Embed รวมถึงค่าใช้จ่ายและขั้นตอนการขอ License ดูได้ที่ [Embed](https://n8n.io/embed/){:target=_blank .external-link} บนเว็บไซต์ n8n
 
 ## Support
 
-The [community forum](https://community.n8n.io/) can help with various issues. If you are a current Embed customer, you can also contact n8n support, using the email provided when you bought the license.
+[community forum](https://community.n8n.io/) สามารถช่วยเหลือคุณในหลายๆ เรื่อง ถ้าคุณเป็นลูกค้า Embed อยู่แล้ว คุณสามารถติดต่อ n8n support ได้โดยใช้อีเมลที่ได้รับตอนซื้อ License
 
 ## Russia and Belarus
 
-n8n Embed isn't available in Russia and Belarus. Refer to n8n's blog post [Update on n8n cloud accounts in Russia and Belarus](https://blog.n8n.io/update-on-n8n-cloud-accounts-in-russia-and-belarus/){:target=_blank .external-link} for more information.
+n8n Embed ไม่เปิดให้บริการในรัสเซียและเบลารุส ดูรายละเอียดเพิ่มเติมได้ที่บล็อกของ n8n [Update on n8n cloud accounts in Russia and Belarus](https://blog.n8n.io/update-on-n8n-cloud-accounts-in-russia-and-belarus/){:target=_blank .external-link}

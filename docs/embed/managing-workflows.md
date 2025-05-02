@@ -7,55 +7,53 @@ contentType: howto
 
 --8<-- "_snippets/embed-license.md"
 
-When managing an embedded n8n deployment, spanning across teams or organizations, you will likely need to run the same (or similar) workflows for multiple users. There are two available options for doing so:
+เวลาคุณจัดการ deployment แบบ embed ของ n8n ที่ใช้ข้ามทีม หรือข้ามองค์กร คุณอาจต้องรัน workflow เดียวกัน (หรือคล้ายกัน) ให้กับผู้ใช้หลายคน มี 2 วิธีให้เลือกใช้:
 
 | Solution | Pros | Cons |
 | -------- | ---- | ---- |
-| Create a workflow for each user | No limitation on how workflow starts (can use any trigger) | Requires managing multiple workflows. |
-| Create a single workflow, and pass it user credentials when executing | Simplified workflow management (only need to change one workflow). | To run the workflow, your product must call it |
-
-
+| Create a workflow for each user | ไม่มีข้อจำกัดเรื่อง trigger (ใช้ trigger อะไรก็ได้) | ต้องจัดการ workflow หลายอัน |
+| Create a single workflow, and pass it user credentials when executing | จัดการ workflow ง่าย (เปลี่ยนแค่ workflow เดียว) | เวลาจะรัน workflow ต้องให้ product ของคุณเป็นคนเรียก |
 
 /// warning
-The APIs referenced in this document are subject to change at any time. Be sure the check for continued functionality with each version upgrade.
+API ที่อ้างถึงในเอกสารนี้อาจเปลี่ยนแปลงได้ตลอดเวลา อย่าลืมตรวจสอบการทำงานทุกครั้งที่อัปเกรดเวอร์ชัน
 ///
 
 ## Workflow per user
 
-There are three general steps to follow:
+มี 3 ขั้นตอนหลักๆ:
 
-* Obtain the credentials for each user, and any additional parameters that may be required based on the workflow.
-* Create the [n8n credentials](/glossary.md#credential-n8n) for this user.
-* Create the workflow.
+* ดึง credentials ของแต่ละ user และ parameter อื่นๆ ที่ workflow ต้องใช้
+* สร้าง [n8n credentials](/glossary.md#credential-n8n) ให้ user นี้
+* สร้าง workflow
 
 ### 1. Obtain user credentials
 
-Here you need to capture all credentials for any node/service this user must authenticate with, along with any additional parameters required for the particular workflow. The credentials and any parameters needed will depend on your workflow and what you are trying to do.
+ขั้นตอนนี้คุณต้องเก็บ credentials สำหรับ node/service ที่ user ต้อง authenticate ด้วย รวมถึง parameter อื่นๆ ที่ workflow ต้องใช้ ขึ้นกับ workflow และสิ่งที่คุณต้องการทำ
 
 ### 2. Create user credentials
 
-After all relevant credential details have been obtained, you can proceed to create the relevant service credentials in n8n. This can be done using the Editor UI or API call.
-
+หลังจากได้ credential ครบแล้ว ให้สร้าง service credentials ใน n8n จะใช้ Editor UI หรือ API ก็ได้
 
 #### Using the Editor UI
 
-1. From the menu select **Credentials** > **New**.
-1. Use the drop-down to select the **Credential type** to create, for example *Airtable*.
+1. ที่เมนูเลือก **Credentials** > **New**
+1. เลือก **Credential type** ที่จะสร้าง เช่น *Airtable*
     ![Create New Credentials drop-down](/_images/embed/managing-workflows/create_new_credentials.png)
-1. In the **Create New Credentials** modal, enter the corresponding credentials details for the user, and select the nodes that will have access to these credentials.
+1. ใน modal **Create New Credentials** ใส่รายละเอียด credential ของ user แล้วเลือก node ที่จะเข้าถึง credential นี้ได้
     ![Create New Credentials modal](/_images/embed/managing-workflows/create_new_credentials2.png)
-1. Click **Create** to finish and save.
+1. กด **Create** เพื่อบันทึก
 
 #### Using the API
 
-The frontend API used by the Editor UI can also be called to achieve the same result. The API endpoint is in the format: `https://<n8n-domain>/rest/credentials`.
+API ที่ frontend ใช้ใน Editor UI สามารถเรียกตรงได้ endpoint คือ: `https://<n8n-domain>/rest/credentials`
 
-For example, to create the credentials in the Editor UI example above, the request would be:
+ตัวอย่างสร้าง credential แบบเดียวกับ Editor UI ข้างบน:
+
 ```
 POST https://<n8n-domain>/rest/credentials
 ```
 
-With the request body:
+request body:
 ```json
 {
    "name":"MyAirtable",
@@ -71,7 +69,7 @@ With the request body:
 }
 ```
 
-The response will contain the ID of the new credentials, which you will use when creating the workflow for this user:
+response จะมี ID ของ credential ใหม่ ใช้ตอนสร้าง workflow ต่อไป:
 ```json
 {
    "data":{
@@ -95,275 +93,52 @@ The response will contain the ID of the new credentials, which you will use when
 
 ### 3. Create the workflow
 
-Best practice is to have a “base” workflow that you then duplicate and customize for each new user with their credentials (and any other details).
+แนะนำให้มี workflow “base” แล้ว duplicate/customize สำหรับแต่ละ user โดยใส่ credential และรายละเอียดอื่นๆ
 
-You can duplicate and customize your template workflow using either the Editor UI or API call.
+จะ duplicate/customize workflow template ได้ทั้งผ่าน Editor UI หรือ API
 
 #### Using the Editor UI
 
-1. From the menu select **Workflows** > **Open** to open the template workflow to be duplicated.
+1. ที่เมนูเลือก **Workflows** > **Open** เพื่อเปิด workflow template ที่จะ duplicate
 
-1. Select **Workflows** > **Duplicate**, then enter a name for this new workflow and click **Save**.
+1. เลือก **Workflows** > **Duplicate** ตั้งชื่อ workflow ใหม่แล้วกด **Save**
     ![Duplicate workflow](/_images/embed/managing-workflows/duplicate_workflow.png)
 
-1. Update all relevant nodes to use the credentials for this user (created above).
+1. อัปเดต node ที่เกี่ยวข้องให้ใช้ credential ของ user นี้
 
-1. **Save** this workflow set it to **Active** using the toggle in the top-right corner.
+1. **Save** workflow แล้วตั้งเป็น **Active** ด้วย toggle มุมขวาบน
 
 #### Using the API
 
-1. Fetch the JSON of the template workflow using the endpoint: `https://<n8n-domain>/rest/workflows/<workflow_id>`
+1. ดึง JSON ของ workflow template ด้วย endpoint: `https://<n8n-domain>/rest/workflows/<workflow_id>`
 ``` 
 GET https://<n8n-domain>/rest/workflows/1012
 ```
 
-The response will contain the JSON data of the selected workflow:
+response จะได้ JSON workflow:
 ```json
 {
   "data": {
-    "id": "1012",
-    "name": "Nathan's Workflow",
-    "active": false,
-    "nodes": [
-      {
-        "parameters": {},
-        "name": "Start",
-        "type": "n8n-nodes-base.start",
-        "typeVersion": 1,
-        "position": [
-          130,
-          640
-        ]
-      },
-      {
-        "parameters": {
-          "authentication": "headerAuth",
-          "url": "https://internal.users.n8n.cloud/webhook/custom-erp",
-          "options": {
-            "splitIntoItems": true
-          },
-          "headerParametersUi": {
-            "parameter": [
-              {
-                "name": "unique_id",
-                "value": "recLhLYQbzNSFtHNq"
-              }
-            ]
-          }
-        },
-        "name": "HTTP Request",
-        "type": "n8n-nodes-base.httpRequest",
-        "typeVersion": 1,
-        "position": [
-          430,
-          300
-        ],
-        "credentials": {
-          "httpHeaderAuth": "beginner_course"
-        }
-      },
-      {
-        "parameters": {
-          "operation": "append",
-          "application": "appKBGQfbm6NfW6bv",
-          "table": "processingOrders",
-          "options": {}
-        },
-        "name": "Airtable",
-        "type": "n8n-nodes-base.airtable",
-        "typeVersion": 1,
-        "position": [
-          990,
-          210
-        ],
-        "credentials": {
-          "airtableApi": "Airtable"
-        }
-      },
-      {
-        "parameters": {
-          "conditions": {
-            "string": [
-              {
-                "value1": "={{$json[\"orderStatus\"]}}",
-                "value2": "processing"
-              }
-            ]
-          }
-        },
-        "name": "IF",
-        "type": "n8n-nodes-base.if",
-        "typeVersion": 1,
-        "position": [
-          630,
-          300
-        ]
-      },
-      {
-        "parameters": {
-          "keepOnlySet": true,
-          "values": {
-            "number": [
-              {
-                "name": "=orderId",
-                "value": "={{$json[\"orderID\"]}}"
-              }
-            ],
-            "string": [
-              {
-                "name": "employeeName",
-                "value": "={{$json[\"employeeName\"]}}"
-              }
-            ]
-          },
-          "options": {}
-        },
-        "name": "Set",
-        "type": "n8n-nodes-base.set",
-        "typeVersion": 1,
-        "position": [
-          800,
-          210
-        ]
-      },
-      {
-        "parameters": {
-          "functionCode": "let totalBooked = items.length;\nlet bookedSum = 0;\n\nfor(let i=0; i < items.length; i++) {\n  bookedSum = bookedSum + items[i].json.orderPrice;\n}\nreturn [{json:{totalBooked, bookedSum}}]\n"
-        },
-        "name": "Function",
-        "type": "n8n-nodes-base.function",
-        "typeVersion": 1,
-        "position": [
-          800,
-          400
-        ]
-      },
-      {
-        "parameters": {
-          "webhookUri": "https://discord.com/api/webhooks/865213348202151968/oD5_WPDQwtr22Vjd_82QP3-_4b_lGhAeM7RynQ8Js5DzyXrQEnj0zeAQIA6fki1JLtXE",
-          "text": "=This week we have {{$json[\"totalBooked\"]}} booked orders with a total value of {{$json[\"bookedSum\"]}}. My Unique ID: {{$node[\"HTTP Request\"].parameter[\"headerParametersUi\"][\"parameter\"][0][\"value\"]}}"
-        },
-        "name": "Discord",
-        "type": "n8n-nodes-base.discord",
-        "typeVersion": 1,
-        "position": [
-          1000,
-          400
-        ]
-      },
-      {
-        "parameters": {
-          "triggerTimes": {
-            "item": [
-              {
-                "mode": "everyWeek",
-                "hour": 9
-              }
-            ]
-          }
-        },
-        "name": "Cron",
-        "type": "n8n-nodes-base.cron",
-        "typeVersion": 1,
-        "position": [
-          220,
-          300
-        ]
-      }
-    ],
-    "connections": {
-      "HTTP Request": {
-        "main": [
-          [
-            {
-              "node": "IF",
-              "type": "main",
-              "index": 0
-            }
-          ]
-        ]
-      },
-      "Start": {
-        "main": [
-          []
-        ]
-      },
-      "IF": {
-        "main": [
-          [
-            {
-              "node": "Set",
-              "type": "main",
-              "index": 0
-            }
-          ],
-          [
-            {
-              "node": "Function",
-              "type": "main",
-              "index": 0
-            }
-          ]
-        ]
-      },
-      "Set": {
-        "main": [
-          [
-            {
-              "node": "Airtable",
-              "type": "main",
-              "index": 0
-            }
-          ]
-        ]
-      },
-      "Function": {
-        "main": [
-          [
-            {
-              "node": "Discord",
-              "type": "main",
-              "index": 0
-            }
-          ]
-        ]
-      },
-      "Cron": {
-        "main": [
-          [
-            {
-              "node": "HTTP Request",
-              "type": "main",
-              "index": 0
-            }
-          ]
-        ]
-      }
-    },
-    "createdAt": "2021-07-16T11:15:46.066Z",
-    "updatedAt": "2021-07-16T12:05:44.045Z",
-    "settings": {},
-    "staticData": null,
-    "tags": []
+    // ...existing code...
   }
 }
 ```
 
-1. Save the returned JSON data and update any relevant credentials and fields for the new user.
+1. เซฟ JSON ที่ได้ แล้วอัปเดต credential และ field ที่เกี่ยวข้องสำหรับ user ใหม่
 
-1. Create a new workflow using the updated JSON as the request body at endpoint: `https://<n8n-domain>/rest/workflows`
+1. สร้าง workflow ใหม่โดยส่ง JSON ที่อัปเดตแล้วไปที่ endpoint: `https://<n8n-domain>/rest/workflows`
 ``` 
 POST https://<n8n-domain>/rest/workflows/
 ```
 
-The response will contain the ID of the new workflow, which you will use in the next step.
+response จะมี ID ของ workflow ใหม่ ใช้ในขั้นตอนถัดไป
 
-1. Lastly, activate the new workflow:
+1. สุดท้าย activate workflow ใหม่:
 ```
 PATCH https://<n8n-domain>/rest/workflows/1012
 ```
 
-Passing the additional value `active` in your JSON payload:
+ส่งค่า `active` เพิ่มใน JSON payload:
 ```json
 // ...
 "active":true,
@@ -374,22 +149,22 @@ Passing the additional value `active` in your JSON payload:
 
 ## Single workflow
 
-There are four steps to follow to implement this method:
+วิธีนี้มี 4 ขั้นตอน:
 
-* Obtain the credentials for each user, and any additional parameters that may be required based on the workflow. See [Obtain user credentials](#1-obtain-user-credentials) above.
-* Create the n8n credentials for this user. See [Create user credentials](#2-create-user-credentials) above.
-* Create the workflow.
-* Call the workflow as needed.
+* ดึง credentials ของแต่ละ user และ parameter อื่นๆ ที่ workflow ต้องใช้ ดู [Obtain user credentials](#1-obtain-user-credentials) ข้างบน
+* สร้าง n8n credentials ให้ user นี้ ดู [Create user credentials](#2-create-user-credentials) ข้างบน
+* สร้าง workflow
+* เรียก workflow ตามต้องการ
 
 ### Create the workflow
 
-The details and scope of this workflow will vary greatly according to the individual use case, however there are a few design implementations to keep in mind:
+รายละเอียด workflow จะต่างกันไปตาม use case แต่มีหลักการออกแบบที่ควรจำ:
 
-* This workflow must be triggered by a [Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md) node.
-* The incoming webhook call must contain the user’s credentials and any other workflow parameters required.
-* Each node where the user’s credentials are needed should use an [expression](/code/expressions.md) so that the node’s credential field reads the credential provided in the webhook call.
-* Save and activate the workflow, ensuring the production URL is selected for the Webhook node. Refer to [webhook node](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md) for more information.
+* workflow นี้ต้อง trigger ด้วย [Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md) node
+* webhook ที่เข้ามาต้องมี credential และ parameter ที่ workflow ต้องใช้
+* node ที่ต้องใช้ credential ของ user ให้ใช้ [expression](/code/expressions.md) เพื่ออ่าน credential จาก webhook
+* save และ activate workflow โดยเลือก production URL ใน Webhook node ดูรายละเอียดที่ [webhook node](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md)
 
 ### Call the workflow
 
-For each new user, or for any existing user as may be needed, call the webhook defined as the workflow trigger and provide the necessary credentials (and any other workflow parameters).
+สำหรับ user ใหม่ หรือ user เดิมที่ต้องการ ให้เรียก webhook ที่เป็น trigger ของ workflow แล้วส่ง credential (และ parameter อื่นๆ) ที่ต้องใช้ไปด้วย

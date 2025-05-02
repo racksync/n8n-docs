@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: "Explore n8n Docs: Your Resource for Workflow Automation and Integrations"
-description: Access n8n Docs for comprehensive guides on workflow automation and integrations. Learn how to integrate apps and enhance your automation capabilities.
+title: "เรียนรู้ n8n อย่างเป็นระบบ"
+description: เข้าถึงคู่มือการใช้งาน n8n ฉบับภาษาไทย ช่วยให้คุณเรียนรู้การใช้งาน n8n สามารถสร้าง workflows ที่ซับซ้อน เชื่อมต่อกับ APIs ต่างๆ ใช้ฟีเจอร์ AI ใน n8n และสร้าง custom nodes อย่างมืออาชีพ
 contentType: overview
 hide:
   - path

@@ -6,12 +6,12 @@ contentType: howto
 
 # Retrieve linked items from earlier in the workflow
 
-Every item in a node's input data links back to the items used in previous nodes to generate it. This is useful if you need to retrieve linked items from further back than the immediate previous node.
+ทุก item ในข้อมูล input ของ node จะเชื่อมโยงกลับไปยัง item ที่ใช้ใน node ก่อนหน้าเพื่อสร้างมันขึ้นมา สิ่งนี้มีประโยชน์หากคุณต้องการดึง item ที่เชื่อมโยงจาก node ที่อยู่ก่อนหน้ามากกว่า node ที่อยู่ติดกันทันที
 
-To access the linked items from earlier in the workflow, use `("<node-name>").itemMatching(currentNodeinputIndex)`.
+ในการเข้าถึง item ที่เชื่อมโยงจาก node ก่อนหน้าใน workflow ให้ใช้ `("<node-name>").itemMatching(currentNodeinputIndex)`
 
 
-For example, consider a workflow that does the following:
+ตัวอย่างเช่น พิจารณา workflow ที่ทำสิ่งต่อไปนี้:
 
 1. The Customer Datastore node generates example data:
 	```json
@@ -62,7 +62,7 @@ For example, consider a workflow that does the following:
 	]
 	```
 
-The Code node does this using the following code:
+Code node ทำสิ่งนี้โดยใช้โค้ดต่อไปนี้:
 
 === "JavaScript"
 	```js
@@ -79,4 +79,4 @@ The Code node does this using the following code:
 	return _input.all();
 	```
 
-You can view and download the example workflow from [n8n website | itemMatchin usage example ](https://n8n.io/workflows/1966-itemmatching-usage-example/){:target=_blank .external-link}.
+คุณสามารถดูและดาวน์โหลด workflow ตัวอย่างได้จาก [n8n website | itemMatchin usage example ](https://n8n.io/workflows/1966-itemmatching-usage-example/){:target=_blank .external-link}.

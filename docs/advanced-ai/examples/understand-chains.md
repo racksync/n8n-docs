@@ -7,15 +7,14 @@ contentType: explanation
 
 # What's a chain in AI?
 
-[Chains](/glossary.md#ai-chain) bring together different components of AI to create a cohesive system. They set up a sequence of calls between the components. These components can include models and [memory](/glossary.md#ai-memory) (though note that in n8n chains can't use memory).
-
+[Chains](/glossary.md#ai-chain) คือการนำ component ต่างๆ ของ AI มาต่อกันเป็นระบบเดียวกัน โดยจะกำหนดลำดับการเรียกใช้งานระหว่าง component เหล่านั้น ซึ่ง component ที่ใช้ใน chain อาจเป็น model หรือ [memory](/glossary.md#ai-memory) (แต่ใน n8n chain จะไม่สามารถใช้ memory ได้)
 
 ## Chains in n8n
 
-n8n provides three chain nodes:
+n8n มี node สำหรับ chain อยู่ 3 แบบ:
 
-* [Basic LLM Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainllm.md): use to interact with an LLM, without any additional components.
-* [Question and Answer Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa/index.md): can connect to a [vector store](/glossary.md#ai-vector-store) using a retriever, or to an n8n workflow using the Workflow Retriever node. Use this if you want to create a workflow that supports asking questions about specific documents.
-* [Summarization Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainsummarization.md): takes an input and returns a summary.
+* [Basic LLM Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainllm.md): ใช้สำหรับคุยกับ LLM โดยตรงโดยไม่มี component อื่นเสริม
+* [Question and Answer Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa/index.md): สามารถเชื่อมต่อกับ [vector store](/glossary.md#ai-vector-store) ผ่าน retriever หรือเชื่อมกับ workflow ของ n8n ผ่าน Workflow Retriever node เหมาะสำหรับ workflow ที่ต้องการถาม-ตอบกับเอกสารเฉพาะ
+* [Summarization Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainsummarization.md): รับ input แล้วสรุปเนื้อหาให้
 
-There's an important difference between chains in n8n and in other tools such as LangChain: none of the chain nodes support memory. This means they can't remember previous user queries. If you use LangChain to code an AI application, you can give your application memory. In n8n, if you need your workflow to support memory, use an agent. This is essential if you want users to be able to have a natural ongoing conversation with your app.
+ข้อแตกต่างสำคัญระหว่าง chain ใน n8n กับเครื่องมืออื่น เช่น LangChain คือ chain ใน n8n จะไม่รองรับ memory เลย หมายความว่า chain จะไม่สามารถจดจำคำถามก่อนหน้าได้ ถ้าคุณใช้ LangChain ในการเขียนแอป AI เอง คุณสามารถใส่ memory ได้ แต่ใน n8n ถ้าต้องการให้ workflow จำประวัติการคุย ให้ใช้ agent แทน ซึ่งจำเป็นมากถ้าต้องการให้ผู้ใช้คุยกับแอปแบบ ongoing conversation

@@ -8,22 +8,22 @@ hide:
 
 # Built-in date and time methods
 
-Methods for working with date and time. 
+Methods สำหรับการทำงานกับ date และ time
 
 /// note | Python support
-You can use Python in the Code node. It isn't available in expressions.
+คุณสามารถใช้ Python ใน Code node ได้ แต่ไม่สามารถใช้ใน expressions ได้
 ///
 === "JavaScript"
 	| Method | Description | Available in Code node? |
 	| ------ | ----------- | :-------------------------: |
-	| `$now` | A Luxon object containing the current timestamp. Equivalent to `DateTime.now()`. | :white_check_mark: |
-	| `$today` | A Luxon object containing the current timestamp, rounded down to the day. Equivalent to `DateTime.now().set({ hour: 0, minute: 0, second: 0, millisecond: 0 })`. | :white_check_mark: |
+	| `$now` | Luxon object ที่มี timestamp ปัจจุบัน เทียบเท่ากับ `DateTime.now()` | :white_check_mark: |
+	| `$today` | Luxon object ที่มี timestamp ปัจจุบัน ปัดเศษลงเป็นวัน เทียบเท่ากับ `DateTime.now().set({ hour: 0, minute: 0, second: 0, millisecond: 0 })` | :white_check_mark: |
 === "Python"
 	| Method | Description | 
 	| ------ | ----------- | 
-	| `_now` | A Luxon object containing the current timestamp. Equivalent to `DateTime.now()`. | 
-	| `_today` | A Luxon object containing the current timestamp, rounded down to the day. Equivalent to `DateTime.now().set({ hour: 0, minute: 0, second: 0, millisecond: 0 })`. | 
+	| `_now` | Luxon object ที่มี timestamp ปัจจุบัน เทียบเท่ากับ `DateTime.now()` | 
+	| `_today` | Luxon object ที่มี timestamp ปัจจุบัน ปัดเศษลงเป็นวัน เทียบเท่ากับ `DateTime.now().set({ hour: 0, minute: 0, second: 0, millisecond: 0 })` | 
 
-n8n passes dates between nodes as strings, so you need to parse them. Luxon helps you do this. Refer to [Date and time with Luxon](/code/cookbook/luxon.md) for more information.
+n8n ส่งผ่าน dates ระหว่าง nodes เป็น strings ดังนั้นคุณต้อง parse พวกมัน Luxon ช่วยให้คุณทำสิ่งนี้ได้ โปรดดู [Date and time with Luxon](/code/cookbook/luxon.md) สำหรับข้อมูลเพิ่มเติม
 
-n8n provides built-in convenience functions to support data transformation in expressions for dates. Refer to [Data transformation functions | Dates](/code/builtin/data-transformation-functions/dates.md) for more information.
+n8n มี convenience functions ที่สร้างไว้ให้เพื่อรองรับการแปลงข้อมูลใน expressions สำหรับ dates โปรดดู [Data transformation functions | Dates](/code/builtin/data-transformation-functions/dates.md) สำหรับข้อมูลเพิ่มเติม

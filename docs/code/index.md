@@ -7,23 +7,23 @@ contentType: overview
 
 # Code in n8n
 
-n8n is a low-code tool. This means you can do a lot without code, then add code when needed.
+n8n เป็นเครื่องมือ low-code ซึ่งหมายความว่าคุณสามารถทำอะไรได้มากมายโดยไม่ต้องเขียน code แล้วค่อยเพิ่ม code เข้าไปเมื่อจำเป็น
 
 ## Code in your workflows
 
-There are two places in your workflows where you can use code:
+มีสองที่ใน workflows ของคุณที่คุณสามารถใช้ code ได้:
 
 <div class="grid-cards-vertical cards" markdown>
 
 - __Expressions__
 
-	Use [expressions](/glossary.md#expression-n8n) to transform [data](/data/index.md) in your nodes. You can use JavaScript in expressions, as well as n8n's [Built-in methods and variables](/code/builtin/overview.md) and [Data transformation functions](/code/builtin/data-transformation-functions/index.md).
+	ใช้ [expressions](/glossary.md#expression-n8n) เพื่อแปลง [data](/data/index.md) ใน nodes ของคุณ คุณสามารถใช้ JavaScript ใน expressions รวมถึง [Built-in methods and variables](/code/builtin/overview.md) และ [Data transformation functions](/code/builtin/data-transformation-functions/index.md) ของ n8n
 
 	[:octicons-arrow-right-24: Expressions](/code/expressions.md)
 
 - __Code node__
 
-	Use the Code node to add JavaScript or Python to your workflow.
+	ใช้ Code node เพื่อเพิ่ม JavaScript หรือ Python ลงใน workflow ของคุณ
 
 	[:octicons-arrow-right-24: Code node](/code/code-node.md)
 
@@ -32,25 +32,25 @@ There are two places in your workflows where you can use code:
 
 ## Other technical resources
 
-These are features that are relevant to technical users.
+นี่คือ features ที่เกี่ยวข้องกับผู้ใช้ทางเทคนิค
 
 ### Technical nodes
 
-n8n provides core nodes, which simplify adding key functionality such as API requests, webhooks, scheduling, and file handling.
+n8n มี core nodes ซึ่งช่วยให้การเพิ่มฟังก์ชันการทำงานหลัก เช่น การร้องขอ API, webhooks, การตั้งเวลา และการจัดการไฟล์ง่ายขึ้น
 
 <div class="grid-cards-vertical cards" markdown>
 
 - __Write a backend__
 
-	The [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md), [Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md), and [Code](/code/code-node.md) nodes help you make API calls, respond to webhooks, and write any JavaScript in your workflow.
+	[HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md), [Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md), และ [Code](/code/code-node.md) nodes ช่วยให้คุณทำการเรียก API, ตอบสนองต่อ webhooks, และเขียน JavaScript ใดๆ ใน workflow ของคุณ
 
-	Use this do things like [Create an API endpoint](https://n8n.io/workflows/1750-creating-an-api-endpoint/){:target=_blank .external-link}.
+	ใช้สิ่งนี้เพื่อทำสิ่งต่างๆ เช่น [Create an API endpoint](https://n8n.io/workflows/1750-creating-an-api-endpoint/){:target=_blank .external-link}
 
 	[:octicons-arrow-right-24: Core nodes](/integrations/builtin/core-nodes/index.md)
 
 - __Represent complex logic__
 
-	You can build complex flows, using nodes like [If](/integrations/builtin/core-nodes/n8n-nodes-base.if.md), [Switch](/integrations/builtin/core-nodes/n8n-nodes-base.switch.md), and [Merge](/integrations/builtin/core-nodes/n8n-nodes-base.merge.md) nodes. 
+	คุณสามารถสร้าง flows ที่ซับซ้อนได้ โดยใช้ nodes เช่น [If](/integrations/builtin/core-nodes/n8n-nodes-base.if.md), [Switch](/integrations/builtin/core-nodes/n8n-nodes-base.switch.md), และ [Merge](/integrations/builtin/core-nodes/n8n-nodes-base.merge.md) nodes
 
 	[:octicons-arrow-right-24: Flow logic](/flow-logic/index.md)
 
@@ -62,19 +62,19 @@ n8n provides core nodes, which simplify adding key functionality such as API req
 
 - __The n8n API__
 
-	n8n provides an API, where you can programmatically perform many of the same tasks as you can in the GUI. There's an [n8n API node](/integrations/builtin/core-nodes/n8n-nodes-base.n8n.md) to access the API in your workflows.
+	n8n มี API ที่คุณสามารถทำงานหลายอย่างแบบเดียวกับที่คุณทำใน GUI ผ่านการเขียนโปรแกรมได้ มี [n8n API node](/integrations/builtin/core-nodes/n8n-nodes-base.n8n.md) เพื่อเข้าถึง API ใน workflows ของคุณ
 
 	[:octicons-arrow-right-24: API](/api/index.md)
 
 - __Self-host__
 
-	You can self-host n8n. This keeps your data on your own infrastructure.
+	คุณสามารถ self-host n8n ได้ ซึ่งจะช่วยเก็บข้อมูลของคุณไว้ในโครงสร้างพื้นฐานของคุณเอง
 
 	[:octicons-arrow-right-24: Hosting](/hosting/index.md)
 
 - __Build your own nodes__
 
-	You can build custom nodes, install them on your n8n instance, and publish them to [npm](https://www.npmjs.com/){:target=_blank .external-link}.
+	คุณสามารถสร้าง custom nodes, ติดตั้งบน n8n instance ของคุณ, และเผยแพร่ไปยัง [npm](https://www.npmjs.com/){:target=_blank .external-link}
 
 	[:octicons-arrow-right-24: Creating nodes](/integrations/creating-nodes/overview.md)
 

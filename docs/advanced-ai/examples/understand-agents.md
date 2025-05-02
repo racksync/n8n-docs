@@ -7,12 +7,12 @@ contentType: explanation
 
 # What's an agent in AI?
 
-One way to think of an [agent](/glossary.md#ai-agent) is as a [chain](/advanced-ai/examples/understand-chains.md) that knows how to make decisions. Where a chain follows a predetermined sequence of calls to different AI components, an agent uses a language model to determine which actions to take.
+อีกวิธีหนึ่งในการเข้าใจ [agent](/glossary.md#ai-agent) คือมันเหมือนกับ [chain](/advanced-ai/examples/understand-chains.md) ที่สามารถตัดสินใจเองได้ ในขณะที่ chain จะทำงานตามลำดับที่กำหนดไว้ล่วงหน้า agent จะใช้ language model ในการเลือกว่าจะทำอะไรต่อ
 
-Agents are the part of AI that act as decision-makers. They can interact with other agents and [tools](/glossary.md#ai-tool). When you send a query to an agent, it tries to choose the best tools to use to answer. Agents adapt to your specific queries, as well as the prompts that configure their behavior.
+Agent คือส่วนที่ทำหน้าที่ตัดสินใจใน AI สามารถโต้ตอบกับ agent อื่นหรือ [tools](/glossary.md#ai-tool) ได้ เมื่อคุณส่งคำถามไปที่ agent มันจะพยายามเลือก tool ที่เหมาะสมที่สุดเพื่อหาคำตอบ Agent จะปรับตัวตามคำถามของคุณและ prompt ที่ใช้ตั้งค่าพฤติกรรมของมัน
 
 ## Agents in n8n
 
-n8n provides one Agent node, which can act as different types of agent depending on the settings you choose. Refer to the [Agent node documentation](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) for details on the available agent types.
+n8n มี Agent node ตัวเดียว ซึ่งสามารถตั้งค่าให้ทำงานเป็น agent หลายประเภทได้ ขึ้นอยู่กับการตั้งค่าที่เลือก ดูรายละเอียด agent type ได้ที่ [Agent node documentation](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md)
 
-When execute a workflow containing an agent, the agent runs multiple times. For example, it may do an initial setup, followed by a run to call a tool, then another run to evaluate the tool response and respond to the user.
+เมื่อรัน workflow ที่มี agent ตัว agent จะทำงานหลายรอบ เช่น อาจจะมีรอบ setup, รอบที่เรียก tool, แล้วก็รอบที่ประเมินผลลัพธ์จาก tool และตอบกลับผู้ใช้

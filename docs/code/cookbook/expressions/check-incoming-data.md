@@ -5,19 +5,19 @@ contentType: howto
 
 # Check incoming data
 
-At times, you may want to check the incoming data. If the incoming data doesn't match a condition, you may want to return a different value. For example, you want to check if a variable from the previous node is empty and return a string if it's empty. Use the following code snippet to return `not found` if the variable is empty.
+บางครั้ง คุณอาจต้องการตรวจสอบข้อมูลขาเข้า หากข้อมูลขาเข้าไม่ตรงกับเงื่อนไข คุณอาจต้องการคืนค่าที่แตกต่างออกไป ตัวอย่างเช่น คุณต้องการตรวจสอบว่าตัวแปรจาก node ก่อนหน้าว่างเปล่าหรือไม่ และคืนค่าเป็นสตริงหากว่างเปล่า ใช้โค้ด snippet ต่อไปนี้เพื่อคืนค่า `not found` หากตัวแปรว่างเปล่า
 
 ```javascript
 {{$json["variable_name"]? $json["variable_name"] :"not found"}}
 ```
 
-The above expression uses the ternary operator. You can learn more about the ternary operator [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator).
+expression ข้างต้นใช้ ternary operator คุณสามารถเรียนรู้เพิ่มเติมเกี่ยวกับ ternary operator ได้ [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
 
-As an alternative, you can use the [nullish coalescing operator (??)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing) or the [logical or operator (||)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR):
+อีกทางเลือกหนึ่ง คุณสามารถใช้ [nullish coalescing operator (??)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing) หรือ [logical or operator (||)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR):
 
 ```javascript
 {{ $x ?? "default value" }}
 {{ $x || "default value" }}
 ```
 
-In either of the above two cases, the value of `$x` will be used if it's set to a non-null, non-false value. The string `default value` is the fallback value.
+ในทั้งสองกรณีข้างต้น ค่าของ `$x` จะถูกใช้หากมีการตั้งค่าเป็นค่าที่ไม่ใช่ null และไม่ใช่ false สตริง `default value` คือค่าสำรอง (fallback value)

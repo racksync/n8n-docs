@@ -8,29 +8,29 @@ hide:
 
 # Current node input
 
-Methods for working with the input of the current node. Some methods and variables aren't available in the Code node.
+Methods สำหรับการทำงานกับ input ของ node ปัจจุบัน Methods และ variables บางตัวไม่สามารถใช้งานได้ใน Code node
 
 /// note | Python support
-You can use Python in the Code node. It isn't available in expressions.
+คุณสามารถใช้ Python ใน Code node ได้ แต่ไม่สามารถใช้ใน expressions ได้
 ///
 === "JavaScript"
 	| Method | Description | Available in Code node? |
 	| ------ | ----------- | :-------------------------: |
-	| `$binary` | Shorthand for `$input.item.binary`. Incoming binary data from a node | :x: |
-	| `$input.item` | The input item of the current node that's being processed. Refer to [Item linking](/data/data-mapping/data-item-linking/index.md) for more information on paired items and item linking. | :white_check_mark: |
-	| `$input.all()` | All input items in current node. | :white_check_mark: |
-	| `$input.first()` | First input item in current node. | :white_check_mark: |
-	| `$input.last()` | Last input item in current node. | :white_check_mark: |
-	| `$input.params` | Object containing the query settings of the previous node. This includes data such as the operation it ran, result limits, and so on.  | :white_check_mark: |
-	| `$json` | Shorthand for `$input.item.json`. Incoming JSON data from a node. Refer to [Data structure](/data/data-structure.md) for information on item structure. | :white_check_mark: (when running once for each item) |
-	| `$input.context.noItemsLeft` | Boolean. Only available when working with the Loop Over Items node. Provides information about what's happening in the node. Use this to determine whether the node is still processing items. | :white_check_mark: |
+	| `$binary` | รูปแบบย่อของ `$input.item.binary` ข้อมูล binary ที่เข้ามาจาก node | :x: |
+	| `$input.item` | input item ของ node ปัจจุบันที่กำลังประมวลผล โปรดดู [Item linking](/data/data-mapping/data-item-linking/index.md) สำหรับข้อมูลเพิ่มเติมเกี่ยวกับ paired items และ item linking | :white_check_mark: |
+	| `$input.all()` | input items ทั้งหมดใน node ปัจจุบัน | :white_check_mark: |
+	| `$input.first()` | input item แรกใน node ปัจจุบัน | :white_check_mark: |
+	| `$input.last()` | input item สุดท้ายใน node ปัจจุบัน | :white_check_mark: |
+	| `$input.params` | Object ที่มี query settings ของ node ก่อนหน้า ซึ่งรวมถึงข้อมูล เช่น operation ที่รัน, result limits และอื่นๆ | :white_check_mark: |
+	| `$json` | รูปแบบย่อของ `$input.item.json` ข้อมูล JSON ที่เข้ามาจาก node โปรดดู [Data structure](/data/data-structure.md) สำหรับข้อมูลเกี่ยวกับโครงสร้าง item | :white_check_mark: (เมื่อรันครั้งเดียวสำหรับแต่ละ item) |
+	| `$input.context.noItemsLeft` | Boolean ใช้ได้เฉพาะเมื่อทำงานกับ Loop Over Items node ให้ข้อมูลเกี่ยวกับสิ่งที่เกิดขึ้นใน node ใช้เพื่อตรวจสอบว่า node ยังคงประมวลผล items อยู่หรือไม่ | :white_check_mark: |
 === "Python"
 	| Method | Description | 
 	| ------ | ----------- | 
-	| `_input.item` | The input item of the current node that's being processed. Refer to [Item linking](/data/data-mapping/data-item-linking/index.md) for more information on paired items and item linking. | 
-	| `_input.all()` | All input items in current node. | 
-	| `_input.first()` | First input item in current node. | 
-	| `_input.last()` | Last input item in current node. | 
-	| `_input.params` | Object containing the query settings of the previous node. This includes data such as the operation it ran, result limits, and so on.  | 
-	| `_json` | Shorthand for `_input.item.json`. Incoming JSON data from a node. Refer to [Data structure](/data/data-structure.md) for information on item structure. Available when you set **Mode** to **Run Once for Each Item**. | 
-	| `_input.context.noItemsLeft` | Boolean. Only available when working with the Loop Over Items node. Provides information about what's happening in the node. Use this to determine whether the node is still processing items. | 
+	| `_input.item` | input item ของ node ปัจจุบันที่กำลังประมวลผล โปรดดู [Item linking](/data/data-mapping/data-item-linking/index.md) สำหรับข้อมูลเพิ่มเติมเกี่ยวกับ paired items และ item linking | 
+	| `_input.all()` | input items ทั้งหมดใน node ปัจจุบัน | 
+	| `_input.first()` | input item แรกใน node ปัจจุบัน | 
+	| `_input.last()` | input item สุดท้ายใน node ปัจจุบัน | 
+	| `_input.params` | Object ที่มี query settings ของ node ก่อนหน้า ซึ่งรวมถึงข้อมูล เช่น operation ที่รัน, result limits และอื่นๆ | 
+	| `_json` | รูปแบบย่อของ `_input.item.json` ข้อมูล JSON ที่เข้ามาจาก node โปรดดู [Data structure](/data/data-structure.md) สำหรับข้อมูลเกี่ยวกับโครงสร้าง item ใช้ได้เมื่อคุณตั้งค่า **Mode** เป็น **Run Once for Each Item** | 
+	| `_input.context.noItemsLeft` | Boolean ใช้ได้เฉพาะเมื่อทำงานกับ Loop Over Items node ให้ข้อมูลเกี่ยวกับสิ่งที่เกิดขึ้นใน node ใช้เพื่อตรวจสอบว่า node ยังคงประมวลผล items อยู่หรือไม่ |

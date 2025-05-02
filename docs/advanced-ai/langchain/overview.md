@@ -9,7 +9,7 @@ hide:
 
 # LangChain in n8n
 
-n8n provides a collection of nodes that implement LangChain's functionality. The LangChain nodes are configurable, meaning you can choose your preferred agent, LLM, memory, and so on. Alongside the LangChain nodes, you can connect any n8n node as normal: this means you can integrate your LangChain logic with other data sources and services.
+n8n มีชุด nodes ที่นำฟังก์ชันของ LangChain มาใช้ LangChain nodes สามารถตั้งค่าได้เอง เช่น เลือก agent, LLM, memory ฯลฯ ที่ต้องการ นอกจาก LangChain nodes แล้ว คุณยังสามารถเชื่อมต่อ n8n node อื่นๆ ได้ตามปกติ: หมายความว่าคุณสามารถรวม logic ของ LangChain กับ data sources และ services อื่นๆ ได้
 
-* [Learning resources](/advanced-ai/langchain/langchain-learning-resources.md): n8n's documentation for LangChain assumes you're familiar with AI and LangChain concepts. This page provides links to learning resources.
-* [LangChain concepts and features in n8n](/advanced-ai/langchain/langchain-n8n.md): how n8n represents LangChain concepts and features.
+* [Learning resources](/advanced-ai/langchain/langchain-learning-resources.md): เอกสารของ n8n สำหรับ LangChain สมมติว่าคุณคุ้นเคยกับ AI และ LangChain concepts หน้านี้มีลิงก์ไปยังแหล่งเรียนรู้
+* [LangChain concepts and features in n8n](/advanced-ai/langchain/langchain-n8n.md): วิธีที่ n8n แสดง LangChain concepts และ features

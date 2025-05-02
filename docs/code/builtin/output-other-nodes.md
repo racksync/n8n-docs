@@ -8,28 +8,28 @@ hide:
 
 # Output of other nodes
 
-Methods for working with the output of other nodes. Some methods and variables aren't available in the Code node.
+Methods สำหรับการทำงานกับ output ของ node อื่นๆ Methods และ variables บางตัวไม่สามารถใช้งานได้ใน Code node
 
 /// note | Python support
-You can use Python in the Code node. It isn't available in expressions.
+คุณสามารถใช้ Python ใน Code node ได้ แต่ไม่สามารถใช้ใน expressions ได้
 ///
 === "JavaScript"
 	| Method | Description | Available in Code node? |
 	| ------ | ----------- | :-------------------------: |
-	| `$("<node-name>").all(branchIndex?, runIndex?)` | Returns all items from a given node. If `branchIndex` isn't given it will default to the output that connects `node-name` with the node where you use the expression or code. | :white_check_mark: |
-	| `$("<node-name>").first(branchIndex?, runIndex?)` | The first item output by the given node. If `branchIndex` isn't given it will default to the output that connects `node-name` with the node where you use the expression or code. | :white_check_mark: |
-	| `$("<node-name>").last(branchIndex?, runIndex?)` | The last item output by the given node. If `branchIndex` isn't given it will default to the output that connects `node-name` with the node where you use the expression or code. | :white_check_mark: |
-	| `$("<node-name>").item` | The linked item. This is the item in the specified node used to produce the current item. Refer to [Item linking](/data/data-mapping/data-item-linking/index.md) for more information on item linking. | :x: |
-	| `$("<node-name>").params` | Object containing the query settings of the given node. This includes data such as the operation it ran, result limits, and so on. | :white_check_mark: |
-	| `$("<node-name>").context` | Boolean. Only available when working with the Loop Over Items node. Provides information about what's happening in the node. Use this to determine whether the node is still processing items. | :white_check_mark: |
-	| `$("<node-name>").itemMatching(currentNodeInputIndex)` | Use instead of `$("<node-name>").item` in the Code node if you need to trace back from an input item. | :white_check_mark: |
+	| `$("<node-name>").all(branchIndex?, runIndex?)` | คืนค่า items ทั้งหมดจาก node ที่ระบุ หากไม่ได้ระบุ `branchIndex` จะใช้ output ที่เชื่อมต่อ `node-name` กับ node ที่คุณใช้ expression หรือ code เป็นค่าเริ่มต้น | :white_check_mark: |
+	| `$("<node-name>").first(branchIndex?, runIndex?)` | item แรกที่ส่งออกจาก node ที่ระบุ หากไม่ได้ระบุ `branchIndex` จะใช้ output ที่เชื่อมต่อ `node-name` กับ node ที่คุณใช้ expression หรือ code เป็นค่าเริ่มต้น | :white_check_mark: |
+	| `$("<node-name>").last(branchIndex?, runIndex?)` | item สุดท้ายที่ส่งออกจาก node ที่ระบุ หากไม่ได้ระบุ `branchIndex` จะใช้ output ที่เชื่อมต่อ `node-name` กับ node ที่คุณใช้ expression หรือ code เป็นค่าเริ่มต้น | :white_check_mark: |
+	| `$("<node-name>").item` | item ที่เชื่อมโยงกัน นี่คือ item ใน node ที่ระบุซึ่งใช้ในการสร้าง item ปัจจุบัน โปรดดู [Item linking](/data/data-mapping/data-item-linking/index.md) สำหรับข้อมูลเพิ่มเติมเกี่ยวกับการเชื่อมโยง item | :x: |
+	| `$("<node-name>").params` | Object ที่มี query settings ของ node ที่ระบุ ซึ่งรวมถึงข้อมูล เช่น operation ที่รัน, result limits และอื่นๆ | :white_check_mark: |
+	| `$("<node-name>").context` | Boolean ใช้ได้เฉพาะเมื่อทำงานกับ Loop Over Items node ให้ข้อมูลเกี่ยวกับสิ่งที่เกิดขึ้นใน node ใช้เพื่อตรวจสอบว่า node ยังคงประมวลผล items อยู่หรือไม่ | :white_check_mark: |
+	| `$("<node-name>").itemMatching(currentNodeInputIndex)` | ใช้แทน `$("<node-name>").item` ใน Code node หากคุณต้องการติดตามย้อนกลับจาก input item | :white_check_mark: |
 === "Python"
 	| Method | Description | Available in Code node? |
 	| ------ | ----------- | :-------------------------: |
-	| `_("<node-name>").all(branchIndex?, runIndex?)` | Returns all items from a given node. If `branchIndex` isn't given it will default to the output that connects`node-name` with the node where you use the expression or code. | :white_check_mark: |
-	| `_("<node-name>").first(branchIndex?, runIndex?)` | The first item output by the given node. If `branchIndex` isn't given it will default to the output that connects`node-name` with the node where you use the expression or code. | :white_check_mark: |
-	| `_("<node-name>").last(branchIndex?, runIndex?)` | The last item output by the given node. If `branchIndex` isn't given it will default to the output that connects`node-name` with the node where you use the expression or code. | :white_check_mark: |
-	| `_("<node-name>").item` | The linked item. This is the item in the specified node used to produce the current item. Refer to [Item linking](/data/data-mapping/data-item-linking/index.md) for more information on item linking. | :x: |
-	| `_("<node-name>").params` | Object containing the query settings of the given node. This includes data such as the operation it ran, result limits, and so on. | :white_check_mark: |
-	| `_("<node-name>").context` | Boolean. Only available when working with the Loop Over Items node. Provides information about what's happening in the node. Use this to determine whether the node is still processing items. | :white_check_mark: |
-	| `_("<node-name>").itemMatching(currentNodeInputIndex)` | Use instead of `_("<node-name>").item` in the Code node if you need to trace back from an input item. Refer to [Retrieve linked items from earlier in the workflow](/code/cookbook/builtin/itemmatching.md) for an example. | :white_check_mark: |
+	| `_("<node-name>").all(branchIndex?, runIndex?)` | คืนค่า items ทั้งหมดจาก node ที่ระบุ หากไม่ได้ระบุ `branchIndex` จะใช้ output ที่เชื่อมต่อ `node-name` กับ node ที่คุณใช้ expression หรือ code เป็นค่าเริ่มต้น | :white_check_mark: |
+	| `_("<node-name>").first(branchIndex?, runIndex?)` | item แรกที่ส่งออกจาก node ที่ระบุ หากไม่ได้ระบุ `branchIndex` จะใช้ output ที่เชื่อมต่อ `node-name` กับ node ที่คุณใช้ expression หรือ code เป็นค่าเริ่มต้น | :white_check_mark: |
+	| `_("<node-name>").last(branchIndex?, runIndex?)` | item สุดท้ายที่ส่งออกจาก node ที่ระบุ หากไม่ได้ระบุ `branchIndex` จะใช้ output ที่เชื่อมต่อ `node-name` กับ node ที่คุณใช้ expression หรือ code เป็นค่าเริ่มต้น | :white_check_mark: |
+	| `_("<node-name>").item` | item ที่เชื่อมโยงกัน นี่คือ item ใน node ที่ระบุซึ่งใช้ในการสร้าง item ปัจจุบัน โปรดดู [Item linking](/data/data-mapping/data-item-linking/index.md) สำหรับข้อมูลเพิ่มเติมเกี่ยวกับการเชื่อมโยง item | :x: |
+	| `_("<node-name>").params` | Object ที่มี query settings ของ node ที่ระบุ ซึ่งรวมถึงข้อมูล เช่น operation ที่รัน, result limits และอื่นๆ | :white_check_mark: |
+	| `_("<node-name>").context` | Boolean ใช้ได้เฉพาะเมื่อทำงานกับ Loop Over Items node ให้ข้อมูลเกี่ยวกับสิ่งที่เกิดขึ้นใน node ใช้เพื่อตรวจสอบว่า node ยังคงประมวลผล items อยู่หรือไม่ | :white_check_mark: |
+	| `_("<node-name>").itemMatching(currentNodeInputIndex)` | ใช้แทน `_("<node-name>").item` ใน Code node หากคุณต้องการติดตามย้อนกลับจาก input item โปรดดู [Retrieve linked items from earlier in the workflow](/code/cookbook/builtin/itemmatching.md) สำหรับตัวอย่าง | :white_check_mark: |

@@ -6,29 +6,29 @@ contentType: howto
 
 # API pagination
 
-The default page size is 100 results. You can change the page size limit. The maximum permitted size is 250.
+ขนาดหน้าเริ่มต้นคือ 100 ผลลัพธ์ คุณสามารถเปลี่ยนขีดจำกัดขนาดหน้าได้ ขนาดสูงสุดที่อนุญาตคือ 250
 
-When a response contains more than one page, it includes a cursor, which you can use to request the next pages.
+เมื่อ response มีมากกว่าหนึ่งหน้า จะมี cursor ซึ่งคุณสามารถใช้เพื่อขอหน้าถัดไปได้
 
-For example, say you want to get all active workflows, 150 at a time.
+ตัวอย่างเช่น สมมติว่าคุณต้องการดึงข้อมูล workflows ที่ active ทั้งหมด ครั้งละ 150 รายการ
 
-Get the first page:
+รับหน้าแรก:
 
 ```shell
-# For a self-hosted n8n instance
+# สำหรับ n8n instance แบบ self-hosted
 curl -X 'GET' \
   '<N8N_HOST>:<N8N_PORT>/<N8N_PATH>/api/v<version-number>/workflows?active=true&limit=150' \
   -H 'accept: application/json' \
   -H 'X-N8N-API-KEY: <your-api-key>'
 
-# For n8n Cloud
+# สำหรับ n8n Cloud
 curl -X 'GET' \
   '<your-cloud-instance>/api/v<version-number>/workflows?active=true&limit=150' \
   -H 'accept: application/json' \
   -H 'X-N8N-API-KEY: <your-api-key>'
 ```
 
-The response is in JSON format, and includes a `nextCursor` value. This is an example response.
+response อยู่ในรูปแบบ JSON และมีค่า `nextCursor` นี่คือตัวอย่าง response
 
 ```js
 {
@@ -42,15 +42,15 @@ The response is in JSON format, and includes a `nextCursor` value. This is an ex
 }
 ```
 
-Then to request the next page:
+จากนั้น หากต้องการขอหน้าถัดไป:
 
 ```bash
-# For a self-hosted n8n instance
+# สำหรับ n8n instance แบบ self-hosted
 curl -X 'GET' \
   '<N8N_HOST>:<N8N_PORT>/<N8N_PATH>/api/v<version-number>/workflows?active=true&limit=150&cursor=MTIzZTQ1NjctZTg5Yi0xMmQzLWE0NTYtNDI2NjE0MTc0MDA' \
   -H 'accept: application/json'
 
-# For n8n Cloud
+# สำหรับ n8n Cloud
 curl -X 'GET' \
   '<your-cloud-instance>/api/v<version-number>/workflows?active=true&limit=150&cursor=MTIzZTQ1NjctZTg5Yi0xMmQzLWE0NTYtNDI2NjE0MTc0MDA' \
   -H 'accept: application/json'

@@ -7,25 +7,25 @@ description: How to enable LangSmith for your self-hosted n8n instance.
 
 # Use LangSmith with n8n
 
-[LangSmith](https://www.langchain.com/langsmith){:target=_blank .external-link} is a developer platform created by the LangChain team. You can connect your n8n instance to LangSmith to record and monitor runs in n8n, just as you can in a LangChain application.
+[LangSmith](https://www.langchain.com/langsmith){:target=_blank .external-link} คือแพลตฟอร์มสำหรับนักพัฒนาที่สร้างโดยทีม LangChain คุณสามารถเชื่อมต่อ n8n instance ของคุณกับ LangSmith เพื่อบันทึกและตรวจสอบ runs ใน n8n ได้ เหมือนกับที่ทำในแอป LangChain
 
 /// info | Feature availability
-Self-hosted n8n only.
+เฉพาะ self-hosted n8n เท่านั้น
 ///
 
 ## Connect your n8n instance to LangSmith
 
-1. [Log in to LangSmith](https://smith.langchain.com/settings){:target=_blank .external-link} and get your API key.
-1. Set the LangSmith environment variables:
+1. [Log in to LangSmith](https://smith.langchain.com/settings){:target=_blank .external-link} แล้วรับ API key ของคุณ
+1. ตั้งค่า LangSmith environment variables:
 
 	| Variable | Value |
 	| -------- | ----- |
 	| LANGCHAIN_ENDPOINT | `"https://api.smith.langchain.com"` |
 	| LANGCHAIN_TRACING_V2 | `true` |
-	| LANGCHAIN_API_KEY | Set this to your API key |
+	| LANGCHAIN_API_KEY | ตั้งค่านี้เป็น API key ของคุณ |
 
-	Set the variables so that they're available globally in the environment where you host your n8n instance. You can do this in the same way as the rest of your general configuration. These aren't n8n environment variables, so don't try to set them using the [n8n configuration file](/hosting/configuration/configuration-methods.md#set-environment-variables-using-a-file).
+	ตั้งค่า variables เหล่านี้ให้ใช้งานได้ทั่วทั้ง environment ที่คุณ host n8n instance ของคุณ สามารถตั้งค่าแบบเดียวกับการ config อื่นๆ ทั่วไป พวกนี้ไม่ใช่ n8n environment variables ดังนั้นอย่าพยายามตั้งค่าผ่าน [n8n configuration file](/hosting/configuration/configuration-methods.md#set-environment-variables-using-a-file)
 
-1. Restart n8n.
+1. รีสตาร์ท n8n
 
-For information on using LangSmith, refer to [LangSmith's documentation](https://docs.smith.langchain.com/){:target=_blank .external-link}.
+สำหรับข้อมูลเกี่ยวกับการใช้ LangSmith ดูที่ [LangSmith's documentation](https://docs.smith.langchain.com/){:target=_blank .external-link}

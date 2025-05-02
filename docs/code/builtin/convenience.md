@@ -8,22 +8,22 @@ hide:
 
 # Convenience methods
 
-n8n provides these methods to make it easier to perform common tasks in [expressions](/glossary.md#expression-n8n).
+n8n มี methods เหล่านี้เพื่อให้ง่ายต่อการทำงานทั่วไปใน [expressions](/glossary.md#expression-n8n)
 
 /// note | Python support
-You can use Python in the Code node. It isn't available in expressions.
+คุณสามารถใช้ Python ใน Code node ได้ แต่ไม่สามารถใช้ใน expressions ได้
 ///
 
 === "JavaScript"
 	| Method | Description | Available in Code node? |
 	| ------ | ----------- | :---------------------: |
-	| `$evaluateExpression(expression: string, itemIndex?: number)` | Evaluates a string as an expression. If you don't provide `itemIndex`, n8n uses the data from item 0 in the Code node. | :white_check_mark: |
-	| `$ifEmpty(value, defaultValue)` | The `$ifEmpty()` function takes two parameters, tests the first to check if it's empty, then returns either the parameter (if not empty) or the second parameter (if the first is empty). The first parameter is empty if it's:<ul><li>`undefined`</li><li>`null`</li><li>An empty string `''`</li><li>An array where `value.length` returns `false`</li><li>An object where `Object.keys(value).length` returns `false`</li></ul> | :white_check_mark: |
-	| `$if()` | The `$if()` function takes three parameters: a condition, the value to return if true, and the value to return if false. | :x: | 
-	| `$max()` | Returns the highest of the provided numbers. | :x: |
-	| `$min()` | Returns the lowest of the provided numbers. | :x: |
+	| `$evaluateExpression(expression: string, itemIndex?: number)` | ประเมินผล string เป็น expression หากคุณไม่ได้ระบุ `itemIndex` n8n จะใช้ข้อมูลจาก item 0 ใน Code node | :white_check_mark: |
+	| `$ifEmpty(value, defaultValue)` | ฟังก์ชัน `$ifEmpty()` รับสอง parameters ทดสอบ parameter แรกเพื่อตรวจสอบว่าว่างเปล่าหรือไม่ จากนั้นคืนค่า parameter แรก (หากไม่ว่างเปล่า) หรือ parameter ที่สอง (หาก parameter แรกว่างเปล่า) parameter แรกจะถือว่าว่างเปล่าหากเป็น:<ul><li>`undefined`</li><li>`null`</li><li>สตริงว่าง `''`</li><li>Array ที่ `value.length` คืนค่า `false`</li><li>Object ที่ `Object.keys(value).length` คืนค่า `false`</li></ul> | :white_check_mark: |
+	| `$if()` | ฟังก์ชัน `$if()` รับสาม parameters: เงื่อนไข, ค่าที่จะคืนหากเป็น true, และค่าที่จะคืนหากเป็น false | :x: | 
+	| `$max()` | คืนค่าตัวเลขที่สูงที่สุดจากตัวเลขที่ให้มา | :x: |
+	| `$min()` | คืนค่าตัวเลขที่ต่ำที่สุดจากตัวเลขที่ให้มา | :x: |
 === "Python"
 	| Method | Description |
 	| ------ | ----------- | 
-	| `_evaluateExpression(expression: string, itemIndex?: number)` | Evaluates a string as an expression. If you don't provide `itemIndex`, n8n uses the data from item 0 in the Code node. |
-	| `_ifEmpty(value, defaultValue)` | The `_ifEmpty()` function takes two parameters, tests the first to check if it's empty, then returns either the parameter (if not empty) or the second parameter (if the first is empty). The first parameter is empty if it's:<ul><li>`undefined`</li><li>`null`</li><li>An empty string `''`</li><li>An array where `value.length` returns `false`</li><li>An object where `Object.keys(value).length` returns `false`</li></ul> | :white_check_mark: |
+	| `_evaluateExpression(expression: string, itemIndex?: number)` | ประเมินผล string เป็น expression หากคุณไม่ได้ระบุ `itemIndex` n8n จะใช้ข้อมูลจาก item 0 ใน Code node |
+	| `_ifEmpty(value, defaultValue)` | ฟังก์ชัน `_ifEmpty()` รับสอง parameters ทดสอบ parameter แรกเพื่อตรวจสอบว่าว่างเปล่าหรือไม่ จากนั้นคืนค่า parameter แรก (หากไม่ว่างเปล่า) หรือ parameter ที่สอง (หาก parameter แรกว่างเปล่า) parameter แรกจะถือว่าว่างเปล่าหากเป็น:<ul><li>`undefined`</li><li>`null`</li><li>สตริงว่าง `''`</li><li>Array ที่ `value.length` คืนค่า `false`</li><li>Object ที่ `Object.keys(value).length` คืนค่า `false`</li></ul> | :white_check_mark: |

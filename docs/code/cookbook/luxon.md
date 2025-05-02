@@ -7,90 +7,90 @@ contentType: howto
 
 # Date and time with Luxon
 
-[Luxon](https://github.com/moment/luxon/){:target=_blank .external-link} is a JavaScript library that makes it easier to work with date and time. For full details of how to use Luxon, refer to [Luxon's documentation](https://moment.github.io/luxon/#/?id=luxon){:target=_blank .external-link}. 
+[Luxon](https://github.com/moment/luxon/){:target=_blank .external-link} เป็นไลบรารี JavaScript ที่ช่วยให้ทำงานกับวันที่และเวลาได้ง่ายขึ้น สำหรับรายละเอียดทั้งหมดเกี่ยวกับวิธีใช้ Luxon โปรดดู [เอกสารของ Luxon](https://moment.github.io/luxon/#/?id=luxon){:target=_blank .external-link}
 
-n8n passes dates between nodes as strings, so you need to parse them. Luxon makes this easier.
+n8n ส่งผ่านวันที่ระหว่าง nodes เป็นสตริง (strings) ดังนั้นคุณต้องทำการ parse มัน Luxon ทำให้สิ่งนี้ง่ายขึ้น
 
 /// note | Python support
-Luxon is a JavaScript library. The two convenience [variables](#variables) created by n8n are available when using Python in the Code node, but their functionality is limited:
+Luxon เป็นไลบรารี JavaScript ตัวแปรอำนวยความสะดวกสองตัว ([variables](#variables)) ที่สร้างโดย n8n มีให้ใช้งานเมื่อใช้ Python ใน Code node แต่ฟังก์ชันการทำงานมีจำกัด:
 
-* You can't perform Luxon operations on these variables. For example, there is no Python equivalent for `$today.minus(...)`.
-* The generic Luxon functionality, such as [Convert date string to Luxon](#convert-date-string-to-luxon), isn't available for Python users.
+* คุณไม่สามารถดำเนินการ Luxon กับตัวแปรเหล่านี้ได้ ตัวอย่างเช่น ไม่มี Python ที่เทียบเท่ากับ `$today.minus(...)`
+* ฟังก์ชัน Luxon ทั่วไป เช่น [Convert date string to Luxon](#convert-date-string-to-luxon) ไม่สามารถใช้ได้สำหรับผู้ใช้ Python
 ///	
 
 
 ## Variables
 
-n8n uses Luxon to provide two custom variables:
+n8n ใช้ Luxon เพื่อให้ตัวแปรที่กำหนดเองสองตัว:
 
-- `now`: a Luxon object containing the current timestamp. Equivalent to `DateTime.now()`.
-- `today`: a Luxon object containing the current timestamp, rounded down to the day. Equivalent to `DateTime.now().set({ hour: 0, minute: 0, second: 0, millisecond: 0 })`.
+- `now`: ออบเจกต์ Luxon ที่มี timestamp ปัจจุบัน เทียบเท่ากับ `DateTime.now()`
+- `today`: ออบเจกต์ Luxon ที่มี timestamp ปัจจุบัน ปัดเศษลงเป็นวัน เทียบเท่ากับ `DateTime.now().set({ hour: 0, minute: 0, second: 0, millisecond: 0 })`
 
-Note that these variables can return different time formats when cast as a string. This is the same behavior as Luxon's `DateTime.now()`.
+โปรดทราบว่าตัวแปรเหล่านี้สามารถคืนค่ารูปแบบเวลาที่แตกต่างกันเมื่อแปลงเป็นสตริง นี่เป็นพฤติกรรมเดียวกับ `DateTime.now()` ของ Luxon
 
 === "Expressions (JavaScript)"
 
 	``` js
 	{{$now}}
-	// n8n displays the ISO formatted timestamp
-	// For example 2022-03-09T14:02:37.065+00:00
+	// n8n แสดง timestamp รูปแบบ ISO
+	// ตัวอย่างเช่น 2022-03-09T14:02:37.065+00:00
 	{{"Today's date is " + $now}}
-	// n8n displays "Today's date is <unix timestamp>"
-	// For example "Today's date is 1646834498755"
+	// n8n แสดง "Today's date is <unix timestamp>"
+	// ตัวอย่างเช่น "Today's date is 1646834498755"
 	```
 
 === "Code node (JavaScript)"
 
 	``` js
 	$now
-	// n8n displays <ISO formatted timestamp>
-	// For example 2022-03-09T14:00:25.058+00:00
+	// n8n แสดง <ISO formatted timestamp>
+	// ตัวอย่างเช่น 2022-03-09T14:00:25.058+00:00
 	let rightNow = "Today's date is " + $now
-	// n8n displays "Today's date is <unix timestamp>"
-	// For example "Today's date is 1646834498755"
+	// n8n แสดง "Today's date is <unix timestamp>"
+	// ตัวอย่างเช่น "Today's date is 1646834498755"
 	```
 === "Code node (Python)"
 	``` python
 	_now
-	# n8n displays <ISO formatted timestamp>
-	# For example 2022-03-09T14:00:25.058+00:00
+	# n8n แสดง <ISO formatted timestamp>
+	# ตัวอย่างเช่น 2022-03-09T14:00:25.058+00:00
 	rightNow = "Today's date is " + str(_now)
-	# n8n displays "Today's date is <unix timestamp>"
-	# For example "Today's date is 1646834498755"
+	# n8n แสดง "Today's date is <unix timestamp>"
+	# ตัวอย่างเช่น "Today's date is 1646834498755"
 	```
 
-n8n provides built-in convenience functions to support data transformation in expressions for dates. Refer to [Data transformation functions | Dates](/code/builtin/data-transformation-functions/dates.md) for more information.
+n8n มีฟังก์ชันอำนวยความสะดวกในตัวเพื่อรองรับการแปลงข้อมูลใน expressions สำหรับวันที่ โปรดดู [Data transformation functions | Dates](/code/builtin/data-transformation-functions/dates.md) สำหรับข้อมูลเพิ่มเติม
 
 ## Date and time behavior in n8n
 
-Be aware of the following:
+โปรดระวังสิ่งต่อไปนี้:
 
-* In a workflow, n8n converts dates and times to strings between nodes. Keep this in mind when doing arithmetic on dates and times from other nodes.
-* With vanilla JavaScript, you can convert a string to a date with `new Date('2019-06-23')`. In Luxon, you must use a function explicitly stating the format, such as `DateTime.fromISO('2019-06-23')` or `DateTime.fromFormat("23-06-2019", "dd-MM-yyyy")`.
+* ใน workflow, n8n แปลงวันที่และเวลาเป็นสตริงระหว่าง nodes โปรดจำสิ่งนี้ไว้เมื่อทำการคำนวณทางคณิตศาสตร์กับวันที่และเวลาจาก nodes อื่นๆ
+* ด้วย JavaScript ปกติ คุณสามารถแปลงสตริงเป็นวันที่ด้วย `new Date('2019-06-23')` ใน Luxon คุณต้องใช้ฟังก์ชันที่ระบุรูปแบบอย่างชัดเจน เช่น `DateTime.fromISO('2019-06-23')` หรือ `DateTime.fromFormat("23-06-2019", "dd-MM-yyyy")`
 
 ## Setting the timezone in n8n
 
-Luxon uses the n8n timezone. This value is either:
+Luxon ใช้ timezone ของ n8n ค่านี้คือ:
 
-* Default: `America/New York`
-* A custom timezone for your n8n instance, set using the `GENERIC_TIMEZONE` environment variable.
-* A custom timezone for an individual workflow, configured in workflow settings.
+* ค่าเริ่มต้น: `America/New York`
+* timezone ที่กำหนดเองสำหรับ n8n instance ของคุณ ตั้งค่าโดยใช้ตัวแปรสภาพแวดล้อม `GENERIC_TIMEZONE`
+* timezone ที่กำหนดเองสำหรับ workflow แต่ละรายการ กำหนดค่าในการตั้งค่า workflow
 
 ## Common tasks
 
-This section provides examples for some common operations. More examples, and detailed guidance, are available in [Luxon's own documentation](https://moment.github.io/luxon/#/?id=luxon){:target="_blank" .external-link}.
+ส่วนนี้ให้ตัวอย่างสำหรับการดำเนินการทั่วไปบางอย่าง ตัวอย่างเพิ่มเติมและคำแนะนำโดยละเอียดมีอยู่ใน [เอกสารของ Luxon เอง](https://moment.github.io/luxon/#/?id=luxon){:target="_blank" .external-link}
 
 
 ### Convert date string to Luxon
 
-You can convert date strings and other date formats to a Luxon DateTime object. You can convert from standard formats and from arbitrary strings.
+คุณสามารถแปลงสตริงวันที่และรูปแบบวันที่อื่นๆ เป็นออบเจกต์ Luxon DateTime ได้ คุณสามารถแปลงจากรูปแบบมาตรฐานและจากสตริงตามอำเภอใจ
 
 /// note | A difference between Luxon DateTime and JavaScript Date
-With vanilla JavaScript, you can convert a string to a date with `new Date('2019-06-23')`. In Luxon, you must use a function explicitly stating the format, such as `DateTime.fromISO('2019-06-23')` or `DateTime.fromFormat("23-06-2019", "dd-MM-yyyy")`.
+ด้วย JavaScript ปกติ คุณสามารถแปลงสตริงเป็นวันที่ด้วย `new Date('2019-06-23')` ใน Luxon คุณต้องใช้ฟังก์ชันที่ระบุรูปแบบอย่างชัดเจน เช่น `DateTime.fromISO('2019-06-23')` หรือ `DateTime.fromFormat("23-06-2019", "dd-MM-yyyy")`
 ///
-#### If you have a date in a supported standard technical format: 
+#### If you have a date in a supported standard technical format:
 
-Most dates use `fromISO()`. This creates a Luxon DateTime from an ISO 8601 string. For example:
+วันที่ส่วนใหญ่ใช้ `fromISO()` สิ่งนี้สร้าง Luxon DateTime จากสตริง ISO 8601 ตัวอย่างเช่น:
 
 === "Expressions (JavaScript)"
 
@@ -105,15 +105,15 @@ Most dates use `fromISO()`. This creates a Luxon DateTime from an ISO 8601 strin
 	```
 
 
-Luxon's API documentation has more information on [fromISO](https://moment.github.io/luxon/api-docs/index.html#datetimefromiso){:target="_blank" .external-link}.
+เอกสาร API ของ Luxon มีข้อมูลเพิ่มเติมเกี่ยวกับ [fromISO](https://moment.github.io/luxon/api-docs/index.html#datetimefromiso){:target="_blank" .external-link}
 
-Luxon provides functions to handle conversions for a range of formats. Refer to Luxon's guide to [Parsing technical formats](https://moment.github.io/luxon/#/parsing?id=parsing-technical-formats) for details.
+Luxon มีฟังก์ชันเพื่อจัดการการแปลงสำหรับรูปแบบต่างๆ โปรดดูคู่มือของ Luxon เกี่ยวกับ [Parsing technical formats](https://moment.github.io/luxon/#/parsing?id=parsing-technical-formats) สำหรับรายละเอียด
 
-#### If you have a date as a string that doesn't use a standard format: 
+#### If you have a date as a string that doesn't use a standard format:
 
-Use Luxon's [Ad-hoc parsing](https://moment.github.io/luxon/#/parsing?id=ad-hoc-parsing){:target="_blank" .external-link}. To do this, use the `fromFormat()` function, providing the string and a set of [tokens](https://moment.github.io/luxon/#/parsing?id=table-of-tokens){:target="_blank" .external-link} that describe the format.
+ใช้ [Ad-hoc parsing](https://moment.github.io/luxon/#/parsing?id=ad-hoc-parsing){:target="_blank" .external-link} ของ Luxon ในการทำเช่นนี้ ให้ใช้ฟังก์ชัน `fromFormat()` โดยระบุสตริงและชุดของ [tokens](https://moment.github.io/luxon/#/parsing?id=table-of-tokens){:target="_blank" .external-link} ที่อธิบายรูปแบบ
 
-For example, you have n8n's founding date, 23rd June 2019, formatted as `23-06-2019`. You want to turn this into a Luxon object:
+ตัวอย่างเช่น คุณมีวันก่อตั้ง n8n คือ 23 มิถุนายน 2019 จัดรูปแบบเป็น `23-06-2019` คุณต้องการเปลี่ยนสิ่งนี้เป็นออบเจกต์ Luxon:
 
 === "Expressions (JavaScript)"
 
@@ -127,53 +127,53 @@ For example, you have n8n's founding date, 23rd June 2019, formatted as `23-06-2
 	let newFormat = DateTime.fromFormat("23-06-2019", "dd-MM-yyyy")
 	```
 
-When using ad-hoc parsing, note Luxon's warning about [Limitations](https://moment.github.io/luxon/#/parsing?id=limitations){:target="_blank" .external-link}. If you see unexpected results, try their [Debugging](https://moment.github.io/luxon/#/parsing?id=debugging){:target="_blank" .external-link} guide.
+เมื่อใช้ ad-hoc parsing โปรดทราบคำเตือนของ Luxon เกี่ยวกับ [Limitations](https://moment.github.io/luxon/#/parsing?id=limitations){:target="_blank" .external-link} หากคุณเห็นผลลัพธ์ที่ไม่คาดคิด ลองดูคู่มือ [Debugging](https://moment.github.io/luxon/#/parsing?id=debugging){:target="_blank" .external-link} ของพวกเขา
 
 ### Get n days from today
 
-Get a number of days before or after today. 
+รับจำนวนวันก่อนหรือหลังวันนี้
 
 === "Expressions (JavaScript)"
 
-	For example, you want to set a field to always show the date seven days before the current date.
+	ตัวอย่างเช่น คุณต้องการตั้งค่าฟิลด์ให้แสดงวันที่เจ็ดวันก่อนวันที่ปัจจุบันเสมอ
 
-	In the expressions editor, enter:
+	ใน expression editor ป้อน:
 
 
 	``` js
 	{{$today.minus({days: 7})}}
 	```
 
-	On the 23rd June 2019, this returns `[Object: "2019-06-16T00:00:00.000+00:00"]`.
+	ในวันที่ 23 มิถุนายน 2019 สิ่งนี้จะคืนค่า `[Object: "2019-06-16T00:00:00.000+00:00"]`
 
-	This example uses n8n's custom variable `$today` for convenience. It's the equivalent of `DateTime.now().set({ hour: 0, minute: 0, second: 0, millisecond: 0 }).minus({days: 7})`.
+	ตัวอย่างนี้ใช้ตัวแปร `$today` ที่กำหนดเองของ n8n เพื่อความสะดวก เทียบเท่ากับ `DateTime.now().set({ hour: 0, minute: 0, second: 0, millisecond: 0 }).minus({days: 7})`
 
 === "Code node (JavaScript)"
 
-	For example, you want a variable containing the date seven days before the current date.
+	ตัวอย่างเช่น คุณต้องการตัวแปรที่มีวันที่เจ็ดวันก่อนวันที่ปัจจุบัน
 
-	In the code editor, enter:
+	ใน code editor ป้อน:
 
 	``` js
 	let sevenDaysAgo = $today.minus({days: 7})
 	```
 
-	On the 23rd June 2019, this returns `[Object: "2019-06-16T00:00:00.000+00:00"]`.
+	ในวันที่ 23 มิถุนายน 2019 สิ่งนี้จะคืนค่า `[Object: "2019-06-16T00:00:00.000+00:00"]`
 
-	This example uses n8n's custom variable `$today` for convenience. It's the equivalent of `DateTime.now().set({ hour: 0, minute: 0, second: 0, millisecond: 0 }).minus({days: 7})`.
+	ตัวอย่างนี้ใช้ตัวแปร `$today` ที่กำหนดเองของ n8n เพื่อความสะดวก เทียบเท่ากับ `DateTime.now().set({ hour: 0, minute: 0, second: 0, millisecond: 0 }).minus({days: 7})`
 
-For more detailed information and examples, refer to:
+สำหรับข้อมูลและตัวอย่างโดยละเอียดเพิ่มเติม โปรดดู:
 
-* Luxon's [guide to math](https://moment.github.io/luxon/#/math)
-* Their API documentation on [DateTime plus](https://moment.github.io/luxon/api-docs/index.html#datetimeplus) and [DateTime minus](https://moment.github.io/luxon/api-docs/index.html#datetimeminus)
+* คู่มือของ Luxon เกี่ยวกับ [math](https://moment.github.io/luxon/#/math)
+* เอกสาร API ของพวกเขาเกี่ยวกับ [DateTime plus](https://moment.github.io/luxon/api-docs/index.html#datetimeplus) และ [DateTime minus](https://moment.github.io/luxon/api-docs/index.html#datetimeminus)
 
 ### Create human-readable dates
 
-In [Get n days from today](#get-n-days-from-today), the example gets the date seven days before the current date, and returns it as `[Object: "yyyy-mm-dd-T00:00:00.000+00:00"]` (for expressions) or `yyyy-mm-dd-T00:00:00.000+00:00` (in the Code node). To make this more readable, you can use Luxon's formatting functions.
+ใน [Get n days from today](#get-n-days-from-today) ตัวอย่างจะรับวันที่เจ็ดวันก่อนวันที่ปัจจุบัน และคืนค่าเป็น `[Object: "yyyy-mm-dd-T00:00:00.000+00:00"]` (สำหรับ expressions) หรือ `yyyy-mm-dd-T00:00:00.000+00:00` (ใน Code node) เพื่อทำให้อ่านง่ายขึ้น คุณสามารถใช้ฟังก์ชันการจัดรูปแบบของ Luxon ได้
 
-For example, you want the field containing the date to be formatted as DD/MM/YYYY, so that on the 23rd June 2019, it returns `23/06/2019`.
+ตัวอย่างเช่น คุณต้องการให้ฟิลด์ที่มีวันที่ถูกจัดรูปแบบเป็น DD/MM/YYYY เพื่อที่ในวันที่ 23 มิถุนายน 2019 จะคืนค่า `23/06/2019`
 
-This expression gets the date seven days before today, and converts it to the DD/MM/YYYY format.
+expression นี้จะรับวันที่เจ็ดวันก่อนวันนี้ และแปลงเป็นรูปแบบ DD/MM/YYYY
 
 === "Expressions (JavaScript)"
 
@@ -187,7 +187,7 @@ This expression gets the date seven days before today, and converts it to the DD
 	let readableSevenDaysAgo = $today.minus({days: 7}).toLocaleString()
 	```
 
-You can alter the format. For example:
+คุณสามารถเปลี่ยนรูปแบบได้ ตัวอย่างเช่น:
 
 === "Expressions (JavaScript)"
 
@@ -195,7 +195,7 @@ You can alter the format. For example:
 	{{$today.minus({days: 7}).toLocaleString({month: 'long', day: 'numeric', year: 'numeric'})}}
 	```
 
-	On 23rd June 2019, this returns "16 June 2019".
+	ในวันที่ 23 มิถุนายน 2019 สิ่งนี้จะคืนค่า "16 June 2019"
 
 === "Code node (JavaScript)"
 
@@ -203,16 +203,16 @@ You can alter the format. For example:
 	let readableSevenDaysAgo = $today.minus({days: 7}).toLocaleString({month: 'long', day: 'numeric', year: 'numeric'})
 	```
 
-	On 23rd June 2019, this returns "16 June 2019".
+	ในวันที่ 23 มิถุนายน 2019 สิ่งนี้จะคืนค่า "16 June 2019"
 
-Refer to Luxon's guide on [toLocaleString (strings for humans)](https://moment.github.io/luxon/#/formatting?id=tolocalestring-strings-for-humans){:target="_blank" .external-link} for more information.
+โปรดดูคู่มือของ Luxon เกี่ยวกับ [toLocaleString (strings for humans)](https://moment.github.io/luxon/#/formatting?id=tolocalestring-strings-for-humans){:target="_blank" .external-link} สำหรับข้อมูลเพิ่มเติม
 
 
 ### Get the time between two dates
 
-To get the time between two dates, use Luxon's diffs feature. This subtracts one date from another and returns a duration.
+หากต้องการรับเวลาระหว่างวันที่สองวัน ให้ใช้ฟีเจอร์ diffs ของ Luxon สิ่งนี้จะลบวันที่หนึ่งออกจากอีกวันหนึ่งและคืนค่า duration
 
-For example, get the number of months between two dates:
+ตัวอย่างเช่น รับจำนวนเดือนระหว่างวันที่สองวัน:
 
 === "Expressions (JavaScript)"
 
@@ -220,7 +220,7 @@ For example, get the number of months between two dates:
 	{{DateTime.fromISO('2019-06-23').diff(DateTime.fromISO('2019-05-23'), 'months').toObject()}}
 	```
 
-	This returns `[Object: {"months":1}]`.
+	สิ่งนี้จะคืนค่า `[Object: {"months":1}]`
 
 === "Code node (JavaScript)"
 
@@ -228,15 +228,15 @@ For example, get the number of months between two dates:
 	let monthsBetweenDates = DateTime.fromISO('2019-06-23').diff(DateTime.fromISO('2019-05-23'), 'months').toObject()
 	```
 
-	This returns `{"months":1}`.
+	สิ่งนี้จะคืนค่า `{"months":1}`
 
-Refer to Luxon's [Diffs](https://moment.github.io/luxon/#/math?id=diffs){:target=_blank .external-link} for more information.
+โปรดดู [Diffs](https://moment.github.io/luxon/#/math?id=diffs){:target=_blank .external-link} ของ Luxon สำหรับข้อมูลเพิ่มเติม
 
 ### A longer example: How many days to Christmas?
 
-This example brings together several Luxon features, uses JMESPath, and does some basic string manipulation. 
+ตัวอย่างนี้นำฟีเจอร์ Luxon หลายอย่างมารวมกัน ใช้ JMESPath และทำการจัดการสตริงพื้นฐานบางอย่าง
 
-The scenario: you want a countdown to 25th December. Every day, it should tell you the number of days remaining to Christmas. You don't want to update it for next year - it needs to seamlessly work for every year.
+สถานการณ์: คุณต้องการนับถอยหลังสู่วันที่ 25 ธันวาคม ทุกวัน มันควรจะบอกคุณถึงจำนวนวันที่เหลือถึงวันคริสต์มาส คุณไม่ต้องการอัปเดตสำหรับปีหน้า - มันต้องทำงานได้อย่างราบรื่นสำหรับทุกปี
 
 === "Expressions (JavaScript)"
 
@@ -244,20 +244,20 @@ The scenario: you want a countdown to 25th December. Every day, it should tell y
 	{{"There are " + $today.diff(DateTime.fromISO($today.year + '-12-25'), 'days').toObject().days.toString().substring(1) + " days to Christmas!"}}
 	```
 
-	This outputs `"There are <number of days> days to Christmas!"`. For example, on 9th March, it outputs "There are 291 days to Christmas!".
+	สิ่งนี้จะแสดงผล `"There are <number of days> days to Christmas!"` ตัวอย่างเช่น ในวันที่ 9 มีนาคม จะแสดงผล "There are 291 days to Christmas!"
 
-	A detailed explanation of what the expression does:
+	คำอธิบายโดยละเอียดว่า expression ทำอะไร:
 
-	* `{{`: indicates the start of the expression.
-	* `"There are "`: a string. 
-	* `+`: used to join two strings.
-	* `$today.diff()`: This is similar to the example in [Get the time between two dates](#get-the-time-between-two-dates), but it uses n8n's custom `$today` variable.
-	* `DateTime.fromISO($today.year + '-12-25'), 'days'`: this part gets the current year using `$today.year`, turns it into an ISO string along with the month and date, and then takes the whole ISO string and converts it to a Luxon DateTime data structure. It also tells Luxon that you want the duration in days.
-	* `toObject()` turns the result of diff() into a more usable object. At this point, the expression returns `[Object: {"days":-<number-of-days>}]`. For example, on 9th March, `[Object: {"days":-291}]`.
-	* `.days` uses JMESPath syntax to retrieve just the number of days from the object. For more information on using JMESPath with n8n, refer to our [JMESpath](/code/cookbook/jmespath.md) documentation. This gives you the number of days to Christmas, as a negative number.
-	* `.toString().substring(1)` turns the number into a string and removes the `-`.
-	* `+ " days to Christmas!"`: another string, with a `+` to join it to the previous string.
-	* `}}`: indicates the end of the expression.
+	* `{{`: บ่งชี้จุดเริ่มต้นของ expression
+	* `"There are "`: สตริง
+	* `+`: ใช้เพื่อเชื่อมสองสตริง
+	* `$today.diff()`: คล้ายกับตัวอย่างใน [Get the time between two dates](#get-the-time-between-two-dates) แต่ใช้ตัวแปร `$today` ที่กำหนดเองของ n8n
+	* `DateTime.fromISO($today.year + '-12-25'), 'days'`: ส่วนนี้รับปีปัจจุบันโดยใช้ `$today.year` เปลี่ยนเป็นสตริง ISO พร้อมกับเดือนและวันที่ จากนั้นนำสตริง ISO ทั้งหมดมาแปลงเป็นโครงสร้างข้อมูล Luxon DateTime นอกจากนี้ยังบอก Luxon ว่าคุณต้องการ duration เป็นวัน
+	* `toObject()` เปลี่ยนผลลัพธ์ของ diff() เป็นออบเจกต์ที่ใช้งานได้ง่ายขึ้น ณ จุดนี้ expression จะคืนค่า `[Object: {"days":-<number-of-days>}]` ตัวอย่างเช่น ในวันที่ 9 มีนาคม `[Object: {"days":-291}]`
+	* `.days` ใช้ синтаксис JMESPath เพื่อดึงเฉพาะจำนวนวันจากออบเจกต์ สำหรับข้อมูลเพิ่มเติมเกี่ยวกับการใช้ JMESPath กับ n8n โปรดดูเอกสาร [JMESpath](/code/cookbook/jmespath.md) ของเรา สิ่งนี้ให้จำนวนวันถึงคริสต์มาส เป็นจำนวนลบ
+	* `.toString().substring(1)` เปลี่ยนตัวเลขเป็นสตริงและลบเครื่องหมาย `-` ออก
+	* `+ " days to Christmas!"`: สตริงอีกอัน พร้อมเครื่องหมาย `+` เพื่อเชื่อมกับสตริงก่อนหน้า
+	* `}}`: บ่งชี้จุดสิ้นสุดของ expression
 
 === "Code node (JavaScript)"
 
@@ -265,15 +265,15 @@ The scenario: you want a countdown to 25th December. Every day, it should tell y
 	let daysToChristmas = "There are " + $today.diff(DateTime.fromISO($today.year + '-12-25'), 'days').toObject().days.toString().substring(1) + " days to Christmas!";
 	```
 
-	This outputs `"There are <number of days> days to Christmas!"`. For example, on 9th March, it outputs "There are 291 days to Christmas!".
+	สิ่งนี้จะแสดงผล `"There are <number of days> days to Christmas!"` ตัวอย่างเช่น ในวันที่ 9 มีนาคม จะแสดงผล "There are 291 days to Christmas!"
 
-	A detailed explanation of what the code does:
+	คำอธิบายโดยละเอียดว่าโค้ดทำอะไร:
 
-	* `"There are "`: a string. 
-	* `+`: used to join two strings.
-	* `$today.diff()`: This is similar to the example in [Get the time between two dates](#get-the-time-between-two-dates), but it uses n8n's custom `$today` variable.
-	* `DateTime.fromISO($today.year + '-12-25'), 'days'`: this part gets the current year using `$today.year`, turns it into an ISO string along with the month and date, and then takes the whole ISO string and converts it to a Luxon DateTime data structure. It also tells Luxon that you want the duration in days.
-	* `toObject()` turns the result of diff() into a more usable object. At this point, the expression returns `[Object: {"days":-<number-of-days>}]`. For example, on 9th March, `[Object: {"days":-291}]`.
-	* `.days` uses JMESPath syntax to retrieve just the number of days from the object. For more information on using JMESPath with n8n, refer to our [JMESpath](/code/cookbook/jmespath.md) documentation. This gives you the number of days to Christmas, as a negative number.
-	* `.toString().substring(1)` turns the number into a string and removes the `-`.
-	* `+ " days to Christmas!"`: another string, with a `+` to join it to the previous string.
+	* `"There are "`: สตริง
+	* `+`: ใช้เพื่อเชื่อมสองสตริง
+	* `$today.diff()`: คล้ายกับตัวอย่างใน [Get the time between two dates](#get-the-time-between-two-dates) แต่ใช้ตัวแปร `$today` ที่กำหนดเองของ n8n
+	* `DateTime.fromISO($today.year + '-12-25'), 'days'`: ส่วนนี้รับปีปัจจุบันโดยใช้ `$today.year` เปลี่ยนเป็นสตริง ISO พร้อมกับเดือนและวันที่ จากนั้นนำสตริง ISO ทั้งหมดมาแปลงเป็นโครงสร้างข้อมูล Luxon DateTime นอกจากนี้ยังบอก Luxon ว่าคุณต้องการ duration เป็นวัน
+	* `toObject()` เปลี่ยนผลลัพธ์ของ diff() เป็นออบเจกต์ที่ใช้งานได้ง่ายขึ้น ณ จุดนี้ expression จะคืนค่า `[Object: {"days":-<number-of-days>}]` ตัวอย่างเช่น ในวันที่ 9 มีนาคม `[Object: {"days":-291}]`
+	* `.days` ใช้ синтаксис JMESPath เพื่อดึงเฉพาะจำนวนวันจากออบเจกต์ สำหรับข้อมูลเพิ่มเติมเกี่ยวกับการใช้ JMESPath กับ n8n โปรดดูเอกสาร [JMESpath](/code/cookbook/jmespath.md) ของเรา สิ่งนี้ให้จำนวนวันถึงคริสต์มาส เป็นจำนวนลบ
+	* `.toString().substring(1)` เปลี่ยนตัวเลขเป็นสตริงและลบเครื่องหมาย `-` ออก
+	* `+ " days to Christmas!"`: สตริงอีกอัน พร้อมเครื่องหมาย `+` เพื่อเชื่อมกับสตริงก่อนหน้า

@@ -5,7 +5,7 @@ contentType: howto
 
 # Get number of items returned by the previous node
 
-To get the number of items returned by the previous node:
+ในการรับจำนวน item ที่ส่งคืนโดย node ก่อนหน้า:
 
 === "JavaScript"
 
@@ -28,7 +28,7 @@ To get the number of items returned by the previous node:
 	];
 	```
 
-	The output will be similar to the following.
+	ผลลัพธ์จะคล้ายกับตัวอย่างต่อไปนี้
 
 	```json
 	[
@@ -56,7 +56,7 @@ To get the number of items returned by the previous node:
 			}
 		]
 	```
-	The output will be similar to the following.
+	ผลลัพธ์จะคล้ายกับตัวอย่างต่อไปนี้
 
 	```json
 	[

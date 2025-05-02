@@ -10,27 +10,27 @@ search:
 # n8n public REST API
 
 /// info | Feature availability
-The n8n API isn't available during the free trial. Please upgrade to access this feature.  
+n8n API ไม่มีให้บริการในช่วงทดลองใช้ฟรี โปรด upgrade เพื่อเข้าถึงฟีเจอร์นี้
 ///
 
-Using n8n's public [API](/glossary.md#api), you can programmatically perform many of the same tasks as you can in the GUI. This section introduces n8n's REST API, including:
+การใช้ [API](/glossary.md#api) สาธารณะของ n8n คุณสามารถทำงานต่างๆ ได้เหมือนใน GUI แต่ใช้โปรแกรมแทน ส่วนนี้จะอธิบาย REST API ของ n8n รวมถึง:
 
-* How to [authenticate](/api/authentication.md)
-* [Paginating](/api/pagination.md) results
-* Using the [built-in API playground](/api/using-api-playground.md) (self-hosted n8n only)
+* วิธี [authenticate](/api/authentication.md)
+* [Paginating](/api/pagination.md) ผลลัพธ์
+* การใช้ [built-in API playground](/api/using-api-playground.md) (เฉพาะ n8n แบบ self-hosted)
 * [Endpoint reference](/api/api-reference.md)
 
-n8n provides an [n8n API node](/integrations/builtin/core-nodes/n8n-nodes-base.n8n.md) to access the API in your workflows.
+n8n มี [n8n API node](/integrations/builtin/core-nodes/n8n-nodes-base.n8n.md) สำหรับเข้าถึง API ใน workflows ของคุณ
 
 ## Learn about REST APIs
 
-The API documentation assumes you are familiar with REST APIs. If you're not, these resources may be helpful:
+เอกสาร API นี้สมมติว่าคุณคุ้นเคยกับ REST APIs ถ้ายังไม่คุ้นเคย ลองดูแหล่งข้อมูลเหล่านี้:
 
-* [KnowledgeOwl's guide to working with APIs](https://support.knowledgeowl.com/help/working-with-apis){:target=_blank .external-link}: a basic introduction, including examples of how to call REST APIs.
-* [IBM Cloud Learn Hub - What is an Application Programming Interface (API)](https://www.ibm.com/cloud/learn/api){:target=_blank .external-link}: this gives a general, but technical, introduction to APIs.
-* [IBM Cloud Learn Hub - What is a REST API?](https://www.ibm.com/cloud/learn/rest-apis){:target=_blank .external-link}: more detailed information about REST APIs.
-* [MDN web docs - An overview of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview){:target=_blank .external-link}: REST APIs work over HTTP and use HTTP verbs, or methods, to specify the action to perform.
+* [KnowledgeOwl's guide to working with APIs](https://support.knowledgeowl.com/help/working-with-apis){:target=_blank .external-link}: แนะนำเบื้องต้น พร้อมตัวอย่างการเรียก REST APIs
+* [IBM Cloud Learn Hub - What is an Application Programming Interface (API)](https://www.ibm.com/cloud/learn/api){:target=_blank .external-link}: ข้อมูลเบื้องต้นเชิงเทคนิคเกี่ยวกับ APIs
+* [IBM Cloud Learn Hub - What is a REST API?](https://www.ibm.com/cloud/learn/rest-apis){:target=_blank .external-link}: ข้อมูลเชิงลึกเกี่ยวกับ REST APIs
+* [MDN web docs - An overview of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview){:target=_blank .external-link}: REST APIs ทำงานผ่าน HTTP และใช้ HTTP verbs หรือ methods เพื่อระบุการกระทำ
 
 /// tip | Use the API playground (self-hosted n8n only)
-Trying out the API in the [playground](/api/using-api-playground.md) can help you understand how APIs work. If you're worried about changing live data, consider setting up a test workflow, or test n8n instance, to explore safely.
+การลองใช้ API ใน [playground](/api/using-api-playground.md) จะช่วยให้เข้าใจการทำงานของ APIs ได้ดีขึ้น ถ้ากังวลเรื่องข้อมูลจริง ลองตั้งค่า workflow หรือ n8n instance สำหรับทดสอบก่อน
 ///

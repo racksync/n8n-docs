@@ -7,12 +7,12 @@ contentType: overview
 
 # Data transformation functions
 
-Data transformation functions are helper functions to make data transformation easier in [expressions](/glossary.md#expression-n8n).
+Data transformation functions คือ helper functions ที่ช่วยให้การแปลงข้อมูลง่ายขึ้นใน [expressions](/glossary.md#expression-n8n)
 
 /// note | JavaScript in expressions
-You can use any JavaScript in expressions. Refer to [Expressions](/code/expressions.md) for more information.
+คุณสามารถใช้ JavaScript ใดๆ ใน expressions ได้ โปรดดู [Expressions](/code/expressions.md) สำหรับข้อมูลเพิ่มเติม
 ///
-For a list of available functions, refer to the page for your data type:
+สำหรับรายการฟังก์ชันที่มีอยู่ โปรดดูหน้าสำหรับประเภทข้อมูลของคุณ:
 
 * [Arrays](/code/builtin/data-transformation-functions/arrays.md)
 * [Dates](/code/builtin/data-transformation-functions/dates.md)
@@ -22,18 +22,18 @@ For a list of available functions, refer to the page for your data type:
 
 ## Usage
 
-Data transformation functions are available in the expressions editor.
+Data transformation functions มีให้ใช้งานใน expressions editor
 
-The syntax is:
+Syntax คือ:
 
 ```js
 {{ dataItem.function() }}
 ```
 
-For example, to check if a string is an email:
+ตัวอย่างเช่น เพื่อตรวจสอบว่า string เป็น email หรือไม่:
 
 ```js
 {{ "example@example.com".isEmail() }}
 
-// Returns true
+// คืนค่า true
 ```

@@ -8,13 +8,13 @@ hide:
 
 # HTTP node variables
 
-Variables for working with HTTP node requests and responses when using pagination.
+Variables สำหรับการทำงานกับ requests และ responses ของ HTTP node เมื่อใช้ pagination
 
-Refer to [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) for guidance on using the HTTP node, including configuring pagination.
+โปรดดู [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) สำหรับคำแนะนำในการใช้ HTTP node รวมถึงการกำหนดค่า pagination
 
-Refer to [HTTP Request node cookbook | Pagination](/code/cookbook/http-node/pagination.md) for example pagination configurations.
+โปรดดู [HTTP Request node cookbook | Pagination](/code/cookbook/http-node/pagination.md) สำหรับตัวอย่างการกำหนดค่า pagination
 
 /// note | HTTP node only
-These variables are for use in expressions in the HTTP node. You can't use them in other nodes.
+Variables เหล่านี้ใช้สำหรับ expressions ใน HTTP node เท่านั้น คุณไม่สามารถใช้ใน node อื่นๆ ได้
 ///
 --8<-- "_snippets/integrations/builtin/core-nodes/http/pagination-variables.md"

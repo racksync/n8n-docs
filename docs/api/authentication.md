@@ -6,35 +6,35 @@ contentType: howto
 
 # API authentication
 
-n8n uses API keys to authenticate API calls.
+n8n ใช้ API keys เพื่อ authenticate การเรียก API
 
-/// info | Feature availability 
-The n8n API isn't available during the free trial. Please upgrade to access this feature.
+/// info | Feature availability
+n8n API ไม่มีให้บริการในช่วงทดลองใช้ฟรี โปรด upgrade เพื่อเข้าถึงฟีเจอร์นี้
 ///
 
 
 ## Create an API key
 
-1. Log in to n8n.
-2. Go to **Settings** > **n8n API**.
-3. Select **Create an API key**.
-4. Copy **My API Key** and use this key to authenticate your calls.
+1.  Log in เข้าสู่ n8n
+2.  ไปที่ **Settings** > **n8n API**
+3.  เลือก **Create an API key**
+4.  คัดลอก **My API Key** และใช้ key นี้เพื่อ authenticate การเรียกของคุณ
 
 
 ## Call the API using your key
 
-Send the API key in your API call as a header named `X-N8N-API-KEY`. 
+ส่ง API key ในการเรียก API ของคุณเป็น header ชื่อ `X-N8N-API-KEY`
 
-For example, say you want to get all active workflows. Your curl request will look like this:
+ตัวอย่างเช่น สมมติว่าคุณต้องการดึงข้อมูล workflows ที่ active ทั้งหมด request curl ของคุณจะมีลักษณะดังนี้:
 
 ```shell
-# For a self-hosted n8n instance
+# สำหรับ n8n instance แบบ self-hosted
 curl -X 'GET' \
   '<N8N_HOST>:<N8N_PORT>/<N8N_PATH>/api/v<version-number>/workflows?active=true' \
   -H 'accept: application/json' \
   -H 'X-N8N-API-KEY: <your-api-key>'
 
-# For n8n Cloud
+# สำหรับ n8n Cloud
 curl -X 'GET' \
   '<your-cloud-instance>/api/v<version-number>/workflows?active=true' \
   -H 'accept: application/json' \
@@ -43,7 +43,7 @@ curl -X 'GET' \
 
 ## Delete an API key
 
-1. Log in to n8n.
-2. Go to **Settings** > **n8n API**.
-3. Select **Delete** next to the key you want to delete.
-4. Confirm the delete by selecting **Delete Forever**.
+1.  Log in เข้าสู่ n8n
+2.  ไปที่ **Settings** > **n8n API**
+3.  เลือก **Delete** ถัดจาก key ที่คุณต้องการลบ
+4.  ยืนยันการลบโดยเลือก **Delete Forever**

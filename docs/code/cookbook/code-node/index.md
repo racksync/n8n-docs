@@ -6,7 +6,7 @@ contentType: overview
 
 # Code node cookbook
 
-This section contains examples and recipes for tasks you can do with the Code node.
+ส่วนนี้ประกอบด้วยตัวอย่างและสูตรสำเร็จสำหรับงานที่คุณสามารถทำได้ด้วย Code node
 
 [[% import "_macros/section-toc.html" as sectionToc %]]
 

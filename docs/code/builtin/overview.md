@@ -6,16 +6,16 @@ contentType: overview
 
 # Built-in methods and variables
 
-n8n provides built-in methods and variables for working with data and accessing n8n data. This section provides a reference of available methods and variables for use in [expressions](/glossary.md#expression-n8n), with a short description. 
+n8n มี methods และ variables ที่สร้างไว้ให้พร้อมใช้งานสำหรับการทำงานกับข้อมูลและการเข้าถึงข้อมูลของ n8n ส่วนนี้จะให้ข้อมูลอ้างอิงเกี่ยวกับ methods และ variables ที่มีให้ใช้งานใน [expressions](/glossary.md#expression-n8n) พร้อมคำอธิบายสั้นๆ
 
 /// note | Availability in the expressions editor and the Code node
-Some methods and variables aren't available in the Code node. These aren't in the documentation.
+Methods และ variables บางตัวไม่สามารถใช้งานได้ใน Code node ซึ่งจะไม่มีอยู่ในเอกสารนี้
 
-All data transformation functions are only available in the expressions editor.
+ฟังก์ชันการแปลงข้อมูลทั้งหมดมีให้ใช้งานเฉพาะใน expressions editor เท่านั้น
 ///		
 
 
-The [Cookbook](/code/index.md) contains examples for some common tasks, including some [Code node only](/code/cookbook/code-node/index.md) functions.
+[Cookbook](/code/index.md) มีตัวอย่างสำหรับงานทั่วไปบางอย่าง รวมถึงฟังก์ชันบางอย่างที่ [ใช้ได้เฉพาะใน Code node](/code/cookbook/code-node/index.md)
 
 [[% import "_macros/section-toc.html" as sectionToc %]]
 

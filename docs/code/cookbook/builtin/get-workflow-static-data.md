@@ -10,23 +10,22 @@ contentType: reference
 
 # `getWorkflowStaticData(type)`
 
-This gives access to the static workflow data.
+ฟังก์ชันนี้ให้สิทธิ์เข้าถึงข้อมูล static ของ workflow
 
 /// note | Experimental feature
-- Static data isn't available when testing workflows. The workflow must be active and called by a [trigger](/glossary.md#trigger-node-n8n) or webhook to save static data.
-- This feature may behave unreliably under high-frequency workflow executions.
+- ข้อมูล Static จะไม่สามารถใช้งานได้เมื่อทดสอบ workflows ต้องให้ workflow ทำงาน (active) และถูกเรียกโดย [trigger](/glossary.md#trigger-node-n8n) หรือ webhook เพื่อบันทึกข้อมูล static
+- คุณสมบัตินี้อาจทำงานไม่น่าเชื่อถือภายใต้การ execute workflow ที่มีความถี่สูง
 ///
-You can save data directly in the workflow. This data should be small.
+คุณสามารถบันทึกข้อมูลได้โดยตรงใน workflow ข้อมูลนี้ควรมีขนาดเล็ก
 
-As an example: you can save a timestamp of the last item processed from
-an RSS feed or database. It will always return an object. Properties can then read, delete or
-set on that object. When the workflow execution succeeds, n8n checks automatically if the data
-has changed and saves it, if necessary.
+ตัวอย่างเช่น: คุณสามารถบันทึก timestamp ของ item ล่าสุดที่ประมวลผลจาก
+RSS feed หรือ database ฟังก์ชันนี้จะคืนค่าเป็น object เสมอ จากนั้นสามารถอ่าน, ลบ หรือ
+ตั้งค่า properties บน object นั้นได้ เมื่อการ execute workflow สำเร็จ n8n จะตรวจสอบโดยอัตโนมัติว่าข้อมูลมีการเปลี่ยนแปลงหรือไม่ และบันทึกข้อมูลหากจำเป็น
 
-There are two types of static data, global and node. Global static data is the
-same in the whole workflow. Every node in the workflow can access it. The node static data is unique to the node. Only the node that set it can retrieve it again.
+ข้อมูล static มีสองประเภทคือ global และ node ข้อมูล static แบบ Global จะเหมือนกัน
+ทั้ง workflow ทุก node ใน workflow สามารถเข้าถึงได้ ส่วนข้อมูล static แบบ Node จะเป็นเอกลักษณ์เฉพาะของ node นั้นๆ เฉพาะ node ที่ตั้งค่าเท่านั้นที่จะสามารถดึงข้อมูลกลับมาได้อีกครั้ง
 
-Example with global data:
+ตัวอย่างกับข้อมูล global:
 
 === "JavaScript"
 	```javascript
@@ -57,7 +56,7 @@ Example with global data:
 	delete workflowStaticData.lastExecution
 	```
 
-Example with node data:
+ตัวอย่างกับข้อมูล node:
 
 === "JavaScript"
 	```js

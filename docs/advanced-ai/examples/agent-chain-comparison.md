@@ -7,19 +7,18 @@ description: A workflow example that demonstrates key differences between agents
 
 # Demonstration of key differences between agents and chains
 
-In this workflow you can choose whether your chat query goes to an [agent](/glossary.md#ai-agent) or [chain](/glossary.md#ai-chain). It shows some of the ways that agents are more powerful than chains.
+workflow ตัวอย่างนี้ให้คุณเลือกได้ว่าจะส่งคำถามไปที่ [agent](/glossary.md#ai-agent) หรือ [chain](/glossary.md#ai-chain) เพื่อโชว์ความแตกต่างที่สำคัญระหว่าง agent กับ chain
 
 [[ workflowDemo("file:///advanced-ai/examples/agents_vs_chains.json") ]]
 
 ## Key features
 
-This workflow uses:
+workflow นี้ใช้:
 
-* [Chat Trigger](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/index.md): start your workflow and respond to user chat interactions. The node provides a customizable chat interface.
-* [Switch node](/integrations/builtin/core-nodes/n8n-nodes-base.switch.md): directs your query to either the agent or chain, depending on which you specify in your query. If you say "agent" it sends it to the agent. If you say "chain" it sends it to the chain.
-* [Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md): the Agent node interacts with other components of the workflow and makes decisions about what [tools](/glossary.md#ai-tool) to use.
-* [Basic LLM Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainllm.md): the Basic LLM Chain node supports chatting with a connected LLM, but doesn't support [memory](/glossary.md#ai-memory) or tools.
-
+* [Chat Trigger](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/index.md): เริ่ม workflow และตอบโต้กับผู้ใช้ผ่าน chat interface ที่ปรับแต่งได้
+* [Switch node](/integrations/builtin/core-nodes/n8n-nodes-base.switch.md): ส่งคำถามไปที่ agent หรือ chain ตามที่ผู้ใช้ระบุในข้อความ ถ้าพิมพ์ว่า "agent" จะส่งไป agent ถ้าพิมพ์ว่า "chain" จะส่งไป chain
+* [Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md): node นี้จะโต้ตอบกับ component อื่นใน workflow และตัดสินใจเลือก [tools](/glossary.md#ai-tool) ที่จะใช้
+* [Basic LLM Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainllm.md): node นี้ใช้คุยกับ LLM โดยตรง แต่ไม่รองรับ [memory](/glossary.md#ai-memory) หรือ tools
 
 ## Using the example
 

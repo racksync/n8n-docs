@@ -9,43 +9,43 @@ contentType: howto
 
 /// info | Feature availability
 * Available on Self-hosted Enterprise and Pro Cloud plans.
-* You need access to the n8n instance owner account to create and edit variables. All users can use existing variables.
+* คุณต้องมีสิทธิ์เข้าถึงบัญชี owner ของ n8n instance เพื่อสร้างและแก้ไข variables ผู้ใช้ทุกคนสามารถใช้ variables ที่มีอยู่ได้
 
 Available in version 0.225.0 and above.
 ///	
 
-Custom variables are read-only variables that you can use to store and reuse values in n8n workflows. 
+Custom variables เป็นตัวแปรแบบอ่านอย่างเดียว (read-only) ที่คุณสามารถใช้เพื่อจัดเก็บและนำค่ากลับมาใช้ซ้ำใน n8n workflows
 
 /// warning | Variables are shared
-When you create a variable, it's available to everyone on your n8n instance.
+เมื่อคุณสร้าง variable มันจะพร้อมใช้งานสำหรับทุกคนใน n8n instance ของคุณ
 ///
 
 ## Create variables
 
-To create a new variable:
+วิธีสร้าง variable ใหม่:
 
-1. On the **Variables** page, select **Add Variable**.
-2. Enter a **Key** and **Value**. The maximum key length is 50 characters, and the maximum value length is 220 characters. n8n limits the characters you can use in the key and value to lowercase and uppercase letters, numbers, and underscores (`A-Z`, `a-z`, `0-9`, `_`).
-3. Select **Save**. The variable is now available for use in all workflows in the n8n instance.
+1.  ในหน้า **Variables** เลือก **Add Variable**
+2.  ป้อน **Key** และ **Value** ความยาวสูงสุดของ key คือ 50 ตัวอักษร และความยาวสูงสุดของ value คือ 220 ตัวอักษร n8n จำกัดตัวอักษรที่คุณสามารถใช้ใน key และ value ให้เป็นตัวอักษรภาษาอังกฤษพิมพ์เล็กและพิมพ์ใหญ่, ตัวเลข, และเครื่องหมายขีดล่าง (`A-Z`, `a-z`, `0-9`, `_`)
+3.  เลือก **Save** ตอนนี้ variable พร้อมใช้งานใน workflows ทั้งหมดใน n8n instance แล้ว
 
 ## Edit and delete variables
 
-To edit or delete a variable:
+วิธีแก้ไขหรือลบ variable:
 
-1. On the **Variables** page, hover over the variable you want to change.
-2. Select **Edit** or **Delete**.
+1.  ในหน้า **Variables** เลื่อนเมาส์ไปเหนือ variable ที่คุณต้องการเปลี่ยนแปลง
+2.  เลือก **Edit** หรือ **Delete**
 
 ## Use variables in workflows
 
-You can access variables in the Code node and in [expressions](/glossary.md#expression-n8n):
+คุณสามารถเข้าถึง variables ใน Code node และใน [expressions](/glossary.md#expression-n8n):
 
 ```javascript
 // Access a variable
 $vars.<variable-name>
 ```
 
-All variables are strings.
+Variables ทั้งหมดเป็นสตริง (strings)
 
-During workflow execution, n8n replaces the variables with the variable value. If the variable has no value, n8n treats its value as `undefined`. Workflows don't automatically fail in this case.
+ระหว่างการทำงานของ workflow, n8n จะแทนที่ variables ด้วยค่าของ variable นั้น หาก variable ไม่มีค่า n8n จะถือว่าค่าของมันเป็น `undefined` Workflows จะไม่ล้มเหลวโดยอัตโนมัติในกรณีนี้
 
-Variables are read-only. You must use the UI to change the values. If you need to set and access custom data within your workflow, use [Workflow static data](/code/cookbook/builtin/get-workflow-static-data.md).
+Variables เป็นแบบอ่านอย่างเดียว (read-only) คุณต้องใช้ UI เพื่อเปลี่ยนค่า หากคุณต้องการตั้งค่าและเข้าถึงข้อมูลที่กำหนดเองภายใน workflow ของคุณ ให้ใช้ [Workflow static data](/code/cookbook/builtin/get-workflow-static-data.md)

@@ -5,7 +5,7 @@ contentType: reference
 
 # `("<node-name>").all(branchIndex?: number, runIndex?: number)`
 
-This gives access to all the items of the current or parent nodes. If you don't supply any parameters, it returns all the items of the current node.
+ฟังก์ชันนี้ให้สิทธิ์เข้าถึง item ทั้งหมดของ node ปัจจุบันหรือ node แม่ หากคุณไม่ระบุพารามิเตอร์ใดๆ มันจะคืนค่า item ทั้งหมดของ node ปัจจุบัน
 
 ## Getting items
 
@@ -40,7 +40,7 @@ This gives access to all the items of the current or parent nodes. If you don't 
 
 ## Accessing item data
 
-Get all items output by a previous node, and log out the data they contain:
+รับ item ทั้งหมดที่ส่งออกจาก node ก่อนหน้า และ log ข้อมูลที่อยู่ในนั้นออกมา:
 
 === "JavaScript"
 	```typescript

@@ -8,16 +8,16 @@ hide:
 
 # JMESPath method
 
-This is an n8n-provided method for working with the [JMESPath](/code/cookbook/jmespath.md) library.
+นี่คือ method ที่ n8n เตรียมไว้ให้สำหรับการทำงานกับ library [JMESPath](/code/cookbook/jmespath.md)
 
 /// note | Python support
-You can use Python in the Code node. It isn't available in expressions.
+คุณสามารถใช้ Python ใน Code node ได้ แต่ไม่สามารถใช้ใน expressions ได้
 ///
 === "JavaScript"
 	| Method | Description | Available in Code node? |
 	| ------ | ----------- | :-------------------------: |
-	| `$jmespath()` | Perform a search on a JSON object using JMESPath. | :white_check_mark: |
+	| `$jmespath()` | ทำการค้นหาบน JSON object โดยใช้ JMESPath | :white_check_mark: |
 === "Python"
 	| Method | Description | 
 	| ------ | ----------- | 
-	| `_jmespath()` | Perform a search on a JSON object using JMESPath. | 
+	| `_jmespath()` | ทำการค้นหาบน JSON object โดยใช้ JMESPath |

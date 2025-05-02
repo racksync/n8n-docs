@@ -7,9 +7,9 @@ contentType: explanation
 
 # AI coding with GPT
 
-Not available on self-hosted.  
+ไม่มีให้บริการบน self-hosted
 
-Python isn't supported.
+ไม่รองรับ Python
 ///
 
 ## Use AI in the Code node
@@ -18,52 +18,52 @@ Python isn't supported.
 
 ## Usage limits
 
-During the trial phase there are no usage limits. If n8n makes the feature permanent, there may be usage limits as part of your pricing tier.
+ในช่วงทดลองใช้งาน ไม่มีข้อจำกัดในการใช้งาน หาก n8n ทำให้ฟีเจอร์นี้เป็นแบบถาวร อาจมีข้อจำกัดการใช้งานเป็นส่วนหนึ่งของระดับราคาของคุณ
 
 ## Feature limits
 
-The ChatGPT implementation in n8n has the following limitations:
+การนำ ChatGPT มาใช้ใน n8n มีข้อจำกัดดังต่อไปนี้:
 
-* The AI writes code that manipulates data from the n8n workflow. You can't ask it to pull in data from other sources.
-* The AI doesn't know your data, just the schema, so you need to tell it things like how to find the data you want to extract, or how to check for null.
-* Nodes before the Code node must execute and deliver data to the Code node before you run your AI query.
-* Doesn't work with large incoming data schemas.
-* May have issues if there are a lot of nodes before the code node.
+*   AI เขียนโค้ดที่จัดการข้อมูลจาก n8n workflow คุณไม่สามารถขอให้มันดึงข้อมูลจากแหล่งอื่นได้
+*   AI ไม่รู้จักข้อมูลของคุณ รู้เพียงแค่ schema ดังนั้นคุณต้องบอกสิ่งต่างๆ เช่น วิธีค้นหาข้อมูลที่คุณต้องการดึง หรือวิธีตรวจสอบค่า null
+*   Nodes ก่อนหน้า Code node ต้องทำงานและส่งข้อมูลไปยัง Code node ก่อนที่คุณจะรัน AI query ของคุณ
+*   ไม่ทำงานกับ data schemas ขาเข้าขนาดใหญ่
+*   อาจมีปัญหาหากมี nodes จำนวนมากก่อนหน้า code node
 
 ## Writing good prompts
 
 <!-- vale off -->
 
-Writing good prompts increases the chance of getting useful code back.
+การเขียน prompts ที่ดีจะเพิ่มโอกาสในการได้โค้ดที่เป็นประโยชน์กลับมา
 
-Some general tips:
+เคล็ดลับทั่วไปบางประการ:
 
-* Provide examples: if possible, give a sample expected output. This helps the AI to better understand the transformation or logic you’re aiming for.
-* Describe the processing steps: if there are specific processing steps or logic that should apply to the data, list them in sequence. For example: "First, filter out all users under 18. Then, sort the remaining users by their last name."
-* Avoid ambiguities: while the AI understands various instructions, being clear and direct ensures you get the most accurate code. Instead of saying "Get the older users," you might say "Filter users who are 60 years and above."
-* Be clear about what you expect as the output. Do you want the data transformed, filtered, aggregated, or sorted? Provide as much detail as possible.
+*   ให้ตัวอย่าง: หากเป็นไปได้ ให้ตัวอย่างผลลัพธ์ที่คาดหวัง สิ่งนี้ช่วยให้ AI เข้าใจการแปลงหรือตรรกะที่คุณต้องการได้ดีขึ้น
+*   อธิบายขั้นตอนการประมวลผล: หากมีขั้นตอนการประมวลผลหรือตรรกะเฉพาะที่ควรนำไปใช้กับข้อมูล ให้ระบุตามลำดับ ตัวอย่างเช่น: "ขั้นแรก กรองผู้ใช้ทุกคนที่อายุต่ำกว่า 18 ปี จากนั้น จัดเรียงผู้ใช้ที่เหลือตามนามสกุล"
+*   หลีกเลี่ยงความคลุมเครือ: แม้ว่า AI จะเข้าใจคำสั่งต่างๆ แต่การมีความชัดเจนและตรงไปตรงมาจะช่วยให้คุณได้โค้ดที่แม่นยำที่สุด แทนที่จะพูดว่า "Get the older users" คุณอาจพูดว่า "Filter users who are 60 years and above"
+*   ระบุให้ชัดเจนว่าคุณคาดหวังอะไรเป็นผลลัพธ์ คุณต้องการให้ข้อมูลถูกแปลง, กรอง, รวม หรือจัดเรียง? ให้รายละเอียดมากที่สุดเท่าที่จะทำได้
 
-And some n8n-specific guidance:
+และคำแนะนำเฉพาะสำหรับ n8n:
 
-* Think about the input data: make sure ChatGPT knows which pieces of the data you want to access, and what the incoming data represents. You may need to tell ChatGPT about the availability of n8n's built-in methods and variables.
-* Declare interactions between nodes: if your logic involves data from multiple nodes, specify how they should interact. "Merge the output of 'Node A' with 'Node B' based on the 'userID' property". if you prefer data to come from certain nodes or to ignore others, be clear: "Only consider data from the 'Purchases' node and ignore the 'Refunds' node."
-* Ensure the output is compatible with n8n. Refer to [Data structure](/data/data-structure.md) for more information on the data structure n8n requires.
+*   คิดถึงข้อมูลขาเข้า: ตรวจสอบให้แน่ใจว่า ChatGPT รู้ว่าคุณต้องการเข้าถึงข้อมูลส่วนใด และข้อมูลขาเข้าหมายถึงอะไร คุณอาจต้องบอก ChatGPT เกี่ยวกับความพร้อมใช้งานของ built-in methods and variables ของ n8n
+*   ประกาศการโต้ตอบระหว่าง nodes: หากตรรกะของคุณเกี่ยวข้องกับข้อมูลจากหลาย nodes ให้ระบุว่าควรโต้ตอบกันอย่างไร "Merge the output of 'Node A' with 'Node B' based on the 'userID' property" หากคุณต้องการให้ข้อมูลมาจาก nodes บางตัว หรือไม่สนใจ nodes อื่นๆ ให้ระบุให้ชัดเจน: "Only consider data from the 'Purchases' node and ignore the 'Refunds' node."
+*   ตรวจสอบให้แน่ใจว่าผลลัพธ์เข้ากันได้กับ n8n โปรดดู [Data structure](/data/data-structure.md) สำหรับข้อมูลเพิ่มเติมเกี่ยวกับโครงสร้างข้อมูลที่ n8n ต้องการ
 
 ### Example prompts
 
-These examples show a range of possible prompts and tasks.
+ตัวอย่างเหล่านี้แสดงช่วงของ prompts และ tasks ที่เป็นไปได้
 
 #### Example 1: Find a piece of data inside a second dataset
 
-To try the example yourself, [download the example workflow](/_workflows/ai-code/find-a-piece-of-data.json) and import it into n8n.
+หากต้องการลองตัวอย่างด้วยตัวเอง [download the example workflow](/_workflows/ai-code/find-a-piece-of-data.json) และ import เข้าไปใน n8n
 
-In the third Code node, enter this prompt:
+ใน Code node ที่สาม ป้อน prompt นี้:
 
 > The slack data contains only one item. The input data represents all Notion users. Sometimes the person property that holds the email can be null. I want to find the notionId of the Slack user and return it.
 
-Take a look at the code the AI generates.
+ลองดูโค้ดที่ AI สร้างขึ้น
 
-This is the JavaScript you need:
+นี่คือ JavaScript ที่คุณต้องการ:
 
 ```js
 const slackUser = $("Mock Slack").all()[0];
@@ -79,15 +79,15 @@ return notionUser ? [{ json: { notionId: notionUser.json.id } }] : [];
 
 #### Example 2: Data transformation
 
-To try the example yourself, [download the example workflow](/_workflows/ai-code/data-transformation.json) and import it into n8n.
+หากต้องการลองตัวอย่างด้วยตัวเอง [download the example workflow](/_workflows/ai-code/data-transformation.json) และ import เข้าไปใน n8n
 
-In the **Join items** Code node, enter this prompt:
+ใน Code node **Join items** ป้อน prompt นี้:
 
 > Return a single line of text that has all usernames listed with a comma. Each username should be enquoted with a double quotation mark.
 
-Take a look at the code the AI generates.
+ลองดูโค้ดที่ AI สร้างขึ้น
 
-This is the JavaScript you need:
+นี่คือ JavaScript ที่คุณต้องการ:
 
 ```js
 const items = $input.all();
@@ -98,15 +98,15 @@ return [{ json: { usernames: result } }];
 
 #### Example 3: Summarize data and create a Slack message
 
-To try the example yourself, [download the example workflow](/_workflows/ai-code/summarize-data.json) and import it into n8n.
+หากต้องการลองตัวอย่างด้วยตัวเอง [download the example workflow](/_workflows/ai-code/summarize-data.json) และ import เข้าไปใน n8n
 
-In the **Summarize** Code node, enter this prompt:
+ใน Code node **Summarize** ป้อน prompt นี้:
 
 > Create a markdown text for Slack that counts how many ideas, features and bugs have been submitted. The type of submission is saved in the property_type field. A feature has the property "Feature", a bug has the property "Bug" and an idea has the property "Bug". Also, list the five top submissions by vote in that message. Use "<url|text>" as markdown for links.
 
-Take a look at the code the AI generates.
+ลองดูโค้ดที่ AI สร้างขึ้น
 
-This is the JavaScript you need:
+นี่คือ JavaScript ที่คุณต้องการ:
 
 ```js
 const submissions = $input.all();
@@ -155,17 +155,17 @@ return [{ json: { slackMessage } }];
 
 ### Reference incoming node data explicitly
 
-If your incoming data contains nested fields, using dot notation to reference them can help the AI understand what data you want.
+หากข้อมูลขาเข้าของคุณมีฟิลด์ซ้อนกัน การใช้ dot notation เพื่ออ้างอิงถึงฟิลด์เหล่านั้นสามารถช่วยให้ AI เข้าใจว่าคุณต้องการข้อมูลใด
 
 !["Screenshot of an n8n code node, highlighting how to reference data with dot notation in an AI query"](/_images/code/ai-code/reference-data-dot-notation.png)
 
-To try the example yourself, [download the example workflow](/_workflows/ai-code/reference-incoming-data-explicitly.json) and import it into n8n.
+หากต้องการลองตัวอย่างด้วยตัวเอง [download the example workflow](/_workflows/ai-code/reference-incoming-data-explicitly.json) และ import เข้าไปใน n8n
 
-In the second Code node, enter this prompt:
+ใน Code node ที่สอง ป้อน prompt นี้:
 
 > The data in "Mock data" represents a list of people. For each person, return a new item containing personal_info.first_name and work_info.job_title.
 
-This is the JavaScript you need:
+นี่คือ JavaScript ที่คุณต้องการ:
 
 ```js
 const items = $input.all();
@@ -184,10 +184,8 @@ return newItems;
 
 ### Related resources
 
-Pluralsight offer a short guide on [How to use ChatGPT to write code](https://www.pluralsight.com/blog/software-development/how-use-chatgpt-programming-coding){:target=_blank .external-link}, which includes example prompts.
-
-
+Pluralsight มีคู่มือสั้นๆ เกี่ยวกับ [How to use ChatGPT to write code](https://www.pluralsight.com/blog/software-development/how-use-chatgpt-programming-coding){:target=_blank .external-link} ซึ่งรวมถึงตัวอย่าง prompts
 
 ## Fixing the code
 
-The AI-generated code may work without any changes, but you may have to edit it. You need to be aware of n8n's [Data structure](/data/data-structure.md). You may also find n8n's built-in methods and variables useful.
+โค้ดที่สร้างโดย AI อาจทำงานได้โดยไม่ต้องแก้ไขใดๆ แต่คุณอาจต้องแก้ไข คุณจำเป็นต้องตระหนักถึง [Data structure](/data/data-structure.md) ของ n8n คุณอาจพบว่า built-in methods and variables ของ n8n มีประโยชน์

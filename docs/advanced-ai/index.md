@@ -7,41 +7,41 @@ contentType: overview
 
 # Advanced AI
 
-Build AI functionality using n8n: from creating your own chat bot, to using AI to process documents and data from other sources.
+สร้างฟังก์ชัน AI ด้วย n8n: ตั้งแต่การสร้าง chat bot ของคุณเอง ไปจนถึงการใช้ AI เพื่อประมวลผลเอกสารและข้อมูลจากแหล่งอื่น
 
 /// info | Feature availability
-This feature is available on Cloud and self-hosted n8n, in version 1.19.4 and above.
+ฟีเจอร์นี้มีให้ใช้ทั้งบน Cloud และ self-hosted n8n เวอร์ชัน 1.19.4 ขึ้นไป
 ///
 
 <div class="grid cards" markdown>
 
 -   __Get started__
 
-    Work through the short tutorial to learn the basics of building AI workflows in n8n.
+    ทำตามบทแนะนำสั้นๆ เพื่อเรียนรู้พื้นฐานการสร้าง AI workflows ใน n8n
 
     [:octicons-arrow-right-24: Tutorial](/advanced-ai/intro-tutorial.md)
 
 -   __Use a Starter Kit__
 
-    Try n8n's Self-hosted AI Starter Kit to quickly start building AI workflows.
+    ลองใช้ Self-hosted AI Starter Kit ของ n8n เพื่อเริ่มต้นสร้าง AI workflows ได้อย่างรวดเร็ว
 
     [:octicons-arrow-right-24: Self-hosted AI Starter Kit](/hosting/starter-kits/ai-starter-kit.md)
 
 -   __Explore examples and concepts__
 
-	Browse examples and workflow templates to help you build. Includes explanations of important AI concepts.
+	เรียกดูตัวอย่างและ workflow templates เพื่อช่วยคุณสร้าง พร้อมคำอธิบาย AI concepts ที่สำคัญ
 
     [:octicons-arrow-right-24: Examples](/advanced-ai/examples/introduction.md)
 
 -   __How n8n uses LangChain__
 
-    Learn more about how n8n builds on LangChain.
+    เรียนรู้เพิ่มเติมเกี่ยวกับวิธีที่ n8n สร้างขึ้นบน LangChain
 
     [:octicons-arrow-right-24: LangChain in n8n](/advanced-ai/langchain/overview.md)
 
 -   __Browse AI templates__
 
-    Explore a wide range of AI workflow templates on the n8n website.
+    สำรวจ AI workflow templates หลากหลายบนเว็บไซต์ n8n
 
     [:octicons-arrow-right-24: AI workflows on n8n.io](https://n8n.io/workflows/?categories=25){:target=_blank .external-link}
 
@@ -49,24 +49,24 @@ This feature is available on Cloud and self-hosted n8n, in version 1.19.4 and ab
 
 ## Related resources
 
-Related documentation and tools.
+เอกสารและเครื่องมือที่เกี่ยวข้อง
 
 ### Node types
 
-This feature uses [Cluster nodes](/integrations/builtin/cluster-nodes/index.md): groups of [root](/integrations/builtin/cluster-nodes/root-nodes/index.md) and [sub](/integrations/builtin/cluster-nodes/sub-nodes/index.md) nodes that work together.
+ฟีเจอร์นี้ใช้ [Cluster nodes](/integrations/builtin/cluster-nodes/index.md): กลุ่มของ [root](/integrations/builtin/cluster-nodes/root-nodes/index.md) และ [sub](/integrations/builtin/cluster-nodes/sub-nodes/index.md) nodes ที่ทำงานร่วมกัน
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/cluster-nodes-summary.md"
 
 ### Workflow templates
 
-You can browse [workflow templates](/glossary.md#template-n8n) in-app or on the n8n website [Workflows](https://n8n.io/workflows/?categories=25,26){:target=_blank .external-link} page.
+คุณสามารถเรียกดู [workflow templates](/glossary.md#template-n8n) ในแอปหรือบนหน้า [Workflows](https://n8n.io/workflows/?categories=25,26){:target=_blank .external-link} ของเว็บไซต์ n8n
 
-Refer to [Templates](/workflows/templates.md) for information on accessing templates in-app.
+ดู [Templates](/workflows/templates.md) สำหรับข้อมูลเกี่ยวกับการเข้าถึง templates ในแอป
 
 ### Chat trigger
 
-Use the [n8n Chat Trigger](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/index.md) to trigger a workflow based on chat interactions.
+ใช้ [n8n Chat Trigger](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/index.md) เพื่อ trigger workflow ตามการโต้ตอบใน chat
 
 ### Chatbot widget
 
-n8n provides a chatbot widget that you can use as a frontend for AI-powered chat workflows. Refer to the [@n8n/chat npm page](https://www.npmjs.com/package/@n8n/chat){:target=_blank .external-link} for usage information.
+n8n มี chatbot widget ที่คุณสามารถใช้เป็น frontend สำหรับ AI-powered chat workflows ดูที่หน้า [@n8n/chat npm](https://www.npmjs.com/package/@n8n/chat){:target=_blank .external-link} สำหรับวิธีใช้งาน

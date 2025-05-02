@@ -7,7 +7,7 @@ contentType: reference
 
 ## `execution.id`
 
-Contains the unique ID of the current workflow execution.
+ประกอบด้วย ID ที่ไม่ซ้ำกันของการ execute workflow ปัจจุบัน
 
 === "JavaScript"
 	```js
@@ -20,13 +20,13 @@ Contains the unique ID of the current workflow execution.
 
 ## `execution.resumeUrl`
 
-The webhook URL to call to resume a [waiting](/integrations/builtin/core-nodes/n8n-nodes-base.wait.md) workflow.
+Webhook URL ที่จะเรียกเพื่อดำเนินการต่อ (resume) workflow ที่กำลัง [waiting](/integrations/builtin/core-nodes/n8n-nodes-base.wait.md) อยู่
 
-See the [Wait > On webhook call](/integrations/builtin/core-nodes/n8n-nodes-base.wait.md#on-webhook-call) documentation to learn more.
+ดูเอกสาร [Wait > On webhook call](/integrations/builtin/core-nodes/n8n-nodes-base.wait.md#on-webhook-call) เพื่อเรียนรู้เพิ่มเติม
 
 ## `execution.customData`
 
-This is only available in the Code node.
+มีให้ใช้งานเฉพาะใน Code node เท่านั้น
 
 === "JavaScript"
 	```js
@@ -57,4 +57,4 @@ This is only available in the Code node.
 	customData = _execution.customData.get("key")
 	```
 
-Refer to [Custom executions data](/workflows/executions/custom-executions-data.md) for more information.
+อ้างอิง [Custom executions data](/workflows/executions/custom-executions-data.md) สำหรับข้อมูลเพิ่มเติม

@@ -7,11 +7,11 @@ contentType: reference
 # `vars`
 
 /// info | Feature availability
-* Available on Self-hosted Enterprise and Pro and Enterprise Cloud plans.
-* You need access to the n8n instance owner account to create variables.
+* มีให้ใช้งานบนแผน Self-hosted Enterprise และ Pro และ Enterprise Cloud
+* คุณต้องมีสิทธิ์เข้าถึงบัญชีเจ้าของ instance n8n เพื่อสร้างตัวแปร
 ///	
 
-`vars` contains all [Variables](/code/variables.md) for the active environment. It's read-only: you can access variables using `vars`, but must set them using the UI.
+`vars` ประกอบด้วย [Variables](/code/variables.md) ทั้งหมดสำหรับ environment ที่ใช้งานอยู่ เป็นแบบอ่านอย่างเดียว (read-only): คุณสามารถเข้าถึงตัวแปรโดยใช้ `vars` แต่ต้องตั้งค่าผ่าน UI เท่านั้น
 
 === "JavaScript"
 	```js
@@ -25,5 +25,5 @@ contentType: reference
 	```
 
 /// note | `vars` and `env`
-`vars` gives access to user-created variables. It's part of the [Environments](/source-control-environments/index.md) feature. `env` gives access to the [configuration environment variables](/hosting/configuration/environment-variables/index.md) for your n8n instance. 
+`vars` ให้สิทธิ์เข้าถึงตัวแปรที่ผู้ใช้สร้างขึ้น เป็นส่วนหนึ่งของคุณสมบัติ [Environments](/source-control-environments/index.md) ส่วน `env` ให้สิทธิ์เข้าถึง [configuration environment variables](/hosting/configuration/environment-variables/index.md) สำหรับ instance n8n ของคุณ
 ///

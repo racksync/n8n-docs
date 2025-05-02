@@ -8,6 +8,6 @@ hide:
   - tags
 ---
 
-# Using the Code node
+# การใช้งาน Code node
 
 --8<-- "_snippets/integrations/builtin/core-nodes/code-node.md"

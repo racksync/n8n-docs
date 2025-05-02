@@ -7,30 +7,30 @@ contentType: howto
 # Using the API playground
 
 /// info | Feature availability
-The API playground isn't available on Cloud. It's available for all self-hosted pricing tiers.
+API playground ไม่มีให้บริการบน Cloud แต่มีให้ใช้งานสำหรับ self-hosted ทุก pricing tiers
 ///
 
-The n8n API comes with a built-in Swagger UI playground in self-hosted versions. This provides interactive documentation, where you can try out requests. The path to access the playground depends on your hosting.
+n8n API มาพร้อมกับ Swagger UI playground ในตัวสำหรับเวอร์ชัน self-hosted ซึ่งเป็นเอกสารแบบโต้ตอบที่คุณสามารถลองส่ง request ได้ path สำหรับเข้าถึง playground จะขึ้นอยู่กับการ hosting ของคุณ
 
-n8n constructs the path from values set in your environment variables:
+n8n สร้าง path จากค่าที่ตั้งไว้ใน environment variables ของคุณ:
 
 ```shell
 N8N_HOST:N8N_PORT/N8N_PATH/api/v<api-version-number>/docs
 ```
 
-The API version number is `1`. There may be multiple versions available in the future.
+หมายเลขเวอร์ชัน API คือ `1` อาจมีหลายเวอร์ชันในอนาคต
 
 /// warning | Real data
-If you select **Authorize** and enter your API key in the API playground, you have access to your live data. This is useful for trying out requests. Be aware you can change or delete real data.
+หากคุณเลือก **Authorize** และป้อน API key ของคุณใน API playground คุณจะสามารถเข้าถึงข้อมูลจริงของคุณได้ สิ่งนี้มีประโยชน์สำหรับการลองส่ง request โปรดระวังว่าคุณสามารถเปลี่ยนแปลงหรือลบข้อมูลจริงได้
 ///
-The API includes built-in documentation about credential formats. This is available using the `credentials` endpoint:
+API มีเอกสารเกี่ยวกับรูปแบบ credential ในตัว สามารถเข้าถึงได้โดยใช้ `credentials` endpoint:
 
 ```shell
 N8N_HOST:N8N_PORT/N8N_PATH/api/v<api-version-number>/credentials/schema/{credentialTypeName}
 ```
 
 /// note | How to find `credentialTypeName`
-To find the type, download your workflow as JSON and examine it. For example, for a Google Drive node the `{credentialTypeName}` is `googleDriveOAuth2Api`:
+หากต้องการค้นหา type ให้ดาวน์โหลด workflow ของคุณเป็น JSON แล้วตรวจสอบ ตัวอย่างเช่น สำหรับ Google Drive node `{credentialTypeName}` คือ `googleDriveOAuth2Api`:
 ```json
 {
     ...,
@@ -41,5 +41,6 @@ To find the type, download your workflow as JSON and examine it. For example, fo
         }
     }
 }
+}
 ```
-/// 
+///

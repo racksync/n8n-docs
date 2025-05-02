@@ -7,10 +7,10 @@ contentType: reference
 
 # Arrays
 
-A reference document listing built-in convenience functions to support data transformation in [expressions](/glossary.md#expression-n8n) for arrays.
+เอกสารอ้างอิงที่แสดงรายการ convenience functions ที่สร้างไว้ให้เพื่อรองรับการแปลงข้อมูลใน [expressions](/glossary.md#expression-n8n) สำหรับ arrays
 
 /// note | JavaScript in expressions
-You can use any JavaScript in expressions. Refer to [Expressions](/code/expressions.md) for more information.
+คุณสามารถใช้ JavaScript ใดๆ ใน expressions ได้ โปรดดู [Expressions](/code/expressions.md) สำหรับข้อมูลเพิ่มเติม
 ///
 [[% import "_macros/data-functions.html" as dataFunctions %]]
 

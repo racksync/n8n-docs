@@ -5,7 +5,7 @@ contentType: overview
 
 # Examples using n8n's built-in methods and variables
 
-n8n provides built-in methods and variables for working with data and accessing n8n data. This section provides usage examples.
+n8n มี methods และ variables ในตัวสำหรับทำงานกับข้อมูลและเข้าถึงข้อมูลของ n8n ส่วนนี้จะให้ตัวอย่างการใช้งาน
 
 [[% import "_macros/section-toc.html" as sectionToc %]]
 

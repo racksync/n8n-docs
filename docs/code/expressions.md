@@ -5,39 +5,39 @@ contentType: howto
 
 # Expressions
 
-Expressions are a powerful feature implemented in all n8n nodes. They allow node parameters to be set dynamically based on data from:
+Expressions เป็น feature ที่ทรงพลังซึ่งถูกนำไปใช้ใน n8n nodes ทั้งหมด ช่วยให้สามารถตั้งค่าพารามิเตอร์ของ node แบบไดนามิกตามข้อมูลจาก:
 
-- Previous node executions
-- The workflow
-- Your n8n environment
+- การทำงานของ node ก่อนหน้า
+- Workflow
+- สภาพแวดล้อม n8n ของคุณ
 
-You can also execute JavaScript within an expression, making this a convenient and easy way to manipulate data into useful parameter values without writing extensive extra code.
+คุณยังสามารถรัน JavaScript ภายใน expression ได้ ทำให้เป็นวิธีที่สะดวกและง่ายในการจัดการข้อมูลให้เป็นค่าพารามิเตอร์ที่มีประโยชน์โดยไม่ต้องเขียน code เพิ่มเติมมากมาย
 
-n8n created and uses a templating language called [Tournament](https://github.com/n8n-io/tournament){:target=_blank .external-link}, and extends it with [custom methods and variables](/code/builtin/overview.md) and [data transformation functions](/code/builtin/data-transformation-functions/index.md). These features make it easier to perform common tasks like getting data from other nodes or accessing workflow metadata.
+n8n สร้างและใช้ภาษา templating ที่เรียกว่า [Tournament](https://github.com/n8n-io/tournament){:target=_blank .external-link} และขยายความสามารถด้วย [custom methods and variables](/code/builtin/overview.md) และ [data transformation functions](/code/builtin/data-transformation-functions/index.md) ฟีเจอร์เหล่านี้ช่วยให้การทำงานทั่วไปง่ายขึ้น เช่น การดึงข้อมูลจาก nodes อื่นๆ หรือการเข้าถึง metadata ของ workflow
 
-n8n additionally supports two libraries:
+นอกจากนี้ n8n ยังรองรับไลบรารีสองตัว:
 
-- [Luxon](https://github.com/moment/luxon/){:target=_blank .external-link}, for working with dates and time.
-- [JMESPath](https://jmespath.org/){:target=_blank .external-link}, for querying JSON.
+- [Luxon](https://github.com/moment/luxon/){:target=_blank .external-link}, สำหรับทำงานกับวันที่และเวลา
+- [JMESPath](https://jmespath.org/){:target=_blank .external-link}, สำหรับการ query ข้อมูล JSON
 
 /// note | Data in n8n
-When writing expressions, it's helpful to understand data structure and behavior in n8n. Refer to [Data](/data/index.md) for more information on working with data in your workflows.
+เมื่อเขียน expressions การทำความเข้าใจโครงสร้างข้อมูลและพฤติกรรมใน n8n จะเป็นประโยชน์ โปรดดู [Data](/data/index.md) สำหรับข้อมูลเพิ่มเติมเกี่ยวกับการทำงานกับข้อมูลใน workflows ของคุณ
 ///
 
 ## Writing expressions
 
-To use an expression to set a parameter value:
+วิธีใช้ expression เพื่อตั้งค่าพารามิเตอร์:
 
-1. Hover over the parameter where you want to use an expression.
-2. Select **Expressions** in the **Fixed/Expression** toggle.
-3. Write your expression in the parameter, or select **Open expression editor** <span class="inline-image">![Open expressions editor icon](/_images/common-icons/open-expression-editor.png){.off-glb}</span> to open the expressions editor. If you use the expressions editor, you can browse the available data in the **Variable selector**. All expressions have the format `{{ your expression here }}`.
+1.  เลื่อนเมาส์ไปเหนือพารามิเตอร์ที่คุณต้องการใช้ expression
+2.  เลือก **Expressions** ในตัวสลับ **Fixed/Expression**
+3.  เขียน expression ของคุณในพารามิเตอร์ หรือเลือก **Open expression editor** <span class="inline-image">![Open expressions editor icon](/_images/common-icons/open-expression-editor.png){.off-glb}</span> เพื่อเปิด expression editor หากคุณใช้ expression editor คุณสามารถเรียกดูข้อมูลที่มีอยู่ใน **Variable selector** ได้ Expressions ทั้งหมดมีรูปแบบ `{{ your expression here }}`
 
 
 ### Example: Get data from webhook body
 
-Consider the following scenario: you have a webhook trigger that receives data through the webhook body. You want to extract some of that data for use in the workflow.
+พิจารณาสถานการณ์ต่อไปนี้: คุณมี webhook trigger ที่รับข้อมูลผ่าน webhook body คุณต้องการดึงข้อมูลบางส่วนนั้นมาใช้ใน workflow
 
-Your webhook data looks similar to this:
+ข้อมูล webhook ของคุณมีลักษณะคล้ายกับนี้:
 
 
 ```json
@@ -59,26 +59,26 @@ Your webhook data looks similar to this:
 ```
 
 
-In the next node in the workflow, you want to get just the value of `city`. You can use the following expression:
+ใน node ถัดไปใน workflow คุณต้องการรับเฉพาะค่าของ `city` คุณสามารถใช้ expression ต่อไปนี้:
 
 
 ```js
 {{$json.body.city}}
 ```
 
-This expression:
+Expression นี้:
 
-1. Accesses the incoming JSON-formatted data using n8n's custom `$json` variable.
-2. Finds the value of `city` (in this example, "New York"). Note that this example uses JMESPath syntax to query the JSON data. You can also write this expression as `{{$json['body']['city']}}`.
+1.  เข้าถึงข้อมูลรูปแบบ JSON ที่เข้ามาโดยใช้ตัวแปร `$json` ที่กำหนดเองของ n8n
+2.  ค้นหาค่าของ `city` (ในตัวอย่างนี้คือ "New York") โปรดทราบว่าตัวอย่างนี้ใช้ синтаксис JMESPath เพื่อ query ข้อมูล JSON คุณยังสามารถเขียน expression นี้เป็น `{{$json['body']['city']}}` ได้
 
 
 ### Example: Writing longer JavaScript
 
-An expression contains one line of JavaScript. This means you cannot do things like variable assignments or multiple standalone operations.
+Expression ประกอบด้วย JavaScript หนึ่งบรรทัด ซึ่งหมายความว่าคุณไม่สามารถทำสิ่งต่างๆ เช่น การกำหนดค่าตัวแปร หรือการดำเนินการแบบสแตนด์อโลนหลายรายการได้
 
-To understand the limitations of JavaScript in expressions, and start thinking about workarounds, look at the following two pieces of code. Both code examples use the Luxon date and time library to find the time between two dates in months, and encloses the code in handlebar brackets, like an expression.
+เพื่อให้เข้าใจข้อจำกัดของ JavaScript ใน expressions และเริ่มคิดเกี่ยวกับวิธีแก้ปัญหา ลองดูโค้ดสองตัวอย่างต่อไปนี้ ทั้งสองตัวอย่างใช้ไลบรารีวันที่และเวลา Luxon เพื่อหาเวลาระหว่างวันที่สองวันในหน่วยเดือน และครอบโค้ดด้วยวงเล็บปีกกา เหมือนกับ expression
 
-However, the first example isn't a valid n8n expression:
+อย่างไรก็ตาม ตัวอย่างแรกไม่ใช่ expression ที่ถูกต้องของ n8n:
 
 ```js
 // This example is split over multiple lines for readability
@@ -94,7 +94,7 @@ However, the first example isn't a valid n8n expression:
 }}
 ```
 
-While the second example is valid:
+ในขณะที่ตัวอย่างที่สองถูกต้อง:
 
 ```js
 {{DateTime.fromISO('2017-03-13').diff(DateTime.fromISO('2017-02-13'), 'months').toObject()}}
@@ -102,4 +102,4 @@ While the second example is valid:
 
 ## Common issues
 
-For common errors or issues with expressions and suggested resolution steps, refer to [Common Issues](/code/cookbook/expressions/common-issues.md).
+สำหรับข้อผิดพลาดหรือปัญหาทั่วไปเกี่ยวกับ expressions และขั้นตอนการแก้ไขที่แนะนำ โปรดดูที่ [Common Issues](/code/cookbook/expressions/common-issues.md)

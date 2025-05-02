@@ -6,10 +6,10 @@ contentType: overview
 
 # Expressions cookbook
 
-This section contains examples and recipes for tasks you can do with [expressions](/glossary.md#expression-n8n).
+ส่วนนี้ประกอบด้วยตัวอย่างและสูตรสำเร็จสำหรับงานที่คุณสามารถทำได้ด้วย [expressions](/glossary.md#expression-n8n)
 
 /// note | Python support
-You can use Python in the Code node. It isn't available in expressions.
+คุณสามารถใช้ Python ใน Code node ได้ แต่ไม่สามารถใช้ใน expressions ได้
 ///
 [[% import "_macros/section-toc.html" as sectionToc %]]
 

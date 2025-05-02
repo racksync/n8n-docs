@@ -59,15 +59,15 @@ hide:
 เอกสารชุดนี้ ถูกสร้างจาก [n8n thai documents](https://github.com/racksync/n8n-docs){:target=_blank .external-link} แปลโดย บริษัท แรคซิงค์ จำกัด 
 ([racksync](https://www.racksync.com){:target=_blank .external-link}) โดยมีการปรับแต่งให้เหมาะสมกับการใช้งานและกลุ่มผู้ใช้ที่สนใจในไทย โดยมีต้นฉบับเป็นภาษาอังกฤษอยู่ที่ [n8n docs](https://docs.n8n.io/){:target=_blank .external-link}
 
-## RACKSYNC CO., LTD.
+## [RACKSYNC CO., LTD.](/racksync.md)
+
 บริษัท แรคซิงค์ จำกัด เป็นบริษัทที่ปรึกษาและพัฒนาระบบซอฟต์แวร์ที่มีความเชี่ยวชาญในด้านการพัฒนาโซลูชันที่ใช้เทคโนโลยี AI และ Machine Learning โดยมีเป้าหมายในการช่วยให้ธุรกิจสามารถใช้เทคโนโลยีเหล่านี้เพื่อเพิ่มประสิทธิภาพและสร้างมูลค่าให้กับองค์กร
 เรามีทีมงานที่มีความเชี่ยวชาญในด้านการพัฒนาโซลูชันที่ใช้เทคโนโลยี AI และ Machine Learning โดยเฉพาะในด้านการวิเคราะห์ข้อมูล การสร้างโมเดลการเรียนรู้ของเครื่อง และการพัฒนาแอปพลิเคชันที่ใช้เทคโนโลยี AI
 
-
 ## ติดต่อเรา
 - **โทร**: 08 5880 8885
-- **อีเมล**: info@racksync.com
-- **เว็บไซต์**: https://racksync.com
-- **Facebook**: https://www.facebook.com/racksync
+- **อีเมล**: [info@racksync.com](mailto:info@racksync.com)
+- **เว็บไซต์**: [https://racksync.com](https://racksync.com)
+- **Facebook**: [https://www.facebook.com/racksync](https://www.facebook.com/racksync)
 
-© 2007-2025 RACKSYNC CO., LTD. All rights reserved.
+© 2007-2025 [RACKSYNC CO., LTD.](/racksync.md) All rights reserved.

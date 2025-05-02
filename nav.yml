@@ -1,187 +1,187 @@
 nav:
-  - Using n8n:
-    - Welcome: index.md
-    - Getting started:
-      - Learning path: learning-path.md
-      - Choose your n8n: choose-n8n.md
-      - Quickstarts:
+  - มาใช้ n8n กัน:
+    - ยินดีต้อนรับ: index.md
+    - เริ่มต้นใช้งาน:
+      - เส้นทางการเรียนรู้: learning-path.md
+      - เลือก n8n ของคุณ: choose-n8n.md
+      - เริ่มต้นอย่างรวดเร็ว:
         - try-it-out/index.md
-        - A very quick quickstart: try-it-out/quickstart.md
-        - A longer introduction: try-it-out/tutorial-first-workflow.md
-      - Video courses: video-courses.md
-      - Text courses:
+        - เริ่มต้นแบบเร็วสุดๆ: try-it-out/quickstart.md
+        - บทนำแบบละเอียด: try-it-out/tutorial-first-workflow.md
+      - คอร์สวิดีโอ: video-courses.md
+      - คอร์สแบบข้อความ:
         - courses/index.md
-        - Level one:
+        - ระดับ 1:
           - courses/level-one/index.md
-          - Navigating the editor UI: courses/level-one/chapter-1.md
-          - Building a mini-workflow: courses/level-one/chapter-2.md
-          - Automating a (real-world) use case: courses/level-one/chapter-3.md
-          - Designing the workflow: courses/level-one/chapter-4.md
-          - Building the workflow:
-            - Getting data from the data warehouse: courses/level-one/chapter-5/chapter-5.1.md
-            - Inserting data into airtable: courses/level-one/chapter-5/chapter-5.2.md
-            - Filtering orders: courses/level-one/chapter-5/chapter-5.3.md
-            - Setting values for processing orders: courses/level-one/chapter-5/chapter-5.4.md
-            - Calculating booked orders: courses/level-one/chapter-5/chapter-5.5.md
-            - Notifying the team: courses/level-one/chapter-5/chapter-5.6.md
-            - Scheduling the workflow: courses/level-one/chapter-5/chapter-5.7.md
-            - Activating and examining the workflow: courses/level-one/chapter-5/chapter-5.8.md
-          - Exporting and importing workflows: courses/level-one/chapter-6.md
-          - Test your knowledge: courses/level-one/chapter-7.md
-        - Level two:
+          - การใช้งาน Editor UI: courses/level-one/chapter-1.md
+          - สร้าง Workflow ขนาดเล็ก: courses/level-one/chapter-2.md
+          - สร้างระบบอัตโนมัติสำหรับ Use Case จริง: courses/level-one/chapter-3.md
+          - การออกแบบ Workflow: courses/level-one/chapter-4.md
+          - การสร้าง Workflow:
+            - ดึงข้อมูลจาก Data Warehouse: courses/level-one/chapter-5/chapter-5.1.md
+            - เพิ่มข้อมูลลง Airtable: courses/level-one/chapter-5/chapter-5.2.md
+            - กรองคำสั่งซื้อ: courses/level-one/chapter-5/chapter-5.3.md
+            - กำหนดค่าสำหรับการประมวลผลคำสั่งซื้อ: courses/level-one/chapter-5/chapter-5.4.md
+            - คำนวณคำสั่งซื้อที่จองแล้ว: courses/level-one/chapter-5/chapter-5.5.md
+            - แจ้งเตือนทีม: courses/level-one/chapter-5/chapter-5.6.md
+            - ตั้งเวลา Workflow: courses/level-one/chapter-5/chapter-5.7.md
+            - เปิดใช้งานและตรวจสอบ Workflow: courses/level-one/chapter-5/chapter-5.8.md
+          - การ Export และ Import Workflows: courses/level-one/chapter-6.md
+          - ทดสอบความรู้ของคุณ: courses/level-one/chapter-7.md
+        - ระดับ 2:
           - courses/level-two/index.md
-          - Understanding the data structure: courses/level-two/chapter-1.md
-          - Processing different data types: courses/level-two/chapter-2.md
-          - Merging and splitting data: courses/level-two/chapter-3.md
-          - Dealing with errors in workflows: courses/level-two/chapter-4.md
-          - Automating a business workflow:
-            - Use case: courses/level-two/chapter-5/chapter-5.0.md
+          - ทำความเข้าใจโครงสร้างข้อมูล: courses/level-two/chapter-1.md
+          - การประมวลผลข้อมูลประเภทต่างๆ: courses/level-two/chapter-2.md
+          - การรวมและแยกข้อมูล: courses/level-two/chapter-3.md
+          - การจัดการข้อผิดพลาดใน Workflows: courses/level-two/chapter-4.md
+          - สร้าง Workflow ธุรกิจอัตโนมัติ:
+            - Use Case: courses/level-two/chapter-5/chapter-5.0.md
             - Workflow 1: courses/level-two/chapter-5/chapter-5.1.md
             - Workflow 2: courses/level-two/chapter-5/chapter-5.2.md
             - Workflow 3: courses/level-two/chapter-5/chapter-5.3.md
-          - Test your knowledge: courses/level-two/chapter-6.md
-    - Using the app:
-      - Understand workflows:
+          - ทดสอบความรู้ของคุณ: courses/level-two/chapter-6.md
+    - การใช้งานแอปพลิเคชัน:
+      - ทำความเข้าใจ Workflows:
         - workflows/index.md
-        - Create and run: workflows/create.md
-        - Components:
+        - สร้างและรัน: workflows/create.md
+        - ส่วนประกอบ:
           - workflows/components/index.md
           - Nodes: workflows/components/nodes.md
           - Connections: workflows/components/connections.md
           - Sticky Notes: workflows/components/sticky-notes.md
-        - Executions:
+        - การรัน (Executions):
           - workflows/executions/index.md
-          - Manual, partial, and production executions: workflows/executions/manual-partial-and-production-executions.md
-          - Workflow-level executions: workflows/executions/single-workflow-executions.md
-          - All executions: workflows/executions/all-executions.md
-          - Custom executions data: workflows/executions/custom-executions-data.md
-          - Debug executions: workflows/executions/debug.md
+          - การรันแบบ Manual, บางส่วน และ Production: workflows/executions/manual-partial-and-production-executions.md
+          - การรันระดับ Workflow: workflows/executions/single-workflow-executions.md
+          - การรันทั้งหมด: workflows/executions/all-executions.md
+          - ข้อมูลการรันแบบกำหนดเอง: workflows/executions/custom-executions-data.md
+          - การ Debug การรัน: workflows/executions/debug.md
         - Tags: workflows/tags.md
-        - Export and import: workflows/export-import.md
+        - Export และ Import: workflows/export-import.md
         - Templates: workflows/templates.md
-        - Sharing: workflows/sharing.md
-        - Settings: workflows/settings.md
-        - Workflow history: workflows/history.md
+        - การแชร์: workflows/sharing.md
+        - การตั้งค่า: workflows/settings.md
+        - ประวัติ Workflow: workflows/history.md
         - Workflow ID: workflows/workflow-id.md
-      - Manage credentials:
+      - จัดการ Credentials:
         - credentials/index.md
-        - Create and edit: credentials/add-edit-credentials.md
-        - Credential sharing: credentials/credential-sharing.md
-      - Manage users and access:
+        - สร้างและแก้ไข: credentials/add-edit-credentials.md
+        - การแชร์ Credential: credentials/credential-sharing.md
+      - จัดการผู้ใช้และการเข้าถึง:
         - user-management/index.md
-        - Cloud setup: user-management/cloud-setup.md
-        - Manage users: user-management/manage-users.md
-        - Account types: user-management/account-types.md
-        - Role-based access control:
+        - การตั้งค่า Cloud: user-management/cloud-setup.md
+        - จัดการผู้ใช้: user-management/manage-users.md
+        - ประเภทบัญชี: user-management/account-types.md
+        - การควบคุมการเข้าถึงตามบทบาท (RBAC):
           - user-management/rbac/index.md
-          - Role types: user-management/rbac/role-types.md
+          - ประเภท Role: user-management/rbac/role-types.md
           - Projects: user-management/rbac/projects.md
-        - Best practices: user-management/best-practices.md
+        - แนวทางปฏิบัติที่ดีที่สุด: user-management/best-practices.md
         - 2FA: user-management/two-factor-auth.md
         - LDAP: user-management/ldap.md
         - SAML:
           - user-management/saml/index.md
-          - Set up SAML: user-management/saml/setup.md
-          - Okta Workforce Identity SAML setup: user-management/saml/okta.md
-          - Troubleshooting: user-management/saml/troubleshooting.md
-          - Manage users with SAML: user-management/saml/managing.md
-      - Keyboard shortcuts: keyboard-shortcuts.md
-    - Key concepts:
-      - Flow logic:
+          - ตั้งค่า SAML: user-management/saml/setup.md
+          - การตั้งค่า Okta Workforce Identity SAML: user-management/saml/okta.md
+          - การแก้ไขปัญหา: user-management/saml/troubleshooting.md
+          - จัดการผู้ใช้ด้วย SAML: user-management/saml/managing.md
+      - คีย์ลัด: keyboard-shortcuts.md
+    - แนวคิดหลัก:
+      - ตรรกะของ Flow:
         - flow-logic/index.md
-        - Splitting with conditionals: flow-logic/splitting.md
-        - Merging data: flow-logic/merging.md
-        - Looping: flow-logic/looping.md
-        - Waiting: flow-logic/waiting.md
+        - การแยกด้วยเงื่อนไข: flow-logic/splitting.md
+        - การรวมข้อมูล: flow-logic/merging.md
+        - การวนซ้ำ (Looping): flow-logic/looping.md
+        - การรอ: flow-logic/waiting.md
         - Sub-workflows: flow-logic/subworkflows.md
-        - Error handling: flow-logic/error-handling.md
-        - Execution order in multi-branch workflows: flow-logic/execution-order.md
-      - Data:
+        - การจัดการข้อผิดพลาด: flow-logic/error-handling.md
+        - ลำดับการรันใน Workflow หลายสาขา: flow-logic/execution-order.md
+      - ข้อมูล:
         - data/index.md
-        - Data structure: data/data-structure.md
-        - Data flow within nodes: data/data-flow-nodes.md
-        - Transforming data: data/transforming-data.md
-        - Process data using code: data/code.md
-        - Data mapping:
+        - โครงสร้างข้อมูล: data/data-structure.md
+        - การไหลของข้อมูลภายใน Nodes: data/data-flow-nodes.md
+        - การแปลงข้อมูล: data/transforming-data.md
+        - ประมวลผลข้อมูลด้วย Code: data/code.md
+        - การจับคู่ข้อมูล (Data Mapping):
           - data/data-mapping/index.md
-          - Data mapping in the UI: data/data-mapping/data-mapping-ui.md
-          - Data mapping in the expressions editor: data/data-mapping/data-mapping-expressions.md
-          - Data item linking:
+          - การจับคู่ข้อมูลใน UI: data/data-mapping/data-mapping-ui.md
+          - การจับคู่ข้อมูลใน Expressions Editor: data/data-mapping/data-mapping-expressions.md
+          - การเชื่อมโยง Data Item:
             - data/data-mapping/data-item-linking/index.md
-            - Item linking concepts: data/data-mapping/data-item-linking/item-linking-concepts.md
-            - Item linking in the Code node: data/data-mapping/data-item-linking/item-linking-code-node.md
-            - Item linking errors: data/data-mapping/data-item-linking/item-linking-errors.md
-            - Item linking for node creators: data/data-mapping/data-item-linking/item-linking-node-building.md
-        - Data pinning: data/data-pinning.md
-        - Data editing: data/data-editing.md
-        - Data filtering: data/data-filtering.md
-        - Data mocking: data/data-mocking.md
-        - Binary data: data/binary-data.md
-        - Schema preview: data/schema-preview.md
-      - Glossary: glossary.md
+            - แนวคิดการเชื่อมโยง Item: data/data-mapping/data-item-linking/item-linking-concepts.md
+            - การเชื่อมโยง Item ใน Code Node: data/data-mapping/data-item-linking/item-linking-code-node.md
+            - ข้อผิดพลาดในการเชื่อมโยง Item: data/data-mapping/data-item-linking/item-linking-errors.md
+            - การเชื่อมโยง Item สำหรับผู้สร้าง Node: data/data-mapping/data-item-linking/item-linking-node-building.md
+        - การปักหมุดข้อมูล (Data Pinning): data/data-pinning.md
+        - การแก้ไขข้อมูล: data/data-editing.md
+        - การกรองข้อมูล: data/data-filtering.md
+        - การจำลองข้อมูล (Data Mocking): data/data-mocking.md
+        - ข้อมูล Binary: data/binary-data.md
+        - ดูตัวอย่าง Schema: data/schema-preview.md
+      - อภิธานศัพท์: glossary.md
     - n8n Cloud:
-      - Overview: manage-cloud/overview.md
-      - Access the Cloud admin dashboard: manage-cloud/cloud-admin-dashboard.md
-      - Update your n8n Cloud version: manage-cloud/update-cloud-version.md
-      - Set the timezone: manage-cloud/set-cloud-timezone.md
-      - Cloud IP addresses: manage-cloud/cloud-ip.md
-      - Cloud data management: manage-cloud/cloud-data-management.md
-      - Change ownership or username: manage-cloud/change-ownership-or-username.md
-      - Concurrency: manage-cloud/concurrency.md
-      - AI Assistant: manage-cloud/ai-assistant.md
-    - Enterprise features:
-      - Source control and environments:
+      - ภาพรวม: manage-cloud/overview.md
+      - เข้าถึง Dashboard ผู้ดูแลระบบ Cloud: manage-cloud/cloud-admin-dashboard.md
+      - อัปเดตเวอร์ชัน n8n Cloud: manage-cloud/update-cloud-version.md
+      - ตั้งค่า Timezone: manage-cloud/set-cloud-timezone.md
+      - IP Address ของ Cloud: manage-cloud/cloud-ip.md
+      - การจัดการข้อมูล Cloud: manage-cloud/cloud-data-management.md
+      - เปลี่ยนเจ้าของหรือชื่อผู้ใช้: manage-cloud/change-ownership-or-username.md
+      - การทำงานพร้อมกัน (Concurrency): manage-cloud/concurrency.md
+      - ผู้ช่วย AI: manage-cloud/ai-assistant.md
+    - ฟีเจอร์ Enterprise:
+      - Source Control และ Environments:
         - source-control-environments/index.md
-        - Understand:
+        - ทำความเข้าใจ:
           - source-control-environments/understand/index.md
           - Environments: source-control-environments/understand/environments.md
-          - Git in n8n: source-control-environments/understand/git.md
-          - Branch patterns: source-control-environments/understand/patterns.md
-        - Set up: source-control-environments/setup.md
-        - Using:
+          - Git ใน n8n: source-control-environments/understand/git.md
+          - รูปแบบ Branch: source-control-environments/understand/patterns.md
+        - การตั้งค่า: source-control-environments/setup.md
+        - การใช้งาน:
           - source-control-environments/using/index.md
-          - Push and pull: source-control-environments/using/push-pull.md
-          - Copy work between environments: source-control-environments/using/copy-work.md
-          - Manage variables: source-control-environments/using/manage-variables.md
-        - "Tutorial: Create environments with source control": source-control-environments/create-environments.md
-      - External secrets: external-secrets.md
-      - Log streaming: log-streaming.md
+          - Push และ Pull: source-control-environments/using/push-pull.md
+          - คัดลอกงานระหว่าง Environments: source-control-environments/using/copy-work.md
+          - จัดการ Variables: source-control-environments/using/manage-variables.md
+        - "บทช่วยสอน: สร้าง Environments ด้วย Source Control": source-control-environments/create-environments.md
+      - Secrets ภายนอก: external-secrets.md
+      - การสตรีม Log: log-streaming.md
       - Insights: insights.md
-      - License key: license-key.md
-    - Releases:
-      - Release notes:
+      - License Key: license-key.md
+    - รุ่นที่เผยแพร่ (Releases):
+      - บันทึกประจำรุ่น (Release Notes):
         - 1.x: release-notes.md
         - 0.x: release-notes/0-x.md
-      - v1.0 migration guide: 1-0-migration-checklist.md
-    - Help and community:
-      - Where to get help: help-community/help.md
-      - Contributing: help-community/contributing.md
-    - Licenses and privacy:
-      - Privacy and security:
+      - คู่มือการย้ายไป v1.0: 1-0-migration-checklist.md
+    - ความช่วยเหลือและชุมชน:
+      - ช่องทางขอความช่วยเหลือ: help-community/help.md
+      - การมีส่วนร่วม: help-community/contributing.md
+    - Licenses และความเป็นส่วนตัว:
+      - ความเป็นส่วนตัวและความปลอดภัย:
           - privacy-security/index.md
-          - Privacy: privacy-security/privacy.md
-          - Security: https://n8n.io/legal/#security
-          - Incident response: privacy-security/incident-response.md
-          - What you can do: privacy-security/what-you-can-do.md
-      - Sustainable use license: sustainable-use-license.md
-  - Integrations:
+          - ความเป็นส่วนตัว: privacy-security/privacy.md
+          - ความปลอดภัย: https://n8n.io/legal/#security
+          - การตอบสนองต่อเหตุการณ์: privacy-security/incident-response.md
+          - สิ่งที่คุณทำได้: privacy-security/what-you-can-do.md
+      - Sustainable Use License: sustainable-use-license.md
+  - การเชื่อมต่อ (Integrations):
     - integrations/index.md
-    - Built-in nodes:
-      - Node types: integrations/builtin/node-types.md
-      - Core nodes:
+    - Nodes ที่มีมาให้:
+      - ประเภท Node: integrations/builtin/node-types.md
+      - Core Nodes:
         - integrations/builtin/core-nodes/index.md
         - Activation Trigger: integrations/builtin/core-nodes/n8n-nodes-base.activationtrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.aggregate.md
         - integrations/builtin/core-nodes/n8n-nodes-base.aitransform.md
         - Code:
           - Code: integrations/builtin/core-nodes/n8n-nodes-base.code/index.md
-          - Keyboard shortcuts: integrations/builtin/core-nodes/n8n-nodes-base.code/keyboard-shortcuts.md
-          - Common issues: integrations/builtin/core-nodes/n8n-nodes-base.code/common-issues.md
+          - คีย์ลัด: integrations/builtin/core-nodes/n8n-nodes-base.code/keyboard-shortcuts.md
+          - ปัญหาที่พบบ่อย: integrations/builtin/core-nodes/n8n-nodes-base.code/common-issues.md
         - integrations/builtin/core-nodes/n8n-nodes-base.comparedatasets.md
         - integrations/builtin/core-nodes/n8n-nodes-base.compression.md
         - Chat Trigger:
           - Chat Trigger: integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/index.md
-          - Common issues: integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/common-issues.md
+          - ปัญหาที่พบบ่อย: integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/common-issues.md
         - integrations/builtin/core-nodes/n8n-nodes-base.converttofile.md
         - integrations/builtin/core-nodes/n8n-nodes-base.crypto.md
         - integrations/builtin/core-nodes/n8n-nodes-base.datetime.md
@@ -192,7 +192,7 @@ nav:
         - Error Trigger: integrations/builtin/core-nodes/n8n-nodes-base.errortrigger.md
         - Execute Command:
           - Execute Command: integrations/builtin/core-nodes/n8n-nodes-base.executecommand/index.md
-          - Common issues: integrations/builtin/core-nodes/n8n-nodes-base.executecommand/common-issues.md
+          - ปัญหาที่พบบ่อย: integrations/builtin/core-nodes/n8n-nodes-base.executecommand/common-issues.md
         - integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow.md
         - Execute Sub-workflow Trigger: integrations/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.executiondata.md
@@ -204,7 +204,7 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.html.md
         - HTTP Request:
           - HTTP Request: integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md
-          - Common issues: integrations/builtin/core-nodes/n8n-nodes-base.httprequest/common-issues.md
+          - ปัญหาที่พบบ่อย: integrations/builtin/core-nodes/n8n-nodes-base.httprequest/common-issues.md
         - integrations/builtin/core-nodes/n8n-nodes-base.if.md
         - integrations/builtin/core-nodes/n8n-nodes-base.jwt.md
         - integrations/builtin/core-nodes/n8n-nodes-base.ldap.md
@@ -223,14 +223,14 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md
         - Remove Duplicates:
           - integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/index.md
-          - Templates and examples: integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/templates-and-examples.md
+          - Templates และตัวอย่าง: integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/templates-and-examples.md
         - integrations/builtin/core-nodes/n8n-nodes-base.renamekeys.md
         - integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook.md
         - integrations/builtin/core-nodes/n8n-nodes-base.rssfeedread.md
         - RSS Feed Trigger: integrations/builtin/core-nodes/n8n-nodes-base.rssfeedreadtrigger.md
         - Schedule Trigger:
           - Schedule Trigger: integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/index.md
-          - Common issues: integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/common-issues.md
+          - ปัญหาที่พบบ่อย: integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/common-issues.md
         - integrations/builtin/core-nodes/n8n-nodes-base.sendemail.md
         - integrations/builtin/core-nodes/n8n-nodes-base.sort.md
         - integrations/builtin/core-nodes/n8n-nodes-base.splitout.md
@@ -243,8 +243,8 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.wait.md
         - Webhook:
           - integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md
-          - Workflow development: integrations/builtin/core-nodes/n8n-nodes-base.webhook/workflow-development.md
-          - Common issues: integrations/builtin/core-nodes/n8n-nodes-base.webhook/common-issues.md
+          - การพัฒนา Workflow: integrations/builtin/core-nodes/n8n-nodes-base.webhook/workflow-development.md
+          - ปัญหาที่พบบ่อย: integrations/builtin/core-nodes/n8n-nodes-base.webhook/common-issues.md
         - Workflow Trigger: integrations/builtin/core-nodes/n8n-nodes-base.workflowtrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.xml.md
       - Actions:
@@ -256,7 +256,7 @@ nav:
         - Agile CRM: integrations/builtin/app-nodes/n8n-nodes-base.agilecrm.md
         - Airtable:
           - Airtable: integrations/builtin/app-nodes/n8n-nodes-base.airtable/index.md
-          - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.airtable/common-issues.md
+          - ปัญหาที่พบบ่อย: integrations/builtin/app-nodes/n8n-nodes-base.airtable/common-issues.md
         - Airtop: integrations/builtin/app-nodes/n8n-nodes-base.airtop.md
         - AMQP Sender: integrations/builtin/app-nodes/n8n-nodes-base.amqp.md
         - APITemplate.io: integrations/builtin/app-nodes/n8n-nodes-base.apitemplateio.md
@@ -308,7 +308,7 @@ nav:
         - DHL: integrations/builtin/app-nodes/n8n-nodes-base.dhl.md
         - Discord:
           - Discord: integrations/builtin/app-nodes/n8n-nodes-base.discord/index.md
-          - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.discord/common-issues.md
+          - ปัญหาที่พบบ่อย: integrations/builtin/app-nodes/n8n-nodes-base.discord/common-issues.md
         - Discourse: integrations/builtin/app-nodes/n8n-nodes-base.discourse.md
         - Disqus: integrations/builtin/app-nodes/n8n-nodes-base.disqus.md
         - Drift: integrations/builtin/app-nodes/n8n-nodes-base.drift.md
@@ -331,11 +331,11 @@ nav:
         - GitLab: integrations/builtin/app-nodes/n8n-nodes-base.gitlab.md
         - Gmail:
           - Gmail: integrations/builtin/app-nodes/n8n-nodes-base.gmail/index.md
-          - Draft operations: integrations/builtin/app-nodes/n8n-nodes-base.gmail/draft-operations.md
-          - Label operations: integrations/builtin/app-nodes/n8n-nodes-base.gmail/label-operations.md
-          - Message operations: integrations/builtin/app-nodes/n8n-nodes-base.gmail/message-operations.md
-          - Thread operations: integrations/builtin/app-nodes/n8n-nodes-base.gmail/thread-operations.md
-          - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.gmail/common-issues.md
+          - การดำเนินการกับ Draft: integrations/builtin/app-nodes/n8n-nodes-base.gmail/draft-operations.md
+          - การดำเนินการกับ Label: integrations/builtin/app-nodes/n8n-nodes-base.gmail/label-operations.md
+          - การดำเนินการกับ Message: integrations/builtin/app-nodes/n8n-nodes-base.gmail/message-operations.md
+          - การดำเนินการกับ Thread: integrations/builtin/app-nodes/n8n-nodes-base.gmail/thread-operations.md
+          - ปัญหาที่พบบ่อย: integrations/builtin/app-nodes/n8n-nodes-base.gmail/common-issues.md
         - Gong: integrations/builtin/app-nodes/n8n-nodes-base.gong.md
         - Google Ads: integrations/builtin/app-nodes/n8n-nodes-base.googleads.md
         - Google Analytics: integrations/builtin/app-nodes/n8n-nodes-base.googleanalytics.md
@@ -344,8 +344,8 @@ nav:
         - Google Business Profile: integrations/builtin/app-nodes/n8n-nodes-base.googlebusinessprofile.md
         - Google Calendar:
           - Google Calendar: integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/index.md
-          - Calendar operations: integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/calendar-operations.md
-          - Event operations: integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/event-operations.md
+          - การดำเนินการกับ Calendar: integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/calendar-operations.md
+          - การดำเนินการกับ Event: integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/event-operations.md
         - Google Chat: integrations/builtin/app-nodes/n8n-nodes-base.googlechat.md
         - Google Cloud Firestore: integrations/builtin/app-nodes/n8n-nodes-base.googlecloudfirestore.md
         - Google Cloud Natural Language: integrations/builtin/app-nodes/n8n-nodes-base.googlecloudnaturallanguage.md
@@ -355,17 +355,17 @@ nav:
         - Google Docs: integrations/builtin/app-nodes/n8n-nodes-base.googledocs.md
         - Google Drive:
           - Google Drive: integrations/builtin/app-nodes/n8n-nodes-base.googledrive/index.md
-          - File operations: integrations/builtin/app-nodes/n8n-nodes-base.googledrive/file-operations.md
-          - File and folder operations: integrations/builtin/app-nodes/n8n-nodes-base.googledrive/file-folder-operations.md
-          - Folder operations: integrations/builtin/app-nodes/n8n-nodes-base.googledrive/folder-operations.md
-          - Shared drive operations: integrations/builtin/app-nodes/n8n-nodes-base.googledrive/shared-drive-operations.md
-          - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.googledrive/common-issues.md
+          - การดำเนินการกับ File: integrations/builtin/app-nodes/n8n-nodes-base.googledrive/file-operations.md
+          - การดำเนินการกับ File และ Folder: integrations/builtin/app-nodes/n8n-nodes-base.googledrive/file-folder-operations.md
+          - การดำเนินการกับ Folder: integrations/builtin/app-nodes/n8n-nodes-base.googledrive/folder-operations.md
+          - การดำเนินการกับ Shared Drive: integrations/builtin/app-nodes/n8n-nodes-base.googledrive/shared-drive-operations.md
+          - ปัญหาที่พบบ่อย: integrations/builtin/app-nodes/n8n-nodes-base.googledrive/common-issues.md
         - Google Perspective: integrations/builtin/app-nodes/n8n-nodes-base.googleperspective.md
         - Google Sheets:
           - Google Sheets: integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/index.md
-          - Document operations: integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/document-operations.md
-          - Sheet within Document operations: integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/sheet-operations.md
-          - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/common-issues.md
+          - การดำเนินการกับ Document: integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/document-operations.md
+          - การดำเนินการกับ Sheet ภายใน Document: integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/sheet-operations.md
+          - ปัญหาที่พบบ่อย: integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/common-issues.md
         - Google Slides: integrations/builtin/app-nodes/n8n-nodes-base.googleslides.md
         - Google Tasks: integrations/builtin/app-nodes/n8n-nodes-base.googletasks.md
         - Google Translate: integrations/builtin/app-nodes/n8n-nodes-base.googletranslate.md
@@ -431,7 +431,7 @@ nav:
         - MSG91: integrations/builtin/app-nodes/n8n-nodes-base.msg91.md
         - MySQL:
           - MySQL: integrations/builtin/app-nodes/n8n-nodes-base.mysql/index.md
-          - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.mysql/common-issues.md
+          - ปัญหาที่พบบ่อย: integrations/builtin/app-nodes/n8n-nodes-base.mysql/common-issues.md
         - Customer Datastore (n8n Training): integrations/builtin/app-nodes/n8n-nodes-base.n8ntrainingcustomerdatastore.md
         - Customer Messenger (n8n Training): integrations/builtin/app-nodes/n8n-nodes-base.n8ntrainingcustomermessenger.md
         - NASA: integrations/builtin/app-nodes/n8n-nodes-base.nasa.md
@@ -441,7 +441,7 @@ nav:
         - NocoDB: integrations/builtin/app-nodes/n8n-nodes-base.nocodb.md
         - Notion:
           - Notion: integrations/builtin/app-nodes/n8n-nodes-base.notion/index.md
-          - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.notion/common-issues.md
+          - ปัญหาที่พบบ่อย: integrations/builtin/app-nodes/n8n-nodes-base.notion/common-issues.md
         - npm: integrations/builtin/app-nodes/n8n-nodes-base.npm.md
         - Odoo: integrations/builtin/app-nodes/n8n-nodes-base.odoo.md
         - Okta: integrations/builtin/app-nodes/n8n-nodes-base.okta.md
@@ -449,12 +449,12 @@ nav:
         - Onfleet: integrations/builtin/app-nodes/n8n-nodes-base.onfleet.md
         - OpenAI:
           - OpenAI: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/index.md
-          - Assistant operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/assistant-operations.md
-          - Audio operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/audio-operations.md
-          - File operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/file-operations.md
-          - Image operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/image-operations.md
-          - Text operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/text-operations.md
-          - Common issues: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/common-issues.md
+          - การดำเนินการกับ Assistant: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/assistant-operations.md
+          - การดำเนินการกับ Audio: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/audio-operations.md
+          - การดำเนินการกับ File: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/file-operations.md
+          - การดำเนินการกับ Image: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/image-operations.md
+          - การดำเนินการกับ Text: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/text-operations.md
+          - ปัญหาที่พบบ่อย: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/common-issues.md
         - OpenThesaurus: integrations/builtin/app-nodes/n8n-nodes-base.openthesaurus.md
         - OpenWeatherMap: integrations/builtin/app-nodes/n8n-nodes-base.openweathermap.md
         - Oura: integrations/builtin/app-nodes/n8n-nodes-base.oura.md
@@ -469,7 +469,7 @@ nav:
         - PostBin: integrations/builtin/app-nodes/n8n-nodes-base.postbin.md
         - Postgres:
           - Postgres: integrations/builtin/app-nodes/n8n-nodes-base.postgres/index.md
-          - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.postgres/common-issues.md
+          - ปัญหาที่พบบ่อย: integrations/builtin/app-nodes/n8n-nodes-base.postgres/common-issues.md
         - PostHog: integrations/builtin/app-nodes/n8n-nodes-base.posthog.md
         - ProfitWell: integrations/builtin/app-nodes/n8n-nodes-base.profitwell.md
         - Pushbullet: integrations/builtin/app-nodes/n8n-nodes-base.pushbullet.md
@@ -510,17 +510,17 @@ nav:
         - Stripe: integrations/builtin/app-nodes/n8n-nodes-base.stripe.md
         - Supabase:
           - Supabase: integrations/builtin/app-nodes/n8n-nodes-base.supabase/index.md
-          - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.supabase/common-issues.md
+          - ปัญหาที่พบบ่อย: integrations/builtin/app-nodes/n8n-nodes-base.supabase/common-issues.md
         - SyncroMSP: integrations/builtin/app-nodes/n8n-nodes-base.syncromsp.md
         - Taiga: integrations/builtin/app-nodes/n8n-nodes-base.taiga.md
         - Tapfiliate: integrations/builtin/app-nodes/n8n-nodes-base.tapfiliate.md
         - Telegram:
           - integrations/builtin/app-nodes/n8n-nodes-base.telegram/index.md
-          - Chat operations: integrations/builtin/app-nodes/n8n-nodes-base.telegram/chat-operations.md
-          - Callback operations: integrations/builtin/app-nodes/n8n-nodes-base.telegram/callback-operations.md
-          - File operations: integrations/builtin/app-nodes/n8n-nodes-base.telegram/file-operations.md
-          - Message operations: integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations.md
-          - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.telegram/common-issues.md
+          - การดำเนินการกับ Chat: integrations/builtin/app-nodes/n8n-nodes-base.telegram/chat-operations.md
+          - การดำเนินการกับ Callback: integrations/builtin/app-nodes/n8n-nodes-base.telegram/callback-operations.md
+          - การดำเนินการกับ File: integrations/builtin/app-nodes/n8n-nodes-base.telegram/file-operations.md
+          - การดำเนินการกับ Message: integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations.md
+          - ปัญหาที่พบบ่อย: integrations/builtin/app-nodes/n8n-nodes-base.telegram/common-issues.md
         - TheHive: integrations/builtin/app-nodes/n8n-nodes-base.thehive.md
         - TheHive 5: integrations/builtin/app-nodes/n8n-nodes-base.thehive5.md
         - TimescaleDB: integrations/builtin/app-nodes/n8n-nodes-base.timescaledb.md
@@ -543,7 +543,7 @@ nav:
         - Wekan: integrations/builtin/app-nodes/n8n-nodes-base.wekan.md
         - WhatsApp Business Cloud:
           - WhatsApp Business Cloud: integrations/builtin/app-nodes/n8n-nodes-base.whatsapp/index.md
-          - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.whatsapp/common-issues.md
+          - ปัญหาที่พบบ่อย: integrations/builtin/app-nodes/n8n-nodes-base.whatsapp/common-issues.md
         - Wise: integrations/builtin/app-nodes/n8n-nodes-base.wise.md
         - WooCommerce: integrations/builtin/app-nodes/n8n-nodes-base.woocommerce.md
         - WordPress: integrations/builtin/app-nodes/n8n-nodes-base.wordpress.md
@@ -603,16 +603,16 @@ nav:
         - GitLab Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.gitlabtrigger.md
         - Gmail Trigger:
           - integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/index.md
-          - Poll Mode options: integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/poll-mode-options.md
-          - Common issues: integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/common-issues.md
+          - ตัวเลือก Poll Mode: integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/poll-mode-options.md
+          - ปัญหาที่พบบ่อย: integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/common-issues.md
         - Google Calendar Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.googlecalendartrigger.md
         - Google Drive Trigger:
           - Google Drive Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.googledrivetrigger/index.md
-          - Common issues: integrations/builtin/trigger-nodes/n8n-nodes-base.googledrivetrigger/common-issues.md
+          - ปัญหาที่พบบ่อย: integrations/builtin/trigger-nodes/n8n-nodes-base.googledrivetrigger/common-issues.md
         - Google Business Profile Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.googlebusinessprofiletrigger.md
         - Google Sheets Trigger:
           - Google Sheets Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.googlesheetstrigger/index.md
-          - Common issues: integrations/builtin/trigger-nodes/n8n-nodes-base.googlesheetstrigger/common-issues.md
+          - ปัญหาที่พบบ่อย: integrations/builtin/trigger-nodes/n8n-nodes-base.googlesheetstrigger/common-issues.md
         - Gumroad Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.gumroadtrigger.md
         - Help Scout Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.helpscouttrigger.md
         - Hubspot Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger.md
@@ -652,7 +652,7 @@ nav:
         - Taiga Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.taigatrigger.md
         - Telegram Trigger:
           - Telegram Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/index.md
-          - Common issues: integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/common-issues.md
+          - ปัญหาที่พบบ่อย: integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/common-issues.md
         - TheHive 5 Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.thehive5trigger.md
         - TheHive Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.thehivetrigger.md
         - Toggl Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.toggltrigger.md
@@ -680,11 +680,11 @@ nav:
             - ReAct Agent: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/react-agent.md
             - SQL Agent: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/sql-agent.md
             - Tools Agent: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent.md
-            - Common issues: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/common-issues.md
+            - ปัญหาที่พบบ่อย: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/common-issues.md
           - Basic LLM Chain: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainllm.md
           - Question and Answer Chain:
             - Question and Answer Chain: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa/index.md
-            - Common issues: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa/common-issues.md
+            - ปัญหาที่พบบ่อย: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa/common-issues.md
           - Summarization Chain: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainsummarization.md
           - Information Extractor: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.information-extractor.md
           - Text Classifier: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.text-classifier.md
@@ -709,7 +709,7 @@ nav:
           - Embeddings Google PaLM: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglepalm.md
           - Embeddings Google Vertex: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglevertex.md
           - Embeddings HuggingFace Inference: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingshuggingfaceinference.md
-          - Embeddings Mistral Cloud: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsmistralcloud.md
+          - Embeddings Mistral Cloud: integrations/builtin/cluster-nodes/sub-nodes/n8n-n
           - Embeddings Ollama: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsollama.md
           - Embeddings OpenAI: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsopenai.md
           - Anthropic Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic.md
@@ -1127,13 +1127,13 @@ nav:
         - integrations/creating-nodes/deploy/index.md
         - Submit community nodes: integrations/creating-nodes/deploy/submit-community-nodes.md
         - Install private nodes: integrations/creating-nodes/deploy/install-private-nodes.md
-  - Hosting n8n:
-    - Overview: hosting/index.md
-    - Community vs Enterprise: hosting/community-edition-features.md
-    - Installation:
+  - การโฮสต์ n8n (Hosting):
+    - ภาพรวม: hosting/index.md
+    - Community เทียบกับ Enterprise: hosting/community-edition-features.md
+    - การติดตั้ง:
       - npm: hosting/installation/npm.md
       - Docker: hosting/installation/docker.md
-      - Server setups:
+      - การตั้งค่าเซิร์ฟเวอร์:
         - hosting/installation/server-setups/index.md
         - Digital Ocean: hosting/installation/server-setups/digital-ocean.md
         - Heroku: hosting/installation/server-setups/heroku.md
@@ -1142,92 +1142,92 @@ nav:
         - Azure: hosting/installation/server-setups/azure.md
         - Google Cloud: hosting/installation/server-setups/google-cloud.md
         - Docker Compose: hosting/installation/server-setups/docker-compose.md
-      - Updating: hosting/installation/updating.md
-    - Configuration:
-      - Environment variables:
-        - Environment variables overview : hosting/configuration/environment-variables/index.md
-        - Binary data: hosting/configuration/environment-variables/binary-data.md
+      - การอัปเดต: hosting/installation/updating.md
+    - การกำหนดค่า (Configuration):
+      - Environment Variables:
+        - ภาพรวม Environment Variables : hosting/configuration/environment-variables/index.md
+        - ข้อมูล Binary: hosting/configuration/environment-variables/binary-data.md
         - Credentials: hosting/configuration/environment-variables/credentials.md
-        - Database: hosting/configuration/environment-variables/database.md
+        - ฐานข้อมูล: hosting/configuration/environment-variables/database.md
         - Deployment: hosting/configuration/environment-variables/deployment.md
         - Endpoints: hosting/configuration/environment-variables/endpoints.md
-        - Executions: hosting/configuration/environment-variables/executions.md
-        - External data storage: hosting/configuration/environment-variables/external-data-storage.md
-        - External hooks: hosting/configuration/environment-variables/external-hooks.md
-        - External secrets: hosting/configuration/environment-variables/external-secrets.md
+        - การรัน (Executions): hosting/configuration/environment-variables/executions.md
+        - ที่เก็บข้อมูลภายนอก: hosting/configuration/environment-variables/external-data-storage.md
+        - Hooks ภายนอก: hosting/configuration/environment-variables/external-hooks.md
+        - Secrets ภายนอก: hosting/configuration/environment-variables/external-secrets.md
         - Insights: hosting/configuration/environment-variables/insights.md
         - Logs: hosting/configuration/environment-variables/logs.md
         - License: hosting/configuration/environment-variables/licenses.md
         - Nodes: hosting/configuration/environment-variables/nodes.md
-        - Queue mode: hosting/configuration/environment-variables/queue-mode.md
-        - Security: hosting/configuration/environment-variables/security.md
-        - Source control: hosting/configuration/environment-variables/source-control.md
-        - Task runners: hosting/configuration/environment-variables/task-runners.md
-        - Timezone and localization: hosting/configuration/environment-variables/timezone-localization.md
-        - User management and 2FA: hosting/configuration/environment-variables/user-management-smtp-2fa.md
+        - Queue Mode: hosting/configuration/environment-variables/queue-mode.md
+        - ความปลอดภัย: hosting/configuration/environment-variables/security.md
+        - Source Control: hosting/configuration/environment-variables/source-control.md
+        - Task Runners: hosting/configuration/environment-variables/task-runners.md
+        - Timezone และ Localization: hosting/configuration/environment-variables/timezone-localization.md
+        - การจัดการผู้ใช้และ 2FA: hosting/configuration/environment-variables/user-management-smtp-2fa.md
         - Workflows: hosting/configuration/environment-variables/workflows.md
-      - Configuration methods: hosting/configuration/configuration-methods.md
-      - Configuration examples:
+      - วิธีการกำหนดค่า: hosting/configuration/configuration-methods.md
+      - ตัวอย่างการกำหนดค่า:
         - hosting/configuration/configuration-examples/index.md
-        - Isolate n8n: hosting/configuration/configuration-examples/isolation.md
-        - Configure the Base URL: hosting/configuration/configuration-examples/base-url.md
-        - Configure custom SSL certificate authorities: hosting/configuration/configuration-examples/custom-certificate-authority.md
-        - Set a custom encryption key: hosting/configuration/configuration-examples/encryption-key.md
-        - Configure workflow timeouts: hosting/configuration/configuration-examples/execution-timeout.md
-        - Specify custom nodes location: hosting/configuration/configuration-examples/custom-nodes-location.md
-        - Enable modules in Code node: hosting/configuration/configuration-examples/modules-in-code-node.md
-        - Set the timezone: hosting/configuration/configuration-examples/time-zone.md
-        - Specify user folder path: hosting/configuration/configuration-examples/user-folder.md
-        - Configure webhook URLs with reverse proxy: hosting/configuration/configuration-examples/webhook-url.md
-        - Enable Prometheus metrics: hosting/configuration/configuration-examples/prometheus.md
-      - Supported databases and settings: hosting/configuration/supported-databases-settings.md
-      - Task runners: hosting/configuration/task-runners.md
-      - User management: hosting/configuration/user-management-self-hosted.md
-    - Logging and monitoring:
-      - Logging: hosting/logging-monitoring/logging.md
-      - Monitoring: hosting/logging-monitoring/monitoring.md
-      - Security audit: hosting/securing/security-audit.md
-    - Scaling and performance:
-      - Overview: hosting/scaling/overview.md
-      - Performance and benchmarking: hosting/scaling/performance-benchmarking.md
-      - Configuring queue mode: hosting/scaling/queue-mode.md
-      - Concurrency control: hosting/scaling/concurrency-control.md
-      - Execution data: hosting/scaling/execution-data.md
-      - Binary data: hosting/scaling/binary-data.md
-      - External storage for binary data: hosting/scaling/external-storage.md
-      - Memory-related errors: hosting/scaling/memory-errors.md
-    - Securing n8n:
-      - Overview: hosting/securing/overview.md
-      - Set up SSL: hosting/securing/set-up-ssl.md
-      - Set up SSO: hosting/securing/set-up-sso.md
-      - Security audit: hosting/securing/security-audit.md
-      - Disable the API: hosting/securing/disable-public-api.md
-      - Opt out of data collection: hosting/securing/telemetry-opt-out.md
-      - Blocking nodes: hosting/securing/blocking-nodes.md
-      - Hardening task runners: hosting/securing/hardening-task-runners.md
+        - แยก n8n (Isolate): hosting/configuration/configuration-examples/isolation.md
+        - กำหนดค่า Base URL: hosting/configuration/configuration-examples/base-url.md
+        - กำหนดค่า Custom SSL Certificate Authorities: hosting/configuration/configuration-examples/custom-certificate-authority.md
+        - ตั้งค่า Encryption Key แบบกำหนดเอง: hosting/configuration/configuration-examples/encryption-key.md
+        - กำหนดค่า Timeout ของ Workflow: hosting/configuration/configuration-examples/execution-timeout.md
+        - ระบุตำแหน่ง Custom Nodes: hosting/configuration/configuration-examples/custom-nodes-location.md
+        - เปิดใช้งาน Modules ใน Code Node: hosting/configuration/configuration-examples/modules-in-code-node.md
+        - ตั้งค่า Timezone: hosting/configuration/configuration-examples/time-zone.md
+        - ระบุพาธโฟลเดอร์ผู้ใช้: hosting/configuration/configuration-examples/user-folder.md
+        - กำหนดค่า Webhook URLs ด้วย Reverse Proxy: hosting/configuration/configuration-examples/webhook-url.md
+        - เปิดใช้งาน Prometheus Metrics: hosting/configuration/configuration-examples/prometheus.md
+      - ฐานข้อมูลและการตั้งค่าที่รองรับ: hosting/configuration/supported-databases-settings.md
+      - Task Runners: hosting/configuration/task-runners.md
+      - การจัดการผู้ใช้ (สำหรับ Self-Hosted): hosting/configuration/user-management-self-hosted.md
+    - การบันทึก Log และการติดตาม (Monitoring):
+      - การบันทึก Log: hosting/logging-monitoring/logging.md
+      - การติดตาม (Monitoring): hosting/logging-monitoring/monitoring.md
+      - การตรวจสอบความปลอดภัย (Security Audit): hosting/securing/security-audit.md
+    - การขยายระบบและประสิทธิภาพ (Scaling):
+      - ภาพรวม: hosting/scaling/overview.md
+      - ประสิทธิภาพและการวัดผล (Benchmarking): hosting/scaling/performance-benchmarking.md
+      - การกำหนดค่า Queue Mode: hosting/scaling/queue-mode.md
+      - การควบคุมการทำงานพร้อมกัน (Concurrency): hosting/scaling/concurrency-control.md
+      - ข้อมูลการรัน (Execution Data): hosting/scaling/execution-data.md
+      - ข้อมูล Binary: hosting/scaling/binary-data.md
+      - ที่เก็บข้อมูลภายนอกสำหรับข้อมูล Binary: hosting/scaling/external-storage.md
+      - ข้อผิดพลาดเกี่ยวกับหน่วยความจำ: hosting/scaling/memory-errors.md
+    - การรักษาความปลอดภัย n8n:
+      - ภาพรวม: hosting/securing/overview.md
+      - ตั้งค่า SSL: hosting/securing/set-up-ssl.md
+      - ตั้งค่า SSO: hosting/securing/set-up-sso.md
+      - การตรวจสอบความปลอดภัย (Security Audit): hosting/securing/security-audit.md
+      - ปิดใช้งาน API: hosting/securing/disable-public-api.md
+      - เลือกไม่เข้าร่วมการเก็บข้อมูล: hosting/securing/telemetry-opt-out.md
+      - การบล็อก Nodes: hosting/securing/blocking-nodes.md
+      - การเพิ่มความแข็งแกร่งให้ Task Runners: hosting/securing/hardening-task-runners.md
     - Starter Kits:
       - AI Starter Kit: hosting/starter-kits/ai-starter-kit.md
-    - Architecture:
-      - Overview: hosting/architecture/overview.md
-      - Database structure: hosting/architecture/database-structure.md
-    - Using the CLI:
-      - CLI commands: hosting/cli-commands.md
-  - Code in n8n:
+    - สถาปัตยกรรม:
+      - ภาพรวม: hosting/architecture/overview.md
+      - โครงสร้างฐานข้อมูล: hosting/architecture/database-structure.md
+    - การใช้งาน CLI:
+      - คำสั่ง CLI: hosting/cli-commands.md
+  - Code ใน n8n:
       - code/index.md
       - Expressions: code/expressions.md
-      - Using the Code node: code/code-node.md
-      - AI coding: code/ai-code.md
-      - Built in methods and variables:
-          - Overview: code/builtin/overview.md
-          - Current node input: code/builtin/current-node-input.md
-          - Output of other nodes: code/builtin/output-other-nodes.md
-          - Date and time: code/builtin/date-time.md
+      - การใช้งาน Code Node: code/code-node.md
+      - การเขียน Code ด้วย AI: code/ai-code.md
+      - Methods และ Variables ที่มีมาให้:
+          - ภาพรวม: code/builtin/overview.md
+          - Input ของ Node ปัจจุบัน: code/builtin/current-node-input.md
+          - Output ของ Node อื่นๆ: code/builtin/output-other-nodes.md
+          - วันที่และเวลา: code/builtin/date-time.md
           - JMESPath: code/builtin/jmespath.md
-          - HTTP node: code/builtin/http-node-variables.md
-          - LangChain Code node: code/builtin/langchain-methods.md
-          - n8n metadata: code/builtin/n8n-metadata.md
-          - Convenience methods: code/builtin/convenience.md
-          - Data transformation functions:
+          - HTTP Node: code/builtin/http-node-variables.md
+          - LangChain Code Node: code/builtin/langchain-methods.md
+          - Metadata ของ n8n: code/builtin/n8n-metadata.md
+          - Convenience Methods: code/builtin/convenience.md
+          - ฟังก์ชันการแปลงข้อมูล:
               - code/builtin/data-transformation-functions/index.md
               - Arrays: code/builtin/data-transformation-functions/arrays.md
               - Booleans: code/builtin/data-transformation-functions/booleans.md
@@ -1235,64 +1235,64 @@ nav:
               - Numbers: code/builtin/data-transformation-functions/numbers.md
               - Objects: code/builtin/data-transformation-functions/objects.md
               - Strings: code/builtin/data-transformation-functions/strings.md
-      - Custom variables:
-          - Create custom variables: code/variables.md
-      - Cookbook:
-          - Handling dates: code/cookbook/luxon.md
-          - Query JSON with JMESPath: code/cookbook/jmespath.md
-          - Built-in methods and variables examples:
+      - Variables แบบกำหนดเอง:
+          - สร้าง Variables แบบกำหนดเอง: code/variables.md
+      - Cookbook (สูตรสำเร็จ):
+          - การจัดการวันที่: code/cookbook/luxon.md
+          - Query JSON ด้วย JMESPath: code/cookbook/jmespath.md
+          - ตัวอย่าง Methods และ Variables ที่มีมาให้:
               - code/cookbook/builtin/index.md
               - execution: code/cookbook/builtin/execution.md
               - getWorkflowStaticData: code/cookbook/builtin/get-workflow-static-data.md
-              - Retrieve linked items from earlier in the workflow: code/cookbook/builtin/itemmatching.md
+              - ดึง Item ที่เชื่อมโยงจากก่อนหน้าใน Workflow: code/cookbook/builtin/itemmatching.md
               - (node-name).all: code/cookbook/builtin/all.md
               - vars: code/cookbook/builtin/vars.md
           - Expressions:
               - code/cookbook/expressions/index.md
-              - Check incoming data: code/cookbook/expressions/check-incoming-data.md
-              - Common issues:  code/cookbook/expressions/common-issues.md
-          - Code node:
+              - ตรวจสอบข้อมูลขาเข้า: code/cookbook/expressions/check-incoming-data.md
+              - ปัญหาที่พบบ่อย:  code/cookbook/expressions/common-issues.md
+          - Code Node:
               - code/cookbook/code-node/index.md
-              - Get number of items returned by last node: code/cookbook/code-node/number-items-last-node.md
-              - Get the binary data buffer: code/cookbook/code-node/get-binary-data-buffer.md
-              - Output to the browser console: code/cookbook/code-node/console-log.md
-          - HTTP Request node:
+              - รับจำนวน Item ที่ส่งคืนโดย Node ล่าสุด: code/cookbook/code-node/number-items-last-node.md
+              - รับ Buffer ข้อมูล Binary: code/cookbook/code-node/get-binary-data-buffer.md
+              - แสดงผลลัพธ์ใน Browser Console: code/cookbook/code-node/console-log.md
+          - HTTP Request Node:
               - code/cookbook/http-node/index.md
               - Pagination: code/cookbook/http-node/pagination.md
-  - Advanced AI:
+  - AI ขั้นสูง:
       - advanced-ai/index.md
-      - "Tutorial: Build an AI workflow in n8n": advanced-ai/intro-tutorial.md
-      - LangChain in n8n:
-          - Overview: advanced-ai/langchain/overview.md
-          - Langchain concepts in n8n: advanced-ai/langchain/langchain-n8n.md
-          - LangChain learning resources: advanced-ai/langchain/langchain-learning-resources.md
-          - Use LangSmith with n8n: advanced-ai/langchain/langsmith.md
-      - Examples and concepts:
-          - Introduction: advanced-ai/examples/introduction.md
-          - What is a chain?: advanced-ai/examples/understand-chains.md
-          - What is an agent?: advanced-ai/examples/understand-agents.md
-          - Agents vs chains example: advanced-ai/examples/agent-chain-comparison.md
-          - What is memory?: advanced-ai/examples/understand-memory.md
-          - What is a tool?: advanced-ai/examples/understand-tools.md
-          - Use Google Sheets as a data source: advanced-ai/examples/data-google-sheets.md
-          - Call an API to fetch data: advanced-ai/examples/api-workflow-tool.md
-          - Set a human fallback for AI workflows: advanced-ai/examples/human-fallback.md
-          - Let AI specify tool parameters: advanced-ai/examples/using-the-fromai-function.md
-          - What is a vector database?: advanced-ai/examples/understand-vector-databases.md
-          - Populate a Pinecone vector database from a website: advanced-ai/examples/vector-store-website.md
+      - "บทช่วยสอน: สร้าง AI Workflow ใน n8n": advanced-ai/intro-tutorial.md
+      - LangChain ใน n8n:
+          - ภาพรวม: advanced-ai/langchain/overview.md
+          - แนวคิด LangChain ใน n8n: advanced-ai/langchain/langchain-n8n.md
+          - แหล่งเรียนรู้ LangChain: advanced-ai/langchain/langchain-learning-resources.md
+          - ใช้ LangSmith กับ n8n: advanced-ai/langchain/langsmith.md
+      - ตัวอย่างและแนวคิด:
+          - บทนำ: advanced-ai/examples/introduction.md
+          - Chain คืออะไร?: advanced-ai/examples/understand-chains.md
+          - Agent คืออะไร?: advanced-ai/examples/understand-agents.md
+          - ตัวอย่างเปรียบเทียบ Agents กับ Chains: advanced-ai/examples/agent-chain-comparison.md
+          - Memory คืออะไร?: advanced-ai/examples/understand-memory.md
+          - Tool คืออะไร?: advanced-ai/examples/understand-tools.md
+          - ใช้ Google Sheets เป็นแหล่งข้อมูล: advanced-ai/examples/data-google-sheets.md
+          - เรียก API เพื่อดึงข้อมูล: advanced-ai/examples/api-workflow-tool.md
+          - ตั้งค่า Human Fallback สำหรับ AI Workflows: advanced-ai/examples/human-fallback.md
+          - ให้ AI ระบุ Parameters ของ Tool: advanced-ai/examples/using-the-fromai-function.md
+          - Vector Database คืออะไร?: advanced-ai/examples/understand-vector-databases.md
+          - เติมข้อมูล Pinecone Vector Database จากเว็บไซต์: advanced-ai/examples/vector-store-website.md
   - API:
       - api/index.md
-      - Authentication: api/authentication.md
+      - การยืนยันตัวตน (Authentication): api/authentication.md
       - Pagination: api/pagination.md
-      - Using the API playground: api/using-api-playground.md
-      - API reference: api/api-reference.md
-  - Embed:
+      - การใช้งาน API Playground: api/using-api-playground.md
+      - การอ้างอิง API: api/api-reference.md
+  - การฝัง (Embed):
       - embed/index.md
-      - Prerequisites: embed/prerequisites.md
+      - ข้อกำหนดเบื้องต้น: embed/prerequisites.md
       - Deployment: embed/deployment.md
-      - Configuration: embed/configuration.md
-      - Workflow management: embed/managing-workflows.md
-      - Workflows templates: embed/workflow-templates.md
+      - การกำหนดค่า (Configuration): embed/configuration.md
+      - การจัดการ Workflow: embed/managing-workflows.md
+      - Templates ของ Workflow: embed/workflow-templates.md
       - White labelling: embed/white-labelling.md
 #  - Feature tests:
 #      - Main features: docs-site-feature-tests/index.md

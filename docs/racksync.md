@@ -1,26 +1,29 @@
+---
+title: "RACKSYNC CO., LTD"
+description: RACKSYNC CO., LTD specializes in cloud infrastructure, DevOps solutions, and system integrations. Discover our innovative technology implementations and managed services.
+contentType: overview
+---
 # RACKSYNC CO., LTD
 
 <div align="center">
-  <img src="https://avatars.githubusercontent.com/u/86172519?s=200&v=4" alt="RACKSYNC Logo" width="200"/>
-  
+  <img src="https://avatars.githubusercontent.com/u/86172519?s=200&v=4" alt="RACKSYNC Logo" width="200"/><br> 
   **Innovative Cloud & Infrastructure Solutions**
 </div>
 
-## Technologies We Work With
+## About Us
 
-<div align="center">
-  
-  ![AWS](https://img.shields.io/badge/-AWS-232F3E?style=flat-square&logo=amazon-aws&logoColor=white)
-  ![GCP](https://img.shields.io/badge/-Google_Cloud-4285F4?style=flat-square&logo=google-cloud&logoColor=white)
-  ![Kubernetes](https://img.shields.io/badge/-Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
-  ![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-  ![Terraform](https://img.shields.io/badge/-Terraform-623CE4?style=flat-square&logo=terraform&logoColor=white)
-  ![Ansible](https://img.shields.io/badge/-Ansible-EE0000?style=flat-square&logo=ansible&logoColor=white)
-  ![GitHub Actions](https://img.shields.io/badge/-GitHub_Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white)
-  ![Prometheus](https://img.shields.io/badge/-Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white)
-  ![Grafana](https://img.shields.io/badge/-Grafana-F46800?style=flat-square&logo=grafana&logoColor=white)
-  
-</div>
+RACKSYNC CO., LTD is a technology company specializing in cloud infrastructure, DevOps solutions, and system integrations. We empower businesses through innovative technology implementations and managed services tailored to meet specific operational needs.
+
+## Our Main Services
+
+- **Cloud Infrastructure Design & Implementation**
+- **DevOps Implementation & Consulting**
+- **System Integration & Architecture**
+- **Kubernetes & Container Orchestration**
+- **Infrastructure as Code (IaC) Solutions**
+- **Automated Deployment Pipelines**
+- **Site Reliability Engineering (SRE)**
+- **Monitoring & Observability Solutions**
 
 ## About Us
 

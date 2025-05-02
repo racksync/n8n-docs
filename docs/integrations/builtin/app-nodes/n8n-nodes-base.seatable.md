@@ -7,12 +7,10 @@ contentType: [integration, reference]
 
 # SeaTable node
 
-Use the SeaTable node to automate work in SeaTable, and integrate SeaTable with other applications. n8n has built-in support for a wide range of SeaTable features, including creating, updating, deleting, updating, and getting rows. 
-
-On this page, you'll find a list of operations the SeaTable node supports and links to more resources.
+ใช้ SeaTable node เพื่อให้การทำงานใน SeaTable เป็นไปโดยอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันอื่น ๆ ได้อย่างราบรื่น. n8n รองรับฟีเจอร์ของ SeaTable หลากหลาย เช่น การสร้าง, อัปเดต, ลบ และดึงข้อมูล rows.
 
 /// note | Credentials
-Refer to [SeaTable credentials](/integrations/builtin/credentials/seatable.md) for guidance on setting up authentication. 
+ดู [SeaTable credentials](/integrations/builtin/credentials/seatable.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations

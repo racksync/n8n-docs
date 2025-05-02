@@ -8,13 +8,12 @@ priority: medium
 
 # Google Analytics node
 
-Use the Google Analytics node to automate work in Google Analytics, and integrate Google Analytics with other applications. n8n has built-in support for a wide range of Google Analytics features, including returning reports and user activities.
+ใช้ Google Analytics node เพื่อทำงานอัตโนมัติใน Google Analytics และเชื่อมต่อ Google Analytics กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Google Analytics หลายอย่าง เช่น การส่งคืน reports และ user activities
 
-
-On this page, you'll find a list of operations the Google Analytics node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Google Analytics node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Google Analytics credentials](/integrations/builtin/credentials/google/index.md) for guidance on setting up authentication. 
+โปรดดู [Google Analytics credentials](/integrations/builtin/credentials/google/index.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
@@ -33,6 +32,6 @@ Refer to [Google Analytics credentials](/integrations/builtin/credentials/google
 
 ## Related resources
 
-Refer to [Google Analytics' documentation](https://developers.google.com/analytics){:target=_blank .external-link} for more information about the service.
+โปรดดู [Google Analytics' documentation](https://developers.google.com/analytics){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Mailchimp node
 
-Use the Mailchimp node to automate work in Mailchimp, and integrate Mailchimp with other applications. n8n has built-in support for a wide range of Mailchimp features, including creating, updating, and deleting campaigns, as well as getting list groups. 
+ใช้ Mailchimp node ในการทำงานอัตโนมัติใน Mailchimp และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ โดย n8n รองรับการสร้าง, อัปเดต, ลบ campaigns รวมถึงการดึงข้อมูล list groups และ members.
 
-On this page, you'll find a list of operations the Mailchimp node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Mailchimp node รองรับและลิงก์ไปยังข้อมูลเพิ่มเติม.
 
 /// note | Credentials
-Refer to [Mailchimp credentials](/integrations/builtin/credentials/mailchimp.md) for guidance on setting up authentication. 
+ดู [Mailchimp credentials](/integrations/builtin/credentials/mailchimp.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations

@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Linear node
 
-Use the Linear node to automate work in Linear, and integrate Linear with other applications. n8n has built-in support for a wide range of Linear features, including creating, updating, deleting, and getting issues. 
+ใช้ Linear node ในการทำงานอัตโนมัติใน Linear และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ โดย n8n รองรับการสร้าง, ลบ, ดึง, และอัปเดต issues.
 
-On this page, you'll find a list of operations the Linear node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Linear node รองรับและลิงก์ไปยังข้อมูลเพิ่มเติม.
 
 /// note | Credentials
-Refer to [Linear credentials](/integrations/builtin/credentials/linear.md) for guidance on setting up authentication. 
+ดู [Linear credentials](/integrations/builtin/credentials/linear.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations

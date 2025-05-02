@@ -12,27 +12,27 @@ priority: high
 <!-- vale from-write-good.Illusions = YES -->
 <!-- vale Vale.Repetition = YES -->
 
-Use this operation to check availability in a calendar in Google Calendar. Refer to [Google Calendar](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/index.md) for more information on the Google Calendar node itself.
+ใช้ operation นี้เพื่อตรวจสอบความพร้อมใช้งานในปฏิทินใน Google Calendar โปรดดู [Google Calendar](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/index.md) สำหรับข้อมูลเพิ่มเติมเกี่ยวกับ Google Calendar node
 
 ## Availability
 
-Use this operation to check if a time-slot is available in a calendar.
+ใช้ operation นี้เพื่อตรวจสอบว่าช่วงเวลาที่ระบุว่างในปฏิทินหรือไม่
 
-Enter these parameters:
+ป้อน parameters เหล่านี้:
 
-- **Credential to connect with**: Create or select an existing [Google Calendar credentials](/integrations/builtin/credentials/google/index.md).
-- **Resource**: Select **Calendar**.
-- **Operation**: Select **Availability**.
-- **Calendar**: Choose a calendar you want to check against. Select **From list** to choose the title from the dropdown list or **By ID** to enter a calendar ID.
-- **Start Time**: The start time for the time-slot you want to check. By default, uses an expression evaluating to the current time (`{{ $now }}`).
-- **End Time**: The end time for the time-slot you want to check. By default, uses an expression evaluating to an hour from now (`{{ $now.plus(1, 'hour') }}`).
+- **Credential to connect with**: สร้างหรือเลือก [Google Calendar credentials](/integrations/builtin/credentials/google/index.md) ที่มีอยู่
+- **Resource**: เลือก **Calendar**
+- **Operation**: เลือก **Availability**
+- **Calendar**: เลือกปฏิทินที่คุณต้องการตรวจสอบ เลือก **From list** เพื่อเลือกชื่อจากรายการดรอปดาวน์ หรือ **By ID** เพื่อป้อน calendar ID
+- **Start Time**: เวลาเริ่มต้นสำหรับช่วงเวลาที่คุณต้องการตรวจสอบ โดยค่าเริ่มต้นจะใช้นิพจน์ที่ประเมินเป็นเวลาปัจจุบัน (`{{ $now }}`)
+- **End Time**: เวลาสิ้นสุดสำหรับช่วงเวลาที่คุณต้องการตรวจสอบ โดยค่าเริ่มต้นจะใช้นิพจน์ที่ประเมินเป็นหนึ่งชั่วโมงนับจากนี้ (`{{ $now.plus(1, 'hour') }}`)
 
 ### Options
 
-- **Output Format**: Select the format for the availability information:
-	- **Availability**: Returns if there are already events overlapping with the given time slot or not.
-	- **Booked Slots**: Returns the booked slots.
-	- **RAW**: Returns the RAW data from the API.
-- **Timezone**: The timezone used in the response. By default, uses the n8n timezone.
+- **Output Format**: เลือกรูปแบบสำหรับข้อมูลความพร้อมใช้งาน:
+	- **Availability**: ส่งคืนว่ามี event ที่ทับซ้อนกับช่วงเวลาที่กำหนดอยู่แล้วหรือไม่
+	- **Booked Slots**: ส่งคืนช่วงเวลาที่ถูกจองแล้ว
+	- **RAW**: ส่งคืนข้อมูลดิบ (RAW data) จาก API
+- **Timezone**: ไทม์โซนที่ใช้ในการตอบกลับ โดยค่าเริ่มต้นจะใช้ไทม์โซนของ n8n
 
-Refer to the [Freebusy: query | Google Calendar](https://developers.google.com/calendar/api/v3/reference/freebusy/query){:target=_blank .external-link} API documentation for more information.
+โปรดดูเอกสาร [Freebusy: query | Google Calendar](https://developers.google.com/calendar/api/v3/reference/freebusy/query){:target=_blank .external-link} API สำหรับข้อมูลเพิ่มเติม

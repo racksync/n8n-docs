@@ -8,7 +8,7 @@ priority: medium
 
 # Wikipedia node
 
-The Wikipedia node is a [tool](/glossary.md#ai-tool) that allows an [agent](/glossary.md#ai-agent) to search and return information from Wikipedia.
+Wikipedia node เป็น [tool](/glossary.md#ai-tool) ที่ช่วยให้ [agent](/glossary.md#ai-agent) สามารถค้นหาและดึงข้อมูลจาก Wikipedia ได้
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 

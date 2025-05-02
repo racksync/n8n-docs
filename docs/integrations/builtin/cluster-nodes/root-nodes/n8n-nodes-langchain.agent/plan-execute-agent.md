@@ -8,13 +8,13 @@ priority: critical
 
 # Plan and Execute Agent node
 
-The Plan and Execute Agent is like the [ReAct agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/react-agent.md) but with a focus on planning. It first creates a high-level plan to solve the given task and then executes the plan step by step. This agent is most useful for tasks that require a structured approach and careful planning.
+Plan and Execute Agent คล้ายกับ [ReAct agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/react-agent.md) แต่เน้นที่การวางแผน มันจะสร้างแผนระดับสูงเพื่อแก้ปัญหางานที่กำหนดก่อน แล้วจึงดำเนินการตามแผนทีละขั้นตอน Agent นี้มีประโยชน์ที่สุดสำหรับงานที่ต้องการแนวทางที่มีโครงสร้างและการวางแผนอย่างรอบคอบ
 
-Refer to [AI Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) for more information on the AI Agent node itself.
+อ้างอิง [AI Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) สำหรับข้อมูลเพิ่มเติมเกี่ยวกับ AI Agent node เอง
 
 ## Node parameters
 
-Configure the Plan and Execute Agent using the following parameters.
+กำหนดค่า Plan and Execute Agent โดยใช้ parameters ต่อไปนี้
 
 ### Prompt
 
@@ -26,24 +26,24 @@ Configure the Plan and Execute Agent using the following parameters.
 
 ## Node options
 
-Refine the Plan and Execute Agent node's behavior using these options:
+ปรับแต่งพฤติกรรมของ Plan and Execute Agent node โดยใช้ options เหล่านี้:
 
 ### Human Message Template
 
-Enter a message that n8n will send to the agent during each step execution.
+ป้อนข้อความที่ n8n จะส่งไปยัง agent ในระหว่างการดำเนินการแต่ละขั้นตอน
 
-Available LangChain expressions:
+LangChain expressions ที่มีอยู่:
 
-* `{previous_steps}`: Contains information about the previous steps the agent's already completed.
-* `{current_step}`: Contains information about the current step.
-* `{agent_scratchpad}`: Information to remember for the next iteration.
+* `{previous_steps}`: มีข้อมูลเกี่ยวกับขั้นตอนก่อนหน้าที่ agent ได้ทำเสร็จแล้ว
+* `{current_step}`: มีข้อมูลเกี่ยวกับขั้นตอนปัจจุบัน
+* `{agent_scratchpad}`: ข้อมูลที่ต้องจำสำหรับการวนซ้ำครั้งต่อไป
 
 ## Templates and examples
 
-Refer to the main AI Agent node's [Templates and examples](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md#templates-and-examples) section.
+อ้างอิงส่วน [Templates and examples](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md#templates-and-examples) ของ AI Agent node หลัก
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/common-issues.md).
+สำหรับคำถามหรือปัญหาทั่วไปและแนวทางแก้ไขที่แนะนำ โปรดดูที่ [Common issues](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/common-issues.md)
 
 --8<-- "_glossary/ai-glossary.md"

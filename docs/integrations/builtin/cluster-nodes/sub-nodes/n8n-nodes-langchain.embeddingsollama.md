@@ -8,23 +8,23 @@ priority: medium
 
 # Embeddings Ollama node
 
-Use the Embeddings Ollama node to generate [embeddings](/glossary.md#ai-embedding) for a given text.
+ใช้ Embeddings Ollama node เพื่อสร้าง [embeddings](/glossary.md#ai-embedding) สำหรับข้อความที่กำหนด
 
-On this page, you'll find the node parameters for the Embeddings Ollama node, and links to more resources.
+ในหน้านี้ คุณจะพบพารามิเตอร์ของโหนดสำหรับ Embeddings Ollama node และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/ollama.md).
+คุณสามารถดูข้อมูลการยืนยันตัวตนสำหรับโหนดนี้ได้ [ที่นี่](/integrations/builtin/credentials/ollama.md)
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node parameters
 
-* **Model**: Select the model to use to generate the embedding. Choose from:
+* **Model**: เลือกรุ่น (model) ที่จะใช้สร้าง embedding เลือกจาก:
     * [all-minilm](https://ollama.com/library/all-minilm) (384 Dimensions)
     * [nomic-embed-text](https://ollama.com/library/nomic-embed-text) (768 Dimensions)
 
-Learn more about available models in [Ollama's models documentation](https://ollama.ai/library){:target=_blank .external-link}.
+เรียนรู้เพิ่มเติมเกี่ยวกับรุ่นที่มีให้ใช้งานใน [เอกสารประกอบ models ของ Ollama](https://ollama.ai/library){:target=_blank .external-link}
 
 ## Templates and examples
 
@@ -33,7 +33,7 @@ Learn more about available models in [Ollama's models documentation](https://oll
 
 ## Related resources
 
-Refer to [Langchain's Ollama embeddings documentation](https://js.langchain.com/docs/integrations/text_embedding/ollama/){:target=_blank .external-link} for more information about the service.
+อ้างอิง [เอกสารประกอบ Ollama embeddings ของ Langchain](https://js.langchain.com/docs/integrations/text_embedding/ollama/){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

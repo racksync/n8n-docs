@@ -8,17 +8,17 @@ priority: medium
 
 # Motorhead node
 
-Use the Motorhead node to use Motorhead as a [memory](/glossary.md#ai-memory) server.
+ใช้ Motorhead node เพื่อใช้ Motorhead เป็น [memory](/glossary.md#ai-memory) server
 
-On this page, you'll find a list of operations the Motorhead node supports, and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Motorhead node รองรับ พร้อมลิงก์ไปยัง resource อื่นๆ ที่เกี่ยวข้อง
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/motorhead.md).
+คุณสามารถดูข้อมูลการเชื่อมต่อสำหรับ node นี้ได้ที่ [ที่นี่](/integrations/builtin/credentials/motorhead.md)
 ///
 
 ## Node parameters
 
-* **Session ID**: Enter the ID to use to store the memory in the workflow data.
+* **Session ID**: ใส่ ID ที่จะใช้เก็บ memory ใน workflow data
 
 ## Node reference
 
@@ -26,12 +26,11 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Templates and examples
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
 [[ templatesWidget(page.title, 'motorhead') ]]
 
 ## Related resources
 
-Refer to [LangChain's Motorhead documentation](https://js.langchain.com/docs/integrations/memory/motorhead_memory){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมได้ที่ [LangChain's Motorhead documentation](https://js.langchain.com/docs/integrations/memory/motorhead_memory){:target=_blank .external-link}
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 

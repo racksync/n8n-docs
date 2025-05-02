@@ -8,19 +8,19 @@ priority: critical
 
 # OpenAI Functions Agent node
 
-Use the OpenAI Functions Agent node to use an [OpenAI functions model](https://platform.openai.com/docs/guides/function-calling){:target=_blank .external-link}. These are models that detect when a function should be called and respond with the inputs that should be passed to the function.
+ใช้ OpenAI Functions Agent node เพื่อใช้ [OpenAI functions model](https://platform.openai.com/docs/guides/function-calling){:target=_blank .external-link} เหล่านี้คือ models ที่ตรวจจับว่าเมื่อใดควรเรียกใช้ function และตอบสนองด้วย inputs ที่ควรส่งผ่านไปยัง function นั้น
 
-Refer to [AI Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) for more information on the AI Agent node itself.
+อ้างอิง [AI Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) สำหรับข้อมูลเพิ่มเติมเกี่ยวกับ AI Agent node เอง
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/use-with-chat-trigger.md"
 
 /// note | OpenAI Chat Model required
-You must use the [OpenAI Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/index.md) with this agent.
+คุณต้องใช้ [OpenAI Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/index.md) กับ agent นี้
 ///
 
 ## Node parameters
 
-Configure the OpenAI Functions Agent using the following parameters.
+กำหนดค่า OpenAI Functions Agent โดยใช้ parameters ต่อไปนี้
 
 ### Prompt
 
@@ -32,9 +32,9 @@ Configure the OpenAI Functions Agent using the following parameters.
 
 ## Node options
 
-Refine the OpenAI Functions Agent node's behavior using these options:
+ปรับแต่งพฤติกรรมของ OpenAI Functions Agent node โดยใช้ options เหล่านี้:
 
-### System Message 
+### System Message
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/system-message.md"
 
@@ -48,10 +48,10 @@ Refine the OpenAI Functions Agent node's behavior using these options:
 
 ## Templates and examples
 
-Refer to the main AI Agent node's [Templates and examples](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md#templates-and-examples) section.
+อ้างอิงส่วน [Templates and examples](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md#templates-and-examples) ของ AI Agent node หลัก
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/common-issues.md).
+สำหรับคำถามหรือปัญหาทั่วไปและแนวทางแก้ไขที่แนะนำ โปรดดูที่ [Common issues](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/common-issues.md)
 
 --8<-- "_glossary/ai-glossary.md"

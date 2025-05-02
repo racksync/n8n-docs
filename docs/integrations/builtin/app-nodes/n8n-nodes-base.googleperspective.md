@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Google Perspective node
 
-Use the Google Perspective node to automate work in Google Perspective, and integrate Google Perspective with other applications. n8n has built-in support for a wide range of Google Perspective features, including analyzing comments.
+ใช้ Google Perspective node เพื่อทำงานอัตโนมัติใน Google Perspective และเชื่อมต่อ Google Perspective กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Google Perspective หลายอย่าง เช่น การวิเคราะห์ comments
 
-On this page, you'll find a list of operations the Google Perspective node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Google Perspective node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Google Perspective credentials](/integrations/builtin/credentials/google/index.md) for guidance on setting up authentication. 
+โปรดดู [Google Perspective credentials](/integrations/builtin/credentials/google/index.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations

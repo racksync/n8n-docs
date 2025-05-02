@@ -8,12 +8,12 @@ priority: medium
 
 # YouTube node
 
-Use the YouTube node to automate work in YouTube, and integrate YouTube with other applications. n8n has built-in support for a wide range of YouTube features, including retrieving and updating channels, as well as creating and deleting playlists. 
+ใช้ YouTube node ในการทำงานอัตโนมัติใน YouTube และเชื่อมต่อ YouTube กับแอปพลิเคชันอื่น ๆ. n8n รองรับฟีเจอร์ของ YouTube หลากหลาย เช่น การดึงข้อมูลและปรับปรุง channels รวมถึงการสร้างและลบ playlists.
 
-On this page, you'll find a list of operations the YouTube node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการของ operations ที่ YouTube node รองรับและลิงก์ไปยัง resource เพิ่มเติม.
 
 /// note | Credentials
-Refer to [YouTube credentials](/integrations/builtin/credentials/google/index.md) for guidance on setting up authentication. 
+ดู [YouTube credentials](/integrations/builtin/credentials/google/index.md) สำหรับคำแนะนำในการตั้งค่า authentication. 
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

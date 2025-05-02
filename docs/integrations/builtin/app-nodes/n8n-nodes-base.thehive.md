@@ -7,15 +7,15 @@ contentType: [integration, reference]
 
 # TheHive node
 
-Use the TheHive node to automate work in TheHive, and integrate TheHive with other applications. n8n has built-in support for a wide range of TheHive features, including creating alerts, counting tasks logs, cases, and observables. 
+ใช้ TheHive node เพื่อช่วยให้งานใน TheHive เป็นอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันอื่น ๆ โดย n8n รองรับฟีเจอร์ของ TheHive หลากหลาย เช่น การสร้าง alerts, การนับ log ของ tasks, cases และ observables
 
-On this page, you'll find a list of operations the TheHive node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ TheHive node รองรับ พร้อมทั้งลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | TheHive and TheHive 5
 n8n provides two nodes for TheHive. Use this node (TheHive) if you want to use TheHive's version 3 or 4 API. If you want to use version 5, use [TheHive 5](/integrations/builtin/app-nodes/n8n-nodes-base.thehive5.md).
 ///
 /// note | Credentials
-Refer to [TheHive credentials](/integrations/builtin/credentials/thehive.md) for guidance on setting up authentication. 
+ดู [TheHive credentials](/integrations/builtin/credentials/thehive.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations
@@ -37,9 +37,8 @@ The available operations depend on your API version. To see the operations list,
 
 ## Related resources
 
-n8n provides a trigger node for TheHive. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.thehivetrigger.md).
+n8n มี trigger node สำหรับ TheHive คุณสามารถดูเอกสารเกี่ยวกับ trigger node ได้ที่ [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.thehivetrigger.md).
 
-Refer to TheHive's documentation for more information about the service:
-
+ดูเอกสารของ TheHive สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการ:
 * [Version 3](https://docs.thehive-project.org/thehive/legacy/thehive3/api/){:target=_blank .external-link}
 * [Version 4](https://docs.thehive-project.org/cortex/api/api-guide/){:target=_blank .external-link}

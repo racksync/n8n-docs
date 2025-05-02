@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Cockpit node
 
-Use the Cockpit node to automate work in Cockpit, and integrate Cockpit with other applications. n8n has built-in support for a wide range of Cockpit features, including creating a collection entry, storing data from a form submission, and getting singletons.
+ใช้ Cockpit node เพื่อทำงานอัตโนมัติใน Cockpit และ integrate Cockpit กับแอปพลิเคชันอื่นๆ n8n มีการรองรับในตัวสำหรับฟีเจอร์ต่างๆ ของ Cockpit รวมถึงการสร้าง collection entry, การจัดเก็บข้อมูลจากการส่ง form, และการดึง singletons
 
-On this page, you'll find a list of operations the Cockpit node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Cockpit node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [Cockpit credentials](/integrations/builtin/credentials/cockpit.md) for guidance on setting up authentication. 
+อ้างอิง [Cockpit credentials](/integrations/builtin/credentials/cockpit.md) สำหรับคำแนะนำในการตั้งค่า authentication
 ///
 
 ## Operations

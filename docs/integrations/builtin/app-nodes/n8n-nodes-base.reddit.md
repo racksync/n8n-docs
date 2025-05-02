@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Reddit node
 
-Use the Reddit node to automate work in Reddit, and integrate Reddit with other applications. n8n has built-in support for a wide range of Reddit features, including getting profiles, and users, retrieving post comments and subreddit, as well as submitting, getting, and deleting posts. 
+ใช้ Reddit node ในการอัตโนมัติงานใน Reddit และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ. n8n มีการสนับสนุนฟีเจอร์หลากหลายของ Reddit ไม่ว่าจะเป็นการดึง profiles และ users, การดึง comment ของ post และข้อมูล subreddit รวมทั้งการส่ง, ดึง, และลบ posts.
 
-On this page, you'll find a list of operations the Reddit node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Reddit node รองรับ พร้อมลิงก์ไปยัง resources เพิ่มเติม.
 
 /// note | Credentials
-Refer to [Reddit credentials](/integrations/builtin/credentials/reddit.md) for guidance on setting up authentication. 
+ดู [Reddit credentials](/integrations/builtin/credentials/reddit.md) สำหรับคำแนะนำในการตั้งค่า authentication. 
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

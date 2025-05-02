@@ -7,12 +7,10 @@ contentType: [integration, reference]
 
 # Strapi node
 
-Use the Strapi node to automate work in Strapi, and integrate Strapi with other applications. n8n has built-in support for a wide range of Strapi features, including creating and deleting entries. 
-
-On this page, you'll find a list of operations the Strapi node supports and links to more resources.
+ใช้ Strapi node เพื่อให้การทำงานใน Strapi เป็นไปโดยอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันอื่น ๆ ได้อย่างง่ายดาย. n8n รองรับฟีเจอร์หลากหลายของ Strapi เช่น การสร้างและลบ entries.
 
 /// note | Credentials
-Refer to [Strapi credentials](/integrations/builtin/credentials/strapi.md) for guidance on setting up authentication. 
+ดู [Strapi credentials](/integrations/builtin/credentials/strapi.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations

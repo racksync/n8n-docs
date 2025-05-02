@@ -7,12 +7,10 @@ contentType: [integration, reference]
 
 # Stackby node
 
-Use the Stackby node to automate work in Stackby, and integrate Stackby with other applications. n8n has built-in support for a wide range of Stackby features, including appending, deleting, listing and reading. 
-
-On this page, you'll find a list of operations the Stackby node supports and links to more resources.
+ใช้ Stackby node เพื่อให้การทำงานใน Stackby เป็นไปโดยอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันอื่นๆ ได้อย่างง่ายดาย. n8n รองรับฟีเจอร์ต่างๆ ของ Stackby เช่น การเพิ่ม, ลบ, แสดงรายการ, และอ่านข้อมูล.
 
 /// note | Credentials
-Refer to [Stackby credentials](/integrations/builtin/credentials/stackby.md) for guidance on setting up authentication. 
+ดู [Stackby credentials](/integrations/builtin/credentials/stackby.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations

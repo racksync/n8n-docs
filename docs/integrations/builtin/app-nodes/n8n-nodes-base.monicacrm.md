@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Monica CRM node
 
-Use the Monica CRM node to automate work in Monica CRM, and integrate Monica CRM with other applications. n8n has built-in support for a wide range of Monica CRM features, including creating, updating, deleting, and getting activities, calls, contracts, messages, tasks, and notes. 
+ใช้ Monica CRM node ในการทำงานอัตโนมัติใน Monica CRM และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ โดย n8n รองรับฟีเจอร์ต่าง ๆ ของ Monica CRM เช่น การสร้าง, อัปเดต, ลบ และดึงข้อมูลกิจกรรม, calls, contracts, messages, tasks และ notes.
 
-On this page, you'll find a list of operations the Monica CRM node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Monica CRM node รองรับและลิงก์ไปยังข้อมูลเพิ่มเติม.
 
 /// note | Credentials
-Refer to [Monica CRM credentials](/integrations/builtin/credentials/monicacrm.md) for guidance on setting up authentication. 
+ดู [Monica CRM credentials] สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations

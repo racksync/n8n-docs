@@ -8,12 +8,12 @@ priority: high
 
 # Google Calendar node
 
-Use the Google Calendar node to automate work in Google Calendar, and integrate Google Calendar with other applications. n8n has built-in support for a wide range of Google Calendar features, including adding, retrieving, deleting and updating calendar events.
+ใช้ Google Calendar node เพื่อทำงานอัตโนมัติใน Google Calendar และเชื่อมต่อ Google Calendar กับแอปพลิเคชันอื่นๆ n8n มีการรองรับฟีเจอร์ต่างๆ ของ Google Calendar ในตัวมากมาย รวมถึงการเพิ่ม, ดึงข้อมูล, ลบ และอัปเดต event ในปฏิทิน
 
-On this page, you'll find a list of operations the Google Calendar node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Google Calendar node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [Google Calendar credentials](/integrations/builtin/credentials/google/index.md) for guidance on setting up authentication. 
+โปรดดู [Google Calendar credentials](/integrations/builtin/credentials/google/index.md) สำหรับคำแนะนำในการตั้งค่าการยืนยันตัวตน
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
@@ -21,13 +21,13 @@ Refer to [Google Calendar credentials](/integrations/builtin/credentials/google/
 ## Operations
 
 * **Calendar**
-    * [**Availability**](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/calendar-operations.md#availability): If a time-slot is available in a calendar
+    * [**Availability**](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/calendar-operations.md#availability): ตรวจสอบว่าช่วงเวลานั้นว่างในปฏิทินหรือไม่
 * **Event**
-    * [**Create**](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/event-operations.md#create): Add an event to calendar
-    * [**Delete**](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/event-operations.md#delete): Delete an event
-    * [**Get**](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/event-operations.md#get): Retrieve an event
-    * [**Get Many**](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/event-operations.md#get-many): Retrieve all events from a calendar
-    * [**Update**](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/event-operations.md#update): Update an event
+    * [**Create**](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/event-operations.md#create): เพิ่ม event ลงในปฏิทิน
+    * [**Delete**](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/event-operations.md#delete): ลบ event
+    * [**Get**](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/event-operations.md#get): ดึงข้อมูล event
+    * [**Get Many**](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/event-operations.md#get-many): ดึงข้อมูล event ทั้งหมดจากปฏิทิน
+    * [**Update**](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/event-operations.md#update): อัปเดต event
 
 ## Templates and examples
 
@@ -36,8 +36,8 @@ Refer to [Google Calendar credentials](/integrations/builtin/credentials/google/
 
 ## Related resources
 
-n8n provides a trigger node for Google Calendar. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.googlecalendartrigger.md).
+n8n มี trigger node สำหรับ Google Calendar คุณสามารถดูเอกสาร trigger node ได้ [ที่นี่](/integrations/builtin/trigger-nodes/n8n-nodes-base.googlecalendartrigger.md)
 
-Refer to [Google Calendar's documentation](https://developers.google.com/calendar/api/v3/reference){:target=_blank .external-link} for more information about the service.
+โปรดดู [เอกสารของ Google Calendar](https://developers.google.com/calendar/api/v3/reference){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
-View [example workflows and related content](https://n8n.io/integrations/google-calendar/){:target=_blank .external-link} on n8n's website.
+ดู [ตัวอย่าง workflows และเนื้อหาที่เกี่ยวข้อง](https://n8n.io/integrations/google-calendar/){:target=_blank .external-link} บนเว็บไซต์ของ n8n

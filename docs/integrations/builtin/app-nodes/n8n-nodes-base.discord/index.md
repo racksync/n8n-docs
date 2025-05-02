@@ -8,12 +8,12 @@ priority: high
 
 # Discord node
 
-Use the Discord node to automate work in Discord, and integrate Discord with other applications. n8n has built-in support for a wide range of Discord features, including sending messages in a Discord channel and managing channels.
+ใช้ Discord node เพื่อทำงานอัตโนมัติใน Discord และผสาน Discord เข้ากับแอปพลิเคชันอื่นๆ n8n มีการรองรับฟีเจอร์ต่างๆ ของ Discord ในตัวมากมาย รวมถึงการส่งข้อความในช่อง Discord และการจัดการช่องต่างๆ
 
-On this page, you'll find a list of operations the Discord node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Discord node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [Discord credentials](/integrations/builtin/credentials/discord.md) for guidance on setting up authentication. 
+โปรดดู [Discord credentials](/integrations/builtin/credentials/discord.md) สำหรับคำแนะนำในการตั้งค่าการยืนยันตัวตน
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
@@ -51,10 +51,10 @@ Refer to [Discord credentials](/integrations/builtin/credentials/discord.md) for
 
 ## Related resources
 
-Refer to [Discord's documentation](https://discord.com/developers/docs/intro){:target=_blank .external-link} for more information about the service.
+โปรดดู [Discord's documentation](https://discord.com/developers/docs/intro){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 
 ## Common issues
 
-For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-base.discord/common-issues.md).
+สำหรับข้อผิดพลาดหรือปัญหาทั่วไปและขั้นตอนการแก้ไขที่แนะนำ โปรดดูที่ [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-base.discord/common-issues.md)

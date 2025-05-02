@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # AMQP Sender node
 
-Use the AMQP Sender node to automate work in AMQP Sender, and integrate AMQP Sender with other applications. n8n has built-in support for a wide range of AMQP Sender features, including sending messages.
+ใช้ AMQP Sender node เพื่อทำงานอัตโนมัติใน AMQP Sender และผสานรวม AMQP Sender กับแอปพลิเคชันอื่นๆ n8n มีการรองรับฟีเจอร์หลากหลายของ AMQP Sender ในตัว รวมถึงการส่งข้อความ
 
-On this page, you'll find a list of operations the AMQP Sender node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ AMQP Sender node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [AMQP Sender credentials](/integrations/builtin/credentials/amqp.md) for guidance on setting up authentication. 
+อ้างอิง [AMQP Sender credentials](/integrations/builtin/credentials/amqp.md) สำหรับคำแนะนำในการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations

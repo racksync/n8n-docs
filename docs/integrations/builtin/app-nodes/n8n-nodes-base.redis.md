@@ -8,12 +8,12 @@ priority: medium
 
 # Redis node
 
-Use the Redis node to automate work in Redis, and integrate Redis with other applications. n8n has built-in support for a wide range of Redis features, including deleting keys, getting key values, setting key value, and publishing messages to the Redis channel.  
+ใช้ Redis node ในการอัตโนมัติงานใน Redis และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ. n8n มีการสนับสนุนฟีเจอร์ต่าง ๆ ของ Redis รวมถึงการลบ keys, การดึงค่า key, การตั้งค่า key, และการส่งข้อความไปยัง Redis channel.
 
-On this page, you'll find a list of operations the Redis node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Redis node รองรับ พร้อมลิงก์ไปยัง resources เพิ่มเติม.
 
 /// note | Credentials
-Refer to [Redis credentials](/integrations/builtin/credentials/redis.md) for guidance on setting up authentication. 
+ดู [Redis credentials](/integrations/builtin/credentials/redis.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

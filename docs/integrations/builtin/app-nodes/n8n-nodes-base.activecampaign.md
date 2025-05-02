@@ -8,12 +8,12 @@ priority: medium
 
 # ActiveCampaign node
 
-Use the ActiveCampaign node to automate work in ActiveCampaign, and integrate ActiveCampaign with other applications. n8n has built-in support for a wide range of ActiveCampaign features, including creating, getting, updating, and deleting accounts, contact, orders, e-commerce customers, connections, lists, tags, and deals.
+ใช้ ActiveCampaign node เพื่อทำงานอัตโนมัติใน ActiveCampaign และผสานรวม ActiveCampaign กับแอปพลิเคชันอื่นๆ n8n มีการรองรับฟีเจอร์หลากหลายของ ActiveCampaign ในตัว รวมถึงการสร้าง, การดึงข้อมูล, การอัปเดต, และการลบ accounts, contact, orders, e-commerce customers, connections, lists, tags, และ deals
 
-On this page, you'll find a list of operations the ActiveCampaign node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ ActiveCampaign node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [ActiveCampaign credentials](/integrations/builtin/credentials/activecampaign.md) for guidance on setting up authentication. 
+อ้างอิง [ActiveCampaign credentials](/integrations/builtin/credentials/activecampaign.md) สำหรับคำแนะนำในการตั้งค่าการยืนยันตัวตน
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

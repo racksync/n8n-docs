@@ -5,10 +5,10 @@ contentType: tutorial
 
 # Hosting n8n on Hetzner cloud
 
-This hosting guide shows you how to self-host n8n on a Hetzner cloud server. It uses:
+คู่มือนี้จะสอนวิธีติดตั้ง n8n แบบ self-host บน Hetzner cloud server โดยใช้:
 
-* [Caddy](https://caddyserver.com){:target="_blank" .external-link} (a reverse proxy) to allow access to the Server from the internet.
-* [Docker Compose](https://docs.docker.com/compose/){:target="_blank" .external-link} to create and define the application components and how they work together.
+* [Caddy](https://caddyserver.com){:target="_blank" .external-link} (reverse proxy) สำหรับเปิดให้เข้าถึง server จากอินเทอร์เน็ต
+* [Docker Compose](https://docs.docker.com/compose/){:target="_blank" .external-link} สำหรับจัดการ container ของแต่ละ service
 
 --8<-- "_snippets/self-hosting/warning.md"
 
@@ -16,25 +16,25 @@ This hosting guide shows you how to self-host n8n on a Hetzner cloud server. It 
 
 ## Create a server
 
-1. [Log in](https://console.hetzner.cloud/){:target=_blank .external-link} to the Hetzner Cloud Console.
-2. Select the project to host the server, or create a new project by selecting **+ NEW PROJECT**.
-3. Select **+ CREATE SERVER** on the project tile you want to add it to.
+1. [Log in](https://console.hetzner.cloud/){:target=_blank .external-link} เข้า Hetzner Cloud Console
+2. เลือก project ที่จะใช้ หรือสร้าง project ใหม่โดยกด **+ NEW PROJECT**
+3. กด **+ CREATE SERVER** ใน project ที่ต้องการ
 
-You can change most of the settings to suit your needs, but as this guide uses Docker to run the application, under the **Image** section, select "Docker CE" from the **APPS** tab.
+ตั้งค่าได้ตามต้องการ แต่คู่มือนี้จะใช้ Docker ในการรันแอป ในหัวข้อ **Image** ให้เลือก "Docker CE" จากแท็บ **APPS**
 
 /// note | Type
-When creating the server, Hetzner asks you to choose a plan. For most usage levels, the CPX11 type is enough.
+ตอนสร้าง server Hetzner จะให้เลือก plan ส่วนใหญ่ใช้ CPX11 ก็เพียงพอ
 ///
 /// note | SSH keys
-Hetzner lets you choose between SSH and password-based authentication. SSH is more secure. The rest of this guide assumes you are using SSH.
+Hetzner ให้เลือกได้ว่าจะใช้ SSH หรือ password-based authentication แนะนำให้ใช้ SSH เพราะปลอดภัยกว่า คู่มือนี้จะสมมติว่าใช้ SSH
 ///
 ## Log in to your server
 
-The rest of this guide requires you to log in to the server using a terminal with SSH. Refer to [Access with SSH/rsync/BorgBackup](https://docs.hetzner.com/robot/storage-box/access/access-ssh-rsync-borg){:target="_blank" .external-link} for more information. You can find the public IP in the listing of the servers in your project.
+ขั้นตอนต่อไปต้อง SSH เข้าไปที่ server ผ่าน terminal ดูวิธีได้ที่ [Access with SSH/rsync/BorgBackup](https://docs.hetzner.com/robot/storage-box/access/access-ssh-rsync-borg){:target="_blank" .external-link} สามารถดู public IP ได้จากหน้า project
 
 ## Install Docker Compose
 
-The Hetzner Docker app image doesn't have Docker compose installed. Install it with the following commands:
+Hetzner Docker app image ไม่มี Docker Compose ติดมาด้วย ให้ติดตั้งด้วยคำสั่งนี้:
 
 ```shell
 apt update && apt -y upgrade
@@ -43,15 +43,15 @@ apt install docker-compose-plugin
 
 ## Clone configuration repository
 
-Docker Compose, n8n, and Caddy require a series of folders and configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-docker-caddy){:target=_blank .external-link} into the root user folder of the server. The following steps will tell you which file to change and what changes to make.
+Docker Compose, n8n, และ Caddy ต้องใช้ไฟล์ config หลายไฟล์ สามารถ clone repo ตัวอย่างจาก [ที่นี่](https://github.com/n8n-io/n8n-docker-caddy){:target=_blank .external-link} ไปไว้ใน root user folder ของ server
 
-Clone the repository with the following command:
+รันคำสั่งนี้เพื่อ clone:
 
 ```shell
 git clone https://github.com/n8n-io/n8n-docker-caddy.git
 ```
 
-And change directory to the root of the repository you cloned:
+แล้วเข้าไปที่โฟลเดอร์ที่ clone มา:
 
 ```shell
 cd n8n-docker-caddy
@@ -59,20 +59,20 @@ cd n8n-docker-caddy
 
 ## Default folders and files
 
-The host operating system (the server) copies the two folders you created to Docker containers to make them available to Docker. The two folders are:
+ฝั่ง host (server) จะมี 2 โฟลเดอร์หลักที่ใช้กับ Docker container:
 
-- `caddy_config`: Holds the Caddy configuration files.
-- `local_files`: A folder for files you upload or add using n8n.
+- `caddy_config`: เก็บไฟล์ config ของ Caddy
+- `local_files`: สำหรับไฟล์ที่อัปโหลดหรือเพิ่มผ่าน n8n
 
 ### Create Docker volume
 
-To persist the Caddy cache between restarts and speed up start times, create [a Docker volume](https://docs.docker.com/storage/volumes/){:target="_blank" .external-link} that Docker reuses between restarts:
+สร้าง Docker volume สำหรับ cache ของ Caddy เพื่อให้ start เร็วขึ้น:
 
 ```shell
 docker volume create caddy_data
 ```
 
-Create a Docker volume for the n8n data:
+สร้าง Docker volume สำหรับข้อมูล n8n:
 
 ```shell
 sudo docker volume create n8n_data
@@ -80,13 +80,13 @@ sudo docker volume create n8n_data
 
 ## Set up DNS
 
-n8n typically operates on a subdomain. Create a DNS record with your provider for the subdomain and point it to the IP address of the server. The exact steps for this depend on your DNS provider, but typically you need to create a new "A" record for the n8n subdomain. DigitalOcean provide [An Introduction to DNS Terminology, Components, and Concepts](https://www.digitalocean.com/community/tutorials/an-introduction-to-dns-terminology-components-and-concepts){:target="_blank" .external-link}.
+โดยปกติ n8n จะรันบน subdomain ให้สร้าง DNS record ชนิด "A" ชี้ subdomain ไปที่ IP ของ server วิธีการขึ้นกับผู้ให้บริการ DNS ของคุณ ดูข้อมูลพื้นฐานได้ที่ [An Introduction to DNS Terminology, Components, and Concepts](https://www.digitalocean.com/community/tutorials/an-introduction-to-dns-terminology-components-and-concepts){:target="_blank" .external-link}
 
 ## Open ports
 
-n8n runs as a web application, so the server needs to allow incoming access to traffic on port 80 for non-secure traffic, and port 443 for secure traffic.
+n8n เป็น web app ต้องเปิด port 80 (HTTP) และ 443 (HTTPS) ให้เข้าถึงได้
 
-Open the following ports in the server's firewall by running the following two commands:
+เปิด firewall ด้วยคำสั่ง:
 
 ```shell
 sudo ufw allow 80
@@ -95,26 +95,26 @@ sudo ufw allow 443
 
 ## Configure n8n
 
-n8n needs some environment variables set to pass to the application running in the Docker container. The example `.env` file contains placeholders you need to replace with values of your own.
+n8n ต้องการ environment variable บางตัวใน container ตัวอย่างไฟล์ `.env` มี placeholder ให้แก้ไข
 
-Open the file with the following command:
+เปิดไฟล์ด้วย:
 
 ```shell
 nano .env
 ```
 
-The file contains inline comments to help you know what to change.
+ในไฟล์จะมี comment อธิบายว่าต้องแก้ตรงไหน
 
-Refer to [Environment variables](/hosting/configuration/environment-variables/index.md) for n8n environment variables details.
+ดูรายละเอียด environment variable เพิ่มเติมได้ที่ [Environment variables](/hosting/configuration/environment-variables/index.md)
 
 ## The Docker Compose file
 
-The Docker Compose file (`docker-compose.yml`) defines the services the application needs, in this case Caddy and n8n.
+ไฟล์ Docker Compose (`docker-compose.yml`) จะกำหนด service ที่ต้องใช้ (Caddy กับ n8n)
 
-- The Caddy service definition defines the ports it uses and the local volumes to copy to the containers.
-- The n8n service definition defines the ports it uses, the environment variables n8n needs to run (some defined in the `.env` file), and the volumes it needs to copy to the containers.
+- Caddy: กำหนด port และ volume ที่จะ mount
+- n8n: กำหนด port, environment variable (บางตัวมาจาก `.env`), และ volume ที่ต้องใช้
 
-The Docker Compose file uses the environment variables set in the `.env` file, so you shouldn't need to change it's content, but to take a look, run the following command:
+โดยปกติไม่ต้องแก้ไขไฟล์นี้ แต่ถ้าอยากดูให้รัน:
 
 ```shell
 nano docker-compose.yml
@@ -122,13 +122,13 @@ nano docker-compose.yml
 
 ## Configure Caddy
 
-Caddy needs to know which domains it should serve, and which port to expose to the outside world. Edit the `Caddyfile` file in the `caddy_config` folder.
+Caddy ต้องรู้ว่าจะ serve domain ไหน และเปิด port อะไร แก้ไขไฟล์ `Caddyfile` ในโฟลเดอร์ `caddy_config`
 
 ```shell
 nano caddy_config/Caddyfile
 ```
 
-Change the placeholder subdomain to yours. If you followed the steps to name the subdomain n8n, your full domain is similar to `n8n.example.com`. The `n8n` in the `reverse_proxy` setting tells Caddy to use the service definition defined in the `docker-compose.yml` file:
+เปลี่ยน subdomain ที่เป็น placeholder ให้เป็นของคุณเอง เช่น ถ้าใช้ `n8n.example.com` ให้แก้ตามนี้ ส่วน `n8n` ใน `reverse_proxy` หมายถึง service ที่กำหนดไว้ใน `docker-compose.yml`:
 
 ```text
 n8n.<domain>.<suffix> {
@@ -140,21 +140,21 @@ n8n.<domain>.<suffix> {
 
 ## Start Docker Compose
 
-Start n8n and Caddy with the following command:
+เริ่มรัน n8n กับ Caddy ด้วยคำสั่ง:
 
 ```shell
 docker compose up -d
 ```
 
-This may take a few minutes.
+อาจใช้เวลาสักครู่
 
 ## Test your setup
 
-In your browser, open the URL formed of the subdomain and domain name defined earlier. Enter the user name and password defined earlier, and you should be able to access n8n.
+เปิด browser แล้วเข้า URL ที่ตั้งไว้ใน DNS ใส่ username/password ที่ตั้งไว้ ก็จะเข้าใช้งาน n8n ได้
 
 ## Stop n8n and Caddy
 
-You can stop n8n and Caddy with the following command:
+หยุด n8n กับ Caddy ด้วยคำสั่ง:
 
 ```shell
 sudo docker compose stop

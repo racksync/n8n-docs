@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Brevo node
 
-Use the Brevo node to automate work in Brevo, and integrate Brevo with other applications. n8n has built-in support for a wide range of Brevo features, including creating, updating, deleting, and getting contacts, attributes, as well as sending emails. 
+ใช้ Brevo node เพื่อทำงานอัตโนมัติใน Brevo และ integrate Brevo กับแอปพลิเคชันอื่นๆ n8n มีการรองรับในตัวสำหรับฟีเจอร์ต่างๆ ของ Brevo รวมถึงการสร้าง, อัปเดต, ลบ, และดึง contacts, attributes, รวมถึงการส่ง emails
 
-On this page, you'll find a list of operations the Brevo node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Brevo node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [Brevo credentials](/integrations/builtin/credentials/brevo.md) for guidance on setting up authentication. 
+อ้างอิง [Brevo credentials](/integrations/builtin/credentials/brevo.md) สำหรับคำแนะนำในการตั้งค่า authentication
 ///
 
 ## Operations

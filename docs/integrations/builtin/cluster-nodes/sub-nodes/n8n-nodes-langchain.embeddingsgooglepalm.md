@@ -7,21 +7,21 @@ contentType: [integration, reference]
 
 # Embeddings Google PaLM node
 
-Use the Embeddings Google PaLM node to generate [embeddings](/glossary.md#ai-embedding) for a given text.
+ใช้ Embeddings Google PaLM node เพื่อสร้าง [embeddings](/glossary.md#ai-embedding) สำหรับข้อความที่กำหนด
 
-On this page, you'll find the node parameters for the Embeddings Google PaLM node, and links to more resources.
+ในหน้านี้ คุณจะพบพารามิเตอร์ของโหนดสำหรับ Embeddings Google PaLM node และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/googleai.md).
+คุณสามารถดูข้อมูลการยืนยันตัวตนสำหรับโหนดนี้ได้ [ที่นี่](/integrations/builtin/credentials/googleai.md)
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node parameters
 
-* **Model**: Select the model to use to generate the embedding.
+* **Model**: เลือกรุ่น (model) ที่จะใช้สร้าง embedding
 
-n8n dynamically loads models from the Google PaLM API and you'll only see the models available to your account.
+n8n โหลดโมเดลจาก Google PaLM API แบบไดนามิก และคุณจะเห็นเฉพาะโมเดลที่พร้อมใช้งานสำหรับบัญชีของคุณเท่านั้น
 
 ## Templates and examples
 
@@ -30,7 +30,7 @@ n8n dynamically loads models from the Google PaLM API and you'll only see the mo
 
 ## Related resources
 
-Refer to [Langchain's Google PaLM embeddings documentation](https://js.langchain.com/v0.2/docs/integrations/text_embedding/google_palm/){:target=_blank .external-link} for more information about the service.
+อ้างอิง [เอกสารประกอบ Google PaLM embeddings ของ Langchain](https://js.langchain.com/v0.2/docs/integrations/text_embedding/google_palm/){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

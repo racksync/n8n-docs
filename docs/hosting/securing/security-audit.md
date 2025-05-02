@@ -7,61 +7,60 @@ contentType: howto
 
 # Security audit
 
-You can run a security audit on your n8n instance, to detect common security issues.
+คุณสามารถรัน security audit บน n8n instance ของคุณ เพื่อเช็คปัญหาด้านความปลอดภัยที่พบบ่อย
 
 ## Run an audit
 
-You can run an audit using the CLI, the public API, or the n8n node.
-
+สามารถรัน audit ได้หลายวิธี: ผ่าน CLI, public API หรือใช้ n8n node
 
 ### CLI
 
-Run `n8n audit`.
+รันคำสั่ง `n8n audit`
 
 ### API
 
-Make a `POST` call to the `/audit` endpoint. You must authenticate as the instance owner.
+ส่ง `POST` ไปที่ endpoint `/audit` โดยต้อง authenticate เป็น instance owner
 
 ### n8n node
 
-Add the [n8n node](/integrations/builtin/core-nodes/n8n-nodes-base.n8n.md) to your workflow. Select **Resource** > **Audit** and **Operation** > **Generate**.
+เพิ่ม [n8n node](/integrations/builtin/core-nodes/n8n-nodes-base.n8n.md) ใน workflow ของคุณ เลือก **Resource** > **Audit** และ **Operation** > **Generate**
 
 ## Report contents
 
-The audit generates five risk reports:
+audit จะสร้างรายงานความเสี่ยง 5 ประเภท
 
 ### Credentials
 
-This report shows:
+รายงานนี้จะแสดง:
 
-* Credentials not used in a workflow.
-* Credentials not used in an active workflow.
-* Credentials not use in a recently active workflow.
+* Credentials ที่ไม่ได้ใช้ใน workflow ไหนเลย
+* Credentials ที่ไม่ได้ใช้ใน workflow ที่ active
+* Credentials ที่ไม่ได้ใช้ใน workflow ที่ active ล่าสุด
 
 ### Database
 
-This report shows:
+รายงานนี้จะแสดง:
 
-* Expressions used in **Execute Query** fields in SQL nodes.
-* Expressions used in **Query Parameters** fields in SQL nodes.
-* Unused **Query Parameters** fields in SQL nodes.
+* Expressions ที่ใช้ใน field **Execute Query** ของ SQL nodes
+* Expressions ที่ใช้ใน field **Query Parameters** ของ SQL nodes
+* Field **Query Parameters** ที่ไม่ได้ใช้ใน SQL nodes
 
 ### File system
 
-This report lists nodes that interact with the file system.
+รายงานนี้จะแสดง nodes ที่มีการเข้าถึง file system
 
 ### Nodes
 
-This report shows:
+รายงานนี้จะแสดง:
 
-* Official risky nodes. These are n8n built in nodes. You can use them to fetch and run any code on the host system, which exposes the instance to exploits. You can view the list in [n8n code | Audit constants](https://github.com/n8n-io/n8n/blob/master/packages/cli/src/security-audit/constants.ts#L51){:target=_blank .external-link}, under `OFFICIAL_RISKY_NODE_TYPES`.
-* Community nodes.
-* Custom nodes.
+* Official risky nodes คือ nodes ที่ built-in มากับ n8n ซึ่งสามารถใช้รันโค้ดใดๆ บน host system ได้ เสี่ยงต่อการโดนโจมตี ดูรายชื่อได้ที่ [n8n code | Audit constants](https://github.com/n8n-io/n8n/blob/master/packages/cli/src/security-audit/constants.ts#L51){:target=_blank .external-link} ใน `OFFICIAL_RISKY_NODE_TYPES`
+* Community nodes
+* Custom nodes
 
 ### Instance
 
-This report shows:
+รายงานนี้จะแสดง:
 
-* Unprotected webhooks in the instance.
-* Missing security settings
-* If your instance is outdated.
+* Webhooks ที่ไม่ได้ป้องกันใน instance
+* Security settings ที่ยังไม่ได้ตั้งค่า
+* เช็คว่า instance ของคุณเป็นเวอร์ชันล่าสุดหรือไม่

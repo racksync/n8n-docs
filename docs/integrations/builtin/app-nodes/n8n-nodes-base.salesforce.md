@@ -8,12 +8,10 @@ priority: medium
 
 # Salesforce node
 
-Use the Salesforce node to automate work in Salesforce, and integrate Salesforce with other applications. n8n has built-in support for a wide range of Salesforce features, including creating, updating, deleting, and getting accounts, attachments, cases, and leads, as well as uploading documents. 
-
-On this page, you'll find a list of operations the Salesforce node supports and links to more resources.
+ใช้ Salesforce node เพื่อช่วยให้งานใน Salesforce เป็นไปโดยอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันอื่น ๆ ได้อย่างลงตัว. n8n รองรับฟีเจอร์ของ Salesforce หลากหลาย เช่น การสร้าง, อัปเดต, ลบ และดึงข้อมูล accounts, attachments, cases, leads รวมถึงการอัปโหลดเอกสาร.
 
 /// note | Credentials
-Refer to [Salesforce credentials](/integrations/builtin/credentials/salesforce.md) for guidance on setting up authentication. 
+ดู [Salesforce credentials](/integrations/builtin/credentials/salesforce.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Philips Hue node
 
-Use the Philips Hue node to automate work in Philips Hue, and integrate Philips Hue with other applications. n8n has built-in support for a wide range of Philips Hue features, including deleting, retrieving, and updating lights. 
+ใช้ Philips Hue node เพื่อช่วยทำงานใน Philips Hue แบบอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันอื่น ๆ. n8n มีการสนับสนุนคุณสมบัติของ Philips Hue หลากหลาย เช่น การลบ, ดึงข้อมูล, และอัปเดต lights.
 
-On this page, you'll find a list of operations the Philips Hue node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการของ operations ที่ Philips Hue node รองรับและลิงก์สำหรับข้อมูลเพิ่มเติม.
 
 /// note | Credentials
-Refer to [Philips Hue credentials](/integrations/builtin/credentials/philipshue.md) for guidance on setting up authentication. 
+ดูรายละเอียดเพิ่มเติมได้ที่ [Philips Hue credentials](/integrations/builtin/credentials/philipshue.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations

@@ -8,15 +8,15 @@ priority: high
 
 # Question and Answer Chain node
 
-Use the Question and Answer Chain node to use a [vector store](/glossary.md#ai-vector-store) as a retriever.
+ใช้ Question and Answer Chain node เพื่อใช้ [vector store](/glossary.md#ai-vector-store) เป็น retriever
 
-On this page, you'll find the node parameters for the Question and Answer Chain node, and links to more resources.
+ในหน้านี้ คุณจะพบพารามิเตอร์ของโหนดสำหรับ Question and Answer Chain node และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 ## Node parameters
 
 ### Query
 
-The question you want to ask.
+คำถามที่คุณต้องการถาม
 
 ## Templates and examples
 
@@ -25,12 +25,12 @@ The question you want to ask.
 
 ## Related resources
 
-Refer to [LangChain's documentation on retrieval chains](https://js.langchain.com/docs/tutorials/rag/){:target=_blank .external-link} for examples of how LangChain can use a vector store as a retriever.
+อ้างอิง [เอกสารของ LangChain เกี่ยวกับ retrieval chains](https://js.langchain.com/docs/tutorials/rag/){:target=_blank .external-link} สำหรับตัวอย่างวิธีการที่ LangChain สามารถใช้ vector store เป็น retriever
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
 ## Common issues
 
-For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa/common-issues.md).
+สำหรับข้อผิดพลาดหรือปัญหาทั่วไปและขั้นตอนการแก้ไขที่แนะนำ โปรดดูที่ [Common Issues](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa/common-issues.md)
 
 --8<-- "_glossary/ai-glossary.md"

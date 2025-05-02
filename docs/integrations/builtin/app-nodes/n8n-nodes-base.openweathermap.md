@@ -8,12 +8,12 @@ priority: medium
 
 # OpenWeatherMap node
 
-Use the OpenWeatherMap node to automate work in OpenWeatherMap, and integrate OpenWeatherMap with other applications. n8n supports retrieving current and upcoming weather data with OpenWeatherMap.
+ใช้ OpenWeatherMap node เพื่อทำงานอัตโนมัติใน OpenWeatherMap และเชื่อมต่อกับแอปอื่น ๆ. n8n รองรับการดึงข้อมูลสภาพอากาศปัจจุบันและอนาคตจาก OpenWeatherMap
 
-On this page, you'll find a list of operations the OpenWeatherMap node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ OpenWeatherMap node รองรับ พร้อมลิงก์สำหรับข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [OpenWeatherMap credentials](/integrations/builtin/credentials/openweathermap.md) for guidance on setting up authentication. 
+ดู [OpenWeatherMap credentials](/integrations/builtin/credentials/openweathermap.md) เพื่อดูวิธีการตั้งค่า authentication
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

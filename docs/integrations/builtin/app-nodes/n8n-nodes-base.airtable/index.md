@@ -8,12 +8,12 @@ priority: high
 
 # Airtable node
 
-Use the Airtable node to automate work in Airtable, and integrate Airtable with other applications. n8n has built-in support for a wide range of Airtable features, including creating, reading, listing, updating and deleting tables.
+ใช้ Airtable node เพื่อทำงานอัตโนมัติใน Airtable และเชื่อมต่อ Airtable กับแอปพลิเคชันอื่นๆ n8n มีฟีเจอร์ของ Airtable ให้ใช้งานหลากหลาย เช่น การสร้าง อ่าน แสดงรายการ อัปเดต และลบตาราง
 
-On this page, you'll find a list of operations the Airtable node supports and links to more resources.
+ในหน้านี้คุณจะเจอรายการ operations ที่ Airtable node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [Airtable credentials](/integrations/builtin/credentials/airtable.md) for guidance on setting up authentication. 
+ดู [Airtable credentials](/integrations/builtin/credentials/airtable.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations
@@ -31,9 +31,9 @@ Refer to [Airtable credentials](/integrations/builtin/credentials/airtable.md) f
 
 ## Related resources
 
-n8n provides a trigger node for Airtable. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.airtabletrigger.md).
+n8n มี trigger node สำหรับ Airtable คุณสามารถดูเอกสาร trigger node ได้ [ที่นี่](/integrations/builtin/trigger-nodes/n8n-nodes-base.airtabletrigger.md)
 
-Refer to [Airtable's documentation](https://airtable.com/developers/web/api/introduction){:target=_blank .external-link} for more information about the service.
+ดู [Airtable's documentation](https://airtable.com/developers/web/api/introduction){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 
@@ -42,29 +42,29 @@ Refer to [Airtable's documentation](https://airtable.com/developers/web/api/intr
 
 ### Get the Record ID
 
-To fetch data for a particular record, you need the Record ID. There are two ways to get the Record ID.
+ถ้าคุณต้องการดึงข้อมูลของ record ใด record หนึ่ง คุณต้องใช้ Record ID ซึ่งมี 2 วิธีในการหา Record ID
 
 ### Create a Record ID column in Airtable
 
-To create a `Record ID` column in your table, refer to this [article](https://support.airtable.com/docs/finding-airtable-ids){:target=_blank .external-link}. You can then use this Record ID in your Airtable node.
+ถ้าต้องการสร้างคอลัมน์ `Record ID` ในตารางของคุณ ให้ดู [บทความนี้](https://support.airtable.com/docs/finding-airtable-ids){:target=_blank .external-link} แล้วนำ Record ID นี้ไปใช้กับ Airtable node ได้เลย
 
 ### Use the List operation
 
-To get the Record ID of your record, you can use the **List** operation of the Airtable node. This operation will return the Record ID along with the fields. You can then use this Record ID in your Airtable node.
+ถ้าต้องการหา Record ID ของ record คุณ สามารถใช้ **List** operation ของ Airtable node ได้เลย โดย operation นี้จะคืนค่า Record ID พร้อม fields ต่างๆ จากนั้นนำ Record ID ไปใช้กับ Airtable node ได้
 
 ### Filter records when using the List operation
 
-To filter records from your Airtable base, use the **Filter By Formula** option. For example, if you want to return all the users that belong to the organization `n8n`, follow the steps mentioned below:
+ถ้าต้องการกรอง records จาก Airtable base ของคุณ ให้ใช้ตัวเลือก **Filter By Formula** เช่น ถ้าอยากได้ผู้ใช้ทั้งหมดที่อยู่ใน organization `n8n` ให้ทำตามขั้นตอนนี้:
 
-1. Select 'List' from the **Operation** dropdown list.
-2. Enter the base ID and the table name in the **Base ID** and **Table** field, respectively.
-3. Click on **Add Option** and select 'Filter By Formula' from the dropdown list.
-4. Enter the following formula in the **Filter By Formula** field: `{Organization}='n8n'`.
+1. เลือก 'List' จาก **Operation** dropdown
+2. กรอก base ID และ table name ใน **Base ID** และ **Table**
+3. คลิก **Add Option** แล้วเลือก 'Filter By Formula'
+4. ใส่สูตรนี้ใน **Filter By Formula**: `{Organization}='n8n'`
 
-Similarly, if you want to return all the users that don't belong to the organization `n8n`, use the following formula: `NOT({Organization}='n8n')`.
+ถ้าอยากได้ผู้ใช้ที่ไม่ได้อยู่ใน organization `n8n` ให้ใช้สูตรนี้: `NOT({Organization}='n8n')`
 
-Refer to the Airtable [documentation](https://support.airtable.com/hc/en-us/articles/203255215-Formula-Field-Reference){:target=_balnk .external-link} to learn more about the formulas.
+ดู [documentation](https://support.airtable.com/hc/en-us/articles/203255215-Formula-Field-Reference){:target=_balnk .external-link} ของ Airtable เพื่อเรียนรู้เพิ่มเติมเกี่ยวกับสูตร
 
 ## Common issues
 
-For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-base.airtable/common-issues.md).
+สำหรับข้อผิดพลาดหรือปัญหาทั่วไปและวิธีแก้ไข ดูที่ [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-base.airtable/common-issues.md)

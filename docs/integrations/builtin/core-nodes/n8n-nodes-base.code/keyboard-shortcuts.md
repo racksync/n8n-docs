@@ -8,7 +8,7 @@ priority: high
 
 # Keyboard shortcuts when using the Code editor
 
-The Code node editing environment supports a range of keyboard shortcuts to speed up and enhance your experience. Select the appropriate tab to see the relevant shortcuts for your operating system.
+สภาพแวดล้อมการแก้ไขโค้ดใน Code node รองรับคีย์ลัด (Keyboard Shortcuts) หลากหลายแบบ เพื่อช่วยให้คุณทำงานได้เร็วขึ้นและสะดวกขึ้น เลือกแท็บที่ตรงกับระบบปฏิบัติการของคุณเพื่อดูคีย์ลัดที่เกี่ยวข้อง
 
 ## Cursor Movement
 
@@ -16,52 +16,52 @@ The Code node editing environment supports a range of keyboard shortcuts to spee
 
     | Action                    | Shortcut                         |
     |---------------------------|----------------------------------|
-    | Move cursor left          | ++left++                         |
-    | Move cursor right         | ++right++                        |
-    | Move cursor up            | ++up++                           |
-    | Move cursor down          | ++down++                         |
-    | Move cursor by word left  | ++control+left++                 |
-    | Move cursor by word right | ++control+right++                |
-    | Move to line start        | ++home++ **or** ++control+left++ |
-    | Move to line end          | ++end++ or ++control+right++     |
-    | Move to document start    | ++control+home++                 |
-    | Move to document end      | ++control+end++                  |
-    | Move page up              | ++page-up++                      |
-    | Move page down            | ++page-down++                    |
+    | เลื่อนเคอร์เซอร์ไปทางซ้าย          | ++left++                         |
+    | เลื่อนเคอร์เซอร์ไปทางขวา           | ++right++                        |
+    | เลื่อนเคอร์เซอร์ขึ้น                | ++up++                           |
+    | เลื่อนเคอร์เซอร์ลง                 | ++down++                         |
+    | เลื่อนทีละคำไปทางซ้าย              | ++control+left++                 |
+    | เลื่อนทีละคำไปทางขวา               | ++control+right++                |
+    | ไปจุดเริ่มต้นบรรทัด                | ++home++ **หรือ** ++control+left++ |
+    | ไปจุดสิ้นสุดบรรทัด                 | ++end++ หรือ ++control+right++     |
+    | ไปจุดเริ่มต้นเอกสาร                | ++control+home++                 |
+    | ไปจุดสิ้นสุดเอกสาร                 | ++control+end++                  |
+    | เลื่อนขึ้นทีละหน้า                  | ++page-up++                      |
+    | เลื่อนลงทีละหน้า                   | ++page-down++                    |
 
 === "macOS"
 
     | Action                    | Shortcut                               |
     |---------------------------|----------------------------------------|
-    | Move cursor left          | ++left++ **or** ++control+b++          |
-    | Move cursor right         | ++right++ **or** ++control+f++         |
-    | Move cursor up            | ++up++ **or** ++control+p++            |
-    | Move cursor down          | ++down++ **or** ++control+n++          |
-    | Move cursor by word left  | ++option+left++                        |
-    | Move cursor by word right | ++option+right++                       |
-    | Move to line start        | ++command+left++ **or** ++control+a++  |
-    | Move to line end          | ++command+right++ **or** ++control+e++ |
-    | Move to document start    | ++command+up++                         |
-    | Move to document end      | ++command+down++                       |
-    | Move page up              | ++page-up++ **or** ++option+v++        |
-    | Move page down            | ++page-down++ **or** ++control+v++     |
+    | เลื่อนเคอร์เซอร์ไปทางซ้าย          | ++left++ **หรือ** ++control+b++          |
+    | เลื่อนเคอร์เซอร์ไปทางขวา           | ++right++ **หรือ** ++control+f++         |
+    | เลื่อนเคอร์เซอร์ขึ้น                | ++up++ **หรือ** ++control+p++            |
+    | เลื่อนเคอร์เซอร์ลง                 | ++down++ **หรือ** ++control+n++          |
+    | เลื่อนทีละคำไปทางซ้าย              | ++option+left++                        |
+    | เลื่อนทีละคำไปทางขวา               | ++option+right++                       |
+    | ไปจุดเริ่มต้นบรรทัด                | ++command+left++ **หรือ** ++control+a++  |
+    | ไปจุดสิ้นสุดบรรทัด                 | ++command+right++ **หรือ** ++control+e++ |
+    | ไปจุดเริ่มต้นเอกสาร                | ++command+up++                         |
+    | ไปจุดสิ้นสุดเอกสาร                 | ++command+down++                       |
+    | เลื่อนขึ้นทีละหน้า                  | ++page-up++ **หรือ** ++option+v++        |
+    | เลื่อนลงทีละหน้า                   | ++page-down++ **หรือ** ++control+v++     |
 
 === "Linux"
 
     | Action                    | Shortcut                         |
     |---------------------------|----------------------------------|
-    | Move cursor left          | ++left++                         |
-    | Move cursor right         | ++right++                        |
-    | Move cursor up            | ++up++                           |
-    | Move cursor down          | ++down++                         |
-    | Move cursor by word left  | ++control+left++                 |
-    | Move cursor by word right | ++control+right++                |
-    | Move to line start        | ++home++ **or** ++control+left++ |
-    | Move to line end          | ++end++ or ++control+right++     |
-    | Move to document start    | ++control+home++                 |
-    | Move to document end      | ++control+end++                  |
-    | Move page up              | ++page-up++                      |
-    | Move page down            | ++page-down++                    |
+    | เลื่อนเคอร์เซอร์ไปทางซ้าย          | ++left++                         |
+    | เลื่อนเคอร์เซอร์ไปทางขวา           | ++right++                        |
+    | เลื่อนเคอร์เซอร์ขึ้น                | ++up++                           |
+    | เลื่อนเคอร์เซอร์ลง                 | ++down++                         |
+    | เลื่อนทีละคำไปทางซ้าย              | ++control+left++                 |
+    | เลื่อนทีละคำไปทางขวา               | ++control+right++                |
+    | ไปจุดเริ่มต้นบรรทัด                | ++home++ **หรือ** ++control+left++ |
+    | ไปจุดสิ้นสุดบรรทัด                 | ++end++ หรือ ++control+right++     |
+    | ไปจุดเริ่มต้นเอกสาร                | ++control+home++                 |
+    | ไปจุดสิ้นสุดเอกสาร                 | ++control+end++                  |
+    | เลื่อนขึ้นทีละหน้า                  | ++page-up++                      |
+    | เลื่อนลงทีละหน้า                   | ++page-down++                    |
 
 ## Selection
 
@@ -69,33 +69,33 @@ The Code node editing environment supports a range of keyboard shortcuts to spee
 
     | Action                          | Shortcut                    |
     |---------------------------------|-----------------------------|
-    | Selection with any movement key | ++shift++ + [Movement Key]  |
-    | Select all                      | ++control+a++               |
-    | Select line                     | ++control+l++               |
-    | Select next occurrence          | ++control+d++               |
-    | Select all occurrences          | ++shift+control+l++         |
-    | Go to matching bracket          | ++shift+control+backslash++ |
+    | เลือกพร้อมกับการเคลื่อนที่ใดๆ         | ++shift++ + [Movement Key]  |
+    | เลือกทั้งหมด                        | ++control+a++               |
+    | เลือกทั้งบรรทัด                      | ++control+l++               |
+    | เลือกครั้งถัดไปที่พบ                  | ++control+d++               |
+    | เลือกทุกครั้งที่พบ                    | ++shift+control+l++         |
+    | ไปวงเล็บที่ตรงกัน                     | ++shift+control+backslash++ |
 
 === "macOS"
 
     | Action                          | Shortcut                    |
     |---------------------------------|-----------------------------|
-    | Selection with any movement key | ++shift++ + [Movement Key]  |
-    | Select all                      | ++command+a++               |
-    | Select line                     | ++command+l++               |
-    | Select next occurrence          | ++command+d++               |
-    | Go to matching bracket          | ++shift+command+backslash++ |
+    | เลือกพร้อมกับการเคลื่อนที่ใดๆ         | ++shift++ + [Movement Key]  |
+    | เลือกทั้งหมด                        | ++command+a++               |
+    | เลือกทั้งบรรทัด                      | ++command+l++               |
+    | เลือกครั้งถัดไปที่พบ                  | ++command+d++               |
+    | ไปวงเล็บที่ตรงกัน                     | ++shift+command+backslash++ |
 
 === "Linux"
 
     | Action                          | Shortcut                    |
     |---------------------------------|-----------------------------|
-    | Selection with any movement key | ++shift++ + [Movement Key]  |
-    | Select all                      | ++control+a++               |
-    | Select line                     | ++control+l++               |
-    | Select next occurrence          | ++control+d++               |
-    | Select all occurrences          | ++shift+control+l++         |
-    | Go to matching bracket          | ++shift+control+backslash++ |
+    | เลือกพร้อมกับการเคลื่อนที่ใดๆ         | ++shift++ + [Movement Key]  |
+    | เลือกทั้งหมด                        | ++control+a++               |
+    | เลือกทั้งบรรทัด                      | ++control+l++               |
+    | เลือกครั้งถัดไปที่พบ                  | ++control+d++               |
+    | เลือกทุกครั้งที่พบ                    | ++shift+control+l++         |
+    | ไปวงเล็บที่ตรงกัน                     | ++shift+control+backslash++ |
 
 ## Basic Operations
 
@@ -103,37 +103,37 @@ The Code node editing environment supports a range of keyboard shortcuts to spee
 
     | Action                    | Shortcut                                 |
     |---------------------------|------------------------------------------|
-    | New line with indentation | ++enter++                                |
-    | Undo                      | ++control+z++                            |
-    | Redo                      | ++control+y++ **or** ++control+shift+z++ |
-    | Undo selection            | ++control+u++                            |
-    | Copy                      | ++control+c++                            |
-    | Cut                       | ++control+x++                            |
-    | Paste                     | ++control+v++                           |
+    | ขึ้นบรรทัดใหม่พร้อมจัดย่อหน้า         | ++enter++                                |
+    | ยกเลิกการกระทำ (Undo)                | ++control+z++                            |
+    | ทำซ้ำ (Redo)                         | ++control+y++ **หรือ** ++control+shift+z++ |
+    | ยกเลิกการเลือก                        | ++control+u++                            |
+    | คัดลอก                                 | ++control+c++                            |
+    | ตัด                                    | ++control+x++                            |
+    | วาง                                    | ++control+v++                           |
 
 === "macOS"
 
     | Action                    | Shortcut                                 |
     |---------------------------|------------------------------------------|
-    | New line with indentation | ++enter++                                |
-    | Undo                      | ++command+z++                            |
-    | Redo                      | ++command+y++ **or** ++command+shift+z++ |
-    | Undo selection            | ++command+u++                            |
-    | Copy                      | ++command+c++                            |
-    | Cut                       | ++command+x++                            |
-    | Paste                     | ++command+v++                            |
+    | ขึ้นบรรทัดใหม่พร้อมจัดย่อหน้า         | ++enter++                                |
+    | ยกเลิกการกระทำ (Undo)                | ++command+z++                            |
+    | ทำซ้ำ (Redo)                         | ++command+y++ **หรือ** ++command+shift+z++ |
+    | ยกเลิกการเลือก                        | ++command+u++                            |
+    | คัดลอก                                 | ++command+c++                            |
+    | ตัด                                    | ++command+x++                            |
+    | วาง                                    | ++command+v++                            |
 
 === "Linux"
 
     | Action                    | Shortcut                                 |
     |---------------------------|------------------------------------------|
-    | New line with indentation | ++enter++                                |
-    | Undo                      | ++control+z++                            |
-    | Redo                      | ++control+y++ **or** ++control+shift+z++ |
-    | Undo selection            | ++control+u++                            |
-    | Copy                      | ++control+c++                            |
-    | Cut                       | ++control+x++                            |
-    | Paste                     | ++control+v++                            |
+    | ขึ้นบรรทัดใหม่พร้อมจัดย่อหน้า         | ++enter++                                |
+    | ยกเลิกการกระทำ (Undo)                | ++control+z++                            |
+    | ทำซ้ำ (Redo)                         | ++control+y++ **หรือ** ++control+shift+z++ |
+    | ยกเลิกการเลือก                        | ++control+u++                            |
+    | คัดลอก                                 | ++control+c++                            |
+    | ตัด                                    | ++control+x++                            |
+    | วาง                                    | ++control+v++                            |
 
 ## Delete Operations
 
@@ -141,33 +141,33 @@ The Code node editing environment supports a range of keyboard shortcuts to spee
 
     | Action                 | Shortcut              |
     |------------------------|-----------------------|
-    | Delete character left  | ++backspace++         |
-    | Delete character right | ++delete++            |
-    | Delete word left       | ++control+backspace++ |
-    | Delete word right      | ++control+delete++    |
-    | Delete line            | ++shift+control+k++   |
+    | ลบตัวอักษรทางซ้าย         | ++backspace++         |
+    | ลบตัวอักษรทางขวา          | ++delete++            |
+    | ลบคำทางซ้าย              | ++control+backspace++ |
+    | ลบคำทางขวา               | ++control+delete++    |
+    | ลบบรรทัด                 | ++shift+control+k++   |
 
 === "macOS"
 
     | Action                 | Shortcut                                                |
     |------------------------|---------------------------------------------------------|
-    | Delete character left  | ++backspace++                                           |
-    | Delete character right | ++delete++                                              |
-    | Delete word left       | ++option+backspace++ **or** ++control+command+h++       |
-    | Delete word right      | ++option+delete++  **or** ++function+option+backspace++ |
-    | Delete line            | ++shift+command+k++                                     |
-    | Delete to line start   | ++command+backspace++                                   |
-    | Delete to line end     | ++command+delete++ **or** ++control+k++                 |
+    | ลบตัวอักษรทางซ้าย         | ++backspace++                                           |
+    | ลบตัวอักษรทางขวา          | ++delete++                                              |
+    | ลบคำทางซ้าย              | ++option+backspace++ **หรือ** ++control+command+h++       |
+    | ลบคำทางขวา               | ++option+delete++  **หรือ** ++function+option+backspace++ |
+    | ลบบรรทัด                 | ++shift+command+k++                                     |
+    | ลบถึงต้นบรรทัด           | ++command+backspace++                                   |
+    | ลบถึงท้ายบรรทัด          | ++command+delete++ **หรือ** ++control+k++                 |
 
 === "Linux"
 
     | Action                 | Shortcut              |
     |------------------------|-----------------------|
-    | Delete character left  | ++backspace++         |
-    | Delete character right | ++delete++            |
-    | Delete word left       | ++control+backspace++ |
-    | Delete word right      | ++control+delete++    |
-    | Delete line            | ++shift+control+k++   |
+    | ลบตัวอักษรทางซ้าย         | ++backspace++         |
+    | ลบตัวอักษรทางขวา          | ++delete++            |
+    | ลบคำทางซ้าย              | ++control+backspace++ |
+    | ลบคำทางขวา               | ++control+delete++    |
+    | ลบบรรทัด                 | ++shift+control+k++   |
 
 ## Line Operations
 
@@ -175,42 +175,42 @@ The Code node editing environment supports a range of keyboard shortcuts to spee
 
     | Action               | Shortcut                             |
     |----------------------|--------------------------------------|
-    | Move line up         | ++alt+up++                           |
-    | Move line down       | ++alt+down++                         |
-    | Copy line up         | ++shift+alt+up++                     |
-    | Copy line down       | ++shift+alt+down++                   |
-    | Toggle line comment  | ++control+slash++                    |
-    | Add line comment     | ++control+k++ **then** ++control+c++ |
-    | Remove line comment  | ++control+k++ **then** ++control+u++ |
-    | Toggle block comment | ++shift+alt+a++                      |
+    | ย้ายบรรทัดขึ้น         | ++alt+up++                           |
+    | ย้ายบรรทัดลง          | ++alt+down++                         |
+    | คัดลอกบรรทัดขึ้น       | ++shift+alt+up++                     |
+    | คัดลอกบรรทัดลง        | ++shift+alt+down++                   |
+    | สลับคอมเมนต์บรรทัด    | ++control+slash++                    |
+    | เพิ่มคอมเมนต์บรรทัด   | ++control+k++ **แล้ว** ++control+c++ |
+    | ลบคอมเมนต์บรรทัด     | ++control+k++ **แล้ว** ++control+u++ |
+    | สลับคอมเมนต์บล็อก     | ++shift+alt+a++                      |
 
 === "macOS"
 
     | Action               | Shortcut                             |
     |----------------------|--------------------------------------|
-    | Move line up         | ++option+up++                        |
-    | Move line down       | ++option+down++                      |
-    | Copy line up         | ++shift+option+up++                  |
-    | Copy line down       | ++shift+option+down++                |
-    | Toggle line comment  | ++command+slash++                    |
-    | Add line comment     | ++command+k++ **then** ++command+c++ |
-    | Remove line comment  | ++command+k++ **then** ++command+u++ |
-    | Toggle block comment | ++shift+option+a++                   |
-    | Split line           | ++control+o++                        |
-    | Transpose characters | ++control+t++                        |
+    | ย้ายบรรทัดขึ้น         | ++option+up++                        |
+    | ย้ายบรรทัดลง          | ++option+down++                      |
+    | คัดลอกบรรทัดขึ้น       | ++shift+option+up++                  |
+    | คัดลอกบรรทัดลง        | ++shift+option+down++                |
+    | สลับคอมเมนต์บรรทัด    | ++command+slash++                    |
+    | เพิ่มคอมเมนต์บรรทัด   | ++command+k++ **แล้ว** ++command+c++ |
+    | ลบคอมเมนต์บรรทัด     | ++command+k++ **แล้ว** ++command+u++ |
+    | สลับคอมเมนต์บล็อก     | ++shift+option+a++                   |
+    | แยกบรรทัด             | ++control+o++                        |
+    | สลับตัวอักษร          | ++control+t++                        |
 
 === "Linux"
 
     | Action               | Shortcut                             |
     |----------------------|--------------------------------------|
-    | Move line up         | ++alt+up++                           |
-    | Move line down       | ++alt+down++                         |
-    | Copy line up         | ++shift+alt+up++                     |
-    | Copy line down       | ++shift+alt+down++                   |
-    | Toggle line comment  | ++control+slash++                    |
-    | Add line comment     | ++control+k++ **then** ++control+c++ |
-    | Remove line comment  | ++control+k++ **then** ++control+c++ |
-    | Toggle block comment | ++shift+alt+a++                      |
+    | ย้ายบรรทัดขึ้น         | ++alt+up++                           |
+    | ย้ายบรรทัดลง          | ++alt+down++                         |
+    | คัดลอกบรรทัดขึ้น       | ++shift+alt+up++                     |
+    | คัดลอกบรรทัดลง        | ++shift+alt+down++                   |
+    | สลับคอมเมนต์บรรทัด    | ++control+slash++                    |
+    | เพิ่มคอมเมนต์บรรทัด   | ++control+k++ **แล้ว** ++control+c++ |
+    | ลบคอมเมนต์บรรทัด     | ++control+k++ **แล้ว** ++control+c++ |
+    | สลับคอมเมนต์บล็อก     | ++shift+alt+a++                      |
 
 ## Autocomplete
 
@@ -218,28 +218,28 @@ The Code node editing environment supports a range of keyboard shortcuts to spee
 
     | Action                      | Shortcut                 |
     |-----------------------------|--------------------------|
-    | Start completion            | ++control+space++        |
-    | Accept completion           | ++enter++ **or** ++tab++ |
-    | Close completion            | ++escape++               |
-    | Navigate completion options | ++up++ **or** ++down++   |
+    | เริ่มเติมคำอัตโนมัติ            | ++control+space++        |
+    | ยอมรับคำแนะนำ                  | ++enter++ **หรือ** ++tab++ |
+    | ปิดกล่องเติมคำอัตโนมัติ         | ++escape++               |
+    | เลื่อนตัวเลือกในกล่องเติมคำ      | ++up++ **หรือ** ++down++   |
 
 === "macOS"
 
     | Action                      | Shortcut                 |
     |-----------------------------|--------------------------|
-    | Start completion            | ++control+space++        |
-    | Accept completion           | ++enter++ **or** ++tab++ |
-    | Close completion            | ++escape++               |
-    | Navigate completion options | ++up++ **or** ++down++   |
+    | เริ่มเติมคำอัตโนมัติ            | ++control+space++        |
+    | ยอมรับคำแนะนำ                  | ++enter++ **หรือ** ++tab++ |
+    | ปิดกล่องเติมคำอัตโนมัติ         | ++escape++               |
+    | เลื่อนตัวเลือกในกล่องเติมคำ      | ++up++ **หรือ** ++down++   |
 
 === "Linux"
 
     | Action                      | Shortcut                 |
     |-----------------------------|--------------------------|
-    | Start completion            | ++control+space++        |
-    | Accept completion           | ++enter++ **or** ++tab++ |
-    | Close completion            | ++escape++               |
-    | Navigate completion options | ++up++ **or** ++down++   |
+    | เริ่มเติมคำอัตโนมัติ            | ++control+space++        |
+    | ยอมรับคำแนะนำ                  | ++enter++ **หรือ** ++tab++ |
+    | ปิดกล่องเติมคำอัตโนมัติ         | ++escape++               |
+    | เลื่อนตัวเลือกในกล่องเติมคำ      | ++up++ **หรือ** ++down++   |
     
 ## Indentation
 
@@ -247,22 +247,22 @@ The Code node editing environment supports a range of keyboard shortcuts to spee
 
     | Action      | Shortcut                                      |
     |-------------|-----------------------------------------------|
-    | Indent more | ++tab++ **or** ++control+bracket-right++      |
-    | Indent less | ++shift+tab++ **or** ++control+bracket-left++ |
+    | เพิ่มย่อหน้า   | ++tab++ **หรือ** ++control+bracket-right++      |
+    | ลดย่อหน้า    | ++shift+tab++ **หรือ** ++control+bracket-left++ |
 
 === "macOS"
 
     | Action      | Shortcut                  |
     |-------------|---------------------------|
-    | Indent more | ++command+bracket-right++ |
-    | Indent less | ++command+bracket-left++  |
+    | เพิ่มย่อหน้า   | ++command+bracket-right++ |
+    | ลดย่อหน้า    | ++command+bracket-left++  |
 
 === "Linux"
 
     | Action      | Shortcut                                      |
     |-------------|-----------------------------------------------|
-    | Indent more | ++tab++ **or** ++control+bracket-right++      |
-    | Indent less | ++shift+tab++ **or** ++control+bracket-left++ |
+    | เพิ่มย่อหน้า   | ++tab++ **หรือ** ++control+bracket-right++      |
+    | ลดย่อหน้า    | ++shift+tab++ **หรือ** ++control+bracket-left++ |
 
 ## Code Folding
 
@@ -270,28 +270,28 @@ The Code node editing environment supports a range of keyboard shortcuts to spee
 
     | Action      | Shortcut                             |
     |-------------|--------------------------------------|
-    | Fold code   | ++control+shift+bracket-left++       |
-    | Unfold code | ++control+shift+bracket-right++      |
-    | Fold all    | ++control+k++ **then** ++control+0++ |
-    | Unfold all  | ++control+k++ **then** ++control+j++ |
+    | พับโค้ด        | ++control+shift+bracket-left++       |
+    | คลี่โค้ด        | ++control+shift+bracket-right++      |
+    | พับทั้งหมด      | ++control+k++ **แล้ว** ++control+0++ |
+    | คลี่ทั้งหมด     | ++control+k++ **แล้ว** ++control+j++ |
 
 === "macOS"
 
     | Action      | Shortcut                             |
     |-------------|--------------------------------------|
-    | Fold code   | ++command+option+bracket-left++      |
-    | Unfold code | ++command+option+bracket-right++     |
-    | Fold all    | ++command+k++ **then** ++command+0++ |
-    | Unfold all  | ++command+k++ **then** ++command+j++ |
+    | พับโค้ด        | ++command+option+bracket-left++      |
+    | คลี่โค้ด        | ++command+option+bracket-right++     |
+    | พับทั้งหมด      | ++command+k++ **แล้ว** ++command+0++ |
+    | คลี่ทั้งหมด     | ++command+k++ **แล้ว** ++command+j++ |
 
 === "Linux"
 
     | Action      | Shortcut                             |
     |-------------|--------------------------------------|
-    | Fold code   | ++control+shift+bracket-left++       |
-    | Unfold code | ++control+shift+bracket-right++      |
-    | Fold all    | ++control+k++ **then** ++control+0++ |
-    | Unfold all  | ++control+k++ **then** ++control+j++ |
+    | พับโค้ด        | ++control+shift+bracket-left++       |
+    | คลี่โค้ด        | ++control+shift+bracket-right++      |
+    | พับทั้งหมด      | ++control+k++ **แล้ว** ++control+0++ |
+    | คลี่ทั้งหมด     | ++control+k++ **แล้ว** ++control+j++ |
 
 ## Multi-cursor
 
@@ -299,31 +299,31 @@ The Code node editing environment supports a range of keyboard shortcuts to spee
 
     | Action                       | Shortcut             |
     |------------------------------|----------------------|
-    | Add cursor at click position | ++alt+left-button++  |
-    | Add cursor above             | ++control+alt+up++   |
-    | Add cursor below             | ++control+alt+down++ |
-    | Add cursors to line ends     | ++shift+alt+i++      |
-    | Clear multiple cursors       | ++escape++           |
+    | เพิ่มเคอร์เซอร์ที่ตำแหน่งคลิก      | ++alt+left-button++  |
+    | เพิ่มเคอร์เซอร์ด้านบน             | ++control+alt+up++   |
+    | เพิ่มเคอร์เซอร์ด้านล่าง           | ++control+alt+down++ |
+    | เพิ่มเคอร์เซอร์ที่ท้ายบรรทัดทั้งหมด | ++shift+alt+i++      |
+    | ลบเคอร์เซอร์หลายตัว               | ++escape++           |
 
 === "macOS"
 
     | Action                       | Shortcut                |
     |------------------------------|-------------------------|
-    | Add cursor at click position | ++option+left-button++  |
-    | Add cursor above             | ++control+option+up++   |
-    | Add cursor below             | ++control+option+down++ |
-    | Add cursors to line ends     | ++shift+option+i++      |
-    | Clear multiple cursors       | ++escape++              |
+    | เพิ่มเคอร์เซอร์ที่ตำแหน่งคลิก      | ++option+left-button++  |
+    | เพิ่มเคอร์เซอร์ด้านบน             | ++control+option+up++   |
+    | เพิ่มเคอร์เซอร์ด้านล่าง           | ++control+option+down++ |
+    | เพิ่มเคอร์เซอร์ที่ท้ายบรรทัดทั้งหมด | ++shift+option+i++      |
+    | ลบเคอร์เซอร์หลายตัว               | ++escape++              |
 
 === "Linux"
 
     | Action                       | Shortcut            |
     |------------------------------|---------------------|
-    | Add cursor at click position | ++alt+left-button++ |
-    | Add cursor above             | ++shift+alt+up++    |
-    | Add cursor below             | ++shift+alt+down++  |
-    | Add cursors to line ends     | ++shift+alt+i++     |
-    | Clear multiple cursors       | ++escape++          |
+    | เพิ่มเคอร์เซอร์ที่ตำแหน่งคลิก      | ++alt+left-button++ |
+    | เพิ่มเคอร์เซอร์ด้านบน             | ++shift+alt+up++    |
+    | เพิ่มเคอร์เซอร์ด้านล่าง           | ++shift+alt+down++  |
+    | เพิ่มเคอร์เซอร์ที่ท้ายบรรทัดทั้งหมด | ++shift+alt+i++     |
+    | ลบเคอร์เซอร์หลายตัว               | ++escape++          |
 
 ## Formatting
 
@@ -331,19 +331,19 @@ The Code node editing environment supports a range of keyboard shortcuts to spee
 
     | Action          | Shortcut                                     |
     |-----------------|----------------------------------------------|
-    | Format document | ++shift+alt+f++ |
+    | จัดรูปแบบเอกสาร    | ++shift+alt+f++ |
     
 === "macOS"
 
     | Action          | Shortcut                                     |
     |-----------------|----------------------------------------------|
-    | Format document | ++shift+command+f++ |
+    | จัดรูปแบบเอกสาร    | ++shift+command+f++ |
     
 === "Linux"
 
     | Action          | Shortcut                                      |
     |-----------------|-----------------------------------------------|
-    | Format document | ++control+shift+i++ |
+    | จัดรูปแบบเอกสาร    | ++control+shift+i++ |
     
 ## Search & Navigation
 
@@ -351,34 +351,34 @@ The Code node editing environment supports a range of keyboard shortcuts to spee
 
     | Action          | Shortcut              |
     |-----------------|-----------------------|
-    | Open Search     | ++control+f++         |
-    | Select All      | ++alt+enter++         |
-    | Replace All     | ++control+alt+enter++ |
-    | Go To Line      | ++control+g++         |
-    | Next Diagnostic | ++f8++                |
-    | Previous Diag.  | ++shift+f8++          |
-    | Open Lint Panel | ++control+shift+m++   |
+    | เปิดค้นหา         | ++control+f++         |
+    | เลือกทั้งหมด      | ++alt+enter++         |
+    | แทนที่ทั้งหมด     | ++control+alt+enter++ |
+    | ไปที่บรรทัด       | ++control+g++         |
+    | ข้อผิดพลาดถัดไป   | ++f8++                |
+    | ข้อผิดพลาดก่อนหน้า | ++shift+f8++          |
+    | เปิดแผง Lint      | ++control+shift+m++   |
 
 === "macOS"
 
     | Action          | Shortcut              |
     |-----------------|-----------------------|
-    | Open Search     | ++command+f++         |
-    | Select All      | ++command+enter++     |
-    | Replace All     | ++command+option+enter++ |
-    | Go To Line      | ++command+g++         |
-    | Next Diagnostic | ++f8++                |
-    | Previous Diag.  | ++shift+f8++          |
-    | Open Lint Panel | ++command+shift+m++   |
+    | เปิดค้นหา         | ++command+f++         |
+    | เลือกทั้งหมด      | ++command+enter++     |
+    | แทนที่ทั้งหมด     | ++command+option+enter++ |
+    | ไปที่บรรทัด       | ++command+g++         |
+    | ข้อผิดพลาดถัดไป   | ++f8++                |
+    | ข้อผิดพลาดก่อนหน้า | ++shift+f8++          |
+    | เปิดแผง Lint      | ++command+shift+m++   |
 
 === "Linux"
 
     | Action          | Shortcut              |
     |-----------------|-----------------------|
-    | Open Search     | ++control+f++         |
-    | Select All      | ++alt+enter++         |
-    | Replace All     | ++control+alt+enter++ |
-    | Go To Line      | ++control+g++         |
-    | Next Diagnostic | ++f8++                |
-    | Previous Diag.  | ++shift+f8++          |
-    | Open Lint Panel | ++control+shift+m++   |
+    | เปิดค้นหา         | ++control+f++         |
+    | เลือกทั้งหมด      | ++alt+enter++         |
+    | แทนที่ทั้งหมด     | ++control+alt+enter++ |
+    | ไปที่บรรทัด       | ++control+g++         |
+    | ข้อผิดพลาดถัดไป   | ++f8++                |
+    | ข้อผิดพลาดก่อนหน้า | ++shift+f8++          |
+    | เปิดแผง Lint      | ++control+shift+m++   |

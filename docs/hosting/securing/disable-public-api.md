@@ -7,11 +7,11 @@ contentType: howto
 
 # Disable the public REST API
 
-The [n8n public REST API](/api/index.md) allows you to programmatically perform many of the same tasks as you can in the n8n GUI.
+[n8n public REST API](/api/index.md) ช่วยให้คุณสั่งงาน n8n ได้แบบเดียวกับใน GUI ผ่านโปรแกรม
 
-If you don't plan on using this API, n8n recommends disabling it to improve the security of your n8n installation.
+ถ้าไม่ได้ใช้ API นี้ แนะนำให้ปิดเพื่อเพิ่มความปลอดภัยให้ n8n ของคุณ
 
-To disable the [public REST API](/api/index.md), set the `N8N_PUBLIC_API_DISABLED` environment variable to `true`, for example:
+ถ้าต้องการปิด [public REST API](/api/index.md) ให้ตั้งค่า environment variable `N8N_PUBLIC_API_DISABLED` เป็น `true` ตัวอย่างเช่น
 
 ```bash
 export N8N_PUBLIC_API_DISABLED=true
@@ -19,7 +19,7 @@ export N8N_PUBLIC_API_DISABLED=true
 
 ## Disable the API playground
 
-To disable the [API playground](/api/using-api-playground.md), set the `N8N_PUBLIC_API_SWAGGERUI_DISABLED` environment variable to `true`, for example:
+ถ้าอยากปิด [API playground](/api/using-api-playground.md) ให้ตั้งค่า environment variable `N8N_PUBLIC_API_SWAGGERUI_DISABLED` เป็น `true` ตัวอย่างเช่น
 
 ```bash
 export N8N_PUBLIC_API_SWAGGERUI_DISABLED=true
@@ -27,6 +27,6 @@ export N8N_PUBLIC_API_SWAGGERUI_DISABLED=true
 
 ## Related resources
 
-Refer to [Deployment environment variables](/hosting/configuration/environment-variables/deployment.md) for more information on these environment variables.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับ environment variables เหล่านี้ได้ที่ [Deployment environment variables](/hosting/configuration/environment-variables/deployment.md)
 
-Refer to [Configuration](/hosting/configuration/configuration-methods.md) for more information on setting environment variables.
+ดูวิธีตั้งค่า environment variables ได้ที่ [Configuration](/hosting/configuration/configuration-methods.md)

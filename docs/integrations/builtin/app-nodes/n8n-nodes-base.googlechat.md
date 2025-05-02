@@ -1,19 +1,19 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Google Chat node documentation
-description: Learn how to use the Google Chat node in n8n. Follow technical documentation to integrate Google Chat node into your workflows.
+description: เรียนรู้วิธีใช้ Google Chat node ใน n8n ทำตามเอกสารทางเทคนิคเพื่อรวม Google Chat node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 priority: medium
 ---
 
 # Google Chat node
 
-Use the Google Chat node to automate work in Google Chat, and integrate Google Chat with other applications. n8n has built-in support for a wide range of Google Chat features, including getting membership and spaces, as well as creating and deleting messages. 
+ใช้ Google Chat node เพื่อทำงานอัตโนมัติใน Google Chat และเชื่อมต่อ Google Chat กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Google Chat หลายอย่าง เช่น การดึงข้อมูล membership และ spaces รวมถึงการสร้างและลบ messages
 
-On this page, you'll find a list of operations the Google Chat node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Google Chat node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Google credentials](/integrations/builtin/credentials/google/index.md) for guidance on setting up authentication. 
+โปรดดู [Google credentials](/integrations/builtin/credentials/google/index.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

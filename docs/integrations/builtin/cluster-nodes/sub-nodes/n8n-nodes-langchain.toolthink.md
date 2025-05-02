@@ -8,8 +8,7 @@ priority: medium
 
 # Think Tool node
 
-The Think Tool node is a [tool](/glossary.md#ai-tool) that invites an [agent](/glossary.md#ai-agent) to do some thinking before answering. Essentially, it allows the agent to reflect on the question by talking to itself before providing an answer. In particular, this is useful for complex queries that require a thoughtful response.
-
+Think Tool node เป็น [tool](/glossary.md#ai-tool) ที่ช่วยให้ [agent](/glossary.md#ai-agent) ได้ "คิด" ก่อนจะตอบคำถาม กล่าวคือ agent จะได้ทบทวนหรือพูดกับตัวเองก่อนจะให้คำตอบ เหมาะกับคำถามที่ซับซ้อนหรืออยากได้คำตอบที่ผ่านการคิดอย่างรอบคอบ
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
@@ -20,13 +19,13 @@ The Think Tool node is a [tool](/glossary.md#ai-tool) that invites an [agent](/g
 
 ### Prompting example
 
-As an example, say you ask the agent:
+ตัวอย่างเช่น ถ้าคุณถาม agent ว่า
 
 <!-- vale off -->
 > *Jack is looking at Anne. Anne is looking at George. Jack is married, George is not, and we don't know if Anne is married. Is a married person looking at an unmarried person?*
 <!-- vale on -->
 	
-The agent will do its thinking with the tool:
+agent จะคิดกับตัวเองแบบนี้:
 
 <!-- vale off -->
 > *We have the following information: 1. Jack is looking at Anne. 2. Anne is looking at George. 3. Jack is married. 4. George is not married. 5. We don't know if Anne is married or not.*
@@ -44,7 +43,7 @@ The agent will do its thinking with the tool:
 > *In both scenarios, we find that a married person is looking at an unmarried person. Therefore, the answer to the question is yes.*
 <!-- vale on -->
 	
-and then afterward provide the answer:
+แล้วค่อยตอบว่า
 
 <!-- vale off -->
 > *Yes, a married person is looking at an unmarried person. In both possible scenarios regarding Anne's marital status, we find that a married individual (either Jack or Anne) is looking at an unmarried individual (either George or Anne).*

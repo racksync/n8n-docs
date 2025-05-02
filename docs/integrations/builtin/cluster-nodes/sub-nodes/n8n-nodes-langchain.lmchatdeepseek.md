@@ -8,12 +8,12 @@ priority: high
 
 # DeepSeek Chat Model node
 
-Use the DeepSeek Chat Model node to use DeepSeek's chat models with conversational [agents](/glossary.md#ai-agent).
+ใช้ DeepSeek Chat Model node เพื่อใช้งานโมเดลแชทของ DeepSeek กับ conversational [agents](/glossary.md#ai-agent)
 
-On this page, you'll find the node parameters for the DeepSeek Chat Model node and links to more resources.
+ในหน้านี้จะมีพารามิเตอร์ของ node DeepSeek Chat Model และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/deepseek.md).
+คุณสามารถดูข้อมูลการเชื่อมต่อสำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/deepseek.md)
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
@@ -22,49 +22,49 @@ You can find authentication information for this node [here](/integrations/built
 
 ### Model
 
-Select the model to use to generate the completion.
+เลือกโมเดลที่ต้องการให้สร้างข้อความตอบกลับ
 
-n8n dynamically loads models from DeepSeek and you'll only see the models available to your account.
+n8n จะโหลดโมเดลจาก DeepSeek แบบ dynamic คุณจะเห็นเฉพาะโมเดลที่บัญชีของคุณเข้าถึงได้
 
 ## Node options
 
-Use these options to further refine the node's behavior.
+ตัวเลือกเหล่านี้จะช่วยให้คุณปรับแต่งการทำงานของ node ได้มากขึ้น
 
 ### Base URL
 
-Enter a URL here to override the default URL for the API.
+ใส่ URL เพื่อ override ค่า default ของ API
 
 ### Frequency Penalty
 
-Use this option to control the chances of the model repeating itself. Higher values reduce the chance of the model repeating itself.
+ปรับโอกาสที่โมเดลจะตอบซ้ำๆ ค่าเยอะจะลดการตอบซ้ำ
 
 ### Maximum Number of Tokens
 
-Enter the maximum number of tokens used, which sets the completion length.
+กำหนดจำนวน tokens สูงสุดที่ใช้ ซึ่งจะเป็นการกำหนดความยาวของข้อความที่โมเดลจะตอบกลับ
 
 ### Response Format
 
-Choose **Text** or **JSON**. **JSON** ensures the model returns valid JSON.
+เลือก **Text** หรือ **JSON** ถ้าเลือก JSON โมเดลจะตอบกลับเป็น JSON ที่ถูกต้องเสมอ
 
 ### Presence Penalty
 
-Use this option to control the chances of the model talking about new topics. Higher values increase the chance of the model talking about new topics.
+ปรับโอกาสที่โมเดลจะพูดถึงหัวข้อใหม่ๆ ค่าเยอะจะเพิ่มโอกาสพูดเรื่องใหม่
 
 ### Sampling Temperature
 
-Use this option to control the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
+ปรับความสุ่มของการสร้างข้อความ ค่า temperature สูงจะทำให้โมเดลตอบหลากหลายมากขึ้น แต่ก็เสี่ยงต่อการตอบแบบหลุดประเด็น
 
 ### Timeout
 
-Enter the maximum request time in milliseconds.
+กำหนดเวลาสูงสุด (ms) ที่จะรอผลลัพธ์
 
 ### Max Retries
 
-Enter the maximum number of times to retry a request.
+กำหนดจำนวนครั้งสูงสุดที่ระบบจะลองส่ง request ใหม่
 
 ### Top P
 
-Use this option to set the probability the completion should use. Use a lower value to ignore less probable options. 
+กำหนดความน่าจะเป็นรวมที่โมเดลจะใช้ในการเลือก token ถัดไป ค่า Top P ต่ำจะตัดตัวเลือกที่มีความน่าจะเป็นน้อยออก
 
 ## Templates and examples
 
@@ -73,7 +73,7 @@ Use this option to set the probability the completion should use. Use a lower va
 
 ## Related resources
 
-As DeepSeek is API-compatible with OpenAI, you can refer to [LangChains's OpenAI documentation](https://js.langchain.com/docs/integrations/chat/openai/){:target=_blank .external-link} for more information about the service.
+DeepSeek ใช้ API แบบเดียวกับ OpenAI สามารถดูข้อมูลเพิ่มเติมได้ที่ [LangChains's OpenAI documentation](https://js.langchain.com/docs/integrations/chat/openai/){:target=_blank .external-link}
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 

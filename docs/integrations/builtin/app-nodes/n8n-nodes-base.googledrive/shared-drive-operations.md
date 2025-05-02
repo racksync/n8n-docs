@@ -8,130 +8,130 @@ priority: high
 
 # Google Drive Shared Drive operations
 
-Use this operation to create, delete, get, and update shared drives in Google Drive. Refer to [Google Drive](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/index.md) for more information on the Google Drive node itself.
+ใช้ Operation นี้เพื่อสร้าง, ลบ, ดึงข้อมูล และอัปเดต Shared drives ใน Google Drive โปรดดูข้อมูลเพิ่มเติมเกี่ยวกับ Google Drive node ที่ [Google Drive](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/index.md)
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Create a shared drive
 
-Use this operation to create a new shared drive.
+ใช้ Operation นี้เพื่อสร้าง Shared drive ใหม่
 
-Enter these parameters:
+ป้อน Parameters เหล่านี้:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
-- **Resource**: Select **Shared Drive**.
-- **Operation**: Select **Create**.
-- **Name**: The name to use for the new shared drive.
+- **Credential to connect with**: สร้างหรือเลือก [Google Drive credentials](/integrations/builtin/credentials/google/index.md) ที่มีอยู่
+- **Resource**: เลือก **Shared Drive**
+- **Operation**: เลือก **Create**
+- **Name**: ชื่อที่จะใช้สำหรับ Shared drive ใหม่
 
 ### Options
 
-- **Capabilities**: The capabilities to set for the new shared drive (see [REST Resources: drives | Google Drive](https://developers.google.com/drive/api/reference/rest/v3/drives) for more details):
-	- **Can Add Children**: Whether the current user can add children to folders in this shared drive.
-	- **Can Change Copy Requires Writer Permission Restriction**: Whether the current user can change the `copyRequiresWriterPermission` restriction on this shared drive.
-	- **Can Change Domain Users Only Restriction**: Whether the current user can change the `domainUsersOnly` restriction on this shared drive.
-	- **Can Change Drive Background**: Whether the current user can change the background on this shared drive.
-	- **Can Change Drive Members Only Restriction**: Whether the current user can change the `driveMembersOnly` restriction on this shared drive.
-	- **Can Comment**: Whether the current user can comment on files in this shared drive.
-	- **Can Copy**: Whether the current user can copy files in this shared drive.
-	- **Can Delete Children**: Whether the current user can delete children from folders in this shared drive.
-	- **Can Delete Drive**: Whether the current user can delete this shared drive. This operation may still fail if there are items not in the trash in the shared drive.
-	- **Can Download**: Whether the current user can download files from this shared drive.
-	- **Can Edit**: Whether the current user can edit files from this shared drive.
-	- **Can List Children**: Whether the current user can list the children of folders in this shared drive.
-	- **Can Manage Members**: Whether the current user can add, remove, or change the role of members of this shared drive.
-	- **Can Read Revisions**: Whether the current user can read the revisions resource of files in this shared drive.
-	- **Can Rename Drive**: Whether the current user can rename this shared drive.
-	- **Can Share**: Whether the current user can share files or folders in this shared drive.
-	- **Can Trash Children**: Whether the current user can trash children from folders in this shared drive.
-- **Color RGB**: The color of this shared drive as an RGB hex string.
-- **Hidden**: Whether to hide this shared drive in the default view.
-- **Restrictions**: Restrictions to add to this shared drive (see [REST Resources: drives | Google Drive](https://developers.google.com/drive/api/reference/rest/v3/drives) for more details):
-	- **Admin Managed Restrictions**: When enabled, restrictions here will override the similarly named fields to true for any file inside of this shared drive.
-	- **Copy Requires Writer Permission**: Whether the options to copy, print, or download files inside this shared drive should be disabled for readers and commenters.
-	- **Domain Users Only**: Whether to restrict access to this shared drive and items inside this shared drive to users of the domain to which this shared drive belongs.
-	- **Drive Members Only**: Whether to restrict access to items inside this shared drive to its members.
+- **Capabilities**: Capabilities ที่จะตั้งค่าสำหรับ Shared drive ใหม่ (ดูรายละเอียดเพิ่มเติมที่ [REST Resources: drives | Google Drive](https://developers.google.com/drive/api/reference/rest/v3/drives)):
+	- **Can Add Children**: ระบุว่า User ปัจจุบันสามารถเพิ่ม Children ไปยัง Folders ใน Shared drive นี้ได้หรือไม่
+	- **Can Change Copy Requires Writer Permission Restriction**: ระบุว่า User ปัจจุบันสามารถเปลี่ยนข้อจำกัด `copyRequiresWriterPermission` ใน Shared drive นี้ได้หรือไม่
+	- **Can Change Domain Users Only Restriction**: ระบุว่า User ปัจจุบันสามารถเปลี่ยนข้อจำกัด `domainUsersOnly` ใน Shared drive นี้ได้หรือไม่
+	- **Can Change Drive Background**: ระบุว่า User ปัจจุบันสามารถเปลี่ยน Background ของ Shared drive นี้ได้หรือไม่
+	- **Can Change Drive Members Only Restriction**: ระบุว่า User ปัจจุบันสามารถเปลี่ยนข้อจำกัด `driveMembersOnly` ใน Shared drive นี้ได้หรือไม่
+	- **Can Comment**: ระบุว่า User ปัจจุบันสามารถแสดงความคิดเห็นเกี่ยวกับ Files ใน Shared drive นี้ได้หรือไม่
+	- **Can Copy**: ระบุว่า User ปัจจุบันสามารถคัดลอก Files ใน Shared drive นี้ได้หรือไม่
+	- **Can Delete Children**: ระบุว่า User ปัจจุบันสามารถลบ Children ออกจาก Folders ใน Shared drive นี้ได้หรือไม่
+	- **Can Delete Drive**: ระบุว่า User ปัจจุบันสามารถลบ Shared drive นี้ได้หรือไม่ Operation นี้อาจยังคงล้มเหลวหากมี Items ที่ไม่ได้อยู่ใน Trash ใน Shared drive
+	- **Can Download**: ระบุว่า User ปัจจุบันสามารถดาวน์โหลด Files จาก Shared drive นี้ได้หรือไม่
+	- **Can Edit**: ระบุว่า User ปัจจุบันสามารถแก้ไข Files จาก Shared drive นี้ได้หรือไม่
+	- **Can List Children**: ระบุว่า User ปัจจุบันสามารถแสดงรายการ Children ของ Folders ใน Shared drive นี้ได้หรือไม่
+	- **Can Manage Members**: ระบุว่า User ปัจจุบันสามารถเพิ่ม, ลบ หรือเปลี่ยน Role ของ Members ใน Shared drive นี้ได้หรือไม่
+	- **Can Read Revisions**: ระบุว่า User ปัจจุบันสามารถอ่าน Revisions resource ของ Files ใน Shared drive นี้ได้หรือไม่
+	- **Can Rename Drive**: ระบุว่า User ปัจจุบันสามารถเปลี่ยนชื่อ Shared drive นี้ได้หรือไม่
+	- **Can Share**: ระบุว่า User ปัจจุบันสามารถแชร์ Files หรือ Folders ใน Shared drive นี้ได้หรือไม่
+	- **Can Trash Children**: ระบุว่า User ปัจจุบันสามารถย้าย Children จาก Folders ไปยัง Trash ใน Shared drive นี้ได้หรือไม่
+- **Color RGB**: สีของ Shared drive นี้ในรูปแบบ RGB hex string
+- **Hidden**: ระบุว่าจะซ่อน Shared drive นี้ในมุมมองเริ่มต้นหรือไม่
+- **Restrictions**: ข้อจำกัดที่จะเพิ่มให้กับ Shared drive นี้ (ดูรายละเอียดเพิ่มเติมที่ [REST Resources: drives | Google Drive](https://developers.google.com/drive/api/reference/rest/v3/drives)):
+	- **Admin Managed Restrictions**: เมื่อเปิดใช้งาน ข้อจำกัดที่นี่จะ Override field ที่มีชื่อคล้ายกันเป็น True สำหรับ File ใดๆ ภายใน Shared drive นี้
+	- **Copy Requires Writer Permission**: ระบุว่าตัวเลือกในการคัดลอก, พิมพ์ หรือดาวน์โหลด Files ภายใน Shared drive นี้ควรถูกปิดใช้งานสำหรับ Readers และ Commenters หรือไม่
+	- **Domain Users Only**: ระบุว่าจะจำกัดการเข้าถึง Shared drive นี้และ Items ภายใน Shared drive นี้เฉพาะ Users ของ Domain ที่ Shared drive นี้เป็นส่วนหนึ่งหรือไม่
+	- **Drive Members Only**: ระบุว่าจะจำกัดการเข้าถึง Items ภายใน Shared drive นี้เฉพาะ Members ของมันหรือไม่
 
-Refer to the [Method: drives.insert | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/drives/insert){:target=_blank .external-link} API documentation for more information.
+โปรดดูเอกสาร API [Method: drives.insert | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/drives/insert){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 
 ## Delete a shared drive
 
-Use this operation to delete a shared drive.
+ใช้ Operation นี้เพื่อลบ Shared drive
 
-Enter these parameters:
+ป้อน Parameters เหล่านี้:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
-- **Resource**: Select **Shared Drive**.
-- **Operation**: Select **Delete**.
-- **Shared Drive**: Choose the shared drive want to delete. 
-    - Select **From list** to choose the title from the dropdown list, **By URL** to enter the URL of the drive, or **By ID** to enter the `driveId`. 
-    - You can find the `driveId` in the URL for the shared Google Drive: `https://drive.google.com/drive/u/0/folders/driveID`.
+- **Credential to connect with**: สร้างหรือเลือก [Google Drive credentials](/integrations/builtin/credentials/google/index.md) ที่มีอยู่
+- **Resource**: เลือก **Shared Drive**
+- **Operation**: เลือก **Delete**
+- **Shared Drive**: เลือก Shared drive ที่คุณต้องการลบ
+    - เลือก **From list** เพื่อเลือก Title จากรายการ Dropdown, **By URL** เพื่อป้อน URL ของ Drive, หรือ **By ID** เพื่อป้อน `driveId`
+    - คุณสามารถหา `driveId` ได้ใน URL ของ Shared Google Drive: `https://drive.google.com/drive/u/0/folders/driveID`
 
-Refer to the [Method: drives.delete | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/drives/delete){:target=_blank .external-link} API documentation for more information.
+โปรดดูเอกสาร API [Method: drives.delete | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/drives/delete){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 
 ## Get a shared drive
 
-Use this operation to get a shared drive.
+ใช้ Operation นี้เพื่อดึงข้อมูล Shared drive
 
-Enter these parameters:
+ป้อน Parameters เหล่านี้:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
-- **Resource**: Select **Shared Drive**.
-- **Operation**: Select **Get**.
-- **Shared Drive**: Choose the shared drive want to get. 
-    - Select **From list** to choose the title from the dropdown list, **By URL** to enter the URL of the drive, or **By ID** to enter the `driveId`. 
-    - You can find the `driveId` in the URL for the shared Google Drive: `https://drive.google.com/drive/u/0/folders/driveID`.
+- **Credential to connect with**: สร้างหรือเลือก [Google Drive credentials](/integrations/builtin/credentials/google/index.md) ที่มีอยู่
+- **Resource**: เลือก **Shared Drive**
+- **Operation**: เลือก **Get**
+- **Shared Drive**: เลือก Shared drive ที่คุณต้องการดึงข้อมูล
+    - เลือก **From list** เพื่อเลือก Title จากรายการ Dropdown, **By URL** เพื่อป้อน URL ของ Drive, หรือ **By ID** เพื่อป้อน `driveId`
+    - คุณสามารถหา `driveId` ได้ใน URL ของ Shared Google Drive: `https://drive.google.com/drive/u/0/folders/driveID`
 
 ### Options
 
-- **Use Domain Admin Access**: Whether to issue the request as a domain administrator. When enabled, grants the requester access if they're an administrator of the domain to which the shared drive belongs.
+- **Use Domain Admin Access**: ระบุว่าจะส่ง Request ในฐานะ Domain administrator หรือไม่ เมื่อเปิดใช้งาน จะให้สิทธิ์การเข้าถึงแก่ Requester หากพวกเขาเป็น Administrator ของ Domain ที่ Shared drive นั้นเป็นส่วนหนึ่ง
 
-Refer to the [Method: drives.get | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/drives/get){:target=_blank .external-link} API documentation for more information.
+โปรดดูเอกสาร API [Method: drives.get | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/drives/get){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 
 <!-- vale from-write-good.Weasel = NO -->
 ## Get many shared drives
 
-Use this operation to get many shared drives.
+ใช้ Operation นี้เพื่อดึงข้อมูล Shared drives หลายรายการ
 <!-- vale from-write-good.Weasel = YES -->
 
-Enter these parameters:
+ป้อน Parameters เหล่านี้:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
-- **Resource**: Select **Shared Drive**.
-- **Operation**: Select **Get Many**.
-- **Return All**: Choose whether to return all results or only up to a given limit.
-- **Limit**: The maximum number of items to return when **Return All** is disabled.
-- **Shared Drive**: Choose the shared drive want to get. 
-    - Select **From list** to choose the title from the dropdown list, **By URL** to enter the URL of the drive, or **By ID** to enter the `driveId`. 
-    - You can find the `driveId` in the URL for the shared Google Drive: `https://drive.google.com/drive/u/0/folders/driveID`.
+- **Credential to connect with**: สร้างหรือเลือก [Google Drive credentials](/integrations/builtin/credentials/google/index.md) ที่มีอยู่
+- **Resource**: เลือก **Shared Drive**
+- **Operation**: เลือก **Get Many**
+- **Return All**: เลือกว่าจะคืนค่าผลลัพธ์ทั้งหมด หรือคืนค่าตามจำนวนที่กำหนด
+- **Limit**: จำนวน Items สูงสุดที่จะคืนค่าเมื่อ **Return All** ถูกปิดใช้งาน
+- **Shared Drive**: เลือก Shared drive ที่คุณต้องการดึงข้อมูล
+    - เลือก **From list** เพื่อเลือก Title จากรายการ Dropdown, **By URL** เพื่อป้อน URL ของ Drive, หรือ **By ID** เพื่อป้อน `driveId`
+    - คุณสามารถหา `driveId` ได้ใน URL ของ Shared Google Drive: `https://drive.google.com/drive/u/0/folders/driveID`
 
 ### Options
 
-- **Query**: The query string to use to search for shared drives. See [Search for shared drives | Google Drive](https://developers.google.com/drive/api/guides/search-shareddrives) for more information.
-- **Use Domain Admin Access**: Whether to issue the request as a domain administrator. When enabled, grants the requester access if they're an administrator of the domain to which the shared drive belongs.
+- **Query**: Query string ที่จะใช้ในการค้นหา Shared drives ดูข้อมูลเพิ่มเติมที่ [Search for shared drives | Google Drive](https://developers.google.com/drive/api/guides/search-shareddrives)
+- **Use Domain Admin Access**: ระบุว่าจะส่ง Request ในฐานะ Domain administrator หรือไม่ เมื่อเปิดใช้งาน จะให้สิทธิ์การเข้าถึงแก่ Requester หากพวกเขาเป็น Administrator ของ Domain ที่ Shared drive นั้นเป็นส่วนหนึ่ง
 
-Refer to the [Method: drives.get | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/drives/get){:target=_blank .external-link} API documentation for more information.
+โปรดดูเอกสาร API [Method: drives.get | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/drives/get){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 
 ## Update a shared drive
 
-Use this operation to update a shared drive.
+ใช้ Operation นี้เพื่ออัปเดต Shared drive
 
-Enter these parameters:
+ป้อน Parameters เหล่านี้:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
-- **Resource**: Select **Shared Drive**.
-- **Operation**: Select **Update**.
-- **Shared Drive**: Choose the shared drive you want to update. 
-    - Select **From list** to choose the drive from the dropdown list, **By URL** to enter the URL of the drive, or **By ID** to enter the `driveId`. 
-    - You can find the `driveId` in the URL for the shared Google Drive: `https://drive.google.com/drive/u/0/folders/driveID`.
+- **Credential to connect with**: สร้างหรือเลือก [Google Drive credentials](/integrations/builtin/credentials/google/index.md) ที่มีอยู่
+- **Resource**: เลือก **Shared Drive**
+- **Operation**: เลือก **Update**
+- **Shared Drive**: เลือก Shared drive ที่คุณต้องการอัปเดต
+    - เลือก **From list** เพื่อเลือก Drive จากรายการ Dropdown, **By URL** เพื่อป้อน URL ของ Drive, หรือ **By ID** เพื่อป้อน `driveId`
+    - คุณสามารถหา `driveId` ได้ใน URL ของ Shared Google Drive: `https://drive.google.com/drive/u/0/folders/driveID`
 
 ### Update Fields
 
-- **Color RGB**: The color of this shared drive as an RGB hex string.
-- **Name**: The updated name for the shared drive.
-- **Restrictions**: Restrictions for this shared drive (see [REST Resources: drives | Google Drive](https://developers.google.com/drive/api/reference/rest/v3/drives) for more details):
-	- **Admin Managed Restrictions**: When enabled, restrictions here will override the similarly named fields to true for any file inside of this shared drive.
-	- **Copy Requires Writer Permission**: Whether the options to copy, print, or download files inside this shared drive should be disabled for readers and commenters.
-	- **Domain Users Only**: Whether to restrict access to this shared drive and items inside this shared drive to users of the domain to which this shared drive belongs.
-	- **Drive Members Only**: Whether to restrict access to items inside this shared drive to its members.
+- **Color RGB**: สีของ Shared drive นี้ในรูปแบบ RGB hex string
+- **Name**: ชื่อที่อัปเดตสำหรับ Shared drive
+- **Restrictions**: ข้อจำกัดสำหรับ Shared drive นี้ (ดูรายละเอียดเพิ่มเติมที่ [REST Resources: drives | Google Drive](https://developers.google.com/drive/api/reference/rest/v3/drives)):
+	- **Admin Managed Restrictions**: เมื่อเปิดใช้งาน ข้อจำกัดที่นี่จะ Override field ที่มีชื่อคล้ายกันเป็น True สำหรับ File ใดๆ ภายใน Shared drive นี้
+	- **Copy Requires Writer Permission**: ระบุว่าตัวเลือกในการคัดลอก, พิมพ์ หรือดาวน์โหลด Files ภายใน Shared drive นี้ควรถูกปิดใช้งานสำหรับ Readers และ Commenters หรือไม่
+	- **Domain Users Only**: ระบุว่าจะจำกัดการเข้าถึง Shared drive นี้และ Items ภายใน Shared drive นี้เฉพาะ Users ของ Domain ที่ Shared drive นี้เป็นส่วนหนึ่งหรือไม่
+	- **Drive Members Only**: ระบุว่าจะจำกัดการเข้าถึง Items ภายใน Shared drive นี้เฉพาะ Members ของมันหรือไม่
 
-Refer to the [Method: drives.update | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/drives/update){:target=_blank .external-link} API documentation for more information.
+โปรดดูเอกสาร API [Method: drives.update | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/drives/update){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม

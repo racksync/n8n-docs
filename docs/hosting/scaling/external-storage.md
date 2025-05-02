@@ -15,25 +15,25 @@ search:
 
 /// info | Feature availability
 
-* Available on Self-hosted Enterprise plans
-* If you want access to this feature on Cloud Enterprise, [contact n8n](https://n8n-community.typeform.com/to/y9X2YuGa){:target=_blank .external-link}.
+* ใช้ได้เฉพาะ Self-hosted Enterprise plans
+* ถ้าอยากใช้บน Cloud Enterprise [ติดต่อ n8n](https://n8n-community.typeform.com/to/y9X2YuGa){:target=_blank .external-link}
 ///
 
-n8n can store binary data produced by workflow executions externally. This feature is useful to avoid relying on the filesystem for storing large amounts of binary data.
+n8n สามารถเก็บ binary data ที่ workflow สร้างไว้ภายนอกได้ ฟีเจอร์นี้เหมาะกับคนที่ไม่อยากเก็บไฟล์ใหญ่ๆ ไว้ใน filesystem
 
-n8n will introduce external storage for other data types in the future.
+ในอนาคต n8n จะรองรับ external storage สำหรับข้อมูลประเภทอื่นด้วย
 
 ## Storing n8n's binary data in S3
 
-n8n supports [AWS S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html){:target=_blank .external-link} as an external store for binary data produced by workflow executions. You can use other S3-compatible services like Cloudflare R2 and Backblaze B2, but n8n doesn't officially support these.
+n8n รองรับ [AWS S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html){:target=_blank .external-link} เป็น external store สำหรับ binary data ที่ workflow สร้าง คุณสามารถใช้ S3-compatible อื่นๆ เช่น Cloudflare R2, Backblaze B2 ได้ แต่ n8n ยังไม่รองรับอย่างเป็นทางการ
 
 /// info | Enterprise-tier feature
-You will need an [Enterprise license key](/license-key.md) for external storage. If your license key expires and you remain on S3 mode, the instance will be able to read from, but not write to, the S3 bucket.
+ต้องมี [Enterprise license key](/license-key.md) เพื่อใช้ external storage ถ้า license หมดอายุและยังใช้ S3 mode instance จะอ่านจาก S3 ได้แต่เขียนไม่ได้
 ///
 
 ### Setup
 
-Create and configure a bucket following the [AWS documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html){:target=_blank .external-link}. You can use the following policy, replacing `<bucket-name>` with the name of the bucket you created:
+สร้างและตั้งค่า bucket ตาม [AWS documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html){:target=_blank .external-link} ใช้ policy นี้ (เปลี่ยน `<bucket-name>` เป็นชื่อ bucket ของคุณ):
 
 ```json
 {
@@ -49,12 +49,12 @@ Create and configure a bucket following the [AWS documentation](https://docs.aws
 }
 ```
 
-Set a bucket-level lifecycle configuration so that S3 automatically deletes old binary data. n8n delegates pruning of binary data to S3, so setting a lifecycle configuration is required unless you want to preserve binary data indefinitely.
+ตั้ง bucket-level lifecycle configuration ให้ S3 ลบ binary data เก่าอัตโนมัติ n8n จะไม่ลบ binary data เองถ้าใช้ S3 ต้องตั้ง lifecycle นี้เอง (ถ้าไม่อยากเก็บถาวร)
 
-Once you finish creating the bucket, you will have a host, bucket name and region, and an access key ID and secret access key. You need to set them in n8n's environment:
+เมื่อสร้าง bucket เสร็จ คุณจะได้ host, bucket name, region, access key ID และ secret access key ตั้งค่าใน environment ของ n8n:
 
 ```sh
-export N8N_EXTERNAL_STORAGE_S3_HOST=... # example: s3.us-east-1.amazonaws.com
+export N8N_EXTERNAL_STORAGE_S3_HOST=... # ตัวอย่าง: s3.us-east-1.amazonaws.com
 export N8N_EXTERNAL_STORAGE_S3_BUCKET_NAME=...
 export N8N_EXTERNAL_STORAGE_S3_BUCKET_REGION=...
 export N8N_EXTERNAL_STORAGE_S3_ACCESS_KEY=...
@@ -62,32 +62,31 @@ export N8N_EXTERNAL_STORAGE_S3_ACCESS_SECRET=...
 ```
 
 /// note | No region
-If your provider doesn't require a region, you can set `N8N_EXTERNAL_STORAGE_S3_BUCKET_REGION` to `'auto'`.
+ถ้า provider ไม่ต้องใช้ region ให้ตั้ง `N8N_EXTERNAL_STORAGE_S3_BUCKET_REGION` เป็น `'auto'`
 ///
-Tell n8n to store binary data in S3:
+บอก n8n ให้เก็บ binary data ใน S3:
 
 ```sh
 export N8N_AVAILABLE_BINARY_DATA_MODES=filesystem,s3
 export N8N_DEFAULT_BINARY_DATA_MODE=s3
 ```
 
-
 /// note | Auth autodetection
-To automatically detect credentials to authenticate your S3 calls, set `N8N_EXTERNAL_STORAGE_S3_AUTH_AUTO_DETECT` to `true`. This will use the default [credential provider chain](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/setting-credentials-node.html#credchain).
+ถ้าอยากให้ n8n ตรวจ credentials S3 อัตโนมัติ ให้ตั้ง `N8N_EXTERNAL_STORAGE_S3_AUTH_AUTO_DETECT` เป็น `true` จะใช้ [credential provider chain](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/setting-credentials-node.html#credchain) ของ AWS
 ///
 
-Restart the server to load the new configuration.
+restart server เพื่อโหลด config ใหม่
 
 ### Usage
 
-After you enable S3, n8n writes and reads any new binary data to and from the S3 bucket. n8n writes binary data to your S3 bucket in this format:
+หลังเปิด S3 แล้ว n8n จะอ่าน/เขียน binary data ใหม่ไปที่ S3 bucket โดยใช้ format นี้:
 
 ```
 workflows/{workflowId}/executions/{executionId}/binary_data/{binaryFileId}
 ```
 
-n8n continues to read older binary data stored in the filesystem from the filesystem, if `filesystem` remains listed as an option in `N8N_AVAILABLE_BINARY_DATA_MODES`.
+n8n จะยังอ่าน binary data เก่าจาก filesystem ถ้า `filesystem` ยังอยู่ใน `N8N_AVAILABLE_BINARY_DATA_MODES`
 
-If you store binary data in S3 and later switch to filesystem mode, the instance continues to read any data stored in S3, as long as `s3` remains listed in `N8N_AVAILABLE_BINARY_DATA_MODES` and your S3 credentials remain valid.
+ถ้าเปลี่ยนจาก S3 กลับไป filesystem instance จะยังอ่านข้อมูลใน S3 ได้ถ้า `s3` ยังอยู่ใน `N8N_AVAILABLE_BINARY_DATA_MODES` และ credential S3 ยังใช้ได้
 
 --8<-- "_snippets/self-hosting/scaling/binary-data-pruning.md"

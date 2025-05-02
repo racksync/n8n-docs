@@ -7,12 +7,10 @@ contentType: [integration, reference]
 
 # Sentry.io node
 
-Use the Sentry.io node to automate work in Sentry.io, and integrate Sentry.io with other applications. n8n has built-in support for a wide range of Sentry.io features, including creating, updating, deleting, and getting, issues, projects, and releases, as well as getting all events.
-
-On this page, you'll find a list of operations the Sentry.io node supports and links to more resources.
+ใช้ Sentry.io node เพื่อช่วยให้งานใน Sentry.io เป็นไปโดยอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันอื่น ๆ ได้อย่างมีประสิทธิภาพ. n8n รองรับฟีเจอร์ของ Sentry.io หลากหลาย เช่น การสร้าง, อัปเดต, ลบ, และดึงข้อมูล issues, projects, releases รวมถึงการดึง events ทั้งหมด.
 
 /// note | Credentials
-Refer to [Sentry.io credentials](/integrations/builtin/credentials/sentryio.md) for guidance on setting up authentication. 
+ดู [Sentry.io credentials](/integrations/builtin/credentials/sentryio.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations

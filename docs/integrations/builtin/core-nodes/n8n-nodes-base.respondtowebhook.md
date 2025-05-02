@@ -8,43 +8,43 @@ priority: critical
 
 # Respond to Webhook
 
-Use the Respond to Webhook node to control the response to incoming webhooks. This node works with the [Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md) node.
+ใช้ Respond to Webhook node เพื่อควบคุมการตอบกลับ (response) ไปยัง webhook ที่เข้ามา Node นี้จะทำงานร่วมกับ [Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md) node
 
 /// note | Runs once for the first data item
-The Respond to Webhook node runs once, using the first incoming data item. Refer to [Return more than one data item](#return-more-than-one-data-item-deprecated) for more information.
+Respond to Webhook node จะทำงานแค่ครั้งเดียว โดยใช้ข้อมูล item แรกที่เข้ามา ดูรายละเอียดเพิ่มเติมที่ [Return more than one data item](#return-more-than-one-data-item-deprecated)
 ///
 
 ## How to use Respond to Webhook
 
-To use the Respond to Webhook node:
+วิธีใช้งาน Respond to Webhook node:
 
-1. Add a [Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md) node as the trigger node for the workflow.
-1. In the Webhook node, set **Respond** to **Using 'Respond to Webhook' node**.
-1. Add the Respond to Webhook node anywhere in your workflow. If you want it to return data from other nodes, place it after those nodes.
+1. เพิ่ม [Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md) node เป็น trigger node ของ workflow
+1. ใน Webhook node ให้ตั้งค่า **Respond** เป็น **Using 'Respond to Webhook' node**
+1. เพิ่ม Respond to Webhook node ไว้ที่ตำแหน่งใดก็ได้ใน workflow ถ้าต้องการให้ return ข้อมูลจาก node อื่น ให้ต่อหลัง node เหล่านั้น
 
 ## Node parameters
 
-Configure the node behavior using these parameters.
+ตั้งค่าการทำงานของ node นี้ด้วย parameter เหล่านี้
 
 ### Respond With
 
-Choose what data to send in the webhook response.
+เลือกข้อมูลที่จะส่งกลับไปใน webhook response
 
-- **All Incoming Items**: Respond with all the JSON items from the input.
-- **Binary**: Respond with a binary file defined in **Response Data Source**.
-- **First Incoming Item**: Respond with the first incoming item's JSON.
-- **JSON**: Respond with a JSON object defined in **Response Body**.
-- **No Data**: No response payload.
-- **Redirect**: Redirect to a URL set in **Redirect URL**.
-- **Text**: Respond with text set in **Response Body**.
+- **All Incoming Items**: ตอบกลับด้วย JSON ของทุก item ที่เข้ามา
+- **Binary**: ตอบกลับด้วยไฟล์ binary ตามที่กำหนดใน **Response Data Source**
+- **First Incoming Item**: ตอบกลับด้วย JSON ของ item แรกที่เข้ามา
+- **JSON**: ตอบกลับด้วย JSON object ที่กำหนดใน **Response Body**
+- **No Data**: ไม่ส่งข้อมูลกลับ
+- **Redirect**: redirect ไปยัง URL ที่ตั้งไว้ใน **Redirect URL**
+- **Text**: ตอบกลับด้วยข้อความที่ตั้งไว้ใน **Response Body**
 
 ## Node options
 
-Select **Add Option** to view and set the options.
+เลือก **Add Option** เพื่อดูและตั้งค่า option เพิ่มเติม
 
-- **Response Code**: Set the [response code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status){:target=_blank .external-link} to use.
-- **Response Headers**: Define the response headers to send.
-- **Put Response in Field**: Available when you respond with **All Incoming Items** or **First Incoming Item**. Set the field name for the field containing the response data.
+- **Response Code**: ตั้งค่า [response code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status){:target=_blank .external-link} ที่ต้องการใช้
+- **Response Headers**: กำหนด response headers ที่ต้องการส่งกลับ
+- **Put Response in Field**: ใช้ได้เมื่อเลือกตอบกลับแบบ **All Incoming Items** หรือ **First Incoming Item** ตั้งชื่อ field ที่จะเก็บ response data
 
 ## Templates and examples
 
@@ -53,22 +53,22 @@ Select **Add Option** to view and set the options.
 
 ## Workflow behavior
 
-When using the Respond to Webhook node, workflows behave as follows:
+เมื่อใช้ Respond to Webhook node, workflow จะมีพฤติกรรมดังนี้:
 
-- The workflow finishes without executing the Respond to Webhook node: it returns a standard message with a 200 status.
-- The workflow errors before the first Respond to Webhook node executes: the workflow returns an error message with a 500 status.
-- A second Respond to Webhook node executes after the first one: the workflow ignores it.
-- A Respond to Webhook node executes but there was no webhook: the workflow ignores the Respond to Webhook node.
+- ถ้า workflow จบโดยไม่ได้ execute Respond to Webhook node: จะส่งข้อความมาตรฐานพร้อม status 200
+- ถ้า workflow error ก่อน execute Respond to Webhook node ตัวแรก: จะส่ง error message พร้อม status 500
+- ถ้ามี Respond to Webhook node ตัวที่สอง execute หลังตัวแรก: จะถูกละเลย
+- ถ้า Respond to Webhook node execute แต่ไม่มี webhook: จะถูกละเลย
 
 ## Return more than one data item (deprecated)
 
 /// note | Deprecated in 1.22.0
-n8n 1.22.0 added support for returning all data items using the **All Incoming Items** option. n8n recommends upgrading to the latest version of n8n, instead of using the workarounds described in this section.
+ตั้งแต่ n8n 1.22.0 สามารถ return ข้อมูลทุก item ได้โดยเลือก **All Incoming Items** แนะนำให้อัปเกรด n8n แทนการใช้วิธี workaround ในหัวข้อนี้
 ///
 
-The Respond to Webhook node runs once, using the first incoming data item. This includes when using [expressions](/code/expressions.md). You can't force looping using the Loop node: the workflow will run, but the webhook response will still only contain the results of the first execution. 
+Respond to Webhook node จะทำงานแค่ครั้งเดียว โดยใช้ข้อมูล item แรกที่เข้ามา รวมถึงกรณีที่ใช้ [expressions](/code/expressions.md) ไม่สามารถบังคับให้วน loop ด้วย Loop node ได้ (workflow จะรัน แต่ response จะมีแค่ผลลัพธ์แรกเท่านั้น)
 
-If you need to return more than one data item, choose one of these options:
+ถ้าต้องการ return ข้อมูลมากกว่าหนึ่ง item ให้เลือกวิธีใดวิธีหนึ่งดังนี้:
 
-- Instead of using the Respond to Webhook node, use the **When Last Node Finishes** option in **Respond** in the Webhook node. Use this when you want to return the final data that the workflow outputs.
-- Use the [Aggregate](/integrations/builtin/core-nodes/n8n-nodes-base.aggregate.md) node to turn multiple items into a single item before passing the data to the Respond to Webhook node. Set **Aggregate** to **All Item Data (Into a Single List)**.
+- แทนที่จะใช้ Respond to Webhook node ให้ใช้ **When Last Node Finishes** ใน **Respond** ของ Webhook node วิธีนี้จะ return ข้อมูลสุดท้ายที่ workflow ส่งออก
+- ใช้ [Aggregate](/integrations/builtin/core-nodes/n8n-nodes-base.aggregate.md) node เพื่อรวมหลาย item เป็น item เดียวก่อนส่งต่อให้ Respond to Webhook node โดยตั้งค่า **Aggregate** เป็น **All Item Data (Into a Single List)**

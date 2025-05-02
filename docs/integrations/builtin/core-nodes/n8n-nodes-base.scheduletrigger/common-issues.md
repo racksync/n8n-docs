@@ -8,43 +8,43 @@ priority: critical
 
 # Schedule Trigger node common issues
 
-Here are some common errors and issues with the [Schedule Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/index.md) and steps to resolve or troubleshoot them.
+รวมปัญหาที่เจอบ่อยกับ [Schedule Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/index.md) พร้อมวิธีแก้ไขหรือแนวทางตรวจสอบ
 
 ## Invalid cron expression
 
-This error occurs when you set **Trigger Interval** to **Custom (Cron)** and n8n doesn't understand your cron expression. This may mean that there is a mistake in your cron expression or that you're using an incompatible syntax.
+ปัญหานี้เกิดขึ้นเมื่อคุณตั้ง **Trigger Interval** เป็น **Custom (Cron)** แล้ว n8n ไม่เข้าใจ cron expression ที่ใส่ไว้ อาจจะเพราะ syntax ผิด หรือใช้รูปแบบที่ไม่รองรับ
 
-To debug, check that the following:
+วิธีตรวจสอบ ให้เช็คตามนี้:
 
-* That your cron expression follows the syntax used in the [cron examples](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/index.md#custom-cron-interval)
-* That your cron expression (after removing the [seconds column](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/index.md#why-there-are-six-asterisks-in-the-cron-expression)) validates on [crontab guru](https://crontab.guru/)
+* ตรวจสอบว่า cron expression ที่ใช้ตรงกับ syntax ใน [cron examples](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/index.md#custom-cron-interval)
+* ลองเอา cron expression (หลังจากลบ [seconds column](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/index.md#why-there-are-six-asterisks-in-the-cron-expression)) ไปเช็คใน [crontab guru](https://crontab.guru/)
 
 ## Scheduled workflows run at the wrong time
 
-If the Schedule Trigger node runs at the wrong time, it may mean that you need to adjust the time zone n8n uses.
+ถ้า Schedule Trigger node ทำงานไม่ตรงเวลาที่ตั้งไว้ อาจจะต้องตั้งค่า timezone ของ n8n ให้ตรงกับเวลาท้องถิ่นของคุณ
 
 ### Adjust the timezone globally
 
-If you're using [n8n Cloud](/manage-cloud/overview.md), follow the instructions on the [set the Cloud instance timezone](/manage-cloud/set-cloud-timezone.md) page to ensure that n8n executes in sync with your local time.
+ถ้าใช้ [n8n Cloud](/manage-cloud/overview.md) ให้ดูวิธีตั้ง timezone ได้ที่ [set the Cloud instance timezone](/manage-cloud/set-cloud-timezone.md) เพื่อให้ n8n ทำงานตรงกับเวลาท้องถิ่น
 
-If you're [self hosting](/hosting/index.md), set your global timezone using the [`GENERIC_TIMEZONE` environment variable](/hosting/configuration/environment-variables/timezone-localization.md).
+ถ้า [self hosting](/hosting/index.md) ให้ตั้งค่า timezone ทั่วระบบด้วย [`GENERIC_TIMEZONE` environment variable](/hosting/configuration/environment-variables/timezone-localization.md)
 
 ### Adjust the timezone for an individual workflow
 
-To set the timezone for an individual workflow:
+ถ้าต้องการตั้ง timezone แยกเฉพาะ workflow:
 
-1. Open the workflow on the canvas.
-1. Select the <span class="inline-image">![three dots menu](/_images/common-icons/three-dots-horizontal.png)</span> **Three dots icon** in the upper-right corner.
-1. Select **Settings**.
-1. Change the **Timezone** setting.
-1. Select **Save**.
+1. เปิด workflow ที่ต้องการใน canvas
+1. กด <span class="inline-image">![three dots menu](/_images/common-icons/three-dots-horizontal.png)</span> **Three dots icon** มุมขวาบน
+1. เลือก **Settings**
+1. เปลี่ยนค่า **Timezone**
+1. กด **Save**
 
 ### Variables not working as expected
 
-While variables can be used in the scheduled trigger, their values only get evaluated when the workflow is activated. After activating the worfklow, you can alter a variable's value in the settings but it won't change how often the workflow runs. To work around this, you must stop and then re-activate the workflow to apply the updated variable value.
+ถึงจะใช้ตัวแปรใน scheduled trigger ได้ แต่ค่าของตัวแปรจะถูกประเมินแค่ตอนที่ workflow ถูก activate เท่านั้น ถ้าเปลี่ยนค่าตัวแปรใน settings หลังจาก activate แล้ว schedule จะไม่เปลี่ยนตาม ต้อง stop แล้ว activate workflow ใหม่เพื่อให้ค่าตัวแปรใหม่ถูกนำไปใช้
 
 ### Changing the trigger interval
 
-You can update the scheduled trigger interval at any time but it only gets updated when the workflow is activated. If you change the trigger interval after the workflow is active, the changes won't take effect until you stop and then re-activate the workflow.
+สามารถเปลี่ยน scheduled trigger interval ได้ตลอดเวลา แต่จะมีผลเฉพาะตอนที่ workflow ถูก activate ใหม่ ถ้าเปลี่ยน interval หลังจาก workflow active อยู่แล้ว การเปลี่ยนแปลงจะยังไม่เกิดขึ้นจนกว่าจะ stop แล้ว activate ใหม่
 
-Also, the schedule begins from the time when you activate the workflow. For example, if you had originally set a schedule of every 1 hour and it should execute at 12:00, if you changed it to a 2 hour schedule and re-activated the workflow at 11:30, the next execution will be at 13:30, 2 hours from when you activated it.
+นอกจากนี้ schedule จะเริ่มนับจากเวลาที่ activate workflow ตัวอย่างเช่น ถ้าเดิมตั้งไว้ทุก 1 ชั่วโมง และควรจะรันตอน 12:00 แต่เปลี่ยนเป็นทุก 2 ชั่วโมงแล้ว activate ใหม่ตอน 11:30 ครั้งถัดไปจะรันตอน 13:30 คือ 2 ชั่วโมงหลัง activate

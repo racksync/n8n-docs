@@ -8,15 +8,15 @@ priority: medium
 
 # RSS Read
 
-Use the RSS Read node to read data from RSS feeds published on the internet.
+ใช้ RSS Read node เพื่ออ่านข้อมูลจาก RSS feed ที่เผยแพร่บนอินเทอร์เน็ต
 
 ## Node parameters
 
-- **URL**: Enter the URL for the RSS publication you want to read.
+- **URL**: กรอก URL ของ RSS publication ที่ต้องการอ่าน
 
 ## Node options
 
-* **Ignore SSL Issues**: Choose whether n8n should ignore SSL/TLS verification (turned on) or not (turned off).
+* **Ignore SSL Issues**: เลือกว่าจะให้ n8n ข้ามการตรวจสอบ SSL/TLS (เปิด) หรือไม่ (ปิด)
 
 ## Templates and examples
 
@@ -25,5 +25,5 @@ Use the RSS Read node to read data from RSS feeds published on the internet.
 
 ## Related resources
 
-n8n provides a trigger node for RSS Read. You can find the trigger node docs [here](/integrations/builtin/core-nodes/n8n-nodes-base.rssfeedreadtrigger.md).
+n8n มี trigger node สำหรับ RSS Read ด้วย ดูเอกสาร trigger node ได้ที่ [here](/integrations/builtin/core-nodes/n8n-nodes-base.rssfeedreadtrigger.md)
 

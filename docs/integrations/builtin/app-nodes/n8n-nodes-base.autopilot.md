@@ -7,15 +7,15 @@ contentType: [integration, reference]
 
 # Autopilot node
 
-Use the Autopilot node to automate work in Autopilot, and integrate Autopilot with other applications. n8n has built-in support for a wide range of Autopilot features, including creating, deleting, and updating contacts, as well as adding contacts to a list.
+ใช้ Autopilot node เพื่อทำงานอัตโนมัติใน Autopilot และผสานรวม Autopilot กับแอปพลิเคชันอื่นๆ n8n มีการรองรับฟีเจอร์หลากหลายของ Autopilot ในตัว รวมถึงการสร้าง, การลบ, และการอัปเดต contacts, รวมถึงการเพิ่ม contacts ไปยัง list
 
-On this page, you'll find a list of operations the Autopilot node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Autopilot node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// warning | Autopilot branding change
-Autopilot has become Ortto. The Autopilot credentials and nodes are only compatible with Autopilot, not the new Ortto API.
+Autopilot ได้เปลี่ยนเป็น Ortto แล้ว Credentials และ nodes ของ Autopilot สามารถใช้งานได้กับ Autopilot เท่านั้น ไม่สามารถใช้งานร่วมกับ Ortto API ใหม่ได้
 ///
 /// note | Credentials
-Refer to [Autopilot credentials](/integrations/builtin/credentials/autopilot.md) for guidance on setting up authentication. 
+อ้างอิง [Autopilot credentials](/integrations/builtin/credentials/autopilot.md) สำหรับคำแนะนำในการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations

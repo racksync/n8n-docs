@@ -14,37 +14,37 @@ hide:
 
 # Webhook node
 
-Use the Webhook node to create [webhooks](https://en.wikipedia.org/wiki/Webhook){:target=_blank .external-link}, which can receive data from apps and services when an event occurs. It's a trigger node, which means it can start an n8n workflow. This allows services to connect to n8n and run a workflow.
+ใช้ Webhook node เพื่อสร้าง [webhooks](https://en.wikipedia.org/wiki/Webhook){:target=_blank .external-link} ที่สามารถรับข้อมูลจากแอปหรือบริการต่างๆ เมื่อเกิด event ขึ้น Webhook node เป็น trigger node หมายความว่าสามารถใช้เริ่ม workflow ใน n8n ได้เลย ช่วยให้บริการต่างๆ เชื่อมต่อกับ n8n และรัน workflow ได้ทันที
 
-You can use the Webhook node as a trigger for a workflow when you want to receive data and run a workflow based on the data. The Webhook node also supports returning the data generated at the end of a workflow. This makes it useful for building a workflow to process data and return the results, like an API endpoint.
+คุณสามารถใช้ Webhook node เป็น trigger ให้ workflow เมื่ออยากรับข้อมูลและรัน workflow ตามข้อมูลที่ได้รับ Webhook node ยังรองรับการส่งข้อมูลที่ workflow ประมวลผลเสร็จแล้วกลับไปด้วย เหมาะสำหรับสร้าง workflow ที่รับข้อมูล ประมวลผล แล้วส่งผลลัพธ์กลับ เหมือน API endpoint
 
-The webhook allows you to trigger workflows from services that don't have a dedicated app trigger node.
+Webhook นี้ช่วยให้ trigger workflow จากบริการที่ไม่มี node trigger เฉพาะใน n8n ได้
 
 ## Workflow development process
 
-n8n provides different **Webhook URL**s for testing and production. The testing URL includes an option to **Listen for test event**. Refer to [Workflow development](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/workflow-development.md) for more information on building, testing, and shifting your Webhook node to production.
+n8n มี **Webhook URL** แยกสำหรับทดสอบและ production URL สำหรับทดสอบจะมีตัวเลือก **Listen for test event** ดูรายละเอียดเพิ่มเติมที่ [Workflow development](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/workflow-development.md) สำหรับวิธีสร้าง ทดสอบ และเปลี่ยน Webhook node ไป production
 
 ## Node parameters
 
-Use these parameters to configure your node.
+ใช้ parameter เหล่านี้เพื่อ config node ของคุณ
 
 ### Webhook URLs
 
-The Webhook node has two **Webhook URLs**: test and production. n8n displays the URLs at the top of the node panel.
+Webhook node จะมี **Webhook URLs** สองแบบ: test และ production โดย n8n จะแสดง URL เหล่านี้ที่ด้านบนของ panel node
 
-Select **Test URL** or **Production URL** to toggle which URL n8n displays.
+เลือก **Test URL** หรือ **Production URL** เพื่อสลับดู URL ที่ต้องการ
 
 <figure markdown="span">
 ![Sample Webhook URLs in the Webhook node's Parameters tab display a Test URL and Production URL](/_images/integrations/builtin/core-nodes/webhook/webhook-urls.png)
-<figcaption>Sample Webhook URLs in the Webhook node's Parameters tab</figcaption>
+<figcaption>ตัวอย่าง Webhook URLs ใน Parameters tab ของ Webhook node</figcaption>
 </figure>
 
-* **Test**: n8n registers a test webhook when you select **Listen for Test Event** or **Test workflow**, if the workflow isn't active. When you call the webhook URL, n8n displays the data in the workflow.
-* **Production**: n8n registers a production webhook when you activate the workflow. When using the production URL, n8n doesn't display the data in the workflow. You can still view workflow data for a production execution: select the **Executions** tab in the workflow, then select the workflow execution you want to view.
+* **Test**: n8n จะ register test webhook เมื่อเลือก **Listen for Test Event** หรือ **Test workflow** ถ้า workflow ยังไม่ active เมื่อเรียก webhook URL นี้ n8n จะแสดงข้อมูลใน workflow
+* **Production**: n8n จะ register production webhook เมื่อคุณ activate workflow เมื่อใช้ production URL n8n จะไม่แสดงข้อมูลใน workflow แต่ยังดูข้อมูล workflow ได้ใน production execution โดยไปที่ **Executions** tab แล้วเลือก execution ที่ต้องการดู
 
 ### HTTP Method
 
-The Webhook node supports standard [HTTP Request Methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods){:target=_blank .external-link}:
+Webhook node รองรับ [HTTP Request Methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods){:target=_blank .external-link} มาตรฐาน:
 
 * DELETE
 * GET
@@ -54,17 +54,17 @@ The Webhook node supports standard [HTTP Request Methods](https://developer.mozi
 * PUT
 
     /// note | Webhook max payload
-	The webhook maximum payload size is 16MB.
-  If you're self-hosting n8n, you can change this using the [endpoint environment variable](/hosting/configuration/environment-variables/endpoints.md) `N8N_PAYLOAD_SIZE_MAX`.
+	ขนาด payload สูงสุดของ webhook คือ 16MB
+    ถ้า self-host n8n สามารถเปลี่ยนได้โดยใช้ [endpoint environment variable](/hosting/configuration/environment-variables/endpoints.md) `N8N_PAYLOAD_SIZE_MAX`
 	///	
 
 ### Path
 
-By default, this field contains a randomly generated webhook URL path, to avoid conflicts with other webhook nodes. 
+โดยปกติ field นี้จะมี path ของ webhook URL ที่สุ่มมาให้ เพื่อป้องกันชนกับ webhook node อื่น
 
-You can manually specify a URL path, including adding route parameters. For example, you may need to do this if you use n8n to prototype an API and want consistent endpoint URLs.
+คุณสามารถกำหนด path เองได้ รวมถึงใส่ route parameters เช่น ถ้าใช้ n8n สร้าง prototype API แล้วอยากได้ endpoint URL ที่แน่นอน
 
-The **Path** field can take the following formats:
+**Path** field รองรับรูปแบบเหล่านี้:
 
 - `/:variable`
 - `/path/:variable`
@@ -74,50 +74,50 @@ The **Path** field can take the following formats:
 
 ### Supported authentication methods
 
-You can require authentication for any service calling your webhook URL. Choose from these authentication methods:
+คุณสามารถบังคับให้ service ที่เรียก webhook URL ต้อง auth ก่อน โดยเลือกวิธี auth ได้ดังนี้:
 
 - Basic auth
 - Header auth
 - JWT auth
 - None
 
-Refer to [Webhook credentials](/integrations/builtin/credentials/webhook.md) for more information on setting up each credential type.
+ดูรายละเอียดการตั้งค่าแต่ละ credential ได้ที่ [Webhook credentials](/integrations/builtin/credentials/webhook.md)
 
 ### Respond
 
-* **Immediately**: The Webhook node returns the response code and the message **Workflow got started**.
-* **When Last Node Finishes**: The Webhook node returns the response code and the data output from the last node executed in the workflow.
-* **Using 'Respond to Webhook' Node**: The Webhook node responds as defined in the [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook.md) node.
+* **Immediately**: Webhook node จะส่ง response code และข้อความ **Workflow got started**
+* **When Last Node Finishes**: Webhook node จะส่ง response code และข้อมูล output จาก node สุดท้ายที่รันใน workflow
+* **Using 'Respond to Webhook' Node**: Webhook node จะตอบกลับตามที่กำหนดใน [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook.md) node
 
 ### Response Code
 
-Customize the [HTTP response code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status){:target=_blank .external-link} that the Webhook node returns upon successful execution. Select from common response codes or create a custom code.
+ปรับแต่ง [HTTP response code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status){:target=_blank .external-link} ที่ Webhook node จะส่งกลับเมื่อรันสำเร็จ เลือกจาก code ที่ใช้บ่อยหรือกำหนดเองก็ได้
 
 ### Response Data
 
-Choose what data to include in the response body:
+เลือกข้อมูลที่จะใส่ใน response body:
 
-* **All Entries**: The Webhook returns all the entries of the last node in an array.
-* **First Entry JSON**: The Webhook returns the JSON data of the first entry of the last node in a JSON object.
-* **First Entry Binary**: The Webhook returns the binary data of the first entry of the last node in a binary file.
-* **No Response Body**: The Webhook returns without a body.
+* **All Entries**: Webhook จะส่งข้อมูลทั้งหมดของ node สุดท้ายใน array
+* **First Entry JSON**: Webhook จะส่งข้อมูล JSON ของ entry แรกของ node สุดท้ายในรูปแบบ JSON object
+* **First Entry Binary**: Webhook จะส่งข้อมูล binary ของ entry แรกของ node สุดท้ายเป็นไฟล์ binary
+* **No Response Body**: Webhook จะส่ง response โดยไม่มี body
 
-Applies only to **Respond > When Last Node Finishes**.
+ใช้ได้เฉพาะกับ **Respond > When Last Node Finishes**
 
 ## Node options
 
-Select **Add Option** to view more configuration options. The available options depend on your node parameters. Refer to the table for option availability.
+เลือก **Add Option** เพื่อดูตัวเลือก config เพิ่มเติม ตัวเลือกที่มีจะแตกต่างกันตาม parameter ที่ตั้งไว้ ดูตารางด้านล่างสำหรับ option ที่ใช้ได้
 
-* **Allowed Origins (CORS)**: Set the permitted cross-origin domains. Enter a comma-separated list of URLs allowed for cross-origin non-preflight requests. Use `*` (default) to allow all origins.
-* **Binary Property**: Enabling this setting allows the Webhook node to receive binary data, such as an image or audio file. Enter the name of the binary property to write the data of the received file to.
-* **Ignore Bots**: Ignore requests from bots like link previewers and web crawlers.
-* **IP(s) Whitelist**: Enable this to limit who (or what) can invoke a Webhook trigger URL. Enter a comma-separated list of allowed IP addresses. Access from IPs outside the whitelist throws a 403 error. If left blank, all IP addresses can invoke the webhook trigger URL.
-* **No Response Body**: Enable this to prevent n8n sending a body with the response.
-* **Raw Body**: Specify that the Webhook node will receive data in a raw format, such as JSON or XML.
-* **Response Content-Type**: Choose the format for the webhook body.
-* **Response Data**: Send custom data with the response.
-* **Response Headers**: Send extra headers in the Webhook response. Refer to [MDN Web Docs | Response header](https://developer.mozilla.org/en-US/docs/Glossary/Response_header){:target=_blank .external-link} to learn more about response headers.
-* **Property Name**: by default, n8n returns all available data. You can choose to return a specific JSON key, so that n8n returns the value.
+* **Allowed Origins (CORS)**: กำหนด domain ที่อนุญาต cross-origin ได้ ใส่ URL คั่นด้วย comma หรือใช้ `*` (default) เพื่ออนุญาตทุก origin
+* **Binary Property**: เปิด option นี้เพื่อให้ Webhook node รับ binary data เช่น รูปภาพหรือไฟล์เสียง ใส่ชื่อ binary property ที่จะเก็บไฟล์
+* **Ignore Bots**: ไม่รับ request จาก bot เช่น link previewer หรือ web crawler
+* **IP(s) Whitelist**: จำกัดเฉพาะ IP ที่อนุญาตให้เรียก Webhook trigger URL ได้ ใส่ IP คั่นด้วย comma ถ้าเว้นว่างจะอนุญาตทุก IP
+* **No Response Body**: เปิด option นี้เพื่อไม่ให้ n8n ส่ง body กลับใน response
+* **Raw Body**: ระบุว่า Webhook node จะรับข้อมูลแบบ raw เช่น JSON หรือ XML
+* **Response Content-Type**: เลือก format สำหรับ webhook body
+* **Response Data**: ส่งข้อมูล custom ใน response
+* **Response Headers**: ส่ง header เพิ่มใน Webhook response ดูรายละเอียด [MDN Web Docs | Response header](https://developer.mozilla.org/en-US/docs/Glossary/Response_header){:target=_blank .external-link}
+* **Property Name**: โดยปกติ n8n จะส่งข้อมูลทั้งหมด สามารถเลือกส่งเฉพาะ key ใน JSON ได้
 
 | Option | Required node configuration |
 | ------ | --------------------------- | 
@@ -140,4 +140,4 @@ Select **Add Option** to view more configuration options. The available options 
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/common-issues.md).
+สำหรับคำถามหรือปัญหาที่พบบ่อยและวิธีแก้ไข ดูที่ [Common issues](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/common-issues.md)

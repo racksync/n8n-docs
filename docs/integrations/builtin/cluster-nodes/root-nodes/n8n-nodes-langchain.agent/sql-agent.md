@@ -8,28 +8,28 @@ priority: critical
 
 # SQL AI Agent node
 
-The SQL Agent uses a SQL database as a data source. It can understand natural language questions, convert them into SQL queries, execute the queries, and present the results in a user-friendly format. This agent is valuable for building natural language interfaces to databases.
+SQL Agent ใช้ฐานข้อมูล SQL เป็นแหล่งข้อมูล มันสามารถเข้าใจคำถามภาษาธรรมชาติ แปลงเป็น SQL queries ดำเนินการ queries และนำเสนอผลลัพธ์ในรูปแบบที่ใช้งานง่าย Agent นี้มีประโยชน์สำหรับการสร้าง interfaces ภาษาธรรมชาติไปยังฐานข้อมูล
 
-Refer to [AI Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) for more information on the AI Agent node itself.
+อ้างอิง [AI Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) สำหรับข้อมูลเพิ่มเติมเกี่ยวกับ AI Agent node เอง
 
 ## Node parameters
 
-Configure the SQL Agent using the following parameters.
+กำหนดค่า SQL Agent โดยใช้ parameters ต่อไปนี้
 
 ### Data Source
 
-Choose the database to use as a data source for the node. Options include:
+เลือกฐานข้อมูลที่จะใช้เป็นแหล่งข้อมูลสำหรับ node ตัวเลือก ได้แก่:
 
-* **MySQL**: Select this option to use a MySQL database.
-    * Also select the **Credential for MySQL**.
-* **SQLite**: Select this option to use a SQLite database.
-    * You must add a [Read/Write File From Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md) node before the Agent to read your SQLite file.
-    * Also enter the **Input Binary Field** name of your SQLite file coming from the Read/Write File From Disk node.
-* **Postgres**: Select this option to use a Postgres database.
-    * Also select the **Credential for Postgres**.
+* **MySQL**: เลือกตัวเลือกนี้เพื่อใช้ฐานข้อมูล MySQL
+    * เลือก **Credential for MySQL** ด้วย
+* **SQLite**: เลือกตัวเลือกนี้เพื่อใช้ฐานข้อมูล SQLite
+    * คุณต้องเพิ่ม [Read/Write File From Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md) node ก่อน Agent เพื่ออ่านไฟล์ SQLite ของคุณ
+    * ป้อนชื่อ **Input Binary Field** ของไฟล์ SQLite ของคุณที่มาจาก Read/Write File From Disk node ด้วย
+* **Postgres**: เลือกตัวเลือกนี้เพื่อใช้ฐานข้อมูล Postgres
+    * เลือก **Credential for Postgres** ด้วย
 
 /// warning | Postgres and MySQL Agents
-If you are using [Postgres](/integrations/builtin/credentials/postgres.md) or [MySQL](/integrations/builtin/credentials/mysql.md), this agent doesn't support the credential tunnel options.
+หากคุณใช้ [Postgres](/integrations/builtin/credentials/postgres.md) หรือ [MySQL](/integrations/builtin/credentials/mysql.md) agent นี้ไม่รองรับ credential tunnel options
 ///
 
 ### Prompt
@@ -38,56 +38,56 @@ If you are using [Postgres](/integrations/builtin/credentials/postgres.md) or [M
 
 ## Node options
 
-Refine the SQL Agent node's behavior using these options:
+ปรับแต่งพฤติกรรมของ SQL Agent node โดยใช้ options เหล่านี้:
 
 ### Ignored Tables
 
-If you'd like the node to ignore any tables from the database, enter a comma-separated list of tables you'd like it to ignore.
+หากคุณต้องการให้ node ละเว้นตารางใดๆ จากฐานข้อมูล ให้ป้อนรายการตารางที่คั่นด้วยจุลภาคที่คุณต้องการให้ละเว้น
 
-If left empty, the agent doesn't ignore any tables.
+หากปล่อยว่างไว้ agent จะไม่ละเว้นตารางใดๆ
 
 ### Include Sample Rows
 
-Enter the number of sample rows to include in the prompt to the agent. Default is `3`.
+ป้อนจำนวนแถวตัวอย่างที่จะรวมไว้ใน prompt ที่ส่งไปยัง agent ค่าเริ่มต้นคือ `3`
 
-Sample rows help the agent understand the schema of the database, but they also increase the number of tokens used.
+แถวตัวอย่างช่วยให้ agent เข้าใจ schema ของฐานข้อมูล แต่ก็เพิ่มจำนวน tokens ที่ใช้ด้วย
 
 ### Included Tables
 
-If you'd only like to include specific tables from the database, enter a comma-separated list of tables to include.
+หากคุณต้องการรวมเฉพาะตารางที่ระบุจากฐานข้อมูล ให้ป้อนรายการตารางที่คั่นด้วยจุลภาคที่จะรวม
 
-If left empty, the agent includes all tables.
+หากปล่อยว่างไว้ agent จะรวมทุกตาราง
 
 ### Prefix Prompt
 
-Enter a message you'd like to send to the agent before the **Prompt** text. This initial message can provide more context and guidance to the agent about what it can and can't do, and how to format the response.
+ป้อนข้อความที่คุณต้องการส่งไปยัง agent ก่อนข้อความ **Prompt** ข้อความเริ่มต้นนี้สามารถให้บริบทและคำแนะนำเพิ่มเติมแก่ agent เกี่ยวกับสิ่งที่สามารถทำได้และทำไม่ได้ และวิธีการจัดรูปแบบการตอบกลับ
 
-n8n fills this field with an example.
+n8n เติมฟิลด์นี้ด้วยตัวอย่าง
 
 ### Suffix Prompt
 
-Enter a message you'd like to send to the agent after the **Prompt** text.
+ป้อนข้อความที่คุณต้องการส่งไปยัง agent หลังจากข้อความ **Prompt**
 
-Available LangChain expressions:
+LangChain expressions ที่มีอยู่:
 
-* `{chatHistory}`: A history of messages in this conversation, useful for maintaining context.
-* `{input}`: Contains the user prompt.
-* `{agent_scratchpad}`: Information to remember for the next iteration.
+* `{chatHistory}`: ประวัติข้อความในการสนทนานี้ มีประโยชน์สำหรับการรักษาบริบท
+* `{input}`: มี prompt ของผู้ใช้
+* `{agent_scratchpad}`: ข้อมูลที่ต้องจำสำหรับการวนซ้ำครั้งต่อไป
 
-n8n fills this field with an example.
+n8n เติมฟิลด์นี้ด้วยตัวอย่าง
 
 ### Limit
 
-Enter the maximum number of results to return.
+ป้อนจำนวนผลลัพธ์สูงสุดที่จะส่งคืน
 
-Default is `10`.
+ค่าเริ่มต้นคือ `10`
 
 ## Templates and examples
 
-Refer to the main AI Agent node's [Templates and examples](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md#templates-and-examples) section.
+อ้างอิงส่วน [Templates and examples](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md#templates-and-examples) ของ AI Agent node หลัก
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/common-issues.md).
+สำหรับคำถามหรือปัญหาทั่วไปและแนวทางแก้ไขที่แนะนำ โปรดดูที่ [Common issues](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/common-issues.md)
 
 --8<-- "_glossary/ai-glossary.md"

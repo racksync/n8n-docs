@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # UpLead node
 
-Use the UpLead node to automate work in UpLead, and integrate UpLead with other applications. n8n supports several UpLead operations, including getting company information. 
+ใช้ UpLead node เพื่อช่วยให้งานใน UpLead เป็นอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันอื่น ๆ โดย n8n รองรับ operations ของ UpLead หลายรายการ เช่น การดึงข้อมูลบริษัท
 
-On this page, you'll find a list of operations the UpLead node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ UpLead node รองรับ พร้อมทั้งลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [UpLead credentials](/integrations/builtin/credentials/uplead.md) for guidance on setting up authentication. 
+ดู [UpLead credentials](/integrations/builtin/credentials/uplead.md) สำหรับคำแนะนำในการตั้งค่า authentication. 
 ///
 
 ## Operations

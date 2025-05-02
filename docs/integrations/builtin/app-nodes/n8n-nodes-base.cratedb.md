@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # CrateDB node
 
-Use the CrateDB node to automate work in CrateDB, and integrate CrateDB with other applications. n8n has built-in support for a wide range of CrateDB features, including executing, inserting, and updating rows in the database.
+ใช้ CrateDB node เพื่อทำงานอัตโนมัติใน CrateDB และ integrate CrateDB กับแอปพลิเคชันอื่นๆ n8n มีการรองรับในตัวสำหรับฟีเจอร์ต่างๆ ของ CrateDB รวมถึงการ execute, insert, และ update rows ใน database
 
-On this page, you'll find a list of operations the CrateDB node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ CrateDB node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [CrateDB credentials](/integrations/builtin/credentials/cratedb.md) for guidance on setting up authentication. 
+อ้างอิง [CrateDB credentials](/integrations/builtin/credentials/cratedb.md) สำหรับคำแนะนำในการตั้งค่า authentication
 ///
 
 ## Operations
@@ -30,7 +30,7 @@ Refer to [CrateDB credentials](/integrations/builtin/credentials/cratedb.md) for
 
 ### Specify a column's data type
 
-To specify a column's data type, append the column name with `:type`, where `type` is the data type you want for the column. For example, if you want to specify the type `int` for the column **id** and type `text` for the column **name**, you can use the following snippet in the **Columns** field: `id:int,name:text`.
+เพื่อระบุ data type ของ column ให้ต่อท้ายชื่อ column ด้วย `:type` โดยที่ `type` คือ data type ที่คุณต้องการสำหรับ column นั้น ตัวอย่างเช่น หากคุณต้องการระบุ type `int` สำหรับ column **id** และ type `text` สำหรับ column **name** คุณสามารถใช้ snippet ต่อไปนี้ใน field **Columns**: `id:int,name:text`
 
 
 

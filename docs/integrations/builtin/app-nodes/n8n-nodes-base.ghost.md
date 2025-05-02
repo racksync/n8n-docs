@@ -1,18 +1,18 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Ghost node documentation
-description: Learn how to use the Ghost node in n8n. Follow technical documentation to integrate Ghost node into your workflows.
+description: เรียนรู้วิธีการใช้ Ghost node ใน n8n ติดตามเอกสารทางเทคนิคเพื่อรวม Ghost node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 ---
 
 # Ghost node
 
-Use the Ghost node to automate work in Ghost, and integrate Ghost with other applications. n8n has built-in support for a wide range of Ghost features, including creating, updating, deleting, and getting posts for the Admin and content API. 
+ใช้ Ghost node เพื่อทำงานอัตโนมัติใน Ghost และเชื่อมต่อ Ghost กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Ghost หลายอย่าง เช่น การสร้าง อัปเดต ลบ และดึงข้อมูล posts สำหรับ Admin และ content API
 
-On this page, you'll find a list of operations the Ghost node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Ghost node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Ghost credentials](/integrations/builtin/credentials/ghost.md) for guidance on setting up authentication. 
+โปรดดู [Ghost credentials](/integrations/builtin/credentials/ghost.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

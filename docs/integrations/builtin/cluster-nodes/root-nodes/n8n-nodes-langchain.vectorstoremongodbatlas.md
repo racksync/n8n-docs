@@ -8,76 +8,76 @@ priority: medium
 
 # MongoDB Atlas Vector Store node
 
-MongoDB Atlas Vector Search is a feature of MongoDB Atlas that enables users to store and query vector embeddings. Use this node to interact with Vector Search indexes in your MongoDB Atlas collections. You can insert documents, retrieve documents, and use the vector store in chains or as a tool for agents.
+MongoDB Atlas Vector Search เป็นฟีเจอร์ของ MongoDB Atlas ที่ช่วยให้ผู้ใช้สามารถจัดเก็บและ query vector embeddings ได้ ใช้ node นี้เพื่อโต้ตอบกับ Vector Search indexes ใน MongoDB Atlas collections ของคุณ คุณสามารถ insert documents, retrieve documents และใช้ vector store ใน chains หรือเป็น tool สำหรับ agents
 
-On this page, you'll find the node parameters for the MongoDB Atlas Vector Store node, and links to more resources.
+ในหน้านี้ คุณจะพบ node parameters สำหรับ MongoDB Atlas Vector Store node และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/mongodb.md).
+คุณสามารถดูข้อมูล authentication สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/mongodb.md)
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Prerequisites
 
-Before using this node, create a [Vector Search index](https://www.mongodb.com/docs/atlas/atlas-vector-search/vector-search-type/) in your MongoDB Atlas collection. Follow these steps to create one:
+ก่อนใช้ node นี้ ให้สร้าง [Vector Search index](https://www.mongodb.com/docs/atlas/atlas-vector-search/vector-search-type/) ใน MongoDB Atlas collection ของคุณ ทำตามขั้นตอนเหล่านี้เพื่อสร้าง:
 
-1. Log in to the [MongoDB Atlas dashboard](https://cloud.mongodb.com/).
+1.  เข้าสู่ระบบ [MongoDB Atlas dashboard](https://cloud.mongodb.com/)
 
-3. Select your organization and project.
-4. Find "Search & Vector Search" section.
-5. Select your cluster and click "Go to search".
-7. Click "Create Search Index".
-8. Choose "Vector Search" mode and use the visual or JSON editors. For example:
-   ```json
-   {
-     "fields": [
-       {
-         "type": "vector",
-         "path": "<field-name>",
-         "numDimensions": 1536, // any other value
-         "similarity": "<similarity-function>"
-       }
-     ]
-   }
-   ```
+3.  เลือก organization และ project ของคุณ
+4.  ค้นหาส่วน "Search & Vector Search"
+5.  เลือก cluster ของคุณและคลิก "Go to search"
+7.  คลิก "Create Search Index"
+8.  เลือกโหมด "Vector Search" และใช้ visual หรือ JSON editors ตัวอย่างเช่น:
+    ```json
+    {
+      "fields": [
+        {
+          "type": "vector",
+          "path": "<field-name>",
+          "numDimensions": 1536, // any other value
+          "similarity": "<similarity-function>"
+        }
+      ]
+    }
+    ```
 
-9. Adjust the "dimensions" value according to your embedding model (For example, `1536` for OpenAI's `text-embedding-small-3`).
-10. Name your index and create.
+9.  ปรับค่า "dimensions" ตาม embedding model ของคุณ (ตัวอย่างเช่น `1536` สำหรับ `text-embedding-small-3` ของ OpenAI)
+10. ตั้งชื่อ index ของคุณและสร้าง
 
-Make sure to note the following values which are required when configuring the node:
+ตรวจสอบให้แน่ใจว่าได้จดค่าต่อไปนี้ซึ่งจำเป็นเมื่อกำหนดค่า node:
 
-- Collection name
-- Vector index name 
-- Field names for embeddings and metadata
+-   Collection name
+-   Vector index name
+-   Field names สำหรับ embeddings และ metadata
 
 ## Node usage patterns
 
-You can use the MongoDB Atlas Vector Store node in the following patterns:
+คุณสามารถใช้ MongoDB Atlas Vector Store node ในรูปแบบต่อไปนี้:
 
 ### Use as a regular node to insert and retrieve documents
 
-You can use the MongoDB Atlas Vector Store as a regular node to insert or get documents. This pattern places the MongoDB Atlas Vector Store in the regular connection flow without using an agent.
+คุณสามารถใช้ MongoDB Atlas Vector Store เป็น node ปกติเพื่อ insert หรือ get documents รูปแบบนี้จะวาง MongoDB Atlas Vector Store ไว้ใน flow การเชื่อมต่อปกติโดยไม่ต้องใช้ agent
 
-You can see an example of this in scenario 1 of [this template](https://n8n.io/workflows/2621-ai-agent-to-chat-with-files-in-supabase-storage/) (the template uses the Supabase Vector Store, but the pattern is the same).
+คุณสามารถดูตัวอย่างได้ใน scenario 1 ของ [template นี้](https://n8n.io/workflows/2621-ai-agent-to-chat-with-files-in-supabase-storage/) (template ใช้ Supabase Vector Store แต่รูปแบบเหมือนกัน)
 
 ### Connect directly to an AI agent as a tool
 
-You can connect the MongoDB Atlas Vector Store node directly to the tool connector of an [AI agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) to use the vector store as a resource when answering queries.
+คุณสามารถเชื่อมต่อ MongoDB Atlas Vector Store node โดยตรงกับ tool connector ของ [AI agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) เพื่อใช้ vector store เป็น resource เมื่อตอบคำถาม
 
-Here, the connection would be: AI agent (tools connector) -> MongoDB Atlas Vector Store node.
+ในกรณีนี้ การเชื่อมต่อจะเป็น: AI agent (tools connector) -> MongoDB Atlas Vector Store node
 
 ### Use a retriever to fetch documents
 
-You can use the [Vector Store Retriever](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) node with the MongoDB Atlas Vector Store node to fetch documents from the MongoDB Atlas Vector Store node. This is often used with the [Question and Answer Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa/index.md) node to fetch documents from the vector store that match the given chat input.
+คุณสามารถใช้ [Vector Store Retriever](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) node ร่วมกับ MongoDB Atlas Vector Store node เพื่อดึง documents จาก MongoDB Atlas Vector Store node ซึ่งมักใช้กับ [Question and Answer Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa/index.md) node เพื่อดึง documents จาก vector store ที่ตรงกับ input ของ chat ที่กำหนด
 
-An [example of the connection flow](https://n8n.io/workflows/1960-ask-questions-about-a-pdf-using-ai/) (the linked example uses Pinecone, but the pattern is the same) would be: Question and Answer Chain (Retriever connector) -> Vector Store Retriever (Vector Store connector) -> MongoDB Atlas Vector Store.
+[ตัวอย่างของ flow การเชื่อมต่อ](https://n8n.io/workflows/1960-ask-questions-about-a-pdf-using-ai/) (ตัวอย่างที่ลิงก์ใช้ Pinecone แต่รูปแบบเหมือนกัน) จะเป็น: Question and Answer Chain (Retriever connector) -> Vector Store Retriever (Vector Store connector) -> MongoDB Atlas Vector Store
 
 ### Use the Vector Store Question Answer Tool to answer questions
 
-Another pattern uses the [Vector Store Question Answer Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore.md) to summarize results and answer questions from the MongoDB Atlas Vector Store node. Rather than connecting the MongoDB Atlas Vector Store directly as a tool, this pattern uses a tool specifically designed to summarize data in the vector store.
+อีกรูปแบบหนึ่งคือการใช้ [Vector Store Question Answer Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore.md) เพื่อสรุปผลลัพธ์และตอบคำถามจาก MongoDB Atlas Vector Store node แทนที่จะเชื่อมต่อ MongoDB Atlas Vector Store โดยตรงในฐานะ tool รูปแบบนี้จะใช้ tool ที่ออกแบบมาโดยเฉพาะเพื่อสรุปข้อมูลใน vector store
 
-The [connections flow](https://n8n.io/workflows/2465-building-your-first-whatsapp-chatbot/) (the linked example uses the In-Memory Vector Store, but the pattern is the same) in this case would look like this: AI agent (tools connector) -> Vector Store Question Answer Tool (Vector Store connector) -> In-Memory Vector store.
+[flow การเชื่อมต่อ](https://n8n.io/workflows/2465-building-your-first-whatsapp-chatbot/) (ตัวอย่างที่ลิงก์ใช้ In-Memory Vector Store แต่รูปแบบเหมือนกัน) ในกรณีนี้จะมีลักษณะดังนี้: AI agent (tools connector) -> Vector Store Question Answer Tool (Vector Store connector) -> In-Memory Vector store
 
 ## Node parameters
 
@@ -87,38 +87,38 @@ The [connections flow](https://n8n.io/workflows/2465-building-your-first-whatsap
 ### Get Many parameters
 <!-- vale on -->
 
-- **Mongo Collection**: Enter the name of the MongoDB collection to use.
-- **Vector Index Name**: Enter the name of the Vector Search index in your MongoDB Atlas collection.
-- **Embedding Field**: Enter the field name in your documents that contains the vector embeddings.
-- **Metadata Field**: Enter the field name in your documents that contains the text metadata.
+-   **Mongo Collection**: ป้อนชื่อ MongoDB collection ที่จะใช้
+-   **Vector Index Name**: ป้อนชื่อ Vector Search index ใน MongoDB Atlas collection ของคุณ
+-   **Embedding Field**: ป้อนชื่อ field ใน documents ของคุณที่มี vector embeddings
+-   **Metadata Field**: ป้อนชื่อ field ใน documents ของคุณที่มี text metadata
 
 ### Insert Documents parameters
 
-- **Mongo Collection**: Enter the name of the MongoDB collection to use.
-- **Vector Index Name**: Enter the name of the Vector Search index in your MongoDB Atlas collection.
-- **Embedding Field**: Enter the field name in your documents that contains the vector embeddings.
-- **Metadata Field**: Enter the field name in your documents that contains the text metadata.
+-   **Mongo Collection**: ป้อนชื่อ MongoDB collection ที่จะใช้
+-   **Vector Index Name**: ป้อนชื่อ Vector Search index ใน MongoDB Atlas collection ของคุณ
+-   **Embedding Field**: ป้อนชื่อ field ใน documents ของคุณที่มี vector embeddings
+-   **Metadata Field**: ป้อนชื่อ field ใน documents ของคุณที่มี text metadata
 
 ### Retrieve Documents parameters (As Vector Store for Chain/Tool)
 
-- **Mongo Collection**: Enter the name of the MongoDB collection to use.
-- **Vector Index Name**: Enter the name of the Vector Search index in your MongoDB Atlas collection.
-- **Embedding Field**: Enter the field name in your documents that contains the vector embeddings.
-- **Metadata Field**: Enter the field name in your documents that contains the text metadata.
+-   **Mongo Collection**: ป้อนชื่อ MongoDB collection ที่จะใช้
+-   **Vector Index Name**: ป้อนชื่อ Vector Search index ใน MongoDB Atlas collection ของคุณ
+-   **Embedding Field**: ป้อนชื่อ field ใน documents ของคุณที่มี vector embeddings
+-   **Metadata Field**: ป้อนชื่อ field ใน documents ของคุณที่มี text metadata
 
 ### Retrieve Documents (As Tool for AI Agent) parameters
 
-- **Name**: The name of the vector store.
-- **Description**: Explain to the LLM what this tool does. A good, specific description allows LLMs to produce expected results more often.
-- **Mongo Collection**: Enter the name of the MongoDB collection to use.
-- **Vector Index Name**: Enter the name of the Vector Search index in your MongoDB Atlas collection.
-- **Limit**: Enter how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
+-   **Name**: ชื่อของ vector store
+-   **Description**: อธิบายให้ LLM ทราบว่า tool นี้ทำอะไร คำอธิบายที่ดีและเฉพาะเจาะจงช่วยให้ LLM สร้างผลลัพธ์ที่คาดหวังได้บ่อยขึ้น
+-   **Mongo Collection**: ป้อนชื่อ MongoDB collection ที่จะใช้
+-   **Vector Index Name**: ป้อนชื่อ Vector Search index ใน MongoDB Atlas collection ของคุณ
+-   **Limit**: ป้อนจำนวนผลลัพธ์ที่ต้องการดึงจาก vector store ตัวอย่างเช่น ตั้งค่าเป็น `10` เพื่อรับผลลัพธ์ที่ดีที่สุดสิบรายการ
 
 ## Node options
 
 ### Options
 
-- **Metadata Filter**: Filters results based on metadata.
+-   **Metadata Filter**: กรองผลลัพธ์ตาม metadata
 
 ## Templates and examples
 
@@ -127,10 +127,10 @@ The [connections flow](https://n8n.io/workflows/2465-building-your-first-whatsap
 
 ## Related resources
 
-Refer to:
+อ้างอิง:
 
-- [LangChain's MongoDB Atlas Vector Search documentation](https://js.langchain.com/docs/integrations/vectorstores/mongodb_atlas){:target=_blank .external-link} for more information about the service.
-- [MongoDB Atlas Vector Search documentation](https://www.mongodb.com/docs/atlas/atlas-vector-search/){:target=_blank .external-link} for more information about MongoDB Atlas Vector Search.
+-   [เอกสาร MongoDB Atlas Vector Search ของ LangChain](https://js.langchain.com/docs/integrations/vectorstores/mongodb_atlas){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการ
+-   [เอกสาร MongoDB Atlas Vector Search](https://www.mongodb.com/docs/atlas/atlas-vector-search/){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับ MongoDB Atlas Vector Search
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 

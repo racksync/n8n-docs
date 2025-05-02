@@ -8,30 +8,30 @@ priority: critical
 
 # Filter
 
-Filter items based on a condition. If the item meets the condition, the Filter node passes it on to the next node in the Filter node output. If the item doesn't meet the condition, the Filter node omits the item from its output.
+Filter node ใช้สำหรับกรอง items ตามเงื่อนไขที่ตั้งไว้ ถ้า item ตรงตามเงื่อนไข Filter node จะส่ง item นั้นไปยัง node ถัดไปใน output ของ Filter node ถ้าไม่ตรงตามเงื่อนไข item นั้นจะไม่ถูกส่งออกไป
 
 ## Node parameters
 
-Create filter comparison **Conditions** to perform your filter.
+สร้าง **Conditions** สำหรับเปรียบเทียบเพื่อใช้กรองข้อมูล
 
-- Use the data type dropdown to select the data type and comparison operation type for your condition. For example, to filter for dates after a particular date, select **Date & Time > is after**.
-- The fields and values to enter into the condition change based on the data type and comparison you select. Refer to [Available data type comparisons](#available-data-type-comparisons) for a full list of all comparisons by data type.
+- ใช้ dropdown เลือก data type และประเภทการเปรียบเทียบสำหรับเงื่อนไขของคุณ เช่น ถ้าต้องการกรองวันที่ที่หลังจากวันที่ที่กำหนด ให้เลือก **Date & Time > is after**
+- ช่องกรอกข้อมูลและค่าที่ต้องใส่ในเงื่อนไขจะเปลี่ยนไปตาม data type และการเปรียบเทียบที่เลือก ดูรายละเอียดเพิ่มเติมได้ที่ [Available data type comparisons](#available-data-type-comparisons) สำหรับรายการเปรียบเทียบทั้งหมดในแต่ละ data type
 
-Select **Add condition** to create more conditions.
+เลือก **Add condition** เพื่อเพิ่มเงื่อนไขใหม่
 
 ### Combining conditions
 
-You can choose to keep items:
+คุณสามารถเลือกได้ว่าจะเก็บ item ไว้เมื่อ:
 
-* When they meet all conditions: Create two or more conditions and select **AND** in the dropdown between them.
-* When they meet any of the conditions: Create two or more conditions and select **OR** in the dropdown between them.
+* ตรงตามทุกเงื่อนไข: สร้างเงื่อนไขสองข้อขึ้นไปแล้วเลือก **AND** ใน dropdown ระหว่างเงื่อนไข
+* ตรงตามเงื่อนไขใดเงื่อนไขหนึ่ง: สร้างเงื่อนไขสองข้อขึ้นไปแล้วเลือก **OR** ใน dropdown ระหว่างเงื่อนไข
 
-You can't create a mix of AND and OR rules.
+ไม่สามารถผสม AND และ OR ในกฎเดียวกันได้
 
 ## Node options
 
-- **Ignore Case**: Whether to ignore letter case (turned on) or be case sensitive (turned off).
-- **Less Strict Type Validation**: Whether you want n8n to attempt to convert value types based on the operator you choose (turned on) or not (turned off). Turn this on when facing a "wrong type:" error in your node.
+- **Ignore Case**: เลือกว่าจะไม่สนใจตัวพิมพ์ใหญ่-เล็ก (เปิด) หรือให้แยกแยะตัวพิมพ์ใหญ่-เล็ก (ปิด)
+- **Less Strict Type Validation**: เลือกให้ n8n พยายามแปลงชนิดข้อมูลตาม operator ที่เลือก (เปิด) หรือไม่แปลง (ปิด) ถ้าเจอ error "wrong type:" ให้ลองเปิด option นี้
 
 ## Templates and examples
 

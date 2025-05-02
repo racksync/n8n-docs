@@ -8,69 +8,68 @@ priority: medium
 
 # Simple Vector Store node
 
-Use the Simple Vector Store node to store and retrieve [embeddings](/glossary.md#ai-embedding) in n8n's in-app memory. 
+ใช้ Simple Vector Store node เพื่อจัดเก็บและเรียกดู [embeddings](/glossary.md#ai-embedding) ในหน่วยความจำภายในแอป (in-app memory) ของ n8n
 
-On this page, you'll find the node parameters for the Simple Vector Store node, and links to more resources.
+ในหน้านี้ คุณจะพบ node parameters สำหรับ Simple Vector Store node และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 /// note | This node is different from AI memory nodes
-The simple vector storage described here is different to the AI memory nodes such as [Simple Memory](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/index.md).
+Simple vector storage ที่อธิบายในที่นี้แตกต่างจาก AI memory nodes เช่น [Simple Memory](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/index.md)
 
-This node creates a [vector database](/glossary.md#ai-vector-store) in the app memory.
+Node นี้สร้าง [vector database](/glossary.md#ai-vector-store) ในหน่วยความจำของแอป
 ///
 
-
 /// warning | For development use only
-This node stores data in memory only and isn't recommended for production use. All data is lost when n8n restarts and may also be purged in low-memory conditions.
+Node นี้จัดเก็บข้อมูลในหน่วยความจำเท่านั้นและไม่แนะนำให้ใช้ใน production ข้อมูลทั้งหมดจะหายไปเมื่อ n8n รีสตาร์ท และอาจถูกล้างออกไปในสภาวะที่หน่วยความจำเหลือน้อย
 ///
 
 ## Node usage patterns
 
-You can use the Simple Vector Store node in the following patterns.
+คุณสามารถใช้ Simple Vector Store node ในรูปแบบต่อไปนี้
 
 ### Use as a regular node to insert and retrieve documents
 
-You can use the Simple Vector Store as a regular node to insert or get documents. This pattern places the Simple Vector Store in the regular connection flow without using an agent.
+คุณสามารถใช้ Simple Vector Store เป็น node ปกติเพื่อ insert หรือ get documents รูปแบบนี้จะวาง Simple Vector Store ไว้ใน flow การเชื่อมต่อปกติโดยไม่ต้องใช้ agent
 
-You can see an example of in step 2 of [this template](https://n8n.io/workflows/2465-building-your-first-whatsapp-chatbot/).
+คุณสามารถดูตัวอย่างได้ในขั้นตอนที่ 2 ของ [template นี้](https://n8n.io/workflows/2465-building-your-first-whatsapp-chatbot/)
 
 ### Connect directly to an AI agent as a tool
 
-You can connect the Simple Vector Store node directly to the [tool](/glossary.md#ai-tool) connector of an [AI agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) to use a vector store as a resource when answering queries.
+คุณสามารถเชื่อมต่อ Simple Vector Store node โดยตรงกับ [tool](/glossary.md#ai-tool) connector ของ [AI agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) เพื่อใช้ vector store เป็น resource เมื่อตอบคำถาม
 
-Here, the connection would be: AI agent (tools connector) -> Simple Vector Store node.
+ในกรณีนี้ การเชื่อมต่อจะเป็น: AI agent (tools connector) -> Simple Vector Store node
 
 ### Use a retriever to fetch documents
 
-You can use the [Vector Store Retriever](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) node with the Simple Vector Store node to fetch documents from the Simple Vector Store node. This is often used with the [Question and Answer Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa/index.md) node to fetch documents from the vector store that match the given chat input.
+คุณสามารถใช้ [Vector Store Retriever](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) node ร่วมกับ Simple Vector Store node เพื่อดึง documents จาก Simple Vector Store node ซึ่งมักใช้กับ [Question and Answer Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa/index.md) node เพื่อดึง documents จาก vector store ที่ตรงกับ input ของ chat ที่กำหนด
 
-An [example of the connection flow](https://n8n.io/workflows/1960-ask-questions-about-a-pdf-using-ai/) (the linked example uses Pinecone, but the pattern is the same) would be: Question and Answer Chain (Retriever connector) -> Vector Store Retriever (Vector Store connector) -> Simple Vector Store.
+[ตัวอย่างของ flow การเชื่อมต่อ](https://n8n.io/workflows/1960-ask-questions-about-a-pdf-using-ai/) (ตัวอย่างที่ลิงก์ใช้ Pinecone แต่รูปแบบเหมือนกัน) จะเป็น: Question and Answer Chain (Retriever connector) -> Vector Store Retriever (Vector Store connector) -> Simple Vector Store
 
 ### Use the Vector Store Question Answer Tool to answer questions
 
-Another pattern uses the [Vector Store Question Answer Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore.md) to summarize results and answer questions from the Simple Vector Store node. Rather than connecting the Simple Vector Store directly as a tool, this pattern uses a tool specifically designed to summarizes data in the vector store.
+อีกรูปแบบหนึ่งคือการใช้ [Vector Store Question Answer Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore.md) เพื่อสรุปผลลัพธ์และตอบคำถามจาก Simple Vector Store node แทนที่จะเชื่อมต่อ Simple Vector Store โดยตรงในฐานะ tool รูปแบบนี้จะใช้ tool ที่ออกแบบมาโดยเฉพาะเพื่อสรุปข้อมูลใน vector store
 
-The [connections flow](https://n8n.io/workflows/2465-building-your-first-whatsapp-chatbot/) in this case would look like this: AI agent (tools connector) -> Vector Store Question Answer Tool (Vector Store connector) -> Simple Vector store.
+[flow การเชื่อมต่อ](https://n8n.io/workflows/2465-building-your-first-whatsapp-chatbot/) ในกรณีนี้จะมีลักษณะดังนี้: AI agent (tools connector) -> Vector Store Question Answer Tool (Vector Store connector) -> Simple Vector store
 
 ## Memory Management
 
-The Simple Vector Store implements memory management to prevent excessive memory usage:
+Simple Vector Store ใช้การจัดการหน่วยความจำเพื่อป้องกันการใช้หน่วยความจำมากเกินไป:
 
-- Automatically cleans up old vector stores when memory pressure increases
-- Removes inactive stores that haven't been accessed for a configurable amount of time
-- Each workflow gets its own isolated storage space identified by the workflow ID and memory key
+-   ล้าง vector stores เก่าโดยอัตโนมัติเมื่อแรงกดดันด้านหน่วยความจำเพิ่มขึ้น
+-   ลบ stores ที่ไม่ได้ใช้งานซึ่งไม่มีการเข้าถึงเป็นระยะเวลาที่กำหนดได้
+-   แต่ละ workflow จะได้รับพื้นที่จัดเก็บแยกต่างหากซึ่งระบุโดย workflow ID และ memory key
 
 ### Configuration Options
 
-You can control memory usage with these environment variables:
+คุณสามารถควบคุมการใช้หน่วยความจำด้วย environment variables เหล่านี้:
 
  | Variable                      | Type   | Default | Description                                                                         |
  |-------------------------------|--------|---------|-------------------------------------------------------------------------------------|
- | `N8N_VECTOR_STORE_MAX_MEMORY` | Number | -1      | Maximum memory in MB allowed for all vector stores combined (-1 to disable limits). |
- | `N8N_VECTOR_STORE_TTL_HOURS`  | Number | -1      | Hours of inactivity after which a store gets removed (-1 to disable TTL).           |
+ | `N8N_VECTOR_STORE_MAX_MEMORY` | Number | -1      | หน่วยความจำสูงสุด (MB) ที่อนุญาตสำหรับ vector stores ทั้งหมดรวมกัน (-1 เพื่อปิดการจำกัด) |
+ | `N8N_VECTOR_STORE_TTL_HOURS`  | Number | -1      | จำนวนชั่วโมงที่ไม่มีการใช้งาน หลังจากนั้น store จะถูกลบ (-1 เพื่อปิด TTL)           |
 
-On n8n Cloud, these values are preset to 100MB (about 8,000 documents, depending on document size and metadata) and 7 days respectively. For self-hosted instances, both values default to -1(no memory limits or time-based cleanup).
+บน n8n Cloud ค่าเหล่านี้ถูกตั้งค่าไว้ล่วงหน้าที่ 100MB (ประมาณ 8,000 documents ขึ้นอยู่กับขนาด document และ metadata) และ 7 วันตามลำดับ สำหรับ self-hosted instances ทั้งสองค่ามีค่าเริ่มต้นเป็น -1 (ไม่มีการจำกัดหน่วยความจำหรือการล้างตามเวลา)
 
 ## Node parameters
 
@@ -80,26 +79,25 @@ On n8n Cloud, these values are preset to 100MB (about 8,000 documents, depending
 ### Get Many parameters
 <!-- vale from-write-good.Weasel = YES -->
 
-* **Memory Key**: Enter the key to use to store the vector memory in the workflow data. n8n prefixes the key with the workflow ID to avoid collisions.
-* **Prompt**: Enter the search query.
-* **Limit**: Enter how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
-
+*   **Memory Key**: ป้อน key ที่จะใช้เพื่อจัดเก็บ vector memory ในข้อมูล workflow n8n จะเติม workflow ID ไว้ข้างหน้า key เพื่อหลีกเลี่ยงการชนกัน
+*   **Prompt**: ป้อนคำค้นหา (search query)
+*   **Limit**: ป้อนจำนวนผลลัพธ์ที่ต้องการดึงจาก vector store ตัวอย่างเช่น ตั้งค่าเป็น `10` เพื่อรับผลลัพธ์ที่ดีที่สุดสิบรายการ
 
 ### Insert Documents parameters
 
-* **Memory Key**: Enter the key to use to store the vector memory in the workflow data. n8n prefixes the key with the workflow ID to avoid collisions.
-* **Clear Store**: Use this parameter to control whether to wipe the vector store for the given memory key for this workflow before inserting data (turned on).
+*   **Memory Key**: ป้อน key ที่จะใช้เพื่อจัดเก็บ vector memory ในข้อมูล workflow n8n จะเติม workflow ID ไว้ข้างหน้า key เพื่อหลีกเลี่ยงการชนกัน
+*   **Clear Store**: ใช้ parameter นี้เพื่อควบคุมว่าจะล้าง vector store สำหรับ memory key ที่กำหนดสำหรับ workflow นี้ก่อนที่จะใส่ข้อมูลหรือไม่ (เปิด)
 
 ### Retrieve Documents (As Vector Store for Chain/Tool) parameters
 
-* **Memory Key**: Enter the key to use to store the vector memory in the workflow data. n8n prefixes the key with the workflow ID to avoid collisions.
+*   **Memory Key**: ป้อน key ที่จะใช้เพื่อจัดเก็บ vector memory ในข้อมูล workflow n8n จะเติม workflow ID ไว้ข้างหน้า key เพื่อหลีกเลี่ยงการชนกัน
 
 ### Retrieve Documents (As Tool for AI Agent) parameters
 
-* **Name**: The name of the vector store.
-* **Description**: Explain to the LLM what this tool does. A good, specific description allows LLMs to produce expected results more often.
-* **Memory Key**: Enter the key to use to store the vector memory in the workflow data. n8n prefixes the key with the workflow ID to avoid collisions.
-* **Limit**: Enter how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
+*   **Name**: ชื่อของ vector store
+*   **Description**: อธิบายให้ LLM ทราบว่า tool นี้ทำอะไร คำอธิบายที่ดีและเฉพาะเจาะจงช่วยให้ LLM สร้างผลลัพธ์ที่คาดหวังได้บ่อยขึ้น
+*   **Memory Key**: ป้อน key ที่จะใช้เพื่อจัดเก็บ vector memory ในข้อมูล workflow n8n จะเติม workflow ID ไว้ข้างหน้า key เพื่อหลีกเลี่ยงการชนกัน
+*   **Limit**: ป้อนจำนวนผลลัพธ์ที่ต้องการดึงจาก vector store ตัวอย่างเช่น ตั้งค่าเป็น `10` เพื่อรับผลลัพธ์ที่ดีที่สุดสิบรายการ
 
 ## Templates and examples
 
@@ -108,7 +106,7 @@ On n8n Cloud, these values are preset to 100MB (about 8,000 documents, depending
 
 ## Related resources
 
-Refer to [LangChains's Memory Vector Store documentation](https://js.langchain.com/docs/integrations/vectorstores/memory/){:target=_blank .external-link} for more information about the service.
+อ้างอิง [เอกสาร Memory Vector Store ของ LangChain](https://js.langchain.com/docs/integrations/vectorstores/memory/){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการ
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

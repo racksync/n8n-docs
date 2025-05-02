@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Customer.io node
 
-Use the Customer.io node to automate work in Customer.io, and integrate Customer.io with other applications. n8n has built-in support for a wide range of Customer.io features, including creating and updating customers, tracking events, and getting campaigns.
+ใช้ Customer.io node เพื่อทำงานอัตโนมัติใน Customer.io และ integrate Customer.io กับแอปพลิเคชันอื่นๆ n8n มีการรองรับในตัวสำหรับฟีเจอร์ต่างๆ ของ Customer.io รวมถึงการสร้างและอัปเดต customers, การติดตาม events และการดึง campaigns
 
-On this page, you'll find a list of operations the Customer.io node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Customer.io node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [Customer.io credentials](/integrations/builtin/credentials/customerio.md) for guidance on setting up authentication. 
+อ้างอิง [Customer.io credentials](/integrations/builtin/credentials/customerio.md) สำหรับคำแนะนำในการตั้งค่า authentication
 ///
 
 ## Operations

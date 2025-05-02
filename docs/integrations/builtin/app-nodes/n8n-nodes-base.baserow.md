@@ -8,12 +8,12 @@ priority: high
 
 # Baserow node
 
-Use the Baserow node to automate work in Baserow, and integrate Baserow with other applications. n8n has built-in support for a wide range of Baserow features, including creating, getting, retrieving, and updating rows.
+ใช้ Baserow node เพื่อทำงานอัตโนมัติใน Baserow และ integrate Baserow กับแอปพลิเคชันอื่นๆ n8n มีการรองรับในตัวสำหรับฟีเจอร์ต่างๆ ของ Baserow รวมถึงการสร้าง, ดึง, เรียกดู, และอัปเดต rows
 
-On this page, you'll find a list of operations the Baserow node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Baserow node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [Baserow credentials](/integrations/builtin/credentials/baserow.md) for guidance on setting up authentication. 
+อ้างอิง [Baserow credentials](/integrations/builtin/credentials/baserow.md) สำหรับคำแนะนำในการตั้งค่า authentication
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

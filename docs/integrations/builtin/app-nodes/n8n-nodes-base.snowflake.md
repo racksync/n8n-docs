@@ -7,12 +7,10 @@ contentType: [integration, reference]
 
 # Snowflake node
 
-Use the Snowflake node to automate work in Snowflake, and integrate Snowflake with other applications. n8n has built-in support for a wide range of Snowflake features, including executing SQL queries, and inserting rows in a database. 
-
-On this page, you'll find a list of operations the Snowflake node supports and links to more resources.
+ใช้ Snowflake node เพื่อให้การทำงานใน Snowflake เป็นไปโดยอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันอื่น ๆ ได้อย่างราบรื่น. n8n รองรับฟีเจอร์ของ Snowflake หลากหลาย เช่น การรัน SQL queries และการแทรก rows ลงในฐานข้อมูล.
 
 /// note | Credentials
-Refer to [Snowflake credentials](/integrations/builtin/credentials/snowflake.md) for guidance on setting up authentication. 
+ดู [Snowflake credentials](/integrations/builtin/credentials/snowflake.md) สำหรับคำแนะนำในการตั้งค่า authentication. 
 ///
 
 ## Operations

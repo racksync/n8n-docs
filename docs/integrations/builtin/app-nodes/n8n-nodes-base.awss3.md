@@ -8,12 +8,12 @@ priority: medium
 
 # AWS S3 node
 
-Use the AWS S3 node to automate work in AWS S3, and integrate AWS S3 with other applications. n8n has built-in support for a wide range of AWS S3 features, including creating and deleting buckets, copying and downloading files, as well as getting folders.
+ใช้ AWS S3 node เพื่อทำงานอัตโนมัติใน AWS S3 และผสานรวม AWS S3 กับแอปพลิเคชันอื่นๆ n8n มีการรองรับฟีเจอร์หลากหลายของ AWS S3 ในตัว รวมถึงการสร้างและลบ buckets, การคัดลอกและดาวน์โหลดไฟล์, รวมถึงการดึงข้อมูลโฟลเดอร์
 
-On this page, you'll find a list of operations the AWS S3 node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ AWS S3 node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [AWS credentials](/integrations/builtin/credentials/aws.md) for guidance on setting up authentication. 
+อ้างอิง [AWS credentials](/integrations/builtin/credentials/aws.md) สำหรับคำแนะนำในการตั้งค่าการยืนยันตัวตน
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

@@ -8,12 +8,12 @@ priority: medium
 
 # ClickUp node
 
-Use the ClickUp node to automate work in ClickUp, and integrate ClickUp with other applications. n8n has built-in support for a wide range of ClickUp features, including creating, getting, deleting, and updating folders, checklists, tags, comments, and goals.
+ใช้ ClickUp node เพื่อทำงานอัตโนมัติใน ClickUp และ integrate ClickUp กับแอปพลิเคชันอื่นๆ n8n มีการรองรับในตัวสำหรับฟีเจอร์ต่างๆ ของ ClickUp รวมถึงการสร้าง, ดึง, ลบ, และอัปเดต folders, checklists, tags, comments, และ goals
 
-On this page, you'll find a list of operations the ClickUp node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ ClickUp node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [ClickUp credentials](/integrations/builtin/credentials/clickup.md) for guidance on setting up authentication. 
+อ้างอิง [ClickUp credentials](/integrations/builtin/credentials/clickup.md) สำหรับคำแนะนำในการตั้งค่า authentication
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

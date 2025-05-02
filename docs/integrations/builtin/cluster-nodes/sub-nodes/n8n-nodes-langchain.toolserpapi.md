@@ -1,30 +1,30 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: SerpApi (Google Search) node documentation
-description: Learn how to use the SerpApi (Google Search) node in n8n. Follow technical documentation to integrate SerpApi (Google Search) node into your workflows.
+description: เรียนรู้วิธีการใช้ SerpApi (Google Search) node ใน n8n พร้อมคำแนะนำทางเทคนิคในการรวม SerpApi (Google Search) node เข้ากับ workflow ของคุณ
 contentType: [integration, reference]
 priority: high
 ---
 
 # SerpApi (Google Search) node
 
-The SerpAPI node allows an [agent](/glossary.md#ai-agent) in your workflow to call Google's Search API.
+SerpAPI node ช่วยให้ [agent](/glossary.md#ai-agent) ใน workflow ของคุณสามารถเรียกใช้ Google Search API ได้
 
-On this page, you'll find the node parameters for the SerpAPI node, and links to more resources.
+ในหน้านี้จะมี parameter ของ node SerpAPI และลิงก์ไปยัง resource อื่นๆ
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/serp.md).
+ดูข้อมูลการตั้งค่า authentication สำหรับ node นี้ [ที่นี่](/integrations/builtin/credentials/serp.md)
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node options
 
-* **Country**: Enter the country code you'd like to use. Refer to [Google GL Parameter: Supported Google Countries](https://serpapi.com/google-countries){:target=_blank .external-link} for supported countries and country codes.
-* **Device**: Select the device to use to get the search results.
-* **Explicit Array**: Choose whether to force SerpApi to fetch the Google results even if a cached version is already present (turned on) or not (turned off).
-* **Google Domain**: Enter the Google Domain to use. Refer to [Supported Google Domains](https://serpapi.com/google-domains) for supported domains.
-* **Language**: Enter the language code you'd like to use. Refer to [Google HL Parameter: Supported Google Languages](https://serpapi.com/google-languages){:target=_blank .external-link} for supported languages and language codes.
+* **Country**: กรอกรหัสประเทศที่ต้องการใช้งาน ดูรหัสประเทศที่รองรับได้ที่ [Google GL Parameter: Supported Google Countries](https://serpapi.com/google-countries){:target=_blank .external-link}
+* **Device**: เลือกอุปกรณ์ที่ต้องการใช้สำหรับค้นหา
+* **Explicit Array**: เลือกว่าจะบังคับให้ SerpApi ดึงผลลัพธ์ Google ใหม่ทุกครั้ง (เปิด) หรือใช้ cache (ปิด)
+* **Google Domain**: กรอก Google Domain ที่ต้องการใช้งาน ดู domain ที่รองรับได้ที่ [Supported Google Domains](https://serpapi.com/google-domains)
+* **Language**: กรอกรหัสภาษาที่ต้องการใช้งาน ดูรหัสภาษาที่รองรับได้ที่ [Google HL Parameter: Supported Google Languages](https://serpapi.com/google-languages){:target=_blank .external-link}
 
 ## Templates and examples
 
@@ -33,7 +33,7 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Related resources
 
-Refer to [Serp's documentation](https://serpapi.com/search-api){:target=_blank .external-link} for more information about the service. You can also view [LangChain's documentation on their Serp integration](https://js.langchain.com/docs/integrations/tools/serpapi/){:target=_blank .external-link}.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [Serp's documentation](https://serpapi.com/search-api){:target=_blank .external-link} หรือดู [LangChain's documentation on their Serp integration](https://js.langchain.com/docs/integrations/tools/serpapi/){:target=_blank .external-link}
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

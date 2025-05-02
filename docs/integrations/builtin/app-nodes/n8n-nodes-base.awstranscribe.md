@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # AWS Transcribe node
 
-Use the AWS Transcribe node to automate work in AWS Transcribe, and integrate AWS Transcribe with other applications. n8n has built-in support for a wide range of AWS Transcribe features, including creating, deleting, and getting transcription jobs.
+ใช้ AWS Transcribe node เพื่อทำงานอัตโนมัติใน AWS Transcribe และผสานรวม AWS Transcribe กับแอปพลิเคชันอื่นๆ n8n มีการรองรับฟีเจอร์หลากหลายของ AWS Transcribe ในตัว รวมถึงการสร้าง, การลบ, และการดึงข้อมูล transcription jobs
 
-On this page, you'll find a list of operations the AWS Transcribe node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ AWS Transcribe node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [AWS Transcribe credentials](/integrations/builtin/credentials/aws.md) for guidance on setting up authentication. 
+อ้างอิง [AWS Transcribe credentials](/integrations/builtin/credentials/aws.md) สำหรับคำแนะนำในการตั้งค่าการยืนยันตัวตน
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

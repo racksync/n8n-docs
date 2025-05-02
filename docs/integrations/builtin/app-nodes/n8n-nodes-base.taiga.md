@@ -7,12 +7,10 @@ contentType: [integration, reference]
 
 # Taiga node
 
-Use the Taiga node to automate work in Taiga, and integrate Taiga with other applications. n8n has built-in support for a wide range of Taiga features, including creating, updating, deleting, and getting issues. 
-
-On this page, you'll find a list of operations the Taiga node supports and links to more resources.
+ใช้ Taiga node เพื่อช่วยงานอัตโนมัติใน Taiga และเชื่อมต่อ Taiga กับแอปพลิเคชันอื่น ๆ โดย n8n สนับสนุนฟีเจอร์หลากหลาย เช่น การสร้าง, อัปเดต, ลบ และดึงข้อมูลของ issue
 
 /// note | Credentials
-Refer to [Taiga credentials](/integrations/builtin/credentials/taiga.md) for guidance on setting up authentication. 
+ดู [Taiga credentials](/integrations/builtin/credentials/taiga.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations

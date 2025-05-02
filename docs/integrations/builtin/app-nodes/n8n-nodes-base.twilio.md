@@ -8,13 +8,10 @@ priority: medium
 
 # Twilio node
 
-Use the Twilio node to automate work in Twilio, and integrate Twilio with other applications. n8n supports sending MMS/SMS and WhatsApp messages with Twilio. 
-
-On this page, you'll find a list of operations the Twilio node supports and links to more resources.
+ใช้ Twilio node เพื่อช่วยให้งานใน Twilio เป็นอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันอื่น ๆ โดย n8n รองรับการส่งข้อความ MMS/SMS และ WhatsApp ผ่าน Twilio
 
 /// note | Credentials
-Refer to [Twilio credentials](/integrations/builtin/credentials/twilio.md) for guidance on setting up authentication. 
-///
+ดู [Twilio credentials](/integrations/builtin/credentials/twilio.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
@@ -32,6 +29,6 @@ Refer to [Twilio credentials](/integrations/builtin/credentials/twilio.md) for g
 
 ## Related resources
 
-Refer to [Twilio's documentation](https://www.twilio.com/docs/usage/api){:target=_blank .external-link} for more information about the service.
+ดู [Twilio's documentation](https://www.twilio.com/docs/usage/api){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

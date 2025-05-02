@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Zammad node
 
-Use the Zammad node to automate work in Zammad, and integrate Zammad with other applications. n8n has built-in support for a wide range of Zammad features, including creating, retrieving, and deleting groups and organizations.
+ใช้ Zammad node ในการทำงานอัตโนมัติใน Zammad และเชื่อมต่อ Zammad กับแอปพลิเคชันอื่น ๆ. n8n มีการสนับสนุนฟีเจอร์ของ Zammad ที่หลากหลาย เช่น การสร้าง, การดึงข้อมูล และการลบ groups และ organizations.
 
-On this page, you'll find a list of operations the Zammad node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการของ operations ที่ Zammad node รองรับและลิงก์ไปยัง resource เพิ่มเติม.
 
 /// note | Credentials
-Refer to [Zammad credentials](/integrations/builtin/credentials/zammad.md) for guidance on setting up authentication. 
+ดู [Zammad credentials](/integrations/builtin/credentials/zammad.md) สำหรับคำแนะนำในการตั้งค่า authentication. 
 ///
 
 ## Operations

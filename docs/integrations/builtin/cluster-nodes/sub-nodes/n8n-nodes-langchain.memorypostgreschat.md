@@ -7,25 +7,25 @@ contentType: [integration, reference]
 
 # Postgres Chat Memory node
 
-Use the Postgres Chat Memory node to use Postgres as a [memory](/glossary.md#ai-memory) server for storing chat history.
+ใช้ Postgres Chat Memory node เพื่อใช้ Postgres เป็น [memory](/glossary.md#ai-memory) server สำหรับเก็บประวัติแชท
 
-On this page, you'll find a list of operations the Postgres Chat Memory node supports, and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Postgres Chat Memory node รองรับ พร้อมลิงก์ไปยัง resource อื่นๆ ที่เกี่ยวข้อง
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/postgres.md).
+คุณสามารถดูข้อมูลการเชื่อมต่อสำหรับ node นี้ได้ที่ [ที่นี่](/integrations/builtin/credentials/postgres.md)
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node parameters
 
-* **Session Key**: Enter the key to use to store the memory in the workflow data.
-* **Table Name**: Enter the name of the table to store the chat history in. The system will create the table if doesn't exist.
-* **Context Window Length**: Enter the number of previous interactions to consider for context.
+* **Session Key**: ใส่ key ที่จะใช้เก็บ memory ใน workflow data
+* **Table Name**: ใส่ชื่อ table ที่จะใช้เก็บประวัติแชท ถ้า table ยังไม่มี ระบบจะสร้างให้
+* **Context Window Length**: ใส่จำนวน interactions ก่อนหน้าที่จะนำมาใช้เป็น context
 
 ## Related resources
 
-Refer to [LangChain's Postgres Chat Message History documentation](https://js.langchain.com/docs/integrations/memory/postgres){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมได้ที่ [LangChain's Postgres Chat Message History documentation](https://js.langchain.com/docs/integrations/memory/postgres){:target=_blank .external-link}
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 

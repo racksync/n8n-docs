@@ -8,24 +8,25 @@ priority: critical
 
 # Telegram node Callback operations
 
-Use these operations to respond to callback queries sent from the in-line keyboard or in-line queries. Refer to [Telegram](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/index.md) for more information on the Telegram node itself.
+ใช้ operations เหล่านี้เพื่อตอบ callback queries จาก inline keyboard หรือ inline queries  
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับ Telegram node ได้ที่ [Telegram](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/index.md)
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Answer Query
 
-Use this operation to send answers to callback queries sent from [inline keyboards](https://core.telegram.org/bots/features#inline-keyboards){:target=_blank .external-link} using the Bot API [answerCallbackQuery](https://core.telegram.org/bots/api#answercallbackquery){:target=_blank .external-link} method.
+ใช้ operation นี้เพื่อส่งคำตอบของ callback queries จาก [inline keyboards](https://core.telegram.org/bots/features#inline-keyboards){:target=_blank .external-link} ผ่าน Bot API [answerCallbackQuery](https://core.telegram.org/bots/api#answercallbackquery){:target=_blank .external-link}
 
-Enter these parameters:
+ป้อนพารามิเตอร์เหล่านี้:
 
-* **Credential to connect with**: Create or select an existing [Telegram credential](/integrations/builtin/credentials/telegram.md).
-* **Resource**: Select **Callback**.
-* **Operation**: Select **Answer Query**.
-* **Query ID**: Enter the unique identifier of the query you want to answer.
-    * To feed a Query ID directly into this node, use the [Telegram Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/index.md) node triggered on the **Callback Query**.
-* **Results**: Enter a JSON-serialized array of results you want to use as answers to the query. Refer to the Telegram [InlineQueryResults](https://core.telegram.org/bots/api#inlinequeryresult){:target=_blank .external-link} documentation for more information on formatting your array.
+* **Credential to connect with**: สร้างหรือเลือก [Telegram credential](/integrations/builtin/credentials/telegram.md)  
+* **Resource**: เลือก **Callback**  
+* **Operation**: เลือก **Answer Query**  
+* **Query ID**: ใส่ตัวระบุของ query ที่ต้องการตอบ  
+    * หากต้องการส่ง Query ID โดยตรง ให้ใช้ [Telegram Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/index.md) node ที่ trigger บน **Callback Query**  
+* **Results**: ใส่ JSON-serialized array ของผลลัพธ์ที่จะส่งเป็นคำตอบ ดูเอกสาร Telegram [InlineQueryResults](https://core.telegram.org/bots/api#inlinequeryresult){:target=_blank .external-link} สำหรับรูปแบบข้อมูล  
 
-Refer to the Telegram Bot API [answerCallbackQuery](https://core.telegram.org/bots/api#answercallbackquery){:target=_blank .external-link} documentation for more information.
+ดูเอกสาร Bot API [answerCallbackQuery](https://core.telegram.org/bots/api#answercallbackquery){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 
 <!-- vale off -->
 ### Answer Query additional fields

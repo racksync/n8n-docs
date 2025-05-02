@@ -8,13 +8,13 @@ priority: high
 
 # Chat Trigger node common issues
 
-Here are some common errors and issues with the [Chat Trigger node](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/index.md) and steps to resolve or troubleshoot them.
+นี่คือปัญหาและ error ที่พบบ่อยสำหรับ [Chat Trigger node](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/index.md) พร้อมแนวทางแก้ไขหรือวิเคราะห์ปัญหา
 
 ## Pass data from a website to an embedded Chat Trigger node
 
-When [embedding](https://www.npmjs.com/package/@n8n/chat) the Chat Trigger node in a website, you might want to pass extra information to the Chat Trigger. For example, passing a user ID stored in a site cookie.
+เวลาคุณ [embed](https://www.npmjs.com/package/@n8n/chat) Chat Trigger node ลงในเว็บไซต์ อาจอยากส่งข้อมูลเพิ่มเติมไปที่ Chat Trigger เช่น ส่ง user ID ที่เก็บใน cookie ของเว็บ
 
-To do this, use the `metadata` field in the JSON object you pass to the `createChat` function in your embedded chat window:
+ให้ใช้ field `metadata` ใน object JSON ที่ส่งเข้า `createChat` function ใน chat window ฝั่ง embed:
 
 ```javascript
 createChat({
@@ -25,19 +25,19 @@ createChat({
 });
 ```
 
-The `metadata` field can contain arbitrary data that will appear in the Chat Trigger output alongside other output data. From there, you can query and process the data from downstream nodes as usual using	n8n's [data processing features](/data/index.md).
+field `metadata` นี้จะเก็บข้อมูลอะไรก็ได้ และจะไปโผล่ใน output ของ Chat Trigger พร้อมกับข้อมูลอื่นๆ จากนั้นสามารถนำไปใช้ใน node ถัดไปใน workflow ได้ตามปกติด้วย [data processing features](/data/index.md) ของ n8n
 
 ## Chat Trigger node doesn't fetch previous messages
 
-When you configure a Chat Trigger node, you might experience problems fetching previous messages if you aren't careful about how you configure session loading. This often manifests as a `workflow could not be started!` error.
+ถ้าตั้งค่า Chat Trigger node แล้วเจอปัญหาโหลดข้อความเก่าไม่ได้ หรือขึ้น error `workflow could not be started!` อาจเกิดจากการตั้งค่า session loading ไม่ถูกต้อง
 
-In Chat Triggers, the **Load Previous Session** option retrieves previous chat messages for a session using the `sessionID`. When you set the **Load Previous Session** option to **From memory**, it's almost always best to [connect the same memory node](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/index.md#load-previous-session) to both the Chat Trigger and the Agent in your workflow:
+ใน Chat Trigger, option **Load Previous Session** จะดึงข้อความเก่าด้วย `sessionID` ถ้าตั้งเป็น **From memory** แนะนำให้ [เชื่อมต่อ memory node เดียวกัน](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/index.md#load-previous-session) ให้ทั้ง Chat Trigger และ Agent ใน workflow:
 
-1. In your **Chat Trigger** node, set the **Load Previous Session** option to **From Memory**. This is only visible if you've made the chat publicly available.
-2. Attach a **Simple Memory** node to the **Memory** connector.
-3. Attach the same **Simple Memory** node to **Memory** connector of your **Agent**.
-4. In the **Simple Memory** node, set **Session ID** to **Connected Chat Trigger Node**.
+1. ใน **Chat Trigger** node ให้ตั้ง **Load Previous Session** เป็น **From Memory** (จะเห็น option นี้ถ้าเปิด chat สาธารณะ)
+2. เชื่อม **Simple Memory** node เข้ากับ **Memory** connector
+3. เชื่อม **Simple Memory** node เดียวกันเข้ากับ **Memory** connector ของ **Agent**
+4. ใน **Simple Memory** node ตั้ง **Session ID** เป็น **Connected Chat Trigger Node**
 
-One instance where you may want to attach separate memory nodes to your Chat Trigger and the Agent is if you want to set the **Session ID** in your memory node to **Define below**.
+กรณีที่อาจอยากใช้ memory node แยกกันระหว่าง Chat Trigger กับ Agent คือถ้าต้องการตั้ง **Session ID** ใน memory node เป็น **Define below**
 
-If you're retrieving the session ID from an expression, the same expression must work for each of the nodes attached to it. If the expression isn't compatible with each of the nodes that need memory, you might need to use separate memory nodes so you can customize the expression for the session ID on a per-node basis.
+ถ้าดึง session ID จาก expression ต้องแน่ใจว่า expression นั้นใช้ได้กับทุก node ที่เชื่อมต่อกับ memory node นั้น ถ้า expression ใช้ไม่ได้กับบาง node อาจต้องใช้ memory node แยกกันเพื่อจะได้ตั้ง expression session ID ให้เหมาะกับแต่ละ node

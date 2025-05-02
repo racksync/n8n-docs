@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Bitly node
 
-Use the Bitly node to automate work in Bitly, and integrate Bitly with other applications. n8n has built-in support for a wide range of Bitly features, including creating, getting, and updating links.
+ใช้ Bitly node เพื่อทำงานอัตโนมัติใน Bitly และ integrate Bitly กับแอปพลิเคชันอื่นๆ n8n มีการรองรับในตัวสำหรับฟีเจอร์ต่างๆ ของ Bitly รวมถึงการสร้าง, ดึง, และอัปเดต links
 
-On this page, you'll find a list of operations the Bitly node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Bitly node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [Bitly credentials](/integrations/builtin/credentials/bitly.md) for guidance on setting up authentication. 
+อ้างอิง [Bitly credentials](/integrations/builtin/credentials/bitly.md) สำหรับคำแนะนำในการตั้งค่า authentication
 ///
 
 ## Operations

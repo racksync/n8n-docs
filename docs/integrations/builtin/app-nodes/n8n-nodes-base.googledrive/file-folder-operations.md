@@ -8,35 +8,35 @@ priority: high
 
 # Google Drive File and Folder operations
 
-Use this operation to search for files and folders in Google Drive. Refer to [Google Drive](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/index.md) for more information on the Google Drive node itself.
+ใช้ Operation นี้เพื่อค้นหา Files และ Folders ใน Google Drive โปรดดูข้อมูลเพิ่มเติมเกี่ยวกับ Google Drive node ที่ [Google Drive](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/index.md)
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Search files and folders
 
-Use this operation to search for files and folders in a drive.
+ใช้ Operation นี้เพื่อค้นหา Files และ Folders ใน Drive
 
-Enter these parameters:
+ป้อน Parameters เหล่านี้:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
-- **Resource**: Select **File/Folder**.
-- **Operation**: Select **Search**.
-- **Search Method**: Choose how you want to search:
-	- **Search File/Folder Name**: Fill out the **Search Query** with the name of the file or folder you want to search for. Returns files and folders that are partial matches for the query as well.
-	- **Advanced Search**: Fill out the **Query String** to search for files and folders using [Google query string syntax](https://developers.google.com/drive/api/guides/search-files).
-- **Return All**: Choose whether to return all results or only up to a given limit.
-- **Limit**: The maximum number of items to return when **Return All** is disabled.
-- **Filter**: Choose whether to limit the scope of your search:
-	- **Drive**: The drive you want to search in. By default, uses your personal "My Drive". Select **From list** to choose the drive from the dropdown list, **By URL** to enter the URL of the drive, or **By ID** to enter the `driveId`. 
-		- You can find the `driveId` by visiting the shared drive in your browser and copying the last URL component: `https://drive.google.com/drive/u/1/folders/driveId`.
-	- **Folder**: The folder to search in. Select **From list** to choose the folder from the dropdown list, **By URL** to enter the URL of the folder, or **By ID** to enter the `folderId`. 
-		- You can find the `folderId` by visiting the shared folder in your browser and copying the last URL component: `https://drive.google.com/drive/u/1/folders/folderId`.
-	- **What to Search**: Whether to search for **Files and Folders**, **Files**, or **Folders**.
-	- **Include Trashed Items**: Whether to also return items in the Drive's trash.
+- **Credential to connect with**: สร้างหรือเลือก [Google Drive credentials](/integrations/builtin/credentials/google/index.md) ที่มีอยู่
+- **Resource**: เลือก **File/Folder**
+- **Operation**: เลือก **Search**
+- **Search Method**: เลือกวิธีที่คุณต้องการค้นหา:
+	- **Search File/Folder Name**: กรอก **Search Query** ด้วยชื่อของ File หรือ Folder ที่คุณต้องการค้นหา คืนค่า Files และ Folders ที่ตรงกับ Query บางส่วนด้วย
+	- **Advanced Search**: กรอก **Query String** เพื่อค้นหา Files และ Folders โดยใช้ [Google query string syntax](https://developers.google.com/drive/api/guides/search-files)
+- **Return All**: เลือกว่าจะคืนค่าผลลัพธ์ทั้งหมด หรือคืนค่าตามจำนวนที่กำหนด
+- **Limit**: จำนวน Items สูงสุดที่จะคืนค่าเมื่อ **Return All** ถูกปิดใช้งาน
+- **Filter**: เลือกว่าจะจำกัดขอบเขตการค้นหาของคุณหรือไม่:
+	- **Drive**: Drive ที่คุณต้องการค้นหา โดยค่าเริ่มต้นจะใช้ "My Drive" ส่วนตัวของคุณ เลือก **From list** เพื่อเลือก Drive จากรายการ Dropdown, **By URL** เพื่อป้อน URL ของ Drive, หรือ **By ID** เพื่อป้อน `driveId`
+		- คุณสามารถหา `driveId` ได้โดยการเข้าไปที่ Shared drive ในเบราว์เซอร์ของคุณและคัดลอกส่วนสุดท้ายของ URL: `https://drive.google.com/drive/u/1/folders/driveId`
+	- **Folder**: Folder ที่จะค้นหา เลือก **From list** เพื่อเลือก Folder จากรายการ Dropdown, **By URL** เพื่อป้อน URL ของ Folder, หรือ **By ID** เพื่อป้อน `folderId`
+		- คุณสามารถหา `folderId` ได้โดยการเข้าไปที่ Shared folder ในเบราว์เซอร์ของคุณและคัดลอกส่วนสุดท้ายของ URL: `https://drive.google.com/drive/u/1/folders/folderId`
+	- **What to Search**: ระบุว่าจะค้นหา **Files and Folders**, **Files**, หรือ **Folders**
+	- **Include Trashed Items**: ระบุว่าจะคืนค่า Items ที่อยู่ใน Trash ของ Drive ด้วยหรือไม่
 
 
 ### Options
 
-- **Fields**: Select the fields to return. Can be one or more of the following: **[All]**, **explicitlyTrashed**, **exportLinks**, **hasThumbnail**, **iconLink**, **ID**, **Kind**, **mimeType**, **Name**, **Permissions**, **Shared**, **Spaces**, **Starred**, **thumbnailLink**, **Trashed**, **Version**, or **webViewLink**.
+- **Fields**: เลือก Fields ที่จะคืนค่า สามารถเป็นหนึ่งหรือหลายรายการต่อไปนี้: **[All]**, **explicitlyTrashed**, **exportLinks**, **hasThumbnail**, **iconLink**, **ID**, **Kind**, **mimeType**, **Name**, **Permissions**, **Shared**, **Spaces**, **Starred**, **thumbnailLink**, **Trashed**, **Version**, หรือ **webViewLink**
 
-Refer to the [Method: files.list | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files/list){:target=_blank .external-link} API documentation for more information.
+โปรดดูเอกสาร API [Method: files.list | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files/list){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม

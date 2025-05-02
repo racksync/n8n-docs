@@ -8,15 +8,15 @@ priority: high
 
 # MySQL node common issues
 
-Here are some common errors and issues with the [MySQL node](/integrations/builtin/app-nodes/n8n-nodes-base.mysql/index.md) and steps to resolve or troubleshoot them.
+นี่คือข้อผิดพลาดและปัญหาทั่วไปที่พบในโหนด [MySQL](/integrations/builtin/app-nodes/n8n-nodes-base.mysql/index.md) และขั้นตอนในการแก้ไขหรือตรวจสอบปัญหา
 
 ## Update rows by composite key
 
-The MySQL node's **Update** operation lets you to update rows in a table by providing a **Column to Match On** and a value. This works for tables where single column values can uniquely identify individual rows.
+การดำเนินการ **Update** ของโหนด MySQL ช่วยให้คุณอัปเดตแถวในตารางโดยระบุ **Column to Match On** และค่า การทำงานแบบนี้เหมาะกับตารางที่สามารถระบุแถวได้อย่างเฉพาะเจาะจงด้วยค่าคอลัมน์เดียว
 
-You can't use this pattern for tables that use [composite keys](https://en.wikipedia.org/wiki/Composite_key), where you need multiple columns to uniquely identify a row. A example of this is MySQL's [`user` table](https://mariadb.com/kb/en/mysql-user-table/) in the `mysql` database, where you need both the `user` and `host` columns to uniquely identify rows.
+คุณไม่สามารถใช้รูปแบบนี้กับตารางที่ใช้ [composite keys](https://en.wikipedia.org/wiki/Composite_key) ซึ่งคุณจำเป็นต้องใช้หลายคอลัมน์เพื่อระบุแถวอย่างเฉพาะเจาะจง ตัวอย่างเช่น [ตาราง `user`](https://mariadb.com/kb/en/mysql-user-table/) ใน MySQL ในฐานข้อมูล `mysql` ซึ่งคุณต้องใช้ทั้งคอลัมน์ `user` และ `host` เพื่อระบุแถวอย่างเฉพาะเจาะจง
 
-To update tables with composite keys, write the query manually with the **Execute SQL** operation instead. There, you can match on multiple values, like in this example which matches on both `customer_id` and `product_id`: 
+ในการอัปเดตตารางที่มี composite keys ให้เขียนคำสั่ง query ด้วยตนเองโดยใช้การดำเนินการ **Execute SQL** แทน คุณสามารถจับคู่กับค่าหลายค่า เช่น ในตัวอย่างนี้ที่ทำการจับคู่ทั้ง `customer_id` และ `product_id`:
 
 ```sql
 UPDATE orders SET quantity = 3 WHERE customer_id = 538 AND product_id = 800;
@@ -24,52 +24,52 @@ UPDATE orders SET quantity = 3 WHERE customer_id = 538 AND product_id = 800;
 
 ## Can't connect to a local MySQL server when using Docker
 
-When you run either n8n or MySQL in Docker, you need to configure the network so that n8n can connect to MySQL.
+เมื่อคุณรัน n8n หรือ MySQL ใน Docker คุณจำเป็นต้องกำหนดค่าเครือข่ายเพื่อให้ n8n สามารถเชื่อมต่อกับ MySQL ได้
 
-The solution depends on how you're hosting the two components.
+วิธีแก้ไขขึ้นอยู่กับวิธีการโฮสต์คอมโพเนนต์ทั้งสอง
 
 ### If only MySQL is in Docker
 
-If only MySQL is running in Docker, configure MySQL to listen on all interfaces by binding to `0.0.0.0` inside of the container (the official images are already configured this way).
+หากมีเพียง MySQL ที่รันใน Docker ให้กำหนดค่า MySQL ให้รับฟังทุก interface โดยการ binding กับ `0.0.0.0` ภายในคอนเทนเนอร์ (อิมเมจทางการได้รับการกำหนดค่าในลักษณะนี้แล้ว)
 
-When running the container, [publish the port](https://docs.docker.com/get-started/docker-concepts/running-containers/publishing-ports/) with the `-p` flag. By default, MySQL runs on port 3306, so your Docker command should look like this:
+เมื่อรันคอนเทนเนอร์ ให้ [เผยแพร่พอร์ต](https://docs.docker.com/get-started/docker-concepts/running-containers/publishing-ports/) ด้วยแฟล็ก `-p` โดยค่าเริ่มต้น MySQL รันบนพอร์ต 3306 ดังนั้นคำสั่ง Docker ของคุณควรมีลักษณะดังนี้:
 
 ```shell
 docker run -p 3306:3306 --name my-mysql -d mysql:latest
 ```
 
-When configuring [MySQL credentials](/integrations/builtin/credentials/mysql.md), the `localhost` address should work without a problem (set the **Host** to `localhost`).
+เมื่อกำหนดค่า [MySQL credentials](/integrations/builtin/credentials/mysql.md) แอดเดรส `localhost` ควรทำงานได้โดยไม่มีปัญหา (ตั้งค่า **Host** เป็น `localhost`)
 
 ### If only n8n is in Docker
 
-If only n8n is running in Docker, configure MySQL to listen on all interfaces by binding to `0.0.0.0` on the host.
+หากมีเพียง n8n ที่รันใน Docker ให้กำหนดค่า MySQL ให้รับฟังทุก interface โดยการ binding กับ `0.0.0.0` บนโฮสต์
 
-If you are running n8n in Docker on **Linux**, use the `--add-host` flag to map `host.docker.internal` to `host-gateway` when you start the container. For example:
+ถ้าคุณกำลังรัน n8n ใน Docker บน **Linux** ให้ใช้แฟล็ก `--add-host` เพื่อ map `host.docker.internal` ไปยัง `host-gateway` เมื่อคุณเริ่มต้นคอนเทนเนอร์ ตัวอย่างเช่น:
 
 ```shell
 docker run -it --rm --add-host host.docker.internal:host-gateway --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n docker.n8n.io/n8nio/n8n
 ```
 
-If you are using Docker Desktop, this is automatically configured for you.
+ถ้าคุณใช้ Docker Desktop การตั้งค่านี้จะถูกกำหนดค่าโดยอัตโนมัติ
 
-When configuring [MySQL credentials](/integrations/builtin/credentials/mysql.md), use `host.docker.internal` as the **Host** address instead of `localhost`.
+เมื่อกำหนดค่า [MySQL credentials](/integrations/builtin/credentials/mysql.md) ให้ใช้ `host.docker.internal` เป็นแอดเดรส **Host** แทน `localhost`
 
 ### If MySQL and n8n are running in separate Docker containers
 
-If both n8n and MySQL are running in Docker in separate containers, you can use Docker networking to connect them.
+หากทั้ง n8n และ MySQL รันใน Docker ในคอนเทนเนอร์แยกกัน คุณสามารถใช้เครือข่าย Docker เพื่อเชื่อมต่อพวกมัน
 
-Configure MySQL to listen on all interfaces by binding to `0.0.0.0` inside of the container (the official images are already configured this way). Add both the MySQL and n8n containers to the same [user-defined bridge network](https://docs.docker.com/engine/network/drivers/bridge/).
+กำหนดค่า MySQL ให้รับฟังทุก interface โดยการ binding กับ `0.0.0.0` ภายในคอนเทนเนอร์ (อิมเมจทางการได้รับการกำหนดค่าในลักษณะนี้แล้ว) เพิ่มทั้งคอนเทนเนอร์ MySQL และ n8n ใน [เครือข่าย bridge ที่ผู้ใช้กำหนดเอง](https://docs.docker.com/engine/network/drivers/bridge/)
 
-When configuring [MySQL credentials](/integrations/builtin/credentials/mysql.md), use the MySQL container's name as the host address instead of `localhost`. For example, if you call the MySQL container `my-mysql`, you would set the **Host** to `my-mysql`.
+เมื่อกำหนดค่า [MySQL credentials](/integrations/builtin/credentials/mysql.md) ให้ใช้ชื่อคอนเทนเนอร์ MySQL เป็นแอดเดรส host แทน `localhost` ตัวอย่างเช่น ถ้าคุณเรียกคอนเทนเนอร์ MySQL ว่า `my-mysql` คุณจะตั้งค่า **Host** เป็น `my-mysql`
 
 ### If MySQL and n8n are running in the same Docker container
 
-If MySQL and n8n are running in the same Docker container, the `localhost` address doesn't need any special configuration. You can configure MySQL to listen on `localhost` and configure the **Host** in the [MySQL credentials in n8n](/integrations/builtin/credentials/ollama.md) to use `localhost`.
+หาก MySQL และ n8n รันในคอนเทนเนอร์ Docker เดียวกัน แอดเดรส `localhost` ไม่จำเป็นต้องมีการกำหนดค่าพิเศษ คุณสามารถกำหนดค่า MySQL ให้รับฟังที่ `localhost` และกำหนดค่า **Host** ใน [MySQL credentials ใน n8n](/integrations/builtin/credentials/ollama.md) ให้ใช้ `localhost`
 
 ## Decimal numbers returned as strings
 
-By default, the MySQL node returns [`DECIMAL` values](https://dev.mysql.com/doc/refman/8.4/en/fixed-point-types.html) as strings. This is done intentionally to avoid loss of precision that can occur due to limitation with the way JavaScript represents numbers. You can learn more about the decision in the documentation for the [MySQL library](https://sidorares.github.io/node-mysql2/docs/api-and-configurations) that n8n uses.
+โดยค่าเริ่มต้น โหนด MySQL จะส่งคืนค่า [`DECIMAL`](https://dev.mysql.com/doc/refman/8.4/en/fixed-point-types.html) เป็นสตริง นี่เป็นการทำโดยเจตนาเพื่อหลีกเลี่ยงการสูญเสียความแม่นยำที่อาจเกิดขึ้นเนื่องจากข้อจำกัดของวิธีที่ JavaScript แสดงตัวเลข คุณสามารถเรียนรู้เพิ่มเติมเกี่ยวกับการตัดสินใจนี้ในเอกสารสำหรับ [ไลบรารี MySQL](https://sidorares.github.io/node-mysql2/docs/api-and-configurations) ที่ n8n ใช้
 
-To output decimal values as numbers instead of strings and ignore the risks in loss of precision, enable the **Output Decimals as Numbers** option. This will output the values as numbers instead of strings.
+เพื่อแสดงค่าทศนิยมเป็นตัวเลขแทนสตริงและเพิกเฉยต่อความเสี่ยงในการสูญเสียความแม่นยำ ให้เปิดใช้งานตัวเลือก **Output Decimals as Numbers** ซึ่งจะแสดงค่าเป็นตัวเลขแทนสตริง
 
-As an alternative, you can manually	convert from the string to a decimal using the [`toFloat()` function](/code/builtin/data-transformation-functions/strings.md#string-toFloat) with [`toFixed()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) or with the [Edit Fields (Set) node](/integrations/builtin/core-nodes/n8n-nodes-base.set.md) after the MySQL node. Be aware that you may still need to account for a potential loss of precision.
+อีกทางเลือกหนึ่ง คุณสามารถแปลงค่าจากสตริงเป็นทศนิยมด้วยตนเองโดยใช้ [ฟังก์ชั่น `toFloat()`](/code/builtin/data-transformation-functions/strings.md#string-toFloat) กับ [`toFixed()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) หรือด้วย [โหนด Edit Fields (Set)](/integrations/builtin/core-nodes/n8n-nodes-base.set.md) หลังจากโหนด MySQL โปรดทราบว่าคุณอาจยังคงต้องระวังเรื่องการสูญเสียความแม่นยำที่อาจเกิดขึ้น

@@ -8,44 +8,44 @@ priority: medium
 
 # Milvus Vector Store node
 
-Use the Milvus node to interact with your Milvus database as [vector store](/glossary.md#ai-vector-store). You can insert documents into a vector database, get documents from a vector database, retrieve documents to provide them to a retriever connected to a [chain](/glossary.md#ai-chain), or connect directly to an [agent](/glossary.md#ai-agent) as a [tool](/glossary.md#ai-tool).
+ใช้ Milvus node เพื่อโต้ตอบกับ Milvus database ของคุณในฐานะ [vector store](/glossary.md#ai-vector-store) คุณสามารถใส่ documents เข้าไปใน vector database, ดึง documents จาก vector database, เรียกดู documents เพื่อส่งต่อไปยัง retriever ที่เชื่อมต่อกับ [chain](/glossary.md#ai-chain) หรือเชื่อมต่อโดยตรงกับ [agent](/glossary.md#ai-agent) ในฐานะ [tool](/glossary.md#ai-tool)
 
-On this page, you'll find the node parameters for the Milvus node, and links to more resources.
+ในหน้านี้ คุณจะพบ node parameters สำหรับ Milvus node และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/milvus.md).
+คุณสามารถดูข้อมูล authentication สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/milvus.md)
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node usage patterns
 
-You can use the Milvus Vector Store node in the following patterns.
+คุณสามารถใช้ Milvus Vector Store node ในรูปแบบต่อไปนี้
 
 ### Use as a regular node to insert and retrieve documents
 
-You can use the Milvus Vector Store as a regular node to insert, or get documents. This pattern places the Milvus Vector Store in the regular connection flow without using an agent.
+คุณสามารถใช้ Milvus Vector Store เป็น node ปกติเพื่อ insert หรือ get documents รูปแบบนี้จะวาง Milvus Vector Store ไว้ใน flow การเชื่อมต่อปกติโดยไม่ต้องใช้ agent
 
-You can see an example of this in scenario 1 of [this template](https://n8n.io/workflows/2165-chat-with-pdf-docs-using-ai-quoting-sources/), by replacing the Pinecone Vector store node with the Milvus Vector Store node.
+คุณสามารถดูตัวอย่างได้ใน scenario 1 ของ [template นี้](https://n8n.io/workflows/2165-chat-with-pdf-docs-using-ai-quoting-sources/) โดยแทนที่ Pinecone Vector store node ด้วย Milvus Vector Store node
 
 ### Connect directly to an AI agent as a tool
 
-You can connect the Milvus Vector Store node directly to the tool connector of an [AI agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) to use a vector store as a resource when answering queries.
+คุณสามารถเชื่อมต่อ Milvus Vector Store node โดยตรงกับ tool connector ของ [AI agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) เพื่อใช้ vector store เป็น resource เมื่อตอบคำถาม
 
-Here, the connection would be: AI agent (tools connector) -> Milvus Vector Store node.
+ในกรณีนี้ การเชื่อมต่อจะเป็น: AI agent (tools connector) -> Milvus Vector Store node
 
 ### Use a retriever to fetch documents
 
-You can use the [Vector Store Retriever](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) node with the Milvus Vector Store node to fetch documents from the Milvus Vector Store node. This is often used with the [Question and Answer Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa/index.md) node to fetch documents from the vector store that match the given chat input.
+คุณสามารถใช้ [Vector Store Retriever](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) node ร่วมกับ Milvus Vector Store node เพื่อดึง documents จาก Milvus Vector Store node ซึ่งมักใช้กับ [Question and Answer Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa/index.md) node เพื่อดึง documents จาก vector store ที่ตรงกับ input ของ chat ที่กำหนด
 
-An [example of the connection flow](https://n8n.io/workflows/1960-ask-questions-about-a-pdf-using-ai/) would be: Question and Answer Chain (Retriever connector) -> Vector Store Retriever (Vector Store connector) -> Milvus Vector Store. In this example, the Pinecone Vector Store node should be replaced with the Milvus Vector Store node.
+[ตัวอย่างของ flow การเชื่อมต่อ](https://n8n.io/workflows/1960-ask-questions-about-a-pdf-using-ai/) จะเป็น: Question and Answer Chain (Retriever connector) -> Vector Store Retriever (Vector Store connector) -> Milvus Vector Store ในตัวอย่างนี้ ควรแทนที่ Pinecone Vector Store node ด้วย Milvus Vector Store node
 
 ### Use the Vector Store Question Answer Tool to answer questions
 
-Another pattern uses the [Vector Store Question Answer Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore.md) to summarize results and answer questions from the Milvus Vector Store node. Rather than connecting the Milvus Vector Store directly as a tool, this pattern uses a tool specifically designed to summarizes data in the vector store.
+อีกรูปแบบหนึ่งคือการใช้ [Vector Store Question Answer Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore.md) เพื่อสรุปผลลัพธ์และตอบคำถามจาก Milvus Vector Store node แทนที่จะเชื่อมต่อ Milvus Vector Store โดยตรงในฐานะ tool รูปแบบนี้จะใช้ tool ที่ออกแบบมาโดยเฉพาะเพื่อสรุปข้อมูลใน vector store
 
-The [connections flow](https://n8n.io/workflows/2705-chat-with-github-api-documentation-rag-powered-chatbot-with-pinecone-and-openai/) in this case would look like this: AI agent (tools connector) -> Vector Store Question Answer Tool (Vector Store connector) -> Milvus Vector store. In this example, the Pinecone Vector Store node should be replaced with the Milvus Vector Store node.
-	
+[flow การเชื่อมต่อ](https://n8n.io/workflows/2705-chat-with-github-api-documentation-rag-powered-chatbot-with-pinecone-and-openai/) ในกรณีนี้จะมีลักษณะดังนี้: AI agent (tools connector) -> Vector Store Question Answer Tool (Vector Store connector) -> Milvus Vector store ในตัวอย่างนี้ ควรแทนที่ Pinecone Vector Store node ด้วย Milvus Vector Store node
+
 ## Node parameters
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-mode.md"
@@ -54,25 +54,25 @@ The [connections flow](https://n8n.io/workflows/2705-chat-with-github-api-docume
 ### Get Many parameters
 <!-- vale from-write-good.Weasel = YES -->
 
-* **Milvus Collection**: Select or enter the Milvus Collection to use.
-* **Prompt**: Enter your search query.
-* **Limit**: Enter how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
+*   **Milvus Collection**: เลือกหรือป้อน Milvus Collection ที่จะใช้
+*   **Prompt**: ป้อนคำค้นหา (search query) ของคุณ
+*   **Limit**: ป้อนจำนวนผลลัพธ์ที่ต้องการดึงจาก vector store ตัวอย่างเช่น ตั้งค่าเป็น `10` เพื่อรับผลลัพธ์ที่ดีที่สุดสิบรายการ
 
 ### Insert Documents parameters
 
-* **Milvus Collection**: Select or enter the Milvus Collection to use.
-* **Clear Collection**: Specify whether to clear the collection before inserting new documents.
+*   **Milvus Collection**: เลือกหรือป้อน Milvus Collection ที่จะใช้
+*   **Clear Collection**: ระบุว่าจะล้าง collection ก่อนที่จะใส่ documents ใหม่หรือไม่
 
 ### Retrieve Documents (As Vector Store for Chain/Tool) parameters
 
-* **Milvus collection**: Select or enter the Milvus Collection to use.
+*   **Milvus collection**: เลือกหรือป้อน Milvus Collection ที่จะใช้
 
 ### Retrieve Documents (As Tool for AI Agent) parameters
 
-* **Name**: The name of the vector store.
-* **Description**: Explain to the LLM what this tool does. A good, specific description allows LLMs to produce expected results more often.
-* **Milvus Collection**: Select or enter the Milvus Collection to use.
-* **Limit**: Enter how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
+*   **Name**: ชื่อของ vector store
+*   **Description**: อธิบายให้ LLM ทราบว่า tool นี้ทำอะไร คำอธิบายที่ดีและเฉพาะเจาะจงช่วยให้ LLM สร้างผลลัพธ์ที่คาดหวังได้บ่อยขึ้น
+*   **Milvus Collection**: เลือกหรือป้อน Milvus Collection ที่จะใช้
+*   **Limit**: ป้อนจำนวนผลลัพธ์ที่ต้องการดึงจาก vector store ตัวอย่างเช่น ตั้งค่าเป็น `10` เพื่อรับผลลัพธ์ที่ดีที่สุดสิบรายการ
 
 ## Node options
 
@@ -82,11 +82,11 @@ The [connections flow](https://n8n.io/workflows/2705-chat-with-github-api-docume
 
 ### Clear Collection
 
-Available in **Insert Documents** mode. Deletes all data from the collection before inserting the new data.
+มีให้ใช้งานในโหมด **Insert Documents** ลบข้อมูลทั้งหมดออกจาก collection ก่อนที่จะใส่ข้อมูลใหม่
 
 ## Related resources
 
-Refer to [LangChain's Milvus documentation](https://js.langchain.com/docs/integrations/vectorstores/milvus/) for more information about the service.
+อ้างอิง [เอกสาร Milvus ของ LangChain](https://js.langchain.com/docs/integrations/vectorstores/milvus/) สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการ
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 

@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Embeddings Azure OpenAI node
 
-Use the Embeddings Azure OpenAI node to generate [embeddings](/glossary.md#ai-embedding) for a given text.
+ใช้ Embeddings Azure OpenAI node เพื่อสร้าง [embeddings](/glossary.md#ai-embedding) สำหรับข้อความที่กำหนด
 
-On this page, you'll find the node parameters for the Embeddings Azure OpenAI node, and links to more resources.
+ในหน้านี้ คุณจะพบพารามิเตอร์ของโหนดสำหรับ Embeddings Azure OpenAI node และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/azureopenai.md).
+คุณสามารถดูข้อมูลการยืนยันตัวตนสำหรับโหนดนี้ได้ [ที่นี่](/integrations/builtin/credentials/azureopenai.md)
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
@@ -20,10 +20,10 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Node options
 
-* **Model (Deployment) Name**: Select the model (deployment) to use for generating embeddings.
-* **Batch Size**: Enter the maximum number of documents to send in each request.
-* **Strip New Lines**: Select whether to remove new line characters from input text (turned on) or not (turned off). n8n enables this by default.
-* **Timeout**: Enter the maximum amount of time a request can take in seconds. Set to `-1` for no timeout.
+* **Model (Deployment) Name**: เลือกรุ่น (deployment) ที่จะใช้สร้าง embeddings
+* **Batch Size**: ป้อนจำนวนเอกสารสูงสุดที่จะส่งในแต่ละคำขอ
+* **Strip New Lines**: เลือกว่าจะลบอักขระขึ้นบรรทัดใหม่ (new line characters) ออกจากข้อความอินพุต (เปิด) หรือไม่ (ปิด) n8n เปิดใช้งานตัวเลือกนี้เป็นค่าเริ่มต้น
+* **Timeout**: ป้อนระยะเวลาสูงสุดที่คำขอสามารถใช้ได้เป็นวินาที ตั้งค่าเป็น `-1` หากไม่ต้องการกำหนดเวลาหมดอายุ (timeout)
 
 ## Templates and examples
 
@@ -32,7 +32,7 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Related resources
 
-Refer to [LangChains's OpenAI embeddings documentation](https://js.langchain.com/docs/integrations/text_embedding/azure_openai/){:target=_blank .external-link} for more information about the service.
+อ้างอิง [เอกสารประกอบ OpenAI embeddings ของ LangChain](https://js.langchain.com/docs/integrations/text_embedding/azure_openai/){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

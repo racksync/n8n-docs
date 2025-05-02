@@ -8,31 +8,31 @@ priority: high
 
 # Ollama Chat Model node
 
-The Ollama Chat Model node allows you use local Llama 2 models with conversational [agents](/glossary.md#ai-agent).
+Ollama Chat Model node ช่วยให้คุณใช้โมเดล Llama 2 บนเครื่อง local กับ [agents](/glossary.md#ai-agent) แบบสนทนาได้
 
-On this page, you'll find the node parameters for the Ollama Chat Model node, and links to more resources.
+ในหน้านี้ คุณจะพบ node parameters สำหรับ Ollama Chat Model node และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/ollama.md).
+คุณสามารถดูข้อมูล authentication สำหรับโหนดนี้ได้ [ที่นี่](/integrations/builtin/credentials/ollama.md)
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node parameters
 
-* **Model**: Select the model that generates the completion. Choose from:
-	* **Llama2**
-	* **Llama2 13B**
-	* **Llama2 70B**
-	* **Llama2 Uncensored**
+*   **Model**: เลือกโมเดลที่จะใช้สร้าง completion เลือกจาก:
+    *   **Llama2**
+    *   **Llama2 13B**
+    *   **Llama2 70B**
+    *   **Llama2 Uncensored**
 
-Refer to the Ollama [Models Library documentation](https://ollama.com/library){:target=_blank .external-link} for more information about available models.
+อ้างอิง [Models Library documentation](https://ollama.com/library){:target=_blank .external-link} ของ Ollama สำหรับข้อมูลเพิ่มเติมเกี่ยวกับโมเดลที่มีให้ใช้งาน
 
 ## Node options
 
-* **Sampling Temperature**: Use this option to control the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
-* **Top K**: Enter the number of token choices the model uses to generate the next token.
-* **Top P**: Use this option to set the probability the completion should use. Use a lower value to ignore less probable options. 
+*   **Sampling Temperature**: ใช้ตัวเลือกนี้เพื่อควบคุมความสุ่มของการสุ่มตัวอย่าง (sampling process) ค่า temperature ที่สูงขึ้นจะสร้างการสุ่มตัวอย่างที่หลากหลายมากขึ้น แต่เพิ่มความเสี่ยงที่จะเกิดภาพหลอน (hallucinations)
+*   **Top K**: ป้อนจำนวนตัวเลือก token ที่โมเดลใช้ในการสร้าง token ถัดไป
+*   **Top P**: ใช้ตัวเลือกนี้เพื่อกำหนดค่าความน่าจะเป็น (probability) ที่ completion ควรใช้ ใช้ค่าที่ต่ำลงเพื่อละเว้นตัวเลือกที่มีความน่าจะเป็นน้อยกว่า
 
 ## Templates and examples
 
@@ -41,13 +41,13 @@ Refer to the Ollama [Models Library documentation](https://ollama.com/library){:
 
 ## Related resources
 
-Refer to [LangChains's Ollama Chat Model documentation](https://js.langchain.com/docs/integrations/chat/ollama/){:target=_blank .external-link} for more information about the service.
+อ้างอิง [LangChain's Ollama Chat Model documentation](https://js.langchain.com/docs/integrations/chat/ollama/){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama/common-issues.md).
+สำหรับคำถามหรือปัญหาที่พบบ่อยและแนวทางแก้ไข โปรดดูที่ [Common issues](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama/common-issues.md)
 
 --8<-- "_glossary/ai-glossary.md"
 

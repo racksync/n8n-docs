@@ -7,28 +7,28 @@ contentType: [integration, reference]
 
 # SearXNG Tool node
 
-The SearXNG Tool node allows you to integrate search capabilities into your workflows using SearXNG. SearXNG aggregates results from multiple search engines without tracking you.
+SearXNG Tool node ช่วยให้คุณเพิ่มความสามารถในการค้นหา (search) ใน workflow ของคุณโดยใช้ SearXNG ซึ่งจะรวมผลลัพธ์จาก search engine หลายตัวโดยไม่ track ข้อมูลของคุณ
 
-On this page, you'll find the node options for the SearXNG Tool node, and links to more resources.
+ในหน้านี้จะมี option ของ node SearXNG Tool และลิงก์ไปยัง resource อื่นๆ
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/searxng.md).
+ดูข้อมูลการตั้งค่า authentication สำหรับ node นี้ [ที่นี่](/integrations/builtin/credentials/searxng.md)
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node Options
 
-* **Number of Results**: The number of results to retrieve. The default is 10.
-* **Page Number**: The page number of the search results to retrieve. The default is 1.
-* **Language**: A two-letter [language code](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes) to filter search results by language. For example: `en` for English, `fr` for French. The default is `en`.
-* **Safe Search**: Enables or disables filtering explicit content in the search results. Can be None, Moderate, or Strict. The default is None.
+* **Number of Results**: จำนวนผลลัพธ์ที่ต้องการดึงมา ค่าเริ่มต้นคือ 10
+* **Page Number**: เลขหน้าของผลลัพธ์ที่ต้องการดึง ค่าเริ่มต้นคือ 1
+* **Language**: รหัสภาษา 2 ตัวอักษร ([language code](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes)) เพื่อกรองผลลัพธ์ ตัวอย่างเช่น `en` สำหรับภาษาอังกฤษ, `fr` สำหรับภาษาฝรั่งเศส ค่าเริ่มต้นคือ `en`
+* **Safe Search**: เปิดหรือปิดการกรองเนื้อหาที่ไม่เหมาะสมในผลลัพธ์ เลือกได้เป็น None, Moderate, หรือ Strict ค่าเริ่มต้นคือ None
 
 ## Running a SearXNG instance
 
-This node requires running the SearXNG service on the same network as your n8n instance. Ensure your n8n instance has network access to the SearXNG service.
+node นี้ต้องใช้ SearXNG service ที่รันอยู่ใน network เดียวกับ n8n instance ของคุณ ตรวจสอบให้แน่ใจว่า n8n instance ของคุณเข้าถึง SearXNG service ได้
 
-This node requires results in JSON format, which isn't enabled in the default SearXNG configuration. To enable JSON output, add `json` to the `search.formats` section of your SearXNG instance's `settings.yml` file:
+node นี้ต้องการผลลัพธ์เป็น JSON ซึ่งค่า default ของ SearXNG จะยังไม่เปิด JSON output ต้องเพิ่ม `json` ใน section `search.formats` ของไฟล์ `settings.yml` ของ SearXNG instance:
 
 ```yaml
 search:
@@ -38,9 +38,9 @@ search:
     - json
 ```
 
-If the `formats` section isn't there, add it. The exact location of the `settings.yml` file depends on how you installed SearXNG. You can find more by visiting the [SearXNG configuration documentation](https://docs.searxng.org/admin/installation-searxng.html#configuration).
+ถ้า section `formats` ยังไม่มี ให้เพิ่มเข้าไป ตำแหน่งของไฟล์ `settings.yml` ขึ้นอยู่กับวิธีที่คุณติดตั้ง SearXNG ดูรายละเอียดเพิ่มเติมได้ที่ [SearXNG configuration documentation](https://docs.searxng.org/admin/installation-searxng.html#configuration)
 
-The quality and availability of search results depend on the configuration and health of the SearXNG instance you use. 
+คุณภาพและความพร้อมของผลลัพธ์ขึ้นอยู่กับการตั้งค่าและสุขภาพของ SearXNG instance ที่คุณใช้
 
 ## Templates and examples
 
@@ -49,7 +49,7 @@ The quality and availability of search results depend on the configuration and h
 
 ## Related resources
 
-Refer to [SearXNG's documentation](https://docs.searxng.org/) for more information about the service. You can also view [LangChain's documentation on their SearXNG integration](https://python.langchain.com/docs/integrations/tools/searx_search/).
+ดูข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้ได้ที่ [SearXNG's documentation](https://docs.searxng.org/) หรือดู [LangChain's documentation on their SearXNG integration](https://python.langchain.com/docs/integrations/tools/searx_search/)
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

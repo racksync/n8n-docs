@@ -7,12 +7,10 @@ contentType: [integration, reference]
 
 # SIGNL4 node
 
-Use the SIGNL4 node to automate work in SIGNL4, and integrate SIGNL4 with other applications. n8n supports sending and resolving alerts with SIGNL4.
-
-On this page, you'll find a list of operations the SIGNL4 node supports and links to more resources.
+ใช้ SIGNL4 node เพื่อช่วยให้งานใน SIGNL4 เป็นไปโดยอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันอื่น ๆ ได้อย่างรวดเร็ว. n8n รองรับการส่งและการแก้ไข alerts ผ่าน SIGNL4.
 
 /// note | Credentials
-Refer to [SIGNL4 credentials](/integrations/builtin/credentials/signl4.md) for guidance on setting up authentication. 
+ดู [SIGNL4 credentials](/integrations/builtin/credentials/signl4.md) สำหรับคำแนะนำในการตั้งค่า authentication. 
 ///
 
 ## Operations

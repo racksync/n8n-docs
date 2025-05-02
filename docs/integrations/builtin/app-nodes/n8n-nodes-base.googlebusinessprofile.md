@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Google Business Profile node
 
-Use the Google Business Profile node to automate work in Google Business Profile and integrate Google Business Profile with other applications. n8n has built-in support for a wide range of Google Business Profile features, which includes creating, updating, and deleting posts and reviews.
+ใช้ Google Business Profile node เพื่อทำงานอัตโนมัติใน Google Business Profile และเชื่อมต่อ Google Business Profile กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Google Business Profile หลายอย่าง เช่น การสร้าง อัปเดต และลบ posts และ reviews
 
-On this page, you'll find a list of operations the Google Business Profile node supports, and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Google Business Profile node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 ///  note  | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/google/index.md).
+คุณสามารถค้นหาข้อมูลการยืนยันตัวตนสำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/google/index.md)
 ///
 
 
@@ -37,8 +37,8 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Related resources
 
-n8n provides a trigger node for Google Business Profile. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.googlebusinessprofiletrigger.md).
+n8n มี trigger node สำหรับ Google Business Profile คุณสามารถค้นหาเอกสาร trigger node ได้ [ที่นี่](/integrations/builtin/trigger-nodes/n8n-nodes-base.googlebusinessprofiletrigger.md)
 
-Refer to [Google Business Profile's documentation](https://developers.google.com/my-business/reference/rest){:target=_blank .external-link} for more information about the service.
+โปรดดู [Google Business Profile's documentation](https://developers.google.com/my-business/reference/rest){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

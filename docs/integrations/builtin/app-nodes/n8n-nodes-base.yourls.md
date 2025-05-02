@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Yourls node
 
-Use the Yourls node to automate work in Yourls, and integrate Yourls with other applications. n8n has built-in support for a wide range of Yourls features, including expanding and shortening URLs. 
+ใช้ Yourls node ในการทำงานอัตโนมัติใน Yourls และเชื่อมต่อ Yourls กับแอปพลิเคชันอื่น ๆ. n8n รองรับฟีเจอร์ของ Yourls หลากหลาย เช่น การขยายและย่อ URLs.
 
-On this page, you'll find a list of operations the Yourls node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการของ operations ที่ Yourls node รองรับและลิงก์ไปยัง resource เพิ่มเติม.
 
 /// note | Credentials
-Refer to [Yourls credentials](/integrations/builtin/credentials/yourls.md) for guidance on setting up authentication. 
+ดู [Yourls credentials](/integrations/builtin/credentials/yourls.md) สำหรับคำแนะนำในการตั้งค่า authentication. 
 ///
 
 ## Operations

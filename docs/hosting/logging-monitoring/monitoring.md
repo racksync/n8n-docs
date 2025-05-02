@@ -6,45 +6,44 @@ contentType: howto
 
 # Monitoring
 
-There are three API endpoints you can call to check the status of your instance: `/healthz`, `healthz/readiness`, and `/metrics`.
+มี API endpoint 3 ตัวที่คุณสามารถเรียกดูสถานะของ instance ได้ คือ `/healthz`, `healthz/readiness`, และ `/metrics`
 
 <!-- vale off -->
 ## healthz and healthz/readiness
 <!-- vale on -->
-The `/healthz` endpoint returns a standard HTTP status code. 200 indicates the instance is reachable. It doesn't indicate DB status. It's available for both self-hosted and Cloud users.
+endpoint `/healthz` จะคืนค่า HTTP status code ปกติ 200 หมายถึง instance เข้าถึงได้ แต่ไม่ได้บอกสถานะของฐานข้อมูล endpoint นี้ใช้ได้ทั้ง self-hosted และ Cloud
 
-Access the endpoint:
+เข้าถึง endpoint นี้ได้ที่:
 
 ```
 <your-instance-url>/healthz
 ```
 
-The `/healthz/readiness` endpoint is similar to the `/healthz` endpoint, but it returns a HTTP status code of 200 if the DB is connected and migrated and therefore the instance is ready to accept traffic.
+endpoint `/healthz/readiness` จะคล้ายกับ `/healthz` แต่จะคืนค่า HTTP 200 ก็ต่อเมื่อเชื่อมต่อฐานข้อมูลและ migrate แล้ว ดังนั้น instance พร้อมรับ traffic
 
-Access the endpoint:
+เข้าถึง endpoint นี้ได้ที่:
 
 ```
 <your-instance-url>/healthz/readiness
 ```
 
-
 ## metrics
 
-The `/metrics` endpoint provides more detailed information about the current status of the instance.
+endpoint `/metrics` จะให้ข้อมูลสถานะของ instance แบบละเอียดมากขึ้น
 
-Access the endpoint:
+เข้าถึง endpoint นี้ได้ที่:
 
 ```
 <your-instance-url>/metrics
 ```
 
 /// info | Feature availability
-The `/metrics` endpoint isn't available on n8n Cloud.
+endpoint `/metrics` ยังไม่เปิดให้ใช้บน n8n Cloud
 ///
 <!-- vale off -->
 ## Enable metrics and healthz for self-hosted n8n
 <!-- vale on -->
-The `/metrics` and `/healthz` endpoints are disabled by default. To enable them, configure your n8n instance:
+endpoint `/metrics` และ `/healthz` ถูกปิดไว้เป็นค่าเริ่มต้น ถ้าต้องการเปิดใช้งาน ให้ตั้งค่า n8n instance ของคุณแบบนี้:
 
 ```shell
 # metrics
@@ -53,4 +52,4 @@ N8N_METRICS=true
 QUEUE_HEALTH_CHECK_ACTIVE=true
 ```
 
-Refer to [Configuration methods](/hosting/configuration/configuration-methods.md) for more information on how to configure your instance using environment variables.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับการตั้งค่าด้วย environment variable ได้ที่ [Configuration methods](/hosting/configuration/configuration-methods.md)

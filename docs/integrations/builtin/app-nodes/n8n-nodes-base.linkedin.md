@@ -8,12 +8,12 @@ priority: medium
 
 # LinkedIn node
 
-Use the LinkedIn node to automate work in LinkedIn, and integrate LinkedIn with other applications. n8n supports creating posts.
+ใช้ LinkedIn node ในการทำงานอัตโนมัติใน LinkedIn และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ โดย n8n รองรับการสร้าง posts.
 
-On this page, you'll find a list of operations the LinkedIn node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ LinkedIn node รองรับและลิงก์ไปยังข้อมูลเพิ่มเติม.
 
 /// note | Credentials
-Refer to [LinkedIn credentials](/integrations/builtin/credentials/linkedin.md) for guidance on setting up authentication. 
+ดู [LinkedIn credentials](/integrations/builtin/credentials/linkedin.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

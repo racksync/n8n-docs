@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # OpenThesaurus node
 
-Use the OpenThesaurus node to automate work in OpenThesaurus, and integrate OpenThesaurus with other applications. n8n supports synonym look-up for German words. 
+ใช้ OpenThesaurus node เพื่อทำงานอัตโนมัติใน OpenThesaurus และเชื่อมต่อกับแอปอื่น ๆ. n8n รองรับการค้นหาคำพ้องความหมายสำหรับคำภาษาเยอรมัน
 
-On this page, you'll find a list of operations the OpenThesaurus node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ OpenThesaurus node รองรับ พร้อมลิงก์สำหรับข้อมูลเพิ่มเติม
 
 /// note | Credentials
-OpenThesaurus node doesn't require authentication. 
+OpenThesaurus node ไม่ต้องการการตั้งค่า authentication
 ///
 
 ## Operations

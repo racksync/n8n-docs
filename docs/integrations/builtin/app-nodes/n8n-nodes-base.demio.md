@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Demio node
 
-Use the Demio node to automate work in Demio, and integrate Demio with other applications. n8n has built-in support for a wide range of Demio features, including getting, and registering events and reports.
+ใช้ Demio node เพื่อทำงานอัตโนมัติใน Demio และเชื่อมต่อ Demio กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Demio หลายอย่าง เช่น การดึงข้อมูล และลงทะเบียน events และ reports
 
-On this page, you'll find a list of operations the Demio node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Demio node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Demio credentials](/integrations/builtin/credentials/demio.md) for guidance on setting up authentication. 
+โปรดดู [Demio credentials](/integrations/builtin/credentials/demio.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations

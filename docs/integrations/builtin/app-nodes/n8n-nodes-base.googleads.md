@@ -1,19 +1,19 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Google Ads node documentation
-description: Learn how to use the Google Ads node in n8n. Follow technical documentation to integrate Google Ads node into your workflows.
+description: เรียนรู้วิธีการใช้ Google Ads node ใน n8n ทำตามเอกสารทางเทคนิคเพื่อรวม Google Ads node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 priority: medium
 ---
 
 # Google Ads node
 
-Use the Google Ads node to automate work in Google Ads, and integrate Google Ads with other applications. n8n has built-in support for a wide range of Google Ads features, including getting campaigns. 
+ใช้ Google Ads node เพื่อทำงานอัตโนมัติใน Google Ads และเชื่อมต่อ Google Ads กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Google Ads หลายอย่าง เช่น การดึงข้อมูล campaigns
 
-On this page, you'll find a list of operations the Google Ads node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Google Ads node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Google Ads credentials](/integrations/builtin/credentials/google/index.md) for guidance on setting up authentication. 
+โปรดดู [Google Ads credentials](/integrations/builtin/credentials/google/index.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations
@@ -29,6 +29,6 @@ Refer to [Google Ads credentials](/integrations/builtin/credentials/google/index
 
 ## Related resources
 
-Refer to [Google Ads' documentation](https://developers.google.com/google-ads/api/docs/start){:target=_blank .external-link} for more information about the service.
+โปรดดู [Google Ads' documentation](https://developers.google.com/google-ads/api/docs/start){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

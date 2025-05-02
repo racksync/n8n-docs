@@ -5,65 +5,63 @@ contentType: tutorial
 
 # Hosting n8n on Heroku
 
-This hosting guide shows you how to self-host n8n on Heroku. It uses:
+คู่มือนี้จะสอนวิธีติดตั้ง n8n แบบ self-host บน Heroku โดยใช้:
 
-
-- [Docker Compose](https://docs.docker.com/compose/){:target="_blank" .external-link} to create and define the application components and how they work together.
-- [Heroku's PostgreSQL service](https://devcenter.heroku.com/categories/heroku-postgres){:target="_blank" .external-link} to host n8n's data storage.
-- A **Deploy to Heroku** button offering a one click, with minor configuration, deployment.
+- [Docker Compose](https://docs.docker.com/compose/){:target="_blank" .external-link} สำหรับจัดการ container ของแต่ละ service
+- [Heroku's PostgreSQL service](https://devcenter.heroku.com/categories/heroku-postgres){:target="_blank" .external-link} สำหรับเก็บข้อมูลของ n8n
+- ปุ่ม **Deploy to Heroku** ที่ช่วยให้ deploy ได้ง่าย ๆ แค่คลิกเดียว (แต่ต้องตั้งค่าบางอย่าง)
 
 --8<-- "_snippets/self-hosting/warning.md"
 
 --8<-- "_snippets/self-hosting/installation/latest-next-version.md"
 
-
 ## Use the deployment template to create a Heroku project
 
-The quickest way to get started with deploying n8n to Heroku is using the **Deploy to Heroku** button:
+วิธีที่เร็วที่สุดในการ deploy n8n ขึ้น Heroku คือกดปุ่ม **Deploy to Heroku** ด้านล่างนี้
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/n8n-io/n8n-heroku/tree/main)
 
-This opens the **Create New App** page on Heroku. Set a name for the project, and choose the region to deploy the project to.
+จะเปิดหน้า **Create New App** บน Heroku ให้ตั้งชื่อ project และเลือก region ที่จะ deploy
 
 ### Configure environment variables
 
-Heroku pre-fills the configuration options defined in the `env` section of the `app.json` file, which also sets default values for the environment variables n8n uses.
+Heroku จะเติมค่าต่าง ๆ ที่ต้องใช้ใน `env` section ของไฟล์ `app.json` ให้อัตโนมัติ (รวมถึงค่า default ของ environment variable ที่ n8n ใช้)
 
-You can change any of these values to suit your needs. You must change the following values:
+คุณสามารถเปลี่ยนค่าเหล่านี้ได้ตามต้องการ แต่ **ต้องเปลี่ยน** ค่าต่อไปนี้:
 
-- **N8N_ENCRYPTION_KEY**, which n8n uses to [encrypt user account details](/hosting/configuration/environment-variables/deployment.md) before saving to the database.
-- **WEBHOOK_URL** should match the application name you create to ensure that webhooks have the correct URL.
+- **N8N_ENCRYPTION_KEY**: ใช้สำหรับ [encrypt ข้อมูลบัญชีผู้ใช้](/hosting/configuration/environment-variables/deployment.md) ก่อนบันทึกลง database
+- **WEBHOOK_URL**: ต้องตรงกับชื่อ app ที่สร้างไว้ เพื่อให้ webhook ใช้งานได้ถูกต้อง
 
 ### Deploy n8n
 
-Select **Deploy app**.
+กด **Deploy app**
 
-After Heroku builds and deploys the app it provides links to **Manage App** or **View** the application.
+หลังจาก Heroku build และ deploy เสร็จ จะมีลิงก์ให้ **Manage App** หรือ **View** แอปที่สร้างไว้
 
 /// note | Heroku and DNS
-Refer to the [Heroku documentation](https://devcenter.heroku.com/categories/networking-dns){:target="_blank" .external-link} to find out how to connect your domain to a Heroku application.
+ดูวิธีเชื่อม domain ของคุณกับ Heroku app ได้ที่ [Heroku documentation](https://devcenter.heroku.com/categories/networking-dns){:target="_blank" .external-link}
 ///
 ## Changing the deployment template
 
-You can make changes to the deployment template by forking the [repository](https://github.com/n8n-io/n8n-heroku){:target=_blank .external-link} and deploying from you fork.
+ถ้าอยากแก้ไข template ที่ใช้ deploy สามารถ fork [repository](https://github.com/n8n-io/n8n-heroku){:target=_blank .external-link} แล้ว deploy จาก fork ของคุณเองได้
 
 ### The Dockerfile
 
-By default the Dockerfile pulls the latest n8n image, if you want to use a different or fixed version, then update the image tag on the top line of the `Dockerfile`.
+โดยปกติ Dockerfile จะดึง n8n image ล่าสุด ถ้าอยากใช้ version อื่นหรือ fix version ให้แก้ tag ที่บรรทัดแรกของ `Dockerfile`
 
 ### Heroku and exposing ports
 
-Heroku doesn't allow Docker-based applications to define an exposed port with the `EXPOSE` command. Instead, Heroku provides a `PORT` environment variable that it dynamically populates at application runtime. The `entrypoint.sh` file overrides the default Docker image command to instead set the port variable that Heroku provides. You can then access n8n on port 80 in a web browser.
+Heroku ไม่อนุญาตให้ Docker-based app ใช้คำสั่ง `EXPOSE` เพื่อกำหนด port เอง Heroku จะส่งค่า `PORT` มาเป็น environment variable ตอนรันแอปจริง ๆ ไฟล์ `entrypoint.sh` จะ override คำสั่งเริ่มต้นของ Docker image เพื่อใช้ port ที่ Heroku กำหนด คุณจะเข้าใช้งาน n8n ได้ที่ port 80 ผ่าน browser
 
 /// note | Docker limitations with Heroku
-[Read this guide](https://devcenter.heroku.com/articles/container-registry-and-runtime#unsupported-dockerfile-commands){:target="_blank" .external-link} for more details on the limitations of using Docker with Heroku.
+อ่านรายละเอียดข้อจำกัดของ Docker บน Heroku ได้ที่ [ที่นี่](https://devcenter.heroku.com/articles/container-registry-and-runtime#unsupported-dockerfile-commands){:target="_blank" .external-link}
 ///
 ### Configuring Heroku
 
-The `heroku.yml` file defines the application you want to create on Heroku. It consists of two sections:
+ไฟล์ `heroku.yml` จะกำหนดรายละเอียดของแอปบน Heroku มี 2 ส่วนหลัก:
 
-* `setup` > `addons` defines the Heroku addons to use. In this case, the PostgreSQL database addon.
-* The `build` section defines how Heroku builds the application. In this case it uses the Docker buildpack to build a `web` service based on the supplied `Dockerfile`.
+* `setup` > `addons`: กำหนด Heroku addon ที่จะใช้ (เช่น PostgreSQL)
+* `build`: กำหนดวิธี build แอป (ในที่นี้ใช้ Docker buildpack สร้าง service `web` จาก `Dockerfile` ที่ให้มา)
 
 ## Next steps
 

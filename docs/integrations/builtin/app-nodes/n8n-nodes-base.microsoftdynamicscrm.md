@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Microsoft Dynamics CRM node
 
-Use the Microsoft Dynamics CRM node to automate work in Microsoft Dynamics CRM, and integrate Microsoft Dynamics CRM with other applications. n8n has built-in support for  creating, updating, deleting, and getting Microsoft Dynamics CRM accounts. 
+ใช้ Microsoft Dynamics CRM node ในการทำงานอัตโนมัติใน Microsoft Dynamics CRM และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ โดย n8n รองรับการสร้าง, อัปเดต, ลบ และดึงข้อมูล accounts ใน Dynamics CRM.
 
-On this page, you'll find a list of operations the Microsoft Dynamics CRM node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Microsoft Dynamics CRM node รองรับและลิงก์ไปยังข้อมูลเพิ่มเติม.
 
 /// note | Credentials
-Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft.md) for guidance on setting up authentication.
+ดู [Microsoft credentials](/integrations/builtin/credentials/microsoft.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations

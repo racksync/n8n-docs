@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # AWS Lambda node
 
-Use the AWS Lambda node to automate work in AWS Lambda, and integrate AWS Lambda with other applications. n8n has built-in support for a wide range of AWS Lambda features, including invoking functions.
+ใช้ AWS Lambda node เพื่อทำงานอัตโนมัติใน AWS Lambda และผสานรวม AWS Lambda กับแอปพลิเคชันอื่นๆ n8n มีการรองรับฟีเจอร์หลากหลายของ AWS Lambda ในตัว รวมถึงการเรียกใช้ functions
 
-On this page, you'll find a list of operations the AWS Lambda node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ AWS Lambda node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [AWS Lambda credentials](/integrations/builtin/credentials/aws.md) for guidance on setting up authentication. 
+อ้างอิง [AWS Lambda credentials](/integrations/builtin/credentials/aws.md) สำหรับคำแนะนำในการตั้งค่าการยืนยันตัวตน
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

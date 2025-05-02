@@ -8,5 +8,5 @@ priority: medium
 
 # Customer Datastore (n8n Training) node
 
-Use this node only for the n8n new user onboarding tutorial. It provides dummy data for testing purposes and has no further functionality.
+ใช้ node นี้เฉพาะสำหรับบทเรียน onboarding ผู้ใช้ใหม่ของ n8n เท่านั้น ให้ข้อมูลตัวอย่างสำหรับการทดสอบและไม่มีฟังก์ชันเพิ่มเติม
 

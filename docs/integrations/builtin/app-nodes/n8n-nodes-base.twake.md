@@ -7,13 +7,9 @@ contentType: [integration, reference]
 
 # Twake node
 
-Use the Twake node to automate work in Twake, and integrate Twake with other applications. n8n supports sending messages with Twake.
+ใช้ Twake node เพื่อช่วยให้งานใน Twake เป็นอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันอื่น ๆ โดย n8n รองรับการส่งข้อความด้วย Twake
 
-On this page, you'll find a list of operations the Twake node supports and links to more resources.
-
-/// note | Credentials
-Refer to [Twake credentials](/integrations/builtin/credentials/twake.md) for guidance on setting up authentication. 
-///
+ดู [Twake credentials](/integrations/builtin/credentials/twake.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 
 ## Operations
 

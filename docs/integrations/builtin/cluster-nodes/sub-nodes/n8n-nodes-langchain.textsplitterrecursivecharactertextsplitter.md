@@ -8,16 +8,16 @@ priority: medium
 
 # Recursive Character Text Splitter node
 
-The Recursive Character Text Splitter node splits document data recursively to keep all paragraphs, sentences then words together as long as possible.
+Recursive Character Text Splitter node จะช่วยแยกข้อมูลเอกสารแบบ recursive โดยพยายามคง paragraph, sentence และ word ไว้ด้วยกันให้นานที่สุด
 
-On this page, you'll find the node parameters for the Recursive Character Text Splitter node, and links to more resources.
+ในหน้านี้จะมี parameter ของ node Recursive Character Text Splitter และลิงก์ resource อื่นๆ ที่เกี่ยวข้อง
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node parameters
 
-* **Chunk Size**: Enter the number of characters in each chunk.
-* **Chunk Overlap**: Enter how much overlap to have between chunks.
+* **Chunk Size**: ใส่จำนวนตัวอักษรในแต่ละ chunk
+* **Chunk Overlap**: ใส่จำนวนตัวอักษรที่ chunk จะซ้อนทับกัน
 
 ## Templates and examples
 
@@ -26,7 +26,7 @@ On this page, you'll find the node parameters for the Recursive Character Text S
 
 ## Related resources
 
-Refer to [LangChain's text splitter documentation](https://js.langchain.com/docs/concepts/text_splitters){:target=_blank .external-link} and [LangChain's recursively split by character documentation](https://v03.api.js.langchain.com/classes/langchain.text_splitter.RecursiveCharacterTextSplitter.html){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมได้ที่ [LangChain's text splitter documentation](https://js.langchain.com/docs/concepts/text_splitters){:target=_blank .external-link} และ [LangChain's recursively split by character documentation](https://v03.api.js.langchain.com/classes/langchain.text_splitter.RecursiveCharacterTextSplitter.html){:target=_blank .external-link}
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

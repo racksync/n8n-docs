@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Webflow node
 
-Use the Webflow node to automate work in Webflow, and integrate Webflow with other applications. n8n has built-in support for a wide range of Webflow features, including creating, updating, deleting, and getting items. 
+ใช้ Webflow node ในการทำงานอัตโนมัติใน Webflow และเชื่อมต่อ Webflow กับแอปพลิเคชันอื่น ๆ. n8n รองรับฟีเจอร์ของ Webflow หลากหลาย เช่น การสร้าง, การอัปเดต, การลบ และการดึงข้อมูล items.
 
-On this page, you'll find a list of operations the Webflow node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการของ operations ที่ Webflow node รองรับและลิงก์ไปยัง resource เพิ่มเติม.
 
 /// note | Credentials
-Refer to [Webflow credentials](/integrations/builtin/credentials/webflow.md) for guidance on setting up authentication. 
+ดู [Webflow credentials](/integrations/builtin/credentials/webflow.md) สำหรับคำแนะนำในการตั้งค่า authentication. 
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

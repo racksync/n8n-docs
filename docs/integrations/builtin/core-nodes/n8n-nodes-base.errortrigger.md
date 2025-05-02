@@ -8,18 +8,17 @@ priority: medium
 
 # Error Trigger node
 
-You can use the Error Trigger node to create error workflows. When another linked workflow fails, this node gets details about the failed workflow and the errors, and runs the error workflow.
+ใช้ Error Trigger node เพื่อสร้าง error workflow เมื่อ workflow อื่นที่เชื่อมโยงกันเกิด error node นี้จะรับข้อมูล workflow ที่ error และ error details แล้วรัน error workflow
 
 ## Usage
 
 --8<-- "_snippets/flow-logic/create-set-error-workflow.md"
 
+หมายเหตุ:
 
-Note the following:
-
-* If a workflow uses the Error Trigger node, you don't have to activate the workflow.
-* If a workflow contains the Error Trigger node, by default, the workflow uses itself as the error workflow.
-* You can't test error workflows when running workflows manually. The Error Trigger only runs when an automatic workflow errors.
+* ถ้า workflow ใช้ Error Trigger node ไม่ต้อง activate workflow
+* ถ้า workflow มี Error Trigger node โดย default workflow จะใช้ตัวเองเป็น error workflow
+* ไม่สามารถทดสอบ error workflow ได้ตอนรัน workflow แบบ manual Error Trigger จะทำงานเฉพาะตอน workflow อัตโนมัติ error
 
 ## Templates and examples
 
@@ -28,9 +27,9 @@ Note the following:
 
 ## Related resources
 
-You can use the [Stop And Error](/integrations/builtin/core-nodes/n8n-nodes-base.stopanderror.md) node to send custom messages to the Error Trigger.
+สามารถใช้ [Stop And Error](/integrations/builtin/core-nodes/n8n-nodes-base.stopanderror.md) node เพื่อส่ง custom message ไปยัง Error Trigger ได้
 
-Read more about [Error workflows](/flow-logic/error-handling.md) in n8n workflows. 
+อ่านเพิ่มเติมเกี่ยวกับ [Error workflows](/flow-logic/error-handling.md) ใน workflow ของ n8n
 
 ## Error data
 

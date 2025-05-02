@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # AWS SES node
 
-Use the AWS SES node to automate work in AWS SES, and integrate AWS SES with other applications. n8n has built-in support for a wide range of AWS SES features, including creating, getting, deleting, sending, updating, and adding templates and emails.
+ใช้ AWS SES node เพื่อทำงานอัตโนมัติใน AWS SES และผสานรวม AWS SES กับแอปพลิเคชันอื่นๆ n8n มีการรองรับฟีเจอร์หลากหลายของ AWS SES ในตัว รวมถึงการสร้าง, การดึงข้อมูล, การลบ, การส่ง, การอัปเดต, และการเพิ่ม templates และ emails
 
-On this page, you'll find a list of operations the AWS SES node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ AWS SES node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [AWS SES credentials](/integrations/builtin/credentials/aws.md) for guidance on setting up authentication. 
+อ้างอิง [AWS SES credentials](/integrations/builtin/credentials/aws.md) สำหรับคำแนะนำในการตั้งค่าการยืนยันตัวตน
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

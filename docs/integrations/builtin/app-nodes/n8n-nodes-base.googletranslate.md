@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Google Translate node
 
-Use the Google Translate node to automate work in Google Translate, and integrate Google Translate with other applications. n8n has built-in support for a wide range of Google Translate features, including translating languages.
+ใช้ Google Translate node เพื่อทำงานอัตโนมัติใน Google Translate และเชื่อมต่อ Google Translate กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Google Translate หลายอย่าง เช่น การแปลภาษา
 
-On this page, you'll find a list of operations the Google Translate node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Google Translate node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Google Translate credentials](/integrations/builtin/credentials/google/index.md) for guidance on setting up authentication. 
+โปรดดู [Google Translate credentials](/integrations/builtin/credentials/google/index.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

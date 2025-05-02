@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Hunter node
 
-Use the Hunter node to automate work in Hunter, and integrate Hunter with other applications. n8n has built-in support for a wide range of Hunter features, including getting, generating, and verifying email addresses. 
+ใช้ Hunter node เพื่อทำงานอัตโนมัติใน Hunter และเชื่อมต่อ Hunter กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Hunter หลายอย่าง เช่น การดึงข้อมูล สร้าง และตรวจสอบ email addresses
 
-On this page, you'll find a list of operations the Hunter node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Hunter node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Hunter credentials](/integrations/builtin/credentials/hunter.md) for guidance on setting up authentication. 
+โปรดดู [Hunter credentials](/integrations/builtin/credentials/hunter.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations

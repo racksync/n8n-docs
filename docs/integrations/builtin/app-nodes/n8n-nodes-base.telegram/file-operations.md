@@ -8,20 +8,20 @@ priority: critical
 
 # Telegram node File operations
 
-Use this operation to get a file from Telegram. Refer to [Telegram](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/index.md) for more information on the Telegram node itself.
+ใช้ operation นี้เพื่อดึงไฟล์จาก Telegram ดูรายละเอียดเพิ่มเติมเกี่ยวกับ Telegram node ได้ที่ [Telegram](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/index.md)
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Get File
 
-Use this operation to get a file from Telegram using the Bot API [getFile](https://core.telegram.org/bots/api#getfile){:target=_blank .external-link} method.
+ใช้ operation นี้เพื่อดึงไฟล์จาก Telegram ผ่าน Bot API [getFile](https://core.telegram.org/bots/api#getfile){:target=_blank .external-link}
 
-Enter these parameters:
+ป้อนพารามิเตอร์เหล่านี้:
 
-* **Credential to connect with**: Create or select an existing [Telegram credential](/integrations/builtin/credentials/telegram.md).
-* **Resource**: Select **File**.
-* **Operation**: Select **Get**.
-* **File ID**: Enter the ID of the file you want to get.
-* **Download**: Choose whether you want the node to download the file (turned on) or not (turned off).
+* **Credential to connect with**: สร้างหรือเลือก [Telegram credential](/integrations/builtin/credentials/telegram.md) ที่มีอยู่
+* **Resource**: เลือก **File**
+* **Operation**: เลือก **Get**
+* **File ID**: ใส่ ID ของไฟล์ที่ต้องการดึง
+* **Download**: เลือกว่าจะให้ node ดาวน์โหลดไฟล์ให้อัตโนมัติ (เปิด) หรือไม่ (ปิด)
 
-Refer to the Telegram Bot API [getFile](https://core.telegram.org/bots/api#getfile){:target=_blank .external-link} documentation for more information.
+ดูเอกสาร Bot API [getFile](https://core.telegram.org/bots/api#getfile){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม

@@ -7,12 +7,10 @@ contentType: [integration, reference]
 
 # SecurityScorecard node
 
-Use the SecurityScorecard node to automate work in SecurityScorecard, and integrate SecurityScorecard with other applications. n8n has built-in support for a wide range of SecurityScorecard features, including creating, updating, deleting, and getting portfolio, as well as getting a company's data.
-
-On this page, you'll find a list of operations the SecurityScorecard node supports and links to more resources.
+ใช้ SecurityScorecard node เพื่อให้การทำงานใน SecurityScorecard เป็นไปโดยอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันอื่น ๆ ได้อย่างมีประสิทธิภาพ. n8n รองรับฟีเจอร์ของ SecurityScorecard หลากหลาย เช่น การสร้าง, อัปเดต, ลบ, และดึงข้อมูล portfolio รวมถึงการดึงข้อมูลของบริษัท.
 
 /// note | Credentials
-Refer to [SecurityScorecard credentials](/integrations/builtin/credentials/securityscorecard.md) for guidance on setting up authentication. 
+ดู [SecurityScorecard credentials](/integrations/builtin/credentials/securityscorecard.md) สำหรับคำแนะนำในการตั้งค่า authentication. 
 ///
 
 ## Operations

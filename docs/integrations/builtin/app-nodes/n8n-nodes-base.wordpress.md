@@ -8,12 +8,12 @@ priority: medium
 
 # WordPress node
 
-Use the WordPress node to automate work in WordPress, and integrate WordPress with other applications. n8n has built-in support for a wide range of WordPress features, including creating, updating, and getting posts and users.
+ใช้ WordPress node ในการทำงานอัตโนมัติใน WordPress และเชื่อมต่อ WordPress กับแอปพลิเคชันอื่น ๆ. n8n รองรับฟีเจอร์ต่าง ๆ ของ WordPress เช่น การสร้าง, การอัปเดต และการดึงข้อมูล posts และ users.
 
-On this page, you'll find a list of operations the WordPress node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการของ operations ที่ WordPress node รองรับและลิงก์ไปยัง resource เพิ่มเติม.
 
 /// note | Credentials
-Refer to [WordPress credentials](/integrations/builtin/credentials/wordpress.md) for guidance on setting up authentication. 
+ดู [WordPress credentials](/integrations/builtin/credentials/wordpress.md) สำหรับคำแนะนำในการตั้งค่า authentication. 
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

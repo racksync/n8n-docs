@@ -1,172 +1,172 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Wait
-description: Documentation for the Wait node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+description: เอกสารสำหรับ Wait node ใน n8n แพลตฟอร์ม workflow automation รวมคำแนะนำการใช้งานและลิงก์ไปยังตัวอย่าง
 contentType: [integration, reference]
 priority: critical
 ---
 
 # Wait
 
-Use the Wait node pause your workflow's execution. When the workflow pauses it offloads the execution data to the database. When the resume condition is met, the workflow reloads the data and the execution continues.
+ใช้ Wait node เพื่อหยุดการทำงานของ workflow ชั่วคราว เมื่อ workflow หยุดชั่วคราว ข้อมูล execution จะถูก offload ไปที่ database และเมื่อเงื่อนไข resume ตรงตามที่ตั้งไว้ workflow จะโหลดข้อมูลกลับมาแล้วทำงานต่อ
 
 ## Operations
 
-The Wait node can **Resume** on the following conditions:
+Wait node สามารถ **Resume** ได้ตามเงื่อนไขเหล่านี้:
 
-* [**After Time Interval**](#after-time-interval): The node waits for a certain amount of time.
-* [**At Specified Time**](#at-specified-time): The node waits until a specific time.
-* [**On Webhook Call**](#on-webhook-call): The node waits until it receives an HTTP call.
-* [**On Form Submitted**](#on-form-submitted): The node waits until it receives a form submission.
+* [**After Time Interval**](#after-time-interval): รอเป็นระยะเวลาที่กำหนด
+* [**At Specified Time**](#at-specified-time): รอจนถึงเวลาที่กำหนด
+* [**On Webhook Call**](#on-webhook-call): รอจนกว่าจะได้รับ HTTP call
+* [**On Form Submitted**](#on-form-submitted): รอจนกว่าจะได้รับการส่งฟอร์ม
 
-Refer to the more detailed sections below for more detailed instructions.
+ดูรายละเอียดแต่ละแบบได้ในหัวข้อด้านล่าง
 
 ### After Time Interval
 
-Wait for a certain amount of time.
+รอเป็นระยะเวลาที่กำหนด
 
-This parameter includes two more fields:
+parameter นี้จะมี 2 field เพิ่มเติม:
 
-* **Wait Amount**: Enter the amount of time to wait.
-* **Wait Unit**: Select the unit of measure for the **Wait Amount**. Choose from:
+* **Wait Amount**: ใส่จำนวนเวลาที่ต้องการรอ
+* **Wait Unit**: เลือกหน่วยของ **Wait Amount** มีให้เลือก:
 	* **Seconds**
 	* **Minutes**
 	* **Hours**
 	* **Days**
 
-Refer to [Time-based operations](#time-based-operations) for more detail on how these intervals work and the timezone used.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับ [Time-based operations](#time-based-operations) ว่า interval ทำงานอย่างไรและใช้ timezone อะไร
 
 ### At Specified Time
 
-Wait until a specific date and time to continue. Use the date and time picker to set the **Date and Time**.
+รอจนถึงวันที่และเวลาที่กำหนด ใช้ date และ time picker เพื่อเลือก **Date and Time**
 
-Refer to [Time-based operations](#time-based-operations) for more detail on the timezone used.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับ timezone ได้ที่ [Time-based operations](#time-based-operations)
 
 ### On Webhook Call
 
-This parameter enables your workflows to resume when the Wait node receives an HTTP call.
+parameter นี้ช่วยให้ workflow resume ได้เมื่อ Wait node ได้รับ HTTP call
 
-The webhook URL that resumes the execution when called is generated at runtime. The Wait node provides the `$execution.resumeUrl` variable so that you can reference and send the yet-to-be-generated URL wherever needed, for example to a third-party service or in an email. 
+Webhook URL ที่จะ resume execution จะถูกสร้างขึ้นตอน runtime Wait node จะให้ตัวแปร `$execution.resumeUrl` เพื่อให้คุณนำไปใช้หรือส่งต่อ URL ที่จะถูกสร้างนี้ไปยังที่อื่น เช่น ส่งให้ third-party หรือในอีเมล
 
-When the workflow executes, the Wait node generates the resume URL and the webhook(s) in your workflow using the `$execution.resumeUrl`. This generated URL is unique to each execution, so your workflow can contain multiple Wait nodes and as the webhook URL is called it will resume each Wait node sequentially.
+เมื่อ workflow ทำงาน Wait node จะสร้าง resume URL และ webhook ใน workflow โดยใช้ `$execution.resumeUrl` URL ที่สร้างนี้จะ unique สำหรับแต่ละ execution ดังนั้น workflow สามารถมี Wait node หลายตัว และเมื่อ webhook ถูกเรียกแต่ละตัวก็จะ resume ตามลำดับ
 
-For this **Resume** style, set more parameters listed below.
+สำหรับ **Resume** แบบนี้ ให้ตั้งค่า parameters เพิ่มเติมดังนี้
 
 #### Authentication
 
-Select if and how incoming resume-webhook-requests to `$execution.resumeUrl` should be authenticated. Options include:
+เลือกว่าจะให้ request ที่เข้ามา resume webhook ที่ `$execution.resumeUrl` ต้อง authenticate หรือไม่ ตัวเลือกมี:
 
-* **Basic Auth**: Use basic authentication. Select or enter a new **Credential for Basic Auth** to use.
-* **Header Auth**: Use header authentication. Select or enter a new **Credential for Header Auth** to use.
-* **JWT Auth**: Use JWT authentication. Select or enter a new **Credential for JWT Auth** to use.
-* **None**: Don't use authentication.
+* **Basic Auth**: ใช้ basic authentication เลือกหรือสร้าง **Credential for Basic Auth**
+* **Header Auth**: ใช้ header authentication เลือกหรือสร้าง **Credential for Header Auth**
+* **JWT Auth**: ใช้ JWT authentication เลือกหรือสร้าง **Credential for JWT Auth**
+* **None**: ไม่ต้องใช้ authentication
 
 /// note | Auth reference
-Refer to the [Webhook node | Authentication documentation](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md#supported-authentication-methods) for more information on each auth type.
+ดูรายละเอียดแต่ละ auth type ได้ที่ [Webhook node | Authentication documentation](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md#supported-authentication-methods)
 ///
 
 #### HTTP Method
 
-Select the HTTP method the webhook should use. Refer to the [Webhook node | HTTP Method documentation](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md#http-method) for more information.
+เลือก HTTP method ที่ webhook จะใช้ ดูรายละเอียดได้ที่ [Webhook node | HTTP Method documentation](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md#http-method)
 
 #### Response Code
 
-Enter the Response Code the webhook should return. You can use common codes or enter a custom code.
+ใส่ Response Code ที่ webhook จะ return สามารถใช้ code ทั่วไปหรือกำหนดเองก็ได้
 
 #### Respond
 
-Set when and how to respond to the webhook from these options:
+ตั้งค่าว่าจะตอบกลับ webhook เมื่อไหร่และอย่างไร มีตัวเลือกดังนี้:
 
-* **Immediately**: Respond as soon as the node executes.
-* **When Last Node Finishes**: Return the response code and the data output from the last node executed in the workflow. If you select this option, also set:
-	* **Response Data**: Select what data should be returned and what format to use. Options include:
-		* **All Entries**: Returns all the entries of the last node in an array.
-		* **First Entry JSON**: Return the JSON data of the first entry of the last node in a JSON object.
-		* **First Entry Binary**: Return the binary data of the first entry of the last node in a binary file.
-		* **No Response Body**: Return with no body.
-* **Using 'Respond to Webhook' Node**: Respond as defined in the [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook.md) node.
+* **Immediately**: ตอบกลับทันทีที่ node ทำงาน
+* **When Last Node Finishes**: ตอบกลับด้วย response code และข้อมูล output ของ node สุดท้ายใน workflow ถ้าเลือกตัวเลือกนี้ ให้ตั้งค่าเพิ่ม:
+	* **Response Data**: เลือกข้อมูลและรูปแบบที่จะ return มีตัวเลือก:
+		* **All Entries**: ส่งข้อมูลทั้งหมดของ node สุดท้ายใน array
+		* **First Entry JSON**: ส่งข้อมูล JSON ของ entry แรกของ node สุดท้ายในรูปแบบ object
+		* **First Entry Binary**: ส่งข้อมูล binary ของ entry แรกของ node สุดท้ายเป็นไฟล์
+		* **No Response Body**: ตอบกลับโดยไม่มี body
+* **Using 'Respond to Webhook' Node**: ตอบกลับตามที่ตั้งค่าไว้ใน [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook.md) node
 
 #### Limit Wait Time
 
-Set whether the workflow will automatically resume execution after a specific limit type (turned on) or not (turned off). If turned on, also set:
+ตั้งค่าว่า workflow จะ resume อัตโนมัติหลังจากถึง limit ที่กำหนดหรือไม่ (เปิด/ปิด) ถ้าเปิด ให้ตั้งค่าเพิ่ม:
 
-* **Limit Type**: Select what type of limit to enforce from these options:
-	* **After Time Interval**: Wait for a certain amount of time.
-		* Enter the limit's **Amount** of time.
-		* Select the limit's **Unit** of time.
-	* **At Specified Time**: Wait until a specific date and time to resume.
-		* **Max Date and Time**: Use the date and time picker to set the specified time the node should resume.
+* **Limit Type**: เลือกประเภท limit ที่ต้องการ มีตัวเลือก:
+	* **After Time Interval**: รอเป็นระยะเวลาที่กำหนด
+		* ใส่ **Amount** ของเวลาที่ต้องการ
+		* เลือก **Unit** ของเวลา
+	* **At Specified Time**: รอจนถึงวันที่และเวลาที่กำหนด
+		* **Max Date and Time**: ใช้ date และ time picker เพื่อเลือกเวลาที่ node จะ resume
 
 #### On Webhook Call options
 
-* **Binary Property**: Enter the name of the binary property to write the data of the received file to. This option's only relevant if binary data is received.
-* **Ignore Bots**: Set whether to ignore requests from bots like link previewers and web crawlers (turned on) or not (turned off).
-* **IP(s) Whitelist**: Enter IP addresses here to limit who (or what) can invoke the webhook URL. Enter a comma-separated list of allowed IP addresses. Access from IPs outside the whitelist throws a 403 error. If left blank, all IP addresses can invoke the webhook URL.
-* **No Response Body**: Set whether n8n should send a body in the response (turned off) or prevent n8n from sending a body in the response (turned on).
-* **Raw Body**: Set whether to return the body in a raw format like JSON or XML (turned on) or not (turned off).
-* **Response Data**: Enter any custom data you want to send in the response.
-* **Response Headers**: Send more headers in the webhook response. Refer to [MDN Web Docs | Response header](https://developer.mozilla.org/en-US/docs/Glossary/Response_header){:target=_blank .external-link} to learn more about response headers.
-* **Webhook Suffix**: Enter a suffix to append to the resume URL. This is useful for creating unique webhook URLs for each Wait node when a workflow contains multiple Wait nodes. Note that the generated `$resumeWebhookUrl` won't automatically include this suffix, you must manually append it to the webhook URL before exposing it.
+* **Binary Property**: ใส่ชื่อ property ที่จะเก็บข้อมูล binary ที่ได้รับมา ใช้เฉพาะกรณีรับ binary data
+* **Ignore Bots**: ตั้งค่าว่าจะ ignore request จาก bot เช่น link previewer หรือ web crawler หรือไม่ (เปิด/ปิด)
+* **IP(s) Whitelist**: ใส่ IP address ที่อนุญาตให้เรียก webhook ได้ ใส่หลาย IP คั่นด้วย comma ถ้าเว้นว่างไว้ ทุก IP จะเรียกได้ ถ้า IP ไม่อยู่ใน whitelist จะได้ error 403
+* **No Response Body**: ตั้งค่าว่า n8n จะส่ง body ใน response หรือไม่ (ปิด = ส่ง, เปิด = ไม่ส่ง)
+* **Raw Body**: ตั้งค่าว่าจะ return body ในรูปแบบ raw เช่น JSON หรือ XML หรือไม่ (เปิด/ปิด)
+* **Response Data**: ใส่ข้อมูล custom ที่ต้องการส่งกลับใน response
+* **Response Headers**: ใส่ header เพิ่มเติมใน webhook response ดูรายละเอียด header ได้ที่ [MDN Web Docs | Response header](https://developer.mozilla.org/en-US/docs/Glossary/Response_header){:target=_blank .external-link}
+* **Webhook Suffix**: ใส่ suffix ที่จะต่อท้าย resume URL ใช้สำหรับสร้าง webhook URL ที่ unique สำหรับแต่ละ Wait node ใน workflow ที่มีหลาย Wait node หมายเหตุ: `$resumeWebhookUrl` ที่สร้างจะยังไม่รวม suffix นี้ ต้องต่อเองก่อนนำไปใช้
 
 #### On Webhook Call limitations
 
-There are some limitations to keep in mind when using On Webhook Call:
+ข้อจำกัดที่ควรทราบเมื่อใช้ On Webhook Call:
 
-* Partial executions of your workflow changes the `$resumeWebhookUrl`, so be sure that the node sending this URL to your desired third-party runs in the same execution as the Wait node.
+* ถ้า workflow ถูก execute แบบ partial ค่า `$resumeWebhookUrl` จะเปลี่ยน ดังนั้นต้องแน่ใจว่า node ที่ส่ง URL นี้ไปยัง third-party ต้องทำงานใน execution เดียวกับ Wait node
 
 ### On Form Submitted
 
-Wait for a form submission before continuing. Set up these parameters:
+รอจนกว่าจะมีการส่งฟอร์มก่อนจะทำงานต่อ ตั้งค่าดังนี้:
 
 #### Form Title
 
-Enter the title to display at the top of the form.
+ใส่หัวข้อที่จะแสดงด้านบนของฟอร์ม
 
 #### Form Description
 
-Enter a form description to display beneath the title. This description can help prompt the user on how to complete the form.
+ใส่คำอธิบายฟอร์มที่จะแสดงใต้หัวข้อ ใช้เพื่ออธิบายหรือแนะนำการกรอกฟอร์ม
 
 #### Form Fields
 
-Set up each field you want to appear on your form using these parameters:
+ตั้งค่าฟิลด์แต่ละอันที่จะให้แสดงในฟอร์มโดยใช้ parameters เหล่านี้:
 
-* **Field Label**: Enter the field label you want to appear in the form.
-* **Field Type**: Select the type of field to display in the form. Choose from:
+* **Field Label**: ใส่ label ที่ต้องการให้แสดงในฟอร์ม
+* **Field Type**: เลือกประเภทฟิลด์ที่ต้องการ มีให้เลือก:
 	* **Date**
-	* **Dropdown List**: Enter each dropdown options in the **Field Options**.
-		* **Multiple Choice**: Select whether the user can select a single dropdown option (turned off) or multiple dropdown options (turned on)
+	* **Dropdown List**: ใส่ตัวเลือก dropdown ใน **Field Options**
+		* **Multiple Choice**: เลือกว่าจะให้เลือกได้หลายตัว (เปิด) หรือเลือกได้ตัวเดียว (ปิด)
 	* **Number**
 	* **Password**
 	* **Text**
 	* **Textarea**
-* **Required Field**: Set whether the user must complete this field in order to submit the form (turned on) or if the user can submit the form without completing it (turned off).
+* **Required Field**: ตั้งค่าว่าต้องกรอกฟิลด์นี้ก่อนส่งฟอร์มหรือไม่ (เปิด/ปิด)
 
 #### Respond When
 
-Set when to respond to the form submission. Choose from:
+ตั้งค่าว่าจะตอบกลับเมื่อไหร่ มีตัวเลือก:
 
-* **Form Is Submitted**: Respond as soon as this node receives the form submission.
-* **Workflow Finishes**: Respond when the last node of this workflow finishes.
-* **Using 'Respond to Webhook' Node**: Respond when the [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook.md) node executes.
+* **Form Is Submitted**: ตอบกลับทันทีที่ได้รับการส่งฟอร์ม
+* **Workflow Finishes**: ตอบกลับเมื่อ node สุดท้ายของ workflow ทำงานเสร็จ
+* **Using 'Respond to Webhook' Node**: ตอบกลับเมื่อ [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook.md) node ทำงาน
 
 #### Limit Wait Time
 
-Set whether the workflow will automatically resume execution after a specific limit type (turned on) or not (turned off).
+ตั้งค่าว่า workflow จะ resume อัตโนมัติหลังจากถึง limit ที่กำหนดหรือไม่ (เปิด/ปิด)
 
-If turned on, also set:
-* **Limit Type**: Select what type of limit to enforce from these options:
-	* **After Time Interval**: Wait for a certain amount of time.
-		* Enter the limit's **Amount** of time.
-		* Select the limit's **Unit** of time.
-	* **At Specified Time**: Wait until a specific date and time to resume.
-		* **Max Date and Time**: Use the date and time picker to set the specified time the node should resume.
+ถ้าเปิด ให้ตั้งค่าเพิ่ม:
+* **Limit Type**: เลือกประเภท limit ที่ต้องการ มีตัวเลือก:
+	* **After Time Interval**: รอเป็นระยะเวลาที่กำหนด
+		* ใส่ **Amount** ของเวลาที่ต้องการ
+		* เลือก **Unit** ของเวลา
+	* **At Specified Time**: รอจนถึงวันที่และเวลาที่กำหนด
+		* **Max Date and Time**: ใช้ date และ time picker เพื่อเลือกเวลาที่ node จะ resume
 
 #### On Form Response options
 
-* **Form Response**: Choose how and what you want the form to **Respond With** from these options:
-	* **Form Submitted Text**: The form displays whatever text is entered in **Text to Show** after a user fills out the form. Use this option if you want to display a confirmation message.
-	* **Redirect URL**: The form will redirect the user to the **URL to Redirect to** after they fill out the form. This must be a valid URL.
-* **Webhook Suffix**: Enter a suffix to append to the resume URL. This is useful for creating unique webhook URLs for each Wait node when a workflow contains multiple Wait nodes. Note that the generated `$resumeWebhookUrl` won't automatically include this suffix, you must manually append it to the webhook URL before exposing it.
+* **Form Response**: เลือกวิธีและสิ่งที่ต้องการให้ฟอร์มตอบกลับ มีตัวเลือก:
+	* **Form Submitted Text**: ฟอร์มจะแสดงข้อความที่ใส่ใน **Text to Show** หลังจากผู้ใช้ส่งฟอร์ม ใช้สำหรับแสดงข้อความยืนยัน
+	* **Redirect URL**: ฟอร์มจะ redirect ผู้ใช้ไปยัง **URL to Redirect to** หลังจากส่งฟอร์ม ต้องเป็น URL ที่ถูกต้อง
+* **Webhook Suffix**: ใส่ suffix ที่จะต่อท้าย resume URL ใช้สำหรับสร้าง webhook URL ที่ unique สำหรับแต่ละ Wait node ใน workflow ที่มีหลาย Wait node หมายเหตุ: `$resumeWebhookUrl` ที่สร้างจะยังไม่รวม suffix นี้ ต้องต่อเองก่อนนำไปใช้
 
 ## Templates and examples
 
@@ -175,7 +175,7 @@ If turned on, also set:
 
 ## Time-based operations
 
-For the time-based resume operations, note that:
+สำหรับการ resume แบบใช้เวลา ให้ทราบว่า:
 
-* For wait times less than 65 seconds, the workflow doesn't offload execution data to the database. Instead, the process continues to run and the execution resumes after the specified interval passes.
-* The n8n server time is always used regardless of the timezone setting. Workflow timezone settings, and any changes made to them, don't affect the Wait node interval or specified time. 
+* ถ้าระยะเวลารอไม่ถึง 65 วินาที workflow จะไม่ offload ข้อมูล execution ไปที่ database แต่ process จะยังรันอยู่และ resume หลังจากครบเวลาที่กำหนด
+* n8n จะใช้เวลาของ server เสมอ ไม่ว่าจะตั้ง timezone workflow ไว้อย่างไร หรือเปลี่ยน timezone ก็ไม่มีผลกับ Wait node

@@ -1,18 +1,18 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Google Slides node documentation
-description: Learn how to use the Google Slides node in n8n. Follow technical documentation to integrate Google Slides node into your workflows.
+description: เรียนรู้วิธีการใช้ Google Slides node ใน n8n ทำตามเอกสารทางเทคนิคเพื่อรวม Google Slides node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 ---
 
 # Google Slides node
 
-Use the Google Slides node to automate work in Google Slides, and integrate Google Slides with other applications. n8n has built-in support for a wide range of Google Slides features, including creating presentations, and getting pages. 
+ใช้ Google Slides node เพื่อทำงานอัตโนมัติใน Google Slides และเชื่อมต่อ Google Slides กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Google Slides หลายอย่าง เช่น การสร้าง presentations และดึงข้อมูล pages
 
-On this page, you'll find a list of operations the Google Slides node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Google Slides node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Google credentials](/integrations/builtin/credentials/google/index.md) for guidance on setting up authentication. 
+โปรดดู [Google credentials](/integrations/builtin/credentials/google/index.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

@@ -8,12 +8,12 @@ priority: medium
 
 # Hacker News node
 
-Use the Hacker News node to automate work in Hacker News, and integrate Hacker News with other applications. n8n has built-in support for a wide range of Hacker News features, including getting articles, and users. 
+ใช้ Hacker News node เพื่อทำงานอัตโนมัติใน Hacker News และเชื่อมต่อ Hacker News กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Hacker News หลายอย่าง เช่น การดึงข้อมูล articles และ users
 
-On this page, you'll find a list of operations the Hacker News node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Hacker News node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-This node doesn't require authentication. 
+node นี้ไม่ต้องใช้การยืนยันตัวตน
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

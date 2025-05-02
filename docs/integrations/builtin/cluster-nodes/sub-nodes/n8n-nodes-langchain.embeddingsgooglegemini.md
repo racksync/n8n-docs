@@ -8,21 +8,21 @@ priority: medium
 
 # Embeddings Google Gemini node
 
-Use the Embeddings Google Gemini node to generate [embeddings](/glossary.md#ai-embedding) for a given text.
+ใช้ Embeddings Google Gemini node เพื่อสร้าง [embeddings](/glossary.md#ai-embedding) สำหรับข้อความที่กำหนด
 
-On this page, you'll find the node parameters for the Embeddings Google Gemini node, and links to more resources.
+ในหน้านี้ คุณจะพบพารามิเตอร์ของโหนดสำหรับ Embeddings Google Gemini node และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/googleai.md).
+คุณสามารถดูข้อมูลการยืนยันตัวตนสำหรับโหนดนี้ได้ [ที่นี่](/integrations/builtin/credentials/googleai.md)
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node parameters
 
-* **Model**: Select the model to use to generate the embedding.
+* **Model**: เลือกรุ่น (model) ที่จะใช้สร้าง embedding
 
-Learn more about available models in [Google Gemini's models documentation](https://ai.google.dev/models/gemini){:target=_blank .external-link}.
+เรียนรู้เพิ่มเติมเกี่ยวกับรุ่นที่มีให้ใช้งานใน [เอกสารประกอบ models ของ Google Gemini](https://ai.google.dev/models/gemini){:target=_blank .external-link}
 
 ## Templates and examples
 
@@ -31,7 +31,7 @@ Learn more about available models in [Google Gemini's models documentation](http
 
 ## Related resources
 
-Refer to [Langchain's Google Generative AI embeddings documentation](https://js.langchain.com/docs/integrations/text_embedding/google_generativeai){:target=_blank .external-link} for more information about the service.
+อ้างอิง [เอกสารประกอบ Google Generative AI embeddings ของ Langchain](https://js.langchain.com/docs/integrations/text_embedding/google_generativeai){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

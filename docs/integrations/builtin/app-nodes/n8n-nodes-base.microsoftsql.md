@@ -8,12 +8,12 @@ priority: medium
 
 # Microsoft SQL node
 
-Use the Microsoft SQL node to automate work in Microsoft SQL, and integrate Microsoft SQL with other applications. n8n has built-in support for a wide range of Microsoft SQL features, including executing SQL queries, and inserting rows into the database. 
+ใช้ Microsoft SQL node ในการทำงานอัตโนมัติใน Microsoft SQL และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ โดย n8n รองรับการ execute SQL queries และการ insert, update, delete rows ในฐานข้อมูล.
 
-On this page, you'll find a list of operations the Microsoft SQL node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Microsoft SQL node รองรับและลิงก์ไปยังข้อมูลเพิ่มเติม.
 
 /// note | Credentials
-Refer to [Microsoft SQL credentials](/integrations/builtin/credentials/microsoftsql.md) for guidance on setting up authentication. 
+ดู [Microsoft SQL credentials](/integrations/builtin/credentials/microsoftsql.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

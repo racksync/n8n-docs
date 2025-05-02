@@ -8,23 +8,24 @@ priority: critical
 
 # Telegram node Chat operations
 
-Use these operations to get information about chats, members, administrators, leave chat, and set chat titles and descriptions. Refer to [Telegram](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/index.md) for more information on the Telegram node itself.
+ใช้ operations เหล่านี้เพื่อดึงข้อมูล chat, members, administrators, ออกจาก chat, และตั้ง title/description ของ chat  
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับ Telegram node ได้ที่ [Telegram](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/index.md)
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Get Chat
 
-Use this operation to get up to date information about a chat using the Bot API [getChat](https://core.telegram.org/bots/api#getchat){:target=_blank .external-link} method.
+ใช้ operation นี้เพื่อดึงข้อมูลล่าสุดของ chat ผ่าน Bot API [getChat](https://core.telegram.org/bots/api#getchat){:target=_blank .external-link}
 
-Enter these parameters:
+ป้อนพารามิเตอร์เหล่านี้:
 
-* **Credential to connect with**: Create or select an existing [Telegram credential](/integrations/builtin/credentials/telegram.md).
-* **Resource**: Select **Chat**.
-* **Operation**: Select **Get**.
-* **Chat ID**: Enter the Chat ID or username of the target channel in the format `@channelusername`.
-    * To feed a Chat ID directly into this node, use the [Telegram Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/index.md) node. Refer to [Common Issues | Get the Chat ID](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/common-issues.md#get-the-chat-id) for more information.
+* **Credential to connect with**: สร้างหรือเลือก [Telegram credential](/integrations/builtin/credentials/telegram.md)  
+* **Resource**: เลือก **Chat**  
+* **Operation**: เลือก **Get**  
+* **Chat ID**: ใส่ Chat ID หรือ username ของ channel ในรูปแบบ `@channelusername`  
+    * หากต้องการส่ง Chat ID โดยตรง ให้ใช้ [Telegram Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/index.md) แล้วดู [Common Issues | Get the Chat ID](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/common-issues.md#get-the-chat-id)  
 
-Refer to the Telegram Bot API [getChat](https://core.telegram.org/bots/api#getchat){:target=_blank .external-link} documentation for more information.
+ดูเอกสาร Bot API [getChat](https://core.telegram.org/bots/api#getchat){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 
 ## Get Administrators
 

@@ -8,41 +8,41 @@ priority: high
 
 # Aggregate
 
-Use the Aggregate node to take separate items, or portions of them, and group them together into individual items.
+ใช้ Aggregate node เพื่อรวม item หลายๆ อัน หรือบางส่วนของ item เข้าด้วยกันเป็น item เดียว
 
 ## Node parameters
 
-To begin using the node, select the **Aggregate** you'd like to use:
+เริ่มต้นใช้งาน node นี้ ให้เลือก **Aggregate** ที่ต้องการใช้:
 
-* [**Individual Fields**](#individual-fields): Aggregate individual fields separately.
-* [**All Item Data**](#all-item-data): Aggregate all item data into a single list.
+* [**Individual Fields**](#individual-fields): รวม field ทีละอันแยกกัน
+* [**All Item Data**](#all-item-data): รวมข้อมูลทั้งหมดของ item เข้าเป็น list เดียว
 
 ### Individual Fields
 
-* **Input Field Name**: Enter the name of the field in the input data to aggregate together.
-* **Rename Field**: This toggle controls whether to give the field a different name in the aggregated output data. Turn this on to add a different field name. If you're aggregating multiple fields, you must provide new output field names. You can't leave multiple fields undefined.
-	* **Output Field Name**: This field is displayed when you turn on **Rename Field**. Enter the field name for the aggregated output data.
+* **Input Field Name**: ใส่ชื่อ field ใน input data ที่ต้องการรวมเข้าด้วยกัน
+* **Rename Field**: toggle นี้ใช้สำหรับตั้งชื่อ field ใหม่ใน output data ที่รวมแล้ว ถ้าเปิดไว้จะสามารถตั้งชื่อใหม่ได้ ถ้ารวมหลาย field ต้องตั้งชื่อใหม่ให้ครบทุกอัน ห้ามเว้นว่าง
+	* **Output Field Name**: จะเห็น field นี้เมื่อเปิด **Rename Field** ใส่ชื่อ field สำหรับ output data ที่รวมแล้ว
 
-Refer to [Node options](#node-options) for more configuration options.
+ดู [Node options](#node-options) สำหรับตัวเลือกเพิ่มเติม
 
 ### All Item Data
 
-* **Put Output in Field**: Enter the name of the field to output the data in.
-* **Include**: Select which fields to include in the output. Choose from:
-	* **All fields**: The output includes data from all fields with no further parameters.
-	* **Specified Fields**: If you select this option, enter a comma-separated list of fields the output should include data from in the **Fields To Include** parameter. The output will include only the fields in this list.
-	* **All Fields Except**: If you select this option, enter a comma-separated list of fields the output should exclude data from in the **Fields To Exclude** parameter. The output will include all fields not in this list.
+* **Put Output in Field**: ใส่ชื่อ field ที่ต้องการให้ output data ไปอยู่ในนั้น
+* **Include**: เลือกว่าจะรวม field ไหนใน output เลือกได้จาก:
+	* **All fields**: output จะรวมข้อมูลจากทุก field โดยไม่มี parameter เพิ่มเติม
+	* **Specified Fields**: ถ้าเลือกอันนี้ ให้ใส่ชื่อ field ที่ต้องการรวมใน output เป็น comma-separated ใน **Fields To Include** output จะรวมเฉพาะ field ที่อยู่ใน list นี้
+	* **All Fields Except**: ถ้าเลือกอันนี้ ให้ใส่ชื่อ field ที่ไม่ต้องการรวมใน output เป็น comma-separated ใน **Fields To Exclude** output จะรวมทุก field ที่ไม่ได้อยู่ใน list นี้
 
-Refer to [Node options](#node-options) for more configuration options.
+ดู [Node options](#node-options) สำหรับตัวเลือกเพิ่มเติม
 
 ## Node options
 
-You can further configure this node using these **Options**:
+สามารถตั้งค่า node เพิ่มเติมได้ใน **Options**:
 
-* **Disable Dot Notation**: The node displays this toggle when you select the **Individual Fields** Aggregate. It controls whether to disallow referencing child fields using `parent.child` in the field name (turned on), or allow it (turned off, default).
-* **Merge Lists**: The node displays this toggle when you select the **Individual Fields** Aggregate. Turn it on if the field to aggregate is a list and you want to output a single flat list rather than a list of lists.
-* **Include Binaries**: The node displays this toggle for both Aggregate types. Turn it on if you want to include binary data from the input in the new output.
-* **Keep Missing And Null Values**: The node displays this toggle when you select the **Individual Fields** Aggregate. Turn it on to add a null (empty) entry in the output list when there is a null or missing value in the input. If turned off, the output ignores null or empty values.
+* **Disable Dot Notation**: toggle นี้จะแสดงเมื่อเลือก Aggregate แบบ **Individual Fields** ใช้สำหรับปิดการอ้างถึง field ลูกด้วย `parent.child` ในชื่อ field (เปิดไว้คือปิดการอ้างถึง, ปิดไว้คือใช้ได้ตามปกติ)
+* **Merge Lists**: toggle นี้จะแสดงเมื่อเลือก Aggregate แบบ **Individual Fields** เปิดไว้ถ้า field ที่จะรวมเป็น list และต้องการ output เป็น list เดียวแบบแบน ไม่ใช่ list ซ้อน list
+* **Include Binaries**: toggle นี้จะแสดงสำหรับ Aggregate ทั้งสองแบบ เปิดไว้ถ้าต้องการรวม binary data จาก input ใน output ใหม่ด้วย
+* **Keep Missing And Null Values**: toggle นี้จะแสดงเมื่อเลือก Aggregate แบบ **Individual Fields** เปิดไว้เพื่อให้มีค่า null (ว่าง) ใน output list ถ้า input มีค่า null หรือขาดค่า ถ้าปิดไว้ output จะข้ามค่า null หรือว่าง
 
 ## Templates and examples
 

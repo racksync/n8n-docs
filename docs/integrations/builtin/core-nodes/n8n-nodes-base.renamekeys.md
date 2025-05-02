@@ -8,29 +8,29 @@ priority: medium
 
 # Rename Keys
 
-Use the Rename Keys node to rename the keys of a key-value pair in n8n.
+ใช้ Rename Keys node เพื่อเปลี่ยนชื่อ key ของ key-value pair ใน n8n
 
 ## Node parameters
 
-You can rename one or multiple keys using the Rename Keys node. Select the **Add new key** button to rename a key.
+คุณสามารถเปลี่ยนชื่อ key ได้หนึ่งหรือหลาย key โดยใช้ Rename Keys node กดปุ่ม **Add new key** เพื่อเพิ่ม key ที่ต้องการเปลี่ยนชื่อ
 
-For each key, enter the:
+สำหรับแต่ละ key ให้กรอก:
 
-- **Current Key Name**: The current name of the key you want to rename.
-- **New Key Name**: The new name you want to assign to the key.
+- **Current Key Name**: ชื่อปัจจุบันของ key ที่ต้องการเปลี่ยนชื่อ
+- **New Key Name**: ชื่อใหม่ที่ต้องการตั้งให้ key นั้น
 
 ## Node options
 
-Choose whether to use a **Regex** regular expression to identify keys to rename. To use this option, you must also enter:
+เลือกว่าจะใช้ **Regex** (regular expression) เพื่อระบุ key ที่ต้องการเปลี่ยนชื่อหรือไม่ ถ้าใช้ option นี้ ต้องกรอกข้อมูลดังนี้:
 
-* The **Regular Expression** you'd like to use.
-* **Replace With**: Enter the new name you want to assign to the key(s) that match the **Regular Expression**.
-* You can also choose these Regex-specific options:
-    * **Case Insensitive**: Set whether the regular expression should match case (turned off) or be case insensitive (turned on).
-    * **Max Depth**: Enter the maximum depth to replace keys, using `-1` for unlimited and `0` for top-level only.
+* **Regular Expression**: กรอก regular expression ที่ต้องการใช้
+* **Replace With**: กรอกชื่อใหม่ที่ต้องการตั้งให้ key ที่ตรงกับ regular expression
+* สามารถเลือก option เฉพาะของ Regex ได้ดังนี้:
+    * **Case Insensitive**: เลือกว่าจะให้ regular expression ไม่สนใจตัวพิมพ์ใหญ่/เล็ก (เปิด) หรือสนใจ (ปิด)
+    * **Max Depth**: กำหนดความลึกสูงสุดในการเปลี่ยนชื่อ key โดย `-1` คือไม่จำกัด, `0` คือเฉพาะระดับบนสุด
 
 /// warning | Regex impacts
-Using a regular expression can affect any keys that match the expression, including keys you've already renamed.
+การใช้ regular expression อาจมีผลกับ key ใด ๆ ที่ตรงกับ expression รวมถึง key ที่คุณเปลี่ยนชื่อไปแล้วด้วย
 ///
 
 ## Templates and examples

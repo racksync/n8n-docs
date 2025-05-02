@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # ProfitWell node
 
-Use the ProfitWell node to automate work in ProfitWell, and integrate ProfitWell with other applications. n8n supports getting your company's account settings and retrieving financial metrics from ProfitWell.
+ใช้ ProfitWell node เพื่อช่วยทำงานใน ProfitWell แบบอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันอื่น ๆ. n8n รองรับการดึงการตั้งค่าบัญชีของบริษัทคุณและดึงตัวชี้วัดทางการเงินจาก ProfitWell.
 
-On this page, you'll find a list of operations the ProfitWell node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการของ operations ที่ ProfitWell node รองรับและลิงก์สำหรับข้อมูลเพิ่มเติม.
 
 /// note | Credentials
-Refer to [ProfitWell credentials](/integrations/builtin/credentials/profitwell.md) for guidance on setting up authentication. 
+ดูรายละเอียดเพิ่มเติมได้ที่ [ProfitWell credentials](/integrations/builtin/credentials/profitwell.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations

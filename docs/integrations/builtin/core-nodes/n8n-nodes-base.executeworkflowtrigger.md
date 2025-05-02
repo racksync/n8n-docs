@@ -8,16 +8,16 @@ priority: high
 
 # Execute Sub-workflow Trigger node
 
-Use this node to start a workflow in response to another workflow. It should be the first node in the workflow.
+ใช้ node นี้เพื่อเริ่ม workflow เมื่อถูกเรียกจาก workflow อื่น ควรเป็น node แรกใน workflow
 
-n8n allows you to call workflows from other workflows. This is useful if you want to:
+n8n สามารถเรียก workflow อื่นจาก workflow ปัจจุบันได้ เหมาะสำหรับกรณี:
 
-* Reuse a workflow: for example, you could have multiple workflows pulling and processing data from different sources, then have all those workflows call a single workflow that generates a report.
-* Break large workflows into smaller components.
+* reuse workflow เช่น มี workflow หลายอันดึงข้อมูลจากแหล่งต่างๆ แล้วให้ทุกอันเรียก workflow เดียวที่สร้าง report
+* แบ่ง workflow ใหญ่เป็นส่วนย่อย
 
 ## Usage
 
-This node runs in response to a call from the [Execute Sub-workflow](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow.md) or [Call n8n Workflow Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolworkflow.md) nodes.
+node นี้จะรันเมื่อถูกเรียกจาก [Execute Sub-workflow](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow.md) หรือ [Call n8n Workflow Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolworkflow.md)
 
 --8<-- "_snippets/flow-logic/subworkflow-usage.md"
 

@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Kitemaker node
 
-Use the Kitemaker node to automate work in Kitemaker, and integrate Kitemaker with other applications. n8n has built-in support for a wide range of Kitemaker features, including retrieving data on organizations, spaces and users, as well as creating, getting, and updating work items. 
+ใช้ Kitemaker node เพื่อทำงานอัตโนมัติใน Kitemaker และเชื่อมต่อ Kitemaker กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Kitemaker หลายอย่าง เช่น การดึงข้อมูล organizations, spaces, users รวมถึงการสร้าง ดึงข้อมูล และอัปเดต work items
 
-On this page, you'll find a list of operations the Kitemaker node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Kitemaker node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Kitemaker credentials](/integrations/builtin/credentials/kitemaker.md) for guidance on setting up authentication. 
+โปรดดู [Kitemaker credentials](/integrations/builtin/credentials/kitemaker.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations

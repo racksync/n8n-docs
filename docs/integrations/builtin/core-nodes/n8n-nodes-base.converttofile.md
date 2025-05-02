@@ -8,10 +8,10 @@ priority: critical
 
 # Convert to File
 
-Use the Convert to File node to take input data and output it as a file. This converts the input JSON data into a binary format.
+ใช้ Convert to File node เพื่อแปลง input data ให้ออกมาเป็นไฟล์ (file) โดยจะเปลี่ยนข้อมูล JSON ที่รับเข้ามาให้เป็น binary format
 
 /// note | Extract From File
-To extract data from a file and convert it to JSON, use the [Extract from File](/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile.md) node.
+ถ้าอยาก extract ข้อมูลจากไฟล์แล้วแปลงเป็น JSON ให้ใช้ [Extract from File](/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile.md) node
 ///
 
 ## Operations
@@ -27,150 +27,145 @@ To extract data from a file and convert it to JSON, use the [Extract from File](
 * [**Convert to XLSX**](#convert-to-xlsx)
 * [**Move Base64 String to File**](#move-base64-string-to-file)
 
-Node parameters and options depend on the operation you select.
+parameter และ options ของ node จะขึ้นอยู่กับ operation ที่เลือก
 
 ### Convert to CSV
 
-Configure the node for this operation with the **Put Output File in Field** parameter. Enter the name of the field in the output data to contain the file.
+ตั้งค่า node สำหรับ operation นี้โดยใช้ parameter **Put Output File in Field** ใส่ชื่อ field ใน output data ที่จะเก็บไฟล์
 
 #### Convert to CSV options
 
-You can also configure this operation with these **Options**:
+ตั้งค่าเพิ่มเติมได้ใน **Options**:
 
-* **File Name**: Enter the file name for the generated output file.
-* If the first row of the file contains header names, turn on the **Header Row** option.
+* **File Name**: ใส่ชื่อไฟล์ output ที่ต้องการ
+* ถ้า row แรกของไฟล์เป็น header ให้เปิด option **Header Row**
 
 ### Convert to HTML
 
-Configure the node for this operation with the **Put Output File in Field** parameter. Enter the name of the field in the output data to contain the file.
+ตั้งค่า node สำหรับ operation นี้โดยใช้ parameter **Put Output File in Field** ใส่ชื่อ field ใน output data ที่จะเก็บไฟล์
 
 #### Convert to HTML options
 
-You can also configure this operation with these **Options**:
+ตั้งค่าเพิ่มเติมได้ใน **Options**:
 
-* **File Name**: Enter the file name for the generated output file.
-* If the first row of the file contains header names, turn on the **Header Row** option.
+* **File Name**: ใส่ชื่อไฟล์ output ที่ต้องการ
+* ถ้า row แรกของไฟล์เป็น header ให้เปิด option **Header Row**
 
 ### Convert to ICS
 
-* **Put Output File in Field**. Enter the name of the field in the output data to contain the file.
-* **Event Title**: Enter the title for the event.
-* **Start**: Enter the date and time the event will start. All-day events ignore the time.
-* **End**: Enter the date and time the event will end. All-day events ignore the time. If unset, the node uses the start date.
-* **All Day**: Select whether the event is an all day event (turned on) or not (turned off).
+* **Put Output File in Field**: ใส่ชื่อ field ใน output data ที่จะเก็บไฟล์
+* **Event Title**: ใส่ชื่อ event
+* **Start**: ใส่วันและเวลาที่ event จะเริ่ม ถ้าเป็น all-day event จะไม่สนใจเวลา
+* **End**: ใส่วันและเวลาที่ event จะจบ ถ้าเป็น all-day event จะไม่สนใจเวลา ถ้าไม่ใส่ node จะใช้ start date
+* **All Day**: เลือกว่าจะเป็น all day event หรือไม่ (เปิด/ปิด)
 
 #### Convert to ICS options
 
-You can also configure this operation with these **Options**:
+ตั้งค่าเพิ่มเติมได้ใน **Options**:
 
-* **File Name**: Enter the file name for the generated output file.
-* **Attendees**: Use this option to add attendees to the event. For each attendee, add:
+* **File Name**: ใส่ชื่อไฟล์ output ที่ต้องการ
+* **Attendees**: เพิ่มผู้เข้าร่วม event ได้ โดยแต่ละคนใส่
 	* **Name**
 	* **Email**
-	* **RSVP**: Select whether the attendee needs to confirm attendance (turned on) or doesn't (turned off).
-* **Busy Status**: Use this option to set the busy status for Microsoft applications like Outlook. Choose from:
-	* **Busy**
-	* **Tentative**
-* **Calendar Name**: For Apple and Microsoft calendars, enter the [calendar name](https://learn.microsoft.com/en-us/openspecs/exchange_server_protocols/ms-oxcical/1da58449-b97e-46bd-b018-a1ce576f3e6d){:target=_blank .external-link} for the event.
-*  **Description**: Enter an event description.
-* **Geolocation**: Enter the **Latitude** and **Longitude** for the event's location.
-* **Location**: Enter the event's intended venue/location.
-* **Recurrence Rule**: Enter a rule to define the repeat pattern of the event (RRULE). Generate rules using the [iCalendar.org RRULE Tool](https://icalendar.org/rrule-tool.html){:target=_blank .external-link}.
-* **Organizer**: Enter the organizer's **Name** and **Email**.
-* **Sequence**: If you're sending an update for an event with the same universally unique ID (UID), enter the revision sequence number.
-* **Status**: Set the status of the event. Choose from:
-	* **Confirmed**
-	* **Cancelled**
-	* **Tentative**
-* **UID**: Enter a universally unique ID (UID) for the event. The UID should be globally unique. The node automatically generates a UID if you don't enter one.
-* **URL**: Enter a URL associated with the event.
-* **Use Workflow Timezone**: Whether to use UTC time zone (turned off) or the workflow's timezone (turned on). Set the workflow's timezone in the [Workflow Settings](/workflows/settings.md).
+	* **RSVP**: เลือกว่าต้องการให้ยืนยันการเข้าร่วมหรือไม่ (เปิด/ปิด)
+* **Busy Status**: ตั้ง busy status สำหรับ Microsoft เช่น Outlook เลือกได้ **Busy** หรือ **Tentative**
+* **Calendar Name**: สำหรับ Apple/Microsoft calendar ใส่ [calendar name](https://learn.microsoft.com/en-us/openspecs/exchange_server_protocols/ms-oxcical/1da58449-b97e-46bd-b018-a1ce576f3e6d)
+*  **Description**: ใส่รายละเอียด event
+* **Geolocation**: ใส่ **Latitude** และ **Longitude** ของสถานที่จัด event
+* **Location**: ใส่สถานที่จัด event
+* **Recurrence Rule**: ใส่กติกาการ repeat event (RRULE) สร้าง rule ได้ที่ [iCalendar.org RRULE Tool](https://icalendar.org/rrule-tool.html)
+* **Organizer**: ใส่ **Name** และ **Email** ของผู้จัดงาน
+* **Sequence**: ถ้าส่ง update event ที่มี UID เดิม ให้ใส่เลข revision
+* **Status**: ตั้งสถานะ event เลือกได้ **Confirmed**, **Cancelled**, **Tentative**
+* **UID**: ใส่ UID ของ event (ควร unique) ถ้าไม่ใส่ node จะ generate ให้เอง
+* **URL**: ใส่ URL ที่เกี่ยวข้องกับ event
+* **Use Workflow Timezone**: เลือกว่าจะใช้ timezone ของ workflow หรือไม่ (เปิด/ปิด) ตั้ง timezone ได้ที่ [Workflow Settings](/workflows/settings.md)
 
 ### Convert to JSON
 
-Choose the best output **Mode** for your needs from these options:
+เลือก **Mode** สำหรับ output ที่เหมาะกับงาน:
 
-* **All Items to One File**: Send all input items to a single file.
-* **Each Item to Separate File**: Create a file for every input item.
+* **All Items to One File**: รวม input ทั้งหมดเป็นไฟล์เดียว
+* **Each Item to Separate File**: สร้างไฟล์แยกสำหรับแต่ละ input
 
 #### Convert to JSON options
 
-You can also configure this operation with these **Options**:
+ตั้งค่าเพิ่มเติมได้ใน **Options**:
 
-* **File Name**: Enter the file name for the generated output file.
-* **Format**: Choose whether to format the JSON for easier reading (turned on) or not (turned off).
-* **Encoding**: Choose the character set to use to encode the data. The default is **utf8**.
+* **File Name**: ใส่ชื่อไฟล์ output ที่ต้องการ
+* **Format**: เลือกว่าจะจัด format JSON ให้อ่านง่าย (เปิด/ปิด)
+* **Encoding**: เลือก character set ที่ใช้ encode ข้อมูล ค่า default คือ **utf8**
 
 ### Convert to ODS
 
-Configure the node for this operation with the **Put Output File in Field** parameter. Enter the name of the field in the output data to contain the file.
+ตั้งค่า node สำหรับ operation นี้โดยใช้ parameter **Put Output File in Field** ใส่ชื่อ field ใน output data ที่จะเก็บไฟล์
 
 #### Convert to ODS options
 
-You can also configure this operation with these **Options**:
+ตั้งค่าเพิ่มเติมได้ใน **Options**:
 
-* **File Name**: Enter the file name for the generated output file.
-* **Compression**: Choose whether to compress and reduce the file's output size.
-* **Header Row**: Turn on if the first row of the file contains header names.
-* **Sheet Name**: Enter the Sheet Name to create in the spreadsheet.
+* **File Name**: ใส่ชื่อไฟล์ output ที่ต้องการ
+* **Compression**: เลือกว่าจะบีบอัดไฟล์เพื่อลดขนาดหรือไม่
+* **Header Row**: เปิดถ้า row แรกเป็น header
+* **Sheet Name**: ใส่ชื่อ sheet ที่จะสร้างใน spreadsheet
 
 ### Convert to RTF
 
-Configure the node for this operation with the **Put Output File in Field** parameter. Enter the name of the field in the output data to contain the file.
+ตั้งค่า node สำหรับ operation นี้โดยใช้ parameter **Put Output File in Field** ใส่ชื่อ field ใน output data ที่จะเก็บไฟล์
 
 #### Convert to RFT options
 
-You can also configure this operation with these **Options**:
+ตั้งค่าเพิ่มเติมได้ใน **Options**:
 
-* **File Name**: Enter the file name for the generated output file.
-* If the first row of the file contains header names, turn on the **Header Row** option.
+* **File Name**: ใส่ชื่อไฟล์ output ที่ต้องการ
+* ถ้า row แรกของไฟล์เป็น header ให้เปิด option **Header Row**
 
 ### Convert to Text File
 
-Enter the name of the **Text Input Field** that contains a string to convert to a file. Use dot-notation for deep fields, for example `level1.level2.currentKey`.
+ใส่ชื่อ **Text Input Field** ที่มี string ที่ต้องการแปลงเป็นไฟล์ ใช้ dot-notation สำหรับ field ซ้อน เช่น `level1.level2.currentKey`
 
 #### Convert to Text File options
 
-You can also configure this operation with these **Options**:
+ตั้งค่าเพิ่มเติมได้ใน **Options**:
 
-* **File Name**: Enter the file name for the generated output file.
-* **Encoding**: Choose the character set to use to encode the data. The default is **utf8**.
+* **File Name**: ใส่ชื่อไฟล์ output ที่ต้องการ
+* **Encoding**: เลือก character set ที่ใช้ encode ข้อมูล ค่า default คือ **utf8**
 
 ### Convert to XLS
 
-Configure the node for this operation with the **Put Output File in Field** parameter. Enter the name of the field in the output data to contain the file.
+ตั้งค่า node สำหรับ operation นี้โดยใช้ parameter **Put Output File in Field** ใส่ชื่อ field ใน output data ที่จะเก็บไฟล์
 
 #### Convert to XLS options
 
-You can also configure this operation with these **Options**:
+ตั้งค่าเพิ่มเติมได้ใน **Options**:
 
-* **File Name**: Enter the file name for the generated output file.
-* **Header Row**: Turn on if the first row of the file contains header names.
-* **Sheet Name**: Enter the Sheet Name to create in the spreadsheet.
+* **File Name**: ใส่ชื่อไฟล์ output ที่ต้องการ
+* **Header Row**: เปิดถ้า row แรกเป็น header
+* **Sheet Name**: ใส่ชื่อ sheet ที่จะสร้างใน spreadsheet
 
 ### Convert to XLSX
 
-Configure the node for this operation with the **Put Output File in Field** parameter. Enter the name of the field in the output data to contain the file.
+ตั้งค่า node สำหรับ operation นี้โดยใช้ parameter **Put Output File in Field** ใส่ชื่อ field ใน output data ที่จะเก็บไฟล์
 
 #### Convert to XLSX options
 
-You can also configure this operation with these **Options**:
+ตั้งค่าเพิ่มเติมได้ใน **Options**:
 
-* **File Name**: Enter the file name for the generated output file.
-* **Compression**: Choose whether to compress and reduce the file's output size.
-* **Header Row**: Turn on if the first row of the file contains header names.
-* **Sheet Name**: Enter the Sheet Name to create in the spreadsheet.
+* **File Name**: ใส่ชื่อไฟล์ output ที่ต้องการ
+* **Compression**: เลือกว่าจะบีบอัดไฟล์เพื่อลดขนาดหรือไม่
+* **Header Row**: เปิดถ้า row แรกเป็น header
+* **Sheet Name**: ใส่ชื่อ sheet ที่จะสร้างใน spreadsheet
 
 ### Move Base64 String to File
 
-Enter the name of the **Base64 Input Field** that contains the Base64 string to convert to a file. Use dot-notation for deep fields, for example `level1.level2.currentKey`.
+ใส่ชื่อ **Base64 Input Field** ที่มี Base64 string ที่ต้องการแปลงเป็นไฟล์ ใช้ dot-notation สำหรับ field ซ้อน เช่น `level1.level2.currentKey`
 
 #### Move Base64 String to File options
 
-You can also configure this operation with these **Options**:
+ตั้งค่าเพิ่มเติมได้ใน **Options**:
 
-* **File Name**: Enter the file name for the generated output file.
-* **MIME Type**: Enter the MIME type of the output file. Refer to [Common MIME types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types){:target=_blank .external-link} for a list of common MIME types and the file extensions they relate to.
+* **File Name**: ใส่ชื่อไฟล์ output ที่ต้องการ
+* **MIME Type**: ใส่ MIME type ของไฟล์ output ดู [Common MIME types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types) สำหรับรายการ MIME type ที่ใช้บ่อย
 
 ## Templates and examples
 

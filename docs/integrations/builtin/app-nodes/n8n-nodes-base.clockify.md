@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Clockify node
 
-Use the Clockify node to automate work in Clockify, and integrate Clockify with other applications. n8n has built-in support for a wide range of Clockify features, including creating, updating, getting, and deleting tasks, time entries, projects, and tags.
+ใช้ Clockify node เพื่อทำงานอัตโนมัติใน Clockify และ integrate Clockify กับแอปพลิเคชันอื่นๆ n8n มีการรองรับในตัวสำหรับฟีเจอร์ต่างๆ ของ Clockify รวมถึงการสร้าง, อัปเดต, ดึง, และลบ tasks, time entries, projects, และ tags
 
-On this page, you'll find a list of operations the Clockify node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Clockify node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [Clockify credentials](/integrations/builtin/credentials/clockify.md) for guidance on setting up authentication. 
+อ้างอิง [Clockify credentials](/integrations/builtin/credentials/clockify.md) สำหรับคำแนะนำในการตั้งค่า authentication
 ///
 
 ## Operations

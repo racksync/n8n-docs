@@ -10,16 +10,14 @@ search:
 
 # OpenAI node
 
-Use the OpenAI node to automate work in OpenAI and integrate OpenAI with other applications. n8n has built-in support for a wide range of OpenAI features, including creating images and assistants, as well as chatting with models. 
-
-On this page, you'll find a list of operations the OpenAI node supports and links to more resources.
+ใช้ OpenAI node เพื่อทำงานอัตโนมัติใน OpenAI และเชื่อมต่อกับแอปพลิเคชันอื่นๆ. ในหน้านี้คุณจะพบรายการ operation ที่ OpenAI node รองรับและลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม.
 
 /// note | OpenAI Assistant node
-The OpenAI node replaces the OpenAI assistant node from version 1.29.0 on.
+OpenAI node แทนที่ OpenAI assistant node ตั้งแต่เวอร์ชัน 1.29.0 เป็นต้นไป.
 ///
 
 /// note | Credentials
-Refer to [OpenAI credentials](/integrations/builtin/credentials/openai.md) for guidance on setting up authentication. 
+ดู [OpenAI credentials](/integrations/builtin/credentials/openai.md) สำหรับคำแนะนำการตั้งค่า authentication.
 ///
 
 ## Operations
@@ -52,21 +50,21 @@ Refer to [OpenAI credentials](/integrations/builtin/credentials/openai.md) for g
 
 ## Related resources
 
-Refer to [OpenAI's documentation](https://beta.openai.com/docs/introduction){:target=_blank .external-link} for more information about the service.
+ดู [OpenAI's documentation](https://beta.openai.com/docs/introduction){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการ.
 
-Refer to [OpenAI's assistants documentation](https://platform.openai.com/docs/assistants/how-it-works/objects){:target=_blank .external-link} for more information about how assistants work.
+ดู [OpenAI's assistants documentation](https://platform.openai.com/docs/assistants/how-it-works/objects){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับการทำงานของ assistants.
 
-For help dealing with rate limits, refer to [Handling rate limits](/integrations/builtin/rate-limits.md).
+สำหรับความช่วยเหลือเกี่ยวกับ rate limits, ดู [Handling rate limits](/integrations/builtin/rate-limits.md).
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 
 ## Using tools with OpenAI assistants
 
-Some operations allow you to connect tools. [Tools](https://docs.n8n.io/advanced-ai/examples/understand-tools/) act like addons that your AI can use to access extra context or resources.
+บาง operation อนุญาตให้เชื่อมต่อ tools. [Tools](https://docs.n8n.io/advanced-ai/examples/understand-tools/) ทำหน้าที่เหมือน addons ที่ AI ของคุณใช้เพื่อเข้าถึง context หรือแหล่งข้อมูลเพิ่มเติม.
 
-Select the **Tools** connector to browse the available tools and add them.
+เลือก connector **Tools** เพื่อเรียกดูและเพิ่มเครื่องมือที่มีอยู่.
 
-Once you add a tool connection, the OpenAI node becomes a [root node](/glossary.md#root-node-n8n), allowing it to form a [cluster node](/glossary.md#cluster-node-n8n) with the tools [sub-nodes](/glossary.md#sub-node-n8n). See [Node types](/integrations/builtin/node-types.md#cluster-nodes) for more information on cluster nodes and root nodes.
+เมื่อมีการเพิ่มการเชื่อมต่อเครื่องมือ OpenAI node จะกลายเป็น [root node](/glossary.md#root-node-n8n) ซึ่งสามารถสร้าง [cluster node](/glossary.md#cluster-node-n8n) กับ [sub-nodes](/glossary.md#sub-node-n8n) ได้. ดู [Node types](/integrations/builtin/node-types.md#cluster-nodes) สำหรับข้อมูลเพิ่มเติมเกี่ยวกับ cluster nodes และ root nodes.
 
 ### Operations that support tool connectors
 
@@ -77,4 +75,4 @@ Once you add a tool connection, the OpenAI node becomes a [root node](/glossary.
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/common-issues.md).
+สำหรับคำถามหรือปัญหาทั่วไปและแนวทางแก้ไข ให้ดู [Common issues](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/common-issues.md).

@@ -8,12 +8,12 @@ priority: high
 
 # Execution Data
 
-Use this node to save metadata for workflow executions. You can then search by this data in the **Executions** list.
+ใช้ node นี้เพื่อบันทึก metadata ของ workflow execution สามารถค้นหาข้อมูลนี้ได้ใน **Executions** list
 
-You can retrieve custom execution data during workflow execution using the Code node. Refer to [Custom executions data](/workflows/executions/custom-executions-data.md) for more information.
+สามารถดึง custom execution data ระหว่าง workflow execution ได้โดยใช้ Code node ดูรายละเอียดที่ [Custom executions data](/workflows/executions/custom-executions-data.md)
 
 /// info | Feature availability
-Available on Pro and Enterprise plans.
+ใช้งานได้บน Pro และ Enterprise plans เท่านั้น
 ///
 
 ## Operations
@@ -22,16 +22,16 @@ Available on Pro and Enterprise plans.
 
 ## Data to Save
 
-Add a **Saved Field** for each key/value pair of metadata you'd like to save.
+เพิ่ม **Saved Field** สำหรับแต่ละ key/value ของ metadata ที่ต้องการบันทึก
 
 ## Limitations
 
-The Execution Data node has the following restrictions when storing execution metadata:
+Execution Data node มีข้อจำกัดดังนี้:
 
-* `key`: limited to 50 characters
-* `value`: limited to 512 characters
+* `key`: จำกัด 50 ตัวอักษร
+* `value`: จำกัด 512 ตัวอักษร
 
-If either the `key` or `value` exceed the above limitations, n8n truncates to their maximum length and outputs a log entry.
+ถ้า `key` หรือ `value` เกินขนาด n8n จะตัดให้เหลือขนาดสูงสุดและบันทึก log
 
 ## Templates and examples
 

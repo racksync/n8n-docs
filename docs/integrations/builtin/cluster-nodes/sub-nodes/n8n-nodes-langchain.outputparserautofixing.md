@@ -1,14 +1,14 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Auto-fixing Output Parser node documentation
-description: Learn how to use the Auto-fixing Output Parser node in n8n. Follow technical documentation to integrate Auto-fixing Output Parser node into your workflows.
+description: เรียนรู้วิธีการใช้ Auto-fixing Output Parser node ใน n8n ทำตามเอกสารทางเทคนิคเพื่อรวม Auto-fixing Output Parser node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 priority: medium
 ---
 
 # Auto-fixing Output Parser node
 
-The Auto-fixing Output Parser node wraps another output parser. If the first one fails, it calls out to another LLM to fix any errors.
+Auto-fixing Output Parser node จะ wrap output parser ตัวอื่น ถ้าตัวแรก error จะเรียก LLM ตัวอื่นมาช่วยแก้ไขผลลัพธ์ให้
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
@@ -19,7 +19,7 @@ The Auto-fixing Output Parser node wraps another output parser. If the first one
 
 ## Related resources
 
-Refer to [LangChain's output parser documentation](https://js.langchain.com/docs/concepts/output_parsers/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมได้ที่ [LangChain's output parser documentation](https://js.langchain.com/docs/concepts/output_parsers/){:target=_blank .external-link}
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

@@ -8,12 +8,12 @@ priority: medium
 
 # Jira Software node
 
-Use the Jira Software node to automate work in Jira, and integrate Jira with other applications. n8n has built-in support for a wide range of Jira features, including creating, updating, deleting, and getting issues, and users. 
+ใช้ Jira Software node เพื่อทำงานอัตโนมัติใน Jira และเชื่อมต่อ Jira กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Jira หลายอย่าง เช่น การสร้าง อัปเดต ลบ และดึงข้อมูล issues และ users
 
-On this page, you'll find a list of operations the Jira Software node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Jira Software node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Jira credentials](/integrations/builtin/credentials/jira.md) for guidance on setting up authentication. 
+โปรดดู [Jira credentials](/integrations/builtin/credentials/jira.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
@@ -54,17 +54,17 @@ Refer to [Jira credentials](/integrations/builtin/credentials/jira.md) for guida
 
 ## Related resources
 
-Refer to the [official JQL documentation](https://www.atlassian.com/software/jira/guides/expand-jira/jql) about Jira Query Language (JQL) to learn more about it.
+ดู [official JQL documentation](https://www.atlassian.com/software/jira/guides/expand-jira/jql) เกี่ยวกับ Jira Query Language (JQL) เพื่อเรียนรู้เพิ่มเติม
 
 ## Fetch issues for a specific project
 
-The **Get All** operation returns all the issues from Jira. To fetch issues for a particular project, you need to use Jira Query Language (JQL).
+Operation **Get All** จะคืนค่า issues ทั้งหมดจาก Jira ถ้าต้องการดึง issues ของโปรเจกต์ใดโปรเจกต์หนึ่ง ให้ใช้ Jira Query Language (JQL)
 
-For example, if you want to receive all the issues of a project named `n8n`, you'd do something like this:
+ตัวอย่าง ถ้าอยากได้ issues ทั้งหมดของโปรเจกต์ชื่อ `n8n` ให้ทำแบบนี้:
 
-- Select **Get All** from the **Operation** dropdown list.
-- Toggle **Return All** to true.
-- Select **Add Option** and select **JQL**.
-- Enter `project=n8n` in the **JQL** field.
+- เลือก **Get All** จาก dropdown **Operation**
+- เปิด **Return All** ให้เป็น true
+- เลือก **Add Option** แล้วเลือก **JQL**
+- ใส่ `project=n8n` ในช่อง **JQL**
 
-This query will fetch all the issues in the project named `n8n`. Enter the name of your project instead of `n8n` to fetch all the issues for your project.
+Query นี้จะดึง issues ทั้งหมดในโปรเจกต์ชื่อ `n8n` ใส่ชื่อโปรเจกต์ของคุณแทน `n8n` เพื่อดึง issues ของโปรเจกต์คุณ

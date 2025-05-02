@@ -7,12 +7,12 @@ contentType: [integration, reference]
 <!-- marketstack is not a typo. The brand name is all lowercase, so we match it -->
 # marketstack node
 
-Use the marketstack node to automate work in marketstack, and integrate marketstack with other applications. n8n has built-in support for a wide range of marketstack features, including getting exchanges, end-of-day data, and tickers. 
+ใช้ marketstack node ในการทำงานอัตโนมัติใน marketstack และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ โดย n8n รองรับการดึงข้อมูล exchanges, end-of-day data และ tickers.
 
-On this page, you'll find a list of operations the marketstack node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ marketstack node รองรับและลิงก์ไปยังข้อมูลเพิ่มเติม.
 
 /// note | Credentials
-Refer to [marketstack credentials](/integrations/builtin/credentials/marketstack.md) for guidance on setting up authentication. 
+ดู [marketstack credentials](/integrations/builtin/credentials/marketstack.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations

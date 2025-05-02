@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # E-goi node
 
-Use the E-goi node to automate work in E-goi, and integrate E-goi with other applications. n8n has built-in support for a wide range of E-goi features, including creating, updating, deleting, and getting contacts. 
+ใช้ E-goi node เพื่อทำงานอัตโนมัติใน E-goi และเชื่อมต่อ E-goi กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ E-goi หลายอย่าง เช่น การสร้าง อัปเดต ลบ และดึงข้อมูล contacts
 
-On this page, you'll find a list of operations the E-goi node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ E-goi node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [E-goi credentials](/integrations/builtin/credentials/egoi.md) for guidance on setting up authentication. 
+โปรดดู [E-goi credentials](/integrations/builtin/credentials/egoi.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations

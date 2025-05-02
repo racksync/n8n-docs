@@ -8,41 +8,41 @@ priority: high
 
 # Execute Command
 
-The Execute Command node runs shell commands on the host machine that runs n8n.
+Execute Command node ใช้สำหรับรัน shell command บนเครื่องที่รัน n8n อยู่
 
 /// note | Which shell runs the command?
-This node executes the command in the default shell of the host machine. For example, `cmd` on Windows and `zsh` on macOS.
+node นี้จะรัน command ใน shell หลักของเครื่องที่รัน n8n เช่น `cmd` บน Windows หรือ `zsh` บน macOS
 
-If you run n8n with Docker, your command will run in the n8n container and not the Docker host.
+ถ้าคุณรัน n8n ด้วย Docker command จะถูกรันใน container ของ n8n ไม่ใช่บน Docker host
 ///
 
 /// note | Not available on Cloud
-This node isn't available on n8n Cloud.
+node นี้ไม่สามารถใช้ได้บน n8n Cloud
 ///
 
 ## Node parameters
 
-Configure the node using the following parameters.
+ตั้งค่า node นี้ด้วย parameter ต่อไปนี้
 
 ### Execute Once
 
-Choose whether you want the node to execute only once (turned on) or once for every item it receives as input (turned off).
+เลือกว่าจะให้ node นี้รันแค่ครั้งเดียว (เปิด) หรือรันตามจำนวน item ที่รับเข้ามา (ปิด)
 
 ### Command
 
-Enter the command to execute on the host machine. Refer to sections below for examples of running [multiple commands](#run-multiple-commands) and [cURL commands](#run-curl-command).
+ใส่ command ที่ต้องการรันบนเครื่องที่รัน n8n ดูตัวอย่างการรัน [multiple commands](#run-multiple-commands) และ [cURL commands](#run-curl-command) ด้านล่าง
 
 #### Run multiple commands
 
-Use one of two methods to run multiple commands in one Execute Command node:
+มี 2 วิธีในการรันหลาย command ใน Execute Command node เดียว:
 
-* Enter each command on one line separated by `&&`. For example, you can combine the change directory (cd) command with the list (ls) command using `&&`.
+* ใส่แต่ละ command ในบรรทัดเดียวกันโดยคั่นด้วย `&&` เช่น จะเปลี่ยน directory (cd) แล้ว list ไฟล์ (ls) ก็ใช้ `&&` ได้
 
     ```bash
     cd bin && ls
     ```
 
-* Enter each command on a separate line. For example, you can write the list (ls) command on a new line after the change directory (cd) command.
+* ใส่แต่ละ command ในบรรทัดใหม่ เช่น เขียน ls ต่อจาก cd ในบรรทัดถัดไป
 
     ```bash
     cd bin
@@ -51,12 +51,12 @@ Use one of two methods to run multiple commands in one Execute Command node:
 
 #### Run cURL command
 
-You can also use the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) node to make a cURL request.
+คุณสามารถใช้ [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) node เพื่อส่ง cURL request ได้เช่นกัน
 
-If you want to run the curl command in the Execute Command node, you will have to build a Docker image based on the existing n8n image. The default n8n Docker image uses Alpine Linux. You will have to install the curl package.
+ถ้าต้องการรัน curl command ใน Execute Command node ต้อง build Docker image ใหม่จาก image n8n เดิม โดย image n8n ปกติใช้ Alpine Linux ต้องติดตั้ง curl เพิ่ม
 
-1. Create a file named `Dockerfile`.
-2. Add the below code snippet to the Dockerfile.
+1. สร้างไฟล์ชื่อ `Dockerfile`
+2. ใส่โค้ดนี้ใน Dockerfile
 
     ```shell
     FROM docker.n8n.io/n8nio/n8n
@@ -65,14 +65,14 @@ If you want to run the curl command in the Execute Command node, you will have t
     USER node
     ```
 
-3. In the same folder, execute the command below to build the Docker image.
+3. ในโฟลเดอร์เดียวกัน ให้รันคำสั่งนี้เพื่อ build Docker image
 
     ```shell
     docker build -t n8n-curl
     ```
 
-4. Replace the Docker image you used before. For example, replace `docker.n8n.io/n8nio/n8n` with `n8n-curl`.
-5. Run the newly created Docker image. You'll now be able to execute ssh using the Execute Command Node.
+4. เปลี่ยน Docker image ที่ใช้รัน n8n เดิม เช่น จาก `docker.n8n.io/n8nio/n8n` เป็น `n8n-curl`
+5. รัน Docker image ใหม่ที่สร้างไว้ จะสามารถใช้ ssh ผ่าน Execute Command Node ได้แล้ว
 
 ## Templates and examples
 
@@ -81,4 +81,4 @@ If you want to run the curl command in the Execute Command node, you will have t
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common Issues](/integrations/builtin/core-nodes/n8n-nodes-base.executecommand/common-issues.md).
+สำหรับคำถามหรือปัญหาที่เจอบ่อยและแนวทางแก้ไข ดูที่ [Common Issues](/integrations/builtin/core-nodes/n8n-nodes-base.executecommand/common-issues.md)

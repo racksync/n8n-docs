@@ -5,31 +5,31 @@ contentType: howto
 
 # Execution data
 
-Depending on your executions settings and volume, your n8n database can grow in size and run out of storage.
+ขึ้นอยู่กับการตั้งค่า execution และปริมาณงาน database ของ n8n อาจโตจนเต็ม storage ได้
 
-To avoid this, n8n recommends that you don't save unnecessary data, and enable pruning of old executions data.
+เพื่อป้องกันปัญหานี้ n8n แนะนำให้ไม่บันทึกข้อมูลที่ไม่จำเป็น และเปิดการลบ execution data เก่าอัตโนมัติ
 
-To do this, configure the corresponding [environment variables](/hosting/configuration/environment-variables/executions.md).
+ตั้งค่าด้วย [environment variables](/hosting/configuration/environment-variables/executions.md)
 
 ## Reduce saved data
 
 /// note | Configuration at workflow level
-You can also configure these settings on an individual workflow basis using the [workflow settings](/workflows/settings.md).
+ตั้งค่าเหล่านี้ได้ในแต่ละ workflow ด้วย [workflow settings](/workflows/settings.md)
 ///
-You can select which executions data n8n saves. For example, you can save only executions that result in an `Error`.
+คุณสามารถเลือกได้ว่า n8n จะบันทึก execution data แบบไหน เช่น บันทึกเฉพาะ execution ที่ error
 
 ```sh
 # npm
-# Save executions ending in errors
+# บันทึก execution ที่ error
 export EXECUTIONS_DATA_SAVE_ON_ERROR=all
 
-# Save successful executions
+# บันทึก execution ที่สำเร็จ
 export EXECUTIONS_DATA_SAVE_ON_SUCCESS=all
 
-# Don't save node progress for each execution
+# ไม่บันทึก node progress ของแต่ละ execution
 export EXECUTIONS_DATA_SAVE_ON_PROGRESS=false
 
-# Don't save manually launched executions
+# ไม่บันทึก execution ที่รันแบบ manual
 export EXECUTIONS_DATA_SAVE_MANUAL_EXECUTIONS=false
 
 ```
@@ -58,19 +58,19 @@ n8n:
 
 ## Enable data pruning
 
-You can enable data pruning to automatically delete finished executions after a given time. If you don't set `EXECUTIONS_DATA_MAX_AGE`, 336 hours (14 days) is the default.
+คุณสามารถเปิดการลบ execution ที่เสร็จแล้วอัตโนมัติหลังเวลาที่กำหนด ถ้าไม่ตั้ง `EXECUTIONS_DATA_MAX_AGE` ค่า default คือ 336 ชั่วโมง (14 วัน)
 
-You can choose to prune finished executions data before the time set in `EXECUTIONS_DATA_MAX_AGE`, using `EXECUTIONS_DATA_PRUNE_MAX_COUNT`. This sets a maximum number of executions to store in the database. Once you reach the limit, n8n starts to delete the oldest execution records. This can help with database performance issues, especially if you use SQLite. The database size can still exceed the limit you set: old executions that haven't finished running don't get deleted, even if they would otherwise be subject to deletion.
+คุณสามารถเลือกให้ลบ execution ก่อนถึงเวลาที่ตั้งไว้ โดยใช้ `EXECUTIONS_DATA_PRUNE_MAX_COUNT` เพื่อกำหนดจำนวน execution สูงสุดที่เก็บใน database ถ้าเกิน n8n จะลบ execution เก่าที่สุด ช่วยให้ database ทำงานเร็วขึ้น โดยเฉพาะถ้าใช้ SQLite ขนาด database อาจเกิน limit ที่ตั้งไว้ได้ถ้ามี execution ที่ยังไม่เสร็จ
 
 ```sh
 # npm
-# Activate automatic data pruning
+# เปิดการลบ execution อัตโนมัติ
 export EXECUTIONS_DATA_PRUNE=true
 
-# Number of hours after execution that n8n deletes data
+# จำนวนชั่วโมงหลัง execution ที่ n8n จะลบข้อมูล
 export EXECUTIONS_DATA_MAX_AGE=168
 
-# Number of executions to store
+# จำนวน execution ที่เก็บใน database
 export EXECUTIONS_DATA_PRUNE_MAX_COUNT=50000
 ```
 
@@ -94,7 +94,7 @@ n8n:
 ```
 
 /// note | SQLite
-If you run n8n using the default SQLite database, the disk space of any pruned data isn't automatically freed up but rather reused for future executions data. To free up this space configure the `DB_SQLITE_VACUUM_ON_STARTUP` [environment variable](/hosting/configuration/environment-variables/database.md#sqlite) or manually run the [VACUUM](https://www.sqlite.org/lang_vacuum.html){:target=_blank .external-link} operation.
+ถ้าใช้ n8n กับ SQLite database พื้นที่ disk ของข้อมูลที่ถูกลบจะไม่ถูกคืนทันทีแต่จะถูกใช้ซ้ำสำหรับ execution ใหม่ ถ้าอยากคืนพื้นที่ให้ตั้ง `DB_SQLITE_VACUUM_ON_STARTUP` [environment variable](/hosting/configuration/environment-variables/database.md#sqlite) หรือรัน [VACUUM](https://www.sqlite.org/lang_vacuum.html){:target=_blank .external-link} เอง
 ///
 
 --8<-- "_snippets/self-hosting/scaling/binary-data-pruning.md"

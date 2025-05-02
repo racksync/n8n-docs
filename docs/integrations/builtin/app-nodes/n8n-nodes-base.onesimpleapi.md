@@ -8,12 +8,12 @@ contentType: [integration, reference]
 <!-- linting off because 'simple' isn't something I want to add to accept.txt -->
 # One Simple API node
 
-Use the One Simple API node to automate work in One Simple API, and integrate One Simple API with other applications. n8n has built-in support for a wide range of One Simple API features, including getting profiles, retrieving information, and generating utilities. 
+ใช้ One Simple API node เพื่อทำงานอัตโนมัติใน One Simple API และเชื่อมต่อกับแอปอื่น ๆ. n8n รองรับฟีเจอร์ของ One Simple API เช่น การดึงข้อมูลโปรไฟล์, การดึงข้อมูล และการสร้าง utility ต่าง ๆ
 
-On this page, you'll find a list of operations the One Simple API node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ One Simple API node รองรับ พร้อมลิงก์สำหรับข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [One Simple API credentials](/integrations/builtin/credentials/onesimpleapi.md) for guidance on setting up authentication. 
+ดู [One Simple API credentials](/integrations/builtin/credentials/onesimpleapi.md) เพื่อดูวิธีการตั้งค่า authentication
 ///
 
 ## Operations
@@ -40,6 +40,6 @@ Refer to [One Simple API credentials](/integrations/builtin/credentials/onesimpl
 
 ## Related resources
 
-Refer to [One Simple API's documentation](https://onesimpleapi.com/docs){:target=_blank .external-link} for more information about the service.
+ดู [One Simple API's documentation](https://onesimpleapi.com/docs){:target=_blank .external-link} เพื่อข้อมูลเพิ่มเติมเกี่ยวกับบริการ
 
 <!-- vale on -->

@@ -8,12 +8,12 @@ priority: medium
 
 # Google Cloud Firestore node
 
-Use the Google Cloud Firestore node to automate work in Google Cloud Firestore, and integrate Google Cloud Firestore with other applications. n8n has built-in support for a wide range of Google Cloud Firestore features, including creating, deleting, and getting documents. 
+ใช้ Google Cloud Firestore node เพื่อทำงานอัตโนมัติใน Google Cloud Firestore และเชื่อมต่อ Google Cloud Firestore กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Google Cloud Firestore หลายอย่าง เช่น การสร้าง ลบ และดึงข้อมูล documents
 
-On this page, you'll find a list of operations the Google Cloud Firestore node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Google Cloud Firestore node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Google credentials](/integrations/builtin/credentials/google/index.md) for guidance on setting up authentication. 
+โปรดดู [Google credentials](/integrations/builtin/credentials/google/index.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

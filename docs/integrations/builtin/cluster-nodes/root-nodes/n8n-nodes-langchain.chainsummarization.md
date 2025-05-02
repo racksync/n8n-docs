@@ -8,31 +8,31 @@ priority: high
 
 # Summarization Chain node
 
-Use the Summarization Chain node to summarize multiple documents.
+ใช้ Summarization Chain node เพื่อสรุปเอกสาร (documents) หลายฉบับ
 
-On this page, you'll find the node parameters for the Summarization Chain node, and links to more resources.
+ในหน้านี้ คุณจะพบ node parameters สำหรับ Summarization Chain node และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 ## Node parameters
 
-Choose the type of data you need to summarize in **Data to Summarize**. The data type you choose determines the other node parameters.
+เลือกประเภทข้อมูลที่คุณต้องการสรุปใน **Data to Summarize** ประเภทข้อมูลที่คุณเลือกจะกำหนด node parameters อื่นๆ
 
-* **Use Node Input (JSON)** and **Use Node Input (Binary)**: summarize the data coming into the node from the workflow. 
-	* You can configure the **Chunking Strategy**: choose what strategy to use to define the data chunk sizes.
-		* If you choose **Simple (Define Below)** you can then set **Characters Per Chunk** and **Chunk Overlap (Characters)**.
-		* Choose **Advanced** if you want to connect a splitter sub-node that provides more configuration options.
-* **Use Document Loader**: summarize data provided by a document loader sub-node.
+*   **Use Node Input (JSON)** และ **Use Node Input (Binary)**: สรุปข้อมูลที่เข้ามาใน node จาก workflow
+    *   คุณสามารถกำหนดค่า **Chunking Strategy**: เลือกกลยุทธ์ที่จะใช้ในการกำหนดขนาด chunk ของข้อมูล
+        *   หากคุณเลือก **Simple (Define Below)** คุณสามารถตั้งค่า **Characters Per Chunk** และ **Chunk Overlap (Characters)** ได้
+        *   เลือก **Advanced** หากคุณต้องการเชื่อมต่อ splitter sub-node ที่มีตัวเลือกการกำหนดค่าเพิ่มเติม
+*   **Use Document Loader**: สรุปข้อมูลที่มาจาก document loader sub-node
 
 ## Node Options
 
-You can configure the summarization method and prompts. Select **Add Option** > **Summarization Method and Prompts**.
+คุณสามารถกำหนดค่า summarization method และ prompts ได้ เลือก **Add Option** > **Summarization Method and Prompts**
 
-Options in **Summarization Method**:
+ตัวเลือกใน **Summarization Method**:
 
-* **Map Reduce**: this is the recommended option. Learn more about [Map Reduce](https://js.langchain.com/v0.1/docs/modules/chains/document/map_reduce/){:target=_blank .external-link} in the LangChain documentation.
-* **Refine**: learn more about [Refine](https://js.langchain.com/v0.1/docs/modules/chains/document/refine/){:target=_blank .external-link} in the LangChain documentation.
-* **Stuff**: learn more about [Stuff](https://js.langchain.com/v0.1/docs/modules/chains/document/stuff/){:target=_blank .external-link} in the LangChain documentation.
+*   **Map Reduce**: นี่คือตัวเลือกที่แนะนำ เรียนรู้เพิ่มเติมเกี่ยวกับ [Map Reduce](https://js.langchain.com/v0.1/docs/modules/chains/document/map_reduce/){:target=_blank .external-link} ในเอกสาร LangChain
+*   **Refine**: เรียนรู้เพิ่มเติมเกี่ยวกับ [Refine](https://js.langchain.com/v0.1/docs/modules/chains/document/refine/){:target=_blank .external-link} ในเอกสาร LangChain
+*   **Stuff**: เรียนรู้เพิ่มเติมเกี่ยวกับ [Stuff](https://js.langchain.com/v0.1/docs/modules/chains/document/stuff/){:target=_blank .external-link} ในเอกสาร LangChain
 
-You can customize the **Individual Summary Prompts** and the **Final Prompt to Combine**. There are examples in the node. You must include the `"{text}"` placeholder.
+คุณสามารถปรับแต่ง **Individual Summary Prompts** และ **Final Prompt to Combine** ได้ มีตัวอย่างอยู่ใน node คุณต้องใส่ placeholder `"{text}"`
 
 ## Templates and examples
 
@@ -41,7 +41,7 @@ You can customize the **Individual Summary Prompts** and the **Final Prompt to C
 
 ## Related resources
 
-Refer to [LangChain's documentation on summarization](https://js.langchain.com/docs/tutorials/summarization/){:target=_blank .external-link} for more information about the service.
+อ้างอิง [เอกสารของ LangChain เกี่ยวกับการสรุป](https://js.langchain.com/docs/tutorials/summarization/){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการ
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

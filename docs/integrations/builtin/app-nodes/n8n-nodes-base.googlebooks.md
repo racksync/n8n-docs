@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Google Books node
 
-Use the Google Books node to automate work in Google Books, and integrate Google Books with other applications. n8n has built-in support for a wide range of Google Books features, including retrieving a specific bookshelf resource for the specified user, adding volume to a bookshelf, and getting volume.
+ใช้ Google Books node เพื่อทำงานอัตโนมัติใน Google Books และเชื่อมต่อ Google Books กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Google Books หลายอย่าง เช่น การดึงข้อมูล bookshelf resource ที่ระบุสำหรับผู้ใช้ที่ระบุ, การเพิ่ม volume ไปยัง bookshelf, และการดึงข้อมูล volume
 
-On this page, you'll find a list of operations the Google Books node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Google Books node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Google credentials](/integrations/builtin/credentials/google/index.md) for guidance on setting up authentication. 
+โปรดดู [Google credentials](/integrations/builtin/credentials/google/index.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations

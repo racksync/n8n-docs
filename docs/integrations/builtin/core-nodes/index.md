@@ -5,7 +5,7 @@ contentType: overview
 
 # Core nodes library
 
-This section provides information about n8n's core [nodes](/glossary.md#node-n8n).
+หน้านี้รวมข้อมูลเกี่ยวกับ [nodes](/glossary.md#node-n8n) หลักของ n8n
 
 
 

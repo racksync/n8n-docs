@@ -1,19 +1,19 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Elasticsearch node documentation
-description: Learn how to use the Elasticsearch node in n8n. Follow technical documentation to integrate Elasticsearch node into your workflows.
+description: เรียนรู้วิธีการใช้ Elasticsearch node ใน n8n ทำตามเอกสารทางเทคนิคเพื่อรวม Elasticsearch node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 priority: medium
 ---
 
 # Elasticsearch node
 
-Use the Elasticsearch node to automate work in Elasticsearch, and integrate Elasticsearch with other applications. n8n has built-in support for a wide range of Elasticsearch features, including creating, updating, deleting, and getting documents and indexes. 
+ใช้ Elasticsearch node เพื่อทำงานอัตโนมัติใน Elasticsearch และเชื่อมต่อ Elasticsearch กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Elasticsearch หลายอย่าง เช่น การสร้าง อัปเดต ลบ และดึงข้อมูล documents และ indexes
 
-On this page, you'll find a list of operations the Elasticsearch node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Elasticsearch node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Elasticsearch credentials](/integrations/builtin/credentials/elasticsearch.md) for guidance on setting up authentication. 
+โปรดดู [Elasticsearch credentials](/integrations/builtin/credentials/elasticsearch.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

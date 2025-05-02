@@ -8,12 +8,12 @@ priority: medium
 
 # FileMaker node
 
-Use the FileMaker node to automate work in FileMaker, and integrate FileMaker with other applications. n8n has built-in support for a wide range of FileMaker features, including creating, finding, getting, editing, and duplicating files.
+ใช้ FileMaker node เพื่อทำงานอัตโนมัติใน FileMaker และเชื่อมต่อ FileMaker กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ FileMaker หลายอย่าง เช่น การสร้าง ค้นหา ดึงข้อมูล แก้ไข และทำซ้ำ files
 
-On this page, you'll find a list of operations the FileMaker node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ FileMaker node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [FileMaker credentials](/integrations/builtin/credentials/filemaker.md) for guidance on setting up authentication. 
+โปรดดู [FileMaker credentials](/integrations/builtin/credentials/filemaker.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

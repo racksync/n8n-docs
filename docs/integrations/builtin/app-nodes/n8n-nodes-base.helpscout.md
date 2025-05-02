@@ -1,18 +1,18 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Help Scout node documentation
-description: Learn how to use the Help Scout node in n8n. Follow technical documentation to integrate Help Scout node into your workflows.
+description: เรียนรู้วิธีการใช้ Help Scout node ใน n8n ทำตามเอกสารทางเทคนิคเพื่อรวม Help Scout node เข้ากับเวิร์กโฟลว์ของคุณ
 contentType: [integration, reference]
 ---
 
 # Help Scout node
 
-Use the Help Scout node to automate work in Help Scout, and integrate Help Scout with other applications. n8n has built-in support for a wide range of Help Scout features, including creating, updating, deleting, and getting conversations, and customers.
+ใช้ Help Scout node เพื่อทำงานอัตโนมัติใน Help Scout และเชื่อมต่อ Help Scout กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Help Scout หลายอย่าง เช่น การสร้าง อัปเดต ลบ และดึงข้อมูล conversations และ customers
 
-On this page, you'll find a list of operations the Help Scout node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Help Scout node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Help Scout credentials](/integrations/builtin/credentials/helpscout.md) for guidance on setting up authentication. 
+โปรดดู [Help Scout credentials](/integrations/builtin/credentials/helpscout.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations

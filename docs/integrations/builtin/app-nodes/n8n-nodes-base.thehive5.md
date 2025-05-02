@@ -7,16 +7,13 @@ contentType: [integration, reference]
 
 # TheHive 5 node
 
-Use the TheHive 5 node to automate work in TheHive, and integrate TheHive with other applications. n8n has built-in support for a wide range of TheHive features, including creating alerts, counting tasks logs, cases, and observables. 
-
-On this page, you'll find a list of operations the TheHive node supports and links to more resources.
+ใช้ TheHive 5 node เพื่อช่วยงานอัตโนมัติใน TheHive และเชื่อมต่อ TheHive กับแอปพลิเคชันอื่น ๆ โดย n8n มีการสนับสนุนฟีเจอร์ต่าง ๆ เช่น การสร้าง alert, การนับ log ของ task, case และ observables
 
 /// note | TheHive and TheHive 5
-n8n provides two nodes for TheHive. Use this node (TheHive 5) if you want to use TheHive's version 5 API. If you want to use version 3 or 4, use [TheHive](/integrations/builtin/app-nodes/n8n-nodes-base.thehive.md).
-///
+n8n มี node สำหรับ TheHive อยู่ 2 ตัว ใช้ node นี้ (TheHive 5) หากต้องการใช้ API ของ TheHive เวอร์ชัน 5 หากต้องการใช้เวอร์ชัน 3 หรือ 4 ให้ใช้ [TheHive](/integrations/builtin/app-nodes/n8n-nodes-base.thehive.md).
+
 /// note | Credentials
-Refer to [TheHive credentials](/integrations/builtin/credentials/thehive5.md) for guidance on setting up authentication. 
-///
+ดู [TheHive credentials](/integrations/builtin/credentials/thehive5.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 
 ## Operations
 
@@ -86,4 +83,4 @@ Refer to [TheHive credentials](/integrations/builtin/credentials/thehive5.md) fo
 
 n8n provides a trigger node for TheHive. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.thehive5trigger.md).
 
-Refer to TheHive's [documentation](https://docs.strangebee.com/){:target=_blank .external-link} for more information about the service.
+ดู [documentation](https://docs.strangebee.com/){:target=_blank .external-link} ของ TheHive สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้.

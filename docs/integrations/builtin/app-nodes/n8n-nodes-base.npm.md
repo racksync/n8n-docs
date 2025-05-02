@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # npm node
 
-Use the npm node to automate work in npm, and integrate npm with other applications.
+ใช้ npm node เพื่อทำงานอัตโนมัติใน npm และเชื่อมต่อกับแอปอื่น ๆ
 
-On this page, you'll find a list of operations the npm node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ npm node รองรับ พร้อมลิงก์สำหรับข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [npm credentials](/integrations/builtin/credentials/npm.md) for guidance on setting up authentication. 
+ดู [npm credentials](/integrations/builtin/credentials/npm.md) เพื่อดูวิธีการตั้งค่า authentication
 ///
 
 ## Operations
@@ -32,6 +32,6 @@ Refer to [npm credentials](/integrations/builtin/credentials/npm.md) for guidanc
 
 ## Related resources
 
-Refer to [npm's documentation](https://docs.npmjs.com/){:target=_blank .external-link} for more information about the service.
+ดู [npm's documentation](https://docs.npmjs.com/){:target=_blank .external-link} เพื่อข้อมูลเพิ่มเติมเกี่ยวกับบริการ
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

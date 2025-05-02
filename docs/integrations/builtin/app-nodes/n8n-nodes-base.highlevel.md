@@ -1,18 +1,18 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: HighLevel node documentation
-description: Learn how to use the HighLevel node in n8n. Follow technical documentation to integrate HighLevel node into your workflows.
+description: เรียนรู้วิธีการใช้ HighLevel node ใน n8n ทำตามเอกสารทางเทคนิคเพื่อรวม HighLevel node เข้ากับเวิร์กโฟลว์ของคุณ
 contentType: [integration, reference]
 ---
 
 # HighLevel node
 
-Use the HighLevel node to automate work in HighLevel, and integrate HighLevel with other applications. n8n has built-in support for a wide range of HighLevel features, including creating, updating, deleting, and getting contacts, opportunities, and tasks, as well as booking appointments and getting free time slots in calendars. 
+ใช้ HighLevel node เพื่อทำงานอัตโนมัติใน HighLevel และเชื่อมต่อ HighLevel กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ HighLevel หลายอย่าง เช่น การสร้าง อัปเดต ลบ และดึงข้อมูล contacts, opportunities, tasks รวมถึงการจองนัดหมายและดูเวลาว่างใน calendar
 
-On this page, you'll find a list of operations the HighLevel node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ HighLevel node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [HighLevel credentials](/integrations/builtin/credentials/highlevel.md) for guidance on setting up authentication. 
+โปรดดู [HighLevel credentials](/integrations/builtin/credentials/highlevel.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations
@@ -46,6 +46,6 @@ Refer to [HighLevel credentials](/integrations/builtin/credentials/highlevel.md)
 
 ## Related resources
 
-Refer to [HighLevel's API documentation and support forums](https://help.gohighlevel.com/support/solutions/articles/48001060529-highlevel-api){:target=_blank .external-link} for more information about the service.
+โปรดดู [HighLevel's API documentation and support forums](https://help.gohighlevel.com/support/solutions/articles/48001060529-highlevel-api){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

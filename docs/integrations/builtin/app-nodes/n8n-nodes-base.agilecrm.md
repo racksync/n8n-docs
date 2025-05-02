@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Agile CRM node
 
-Use the Agile CRM node to automate work in Agile CRM, and integrate Agile CRM with other applications. n8n has built-in support for a wide range of Agile CRM features, including creating, getting, updating and deleting companies, contracts, and deals.
+ใช้ Agile CRM node เพื่อทำงานอัตโนมัติใน Agile CRM และผสานรวม Agile CRM กับแอปพลิเคชันอื่นๆ n8n มีการรองรับฟีเจอร์หลากหลายของ Agile CRM ในตัว รวมถึงการสร้าง, การดึงข้อมูล, การอัปเดต และการลบ companies, contracts, และ deals
 
-On this page, you'll find a list of operations the Agile CRM node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Agile CRM node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [Agile CRM credentials](/integrations/builtin/credentials/agilecrm.md) for guidance on setting up authentication. 
+อ้างอิง [Agile CRM credentials](/integrations/builtin/credentials/agilecrm.md) สำหรับคำแนะนำในการตั้งค่าการยืนยันตัวตน
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

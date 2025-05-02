@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # LingvaNex node
 
-Use the LingvaNex node to automate work in LingvaNex, and integrate LingvaNex with other applications. n8n has built-in support for translating data with LingvaNex.
+ใช้ LingvaNex node ในการทำงานอัตโนมัติใน LingvaNex และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ โดย n8n รองรับการแปลข้อมูลโดยใช้ LingvaNex.
 
-On this page, you'll find a list of operations the LingvaNex node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ LingvaNex node รองรับและลิงก์ไปยังข้อมูลเพิ่มเติม.
 
 /// note | Credentials
-Refer to [LingvaNex credentials](/integrations/builtin/credentials/lingvanex.md) for guidance on setting up authentication. 
+ดู [LingvaNex credentials](/integrations/builtin/credentials/lingvanex.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations

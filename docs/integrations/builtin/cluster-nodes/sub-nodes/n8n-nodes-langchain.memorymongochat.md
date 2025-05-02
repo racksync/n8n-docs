@@ -7,26 +7,26 @@ contentType: [integration, reference]
 
 # MongoDB Chat Memory node
 
-Use the MongoDB Chat Memory node to use MongoDB as a [memory](/glossary.md#ai-memory) server for storing chat history.
+ใช้ MongoDB Chat Memory node เพื่อใช้ MongoDB เป็น [memory](/glossary.md#ai-memory) server สำหรับเก็บประวัติแชท
 
-On this page, you'll find a list of operations the MongoDB Chat Memory node supports, and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ MongoDB Chat Memory node รองรับ พร้อมลิงก์ไปยัง resource อื่นๆ ที่เกี่ยวข้อง
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/mongodb.md).
+คุณสามารถดูข้อมูลการเชื่อมต่อสำหรับ node นี้ได้ที่ [ที่นี่](/integrations/builtin/credentials/mongodb.md)
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node parameters
 
-* **Session Key**: Enter the key to use to store the memory in the workflow data.
-* **Collection Name**: Enter the name of the collection to store the chat history in. The system will create the collection if it doesn't exist.
-* **Database Name**: Enter the name of the database to store the chat history in. If not provided, the database from credentials will be used.
-* **Context Window Length**: Enter the number of previous interactions to consider for context.
+* **Session Key**: ใส่ key ที่จะใช้เก็บ memory ใน workflow data
+* **Collection Name**: ใส่ชื่อ collection ที่จะใช้เก็บประวัติแชท ถ้า collection ยังไม่มี ระบบจะสร้างให้
+* **Database Name**: ใส่ชื่อ database ที่จะใช้เก็บประวัติแชท ถ้าไม่ใส่จะใช้ database จาก credentials
+* **Context Window Length**: ใส่จำนวน interactions ก่อนหน้าที่จะนำมาใช้เป็น context
 
 ## Related resources
 
-Refer to [LangChain's MongoDB Chat Message History documentation](https://js.langchain.com/docs/integrations/memory/mongodb){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมได้ที่ [LangChain's MongoDB Chat Message History documentation](https://js.langchain.com/docs/integrations/memory/mongodb){:target=_blank .external-link}
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 

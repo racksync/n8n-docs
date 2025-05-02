@@ -8,42 +8,42 @@ priority: high
 
 # Split Out
 
-Use the Split Out node to separate a single data item containing a list into multiple items. For example, a list of customers, and you want to split them so that you have an item for each customer.
+ใช้ Split Out node เพื่อแยกข้อมูลที่เป็น list ใน item เดียวออกมาเป็นหลายๆ item เช่น ถ้ามี list ของลูกค้า แล้วอยากแยกให้แต่ละลูกค้าเป็น item ของตัวเอง
 
 ## Node parameters
 
-Configure this node using the following parameters.
+ตั้งค่า node นี้ด้วย parameters ต่อไปนี้
 
 ### Field to Split Out
 
-Enter the field containing the list you want to separate out into individual items.
+ใส่ชื่อ field ที่มี list ที่อยากแยกออกมาเป็น item เดี่ยวๆ
 
-If you're working with binary data inputs, use `$binary` in an expression to set the field to split out.
+ถ้าทำงานกับ binary data input ให้ใช้ `$binary` ใน expression เพื่อกำหนด field ที่จะ split out
 
 ### Include
 
-Select whether and how you want n8n to keep any other fields from the input data with each new individual item.
+เลือกว่าจะให้ n8n เก็บ field อื่นๆ จาก input data ไว้กับแต่ละ item ใหม่ยังไง
 
-You can select:
+คุณเลือกได้ว่า:
 
-* **No Other Fields**: No other fields will be included.
-* **All Other Fields**: All other fields will be included.
-* **Selected Other Fields**: Only the selected fields will be included.
-    * **Fields to Include**: Enter a comma separated list of the fields you want to include.
+* **No Other Fields**: จะไม่รวม field อื่นๆ เลย
+* **All Other Fields**: จะรวม field อื่นๆ ทั้งหมด
+* **Selected Other Fields**: จะรวมเฉพาะ field ที่เลือกไว้
+    * **Fields to Include**: ใส่ชื่อ field ที่อยากรวม โดยคั่นด้วย comma
 
 ## Node options
 
 ### Disable Dot Notation
 
-By default, n8n enables dot notation to reference child fields in the format `parent.child`. Use this option to disable dot notation (turned on) or to continue using dot (turned off).
+โดยปกติ n8n จะเปิดใช้ dot notation เพื่ออ้างถึง child field ในรูปแบบ `parent.child` ถ้าอยากปิดการใช้ dot notation ให้เปิด option นี้ (turned on) หรือถ้าอยากใช้ dot notation ต่อไปให้ปิด (turned off)
 
 ### Destination Field Name
 
-Enter the field in the output where the split field contents should go.
+ใส่ชื่อ field ใน output ที่จะเก็บค่าที่ split ออกมา
 
 ### Include Binary
 
-Choose whether to include binary data from the input in the new output (turned on) or not (turned off).
+เลือกว่าจะรวม binary data จาก input ใน output ใหม่ด้วยหรือไม่ (เปิด = รวม, ปิด = ไม่รวม)
 
 ## Templates and examples
 

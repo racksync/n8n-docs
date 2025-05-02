@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # QuickBooks Online node
 
-Use the QuickBooks node to automate work in QuickBooks, and integrate QuickBooks with other applications. n8n has built-in support for a wide range of QuickBooks features, including creating, updating, deleting, and getting bills, customers, employees, estimates, and invoices. 
+ใช้ QuickBooks node ในการอัตโนมัติงานใน QuickBooks และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ. n8n มีการสนับสนุนฟีเจอร์หลากหลายของ QuickBooks เช่น การสร้าง, อัปเดต, ลบ และดึงข้อมูล bills, customers, employees, estimates และ invoices.
 
-On this page, you'll find a list of operations the QuickBooks node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ QuickBooks node รองรับ พร้อมทั้งลิงก์ไปยัง resources เพิ่มเติม.
 
 /// note | Credentials
-Refer to [QuickBooks credentials](/integrations/builtin/credentials/quickbooks.md) for guidance on setting up authentication. 
+ดู [QuickBooks credentials](/integrations/builtin/credentials/quickbooks.md) สำหรับคำแนะนำในการตั้งค่า authentication. 
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

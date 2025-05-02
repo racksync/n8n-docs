@@ -15,27 +15,26 @@ hide:
 
 # If
 
-Use the If node to split a workflow conditionally based on comparison operations.
+ใช้ If node เพื่อแยก workflow ตามเงื่อนไขที่กำหนดโดยใช้การเปรียบเทียบ
 
 ## Add conditions
 
-Create comparison **Conditions** for your If node.
+สร้าง **Conditions** สำหรับเปรียบเทียบใน If node
 
-- Use the data type dropdown to select the data type and comparison operation type for your condition. For example, to filter for dates after a particular date, select **Date & Time > is after**.
-- The fields and values to enter into the condition change based on the data type and comparison you select. Refer to [Available data type comparisons](#available-data-type-comparisons) for a full list of all comparisons by data type.
+- ใช้ dropdown เลือก data type และประเภทการเปรียบเทียบสำหรับเงื่อนไข เช่น ถ้าต้องการกรองวันที่ที่หลังจากวันที่ที่กำหนด ให้เลือก **Date & Time > is after**
+- ช่องกรอกข้อมูลและค่าที่ต้องใส่ในเงื่อนไขจะเปลี่ยนไปตาม data type และการเปรียบเทียบที่เลือก ดูรายละเอียดเพิ่มเติมได้ที่ [Available data type comparisons](#available-data-type-comparisons) สำหรับรายการเปรียบเทียบทั้งหมดในแต่ละ data type
 
-Select **Add condition** to create more conditions.
+เลือก **Add condition** เพื่อเพิ่มเงื่อนไขใหม่
 
 ### Combining conditions
 
-You can choose to keep data:
+คุณสามารถเลือกได้ว่าจะเก็บข้อมูลไว้เมื่อ:
 
-* When it meets all conditions: Create two or more conditions and select **AND** in the dropdown between them.
-* When it meets any of the conditions: Create two or more conditions and select **OR** in the dropdown between them.
+* ตรงตามทุกเงื่อนไข: สร้างเงื่อนไขสองข้อขึ้นไปแล้วเลือก **AND** ใน dropdown ระหว่างเงื่อนไข
+* ตรงตามเงื่อนไขใดเงื่อนไขหนึ่ง: สร้างเงื่อนไขสองข้อขึ้นไปแล้วเลือก **OR** ใน dropdown ระหว่างเงื่อนไข
 
 ## Templates and examples
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
 [[ templatesWidget(page.title, 'if') ]]
 
 ## Branch execution with If and Merge nodes
@@ -44,9 +43,9 @@ You can choose to keep data:
 
 ## Related resources
 
-Refer to [Splitting with conditionals](/flow-logic/splitting.md) for more information on using conditionals to create complex logic in n8n.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับการใช้เงื่อนไขเพื่อสร้าง logic ที่ซับซ้อนใน n8n ได้ที่ [Splitting with conditionals](/flow-logic/splitting.md)
 
-If you need more than two conditional outputs, use the [Switch node](/integrations/builtin/core-nodes/n8n-nodes-base.switch.md).
+ถ้าต้องการ output มากกว่าสองทาง ให้ใช้ [Switch node](/integrations/builtin/core-nodes/n8n-nodes-base.switch.md)
 
 --8<-- "_snippets/integrations/builtin/core-nodes/data-types.md"
 

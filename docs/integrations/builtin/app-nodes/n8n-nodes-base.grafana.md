@@ -1,18 +1,18 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Grafana node documentation
-description: Learn how to use the Grafana node in n8n. Follow technical documentation to integrate Grafana node into your workflows.
+description: เรียนรู้วิธีการใช้ Grafana node ใน n8n ทำตามเอกสารทางเทคนิคเพื่อรวม Grafana node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 ---
 
 # Grafana node
 
-Use the Grafana node to automate work in Grafana, and integrate Grafana with other applications. n8n has built-in support for a wide range of Grafana features, including creating, updating, deleting, and getting dashboards, teams, and users.
+ใช้ Grafana node เพื่อทำงานอัตโนมัติใน Grafana และเชื่อมต่อ Grafana กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Grafana หลายอย่าง เช่น การสร้าง อัปเดต ลบ และดึงข้อมูล dashboards, teams, และ users
 
-On this page, you'll find a list of operations the Grafana node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Grafana node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Grafana credentials](/integrations/builtin/credentials/grafana.md) for guidance on setting up authentication. 
+โปรดดู [Grafana credentials](/integrations/builtin/credentials/grafana.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

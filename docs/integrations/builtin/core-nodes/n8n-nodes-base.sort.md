@@ -8,44 +8,43 @@ priority: medium
 
 # Sort
 
-Use the Sort node to organize lists of items in a desired ordering, or generate a random selection.
+ใช้ Sort node เพื่อจัดเรียง (sort) รายการ item ตามลำดับที่ต้องการ หรือสุ่มเลือกข้อมูล
 
 /// note | Array sort behavior
-The Sort operation uses the default JavaScript operation where the elements to be sorted are converted into strings and their values compared. Refer to [Mozilla's guide to Array sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort){:target=_blank .external-link} to learn more.
+Sort operation จะใช้การ sort แบบ JavaScript ปกติ โดย element ที่จะ sort จะถูกแปลงเป็น string แล้วเปรียบเทียบกัน ดูรายละเอียดเพิ่มเติมได้ที่ [Mozilla's guide to Array sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort){:target=_blank .external-link}
 ///
 
 ## Node parameters
 
-Configure this node using the **Type** parameter.
+ตั้งค่า node นี้ด้วย parameter **Type**
 
-Use the dropdown to select how you want to input the sorting from these options.
+เลือกวิธีการ sort ได้จาก dropdown ดังนี้
 
 ### Simple
 
-Performs an ascending or descending sort using the selected fields.
+จะทำการ sort แบบ ascending หรือ descending ตาม field ที่เลือก
 
-When you select this **Type**:
+เมื่อเลือก **Type** นี้:
 
-* Use the **Add Field To Sort By** button to input the **Field Name**.
-* Select whether to use **Ascending** or **Descending** order.
+* ใช้ปุ่ม **Add Field To Sort By** เพื่อกรอก **Field Name**
+* เลือกว่าจะใช้ลำดับ **Ascending** หรือ **Descending**
 
 #### Simple options
 
-When you select **Simple** as the **Type**, you have the option to **Disable Dot Notation**. By default, n8n enables dot notation to reference child fields in the format `parent.child`. Use this option to disable dot notation (turned on) or to continue using dot (turned off).
+เมื่อเลือก **Simple** เป็น **Type** จะมี option ให้ **Disable Dot Notation** โดยปกติ n8n จะเปิด dot notation เพื่ออ้างถึง child field ในรูปแบบ `parent.child` สามารถปิด option นี้ได้ (เปิด/ปิด)
 
 ### Random
 
-Creates a random order in the list.
+สุ่มลำดับรายการใน list
 
 ### Code
 
-Input custom JavaScript code to perform the sort operation. This is a good option if a simple sort won't meet your needs.
+ใส่ JavaScript code เองเพื่อ custom การ sort เหมาะสำหรับกรณีที่ sort แบบ simple ไม่เพียงพอ
 
-Enter your custom JavaScript code in the **Code** input field.
+กรอก JavaScript code ในช่อง **Code**
 
 ## Templates and examples
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
 [[ templatesWidget(page.title, 'sort') ]]
 
 ## Related resources

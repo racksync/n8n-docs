@@ -7,35 +7,34 @@ contentType: [integration, reference]
 
 # AWS Bedrock Chat Model node
 
-The AWS Bedrock Chat Model node allows you use LLM models utilising AWS Bedrock platform.
+AWS Bedrock Chat Model node ช่วยให้คุณใช้งาน LLM models ผ่านแพลตฟอร์ม AWS Bedrock ได้ง่ายๆ
 
-On this page, you'll find the node parameters for the AWS Bedrock Chat Model node, and links to more resources.
+ในหน้านี้จะมีพารามิเตอร์ของ node AWS Bedrock Chat Model และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/aws.md).
+คุณสามารถดูข้อมูลการเชื่อมต่อสำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/aws.md)
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 	
 ## Node parameters
 
-* **Model**: Select the model that generates the completion.
+* **Model**: เลือกโมเดลที่ต้องการให้สร้างข้อความตอบกลับ
 
-Learn more about available models in the [Amazon Bedrock model documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/models-supported.html){:target=_blank .external-link}.
+ดูรายละเอียดโมเดลที่รองรับได้ที่ [Amazon Bedrock model documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/models-supported.html){:target=_blank .external-link}
 
 ## Node options
 
-* **Maximum Number of Tokens**: Enter the maximum number of tokens used, which sets the completion length.
-* **Sampling Temperature**: Use this option to control the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
+* **Maximum Number of Tokens**: กำหนดจำนวน tokens สูงสุดที่ใช้ ซึ่งจะเป็นการกำหนดความยาวของข้อความที่โมเดลจะตอบกลับ
+* **Sampling Temperature**: ปรับความสุ่มของการสร้างข้อความ ค่า temperature สูงจะทำให้โมเดลตอบหลากหลายมากขึ้น แต่ก็เสี่ยงต่อการตอบแบบหลุดประเด็น
 
 ## Templates and examples
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
 [[ templatesWidget(page.title, 'aws-bedrock-chat-model') ]]
 
 ## Related resources
 
-Refer to [LangChains's AWS Bedrock Chat Model documentation](https://js.langchain.com/docs/integrations/chat/bedrock/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมได้ที่ [LangChains's AWS Bedrock Chat Model documentation](https://js.langchain.com/docs/integrations/chat/bedrock/){:target=_blank .external-link}
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

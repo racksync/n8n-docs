@@ -8,10 +8,10 @@ priority: medium
 
 # JWT
 
-Work with JSON web tokens in your n8n workflows.
+ใช้งาน JSON web tokens ใน workflow ของ n8n ของคุณ
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/jwt.md).
+คุณสามารถดูข้อมูลการยืนยันตัวตนสำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/jwt.md).
 ///
 
 ## Operations
@@ -24,77 +24,77 @@ You can find authentication information for this node [here](/integrations/built
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
-* **Credential to connect with**: Select or create a [JWT credential](/integrations/builtin/credentials/jwt.md) to connect with.
-* **Token**: Enter the token to **Verify** or **Decode**.
-* If you select the **Sign** operation, you'll also have this parameter:
-    * **Use JSON to Build Payload**: When turned on, the node uses JSON to build the claims. The selection here influences what appears in the Payload Claims section.
+* **Credential to connect with**: เลือกหรือสร้าง [JWT credential](/integrations/builtin/credentials/jwt.md) เพื่อเชื่อมต่อ
+* **Token**: ใส่ token ที่ต้องการ **Verify** หรือ **Decode**
+* ถ้าเลือก operation **Sign** จะมี parameter เพิ่มเติมดังนี้:
+    * **Use JSON to Build Payload**: ถ้าเปิดใช้งาน node จะใช้ JSON ในการสร้าง claims การเลือกตรงนี้จะมีผลกับสิ่งที่แสดงในส่วน Payload Claims
 
 ## Payload Claims
 
-The node only displays payload claims if you select the **Sign** operation. What you see depends on what you select for **Use JSON to Build Payload**:
+node จะแสดง payload claims เฉพาะเมื่อเลือก operation **Sign** สิ่งที่เห็นจะขึ้นอยู่กับการเลือก **Use JSON to Build Payload**:
 
-* If you select **Use JSON to Build Payload**, this section displays a JSON editor where you can construct the claims.
-* If you don't select **Use JSON to Build Payload**, this section prompts you to **Add Claim**.
+* ถ้าเลือก **Use JSON to Build Payload** จะมี editor สำหรับใส่ claims แบบ JSON
+* ถ้าไม่เลือก จะมีปุ่ม **Add Claim** ให้เพิ่ม claims ทีละตัว
 
-You can add the following claims.
+คุณสามารถเพิ่ม claims ต่อไปนี้ได้
 
 ### Audience
 
-The **Audience** or `aud` claim identifies the intended recipients of the JWT.
+**Audience** หรือ `aud` claim ใช้ระบุผู้รับที่ JWT นี้ตั้งใจจะส่งถึง
 
-Refer to ["aud" (Audience) Claim](https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.3){:target=_blank .external-link} for more information.
+ดูข้อมูลเพิ่มเติมที่ ["aud" (Audience) Claim](https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.3){:target=_blank .external-link}
 
 ### Expires In
 
-The **Expires In** or `exp` claim identifies the time after which the JWT expires and must not be accepted for processing.
+**Expires In** หรือ `exp` claim ใช้ระบุเวลาหลังจากนั้น JWT จะหมดอายุและไม่ควรใช้งานต่อ
 
-Refer to ["exp" (Expiration Time) Claim](https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.4){:target=_blank .external-link} for more information.
+ดูข้อมูลเพิ่มเติมที่ ["exp" (Expiration Time) Claim](https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.4){:target=_blank .external-link}
 
 ### Issuer
 
-The **Issuer** or `iss` claim identifies the principal that issued the JWT.
+**Issuer** หรือ `iss` claim ใช้ระบุว่าใครเป็นผู้ออก JWT นี้
 
-Refer to ["iss" (Issuer) Claim](https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.1){:target=_blank .external-link} for more information.
+ดูข้อมูลเพิ่มเติมที่ ["iss" (Issuer) Claim](https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.1){:target=_blank .external-link}
 
 ### JWT ID
 
-The **JWT ID** or `jti` claim provides a unique identifier for the JWT.
+**JWT ID** หรือ `jti` claim ใช้ระบุรหัสเฉพาะของ JWT
 
-Refer to ["jti" (JWT ID) Claim](https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.7){:target=_blank .external-link} for more information.
+ดูข้อมูลเพิ่มเติมที่ ["jti" (JWT ID) Claim](https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.7){:target=_blank .external-link}
 
 ### Not Before
 
-The **Not Before** or `nbf` claim identifies the time before which the JWT must not be accepted for processing.
+**Not Before** หรือ `nbf` claim ใช้ระบุเวลาก่อนหน้านี้ที่ JWT จะยังไม่สามารถใช้งานได้
 
-Refer to ["nbf" (Not Before) Claim](https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.5){:target=_blank .external-link} for more information.
+ดูข้อมูลเพิ่มเติมที่ ["nbf" (Not Before) Claim](https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.5){:target=_blank .external-link}
 
 ### Subject
 
-The **Subject** or `sub` claim identifies the principal that's the subject of the JWT.
+**Subject** หรือ `sub` claim ใช้ระบุ subject ของ JWT นี้
 
-Refer to ["sub" (Subject) Claim](https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.2){:target=_blank .external-link} for more information.
+ดูข้อมูลเพิ่มเติมที่ ["sub" (Subject) Claim](https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.2){:target=_blank .external-link}
 
 ## Node options
 
 ### Decode node options
 
-The **Return Additional Info** toggle controls how much information the node returns.
+**Return Additional Info** toggle จะควบคุมว่าข้อมูลที่ node คืนค่าจะละเอียดแค่ไหน
 
-When turned on, the node returns the complete decoded token with information about the header and signature. When turned off, the node only returns the payload.
+ถ้าเปิด node จะคืนค่าข้อมูล token ที่ decode แล้วทั้งหมด รวมถึง header และ signature ถ้าปิด node จะคืนค่าเฉพาะ payload
 
 ### Sign node options
 
-Use the **Override Algorithm** control to select the algorithm to use for verifying the token. This algorithm will override the algorithm selected in the credentials.
+ใช้ **Override Algorithm** เพื่อเลือก algorithm ที่จะใช้ในการ verify token ซึ่งจะ override algorithm ที่ตั้งไว้ใน credentials
 
 ### Verify node options
 
-This operation includes several node options:
+operation นี้มี options หลายตัว:
 
-* **Return Additional Info**: This toggle controls how much information the node returns. When turned on, the node returns the complete decoded token with information about the header and signature. When turned off, the node only returns the payload.
-* **Ignore Expiration**: This toggle controls whether the node should ignore the token's expiration time claim (`exp`). Refer to ["exp" (Expiration Time) Claim](https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.4){:target=_blank .external-link} for more information.
-* **Ignore Not Before Claim**: This toggle controls whether to ignore the token's not before claim (`nbf`). Refer to ["nbf" (Not Before) Claim](https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.5){:target=_blank .external-link} for more information.
-* **Clock Tolerance**: Enter the number of seconds to tolerate when checking the `nbf` and `exp` claims. This allows you to deal with small clock differences among different servers. Refer to ["exp" (Expiration Time) Claim](https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.4){:target=_blank .external-link} for more information.
-* **Override Algorithm**: The algorithm to use for verifying the token. This algorithm will override the algorithm selected in the credentials.
+* **Return Additional Info**: toggle นี้ควบคุมว่าข้อมูลที่ node คืนค่าจะละเอียดแค่ไหน ถ้าเปิด node จะคืนค่าข้อมูล token ที่ decode แล้วทั้งหมด รวมถึง header และ signature ถ้าปิด node จะคืนค่าเฉพาะ payload
+* **Ignore Expiration**: toggle นี้ควบคุมว่า node จะละเลย claim หมดอายุ (`exp`) หรือไม่ ดูข้อมูลเพิ่มเติมที่ ["exp" (Expiration Time) Claim](https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.4){:target=_blank .external-link}
+* **Ignore Not Before Claim**: toggle นี้ควบคุมว่าจะละเลย claim `nbf` หรือไม่ ดูข้อมูลเพิ่มเติมที่ ["nbf" (Not Before) Claim](https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.5){:target=_blank .external-link}
+* **Clock Tolerance**: ใส่จำนวนวินาทีที่ยอมให้ต่างกันได้ตอนตรวจสอบ `nbf` และ `exp` เพื่อรองรับความคลาดเคลื่อนของเวลาระหว่าง server ดูข้อมูลเพิ่มเติมที่ ["exp" (Expiration Time) Claim](https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.4){:target=_blank .external-link}
+* **Override Algorithm**: เลือก algorithm ที่จะใช้ในการ verify token ซึ่งจะ override algorithm ที่ตั้งไว้ใน credentials
 
 ## Templates and examples
 

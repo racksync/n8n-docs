@@ -10,10 +10,16 @@ priority: high
 
 Use the Microsoft Outlook node to automate work in Microsoft Outlook, and integrate Microsoft Outlook with other applications. n8n has built-in support for a wide range of Microsoft Outlook features, including creating, updating, deleting, and getting folders, messages, and drafts. 
 
+ใช้ Microsoft Outlook node ในการทำงานอัตโนมัติใน Microsoft Outlook และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ โดย n8n รองรับการสร้าง, อัปเดต, ลบ และดึงข้อมูล folders, messages และ drafts.
+
 On this page, you'll find a list of operations the Microsoft Outlook node supports and links to more resources.
+
+ในหน้านี้ คุณจะพบรายการ operations ที่ Microsoft Outlook node รองรับและลิงก์ไปยังข้อมูลเพิ่มเติม.
 
 /// note | Credentials
 Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft.md) for guidance on setting up authentication.
+
+ดู [Microsoft credentials] สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

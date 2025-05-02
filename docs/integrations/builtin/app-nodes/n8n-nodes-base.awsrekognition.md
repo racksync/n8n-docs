@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # AWS Rekognition node
 
-Use the AWS Rekognition node to automate work in AWS Rekognition, and integrate AWS Rekognition with other applications. n8n has built-in support for a wide range of AWS Rekognition features, including analyzing images.
+ใช้ AWS Rekognition node เพื่อทำงานอัตโนมัติใน AWS Rekognition และผสานรวม AWS Rekognition กับแอปพลิเคชันอื่นๆ n8n มีการรองรับฟีเจอร์หลากหลายของ AWS Rekognition ในตัว รวมถึงการวิเคราะห์รูปภาพ
 
-On this page, you'll find a list of operations the AWS Rekognition node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ AWS Rekognition node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [AWS Rekognition credentials](/integrations/builtin/credentials/aws.md) for guidance on setting up authentication. 
+อ้างอิง [AWS Rekognition credentials](/integrations/builtin/credentials/aws.md) สำหรับคำแนะนำในการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations

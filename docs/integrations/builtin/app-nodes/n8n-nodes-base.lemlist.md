@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Lemlist node
 
-Use the Lemlist node to automate work in Lemlist, and integrate Lemlist with other applications. n8n has built-in support for a wide range of Lemlist features, including getting activities, teams and campaigns, as well as creating, updating, and deleting leads. 
+ใช้ Lemlist node ในการทำงานอัตโนมัติใน Lemlist และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ โดย n8n รองรับการดึง activities, teams และ campaigns รวมถึงการสร้าง, อัปเดต และลบ leads.
 
-On this page, you'll find a list of operations the Lemlist node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Lemlist node รองรับและลิงก์ไปยังข้อมูลเพิ่มเติม.
 
 /// note | Credentials
-Refer to [Lemlist credentials](/integrations/builtin/credentials/lemlist.md) for guidance on setting up authentication. 
+ดู [Lemlist credentials](/integrations/builtin/credentials/lemlist.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations

@@ -8,13 +8,10 @@ priority: medium
 
 # Trello node
 
-Use the Trello node to automate work in Trello, and integrate Trello with other applications. n8n has built-in support for a wide range of Trello features, including creating and updating cards, and adding and removing members. 
-
-On this page, you'll find a list of operations the Trello node supports and links to more resources.
+ใช้ Trello node เพื่อช่วยงานอัตโนมัติใน Trello และเชื่อมต่อ Trello กับแอปพลิเคชันอื่น ๆ 
 
 /// note | Credentials
-Refer to [Trello credentials](/integrations/builtin/credentials/trello.md) for guidance on setting up authentication. 
-///
+ดู [Trello credentials](/integrations/builtin/credentials/trello.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
@@ -79,11 +76,11 @@ Refer to [Trello credentials](/integrations/builtin/credentials/trello.md) for g
 
 ## Find the List ID
 
-1. Open the Trello board that contains the list.
-2. If the list doesn't have any cards, add a card to the list.
-3. Open the card, add `.json` at the end of the URL, and press enter.
-4. In the JSON file, you will see a field called `idList`.
-5. Copy the contents of the `idList`field and paste it in the ***List ID** field in n8n.
+1. เปิดบอร์ด Trello ที่มี list นั้น
+2. หาก list ไม่มีการ์ดใด ๆ ให้เพิ่มการ์ดลงใน list
+3. เปิดการ์ดแล้วเพิ่ม `.json` ต่อท้าย URL จากนั้นกด enter
+4. ในไฟล์ JSON คุณจะเห็นฟิลด์ที่ชื่อ `idList`
+5. คัดลอกข้อมูลจากฟิลด์ `idList` แล้ววางลงในฟิลด์ ***List ID** ใน n8n
 
 
 

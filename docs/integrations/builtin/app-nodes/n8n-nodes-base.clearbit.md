@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Clearbit node
 
-Use the Clearbit node to automate work in Clearbit, and integrate Clearbit with other applications. n8n has built-in support for a wide range of Clearbit features, including autocompleting and looking up companies and persons.
+ใช้ Clearbit node เพื่อทำงานอัตโนมัติใน Clearbit และ integrate Clearbit กับแอปพลิเคชันอื่นๆ n8n มีการรองรับในตัวสำหรับฟีเจอร์ต่างๆ ของ Clearbit รวมถึงการ autocomplete และ lookup companies และ persons
 
-On this page, you'll find a list of operations the Clearbit node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Clearbit node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [Clearbit credentials](/integrations/builtin/credentials/clearbit.md) for guidance on setting up authentication. 
+อ้างอิง [Clearbit credentials](/integrations/builtin/credentials/clearbit.md) สำหรับคำแนะนำในการตั้งค่า authentication
 ///
 
 ## Operations

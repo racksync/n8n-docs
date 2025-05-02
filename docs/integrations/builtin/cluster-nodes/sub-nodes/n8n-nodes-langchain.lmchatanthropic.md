@@ -1,37 +1,37 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Anthropic Chat Model node documentation
-description: Learn how to use the Anthropic Chat Model node in n8n. Follow technical documentation to integrate Anthropic Chat Model node into your workflows.
+description: เรียนรู้วิธีการใช้งาน Anthropic Chat Model node ใน n8n พร้อมคำแนะนำทางเทคนิคเพื่อรวม Anthropic Chat Model node เข้ากับเวิร์กโฟลว์ของคุณ
 contentType: [integration, reference]
 priority: medium
 ---
 
 # Anthropic Chat Model node
 
-Use the Anthropic Chat Model node to use Anthropic's Claude family of chat models with conversational [agents](/glossary.md#ai-agent).
+ใช้ Anthropic Chat Model node เพื่อใช้งานโมเดล Claude ของ Anthropic สำหรับงานแชทกับ [agents](/glossary.md#ai-agent) ได้เลย
 
-On this page, you'll find the node parameters for the Anthropic Chat Model node, and links to more resources.
+ในหน้านี้จะมีพารามิเตอร์ของ node Anthropic Chat Model และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/anthropic.md).
+คุณสามารถดูข้อมูลการเชื่อมต่อสำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/anthropic.md)
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node parameters
 
-* **Model**: Select the model that generates the completion. Choose from:
+* **Model**: เลือกโมเดลที่ต้องการให้สร้างข้อความตอบกลับ เลือกได้จาก:
 	* **Claude**
 	* **Claude Instant**
 
-Learn more in the [Anthropic model documentation](https://docs.anthropic.com/claude/reference/selecting-a-model){:target=_blank .external-link}.
+ดูรายละเอียดเพิ่มเติมได้ที่ [Anthropic model documentation](https://docs.anthropic.com/claude/reference/selecting-a-model){:target=_blank .external-link}
 
 ## Node options
 
-* **Maximum Number of Tokens**: Enter the maximum number of tokens used, which sets the completion length.
-* **Sampling Temperature**: Use this option to control the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
-* **Top K**: Enter the number of token choices the model uses to generate the next token.
-* **Top P**: Use this option to set the probability the completion should use. Use a lower value to ignore less probable options. 
+* **Maximum Number of Tokens**: กำหนดจำนวน tokens สูงสุดที่ใช้ ซึ่งจะเป็นการกำหนดความยาวของข้อความที่โมเดลจะตอบกลับ
+* **Sampling Temperature**: ปรับความสุ่มของการสร้างข้อความ ค่า temperature สูงจะทำให้โมเดลตอบหลากหลายมากขึ้น แต่ก็เสี่ยงต่อการตอบแบบหลุดประเด็น
+* **Top K**: กำหนดจำนวนตัวเลือก token ที่โมเดลจะใช้ในการสร้าง token ถัดไป
+* **Top P**: กำหนดความน่าจะเป็นรวมที่โมเดลจะใช้ในการเลือก token ถัดไป ค่า Top P ต่ำจะตัดตัวเลือกที่มีความน่าจะเป็นน้อยออก
 
 ## Templates and examples
 
@@ -40,7 +40,7 @@ Learn more in the [Anthropic model documentation](https://docs.anthropic.com/cla
 
 ## Related resources
 
-Refer to [LangChains's Anthropic documentation](https://js.langchain.com/docs/integrations/chat/anthropic/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมได้ที่ [LangChains's Anthropic documentation](https://js.langchain.com/docs/integrations/chat/anthropic/){:target=_blank .external-link}
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 

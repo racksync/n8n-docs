@@ -7,26 +7,26 @@ contentType: [integration, reference]
 
 # Embeddings Mistral Cloud node
 
-Use the Embeddings Mistral Cloud node to generate [embeddings](/glossary.md#ai-embedding) for a given text.
+ใช้ Embeddings Mistral Cloud node เพื่อสร้าง [embeddings](/glossary.md#ai-embedding) สำหรับข้อความที่กำหนด
 
-On this page, you'll find the node parameters for the Embeddings Mistral Cloud node, and links to more resources.
+ในหน้านี้ คุณจะพบพารามิเตอร์ของโหนดสำหรับ Embeddings Mistral Cloud node และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/mistral.md).
+คุณสามารถดูข้อมูลการยืนยันตัวตนสำหรับโหนดนี้ได้ [ที่นี่](/integrations/builtin/credentials/mistral.md)
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node parameters
 
-* **Model**: Select the model to use to generate the embedding.
+* **Model**: เลือกรุ่น (model) ที่จะใช้สร้าง embedding
 
-Learn more about available models in [Mistral's models documentation](https://docs.mistral.ai/platform/pricing/){:target=_blank .external-link}.
+เรียนรู้เพิ่มเติมเกี่ยวกับรุ่นที่มีให้ใช้งานใน [เอกสารประกอบ models ของ Mistral](https://docs.mistral.ai/platform/pricing/){:target=_blank .external-link}
 
 ## Node options
 
-* **Batch Size**: Enter the maximum number of documents to send in each request.
-* **Strip New Lines**: Select whether to remove new line characters from input text (turned on) or not (turned off). n8n enables this by default.
+* **Batch Size**: ป้อนจำนวนเอกสารสูงสุดที่จะส่งในแต่ละคำขอ
+* **Strip New Lines**: เลือกว่าจะลบอักขระขึ้นบรรทัดใหม่ (new line characters) ออกจากข้อความอินพุต (เปิด) หรือไม่ (ปิด) n8n เปิดใช้งานตัวเลือกนี้เป็นค่าเริ่มต้น
 
 ## Templates and examples
 
@@ -35,7 +35,7 @@ Learn more about available models in [Mistral's models documentation](https://do
 
 ## Related resources
 
-Refer to [Langchain's Mistral embeddings documentation](https://js.langchain.com/docs/integrations/text_embedding/mistralai){:target=_blank .external-link} for more information about the service.
+อ้างอิง [เอกสารประกอบ Mistral embeddings ของ Langchain](https://js.langchain.com/docs/integrations/text_embedding/mistralai){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

@@ -8,36 +8,36 @@ priority: medium
 
 # Debug Helper
 
-Use the Debug Helper node to trigger different error types or generate random datasets to help test n8n workflows.
+ใช้ Debug Helper node เพื่อ trigger error แบบต่างๆ หรือ generate ข้อมูลสุ่ม เพื่อช่วยทดสอบ workflow ใน n8n
 
 ## Operations
 
-Define the operation by selecting the **Category**:
+กำหนด operation โดยเลือก **Category**:
 
-* **Do Nothing**: Don't do anything.
-* [**Throw Error**](#throw-error): Throw an error with the specified type and message.
-* [**Out Of Memory**](#out-of-memory): Generate a specific memory size to simulate being out of memory.
-* [**Generate Random Data**](#generate-random-data): Generate some random data in a selected format.
+* **Do Nothing**: ไม่ทำอะไรเลย
+* [**Throw Error**](#throw-error): สร้าง error ตาม type และ message ที่กำหนด
+* [**Out Of Memory**](#out-of-memory): สร้างข้อมูลขนาดใหญ่เพื่อจำลอง out of memory
+* [**Generate Random Data**](#generate-random-data): สร้างข้อมูลสุ่มใน format ที่เลือก
 
 ## Node parameters
 
-The node parameters depend on the **Category** selected. The **Do Nothing** Category has no other parameters.
+parameter ของ node จะขึ้นอยู่กับ **Category** ที่เลือก **Do Nothing** ไม่มี parameter อื่น
 
 ### Throw Error
 
-* **Error Type**: Select the type of error to throw. Choose from:
+* **Error Type**: เลือก type ของ error ที่จะ throw เลือกได้:
 	* **NodeApiError**
 	* **NodeOperationError**
 	* **Error**
-* **Error Message**: Enter the error message to throw.
+* **Error Message**: ใส่ข้อความ error ที่จะ throw
 
 ### Out Of Memory
 
-The Out of Memory Category adds one parameter, the **Memory Size to Generate**. Enter the approximate amount of memory to generate.
+Category นี้มี parameter เดียวคือ **Memory Size to Generate** ใส่ขนาด memory ที่ต้องการจำลอง
 
 ### Generate Random Data
 
-* **Data Type**: Choose the type of random data you'd like to generate. Options include:
+* **Data Type**: เลือกประเภทข้อมูลสุ่มที่ต้องการสร้าง เลือกได้:
 	* **Address**
 	* **Coordinates**
 	* **Credit Card**
@@ -45,16 +45,16 @@ The Out of Memory Category adds one parameter, the **Memory Size to Generate**. 
 	* **IPv4**
 	* **IPv6**
 	* **MAC**
-	* **Nanoids**: If you select this data type, you'll also need to enter:
-		* **Nanoid Alphabet**: The alphabet the generator will use to generate the nanoids.
-		* **Nanoid Length**: The length of each nanoid.
+	* **Nanoids**: ถ้าเลือกอันนี้ต้องใส่เพิ่ม:
+		* **Nanoid Alphabet**: alphabet ที่ใช้ generate nanoid
+		* **Nanoid Length**: ความยาวของแต่ละ nanoid
 	* **URL**
 	* **User Data**
 	* **UUID**
 	* **Version**
-* **Seed**: If you'd like to generate the data using a specific seed, enter it here. This ensures the data gets generated consistently. If you'd rather use random data generation, leave this field empty.
-* **Number of Items to Generate**: Enter the number of random items you'd like to generate.
-* **Output as Single Array**: Whether to generate the data as a single array (turned on) or multiple items (turned off).
+* **Seed**: ถ้าอยากให้ generate ข้อมูลเดิมทุกครั้ง ให้ใส่ seed ถ้าไม่ใส่จะสุ่มใหม่ทุกครั้ง
+* **Number of Items to Generate**: ใส่จำนวนข้อมูลสุ่มที่ต้องการสร้าง
+* **Output as Single Array**: เลือกว่าจะ output เป็น array เดียว (เปิด) หรือหลาย item (ปิด)
 
 ## Templates and examples
 

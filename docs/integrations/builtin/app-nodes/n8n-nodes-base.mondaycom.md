@@ -8,16 +8,16 @@ priority: medium
 
 # monday.com node
 
-Use the monday.com node to automate work in monday.com, and integrate monday.com with other applications. n8n has built-in support for a wide range of monday.com features, including creating a new board, and adding, deleting, and getting items on the board.
+ใช้ monday.com node ในการทำงานอัตโนมัติใน monday.com และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ โดย n8n รองรับการสร้างบอร์ดใหม่และการจัดการ items บนบอร์ด.
 
-On this page, you'll find a list of operations the monday.com node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ monday.com node รองรับและลิงก์ไปยังข้อมูลเพิ่มเติม.
 
 /// warning | Minimum required version
 This node requires n8n version 1.22.6 or above.
 ///
 
 /// note | Credentials
-Refer to [monday.com credentials](/integrations/builtin/credentials/mondaycom.md) for guidance on setting up authentication. 
+ดู [monday.com credentials](/integrations/builtin/credentials/mondaycom.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

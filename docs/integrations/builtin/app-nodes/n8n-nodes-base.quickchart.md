@@ -8,9 +8,9 @@ priority: medium
 
 # QuickChart node
 
-Use the QuickChart node to automate work in QuickChart, and integrate QuickChart with other applications. n8n has built-in support for a wide range of QuickChart chart types, including bar, doughnut, line, pie, and polar charts.
+ใช้ QuickChart node ในการอัตโนมัติงานใน QuickChart และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ. n8n มีการสนับสนุน chart types ที่หลากหลายของ QuickChart รวมถึง bar, doughnut, line, pie และ polar charts.
 
-On this page, you'll find a list of operations the QuickChart node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ QuickChart node รองรับ พร้อมลิงก์ไปยัง resources เพิ่มเติม.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
@@ -32,4 +32,4 @@ Create a chart by selecting the chart type:
 
 ## Related resources
 
-Refer to [QuickChart's API documentation](https://quickchart.io/documentation/){:target=_blank .external-link} for more information about the service.
+ดู [QuickChart's API documentation](https://quickchart.io/documentation/){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้.

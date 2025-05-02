@@ -8,30 +8,30 @@ priority: medium
 
 # Azure OpenAI Chat Model node
 
-Use the Azure OpenAI Chat Model node to use OpenAI's chat models with conversational [agents](/glossary.md#ai-agent).
+ใช้ Azure OpenAI Chat Model node เพื่อใช้งานโมเดลแชทของ OpenAI ผ่าน Azure สำหรับงานกับ [agents](/glossary.md#ai-agent)
 
-On this page, you'll find the node parameters for the Azure OpenAI Chat Model node, and links to more resources.
+ในหน้านี้จะมีพารามิเตอร์ของ node Azure OpenAI Chat Model และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/azureopenai.md).
+คุณสามารถดูข้อมูลการเชื่อมต่อสำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/azureopenai.md)
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node parameters
 
-* **Model**: Select the model to use to generate the completion.
+* **Model**: เลือกโมเดลที่ต้องการให้สร้างข้อความตอบกลับ
 
 ## Node options
 
-* **Frequency Penalty**: Use this option to control the chances of the model repeating itself. Higher values reduce the chance of the model repeating itself.
-* **Maximum Number of Tokens**: Enter the maximum number of tokens used, which sets the completion length.
-* **Response Format**: Choose **Text** or **JSON**. **JSON** ensures the model returns valid JSON.
-* **Presence Penalty**: Use this option to control the chances of the model talking about new topics. Higher values increase the chance of the model talking about new topics.
-* **Sampling Temperature**: Use this option to control the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
-* **Timeout**: Enter the maximum request time in milliseconds.
-* **Max Retries**: Enter the maximum number of times to retry a request.
-* **Top P**: Use this option to set the probability the completion should use. Use a lower value to ignore less probable options. 
+* **Frequency Penalty**: ปรับโอกาสที่โมเดลจะตอบซ้ำๆ ค่าเยอะจะลดการตอบซ้ำ
+* **Maximum Number of Tokens**: กำหนดจำนวน tokens สูงสุดที่ใช้ ซึ่งจะเป็นการกำหนดความยาวของข้อความที่โมเดลจะตอบกลับ
+* **Response Format**: เลือก **Text** หรือ **JSON** ถ้าเลือก JSON โมเดลจะตอบกลับเป็น JSON ที่ถูกต้องเสมอ
+* **Presence Penalty**: ปรับโอกาสที่โมเดลจะพูดถึงหัวข้อใหม่ๆ ค่าเยอะจะเพิ่มโอกาสพูดเรื่องใหม่
+* **Sampling Temperature**: ปรับความสุ่มของการสร้างข้อความ ค่า temperature สูงจะทำให้โมเดลตอบหลากหลายมากขึ้น แต่ก็เสี่ยงต่อการตอบแบบหลุดประเด็น
+* **Timeout**: กำหนดเวลาสูงสุด (ms) ที่จะรอผลลัพธ์
+* **Max Retries**: กำหนดจำนวนครั้งสูงสุดที่ระบบจะลองส่ง request ใหม่
+* **Top P**: กำหนดความน่าจะเป็นรวมที่โมเดลจะใช้ในการเลือก token ถัดไป ค่า Top P ต่ำจะตัดตัวเลือกที่มีความน่าจะเป็นน้อยออก
 
 ## Templates and examples
 
@@ -40,7 +40,7 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Related resources
 
-Refer to [LangChains's Azure OpenAI documentation](https://js.langchain.com/docs/integrations/chat/azure){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมได้ที่ [LangChains's Azure OpenAI documentation](https://js.langchain.com/docs/integrations/chat/azure){:target=_blank .external-link}
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

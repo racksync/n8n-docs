@@ -12,46 +12,46 @@ hide:
 
 # Community Edition Features
 
-The community edition includes almost the complete feature set of n8n, except for the features listed here.
+Community edition จะมีฟีเจอร์เกือบครบเหมือน n8n เวอร์ชันเต็ม ยกเว้นฟีเจอร์ที่ระบุไว้ที่นี่
 
-The community edition doesn't include these features:
+Community edition จะไม่มีฟีเจอร์เหล่านี้:
 
 - [Custom Variables](/code/variables.md)
 - [Environments](/source-control-environments/index.md)
 - [External secrets](/external-secrets.md)
 - [External storage for binary data](/hosting/scaling/external-storage.md)
-- [Log streaming](/log-streaming.md) ([Logging](/hosting/logging-monitoring/logging.md) _is_ included) 
-- [Multi-main mode](/hosting/scaling/queue-mode.md#multi-main-setup) ([Queue mode](/hosting/scaling/queue-mode.md) _is_ included)
+- [Log streaming](/log-streaming.md) ([Logging](/hosting/logging-monitoring/logging.md) _มีให้ใช้งาน_)
+- [Multi-main mode](/hosting/scaling/queue-mode.md#multi-main-setup) ([Queue mode](/hosting/scaling/queue-mode.md) _มีให้ใช้งาน_)
 - [Projects](/user-management/rbac/projects.md)
 - SSO ([SAML](/hosting/securing/set-up-sso.md), [LDAP](/user-management/ldap.md))
-- Sharing ([workflows](/workflows/sharing.md), [credentials](/credentials/credential-sharing.md)) (Only the instance owner and the user who creates them can access workflows and credentials)
+- Sharing ([workflows](/workflows/sharing.md), [credentials](/credentials/credential-sharing.md)) (เฉพาะเจ้าของ instance และผู้สร้างเท่านั้นที่เข้าถึง workflows และ credentials ได้)
 - [Version control using Git](/source-control-environments/index.md)
-- [Workflow history](/workflows/history.md) (You can get one day of workflow history with the community edition by [registering](#registered-community-edition))
+- [Workflow history](/workflows/history.md) (Community edition จะดู workflow history ได้ 1 วัน ถ้า [register](#registered-community-edition))
 
-These features are available on the Enterprise Cloud plan, including the self-hosted Enterprise edition. Some of these features are available on the Starter and Pro Cloud plan. 
+ฟีเจอร์เหล่านี้จะมีใน Enterprise Cloud plan รวมถึง self-hosted Enterprise edition และบางฟีเจอร์อาจมีใน Starter หรือ Pro Cloud plan ด้วย
 
-See [pricing](https://n8n.io/pricing/){:target=_blank .external-link} for reference.
+ดูรายละเอียด [pricing](https://n8n.io/pricing/){:target=_blank .external-link} ได้เลย
 
 ## Registered Community Edition
 
-You can unlock extra features by registering your n8n community edition. You register with your email and receive a license key.
+คุณสามารถปลดล็อกฟีเจอร์เพิ่มเติมได้โดยการ register n8n community edition ของคุณ โดยจะลงทะเบียนด้วยอีเมลและรับ license key
 
-Registering unlocks these features for the community edition:
+เมื่อ register แล้ว Community edition จะปลดล็อกฟีเจอร์เหล่านี้:
 
-* [Folders](/release-notes.md#folders): Organize your workflows into tidy folders
-* [Debug in editor](/workflows/executions/debug.md): Copy and [pin](/glossary.md#data-pinning-n8n) execution data when working on a workflow
-* One day of [workflow history](/workflows/history.md): 24 hours of workflow history so you can revert back to previous workflow versions
-* [Custom execution data](/workflows/executions/custom-executions-data.md): Save, find, and annotate execution metadata
+* [Folders](/release-notes.md#folders): จัดระเบียบ workflow ของคุณเป็นโฟลเดอร์
+* [Debug in editor](/workflows/executions/debug.md): copy และ [pin](/glossary.md#data-pinning-n8n) ข้อมูล execution ขณะทำ workflow
+* ดู [workflow history](/workflows/history.md) ได้ 1 วัน: ย้อน workflow ได้ 24 ชั่วโมง
+* [Custom execution data](/workflows/executions/custom-executions-data.md): บันทึก, ค้นหา, และใส่โน้ต execution metadata
 
-To register a new community edition instance, select the option during your initial account creation.
+ถ้าจะ register instance ใหม่ ให้เลือกตัวเลือกนี้ตอนสร้าง account ครั้งแรก
 
-To register an existing community edition instance:
+ถ้าจะ register instance ที่มีอยู่แล้ว:
 
-1. Select the **three dots icon** <span class="inline-image">![three dots icon](/_images/common-icons/three-dots-horizontal.png){.off-glb}</span> in the lower-left corner.
-1. Select **Settings** and then **Usage and plan**.
-1. Select **Unlock** to enter your email and then select **Send me a free license key**.
-1. Check your email for the account you entered.
+1. กด **three dots icon** <span class="inline-image">![three dots icon](/_images/common-icons/three-dots-horizontal.png){.off-glb}</span> ที่มุมซ้ายล่าง
+1. เลือก **Settings** แล้วไปที่ **Usage and plan**
+1. กด **Unlock** เพื่อกรอกอีเมล แล้วเลือก **Send me a free license key**
+1. เช็คอีเมลที่กรอกไว้
 
-Once you have a license key, activate it by clicking the button in the license email or by visiting **Options > Settings > Usage and plan** and selecting **Enter activation key**.
+เมื่อได้ license key แล้ว ให้ activate โดยกดปุ่มในอีเมล หรือไปที่ **Options > Settings > Usage and plan** แล้วเลือก **Enter activation key**
 
-Once activated, your license will not expire. We may change the unlocked features in the future. This will not impact previously unlocked features.
+เมื่อ activate แล้ว license จะไม่มีวันหมดอายุ (เราอาจเปลี่ยนฟีเจอร์ที่ปลดล็อกในอนาคต แต่จะไม่กระทบฟีเจอร์ที่ปลดล็อกไปแล้ว)

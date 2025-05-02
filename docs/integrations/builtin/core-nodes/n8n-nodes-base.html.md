@@ -8,80 +8,80 @@ priority: high
 
 # HTML
 
-The HTML node provides operations to help you work with HTML in n8n.
+HTML node ใช้สำหรับจัดการกับ HTML ใน n8n
 
 /// note | HTML Extract node
-The HTML node replaces the HTML Extract node from version 0.213.0 on. If you're using an older version of n8n, you can still view the [HTML Extract node documentation](https://github.com/n8n-io/n8n-docs/blob/86fe33b681621e618e3adcab9a27e8605dbc23ad/docs/integrations/builtin/core-nodes/n8n-nodes-base.htmlextract.md){:target=_blank .external-link}.
+HTML node มาแทนที่ HTML Extract node ตั้งแต่เวอร์ชัน 0.213.0 ถ้าใช้ n8n เวอร์ชันเก่า สามารถดู [HTML Extract node documentation](https://github.com/n8n-io/n8n-docs/blob/86fe33b681621e618e3adcab9a27e8605dbc23ad/docs/integrations/builtin/core-nodes/n8n-nodes-base.htmlextract.md){:target=_blank .external-link}
 ///
 /// warning | Cross-site scripting
-When using the HTML node to generate an HTML template you can introduce [XSS (cross-site scripting)](https://owasp.org/www-community/attacks/xss/){:target=_blank .external-link}. This is a security risk. Be careful with un-trusted inputs.
+ถ้าใช้ HTML node เพื่อสร้าง HTML template อาจเกิด [XSS (cross-site scripting)](https://owasp.org/www-community/attacks/xss/){:target=_blank .external-link} ได้ ซึ่งเป็นความเสี่ยงด้านความปลอดภัย ควรระวัง input ที่ไม่ไว้ใจ
 ///
 
 ## Operations
 
-* [**Generate HTML template**](#generate-html-template): Use this operation to create an HTML template. This allows you to take data from your workflow and output it as HTML.
-* [**Extract HTML content**](#extract-html-content): Extract contents from an HTML-formatted source. The source can be in JSON or a binary file (`.html`).
-* [**Convert to HTML Table**](#convert-to-html-table): Convert content to an HTML table.
+* [**Generate HTML template**](#generate-html-template): ใช้สร้าง HTML template สามารถนำข้อมูลจาก workflow มาแสดงเป็น HTML ได้
+* [**Extract HTML content**](#extract-html-content): ดึงข้อมูลจาก HTML source ซึ่งอาจอยู่ใน JSON หรือไฟล์ binary (`.html`)
+* [**Convert to HTML Table**](#convert-to-html-table): แปลงข้อมูลเป็น HTML table
 
-The node parameters and options depend on the operation you select. Refer to the sections below for more details on configuring each operation.
+parameter และ options ของ node จะเปลี่ยนไปตาม operation ที่เลือก ดูรายละเอียดแต่ละ operation ด้านล่าง
 
 ## Generate HTML template
 
-Create an HTML template. This allows you to take data from your workflow and output it as HTML. 
+สร้าง HTML template สามารถนำข้อมูลจาก workflow มาแสดงเป็น HTML ได้
 
-You can include:
+คุณสามารถใส่:
 
-* Standard HTML
-* CSS in `<style>` tags.
-* JavaScript in `<script>` tags. n8n doesn't execute the JavaScript.
-* Expressions, wrapped in `{{}}`.
+* HTML มาตรฐาน
+* CSS ใน `<style>` tag
+* JavaScript ใน `<script>` tag (n8n จะไม่ execute JavaScript)
+* Expressions ที่ครอบด้วย `{{}}`
 
-You can use [Expressions](/code/expressions.md) in the template, including n8n's [Built-in methods and variables](/code/builtin/overview.md). 
+สามารถใช้ [Expressions](/code/expressions.md) ใน template ได้ รวมถึง [Built-in methods and variables](/code/builtin/overview.md) ของ n8n
 
 ## Extract HTML Content
 
-Extract contents from an HTML-formatted source. The source can be in JSON or a binary file (`.html`).
+ดึงข้อมูลจาก HTML source ซึ่งอาจอยู่ใน JSON หรือไฟล์ binary (`.html`)
 
-Use these parameters:
+ตั้งค่าดังนี้:
 
 ### Source Data
 
-Select the source type for your HTML content. Choose between:
+เลือกประเภท source ของ HTML ที่ต้องการดึงข้อมูล มีให้เลือก:
 
-* **JSON**: If you select this source data, enter the **JSON Property**: the name of the input containing the HTML you want to extract. The property can contain a string or an array of strings.
-* **Binary**: If you select this source data, enter the **Input Binary Field**: the name of the input containing the HTML you want to extract. The property can contain a string or an array of strings.
+* **JSON**: ถ้าเลือกแบบนี้ ให้กรอก **JSON Property** คือชื่อ property ที่เก็บ HTML ที่ต้องการดึง (อาจเป็น string หรือ array ของ string)
+* **Binary**: ถ้าเลือกแบบนี้ ให้กรอก **Input Binary Field** คือชื่อ field ที่เก็บ HTML ที่ต้องการดึง (อาจเป็น string หรือ array ของ string)
 
 ### Extraction Values
 
-- **Key**: Enter the key to save the extracted value under.
-- **CSS Selector**: Enter the CSS selector to search for.
-- **Return Value**: Select the type of data to return. Choose from:
-	- **Attribute**: Return an attribute value like `class` from an element.
-		- If you select this option, enter the name of the **Attribute** to return the value of.
-	- **HTML**: Return the HTML that the element contains.
-	- **Text**: Return the text content of the element.
-		- If you choose this option, you can also enter a comma-separated list of selectors to skip in the **Skip Selectors**.
-	- **Value**: Return the value of an input, select, or text area.
-- **Return Array**: Choose whether to return multiple extraction values as an array (turned on) or as a single string (turned off).
+- **Key**: กรอกชื่อ key ที่จะใช้เก็บค่าที่ดึงได้
+- **CSS Selector**: กรอก CSS selector ที่ต้องการค้นหา
+- **Return Value**: เลือกประเภทข้อมูลที่ต้องการคืนค่า มีให้เลือก:
+	- **Attribute**: คืนค่า attribute เช่น `class` ของ element
+		- ถ้าเลือกแบบนี้ ให้กรอกชื่อ **Attribute** ที่ต้องการดึงค่า
+	- **HTML**: คืนค่า HTML ที่อยู่ใน element
+	- **Text**: คืนค่า text content ของ element
+		- ถ้าเลือกแบบนี้ สามารถกรอก selector ที่ต้องการข้าม (skip) ใน **Skip Selectors** (คั่นด้วย comma)
+	- **Value**: คืนค่า value ของ input, select หรือ textarea
+- **Return Array**: เลือกว่าจะคืนค่าหลายรายการเป็น array (เปิด) หรือ string เดียว (ปิด)
 
 ### Extract HTML Content options
 
-You can also configure this operation with these options:
+ตั้งค่าเพิ่มเติมสำหรับ operation นี้:
 
-* **Trim Values**: Controls whether to remove all spaces and newlines from the beginning and end of the values (turned on) or leaves them (turned off).
-* **Clean Up Text**: Controls whether to remove leading whitespaces, trailing whitespaces, and line breaks (newlines) and condense multiple consecutive whitespaces into a single space (turned on) or to leave them as-is (turned off).
+* **Trim Values**: เลือกว่าจะลบช่องว่างและขึ้นบรรทัดใหม่ที่ต้น/ท้ายค่าทั้งหมด (เปิด) หรือไม่ลบ (ปิด)
+* **Clean Up Text**: เลือกว่าจะลบช่องว่างต้น/ท้ายและขึ้นบรรทัดใหม่ และลดช่องว่างซ้อนกันให้เหลือช่องว่างเดียว (เปิด) หรือไม่ (ปิด)
 
 ## Convert to HTML Table
 
-This operation expects data from another node. It has no parameters. It includes these options:
+operation นี้ต้องรับข้อมูลจาก node อื่น ไม่มี parameter ให้ตั้งค่า มี options ดังนี้:
 
-* **Capitalize Headers**: Controls whether to capitalize the table's headers (turned on) or not (turned off).
-* **Custom Styling**: Controls whether to use custom styling (turned on) or not (turned off).
-* **Caption**: Enter a caption to add to the table.
-* **Table Attributes**: Enter any attributes to apply to the `<table>`, such as style attributes.
-* **Header Attributes**: Enter any attributes to apply to the table's headers `<th>`.
-* **Row Attributes**: Enter any attributes to apply to the table's rows `<tr>`.
-* **Cell Attributes**: Enter any attributes to apply to the table's cells `<td>`.
+* **Capitalize Headers**: เลือกว่าจะให้ header ของ table เป็นตัวพิมพ์ใหญ่ (เปิด) หรือไม่ (ปิด)
+* **Custom Styling**: เลือกว่าจะใช้ custom styling (เปิด) หรือไม่ (ปิด)
+* **Caption**: กรอก caption ที่ต้องการแสดงบน table
+* **Table Attributes**: กรอก attributes ที่ต้องการใส่ใน `<table>` เช่น style
+* **Header Attributes**: กรอก attributes ที่ต้องการใส่ใน `<th>`
+* **Row Attributes**: กรอก attributes ที่ต้องการใส่ใน `<tr>`
+* **Cell Attributes**: กรอก attributes ที่ต้องการใส่ใน `<td>`
 
 ## Templates and examples
 

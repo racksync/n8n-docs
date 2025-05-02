@@ -6,5 +6,5 @@ contentType: overview
 
 # Actions library
 
-This section provides information about n8n's Actions.
+ส่วนนี้ให้ข้อมูลเกี่ยวกับ Actions ของ n8n
 

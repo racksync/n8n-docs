@@ -1,19 +1,19 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Facebook Graph API node documentation
-description: Learn how to use the Facebook Graph API node in n8n. Follow technical documentation to integrate Facebook Graph API node into your workflows.
+description: เรียนรู้วิธีใช้ Facebook Graph API node ใน n8n ติดตามเอกสารทางเทคนิคเพื่อรวม Facebook Graph API node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 priority: medium
 ---
 
 # Facebook Graph API node
 
-Use the Facebook Graph API node to automate work in Facebook Graph API, and integrate Facebook Graph API with other applications. n8n has built-in support for a wide range of Facebook Graph API features, including using queries GET POST DELETE for several parameters like host URL, request methods and much more.
+ใช้ Facebook Graph API node เพื่อทำงานอัตโนมัติใน Facebook Graph API และเชื่อมต่อ Facebook Graph API กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Facebook Graph API หลายอย่าง เช่น การใช้ queries GET POST DELETE สำหรับ parameters หลายอย่าง เช่น host URL, request methods และอื่นๆ อีกมากมาย
 
-On this page, you'll find a list of operations the Facebook Graph API node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Facebook Graph API node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Facebook Graph API credentials](/integrations/builtin/credentials/facebookgraph.md) for guidance on setting up authentication. 
+โปรดดู [Facebook Graph API credentials](/integrations/builtin/credentials/facebookgraph.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations
@@ -32,19 +32,19 @@ Refer to [Facebook Graph API credentials](/integrations/builtin/credentials/face
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
-* **Host URL**: The host URL for the request. The following options are available:
-    * **Default**: Requests are passed to the `graph.facebook.com` host URL. Used for the majority of requests.
-    * **Video**: Requests are passed to the `graph-video.facebook.com` host URL. Used for video upload requests only.
-* **HTTP Request Method**: The method to be used for this request, from the following options:
+* **Host URL**: Host URL สำหรับ request มีตัวเลือกดังนี้:
+    * **Default**: Requests จะถูกส่งไปยัง `graph.facebook.com` host URL ใช้สำหรับ requests ส่วนใหญ่
+    * **Video**: Requests จะถูกส่งไปยัง `graph-video.facebook.com` host URL ใช้สำหรับ video upload requests เท่านั้น
+* **HTTP Request Method**: Method ที่จะใช้สำหรับ request นี้ จากตัวเลือกต่อไปนี้:
     * **GET**
     * **POST**
     * **DELETE**
-* **Graph API Version**: The version of the [Facebook Graph API](https://developers.facebook.com/docs/graph-api/changelog) to be used for this request.
-* **Node**: The node on which to operate, for example `/<page-id>/feed`. Read more about it in the [official Facebook Developer documentation](https://developers.facebook.com/docs/graph-api/using-graph-api).
-* **Edge**: Edge of the node on which to operate. Edges represent collections of objects which are attached to the node.
-* **Ignore SSL Issues**: Toggle to still download the response even if SSL certificate validation isn't possible.
-* **Send Binary File**: Available for `POST` operations. If enabled binary data is sent as the body. Requires setting the following:
-    * **Input Binary Field**: Name of the binary property which contains the data for the file to be uploaded.
+* **Graph API Version**: เวอร์ชันของ [Facebook Graph API](https://developers.facebook.com/docs/graph-api/changelog) ที่จะใช้สำหรับ request นี้
+* **Node**: Node ที่จะดำเนินการ เช่น `/<page-id>/feed` อ่านเพิ่มเติมได้ใน [official Facebook Developer documentation](https://developers.facebook.com/docs/graph-api/using-graph-api)
+* **Edge**: Edge ของ node ที่จะดำเนินการ Edges แทน collections ของ objects ที่แนบอยู่กับ node
+* **Ignore SSL Issues**: สลับเพื่อยังคงดาวน์โหลด response แม้ว่าจะไม่สามารถตรวจสอบ SSL certificate ได้
+* **Send Binary File**: ใช้ได้สำหรับ `POST` operations หากเปิดใช้งาน ข้อมูล binary จะถูกส่งเป็น body ต้องตั้งค่าต่อไปนี้:
+    * **Input Binary Field**: ชื่อของ binary property ที่มีข้อมูลสำหรับ file ที่จะอัปโหลด
 
 ## Templates and examples
 

@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Onfleet node
 
-Use the Onfleet node to automate work in Onfleet, and integrate Onfleet with other applications. n8n has built-in support for a wide range of Onfleet features, including creating and deleting tasks in Onfleet as well as retrieving organizations' details. 
+ใช้ Onfleet node เพื่อทำงานอัตโนมัติใน Onfleet และเชื่อมต่อกับแอปอื่น ๆ. n8n รองรับฟีเจอร์หลากหลายของ Onfleet เช่น การสร้างและลบงาน รวมถึงการดึงรายละเอียดขององค์กร
 
-On this page, you'll find a list of operations the Onfleet node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Onfleet node รองรับ พร้อมลิงก์สำหรับข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [Onfleet credentials](/integrations/builtin/credentials/onfleet.md) for guidance on setting up authentication. 
+ดู [Onfleet credentials](/integrations/builtin/credentials/onfleet.md) เพื่อดูวิธีการตั้งค่า authentication
 ///
 
 ## Operations

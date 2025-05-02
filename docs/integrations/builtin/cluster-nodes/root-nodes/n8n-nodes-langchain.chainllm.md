@@ -8,13 +8,13 @@ priority: critical
 
 # Basic LLM Chain node
 
-Use the Basic LLM Chain node to set the prompt that the model will use along with setting an optional parser for the response.
+ใช้ Basic LLM Chain node เพื่อตั้งค่า prompt ที่โมเดลจะใช้ พร้อมกับการตั้งค่า parser เสริมสำหรับ response
 
-On this page, you'll find the node parameters for the Basic LLM Chain node and links to more resources.
+ในหน้านี้ คุณจะพบพารามิเตอร์ของโหนด Basic LLM Chain และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Basic LLM Chain integrations](https://n8n.io/integrations/basic-llm-chain/){:target=_blank .external-link} page.
-///	
+สำหรับตัวอย่างการใช้งานและ templates เพื่อช่วยให้คุณเริ่มต้น โปรดดูที่หน้า [Basic LLM Chain integrations](https://n8n.io/integrations/basic-llm-chain/){:target=_blank .external-link} ของ n8n
+///
 
 ## Node parameters
 
@@ -28,35 +28,35 @@ For usage examples and templates to help you get started, refer to n8n's [Basic 
 
 ## Chat Messages
 
-Use **Chat Messages** when you're using a chat model to set a message.
+ใช้ **Chat Messages** เมื่อคุณกำลังใช้ chat model เพื่อตั้งค่าข้อความ
 
-n8n ignores these options if you don't connect a chat model. Select the **Type Name or ID** you want the node to use:
+n8n จะไม่สนใจตัวเลือกเหล่านี้หากคุณไม่ได้เชื่อมต่อ chat model เลือก **Type Name or ID** ที่คุณต้องการให้โหนดใช้:
 
 #### AI
 
-Enter a sample expected response in the **Message** field. The model will try to respond in the same way in its messages.
+ป้อนตัวอย่าง response ที่คาดหวังในช่อง **Message** โมเดลจะพยายามตอบกลับในลักษณะเดียวกันในข้อความของมัน
 
 #### System
 
-Enter a system **Message** to include with the user input to help guide the model in what it should do.
+ป้อน **Message** ของระบบเพื่อรวมเข้ากับ input ของผู้ใช้ เพื่อช่วยแนะนำโมเดลว่าควรทำอะไร
 
-Use this option for things like defining tone, for example: `Always respond talking like a pirate`.
+ใช้ตัวเลือกนี้สำหรับสิ่งต่างๆ เช่น การกำหนดโทนเสียง ตัวอย่างเช่น: `Always respond talking like a pirate`
 
 #### User
 
-Enter a sample user input. Using this with the AI option can help improve the output of the agent. Using both together provides a sample of an input and expected response (the **AI Message**) for the model to follow.
+ป้อนตัวอย่าง input ของผู้ใช้ การใช้ตัวเลือกนี้ร่วมกับตัวเลือก AI สามารถช่วยปรับปรุง output ของ agent ได้ การใช้ทั้งสองอย่างร่วมกันเป็นการให้ตัวอย่างของ input และ response ที่คาดหวัง (คือ **AI Message**) เพื่อให้โมเดลปฏิบัติตาม
 
-Select one of these input types:
+เลือกประเภท input อย่างใดอย่างหนึ่งต่อไปนี้:
 
-* **Text**: Enter a sample user input as a text **Message**.
-* **Image (Binary)**: Select a binary input from a previous node. Enter the **Image Data Field Name** to identify which binary field from the previous node contains the image data.
-* **Image (URL)**: Use this option to feed an image in from a URL. Enter the **Image URL**.
+*   **Text**: ป้อนตัวอย่าง input ของผู้ใช้เป็น **Message** แบบข้อความ
+*   **Image (Binary)**: เลือก binary input จากโหนดก่อนหน้า ป้อน **Image Data Field Name** เพื่อระบุว่าฟิลด์ binary ใดจากโหนดก่อนหน้าที่มีข้อมูลรูปภาพ
+*   **Image (URL)**: ใช้ตัวเลือกนี้เพื่อป้อนรูปภาพจาก URL ป้อน **Image URL**
 
-For both the **Image** types, select the **Image Details** to control how the model processes the image and generates its textual understanding. Choose from:
+สำหรับประเภท **Image** ทั้งสองแบบ ให้เลือก **Image Details** เพื่อควบคุมวิธีที่โมเดลประมวลผลรูปภาพและสร้างความเข้าใจเชิงข้อความ เลือกจาก:
 
-* **Auto**: The model uses the auto setting, which looks at the image input size and decide if it should use the Low or High setting.
-* **Low**: The model receives a low-resolution 512px x 512px version of the image and represents the image with a budget of 65 tokens. This allows the API to return faster responses and consume fewer input tokens. Use this option for use cases that don't require high detail.
-* **High**: The model can access the low-resolution image and then creates detailed crops of input images as 512px squares based on the input image size. Each of the detailed crops uses twice the token budget (65 tokens) for a total of 129 tokens. Use this option for use cases that require high detail.
+*   **Auto**: โมเดลใช้การตั้งค่า auto ซึ่งจะดูขนาด input ของรูปภาพและตัดสินใจว่าจะใช้การตั้งค่า Low หรือ High
+*   **Low**: โมเดลจะได้รับรูปภาพเวอร์ชันความละเอียดต่ำ 512px x 512px และแสดงรูปภาพด้วยงบประมาณ 65 tokens ซึ่งช่วยให้ API ตอบกลับได้เร็วขึ้นและใช้ input tokens น้อยลง ใช้ตัวเลือกนี้สำหรับกรณีการใช้งานที่ไม่ต้องการรายละเอียดสูง
+*   **High**: โมเดลสามารถเข้าถึงรูปภาพความละเอียดต่ำ จากนั้นสร้างภาพ crop โดยละเอียดของ input images เป็นสี่เหลี่ยมจัตุรัส 512px ตามขนาด input image แต่ละภาพ crop โดยละเอียดจะใช้งบประมาณ token สองเท่า (65 tokens) รวมเป็น 129 tokens ใช้ตัวเลือกนี้สำหรับกรณีการใช้งานที่ต้องการรายละเอียดสูง
 
 ## Templates and examples
 
@@ -65,22 +65,22 @@ For both the **Image** types, select the **Image Details** to control how the mo
 
 ## Related resources
 
-Refer to [LangChain's documentation on Basic LLM Chains](https://js.langchain.com/docs/tutorials/llm_chain/){:target=_blank .external-link} for more information about the service.
+อ้างอิง [เอกสารของ LangChain เกี่ยวกับ Basic LLM Chains](https://js.langchain.com/docs/tutorials/llm_chain/){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการ
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"
 
 ## Common issues
 
-Here are some common errors and issues with the Basic LLM Chain node and steps to resolve or troubleshoot them.
+นี่คือข้อผิดพลาดและปัญหาทั่วไปบางประการเกี่ยวกับ Basic LLM Chain node และขั้นตอนในการแก้ไขหรือแก้ไขปัญหา
 
 ### No prompt specified error
 
-This error displays when the **Prompt** is empty or invalid.
+ข้อผิดพลาดนี้จะแสดงขึ้นเมื่อ **Prompt** ว่างเปล่าหรือไม่ถูกต้อง
 
-You might see this error in one of two scenarios:
+คุณอาจเห็นข้อผิดพลาดนี้ในสถานการณ์ใดสถานการณ์หนึ่งจากสองสถานการณ์:
 
-1. When you've set the **Prompt** to **Define below** and haven't entered anything in the **Text** field.
-    * To resolve, enter a valid prompt in the **Text** field.
-2. When you've set the **Prompt** to **Connected Chat Trigger Node** and the incoming data has no field called `chatInput`. 
-    * The node expects the `chatInput` field. If your previous node doesn't have this field, add an [Edit Fields (Set)](/integrations/builtin/core-nodes/n8n-nodes-base.set.md) node to edit an incoming field name to `chatInput`.
+1.  เมื่อคุณตั้งค่า **Prompt** เป็น **Define below** และไม่ได้ป้อนอะไรในช่อง **Text**
+    *   ในการแก้ไข ให้ป้อน prompt ที่ถูกต้องในช่อง **Text**
+2.  เมื่อคุณตั้งค่า **Prompt** เป็น **Connected Chat Trigger Node** และข้อมูลขาเข้าไม่มีฟิลด์ชื่อ `chatInput`
+    *   โหนดคาดหวังฟิลด์ `chatInput` หากโหนดก่อนหน้าของคุณไม่มีฟิลด์นี้ ให้เพิ่มโหนด [Edit Fields (Set)](/integrations/builtin/core-nodes/n8n-nodes-base.set.md) เพื่อแก้ไขชื่อฟิลด์ขาเข้าเป็น `chatInput`

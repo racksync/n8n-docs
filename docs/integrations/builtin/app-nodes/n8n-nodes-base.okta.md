@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Okta node
 
-Use the Okta node to automate work in Okta and integrate Okta with other applications. n8n has built-in support for a wide range of Okta features, which includes creating, updating, and deleting users.
+ใช้ Okta node เพื่อทำงานอัตโนมัติใน Okta และเชื่อมต่อกับแอปอื่น ๆ. n8n รองรับฟีเจอร์ต่าง ๆ ของ Okta เช่น การสร้าง, อัปเดต และการลบผู้ใช้
 
-On this page, you'll find a list of operations the Okta node supports, and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Okta node รองรับ พร้อมลิงก์สำหรับข้อมูลเพิ่มเติม
 
 ///  note  | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/okta.md).
+ดูข้อมูลการตั้งค่า authentication สำหรับ node นี้ได้ที่ [here](/integrations/builtin/credentials/okta.md).
 ///
 
 ## Operations
@@ -32,6 +32,6 @@ You can find authentication information for this node [here](/integrations/built
 ## Related resources
 
 <!-- add a link to the service's documentation. This should usually go direct to the API docs -->
-Refer to [Okta's documentation](https://developer.okta.com/docs/guides/){:target=_blank .external-link} for more information about the service.
+ดู [Okta's documentation](https://developer.okta.com/docs/guides/){:target=_blank .external-link} เพื่อข้อมูลเพิ่มเติมเกี่ยวกับบริการ
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # GoToWebinar node
 
-Use the GoToWebinar node to automate work in GoToWebinar, and integrate GoToWebinar with other applications. n8n has built-in support for a wide range of GoToWebinar features, including creating, getting, and deleting attendees, organizers, and registrants.
+ใช้ GoToWebinar node เพื่อทำงานอัตโนมัติใน GoToWebinar และเชื่อมต่อ GoToWebinar กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ GoToWebinar หลายอย่าง เช่น การสร้าง ดึงข้อมูล และลบ attendees, organizers, และ registrants
 
-On this page, you'll find a list of operations the GoToWebinar node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ GoToWebinar node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [GoToWebinar credentials](/integrations/builtin/credentials/gotowebinar.md) for guidance on setting up authentication. 
+โปรดดู [GoToWebinar credentials](/integrations/builtin/credentials/gotowebinar.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations

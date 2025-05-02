@@ -8,41 +8,41 @@ priority: critical
 
 # Loop Over Items
 
-The Loop Over Items node helps you loop through data when needed.
+Loop Over Items node ช่วยให้คุณวนลูปผ่านข้อมูลได้ตามต้องการ
 
-The node saves the original incoming data, and with each iteration, returns a predefined amount of data through the **loop** output.
+node นี้จะบันทึกข้อมูล input ดั้งเดิมไว้ และในแต่ละรอบของการวนลูป จะคืนค่าข้อมูลตามจำนวนที่กำหนดไว้ผ่าน output **loop**
 
-When the node execution completes, it combines all of the processed data and returns it through the **done** output.
+เมื่อ node ทำงานเสร็จ จะรวมข้อมูลที่ประมวลผลทั้งหมดและคืนค่าผ่าน output **done**
 
 ## When to use the Loop Over Items node
 
-By default, n8n nodes are designed to process a list of input items (with some exceptions, detailed below). Depending on what you're trying to achieve, you often don't need the Loop Over Items node in your workflow. You can learn more about how n8n processes multiple items on the [looping in n8n](/flow-logic/looping.md) page.
+โดยปกติแล้ว node ใน n8n จะถูกออกแบบมาให้ประมวลผลรายการข้อมูลเป็น list อยู่แล้ว (ยกเว้นบาง node ที่ระบุไว้ด้านล่าง) ขึ้นอยู่กับสิ่งที่คุณต้องการทำ คุณอาจไม่จำเป็นต้องใช้ Loop Over Items node ใน workflow ของคุณ สามารถอ่านเพิ่มเติมเกี่ยวกับการประมวลผลหลายรายการใน n8n ได้ที่ [looping in n8n](/flow-logic/looping.md)
 
-These links highlight some of the cases where the Loop Over Items node can be useful:
+ลิงก์เหล่านี้แสดงตัวอย่างกรณีที่ควรใช้ Loop Over Items node:
 
-* [Loop until all items are processed](/flow-logic/looping.md#loop-until-all-items-are-processed): describes how the Loop Over Items node differs from normal item processing and when you might want to incorporate this node.
-* [Node exceptions](/flow-logic/looping.md#node-exceptions): outlines specific cases and nodes where you may need to use the Loop Over Items node to manually build looping logic.
-* [Avoiding rate limiting](/integrations/builtin/rate-limits.md): demonstrates how to batch API requests to avoid rate limits from other services.
+* [Loop until all items are processed](/flow-logic/looping.md#loop-until-all-items-are-processed): อธิบายความแตกต่างของ Loop Over Items node กับการประมวลผลรายการปกติ และเมื่อไหร่ควรใช้ node นี้
+* [Node exceptions](/flow-logic/looping.md#node-exceptions): สรุปกรณีและ node ที่อาจต้องใช้ Loop Over Items node เพื่อสร้าง logic การวนลูปเอง
+* [Avoiding rate limiting](/integrations/builtin/rate-limits.md): ตัวอย่างการ batch API requests เพื่อหลีกเลี่ยง rate limit จากบริการอื่น
 
 ## Node parameters
 
 ### Batch Size
 
-Enter the number of items to return with each call.
+ใส่จำนวนรายการที่ต้องการคืนค่าทุกครั้งที่เรียกใช้งาน
 
 ## Node options
 
 ### Reset
 
-If turned on, the node will reset with the current input-data newly initialized with each loop. Use this when you want the Loop Over Items node to treat incoming data as a new set of data instead of a continuation of previous items.
+ถ้าเปิด option นี้ node จะ reset ข้อมูล input ปัจจุบันใหม่ทุกครั้งที่วนลูป ใช้ในกรณีที่ต้องการให้ Loop Over Items node มองข้อมูลที่เข้ามาแต่ละรอบเป็นชุดข้อมูลใหม่ ไม่ใช่ต่อเนื่องจากรอบก่อน
 
-For example, you can use the Loop Over Items node with the reset option and an [If node](/integrations/builtin/core-nodes/n8n-nodes-base.if.md) to query a paginated service when you don't know how many pages you need in advance. The loop queries pages one at a time, performs any processing, and increments the page number. The loop reset ensures the loop recognizes each iteration as a new set of data. The If node evaluates an exit condition to decide whether to perform another iteration or not.
+ตัวอย่างเช่น สามารถใช้ Loop Over Items node พร้อม reset option และ [If node](/integrations/builtin/core-nodes/n8n-nodes-base.if.md) เพื่อดึงข้อมูลแบบ paginated เมื่อไม่รู้จำนวนหน้าล่วงหน้า โดย loop จะดึงข้อมูลทีละหน้า ประมวลผล และเพิ่มหมายเลขหน้า การ reset loop จะช่วยให้แต่ละรอบเป็นข้อมูลใหม่ If node จะเช็คเงื่อนไขเพื่อหยุดหรือวนลูปต่อ
 
 /// warning | Include a valid termination condition
-For workflows like the example described above, it's critical to include a valid termination condition for the loop. If your termination condition never matches, your workflow execution will get stuck in an infinite loop.
+สำหรับ workflow แบบนี้ ต้องมีเงื่อนไขหยุด loop ที่ถูกต้อง ถ้าเงื่อนไขไม่ตรงตามที่กำหนด workflow อาจวนลูปไม่รู้จบ
 ///
 
-When enabled, you can adjust the reset conditions by switching the parameter representation from **Fixed** to **Expression**. The results of your expression evaluation determine when the node will reset item processing.
+เมื่อเปิดใช้งาน สามารถปรับแต่งเงื่อนไข reset ได้โดยเปลี่ยน parameter จาก **Fixed** เป็น **Expression** ผลลัพธ์ของ expression จะเป็นตัวกำหนดว่า node จะ reset การประมวลผลรายการเมื่อไหร่
 
 ## Templates and examples
 
@@ -51,19 +51,19 @@ When enabled, you can adjust the reset conditions by switching the parameter rep
 
 ### Read RSS feed from two different sources
 
-This workflow allows you to read an RSS feed from two different sources using the Loop Over Items node. You need the Loop Over Items node in the workflow as the RSS Feed Read node only processes the first item it receives. You can also find the [workflow](https://n8n.io/workflows/687-read-rss-feed-from-two-different-sources/){:target=_blank .external-link} on n8n.io.
+workflow นี้ช่วยให้คุณอ่าน RSS feed จากสองแหล่งโดยใช้ Loop Over Items node จำเป็นต้องใช้ node นี้เพราะ RSS Feed Read node จะประมวลผลแค่รายการแรกที่ได้รับ สามารถดู [workflow](https://n8n.io/workflows/687-read-rss-feed-from-two-different-sources/){:target=_blank .external-link} ได้ที่ n8n.io
 
-The example walks through building the workflow, but assumes you are already familiar with n8n. To build your first workflow, including learning how to add nodes to a workflow, refer to [Try it out](/try-it-out/index.md).
+ตัวอย่างนี้จะอธิบายการสร้าง workflow โดยสมมติว่าคุณคุ้นเคยกับ n8n แล้ว ถ้ายังไม่เคยใช้งานมาก่อน ดูวิธีสร้าง workflow แรกได้ที่ [Try it out](/try-it-out/index.md)
 
-The final workflow looks like this:
+workflow สุดท้ายจะหน้าตาแบบนี้:
 
 [[ workflowDemo("file:///integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/rss-feed-example.json") ]]
 
-Copy the workflow file above and paste into your instance, or manually build it by following these steps:
+คัดลอก workflow ข้างบนไปวางใน instance ของคุณ หรือสร้างเองตามขั้นตอนนี้:
 
-1. Add the manual trigger.
-2. Add the Code node.
-3. Copy this code into the Code node:
+1. เพิ่ม manual trigger
+2. เพิ่ม Code node
+3. คัดลอก code นี้ไปใส่ใน Code node:
 	```js
 	return [
 		{
@@ -78,18 +78,18 @@ Copy the workflow file above and paste into your instance, or manually build it 
 		}
 	];
 	```
-4. Add the Loop Over Items node.
-5. Configure Loop Over Items: set the batch size to `1` in the **Batch Size** field.
-6. Add the RSS Feed Read node.
-7. Select **Test Workflow**. This runs the workflow to load data into the RSS Feed Read node.
-8. Configure RSS Feed Read: map `url` from the input to the **URL** field. You can do this by dragging and dropping from the **INPUT** panel, or using this expression: `{{ $json.url }}`.
-9. Select **Test Workflow** to run the workflow and see the resulting data.
+4. เพิ่ม Loop Over Items node
+5. ตั้งค่า Loop Over Items: ใส่ batch size เป็น `1` ใน **Batch Size**
+6. เพิ่ม RSS Feed Read node
+7. เลือก **Test Workflow** เพื่อรัน workflow และโหลดข้อมูลเข้า RSS Feed Read node
+8. ตั้งค่า RSS Feed Read: map `url` จาก input ไปที่ **URL** สามารถลากจาก **INPUT** panel หรือใช้ expression: `{{ $json.url }}`
+9. เลือก **Test Workflow** เพื่อดูผลลัพธ์
 
 ### Check that the node has processed all items
 
-To check if the node still has items to process, use the following expression: `{{$node["Loop Over Items"].context["noItemsLeft"]}}`. This expression returns a boolean value. If the node still has data to process, the expression returns `false`, otherwise it returns `true`.
+ถ้าอยากเช็คว่า node ประมวลผลข้อมูลครบหรือยัง ใช้ expression นี้: `{{$node["Loop Over Items"].context["noItemsLeft"]}}` expression นี้จะคืนค่าเป็น boolean ถ้ายังมีข้อมูลเหลือจะได้ `false` ถ้าหมดแล้วจะได้ `true`
 
 ### Get the current running index of the node
 
-To get the current running index of the node, use the following expression: `{{$node["Loop Over Items"].context["currentRunIndex"];}}`.
+ถ้าอยากรู้ว่า node กำลังประมวลผลรอบที่เท่าไหร่ ใช้ expression นี้: `{{$node["Loop Over Items"].context["currentRunIndex"];}}`
 

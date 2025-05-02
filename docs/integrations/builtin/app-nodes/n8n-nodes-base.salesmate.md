@@ -7,12 +7,10 @@ contentType: [integration, reference]
 
 # Salesmate node
 
-Use the Salesmate node to automate work in Salesmate, and integrate Salesmate with other applications. n8n has built-in support for a wide range of Salesmate features, including creating, updating, deleting, and getting activities, companies, and deals. 
-
-On this page, you'll find a list of operations the Salesmate node supports and links to more resources.
+ใช้ Salesmate node เพื่อช่วยให้งานใน Salesmate เป็นไปโดยอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันอื่น ๆ ได้อย่างมีประสิทธิภาพ. n8n รองรับฟีเจอร์ของ Salesmate หลากหลาย เช่น การสร้าง, อัปเดต, ลบ และดึงข้อมูล activities, companies, และ deals.
 
 /// note | Credentials
-Refer to [Salesmate credentials](/integrations/builtin/credentials/salesmate.md) for guidance on setting up authentication. 
+ดู [Salesmate credentials](/integrations/builtin/credentials/salesmate.md) สำหรับคำแนะนำในการตั้งค่า authentication. 
 ///
 
 ## Operations

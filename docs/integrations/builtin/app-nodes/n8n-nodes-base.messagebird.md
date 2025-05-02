@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # MessageBird node
 
-Use the MessageBird node to automate work in MessageBird, and integrate MessageBird with other applications. n8n has built-in support for a wide range of MessageBird features, including sending messages, and getting balances. 
+ใช้ MessageBird node ในการทำงานอัตโนมัติใน MessageBird และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ โดย n8n รองรับการส่งข้อความและการดึง balance.
 
-On this page, you'll find a list of operations the MessageBird node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ MessageBird node รองรับและลิงก์ไปยังข้อมูลเพิ่มเติม.
 
 /// note | Credentials
-Refer to [MessageBird credentials](/integrations/builtin/credentials/messagebird.md) for guidance on setting up authentication. 
+ดู [MessageBird credentials](/integrations/builtin/credentials/messagebird.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations

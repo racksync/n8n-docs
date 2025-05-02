@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Pushover node
 
-Use the Pushover node to automate work in Pushover, and integrate Pushover with other applications. n8n supports sending push notifications with Pushover.
+ใช้ Pushover node เพื่อช่วยทำงานใน Pushover แบบอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันอื่น ๆ. n8n รองรับการส่งการแจ้งเตือนแบบ push ผ่าน Pushover.
 
-On this page, you'll find a list of operations the Pushover node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการของ operations ที่ Pushover node รองรับและลิงก์สำหรับข้อมูลเพิ่มเติม.
 
 /// note | Credentials
-Refer to [Pushover credentials](/integrations/builtin/credentials/pushover.md) for guidance on setting up authentication. 
+ดูรายละเอียดเพิ่มเติมได้ที่ [Pushover credentials](/integrations/builtin/credentials/pushover.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

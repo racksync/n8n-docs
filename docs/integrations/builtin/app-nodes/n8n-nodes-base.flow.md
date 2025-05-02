@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Flow node
 
-Use the Flow node to automate work in Flow, and integrate Flow with other applications. n8n has built-in support for a wide range of Flow features, including creating, updating, and getting tasks.
+ใช้ Flow node เพื่อทำงานอัตโนมัติใน Flow และเชื่อมต่อ Flow กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Flow หลายอย่าง เช่น การสร้าง อัปเดต และดึงข้อมูล tasks
 
-On this page, you'll find a list of operations the Flow node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Flow node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Flow credentials](/integrations/builtin/credentials/flow.md) for guidance on setting up authentication. 
+โปรดดู [Flow credentials](/integrations/builtin/credentials/flow.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations

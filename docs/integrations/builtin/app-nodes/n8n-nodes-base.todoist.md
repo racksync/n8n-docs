@@ -8,13 +8,13 @@ priority: medium
 
 # Todoist node
 
-Use the Todoist node to automate work in Todoist, and integrate Todoist with other applications. n8n has built-in support for a wide range of Todoist features, including creating, updating, deleting, and getting tasks. 
-
-On this page, you'll find a list of operations the Todoist node supports and links to more resources.
+ใช้ Todoist node เพื่อช่วยงานอัตโนมัติใน Todoist และเชื่อมต่อ Todoist กับแอปพลิเคชันอื่น ๆ โดย n8n มีการสนับสนุนคุณสมบัติต่าง ๆ เช่น การสร้าง, อัปเดต, ลบ และดึงข้อมูล task
 
 /// note | Credentials
-Refer to [Todoist credentials](/integrations/builtin/credentials/todoist.md) for guidance on setting up authentication. 
+ดู [Todoist credentials](/integrations/builtin/credentials/todoist.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
+
+// เนื้อหานี้ยกเว้นการแปลเพราะอยู่ในภาษาไทยแล้ว
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 

@@ -8,12 +8,10 @@ priority: medium
 
 # Spotify node
 
-Use the Spotify node to automate work in Spotify, and integrate Spotify with other applications. n8n has built-in support for a wide range of Spotify features, including getting album and artist information. 
-
-On this page, you'll find a list of operations the Spotify node supports and links to more resources.
+ใช้ Spotify node เพื่อช่วยให้งานใน Spotify เป็นไปโดยอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันอื่น ๆ ได้อย่างมีประสิทธิภาพ. n8n รองรับฟีเจอร์ต่างๆ ของ Spotify เช่น การดึงข้อมูลของ album และ artist.
 
 /// note | Credentials
-Refer to [Spotify credentials](/integrations/builtin/credentials/spotify.md) for guidance on setting up authentication. 
+ดู [Spotify credentials](/integrations/builtin/credentials/spotify.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations

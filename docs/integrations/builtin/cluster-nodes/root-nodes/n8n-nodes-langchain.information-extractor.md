@@ -7,23 +7,22 @@ contentType: [integration, reference]
 
 # Information Extractor node
 
-Use the Information Extractor node to extract structured information from incoming data.
+ใช้ Information Extractor node เพื่อดึงข้อมูลที่มีโครงสร้าง (structured information) จากข้อมูลที่เข้ามา
 
-On this page, you'll find the node parameters for the Information Extractor node,
-and links to more resources.
+ในหน้านี้ คุณจะพบ node parameters สำหรับ Information Extractor node
+และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 ## Node parameters
 
-* **Text** defines the input text to extract information from. This is usually an expression that references a field from the input items. For example, this could be `{{ $json.chatInput }}` if the input is a chat trigger, or `{{ $json.text }}` if a previous node is Extract from PDF.
-* Use **Schema Type** to choose how you want to describe the desired output data format. You can choose between:
-    * **From Attribute Description**: This option allows you to define the schema by specifying the list of attributes and their descriptions.
-    * **Generate From JSON Example**: Input an example JSON object to automatically generate the schema. The node uses the object property types and names. It ignores the actual values.
-    * **Define Below**: Manually input the JSON schema. Read the JSON Schema [guides and examples](https://json-schema.org/learn/miscellaneous-examples){:target=_blank .external-link} for help creating a valid JSON schema.
+*   **Text** กำหนดข้อความ input ที่จะดึงข้อมูลออกมา โดยปกติจะเป็น expression ที่อ้างอิงถึง field จาก input items ตัวอย่างเช่น อาจเป็น `{{ $json.chatInput }}` หาก input เป็น chat trigger หรือ `{{ $json.text }}` หาก node ก่อนหน้าคือ Extract from PDF
+*   ใช้ **Schema Type** เพื่อเลือกว่าคุณต้องการอธิบาย format ข้อมูล output ที่ต้องการอย่างไร คุณสามารถเลือกได้ระหว่าง:
+    *   **From Attribute Description**: ตัวเลือกนี้ช่วยให้คุณกำหนด schema โดยระบุ list ของ attributes และ descriptions ของมัน
+    *   **Generate From JSON Example**: ป้อนตัวอย่าง JSON object เพื่อสร้าง schema โดยอัตโนมัติ Node จะใช้ types และ names ของ object property โดยไม่สนใจค่าจริง
+    *   **Define Below**: ป้อน JSON schema ด้วยตนเอง อ่าน [guides and examples](https://json-schema.org/learn/miscellaneous-examples){:target=_blank .external-link} ของ JSON Schema เพื่อช่วยสร้าง JSON schema ที่ถูกต้อง
 
 ## Node options
 
-* **System Prompt Template**: Use this option to change the system prompt that's used for the information extraction. n8n automatically appends format specification instructions to the prompt.
-
+*   **System Prompt Template**: ใช้ตัวเลือกนี้เพื่อเปลี่ยน system prompt ที่ใช้สำหรับการดึงข้อมูล n8n จะเพิ่มคำสั่งระบุ format ต่อท้าย prompt โดยอัตโนมัติ
 
 ## Related resources
 

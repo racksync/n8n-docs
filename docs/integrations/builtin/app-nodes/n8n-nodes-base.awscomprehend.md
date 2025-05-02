@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # AWS Comprehend node
 
-Use the AWS Comprehend node to automate work in AWS Comprehend, and integrate AWS Comprehend with other applications. n8n has built-in support for a wide range of AWS Comprehend features, including identifying and analyzing texts.
+ใช้ AWS Comprehend node เพื่อทำงานอัตโนมัติใน AWS Comprehend และผสานรวม AWS Comprehend กับแอปพลิเคชันอื่นๆ n8n มีการรองรับฟีเจอร์หลากหลายของ AWS Comprehend ในตัว รวมถึงการระบุและวิเคราะห์ข้อความ
 
-On this page, you'll find a list of operations the AWS Comprehend node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ AWS Comprehend node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [AWS Comprehend credentials](/integrations/builtin/credentials/aws.md) for guidance on setting up authentication. 
+อ้างอิง [AWS Comprehend credentials](/integrations/builtin/credentials/aws.md) สำหรับคำแนะนำในการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations

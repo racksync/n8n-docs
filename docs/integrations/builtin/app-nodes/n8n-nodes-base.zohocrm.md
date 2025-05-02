@@ -7,12 +7,16 @@ contentType: [integration, reference]
 
 # Zoho CRM node
 
-Use the Zoho CRM node to automate work in Zoho CRM, and integrate Zoho CRM with other applications. n8n has built-in support for a wide range of Zoho CRM features, including creating and deleting accounts, contacts, and deals. 
+Use the Zoho CRM node to automate work in Zoho CRM, and integrate Zoho CRM with other applications. 
+ใช้ Zoho CRM node เพื่อช่วยงานอัตโนมัติใน Zoho CRM และเชื่อมต่อ Zoho CRM กับแอปพลิเคชันอื่น ๆ 
+
+n8n has built-in support for a wide range of Zoho CRM features, including creating and deleting accounts, contacts, and deals. 
 
 On this page, you'll find a list of operations the Zoho CRM node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Zoho CRM credentials](/integrations/builtin/credentials/zoho.md) for guidance on setting up authentication. 
+Refer to [Zoho CRM credentials](/integrations/builtin/credentials/zohocrm.md) for guidance on setting up authentication.
+ดู [Zoho CRM credentials](/integrations/builtin/credentials/zohocrm.md) สำหรับคำแนะนำการตั้งค่า authentication.
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

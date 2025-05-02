@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Paddle node
 
-Use the Paddle node to automate work in Paddle, and integrate Paddle with other applications. n8n has built-in support for a wide range of Paddle features, including creating, updating, and getting coupons, as well as getting plans, products, and users. 
+ใช้ Paddle node เพื่อช่วยทำงานใน Paddle แบบอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันอื่น ๆ. n8n มีการสนับสนุนคุณสมบัติของ Paddle หลากหลาย เช่น การสร้าง, อัปเดต, และดึงข้อมูล coupons รวมถึงการดึงข้อมูล plans, products และ users.
 
-On this page, you'll find a list of operations the Paddle node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการของ operations ที่ Paddle node รองรับและลิงก์สำหรับข้อมูลเพิ่มเติม.
 
 /// note | Credentials
-Refer to [Paddle credentials](/integrations/builtin/credentials/paddle.md) for guidance on setting up authentication. 
+ดูรายละเอียดเพิ่มเติมได้ที่ [Paddle credentials](/integrations/builtin/credentials/paddle.md) สำหรับคำแนะนำในการตั้งค่า authentication. 
 ///
 
 ## Operations

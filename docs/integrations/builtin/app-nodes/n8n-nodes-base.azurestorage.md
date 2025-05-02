@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Azure Storage node
 
-The Azure Storage node has built-in support for a wide range of features, which includes creating, getting, and deleting blobs and containers. Use this node to automate work within the Azure Storage service or integrate it with other services in your workflow.
+Azure Storage node มีการรองรับฟีเจอร์หลากหลายในตัว ซึ่งรวมถึงการสร้าง, การดึงข้อมูล, และการลบ blobs และ containers ใช้ node นี้เพื่อทำงานอัตโนมัติภายในบริการ Azure Storage หรือผสานรวมกับบริการอื่นๆ ใน workflow ของคุณ
 
-On this page, you'll find a list of operations the Azure Storage node supports, and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Azure Storage node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 ///  note  | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/azurestorage.md).
+คุณสามารถดูข้อมูลการยืนยันตัวตนสำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/azurestorage.md)
 ///
 
 
@@ -37,6 +37,6 @@ You can find authentication information for this node [here](/integrations/built
 ## Related resources
 
 <!-- add a link to the service's documentation. This should usually go direct to the API docs -->
-Refer to [Microsoft's Azure Storage documentation](https://learn.microsoft.com/en-us/rest/api/storageservices/) for more information about the service.
+อ้างอิง [เอกสาร Azure Storage ของ Microsoft](https://learn.microsoft.com/en-us/rest/api/storageservices/) สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

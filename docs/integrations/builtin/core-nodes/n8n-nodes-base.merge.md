@@ -8,83 +8,83 @@ priority: critical
 
 # Merge
 
-Use the Merge node to combine data from multiple streams, once data of all streams is available.
+ใช้ Merge node เพื่อรวมข้อมูลจากหลายสตรีม เมื่อข้อมูลของทุกสตรีมพร้อมใช้งาน
 
-/// note | Major changes in 0.194.0
-The n8n team overhauled this node in n8n 0.194.0. This document reflects the latest version of the node. If you're using an older version of n8n, you can find the previous version of this document [here](https://github.com/n8n-io/n8n-docs/blob/4ff688642cc9ee7ca7d00987847bf4e4515da59d/docs/integrations/builtin/core-nodes/n8n-nodes-base.merge.md){:target=_blank .external-link}.
+/// note | การเปลี่ยนแปลงที่สำคัญในเวอร์ชัน 0.194.0
+ทีม n8n ได้ปรับปรุง node นี้ครั้งใหญ่ใน n8n เวอร์ชัน 0.194.0 เอกสารนี้อธิบาย node เวอร์ชันล่าสุด หากคุณใช้ n8n เวอร์ชันเก่า คุณสามารถดูเอกสารเวอร์ชันก่อนหน้าได้ [ที่นี่](https://github.com/n8n-io/n8n-docs/blob/4ff688642cc9ee7ca7d00987847bf4e4515da59d/docs/integrations/builtin/core-nodes/n8n-nodes-base.merge.md){:target=_blank .external-link}
 ///
 
-/// note | Minor changes in 1.49.0
-n8n version 1.49.0 introduced the option to add more than two inputs. Older versions only support up to two inputs. If you're running an older version and want to combine multiple inputs in these versions, use the [Code node](https://deploy-preview-2225--n8n-docs.netlify.app/code/code-node/).
+/// note | การเปลี่ยนแปลงเล็กน้อยในเวอร์ชัน 1.49.0
+n8n เวอร์ชัน 1.49.0 ได้เพิ่มตัวเลือกในการเพิ่มอินพุตมากกว่าสองอินพุต เวอร์ชันเก่ารองรับได้สูงสุดเพียงสองอินพุต หากคุณใช้เวอร์ชันเก่าและต้องการรวมอินพุตหลายรายการในเวอร์ชันเหล่านั้น ให้ใช้ [Code node](https://deploy-preview-2225--n8n-docs.netlify.app/code/code-node/)
 
-The **Mode > SQL Query** feature was also added in n8n version 1.49.0 and isn't available in older versions.
+ฟีเจอร์ **Mode > SQL Query** ถูกเพิ่มเข้ามาใน n8n เวอร์ชัน 1.49.0 และไม่มีในเวอร์ชันเก่า
 ///
 
 ## Node parameters
 
-You can specify how the Merge node should combine data from different data streams by choosing a **Mode**: 
+คุณสามารถระบุวิธีที่ Merge node ควรจะรวมข้อมูลจากสตรีมข้อมูลต่างๆ โดยเลือก **Mode**:
 
 ### Append
 
-Keep data from all inputs. Choose a **Number of Inputs** to output items of each input, one after another. The node waits for the execution of all connected inputs. 
+เก็บข้อมูลจากอินพุตทั้งหมด เลือก **Number of Inputs** เพื่อส่งออกรายการของแต่ละอินพุตทีละรายการ node จะรอการดำเนินการของอินพุตที่เชื่อมต่อทั้งหมด
 
 <figure markdown="span">
 ![Sample Append mode inputs and output. Two separate data sources are on the left, one with items A, B, C and one with items D, E, F. The final data source combines both and lists A, B, C, D, E, F.](/_images/integrations/builtin/core-nodes/merge/append-diagram.png)
-<figcaption>Append mode inputs and output</figcaption>
+<figcaption>อินพุตและเอาต์พุตของโหมด Append</figcaption>
 </figure>
 
 ### Combine
 
-Combine data from two inputs. Select an option in **Combine By** to determine how you want to merge the input data.
+รวมข้อมูลจากสองอินพุต เลือกตัวเลือกใน **Combine By** เพื่อกำหนดวิธีที่คุณต้องการรวมข้อมูลอินพุต
 
 #### Matching Fields
 
-Compare items by field values. Enter the fields you want to compare in **Fields to Match**. 
+เปรียบเทียบรายการตามค่าฟิลด์ ป้อนฟิลด์ที่คุณต้องการเปรียบเทียบใน **Fields to Match**
 
-n8n's default behavior is to keep matching items. You can change this using the **Output Type** setting:
+พฤติกรรมเริ่มต้นของ n8n คือการเก็บรายการที่ตรงกัน คุณสามารถเปลี่ยนสิ่งนี้ได้โดยใช้การตั้งค่า **Output Type**:
 
-* **Keep Matches**: Merge items that match. This is like an inner join.
-* **Keep Non-Matches**: Merge items that don't match.
-* **Keep Everything**: Merge items together that do match and include items that don't match. This is like an outer join.
-* **Enrich Input 1**: Keep all data from Input 1, and add matching data from Input 2. This is like a left join.
-* **Enrich Input 2**: Keep all data from Input 2, and add matching data from Input 1. This is like a right join.
+*   **Keep Matches**: รวมรายการที่ตรงกัน เหมือนกับการทำ inner join
+*   **Keep Non-Matches**: รวมรายการที่ไม่ตรงกัน
+*   **Keep Everything**: รวมรายการที่ตรงกันเข้าด้วยกันและรวมรายการที่ไม่ตรงกันด้วย เหมือนกับการทำ outer join
+*   **Enrich Input 1**: เก็บข้อมูลทั้งหมดจาก Input 1 และเพิ่มข้อมูลที่ตรงกันจาก Input 2 เหมือนกับการทำ left join
+*   **Enrich Input 2**: เก็บข้อมูลทั้งหมดจาก Input 2 และเพิ่มข้อมูลที่ตรงกันจาก Input 1 เหมือนกับการทำ right join
 
 <figure markdown="span">
 ![Sample Combine mode inputs and output. Two separate data sources are on the left. The final data source combines these data sources by matching fields.](/_images/integrations/builtin/core-nodes/merge/merge-by-field-diagram.png)
-<figcaption>Combine by Matching Fields mode inputs and output</figcaption>
+<figcaption>อินพุตและเอาต์พุตของโหมด Combine by Matching Fields</figcaption>
 </figure>
 
 
 #### Position
 
-Combine items based on their order. The item at index 0 in Input 1 merges with the item at index 0 in Input 2, and so on.
+รวมรายการตามลำดับ รายการที่ index 0 ใน Input 1 จะรวมกับรายการที่ index 0 ใน Input 2 และต่อไปเรื่อยๆ
 
 <figure markdown="span">
 ![Sample Combine mode inputs and output. Two separate data sources are on the left. The final data source combines these data sources by index position.](/_images/integrations/builtin/core-nodes/merge/merge-by-position-diagram.png)
-<figcaption>Combine by Position mode inputs and output</figcaption>
+<figcaption>อินพุตและเอาต์พุตของโหมด Combine by Position</figcaption>
 </figure>
 
 
 #### All Possible Combinations
 
-Output all possible item combinations, while merging fields with the same name.
+ส่งออกชุดค่าผสมที่เป็นไปได้ทั้งหมดของรายการ ในขณะที่รวมฟิลด์ที่มีชื่อเดียวกัน
 
 <figure markdown="span">
 ![Sample Combine mode inputs and output. Two separate data sources are on the left. The final data source combines these data sources by all possible combinations.](/_images/integrations/builtin/core-nodes/merge/multiplex-diagram.png)
-<figcaption>Combine by All Possible Combinations mode inputs and output</figcaption>
+<figcaption>อินพุตและเอาต์พุตของโหมด Combine by All Possible Combinations</figcaption>
 </figure>
 
 #### Combine mode options
 
-When merging data by **Mode > Combine**, you can set these **Options**:
+เมื่อรวมข้อมูลโดยใช้ **Mode > Combine** คุณสามารถตั้งค่า **Options** เหล่านี้ได้:
 
-* **Clash Handling**: Choose how to merge when data streams clash, or when there are sub-fields. Refer to [Clash handling](#clash-handling) for details.
-* **Fuzzy Compare**: Whether to tolerate type differences when comparing fields (enabled), or not (disabled, default). For example, when you enable this, n8n treats `"3"` and `3` as the same.
-* **Disable Dot Notation**: This prevents accessing child fields using `parent.child` in the field name.
-* **Multiple Matches**: Choose how n8n handles multiple matches when comparing data streams.
-    * **Include All Matches**: Output multiple items if there are multiple matches, one for each match.
-    * **Include First Match Only**: Keep the first item per match and discard the remaining multiple matches.
-* **Include Any Unpaired Items**: Choose whether to keep or discard unpaired items when merging by position. The default behavior is to leave out the items without a match. 
+* **Clash Handling**: เลือกวิธีรวมเมื่อสตรีมข้อมูลขัดแย้งกัน หรือเมื่อมีฟิลด์ย่อย อ้างอิงถึง [Clash handling](#clash-handling) สำหรับรายละเอียด
+* **Fuzzy Compare**: เลือกว่าจะยอมรับความแตกต่างของประเภทเมื่อเปรียบเทียบฟิลด์หรือไม่ (เปิดใช้งาน) หรือไม่ (ปิดใช้งาน, ค่าเริ่มต้น) ตัวอย่างเช่น เมื่อคุณเปิดใช้งานสิ่งนี้ n8n จะถือว่า `"3"` และ `3` เหมือนกัน
+* **Disable Dot Notation**: ป้องกันการเข้าถึงฟิลด์ลูกโดยใช้ `parent.child` ในชื่อฟิลด์
+* **Multiple Matches**: เลือกวิธีที่ n8n จัดการกับการจับคู่หลายรายการเมื่อเปรียบเทียบสตรีมข้อมูล
+    * **Include All Matches**: ส่งออกหลายรายการหากมีการจับคู่หลายรายการ หนึ่งรายการสำหรับการจับคู่แต่ละครั้ง
+    * **Include First Match Only**: เก็บรายการแรกต่อการจับคู่และทิ้งการจับคู่หลายรายการที่เหลือ
+* **Include Any Unpaired Items**: เลือกว่าจะเก็บหรือทิ้งรายการที่ไม่มีคู่เมื่อรวมตามตำแหน่ง พฤติกรรมเริ่มต้นคือการละเว้นรายการที่ไม่มีการจับคู่
 
 ##### Clash Handling
 
@@ -92,24 +92,24 @@ When merging data by **Mode > Combine**, you can set these **Options**:
 
 ### SQL Query
 
-Write a custom SQL Query to merge the data. 
+เขียน SQL Query แบบกำหนดเองเพื่อรวมข้อมูล
 
-Example: 
+ตัวอย่าง:
 ```sql
 SELECT * FROM input1 LEFT JOIN input2 ON input1.name = input2.id
 ```
 
-Data from previous nodes are available as tables and you can use them in the SQL query as input1, input2, input3, and so on, based on their order. Refer to [AlaSQL GitHub page](https://github.com/alasql/alasql/wiki/Supported-SQL-statements){:target=_blank .external-link} for a full list of supported SQL statements. 
+ข้อมูลจาก node ก่อนหน้ามีให้ใช้งานเป็นตาราง และคุณสามารถใช้ใน SQL query เป็น input1, input2, input3 และอื่นๆ ตามลำดับ อ้างอิงถึง [AlaSQL GitHub page](https://github.com/alasql/alasql/wiki/Supported-SQL-statements){:target=_blank .external-link} สำหรับรายการคำสั่ง SQL ที่รองรับทั้งหมด
 
 ### Choose Branch
 
-Choose which input to keep. This option always waits until the data from both inputs is available. You can choose to **Output**:
+เลือกอินพุตที่จะเก็บ ตัวเลือกนี้จะรอจนกว่าข้อมูลจากอินพุตทั้งสองจะพร้อมใช้งานเสมอ คุณสามารถเลือกที่จะ **Output**:
 
-* The **Input 1 Data**
-* The **Input 2 Data**
+* **Input 1 Data**
+* **Input 2 Data**
 * **A Single, Empty Item**
 
-The node outputs the data from the chosen input, without changing it.
+node จะส่งออกข้อมูลจากอินพุตที่เลือก โดยไม่มีการเปลี่ยนแปลง
 
 ## Templates and examples
 
@@ -118,7 +118,7 @@ The node outputs the data from the chosen input, without changing it.
 
 ## Merging data streams with uneven numbers of items
 
-The items passed into Input 1 of the Merge node will take precedence. For example, if the Merge node receives five items in Input 1 and 10 items in Input 2, it only processes five items. The remaining five items from Input 2 aren't processed.
+รายการที่ส่งไปยัง Input 1 ของ Merge node จะมีความสำคัญกว่า ตัวอย่างเช่น หาก Merge node ได้รับห้ารายการใน Input 1 และ 10 รายการใน Input 2 มันจะประมวลผลเพียงห้ารายการเท่านั้น รายการที่เหลืออีกห้ารายการจาก Input 2 จะไม่ถูกประมวลผล
 
 ## Branch execution with If and Merge nodes
 
@@ -127,12 +127,12 @@ The items passed into Input 1 of the Merge node will take precedence. For exampl
 
 ## Try it out: A step by step example
 
-Create a workflow with some example input data to try out the Merge node.
+สร้าง workflow พร้อมข้อมูลอินพุตตัวอย่างเพื่อลองใช้ Merge node
 
 ### Set up sample data using the Code nodes
 
-1. Add a Code node to the canvas and connect it to the Start node.
-2. Paste the following JavaScript code snippet in the **JavaScript Code** field:
+1. เพิ่ม Code node ลงใน canvas และเชื่อมต่อกับ Start node
+2. วางโค้ด JavaScript ต่อไปนี้ในฟิลด์ **JavaScript Code**:
 ```js
 return [
   {
@@ -155,8 +155,8 @@ return [
   }
 ];
 ```
-3. Add a second Code node, and connect it to the Start node.
-4. Paste the following JavaScript code snippet in the **JavaScript Code** field:
+3. เพิ่ม Code node ที่สอง และเชื่อมต่อกับ Start node
+4. วางโค้ด JavaScript ต่อไปนี้ในฟิลด์ **JavaScript Code**:
 ```js
 return [
 	  {
@@ -176,19 +176,19 @@ return [
 
 ### Try out different merge modes
 
-Add the Merge node. Connect the first Code node to **Input 1**, and the second Code node to **Input 2**. Run the workflow to load data into the Merge node.
+เพิ่ม Merge node เชื่อมต่อ Code node แรกกับ **Input 1** และ Code node ที่สองกับ **Input 2** รัน workflow เพื่อโหลดข้อมูลลงใน Merge node
 
-The final workflow should look like this:
+workflow สุดท้ายควรมีลักษณะดังนี้:
 
 [[ workflowDemo("https://api.n8n.io/workflows/templates/655") ]]
 
-Now try different options in **Mode** to see how it affects the output data.
+ตอนนี้ลองใช้ตัวเลือกต่างๆ ใน **Mode** เพื่อดูว่ามีผลต่อข้อมูลเอาต์พุตอย่างไร
 
 #### Append
 
-Select **Mode** > **Append**, then select **Test step**.
+เลือก **Mode** > **Append** จากนั้นเลือก **Test step**
 
-Your output in table view should look like this:
+เอาต์พุตของคุณในมุมมองตารางควรมีลักษณะดังนี้:
 <!-- vale off -->
 | **name** | **language** | **greeting** |
 | --- | --- | --- |
@@ -201,14 +201,14 @@ Your output in table view should look like this:
 
 #### Combine by Matching Fields
 
-You can merge these two data inputs so that each person gets the correct greeting for their language.
+คุณสามารถรวมข้อมูลอินพุตทั้งสองนี้เพื่อให้แต่ละคนได้รับคำทักทายที่ถูกต้องสำหรับภาษาของพวกเขา
 
-1. Select **Mode** > **Combine**.
-2. Select **Combine by** > **Matching Fields**.
-3. In both **Input 1 Field** and **Input 2 Field**, enter `language`. This tells n8n to combine the data by matching the values in the `language` field in each data set.
-4. Select **Test step**.
+1. เลือก **Mode** > **Combine**
+2. เลือก **Combine by** > **Matching Fields**
+3. ในทั้ง **Input 1 Field** และ **Input 2 Field** ป้อน `language` สิ่งนี้จะบอก n8n ให้รวมข้อมูลโดยการจับคู่ค่าในฟิลด์ `language` ในแต่ละชุดข้อมูล
+4. เลือก **Test step**
 
-Your output in table view should look like this:
+เอาต์พุตของคุณในมุมมองตารางควรมีลักษณะดังนี้:
 <!-- vale off -->
 
 | **name** | **language** | **greeting** |
@@ -220,9 +220,9 @@ Your output in table view should look like this:
 
 #### Combine by Position
 
-Select **Mode** > **Combine**, **Combine by** > **Position**, then select **Test step**.
+เลือก **Mode** > **Combine**, **Combine by** > **Position** จากนั้นเลือก **Test step**
 
-Your output in table view should look like this:
+เอาต์พุตของคุณในมุมมองตารางควรมีลักษณะดังนี้:
 <!-- vale off -->
 | **name** | **language** | **greeting** |
 | --- | --- | --- |
@@ -232,9 +232,9 @@ Your output in table view should look like this:
 
 ##### Keep unpaired items
 
-If you want to keep all items, select **Add Option** > **Include Any Unpaired Items**, then turn on **Include Any Unpaired Items**.
+หากคุณต้องการเก็บรายการทั้งหมด ให้เลือก **Add Option** > **Include Any Unpaired Items** จากนั้นเปิด **Include Any Unpaired Items**
 
-Your output in table view should look like this:
+เอาต์พุตของคุณในมุมมองตารางควรมีลักษณะดังนี้:
 <!-- vale off -->
 | **name** | **language** | **greeting** |
 | --- | --- | --- |
@@ -243,11 +243,11 @@ Your output in table view should look like this:
 | Hans | de |  |
 <!-- vale on -->
 
-#### Combine by All Possible Combinations 
+#### Combine by All Possible Combinations
 
-Select **Mode** > **Combine**, **Combine by** > **All Possible Combinations**, then select **Test step**.
+เลือก **Mode** > **Combine**, **Combine by** > **All Possible Combinations** จากนั้นเลือก **Test step**
 
-Your output in table view should look like this:
+เอาต์พุตของคุณในมุมมองตารางควรมีลักษณะดังนี้:
 <!-- vale off -->
 | **name** | **language** | **greeting** |
 | --- | --- | --- |

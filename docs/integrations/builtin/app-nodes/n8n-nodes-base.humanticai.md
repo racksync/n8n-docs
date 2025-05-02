@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Humantic AI node
 
-Use the Humantic AI node to automate work in Humantic AI, and integrate Humantic AI with other applications. n8n has built-in support for a wide range of Humantic AI features, including creating, retrieving, and updating profiles. 
+ใช้ Humantic AI node เพื่อทำงานอัตโนมัติใน Humantic AI และเชื่อมต่อ Humantic AI กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Humantic AI หลายอย่าง เช่น การสร้าง ดึงข้อมูล และอัปเดต profiles
 
-On this page, you'll find a list of operations the Humantic AI node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Humantic AI node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Humantic AI credentials](/integrations/builtin/credentials/humanticai.md) for guidance on setting up authentication. 
+โปรดดู [Humantic AI credentials](/integrations/builtin/credentials/humanticai.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations

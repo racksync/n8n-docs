@@ -7,13 +7,10 @@ contentType: [integration, reference]
 
 # Splunk node
 
-Use the Splunk node to automate work in Splunk, and integrate Splunk with other applications. n8n has built-in support for a wide range of Splunk features, including getting fired alerts reports, as well as deleting and getting search configuration. 
-
-On this page, you'll find a list of operations the Splunk node supports and links to more resources.
+ใช้ Splunk node เพื่อช่วยให้งานใน Splunk เป็นไปโดยอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันอื่นๆ ได้อย่างมีประสิทธิภาพ.
 
 /// note | Credentials
-Refer to [Splunk credentials](/integrations/builtin/credentials/splunk.md) for guidance on setting up authentication. 
-///
+ดู [Splunk credentials](/integrations/builtin/credentials/splunk.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 
 ## Operations
 

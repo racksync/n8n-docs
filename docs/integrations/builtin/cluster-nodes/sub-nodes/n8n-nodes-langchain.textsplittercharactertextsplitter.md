@@ -8,17 +8,17 @@ priority: medium
 
 # Character Text Splitter node
 
-Use the Character Text Splitter node to split document data based on characters.
+ใช้ Character Text Splitter node เพื่อแยกข้อมูลเอกสารตามตัวอักษร
 
-On this page, you'll find the node parameters for the Character Text Splitter node, and links to more resources.
+ในหน้านี้จะมี parameter ของ node Character Text Splitter และลิงก์ resource อื่นๆ ที่เกี่ยวข้อง
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node parameters
 
-* **Separator**: Select the separator used to split the document into separate items.
-* **Chunk Size**: Enter the number of characters in each chunk.
-* **Chunk Overlap**: Enter how much overlap to have between chunks.
+* **Separator**: เลือกตัวคั่นที่ใช้แยกเอกสารเป็นแต่ละส่วน
+* **Chunk Size**: ใส่จำนวนตัวอักษรในแต่ละ chunk
+* **Chunk Overlap**: ใส่จำนวนตัวอักษรที่ chunk จะซ้อนทับกัน
 
 ## Templates and examples
 
@@ -27,7 +27,7 @@ On this page, you'll find the node parameters for the Character Text Splitter no
 
 ## Related resources
 
-Refer to [LangChain's text splitter documentation](https://js.langchain.com/docs/concepts/text_splitters){:target=_blank .external-link} and [LangChain's API documentation for character text splitting](https://v03.api.js.langchain.com/classes/langchain.text_splitter.CharacterTextSplitter.html){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมได้ที่ [LangChain's text splitter documentation](https://js.langchain.com/docs/concepts/text_splitters){:target=_blank .external-link} และ [LangChain's API documentation for character text splitting](https://v03.api.js.langchain.com/classes/langchain.text_splitter.CharacterTextSplitter.html){:target=_blank .external-link}
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

@@ -8,13 +8,10 @@ priority: high
 
 # Slack node
 
-Use the Slack node to automate work in Slack, and integrate Slack with other applications. n8n has built-in support for a wide range of Slack features, including creating, archiving, and closing channels, getting users and files, as well as deleting messages.
-
-On this page, you'll find a list of operations the Slack node supports and links to more resources.
+ใช้ Slack node เพื่อให้การทำงานใน Slack เป็นไปโดยอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันอื่น ๆ ได้อย่างมีประสิทธิภาพ.
 
 /// note | Credentials
-Refer to [Slack credentials](/integrations/builtin/credentials/slack.md) for guidance on setting up authentication. 
-///
+ดู [Slack credentials](/integrations/builtin/credentials/slack.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 
 ## Operations
 

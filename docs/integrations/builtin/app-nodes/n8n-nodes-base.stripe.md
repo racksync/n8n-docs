@@ -7,12 +7,10 @@ contentType: [integration, reference]
 
 # Stripe node
 
-Use the Stripe node to automate work in Stripe, and integrate Stripe with other applications. n8n has built-in support for a wide range of Stripe features, including getting balance, creating charge, and deleting customers. 
-
-On this page, you'll find a list of operations the Stripe node supports and links to more resources.
+ใช้ Stripe node เพื่อช่วยให้งานใน Stripe เป็นไปโดยอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันอื่น ๆ ได้ง่ายดาย. n8n รองรับฟีเจอร์ของ Stripe หลากหลาย เช่น การเช็ค balance, สร้าง charge, และการลบลูกค้า.
 
 /// note | Credentials
-Refer to [Stripe credentials](/integrations/builtin/credentials/stripe.md) for guidance on setting up authentication. 
+ดู [Stripe credentials](/integrations/builtin/credentials/stripe.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations

@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Rundeck node
 
-Use the Rundeck node to automate work in Rundeck, and integrate Rundeck with other applications. n8n has built-in support for executing jobs and getting metadata.
+ใช้ Rundeck node ในการอัตโนมัติงานใน Rundeck และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ. n8n มีการสนับสนุนในตัวสำหรับการรัน job และดึง metadata.
 
-On this page, you'll find a list of operations the Rundeck node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Rundeck node รองรับ พร้อมทั้งลิงก์ไปยัง resources เพิ่มเติม.
 
 /// note | Credentials
-Refer to [Rundeck credentials](/integrations/builtin/credentials/rundeck.md) for guidance on setting up authentication. 
+ดู [Rundeck credentials](/integrations/builtin/credentials/rundeck.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations
@@ -30,10 +30,10 @@ Refer to [Rundeck credentials](/integrations/builtin/credentials/rundeck.md) for
 
 ## Find the job ID
 
-1. Access your Rundeck dashboard.
-2. Open the project that contains the job you want to use with n8n.
-3. In the sidebar, select **JOBS**.
-4. Under **All Jobs**, select the name of the job you want to use with n8n.
-5. In the top left corner, under the name of the job, copy the string that's displayed in smaller font below the job name. This is your job ID.
-6. Paste this job ID in the **Job Id** field in n8n.
+1. เข้าไปที่ dashboard ของ Rundeck.
+2. เปิดโปรเจคที่มี job ที่คุณต้องการใช้กับ n8n.
+3. ใน sidebar ให้เลือก **JOBS**.
+4. ภายใต้ **All Jobs** ให้เลือกชื่อ job ที่คุณต้องการใช้กับ n8n.
+5. ที่มุมซ้ายบน ใต้ชื่อ job ให้คัดลอกข้อความที่แสดงในแบบตัวอักษรเล็ก ๆ ซึ่งเป็น job ID ของคุณ.
+6. วาง job ID นี้ลงในช่อง **Job Id** ใน n8n.
 

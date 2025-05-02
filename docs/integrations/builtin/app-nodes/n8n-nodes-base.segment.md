@@ -7,12 +7,10 @@ contentType: [integration, reference]
 
 # Segment node
 
-Use the Segment node to automate work in Segment, and integrate Segment with other applications. n8n has built-in support for a wide range of Segment features, including adding users to groups, creating identities, and tracking activities. 
-
-On this page, you'll find a list of operations the Segment node supports and links to more resources.
+ใช้ Segment node เพื่อให้การทำงานใน Segment เป็นไปโดยอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันอื่น ๆ ได้อย่างลงตัว. n8n รองรับฟีเจอร์ของ Segment หลากหลาย เช่น การเพิ่มผู้ใช้เข้ากลุ่ม, การสร้าง identities, และการติดตาม activities.
 
 /// note | Credentials
-Refer to [Segment credentials](/integrations/builtin/credentials/segment.md) for guidance on setting up authentication. 
+ดู [Segment credentials](/integrations/builtin/credentials/segment.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations

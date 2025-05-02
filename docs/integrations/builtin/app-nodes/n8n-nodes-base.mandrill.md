@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Mandrill node
 
-Use the Mandrill node to automate work in Mandrill, and integrate Mandrill with other applications. n8n supports sending messages based on templates or HTML with Mandrill.
+ใช้ Mandrill node ในการทำงานอัตโนมัติใน Mandrill และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ โดย n8n รองรับการส่งข้อความโดยใช้ template หรือ HTML.
 
-On this page, you'll find a list of operations the Mandrill node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Mandrill node รองรับและลิงก์ไปยังข้อมูลเพิ่มเติม.
 
 /// note | Credentials
-Refer to [Mandrill credentials](/integrations/builtin/credentials/mandrill.md) for guidance on setting up authentication. 
+ดู [Mandrill credentials](/integrations/builtin/credentials/mandrill.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations

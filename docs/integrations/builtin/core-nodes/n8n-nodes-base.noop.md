@@ -8,7 +8,7 @@ priority: high
 
 # No Operation, do nothing
 
-Use the No Operation, do nothing node when you don't want to perform any operations. The purpose of this node is to make the workflow easier to read and understand where the flow of data stops. This can help others visually get a better understanding of the workflow.
+ใช้ No Operation, do nothing node เมื่อคุณไม่ต้องการให้ workflow ทำงานอะไรเพิ่มเติม จุดประสงค์ของ node นี้คือช่วยให้ workflow ดูเข้าใจง่ายขึ้น และเห็นได้ชัดเจนว่าข้อมูลหยุดไหลที่จุดไหน ซึ่งจะช่วยให้คนอื่นเข้าใจ workflow ได้ง่ายขึ้น
 
 ## Templates and examples
 

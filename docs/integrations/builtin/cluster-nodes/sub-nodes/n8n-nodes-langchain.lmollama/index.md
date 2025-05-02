@@ -8,31 +8,31 @@ priority: high
 
 # Ollama Model node
 
-The Ollama Model node allows you use local Llama 2 models.
+Ollama Model node ช่วยให้คุณสามารถใช้โมเดล Llama 2 แบบ local ได้
 
-On this page, you'll find the node parameters for the Ollama Model node, and links to more resources.
+ในหน้านี้ คุณจะพบพารามิเตอร์ของ node สำหรับ Ollama Model node และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/ollama.md).
+คุณสามารถดูข้อมูลการยืนยันตัวตนสำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/ollama.md)
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node parameters
 
-* **Model**: Select the model that generates the completion. Choose from:
+* **Model**: เลือกโมเดลที่จะใช้สร้าง completion เลือกจาก:
 	* **Llama2**
 	* **Llama2 13B**
 	* **Llama2 70B**
 	* **Llama2 Uncensored**
 
-Refer to the Ollama [Models Library documentation](https://ollama.com/library){:target=_blank .external-link} for more information about available models.
+อ้างอิงถึงเอกสาร [Models Library documentation](https://ollama.com/library){:target=_blank .external-link} ของ Ollama สำหรับข้อมูลเพิ่มเติมเกี่ยวกับโมเดลที่มีให้ใช้งาน
 
 ## Node options
 
-* **Sampling Temperature**: Use this option to control the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
-* **Top K**: Enter the number of token choices the model uses to generate the next token.
-* **Top P**: Use this option to set the probability the completion should use. Use a lower value to ignore less probable options.
+* **Sampling Temperature**: ใช้ตัวเลือกนี้เพื่อควบคุมความสุ่มของกระบวนการ sampling ค่า temperature ที่สูงขึ้นจะสร้างการ sampling ที่หลากหลายมากขึ้น แต่เพิ่มความเสี่ยงของ hallucination
+* **Top K**: ป้อนจำนวน token ที่โมเดลจะใช้ในการสร้าง token ถัดไป
+* **Top P**: ใช้ตัวเลือกนี้เพื่อกำหนดค่าความน่าจะเป็นที่ completion ควรใช้ ใช้ค่าที่ต่ำลงเพื่อละเว้นตัวเลือกที่มีความน่าจะเป็นน้อย
 
 ## Templates and examples
 
@@ -41,13 +41,13 @@ Refer to the Ollama [Models Library documentation](https://ollama.com/library){:
 
 ## Related resources
 
-Refer to [LangChains's Ollama documentation](https://js.langchain.com/docs/integrations/llms/ollama/){:target=_blank .external-link} for more information about the service.
+อ้างอิงถึง [LangChains's Ollama documentation](https://js.langchain.com/docs/integrations/llms/ollama/){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmollama/common-issues.md).
+สำหรับคำถามหรือปัญหาที่พบบ่อยและแนวทางแก้ไขที่แนะนำ โปรดดูที่ [Common issues](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmollama/common-issues.md)
 
 --8<-- "_glossary/ai-glossary.md"
 

@@ -8,45 +8,45 @@ priority: medium
 
 # Supabase Vector Store node
 
-Use the Supabase Vector Store to interact with your Supabase database as [vector store](/glossary.md#ai-vector-store). You can insert documents into a vector database, get documents from a vector database, retrieve documents to provide them to a retriever connected to a [chain](/glossary.md#ai-chain), or connect it directly to an [agent](/glossary.md#ai-agent) to use as a [tool](/glossary.md#ai-tool).
+ใช้ Supabase Vector Store เพื่อโต้ตอบกับ Supabase database ของคุณในฐานะ [vector store](/glossary.md#ai-vector-store) คุณสามารถใส่ documents เข้าไปใน vector database, ดึง documents จาก vector database, เรียกดู documents เพื่อส่งต่อไปยัง retriever ที่เชื่อมต่อกับ [chain](/glossary.md#ai-chain) หรือเชื่อมต่อโดยตรงกับ [agent](/glossary.md#ai-agent) เพื่อใช้เป็น [tool](/glossary.md#ai-tool)
 
-On this page, you'll find the node parameters for the Supabase node, and links to more resources.
+ในหน้านี้ คุณจะพบ node parameters สำหรับ Supabase node และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/supabase.md).
+คุณสามารถดูข้อมูล authentication สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/supabase.md)
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
-	
-Supabase provides a [quickstart for setting up your vector store](https://supabase.com/docs/guides/ai/langchain?database-method=sql){:target=_blank .external-link}. If you use settings other than the defaults in the quickstart, this may affect parameter settings in n8n. Make sure you understand what you're doing.
+
+Supabase มี [quickstart สำหรับการตั้งค่า vector store ของคุณ](https://supabase.com/docs/guides/ai/langchain?database-method=sql){:target=_blank .external-link} หากคุณใช้การตั้งค่าอื่นนอกเหนือจากค่าเริ่มต้นใน quickstart อาจส่งผลต่อการตั้งค่า parameter ใน n8n โปรดตรวจสอบให้แน่ใจว่าคุณเข้าใจสิ่งที่คุณกำลังทำ
 
 ## Node usage patterns
 
-You can use the Supabase Vector Store node in the following patterns.
+คุณสามารถใช้ Supabase Vector Store node ในรูปแบบต่อไปนี้
 
 ### Use as a regular node to insert, update, and retrieve documents
 
-You can use the Supabase Vector Store as a regular node to insert, update, or get documents. This pattern places the Supabase Vector Store in the regular connection flow without using an agent.
+คุณสามารถใช้ Supabase Vector Store เป็น node ปกติเพื่อ insert, update หรือ get documents รูปแบบนี้จะวาง Supabase Vector Store ไว้ใน flow การเชื่อมต่อปกติโดยไม่ต้องใช้ agent
 
-You can see an example of this in scenario 1 of [this template](https://n8n.io/workflows/2621-ai-agent-to-chat-with-files-in-supabase-storage/).
+คุณสามารถดูตัวอย่างได้ใน scenario 1 ของ [template นี้](https://n8n.io/workflows/2621-ai-agent-to-chat-with-files-in-supabase-storage/)
 
 ### Connect directly to an AI agent as a tool
 
-You can connect the Supabase Vector Store node directly to the tool connector of an [AI agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) to use a vector store as a resource when answering queries.
+คุณสามารถเชื่อมต่อ Supabase Vector Store node โดยตรงกับ tool connector ของ [AI agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) เพื่อใช้ vector store เป็น resource เมื่อตอบคำถาม
 
-Here, the connection would be: AI agent (tools connector) -> Supabase Vector Store node.
+ในกรณีนี้ การเชื่อมต่อจะเป็น: AI agent (tools connector) -> Supabase Vector Store node
 
 ### Use a retriever to fetch documents
 
-You can use the [Vector Store Retriever](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) node with the Supabase Vector Store node to fetch documents from the Supabase Vector Store node. This is often used with the [Question and Answer Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa/index.md) node to fetch documents from the vector store that match the given chat input.
+คุณสามารถใช้ [Vector Store Retriever](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) node ร่วมกับ Supabase Vector Store node เพื่อดึง documents จาก Supabase Vector Store node ซึ่งมักใช้กับ [Question and Answer Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa/index.md) node เพื่อดึง documents จาก vector store ที่ตรงกับ input ของ chat ที่กำหนด
 
-An [example of the connection flow](https://n8n.io/workflows/1960-ask-questions-about-a-pdf-using-ai/) (the example uses Pinecone, but the pattern in the same) would be: Question and Answer Chain (Retriever connector) -> Vector Store Retriever (Vector Store connector) -> Supabase Vector Store.
+[ตัวอย่างของ flow การเชื่อมต่อ](https://n8n.io/workflows/1960-ask-questions-about-a-pdf-using-ai/) (ตัวอย่างใช้ Pinecone แต่รูปแบบเหมือนกัน) จะเป็น: Question and Answer Chain (Retriever connector) -> Vector Store Retriever (Vector Store connector) -> Supabase Vector Store
 
 ### Use the Vector Store Question Answer Tool to answer questions
 
-Another pattern uses the [Vector Store Question Answer Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore.md) to summarize results and answer questions from the Supabase Vector Store node. Rather than connecting the Supabase Vector Store directly as a tool, this pattern uses a tool specifically designed to summarizes data in the vector store.
+อีกรูปแบบหนึ่งคือการใช้ [Vector Store Question Answer Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore.md) เพื่อสรุปผลลัพธ์และตอบคำถามจาก Supabase Vector Store node แทนที่จะเชื่อมต่อ Supabase Vector Store โดยตรงในฐานะ tool รูปแบบนี้จะใช้ tool ที่ออกแบบมาโดยเฉพาะเพื่อสรุปข้อมูลใน vector store
 
-The [connections flow](https://n8n.io/workflows/2621-ai-agent-to-chat-with-files-in-supabase-storage/) in this case would look like this: AI agent (tools connector) -> Vector Store Question Answer Tool (Vector Store connector) -> Supabase Vector store.
+[flow การเชื่อมต่อ](https://n8n.io/workflows/2621-ai-agent-to-chat-with-files-in-supabase-storage/) ในกรณีนี้จะมีลักษณะดังนี้: AI agent (tools connector) -> Vector Store Question Answer Tool (Vector Store connector) -> Supabase Vector store
 
 ## Node parameters
 
@@ -56,35 +56,35 @@ The [connections flow](https://n8n.io/workflows/2621-ai-agent-to-chat-with-files
 ### Get Many parameters
 <!-- vale from-write-good.Weasel = YES -->
 
-* **Table Name**: Enter the Supabase table to use.
-* **Prompt**: Enter the search query.
-* **Limit**: Enter how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
+*   **Table Name**: ป้อนตาราง Supabase ที่จะใช้
+*   **Prompt**: ป้อนคำค้นหา (search query)
+*   **Limit**: ป้อนจำนวนผลลัพธ์ที่ต้องการดึงจาก vector store ตัวอย่างเช่น ตั้งค่าเป็น `10` เพื่อรับผลลัพธ์ที่ดีที่สุดสิบรายการ
 
 ### Insert Documents parameters
 
-* **Table Name**: Enter the Supabase table to use.
+*   **Table Name**: ป้อนตาราง Supabase ที่จะใช้
 
 ### Retrieve Documents (As Vector Store for Chain/Tool) parameters
 
-* **Table Name**: Enter the Supabase table to use.
+*   **Table Name**: ป้อนตาราง Supabase ที่จะใช้
 
 ### Retrieve Documents (As Tool for AI Agent) parameters
 
-* **Name**: The name of the vector store.
-* **Description**: Explain to the LLM what this tool does. A good, specific description allows LLMs to produce expected results more often.
-* **Table Name**: Enter the Supabase table to use.
-* **Limit**: Enter how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
+*   **Name**: ชื่อของ vector store
+*   **Description**: อธิบายให้ LLM ทราบว่า tool นี้ทำอะไร คำอธิบายที่ดีและเฉพาะเจาะจงช่วยให้ LLM สร้างผลลัพธ์ที่คาดหวังได้บ่อยขึ้น
+*   **Table Name**: ป้อนตาราง Supabase ที่จะใช้
+*   **Limit**: ป้อนจำนวนผลลัพธ์ที่ต้องการดึงจาก vector store ตัวอย่างเช่น ตั้งค่าเป็น `10` เพื่อรับผลลัพธ์ที่ดีที่สุดสิบรายการ
 
 ### Update Documents
 
-* **Table Name**: Enter the Supabase table to use.
-* **ID**: The ID of an embedding entry.
+*   **Table Name**: ป้อนตาราง Supabase ที่จะใช้
+*   **ID**: ID ของรายการ embedding
 
 ## Node options
 
 ### Query Name
 
-The name of the matching function you set up in Supabase. If you follow the [Supabase quickstart](https://supabase.com/docs/guides/ai/langchain?database-method=sql){:target=_blank .external-link}, this will be `match_documents`.
+ชื่อของ matching function ที่คุณตั้งค่าใน Supabase หากคุณทำตาม [Supabase quickstart](https://supabase.com/docs/guides/ai/langchain?database-method=sql){:target=_blank .external-link} ชื่อนี้จะเป็น `match_documents`
 
 ### Metadata Filter
 
@@ -97,7 +97,7 @@ The name of the matching function you set up in Supabase. If you follow the [Sup
 
 ## Related resources
 
-Refer to [LangChain's Supabase documentation](https://js.langchain.com/docs/integrations/vectorstores/supabase/){:target=_blank .external-link} for more information about the service.
+อ้างอิง [เอกสาร Supabase ของ LangChain](https://js.langchain.com/docs/integrations/vectorstores/supabase/){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการ
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

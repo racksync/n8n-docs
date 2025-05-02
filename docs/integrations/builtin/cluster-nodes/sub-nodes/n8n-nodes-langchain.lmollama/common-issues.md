@@ -8,72 +8,72 @@ priority: high
 
 # Ollama Model node common issues
 
-Here are some common errors and issues with the [Ollama Model node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmollama/index.md) and steps to resolve or troubleshoot them.
+นี่คือข้อผิดพลาดและปัญหาที่พบบ่อยบางประการกับ [Ollama Model node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmollama/index.md) และขั้นตอนในการแก้ไขหรือแก้ไขปัญหาเหล่านั้น
 
 ## Processing parameters
 
-The Ollama Model node is a [sub-node](/glossary.md#sub-node-n8n). Sub-nodes behave differently than other nodes when processing multiple items using expressions.
+Ollama Model node เป็น [sub-node](/glossary.md#sub-node-n8n) Sub-nodes มีพฤติกรรมแตกต่างจาก node อื่นๆ เมื่อประมวลผลหลายรายการโดยใช้ expressions
 
-Most nodes, including [root nodes](/glossary.md#root-node-n8n), take any number of items as input, process these items, and output the results. You can use expressions to refer to input items, and the node resolves the expression for each item in turn. For example, given an input of five name values, the expression `{{ $json.name }}` resolves to each name in turn.
+Node ส่วนใหญ่ รวมถึง [root nodes](/glossary.md#root-node-n8n) รับรายการจำนวนเท่าใดก็ได้เป็น input ประมวลผลรายการเหล่านี้ และส่งออกผลลัพธ์ คุณสามารถใช้ expressions เพื่ออ้างอิงถึงรายการ input และ node จะประมวลผล expression สำหรับแต่ละรายการตามลำดับ ตัวอย่างเช่น หากมี input เป็นค่าชื่อห้าค่า expression `{{ $json.name }}` จะประมวลผลเป็นแต่ละชื่อตามลำดับ
 
-In sub-nodes, the expression always resolves to the first item. For example, given an input of five name values, the expression `{{ $json.name }}` always resolves to the first name.
+ใน sub-nodes expression จะประมวลผลเป็นรายการแรกเสมอ ตัวอย่างเช่น หากมี input เป็นค่าชื่อห้าค่า expression `{{ $json.name }}` จะประมวลผลเป็นชื่อแรกเสมอ
 
 ## Can't connect to a remote Ollama instance
 
-The Ollama Model node is only designed to connect to a locally hosted Ollama instance. It doesn't include the authentication features you'd need to connect to a remotely hosted Ollama instance.
+Ollama Model node ถูกออกแบบมาเพื่อเชื่อมต่อกับ Ollama instance ที่โฮสต์แบบ local เท่านั้น ไม่ได้รวมคุณสมบัติการยืนยันตัวตนที่คุณต้องการเพื่อเชื่อมต่อกับ Ollama instance ที่โฮสต์จากระยะไกล
 
-To use the Ollama Model, follow the [Ollama credentials instructions](/integrations/builtin/credentials/ollama.md) to set up Ollama locally and configure the instance URL in n8n.
+ในการใช้ Ollama Model ให้ทำตาม [Ollama credentials instructions](/integrations/builtin/credentials/ollama.md) เพื่อตั้งค่า Ollama แบบ local และกำหนดค่า instance URL ใน n8n
 
 ## Can't connect to a local Ollama instance when using Docker
 
-The Ollama Model node connects to a locally hosted Ollama instance using the base URL defined by [Ollama credentials](/integrations/builtin/credentials/ollama.md). When you run either n8n or Ollama in Docker, you need to configure the network so that n8n can connect to Ollama.
+Ollama Model node เชื่อมต่อกับ Ollama instance ที่โฮสต์แบบ local โดยใช้ base URL ที่กำหนดโดย [Ollama credentials](/integrations/builtin/credentials/ollama.md) เมื่อคุณรัน n8n หรือ Ollama ใน Docker คุณต้องกำหนดค่าเครือข่ายเพื่อให้ n8n สามารถเชื่อมต่อกับ Ollama ได้
 
-Ollama typically listens for connections on `localhost`, the local network address. In Docker, by default, each container has its own `localhost` which is only accessible from within the container. If either n8n or Ollama are running in containers, they won't be able to connect over `localhost`.
+โดยทั่วไป Ollama จะรอการเชื่อมต่อบน `localhost` ซึ่งเป็นที่อยู่เครือข่าย local ใน Docker โดยค่าเริ่มต้น แต่ละ container จะมี `localhost` ของตัวเองซึ่งสามารถเข้าถึงได้จากภายใน container เท่านั้น หาก n8n หรือ Ollama กำลังทำงานใน container พวกมันจะไม่สามารถเชื่อมต่อผ่าน `localhost` ได้
 
-The solution depends on how you're hosting the two components.
+วิธีแก้ปัญหาขึ้นอยู่กับว่าคุณโฮสต์ส่วนประกอบทั้งสองอย่างไร
 
 ### If only Ollama is in Docker
 
-If only Ollama is running in Docker, configure Ollama to listen on all interfaces by binding to `0.0.0.0` inside of the container (the official images are already configured this way).
+หากมีเพียง Ollama ที่ทำงานใน Docker ให้กำหนดค่า Ollama ให้รอรับการเชื่อมต่อบนทุก interfaces โดยผูกกับ `0.0.0.0` ภายใน container (images อย่างเป็นทางการได้รับการกำหนดค่าด้วยวิธีนี้อยู่แล้ว)
 
-When running the container, [publish the ports](https://docs.docker.com/get-started/docker-concepts/running-containers/publishing-ports/) with the `-p` flag. By default, Ollama runs on port 11434, so your Docker command should look like this:
+เมื่อรัน container ให้ [publish the ports](https://docs.docker.com/get-started/docker-concepts/running-containers/publishing-ports/) ด้วย flag `-p` โดยค่าเริ่มต้น Ollama ทำงานบน port 11434 ดังนั้นคำสั่ง Docker ของคุณควรมีลักษณะดังนี้:
 
 ```shell
 docker run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
 ```
 
-When configuring [Ollama credentials](/integrations/builtin/credentials/ollama.md), the `localhost` address should work without a problem (set the **base URL** to `http://localhost:11434`).
+เมื่อกำหนดค่า [Ollama credentials](/integrations/builtin/credentials/ollama.md) ที่อยู่ `localhost` ควรทำงานได้โดยไม่มีปัญหา (ตั้งค่า **base URL** เป็น `http://localhost:11434`)
 
 ### If only n8n is in Docker
 
-If only n8n is running in Docker, configure Ollama to listen on all interfaces by binding to `0.0.0.0` on the host.
+หากมีเพียง n8n ที่ทำงานใน Docker ให้กำหนดค่า Ollama ให้รอรับการเชื่อมต่อบนทุก interfaces โดยผูกกับ `0.0.0.0` บน host
 
-If you are running n8n in Docker on **Linux**, use the `--add-host` flag to map `host.docker.internal` to `host-gateway` when you start the container. For example:
+หากคุณกำลังรัน n8n ใน Docker บน **Linux** ให้ใช้ flag `--add-host` เพื่อ map `host.docker.internal` ไปยัง `host-gateway` เมื่อคุณเริ่ม container ตัวอย่างเช่น:
 
 ```shell
 docker run -it --rm --add-host host.docker.internal:host-gateway --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n docker.n8n.io/n8nio/n8n
 ```
 
-If you are using Docker Desktop, this is automatically configured for you.
+หากคุณใช้ Docker Desktop สิ่งนี้จะถูกกำหนดค่าให้คุณโดยอัตโนมัติ
 
-When configuring [Ollama credentials](/integrations/builtin/credentials/ollama.md), use `host.docker.internal` as the host address instead of `localhost`. For example, to bind to the default port 11434, you could set the base URL to `http://host.docker.internal:11434`.
+เมื่อกำหนดค่า [Ollama credentials](/integrations/builtin/credentials/ollama.md) ให้ใช้ `host.docker.internal` เป็นที่อยู่ host แทน `localhost` ตัวอย่างเช่น หากต้องการผูกกับ port เริ่มต้น 11434 คุณสามารถตั้งค่า base URL เป็น `http://host.docker.internal:11434`
 
 ### If Ollama and n8n are running in separate Docker containers
 
-If both n8n and Ollama are running in Docker in separate containers, you can use Docker networking to connect them.
+หากทั้ง n8n และ Ollama ทำงานใน Docker ใน container แยกกัน คุณสามารถใช้ Docker networking เพื่อเชื่อมต่อพวกมันได้
 
-Configure Ollama to listen on all interfaces by binding to `0.0.0.0` inside of the container (the official images are already configured this way).
+กำหนดค่า Ollama ให้รอรับการเชื่อมต่อบนทุก interfaces โดยผูกกับ `0.0.0.0` ภายใน container (images อย่างเป็นทางการได้รับการกำหนดค่าด้วยวิธีนี้อยู่แล้ว)
 
-When configuring [Ollama credentials](/integrations/builtin/credentials/ollama.md), use the Ollama container's name as the host address instead of `localhost`. For example, if you call the Ollama container `my-ollama` and it listens on the default port 11434, you would set the base URL to `http://my-ollama:11434`.
+เมื่อกำหนดค่า [Ollama credentials](/integrations/builtin/credentials/ollama.md) ให้ใช้ชื่อ container ของ Ollama เป็นที่อยู่ host แทน `localhost` ตัวอย่างเช่น หากคุณเรียก container ของ Ollama ว่า `my-ollama` และมันรอรับการเชื่อมต่อบน port เริ่มต้น 11434 คุณจะต้องตั้งค่า base URL เป็น `http://my-ollama:11434`
 
 ### If Ollama and n8n are running in the same Docker container
 
-If Ollama and n8n are running in the same Docker container, the `localhost` address doesn't need any special configuration. You can configure Ollama to listen on localhost and configure the base URL in the [Ollama credentials in n8n](/integrations/builtin/credentials/ollama.md) to use localhost: `http://localhost:11434`.
+หาก Ollama และ n8n ทำงานใน container Docker เดียวกัน ที่อยู่ `localhost` ไม่จำเป็นต้องมีการกำหนดค่าพิเศษใดๆ คุณสามารถกำหนดค่า Ollama ให้รอรับการเชื่อมต่อบน localhost และกำหนดค่า base URL ใน [Ollama credentials in n8n](/integrations/builtin/credentials/ollama.md) ให้ใช้ localhost: `http://localhost:11434`
 
 <!-- vale from-microsoft.HeadingColons = NO -->
 ## Error: connect ECONNREFUSED ::1:11434
 <!-- vale from-microsoft.HeadingColons = YES -->
 
-This error occurs when your computer has IPv6 enabled, but Ollama is listening to an IPv4 address.
+ข้อผิดพลาดนี้เกิดขึ้นเมื่อคอมพิวเตอร์ของคุณเปิดใช้งาน IPv6 แต่ Ollama กำลังรอรับการเชื่อมต่อที่อยู่ IPv4
 
-To fix this, change the base URL in your [Ollama credentials](/integrations/builtin/credentials/ollama.md) to connect to `127.0.0.1`, the IPv4-specific local address, instead of the `localhost` alias that can resolve to either IPv4 or IPv6: `http://127.0.0.1:11434`.
+ในการแก้ไขปัญหานี้ ให้เปลี่ยน base URL ใน [Ollama credentials](/integrations/builtin/credentials/ollama.md) ของคุณเพื่อเชื่อมต่อกับ `127.0.0.1` ซึ่งเป็นที่อยู่ local เฉพาะสำหรับ IPv4 แทน alias `localhost` ที่สามารถ resolve เป็น IPv4 หรือ IPv6 ได้: `http://127.0.0.1:11434`

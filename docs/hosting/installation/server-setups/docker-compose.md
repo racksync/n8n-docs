@@ -6,9 +6,9 @@ description: Install and run n8n using Docker Compose
 
 # Docker-Compose
 
-If you have already installed Docker and Docker-Compose, then you can start with [step 3](#3-dns-setup).
+ถ้าคุณติดตั้ง Docker กับ Docker-Compose ไว้แล้ว สามารถข้ามไปเริ่มที่ [step 3](#3-dns-setup) ได้เลย
 
-You can find Docker Compose configurations for various architectures in the [n8n-hosting repository](https://github.com/n8n-io/n8n-hosting).
+ดูตัวอย่าง Docker Compose สำหรับสถาปัตยกรรมต่าง ๆ ได้ที่ [n8n-hosting repository](https://github.com/n8n-io/n8n-hosting)
 
 --8<-- "_snippets/self-hosting/warning.md"
 
@@ -16,27 +16,27 @@ You can find Docker Compose configurations for various architectures in the [n8n
 
 ## 1. Install Docker and Docker Compose
 
-How you install Docker and Docker Compose can vary depending on the Linux distribution you use. You can find detailed instructions in both the [Docker](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/) installation documentation. The following example is for Ubuntu:
+วิธีติดตั้ง Docker และ Docker Compose จะแตกต่างกันไปตาม Linux distribution ที่ใช้ ดูรายละเอียดได้ที่ [Docker](https://docs.docker.com/engine/install/) และ [Docker Compose](https://docs.docker.com/compose/install/) ตัวอย่างนี้สำหรับ Ubuntu:
 
 ```bash
-# Remove incompatible or out of date Docker implementations if they exist
+# ลบ Docker เวอร์ชันเก่าหรือที่ไม่เข้ากันออกก่อน
 for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
-# Install prereq packages
+# ติดตั้งแพ็กเกจที่จำเป็น
 sudo apt-get update
 sudo apt-get install ca-certificates curl
-# Download the repo signing key
+# ดาวน์โหลด repo signing key
 sudo install -m 0755 -d /etc/apt/keyrings
 sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
 sudo chmod a+r /etc/apt/keyrings/docker.asc
-# Configure the repository
+# ตั้งค่า repository
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
-# Update and install Docker and Docker Compose
+# อัปเดตและติดตั้ง Docker กับ Docker Compose
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
-Verify that Docker and Docker Compose are available by typing:
+ตรวจสอบว่า Docker กับ Docker Compose ใช้งานได้ด้วยคำสั่ง:
 
 ```bash
 docker --version
@@ -45,25 +45,25 @@ docker compose version
 
 ## 2. Optional: Non-root user access
 
-You can optionally grant access to run Docker without the `sudo` command.
+สามารถตั้งค่าให้ user ปกติรัน Docker ได้โดยไม่ต้องใช้ `sudo`
 
-To grant access to the user that you're currently logged in with (assuming they have `sudo` access), run:
+ถ้าจะให้ user ที่ล็อกอินอยู่ (และมีสิทธิ์ sudo) ใช้ Docker ได้ ให้รัน:
 
 ```bash
 sudo usermod -aG docker ${USER}
-# Register the `docker` group memebership with current session without changing your primary group
+# ลงทะเบียน group docker กับ session ปัจจุบันโดยไม่ต้องเปลี่ยน primary group
 exec sg docker newgrp
 ```
 
-To grant access to a different user, type the following, substituting `<USER_TO_RUN_DOCKER>` with the appropriate username:
+ถ้าจะให้ user อื่นใช้ Docker ได้ ให้รัน (แทนที่ `<USER_TO_RUN_DOCKER>` ด้วยชื่อ user):
 
 ```bash
 sudo usermod -aG docker <USER_TO_RUN_DOCKER>
 ```
 
-You will need to run `exec sg docker newgrp` from any of that user's existing sessions for it to access the new group permissions.
+ต้องรัน `exec sg docker newgrp` ใน session ของ user นั้นเพื่อให้สิทธิ์ใหม่มีผล
 
-You can verify that your current session recognizes the `docker` group by typing:
+ตรวจสอบว่า session ปัจจุบันเห็น group docker หรือยัง ด้วยคำสั่ง:
 
 ```bash
 groups
@@ -71,56 +71,56 @@ groups
 
 ## 3. DNS setup
 
-To host n8n online or on a network, create a dedicated subdomain pointed at your server.
+ถ้าจะให้ n8n ใช้งานผ่าน network หรือออนไลน์ ให้สร้าง subdomain แล้วชี้ไปที่ server ของคุณ
 
-Add an A record to route the subdomain accordingly:
+เพิ่ม A record แบบนี้:
 
 * **Type**: A
-* **Name**: `n8n` (or the desired subdomain)
-* **IP address**: (your server's IP address)
+* **Name**: `n8n` (หรือ subdomain ที่ต้องการ)
+* **IP address**: (IP ของ server คุณ)
 
 ## 4. Create an `.env` file
 
-Create a project directory to store your n8n environment configuration and Docker Compose files and navigate inside:
+สร้าง project directory สำหรับเก็บไฟล์ config ของ n8n และ Docker Compose แล้วเข้าไปในโฟลเดอร์นั้น:
 
 ```bash
 mkdir n8n-compose
 cd n8n-compose
 ```
 
-Inside the `n8n-compose` directory, create an `.env` file to customize your n8n instance's details. Change it to match your own information:
+ในโฟลเดอร์ `n8n-compose` สร้างไฟล์ `.env` เพื่อกำหนดค่าต่าง ๆ ของ n8n ตัวอย่างเช่น:
 
 ```bash title=".env file"
-# DOMAIN_NAME and SUBDOMAIN together determine where n8n will be reachable from
-# The top level domain to serve from
+# DOMAIN_NAME กับ SUBDOMAIN จะเป็นที่อยู่ที่ใช้เข้าถึง n8n
+# กำหนด top level domain
 DOMAIN_NAME=example.com
 
-# The subdomain to serve from
+# กำหนด subdomain
 SUBDOMAIN=n8n
 
-# The above example serve n8n at: https://n8n.example.com
+# ตัวอย่างนี้จะเข้า n8n ได้ที่: https://n8n.example.com
 
-# Optional timezone to set which gets used by Cron and other scheduling nodes
-# New York is the default value if not set
+# ตั้ง timezone (ใช้กับ Cron และ node scheduling อื่น ๆ)
+# ถ้าไม่ตั้งจะใช้ New York เป็นค่า default
 GENERIC_TIMEZONE=Europe/Berlin
 
-# The email address to use for the TLS/SSL certificate creation
+# อีเมลที่ใช้สร้าง TLS/SSL certificate
 SSL_EMAIL=user@example.com
 ```
 
 ## 5. Create local files directory
 
-Inside your project directory, create a directory called `local-files` for sharing files between the n8n instance and the host system (for example, using the [Read/Write Files from Disk node](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md)):
+ใน project directory ให้สร้างโฟลเดอร์ `local-files` สำหรับแชร์ไฟล์ระหว่าง n8n กับ host (เช่น ใช้กับ [Read/Write Files from Disk node](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md)):
 
 ```bash
 mkdir local-files
 ```
 
-The Docker Compose file below can automatically create this directory, but doing it manually ensures that it's created with the right ownership and permissions.
+Docker Compose file ด้านล่างจะสร้างโฟลเดอร์นี้ให้อัตโนมัติ แต่สร้างเองจะได้สิทธิ์และ owner ถูกต้อง
 
 ## 6. Create Docker Compose file
 
-Create a `docker-compose.yml` file. Paste the following in the file:
+สร้างไฟล์ `docker-compose.yml` แล้ววางเนื้อหานี้ลงไป:
 
 ```yaml title="docker-compose.yml file"
 services:
@@ -182,25 +182,25 @@ volumes:
   traefik_data:
 ```
 
-The above Docker Compose file configures two containers: one for n8n, and one to run [traefik](https://github.com/traefik/traefik), an application proxy to manage TLS/SSL certificates and handle routing.
+Docker Compose file นี้จะสร้าง 2 container: n8n กับ [traefik](https://github.com/traefik/traefik) (proxy สำหรับจัดการ TLS/SSL และ routing)
 
-It also creates and mounts two [Docker Volumes](https://docs.docker.com/engine/storage/volumes/) and mounts the `local-files` directory you created earlier:
+จะมีการสร้างและ mount [Docker Volumes](https://docs.docker.com/engine/storage/volumes/) 2 ตัว และ bind โฟลเดอร์ `local-files` ที่สร้างไว้:
 
    | Name            | Type                                                        | Container mount   | Description                                                                                                                         |
    |-----------------|-------------------------------------------------------------|-------------------|-------------------------------------------------------------------------------------------------------------------------------------|
-   | `n8n_data`      | [Volume](https://docs.docker.com/engine/storage/volumes/)   | `/home/node/.n8n` | Where n8n saves its SQLite database file and encryption key.                                                                        |
-   | `traefik_data`  | [Volume](https://docs.docker.com/engine/storage/volumes/)   | `/letsencrypt`    | Where traefik saves the TLS/SSL certificate data.                                                                                   |
-   | `./local-files` | [Bind](https://docs.docker.com/engine/storage/bind-mounts/) | `/files`          | A local directory shared between the n8n instance and host. In n8n, use the `/files` path to read from and write to this directory. |
+   | `n8n_data`      | [Volume](https://docs.docker.com/engine/storage/volumes/)   | `/home/node/.n8n` | ที่เก็บ SQLite database และ encryption key ของ n8n                                            |
+   | `traefik_data`  | [Volume](https://docs.docker.com/engine/storage/volumes/)   | `/letsencrypt`    | ที่เก็บข้อมูล TLS/SSL certificate ของ traefik                                                |
+   | `./local-files` | [Bind](https://docs.docker.com/engine/storage/bind-mounts/) | `/files`          | โฟลเดอร์ local ที่แชร์กับ n8n ใช้ path `/files` ใน n8n เพื่ออ่าน/เขียนไฟล์นี้                |
 
 ## 7. Start Docker Compose
 
-You can now start n8n by typing:
+เริ่มรัน n8n ด้วยคำสั่ง:
 
 ```bash
 sudo docker compose up -d
 ```
 
-To stop the container, type:
+ถ้าจะหยุด container ให้ใช้:
 
 ```bash
 sudo docker compose stop
@@ -208,9 +208,9 @@ sudo docker compose stop
 
 ## 8. Done
 
-You can now reach n8n using the subdomain + domain combination you defined in your `.env` file configuration. The above example would result in `https://n8n.example.com`.
+ตอนนี้สามารถเข้าใช้งาน n8n ได้ที่ subdomain + domain ที่ตั้งไว้ใน `.env` ตัวอย่างเช่น `https://n8n.example.com`
 
-n8n is only accessible using secure HTTPS, not over plain HTTP.
+n8n จะเข้าได้เฉพาะผ่าน HTTPS เท่านั้น
 
 ## Next steps
 

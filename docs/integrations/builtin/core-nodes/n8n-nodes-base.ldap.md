@@ -7,90 +7,90 @@ contentType: [integration, reference]
 
 # LDAP
 
-This node allows you to interact with your LDAP servers to create, find, and update objects.
+node นี้ให้คุณเชื่อมต่อกับ LDAP server เพื่อสร้าง ค้นหา และอัปเดต object ต่างๆ
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/ldap.md).
+คุณสามารถดูข้อมูลการยืนยันตัวตนสำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/ldap.md).
 ///
 
 ## Operations
 
-* [**Compare**](#compare) an attribute
-* [**Create**](#create) a new entry
-* [**Delete**](#delete) an entry
-* [**Rename**](#rename) the DN of an existing entry
+* [**Compare**](#compare) เปรียบเทียบ attribute
+* [**Create**](#create) สร้าง entry ใหม่
+* [**Delete**](#delete) ลบ entry
+* [**Rename**](#rename) เปลี่ยน DN ของ entry ที่มีอยู่
 * [**Search**](#search) LDAP
-* [**Update**](#update) attributes
+* [**Update**](#update) อัปเดต attributes
 
-Refer to the sections below for details on configuring the node for each operation.
+ดูรายละเอียดการตั้งค่าแต่ละ operation ได้ในหัวข้อด้านล่าง
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Compare
 
-Configure this operation using these parameters:
+ตั้งค่า operation นี้โดยใช้ parameter เหล่านี้:
 
-* **Credential to connect with**: Select or create an [LDAP credential](/integrations/builtin/credentials/ldap.md) to connect with.
-* **DN**: Enter the Distinguished Name (DN) of the entry to compare.
-* **Attribute ID**: Enter the ID of the attribute to compare.
-* **Value**: Enter the value to compare.
+* **Credential to connect with**: เลือกหรือสร้าง [LDAP credential](/integrations/builtin/credentials/ldap.md) เพื่อเชื่อมต่อ
+* **DN**: ใส่ Distinguished Name (DN) ของ entry ที่ต้องการเปรียบเทียบ
+* **Attribute ID**: ใส่ ID ของ attribute ที่ต้องการเปรียบเทียบ
+* **Value**: ใส่ค่าที่ต้องการเปรียบเทียบ
 
 ## Create
 
-Configure this operation using these parameters:
+ตั้งค่า operation นี้โดยใช้ parameter เหล่านี้:
 
-* **Credential to connect with**: Select or create an [LDAP credential](/integrations/builtin/credentials/ldap.md) to connect with.
-* **DN**: Enter the Distinguished Name (DN) of the entry to create.
-* **Attributes**: Add the **Attribute ID**/**Value** pairs you'd like to create.
+* **Credential to connect with**: เลือกหรือสร้าง [LDAP credential](/integrations/builtin/credentials/ldap.md) เพื่อเชื่อมต่อ
+* **DN**: ใส่ Distinguished Name (DN) ของ entry ที่ต้องการสร้าง
+* **Attributes**: เพิ่มคู่ **Attribute ID**/**Value** ที่ต้องการสร้าง
 
 ## Delete
 
-Configure this operation using these parameters:
+ตั้งค่า operation นี้โดยใช้ parameter เหล่านี้:
 
-* **Credential to connect with**: Select or create an [LDAP credential](/integrations/builtin/credentials/ldap.md) to connect with.
-* **DN**: Enter the Distinguished Name (DN) of the entry to be deleted.
+* **Credential to connect with**: เลือกหรือสร้าง [LDAP credential](/integrations/builtin/credentials/ldap.md) เพื่อเชื่อมต่อ
+* **DN**: ใส่ Distinguished Name (DN) ของ entry ที่ต้องการลบ
 
 ## Rename
 
-Configure this operation using these parameters:
+ตั้งค่า operation นี้โดยใช้ parameter เหล่านี้:
 
-* **Credential to connect with**: Select or create an [LDAP credential](/integrations/builtin/credentials/ldap.md) to connect with.
-* **DN**: Enter the current Distinguished Name (DN) of the entry to rename.
-* **New DN**: Enter the new Distinguished Name (DN) for the entry in this field.
+* **Credential to connect with**: เลือกหรือสร้าง [LDAP credential](/integrations/builtin/credentials/ldap.md) เพื่อเชื่อมต่อ
+* **DN**: ใส่ Distinguished Name (DN) ปัจจุบันของ entry ที่ต้องการเปลี่ยนชื่อ
+* **New DN**: ใส่ Distinguished Name (DN) ใหม่สำหรับ entry นี้
 
 ## Search
 
-Configure this operation using these parameters:
+ตั้งค่า operation นี้โดยใช้ parameter เหล่านี้:
 
-* **Credential to connect with**: Select or create an [LDAP credential](/integrations/builtin/credentials/ldap.md) to connect with.
-* **Base DN**: Enter the Distinguished Name (DN) of the subtree to search in.
-* **Search For**: Select the directory object class to search for.
-* **Attribute**: Select the attribute to search for.
-* **Search Text**: Enter the text to search for. Use `*` for a wildcard.
-* **Return All**: When turned on, the node will return all results. When turned off, the node will return results up to the set **Limit**.
-* **Limit**: Only available when you turn off **Return All**. Enter the maximum number of results to return.
+* **Credential to connect with**: เลือกหรือสร้าง [LDAP credential](/integrations/builtin/credentials/ldap.md) เพื่อเชื่อมต่อ
+* **Base DN**: ใส่ Distinguished Name (DN) ของ subtree ที่ต้องการค้นหา
+* **Search For**: เลือก object class ที่ต้องการค้นหา
+* **Attribute**: เลือก attribute ที่ต้องการค้นหา
+* **Search Text**: ใส่ข้อความที่ต้องการค้นหา ใช้ `*` เป็น wildcard ได้
+* **Return All**: ถ้าเปิด node จะคืนค่าทั้งหมด ถ้าปิดจะคืนค่าตาม **Limit** ที่ตั้งไว้
+* **Limit**: ใช้ได้เมื่อปิด **Return All** ใส่จำนวนสูงสุดของผลลัพธ์ที่ต้องการ
 
 ### Search options
 
-You can also configure this operation using these options:
+คุณสามารถตั้งค่า operation นี้เพิ่มเติมได้ด้วย options เหล่านี้:
 
-* **Attribute Names or IDs**: Enter a comma-separated list of attributes to return. Choose from the list or specify IDs using an expression.
-* **Page Size**: Enter the maximum number of results to request at one time. Set to 0 to disable paging.
-* **Scopes**: The set of entries at or below the **Base DN** to search for potential matches. Select from:
-    * **Base Tree**: Often referred to as subordinateSubtree or just "subordinates," selecting this option will search the subordinates of the **Base DN** entry but not the **Base DN** entry itself.
-    * **Single Level**: Often referred to as "one," selecting this option will search only the immediate children of the **Base DN** entry.
-    * **Whole Subtree**: Often referred to as "sub," selecting this option will search the **Base DN** entry and all its subordinates to any depth.
+* **Attribute Names or IDs**: ใส่ชื่อหรือ ID ของ attribute ที่ต้องการคืนค่า (คั่นด้วย comma) เลือกจาก list หรือใส่ ID ด้วย expression ก็ได้
+* **Page Size**: ใส่จำนวนสูงสุดของผลลัพธ์ที่ต้องการในแต่ละครั้ง ใส่ 0 เพื่อปิดการแบ่งหน้า
+* **Scopes**: กำหนดขอบเขตของ entry ที่จะค้นหาจาก **Base DN** เลือกได้จาก:
+    * **Base Tree**: (subordinateSubtree) ค้นหาเฉพาะ subordinates ของ **Base DN** ไม่รวม **Base DN** เอง
+    * **Single Level**: (one) ค้นหาเฉพาะลูกโดยตรงของ **Base DN**
+    * **Whole Subtree**: (sub) ค้นหา **Base DN** และลูกทั้งหมดทุกระดับ
 
-Refer to [The LDAP Search Operation](https://ldap.com/the-ldap-search-operation/){:target="_blank" .external-link} for more information on search scopes.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับ search scopes ได้ที่ [The LDAP Search Operation](https://ldap.com/the-ldap-search-operation/){:target="_blank" .external-link}
 
 ## Update
 
-Configure this operation using these parameters:
+ตั้งค่า operation นี้โดยใช้ parameter เหล่านี้:
 
-* **Credential to connect with**: Select or create an [LDAP credential](/integrations/builtin/credentials/ldap.md) to connect with.
-* **DN**: Enter the Distinguished Name (DN) of the entry to update.
-* ***Update Attributes**: Select whether to **Add** new, **Remove** existing, or **Replace** existing attribute.
-* Then enter the **Attribute ID**/**Value** pair you'd like to update.
+* **Credential to connect with**: เลือกหรือสร้าง [LDAP credential](/integrations/builtin/credentials/ldap.md) เพื่อเชื่อมต่อ
+* **DN**: ใส่ Distinguished Name (DN) ของ entry ที่ต้องการอัปเดต
+* ***Update Attributes**: เลือกว่าจะ **Add** (เพิ่ม), **Remove** (ลบ), หรือ **Replace** (แทนที่) attribute ที่มีอยู่
+* จากนั้นใส่คู่ **Attribute ID**/**Value** ที่ต้องการอัปเดต
 
 ## Templates and examples
 

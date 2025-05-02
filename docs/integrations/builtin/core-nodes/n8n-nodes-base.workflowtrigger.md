@@ -1,33 +1,33 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Workflow Trigger node documentation
-description: Learn how to use the Workflow Trigger node in n8n. Follow technical documentation to integrate Workflow Trigger node into your workflows.
+description: เรียนรู้วิธีการใช้ Workflow Trigger node ใน n8n อ่านเอกสารทางเทคนิคเพื่อรวม Workflow Trigger node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 priority: high
 ---
 
 # Workflow Trigger node
 
-The Workflow Trigger node gets triggered when a workflow is updated or activated.
+Workflow Trigger node จะถูก trigger เมื่อ workflow ถูกอัปเดตหรือถูกเปิดใช้งาน
 
 /// warning | Deprecated
-n8n has deprecated the Workflow Trigger node and moved its functionality to the [n8n Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.n8ntrigger.md).
+n8n ได้เลิกใช้งาน Workflow Trigger node แล้ว และย้ายความสามารถนี้ไปที่ [n8n Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.n8ntrigger.md)
 ///
 
 /// note | Keep in mind
-If you want to use the Workflow Trigger node for a workflow, add the node to the workflow. You don't have to create a separate workflow.
+ถ้าคุณต้องการใช้ Workflow Trigger node กับ workflow ให้เพิ่ม node นี้เข้าไปใน workflow ได้เลย ไม่ต้องสร้าง workflow แยก
 ///
 
-The Workflow Trigger node gets triggered for the workflow that it gets added to. You can use the Workflow Trigger node to trigger a workflow to notify the state of the workflow.
+Workflow Trigger node จะ trigger เฉพาะ workflow ที่มันถูกเพิ่มเข้าไป คุณสามารถใช้ Workflow Trigger node เพื่อ trigger workflow เพื่อแจ้งสถานะของ workflow ได้
 
 ## Node parameters
 
-The node includes a single parameter to identify the **Events** that should trigger it. Choose from these events:
+node นี้จะมี parameter เดียวสำหรับเลือก **Events** ที่จะ trigger node ได้ เลือกได้จาก:
 
-- **Active Workflow Updated**: If you select this event, the node triggers when this workflow is updated.
-- **Workflow Activated**: If you select this event, the node triggers when this workflow is activated.
+- **Active Workflow Updated**: ถ้าเลือก event นี้ node จะ trigger เมื่อ workflow นี้ถูกอัปเดต
+- **Workflow Activated**: ถ้าเลือก event นี้ node จะ trigger เมื่อ workflow นี้ถูกเปิดใช้งาน
 
-You can select one or both of these events.
+สามารถเลือก event ได้มากกว่าหนึ่ง
 
 ## Templates and examples
 

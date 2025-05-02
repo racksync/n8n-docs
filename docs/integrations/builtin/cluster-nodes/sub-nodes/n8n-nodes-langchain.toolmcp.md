@@ -1,28 +1,28 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: MCP Client Tool node documentation
-description: Learn how to use the MCP Client Tool node in n8n. Follow technical documentation to integrate MCP Client Tool node into your workflows.
+description: เรียนรู้วิธีการใช้ MCP Client Tool node ใน n8n พร้อมคำแนะนำทางเทคนิคสำหรับการรวม MCP Client Tool node เข้ากับ workflow ของคุณ
 contentType: [integration, reference]
 ---
 
 # MCP Client Tool node
 
-The MCP Client Tool node is a [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) client, allowing you to use the tools exposed by an external MCP server. You can connect the MCP Client Tool node to your models to call external tools with n8n agents.
+MCP Client Tool node คือ [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) client ที่ให้คุณใช้ tool ที่เปิดจาก MCP server ภายนอกได้ คุณสามารถเชื่อมต่อ MCP Client Tool node กับ model ของคุณเพื่อเรียกใช้ external tool ผ่าน n8n agent
 
 ///  note  | Credentials
-The MCP Client Tool node supports both [Bearer](/integrations/builtin/credentials/httprequest.md#using-bearer-auth) and generic [header](/integrations/builtin/credentials/httprequest.md#using-header-auth) authentication methods.
+MCP Client Tool node รองรับทั้ง [Bearer](/integrations/builtin/credentials/httprequest.md#using-bearer-auth) และ generic [header](/integrations/builtin/credentials/httprequest.md#using-header-auth) authentication
 ///
 
 ## Node parameters
 
-Configure the node with the following parameters.
+ตั้งค่า node ด้วย parameter เหล่านี้
 
-* **SSE Endpoint**: The SSE endpoint for the MCP server you want to connect to.
-* **Authentication**: The authentication method for authentication to your MCP server. The MCP tool supports [bearer](/integrations/builtin/credentials/httprequest.md#using-bearer-auth) and generic [header](/integrations/builtin/credentials/httprequest.md#using-header-auth) authentication. Select **None** to attempt to connect without authentication.
-* **Tools to Include**: Choose which tools you want to expose to the AI Agent:
-	* **All**: Expose all the tools given by the MCP server.
-	* **Selected**: Activates a **Tools to Include** parameter where you can select the tools you want to expose to the AI Agent.
-	* **All Except**: Activates a **Tools to Exclude** parameter where you can select the tools you want to avoid sharing with the AI Agent. The AI Agent will have access to all MCP server's tools that aren't selected.
+* **SSE Endpoint**: กรอก endpoint ของ MCP server ที่ต้องการเชื่อมต่อ
+* **Authentication**: เลือกวิธี authentication สำหรับเชื่อมต่อ MCP server รองรับ [bearer](/integrations/builtin/credentials/httprequest.md#using-bearer-auth) และ generic [header](/integrations/builtin/credentials/httprequest.md#using-header-auth) หรือเลือก **None** ถ้าต้องการเชื่อมต่อแบบไม่ต้อง auth
+* **Tools to Include**: เลือก tool ที่ต้องการเปิดให้ AI Agent ใช้งาน:
+	* **All**: เปิดทุก tool ที่ MCP server มี
+	* **Selected**: จะมี parameter **Tools to Include** ให้เลือก tool ที่ต้องการเปิดให้ AI Agent
+	* **All Except**: จะมี parameter **Tools to Exclude** ให้เลือก tool ที่ไม่ต้องการให้ AI Agent ใช้ AI Agent จะเข้าถึง tool อื่นๆ ที่ไม่ได้เลือกเท่านั้น
 
 ## Templates and examples
 
@@ -31,9 +31,9 @@ Configure the node with the following parameters.
 
 ## Related resources
 
-n8n also has an [MCP Server Trigger](/integrations/builtin/core-nodes/n8n-nodes-langchain.mcptrigger.md) node that allows you to expose n8n tools to external AI Agents.
+n8n ยังมี [MCP Server Trigger](/integrations/builtin/core-nodes/n8n-nodes-langchain.mcptrigger.md) node สำหรับเปิด tool ของ n8n ให้ external AI Agent ใช้งานด้วย
 
-Refer to the [MCP documentation](https://modelcontextprotocol.io/introduction) and [MCP specification](https://modelcontextprotocol.io/specification/) for more details about the protocol, servers, and clients.
+ดูรายละเอียด protocol, server, client เพิ่มเติมได้ที่ [MCP documentation](https://modelcontextprotocol.io/introduction) และ [MCP specification](https://modelcontextprotocol.io/specification/)
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/tools-link.md"
 

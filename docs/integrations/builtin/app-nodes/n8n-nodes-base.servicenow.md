@@ -7,12 +7,10 @@ contentType: [integration, reference]
 
 # ServiceNow node
 
-Use the ServiceNow node to automate work in ServiceNow, and integrate ServiceNow with other applications. n8n has built-in support for a wide range of ServiceNow features, including getting business services, departments, configuration items, and dictionary as well as creating, updating, and deleting incidents, users, and table records. 
-
-On this page, you'll find a list of operations the ServiceNow node supports and links to more resources.
+ใช้ ServiceNow node เพื่อให้งานใน ServiceNow เป็นไปโดยอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันอื่น ๆ ได้อย่างมีประสิทธิภาพ. n8n รองรับฟีเจอร์หลากหลายของ ServiceNow เช่น การดึงข้อมูล business services, departments, configuration items, และ dictionary รวมถึงการสร้าง, อัปเดต, และลบ incidents, users, และ table records.
 
 /// note | Credentials
-Refer to [ServiceNow credentials](/integrations/builtin/credentials/servicenow.md) for guidance on setting up authentication. 
+ดู [ServiceNow credentials](/integrations/builtin/credentials/servicenow.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations

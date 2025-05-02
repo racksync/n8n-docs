@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Gong node
 
-Use the Gong node to automate work in Gong and integrate Gong with other applications. n8n has built-in support for a wide range of Gong features, which includes getting one or more calls and users.
+ใช้ Gong node เพื่อทำงานอัตโนมัติใน Gong และเชื่อมต่อ Gong กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Gong หลายอย่าง เช่น การดึงข้อมูล calls และ users หนึ่งรายการหรือมากกว่า
 
-On this page, you'll find a list of operations the Gong node supports, and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Gong node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 ///  note  | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/gong.md).
+คุณสามารถค้นหาข้อมูลการยืนยันตัวตนสำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/gong.md)
 ///
 
 
@@ -34,6 +34,6 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Related resources
 
-Refer to [Gong's documentation](https://gong.app.gong.io/settings/api/documentation){:target=_blank .external-link} for more information about the service.
+โปรดดู [Gong's documentation](https://gong.app.gong.io/settings/api/documentation){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

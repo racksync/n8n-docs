@@ -8,12 +8,12 @@ priority: medium
 
 # Kafka node
 
-Use the Kafka node to automate work in Kafka, and integrate Kafka with other applications. n8n has built-in support for a wide range of Kafka features, including sending messages. 
+ใช้ Kafka node เพื่อทำงานอัตโนมัติใน Kafka และเชื่อมต่อ Kafka กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Kafka หลายอย่าง เช่น การส่ง messages
 
-On this page, you'll find a list of operations the Kafka node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Kafka node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Kafka credentials](/integrations/builtin/credentials/kafka.md) for guidance on setting up authentication. 
+โปรดดู [Kafka credentials](/integrations/builtin/credentials/kafka.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Peekalink node
 
-Use the Peekalink node to automate work in Peekalink, and integrate Peekalink with other applications. n8n supports checking, and reviewing links with Peekalink.
+ใช้ Peekalink node เพื่อช่วยทำงานใน Peekalink แบบอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันอื่น ๆ. n8n รองรับการตรวจสอบและแสดงข้อมูล preview สำหรับลิงก์ผ่าน Peekalink.
 
-On this page, you'll find a list of operations the Peekalink node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการของ operations ที่ Peekalink node รองรับและลิงก์สำหรับข้อมูลเพิ่มเติม.
 
 /// note | Credentials
-Refer to [Peekalink credentials](/integrations/builtin/credentials/peekalink.md) for guidance on setting up authentication. 
+ดูรายละเอียดเพิ่มเติมได้ที่ [Peekalink credentials](/integrations/builtin/credentials/peekalink.md) สำหรับคำแนะนำในการตั้งค่า authentication. 
 ///
 
 ## Operations

@@ -7,12 +7,10 @@ contentType: [integration, reference]
 
 # Storyblok node
 
-Use the Storyblok node to automate work in Storyblok, and integrate Storyblok with other applications. n8n has built-in support for a wide range of Storyblok features, including getting, deleting, and publishing stories. 
-
-On this page, you'll find a list of operations the Storyblok node supports and links to more resources.
+ใช้ Storyblok node เพื่อช่วยให้งานใน Storyblok เป็นไปโดยอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันอื่น ๆ ได้อย่างราบรื่น. n8n รองรับฟีเจอร์ของ Storyblok หลายอย่าง เช่น การดึง, ลบ, และเผยแพร่ stories.
 
 /// note | Credentials
-Refer to [Storyblok credentials](/integrations/builtin/credentials/storyblok.md) for guidance on setting up authentication. 
+ดู [Storyblok credentials](/integrations/builtin/credentials/storyblok.md) สำหรับคำแนะนำในการตั้งค่า authentication. 
 ///
 
 ## Operations

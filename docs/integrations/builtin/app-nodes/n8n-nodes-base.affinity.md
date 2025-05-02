@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Affinity node
 
-Use the Affinity node to automate work in Affinity, and integrate Affinity with other applications. n8n has built-in support for a wide range of Affinity features, including creating, getting, updating and deleting lists, entries, organization, and persons.
+ใช้ Affinity node เพื่อทำงานอัตโนมัติใน Affinity และผสานรวม Affinity กับแอปพลิเคชันอื่นๆ n8n มีการรองรับฟีเจอร์หลากหลายของ Affinity ในตัว รวมถึงการสร้าง, การดึงข้อมูล, การอัปเดต และการลบ lists, entries, organization, และ persons
 
-On this page, you'll find a list of operations the Affinity node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Affinity node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [Affinity credentials](/integrations/builtin/credentials/affinity.md) for guidance on setting up authentication.
+อ้างอิง [Affinity credentials](/integrations/builtin/credentials/affinity.md) สำหรับคำแนะนำในการตั้งค่าการยืนยันตัวตน
 ///	
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

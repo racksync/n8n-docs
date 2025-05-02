@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Contentful node
 
-Use the Contentful node to automate work in Contentful, and integrate Contentful with other applications. n8n has built-in support for a wide range of Contentful features, including getting assets, content types, entries, locales, and space.
+ใช้ Contentful node เพื่อทำงานอัตโนมัติใน Contentful และ integrate Contentful กับแอปพลิเคชันอื่นๆ n8n มีการรองรับในตัวสำหรับฟีเจอร์ต่างๆ ของ Contentful รวมถึงการดึง assets, content types, entries, locales, และ space
 
-On this page, you'll find a list of operations the Contentful node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Contentful node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [Contentful credentials](/integrations/builtin/credentials/contentful.md) for guidance on setting up authentication. 
+อ้างอิง [Contentful credentials](/integrations/builtin/credentials/contentful.md) สำหรับคำแนะนำในการตั้งค่า authentication
 ///
 
 ## Operations

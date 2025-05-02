@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Intercom node
 
-Use the Intercom node to automate work in Intercom, and integrate Intercom with other applications. n8n has built-in support for a wide range of Intercom features, including creating, updating, deleting, and getting companies, leads, and users. 
+ใช้ Intercom node เพื่อทำงานอัตโนมัติใน Intercom และเชื่อมต่อ Intercom กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Intercom หลายอย่าง เช่น การสร้าง อัปเดต ลบ และดึงข้อมูล companies, leads, และ users
 
-On this page, you'll find a list of operations the Intercom node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Intercom node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Intercom credentials](/integrations/builtin/credentials/intercom.md) for guidance on setting up authentication. 
+โปรดดู [Intercom credentials](/integrations/builtin/credentials/intercom.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations

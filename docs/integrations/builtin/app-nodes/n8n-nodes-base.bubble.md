@@ -8,12 +8,12 @@ priority: medium
 
 # Bubble node
 
-Use the Bubble node to automate work in Bubble, and integrate Bubble with other applications. n8n has built-in support for a wide range of Bubble features, including creating, deleting, getting, and updating objects.
+ใช้ Bubble node เพื่อทำงานอัตโนมัติใน Bubble และ integrate Bubble กับแอปพลิเคชันอื่นๆ n8n มีการรองรับในตัวสำหรับฟีเจอร์ต่างๆ ของ Bubble รวมถึงการสร้าง, ลบ, ดึง, และอัปเดต objects
 
-On this page, you'll find a list of operations the Bubble node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Bubble node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [Bubble credentials](/integrations/builtin/credentials/bubble.md) for guidance on setting up authentication. 
+อ้างอิง [Bubble credentials](/integrations/builtin/credentials/bubble.md) สำหรับคำแนะนำในการตั้งค่า authentication
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Beeminder node
 
-Use the Beeminder node to automate work in Beeminder, and integrate Beeminder with other applications. n8n has built-in support for a wide range of Beeminder features, including creating, deleting, and updating data points.
+ใช้ Beeminder node เพื่อทำงานอัตโนมัติใน Beeminder และ integrate Beeminder กับแอปพลิเคชันอื่นๆ n8n มีการรองรับในตัวสำหรับฟีเจอร์ต่างๆ ของ Beeminder รวมถึงการสร้าง, ลบ, และอัปเดต data points
 
-On this page, you'll find a list of operations the Beeminder node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Beeminder node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [Beeminder credentials](/integrations/builtin/credentials/beeminder.md) for guidance on setting up authentication. 
+อ้างอิง [Beeminder credentials](/integrations/builtin/credentials/beeminder.md) สำหรับคำแนะนำในการตั้งค่า authentication
 ///
 
 ## Operations

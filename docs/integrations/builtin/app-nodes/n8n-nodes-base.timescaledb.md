@@ -7,12 +7,10 @@ contentType: [integration, reference]
 
 # TimescaleDB node
 
-Use the TimescaleDB node to automate work in TimescaleDB, and integrate TimescaleDB with other applications. n8n has built-in support for a wide range of TimescaleDB features, including executing an SQL query, as well as inserting and updating rows in a database. 
-
-On this page, you'll find a list of operations the TimescaleDB node supports and links to more resources.
+ใช้ TimescaleDB node เพื่อช่วยงานอัตโนมัติใน TimescaleDB และเชื่อมต่อ TimescaleDB กับแอปพลิเคชันอื่น ๆ โดย n8n มีการสนับสนุนฟีเจอร์ต่าง ๆ เช่น การรัน SQL query และการเพิ่ม/อัปเดตแถวในฐานข้อมูล
 
 /// note | Credentials
-Refer to [TimescaleDB credentials](/integrations/builtin/credentials/timescaledb.md) for guidance on setting up authentication. 
+ดู [TimescaleDB credentials](/integrations/builtin/credentials/timescaledb.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations
@@ -28,5 +26,5 @@ Refer to [TimescaleDB credentials](/integrations/builtin/credentials/timescaledb
 
 ## Specify a column's data type
 
-To specify a column's data type, append the column name with `:type`, where `type` is the data type you want for the column. For example, if you want to specify the type `int` for the column **id** and type `text` for the column **name**, you can use the following snippet in the **Columns** field: `id:int,name:text`.
+ในการระบุประเภทข้อมูลของ column ให้ต่อท้ายชื่อ column ด้วย `:type` โดยที่ `type` คือประเภทข้อมูลที่คุณต้องการ สำหรับตัวอย่าง หากต้องการให้ column **id** เป็นประเภท `int` และ column **name** เป็นประเภท `text` คุณสามารถใช้ snippet ต่อไปนี้ในฟิลด์ **Columns**: `id:int,name:text`
 

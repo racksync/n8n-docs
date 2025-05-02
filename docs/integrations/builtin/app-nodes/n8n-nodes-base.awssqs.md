@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # AWS SQS node
 
-Use the AWS SQS node to automate work in AWS SNS, and integrate AWS SQS with other applications. n8n has built-in support for a wide range of AWS SQS features, including sending messages.
+ใช้ AWS SQS node เพื่อทำงานอัตโนมัติใน AWS SQS และผสานรวม AWS SQS กับแอปพลิเคชันอื่นๆ n8n มีการรองรับฟีเจอร์หลากหลายของ AWS SQS ในตัว รวมถึงการส่งข้อความ
 
-On this page, you'll find a list of operations the AWS SQS node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ AWS SQS node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to  [AWS SQS credentials](/integrations/builtin/credentials/aws.md) for guidance on setting up authentication. 
+อ้างอิง [AWS SQS credentials](/integrations/builtin/credentials/aws.md) สำหรับคำแนะนำในการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations

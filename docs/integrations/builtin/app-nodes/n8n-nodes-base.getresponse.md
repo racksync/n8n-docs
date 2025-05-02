@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # GetResponse node
 
-Use the GetResponse node to automate work in GetResponse, and integrate GetResponse with other applications. n8n has built-in support for a wide range of GetResponse features, including creating, updating, deleting, and getting contacts. 
+ใช้ GetResponse node เพื่อทำงานอัตโนมัติใน GetResponse และเชื่อมต่อ GetResponse กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ GetResponse หลายอย่าง เช่น การสร้าง อัปเดต ลบ และดึงข้อมูล contacts
 
-On this page, you'll find a list of operations the GetResponse node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ GetResponse node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [GetResponse credentials](/integrations/builtin/credentials/getresponse.md) for guidance on setting up authentication. 
+โปรดดู [GetResponse credentials](/integrations/builtin/credentials/getresponse.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations

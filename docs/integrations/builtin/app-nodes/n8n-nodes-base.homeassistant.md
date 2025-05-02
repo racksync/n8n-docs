@@ -8,12 +8,12 @@ priority: medium
 
 # Home Assistant node
 
-Use the Home Assistant node to automate work in Home Assistant, and integrate Home Assistant with other applications. n8n has built-in support for a wide range of Home Assistant features, including getting, creating, and checking camera proxies, configurations, logs, services, and templates. 
+ใช้ Home Assistant node เพื่อทำงานอัตโนมัติใน Home Assistant และเชื่อมต่อ Home Assistant กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Home Assistant หลายอย่าง เช่น การดึงข้อมูล สร้าง และตรวจสอบ camera proxies, configurations, logs, services และ templates
 
-On this page, you'll find a list of operations the Home Assistant node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Home Assistant node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Home Assistant credentials](/integrations/builtin/credentials/homeassistant.md) for guidance on setting up authentication. 
+โปรดดู [Home Assistant credentials](/integrations/builtin/credentials/homeassistant.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
@@ -48,4 +48,4 @@ Refer to [Home Assistant credentials](/integrations/builtin/credentials/homeassi
 
 ## Related resources
 
-Refer to [Home Assistant's documentation](https://developers.home-assistant.io/docs/api/rest/){:target=_blank .external-link} for more information about the service.
+โปรดดู [Home Assistant's documentation](https://developers.home-assistant.io/docs/api/rest/){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้

@@ -8,45 +8,45 @@ priority: critical
 
 # Google Sheets Document operations
 
-Use this operation to create or delete a Google spreadsheet from Google Sheets. Refer to [Google Sheets](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/index.md) for more information on the Google Sheets node itself.
+ใช้ operation นี้เพื่อสร้างหรือลบ Google spreadsheet จาก Google Sheets อ้างอิงถึง [Google Sheets](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/index.md) สำหรับข้อมูลเพิ่มเติมเกี่ยวกับ Google Sheets node
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Create a spreadsheet
 
-Use this operation to create a new spreadsheet.
+ใช้ operation นี้เพื่อสร้าง spreadsheet ใหม่
 
-Enter these parameters:
+ป้อน parameters เหล่านี้:
 
-- **Credential to connect with**: Create or select an existing [Google Sheets credentials](/integrations/builtin/credentials/google/index.md).
-- **Resource**: Select **Document**.
-- **Operation**: Select **Create**.
-- **Title**: Enter the title of the new spreadsheet you want to create.
-- **Sheets**: Add the **Title(s)** of the sheet(s) you want to create within the spreadsheet. 
+- **Credential to connect with**: สร้างหรือเลือก [Google Sheets credentials](/integrations/builtin/credentials/google/index.md) ที่มีอยู่
+- **Resource**: เลือก **Document**
+- **Operation**: เลือก **Create**
+- **Title**: ป้อนชื่อของ spreadsheet ใหม่ที่คุณต้องการสร้าง
+- **Sheets**: เพิ่ม **Title(s)** ของ sheet ที่คุณต้องการสร้างภายใน spreadsheet
 <!-- vale off -->
 
 ### Options
 
-- **Locale**: Enter the locale of the spreadsheet. This affects formatting details such as functions, dates, and currency. Use one of the following formats:
+- **Locale**: ป้อน locale ของ spreadsheet ซึ่งมีผลต่อรายละเอียดการจัดรูปแบบ เช่น ฟังก์ชัน วันที่ และสกุลเงิน ใช้รูปแบบใดรูปแบบหนึ่งต่อไปนี้:
     - `en` (639-1)
-    - `fil` (639-2 if no 639-1 format exists)
-    - `en_US` (combination of ISO language and country).
-    - Refer to [List of ISO 639 language codes](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes){:target=_blank .external link} and [List of ISO 3166 country codes](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes){:target=_blank .external link} for language and country codes. Note that Google doesn't support all locales/languages.
-- **Recalculation Interval**: Enter the desired recalculation interval for the spreadsheet functions. This affects how often `NOW`, `TODAY`, `RAND`, and `RANDBETWEEN` are updated. Select **On Change** for recalculating whenever there is a change in the spreadsheet, **Minute** for recalculating every minute, or **Hour** for recalculating every hour. Refer to [Set a spreadsheet’s location & calculation settings](https://support.google.com/docs/answer/58515){:target=_blank .external-link} for more information about these options. 
+    - `fil` (639-2 หากไม่มีรูปแบบ 639-1)
+    - `en_US` (การรวมกันของภาษา ISO และประเทศ)
+    - อ้างอิงถึง [List of ISO 639 language codes](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes){:target=_blank .external link} และ [List of ISO 3166 country codes](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes){:target=_blank .external link} สำหรับรหัสภาษาและประเทศ โปรดทราบว่า Google ไม่รองรับทุก locales/ภาษา
+- **Recalculation Interval**: ป้อนช่วงเวลาการคำนวณซ้ำที่ต้องการสำหรับฟังก์ชันของ spreadsheet ซึ่งมีผลต่อความถี่ในการอัปเดต `NOW`, `TODAY`, `RAND`, และ `RANDBETWEEN` เลือก **On Change** สำหรับการคำนวณซ้ำทุกครั้งที่มีการเปลี่ยนแปลงใน spreadsheet, **Minute** สำหรับการคำนวณซ้ำทุกนาที, หรือ **Hour** สำหรับการคำนวณซ้ำทุกชั่วโมง อ้างอิงถึง [Set a spreadsheet’s location & calculation settings](https://support.google.com/docs/answer/58515){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับตัวเลือกเหล่านี้
 
-Refer to the [Method: spreadsheets.create | Google Sheets](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/create){:target=_blank .external-link} API documentation for more information.
+อ้างอิงถึงเอกสาร API [Method: spreadsheets.create | Google Sheets](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/create){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 
 ## Delete a spreadsheet
 
-Use this operation to delete an existing spreadsheet.
+ใช้ operation นี้เพื่อลบ spreadsheet ที่มีอยู่
 
-Enter these parameters:
+ป้อน parameters เหล่านี้:
 
-- **Credential to connect with**: Create or select an existing [Google Sheets credentials](/integrations/builtin/credentials/google/index.md).
-- **Resource**: Select **Document**.
-- **Operation**: Select **Delete**.
-- **Document**: Choose a spreadsheet you want to delete. 
-    - Select **From list** to choose the title from the dropdown list, **By URL** to enter the url of the spreadsheet, or **By ID** to enter the `spreadsheetId`. 
-    - You can find the `spreadsheetId` in a Google Sheets URL: `https://docs.google.com/spreadsheets/d/spreadsheetId/edit#gid=0`.
+- **Credential to connect with**: สร้างหรือเลือก [Google Sheets credentials](/integrations/builtin/credentials/google/index.md) ที่มีอยู่
+- **Resource**: เลือก **Document**
+- **Operation**: เลือก **Delete**
+- **Document**: เลือก spreadsheet ที่คุณต้องการลบ
+    - เลือก **From list** เพื่อเลือกชื่อจากรายการดรอปดาวน์, **By URL** เพื่อป้อน URL ของ spreadsheet, หรือ **By ID** เพื่อป้อน `spreadsheetId`
+    - คุณสามารถหา `spreadsheetId` ได้ใน URL ของ Google Sheets: `https://docs.google.com/spreadsheets/d/spreadsheetId/edit#gid=0`
 
-Refer to the [Method: files.delete | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files/delete){:target=_blank .external-link} API documentation for more information.
+อ้างอิงถึงเอกสาร API [Method: files.delete | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files/delete){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม

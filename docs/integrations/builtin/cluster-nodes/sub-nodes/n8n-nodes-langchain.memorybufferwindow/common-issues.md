@@ -1,6 +1,6 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Simple Memory node common issues 
+title: Simple Memory node common issues
 description: Documentation for common issues and questions in the Simple Memory node in n8n, a workflow automation platform. Includes details of the issue and suggested solutions.
 contentType: [integration, reference]
 priority: high
@@ -8,18 +8,18 @@ priority: high
 
 # Simple Memory node common issues
 
-Here are some common errors and issues with the [Simple Memory node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/index.md) and steps to resolve or troubleshoot them.
+นี่คือข้อผิดพลาดและปัญหาทั่วไปบางประการเกี่ยวกับ [Simple Memory node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/index.md) และขั้นตอนในการแก้ไขหรือ troubleshoot
 
 ## Single memory instance
 
-If you add more than one Simple Memory node to your workflow, all nodes access the same memory instance by default. Be careful when doing destructive actions that override existing memory contents, such as the override all messages operation in the [Chat Memory Manager](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymanager.md) node. If you want more than one memory instance in your workflow, set different session IDs in different memory nodes.
+หากคุณเพิ่ม Simple Memory node มากกว่าหนึ่ง node ใน workflow ของคุณ โดยค่าเริ่มต้นแล้ว ทุก node จะเข้าถึง memory instance เดียวกัน โปรดระมัดระวังเมื่อดำเนินการ destructive actions ที่เขียนทับเนื้อหา memory ที่มีอยู่ เช่น operation override all messages ใน [Chat Memory Manager](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymanager.md) node หากคุณต้องการ memory instance มากกว่าหนึ่ง instance ใน workflow ของคุณ ให้ตั้งค่า session IDs ที่แตกต่างกันใน memory nodes ที่ต่างกัน
 
 ## Managing the Session ID
 
-In most cases, the `sessionId` is automatically retrieved from the **On Chat Message** trigger. But you may run into an error with the phrase `No sessionId`.
+ในกรณีส่วนใหญ่ `sessionId` จะถูกดึงมาจาก trigger **On Chat Message** โดยอัตโนมัติ แต่คุณอาจพบข้อผิดพลาดพร้อมข้อความ `No sessionId`
 
-If you have this error, first check the output of your Chat trigger to ensure it includes a `sessionId`.
+หากคุณพบข้อผิดพลาดนี้ ให้ตรวจสอบ output ของ Chat trigger ของคุณก่อนเพื่อให้แน่ใจว่ามี `sessionId` รวมอยู่ด้วย
 
-If you're not using the **On Chat Message** trigger, you'll need to manage sessions manually.
+หากคุณไม่ได้ใช้ trigger **On Chat Message** คุณจะต้องจัดการ sessions ด้วยตนเอง
 
-For testing purposes, you can use a static key like `my_test_session`. If you use this approach, be sure to set up proper session management before activating the workflow to avoid potential issues in a live environment.
+เพื่อวัตถุประสงค์ในการทดสอบ คุณสามารถใช้ static key เช่น `my_test_session` หากคุณใช้วิธีนี้ อย่าลืมตั้งค่าการจัดการ session ที่เหมาะสมก่อนที่จะ activate workflow เพื่อหลีกเลี่ยงปัญหาที่อาจเกิดขึ้นในสภาพแวดล้อมจริง (live environment)

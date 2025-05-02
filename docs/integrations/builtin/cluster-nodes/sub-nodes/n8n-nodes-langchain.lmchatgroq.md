@@ -8,33 +8,32 @@ priority: medium
 
 # Groq Chat Model node
 
-Use the Groq Chat Model node to access Groq's large language models for conversational AI and text generation tasks.
+ใช้ Groq Chat Model node เพื่อเข้าถึงโมเดลภาษา (LLM) ของ Groq สำหรับงาน AI แชทและการสร้างข้อความ
 
-On this page, you'll find the node parameters for the Groq Chat Model node, and links to more resources.
+ในหน้านี้จะมีพารามิเตอร์ของ node Groq Chat Model และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials 
-You can find authentication information for this node [here](/integrations/builtin/credentials/groq.md).
+คุณสามารถดูข้อมูลการเชื่อมต่อสำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/groq.md)
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node parameters
 
-* **Model**: Select the model which will generate the completion. n8n dynamically loads available models from the Groq API. Learn more in the [Groq model documentation](https://console.groq.com/docs/models){:target=_blank .external-link}.
+* **Model**: เลือกโมเดลที่ต้องการให้สร้างข้อความตอบกลับ n8n จะโหลดโมเดลที่มีอยู่จาก Groq API อัตโนมัติ ดูรายละเอียดเพิ่มเติมได้ที่ [Groq model documentation](https://console.groq.com/docs/models){:target=_blank .external-link}
 
 ## Node options
 
-* **Maximum Number of Tokens**: Enter the maximum number of tokens used, which sets the completion length.
-* **Sampling Temperature**: Use this option to control the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
+* **Maximum Number of Tokens**: กำหนดจำนวน tokens สูงสุดที่ใช้ ซึ่งจะเป็นการกำหนดความยาวของข้อความที่โมเดลจะตอบกลับ
+* **Sampling Temperature**: ปรับความสุ่มของการสร้างข้อความ ค่า temperature สูงจะทำให้โมเดลตอบหลากหลายมากขึ้น แต่ก็เสี่ยงต่อการตอบแบบหลุดประเด็น
 
 ## Templates and examples
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
 [[ templatesWidget(page.title, 'groq-chat-model') ]]
 
 ## Related resources
 
-Refer to [Groq's API documentation](https://console.groq.com/docs/quickstart){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมได้ที่ [Groq's API documentation](https://console.groq.com/docs/quickstart){:target=_blank .external-link}
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

@@ -8,12 +8,12 @@ priority: medium
 
 # Odoo node
 
-Use the Odoo node to automate work in Odoo, and integrate Odoo with other applications. n8n has built-in support for a wide range of Odoo features, including creating, updating, deleting, and getting contracts, resources, and opportunities. 
+ใช้ Odoo node เพื่อทำงานอัตโนมัติใน Odoo และเชื่อมต่อกับแอปอื่น ๆ. n8n รองรับฟีเจอร์ของ Odoo เช่น การสร้าง, การอัปเดต, การลบ และการดึงข้อมูลเกี่ยวกับ contracts, resources และ opportunities
 
-On this page, you'll find a list of operations the Odoo node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Odoo node รองรับ พร้อมลิงก์สำหรับข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [Odoo credentials](/integrations/builtin/credentials/odoo.md) for guidance on setting up authentication. 
+ดู [Odoo credentials](/integrations/builtin/credentials/odoo.md) เพื่อดูวิธีการตั้งค่า authentication
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

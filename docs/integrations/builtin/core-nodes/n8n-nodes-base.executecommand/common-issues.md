@@ -8,30 +8,30 @@ priority: high
 
 # Execute Command node common issues
 
-Here are some common errors and issues with the [Execute Command node](/integrations/builtin/core-nodes/n8n-nodes-base.executecommand/index.md) and steps to resolve or troubleshoot them.
+นี่คือปัญหาที่เจอบ่อยกับ [Execute Command node](/integrations/builtin/core-nodes/n8n-nodes-base.executecommand/index.md) พร้อมวิธีแก้ไขหรือแนวทางตรวจสอบ
 
 <!-- vale off -->
 ## Command failed: &lt;command&gt; /bin/sh: &lt;command&gt;: not found
 <!-- vale on -->
 
-This error occurs when the shell environment can't find one of the commands in the **Command** parameter.
+ข้อผิดพลาดนี้เกิดขึ้นเมื่อ shell หา command ที่ใส่ใน **Command** parameter ไม่เจอ
 
-To fix this error, review the following:
+วิธีแก้ไข ลองตรวจสอบตามนี้:
 
-* Check that the command and its arguments don't have typos in the **Command** parameter.
-* Check that the command is in the `PATH` of the user running n8n. 
-* If you are running n8n with Docker, check if the command is available within the container by trying to run it manually. If your command isn't included in the container, you might have to extend the official n8n image with a [custom image](https://docs.docker.com/build/building/base-images/){:target=_blank .external-link} that includes your command.
-	* If n8n is already running:
+* ตรวจสอบว่า command และ argument ที่ใส่ใน **Command** parameter ไม่มีพิมพ์ผิด
+* ตรวจสอบว่า command นั้นอยู่ใน `PATH` ของ user ที่รัน n8n
+* ถ้ารัน n8n ด้วย Docker ให้เช็คว่า command นั้นมีอยู่ใน container หรือเปล่า โดยลองรันเองใน container ถ้าไม่มี command ที่ต้องการใน container อาจต้องสร้าง [custom image](https://docs.docker.com/build/building/base-images/){:target=_blank .external-link} ที่มี command นั้นเพิ่มเข้าไป
+	* ถ้า n8n กำลังรันอยู่:
 		```sh
-		# Find n8n's container ID, it will be the first column
+		# หา container ID ของ n8n จะอยู่คอลัมน์แรก
 		docker ps | grep n8n
-		# Try to execute the command within the running container
+		# ลองรัน command ใน container ที่กำลังรันอยู่
 		docker container exec <container_ID> <command_to_run>
 		```
-	* If n8n isn't running:
+	* ถ้า n8n ยังไม่รัน:
 		```sh
-		# Start up a new container that runs the command instead of n8n
-		# Use the same image and tag that you use to run n8n normally
+		# สตาร์ท container ใหม่ที่รัน command แทนที่จะรัน n8n
+		# ใช้ image และ tag เดียวกับที่ใช้รัน n8n ปกติ
 		docker run -it --rm --entrypoint /bin/sh docker.n8n.io/n8nio/n8n -c <command_to_run>
 		```
 
@@ -39,6 +39,6 @@ To fix this error, review the following:
 ## Error: stdout maxBuffer length exceeded
 <!-- vale on -->
 
-This error happens when your command returns more output than the Execute Command node is able to process at one time.
+ข้อผิดพลาดนี้เกิดขึ้นเมื่อ command ของคุณส่ง output ออกมามากเกินกว่าที่ Execute Command node จะรับไหวในครั้งเดียว
 
-To avoid this error, reduce output your command produces. Check your command's manual page or documentation to see if there are flags to limit or filter output. If not, you may need to pipe the output to another command to remove unneeded info.
+วิธีแก้ไข ให้ลด output ที่ command ส่งออกมา ลองดู manual หรือ documentation ของ command ว่ามี flag สำหรับจำกัดหรือกรอง output หรือเปล่า ถ้าไม่มี อาจต้อง pipe output ไปยัง command อื่นเพื่อตัดข้อมูลที่ไม่จำเป็นออก

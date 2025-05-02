@@ -8,32 +8,32 @@ priority: medium
 
 # Chat Memory Manager node
 
-The Chat Memory Manager node manages chat message [memories](/glossary.md#ai-memory) within your workflows. Use this node to load, insert, and delete chat messages in an in-memory [vector store](/glossary.md#ai-vector-store).
+Chat Memory Manager node เอาไว้จัดการ message ที่เป็น [memory](/glossary.md#ai-memory) สำหรับแชทใน workflow ของคุณ ใช้ node นี้เพื่อโหลด, แทรก, และลบข้อความแชทใน [vector store](/glossary.md#ai-vector-store) ที่อยู่ในหน่วยความจำ (in-memory)
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-sub-nodes/chat-memory-manager-purpose.md"
 
-On this page, you'll find a list of operations that the Chat Memory Manager node supports, along with links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Chat Memory Manager node รองรับ พร้อมลิงก์ไปยัง resource อื่นๆ ที่เกี่ยวข้อง
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node parameters
 
-* **Operation Mode**: Choose between **Get Many Messages**, **Insert Messages**, and **Delete Messages** operations.
-* **Insert Mode**: Available in **Insert Messages** mode. Choose from:
-    * **Insert Messages**: Insert messages alongside existing messages.
-    * **Override All Messages**: Replace current memory.
-* **Delete Mode**: available in **Delete Messages** mode. Choose from:
-    * **Last N**: Delete the last N messages.
-    * **All Messages**: Delete messages from memory.
-* **Chat Messages**: available in **Insert Messages** mode. Define the chat messages to insert into the memory, including:
-	* **Type Name or ID**: Set the message type. Select one of:
-		* **AI**: Use this for messages from the AI.
-		* **System**: Add a message containing instructions for the AI.
-		* **User**: Use this for messages from the user. This message type is sometimes called the 'human' message in other AI tools and guides.
-	* **Message**: Enter the message contents.
-	* **Hide Message in Chat**: Select whether n8n should display the message to the user in the chat UI (turned off) or not (turned on).
-* **Messages Count**: Available in **Delete Messages** mode when you select **Last N**. Enter the number of latest messages to delete.
-* **Simplify Output**: Available in **Get Many Messages** mode. Turn on to simplify the output to include only the sender (AI, user, or system) and the text.
+* **Operation Mode**: เลือกว่าจะใช้โหมด **Get Many Messages**, **Insert Messages** หรือ **Delete Messages**
+* **Insert Mode**: ใช้ได้ในโหมด **Insert Messages** เลือกได้ระหว่าง:
+    * **Insert Messages**: แทรกข้อความใหม่เข้าไปพร้อมกับข้อความเดิม
+    * **Override All Messages**: แทนที่ข้อความทั้งหมดใน memory
+* **Delete Mode**: ใช้ได้ในโหมด **Delete Messages** เลือกได้ระหว่าง:
+    * **Last N**: ลบข้อความล่าสุด N ข้อความ
+    * **All Messages**: ลบข้อความทั้งหมดใน memory
+* **Chat Messages**: ใช้ได้ในโหมด **Insert Messages** กำหนดข้อความแชทที่จะใส่เข้าไปใน memory โดยมี:
+	* **Type Name or ID**: กำหนดประเภทของข้อความ เลือกได้ระหว่าง:
+		* **AI**: สำหรับข้อความที่มาจาก AI
+		* **System**: สำหรับข้อความที่เป็นคำสั่งหรือ instruction ให้ AI
+		* **User**: สำหรับข้อความที่มาจากผู้ใช้ (บางทีเรียกว่า 'human' ในเครื่องมือ AI อื่นๆ)
+	* **Message**: ใส่เนื้อหาข้อความ
+	* **Hide Message in Chat**: เลือกว่าจะให้ n8n แสดงข้อความนี้ใน chat UI ให้ user เห็นหรือไม่ (ถ้าเปิดจะไม่แสดง)
+* **Messages Count**: ใช้ได้ในโหมด **Delete Messages** เมื่อเลือก **Last N** ใส่จำนวนข้อความล่าสุดที่จะลบ
+* **Simplify Output**: ใช้ได้ในโหมด **Get Many Messages** ถ้าเปิดจะให้ output เฉพาะ sender (AI, user, หรือ system) และข้อความ
 
 ## Templates and examples
 
@@ -42,7 +42,7 @@ On this page, you'll find a list of operations that the Chat Memory Manager node
 
 ## Related resources
 
-Refer to [LangChain's Memory documentation](https://langchain-ai.github.io/langgraphjs/concepts/memory/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมได้ที่ [LangChain's Memory documentation](https://langchain-ai.github.io/langgraphjs/concepts/memory/){:target=_blank .external-link}
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 

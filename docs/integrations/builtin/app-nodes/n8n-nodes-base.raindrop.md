@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Raindrop node
 
-Use the Raindrop node to automate work in Raindrop, and integrate Raindrop with other applications. n8n has built-in support for a wide range of Raindrop features, including getting users, deleting tags, and creating, updating, deleting and getting collections and bookmarks. 
+ใช้ Raindrop node ในการอัตโนมัติงานใน Raindrop และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ. n8n มีการสนับสนุนฟีเจอร์ของ Raindrop มากมาย เช่น การดึงข้อมูลผู้ใช้, การลบ tags, รวมถึงการสร้าง, อัปเดต, ลบ และดึงข้อมูล collections และ bookmarks.
 
-On this page, you'll find a list of operations the Raindrop node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Raindrop node รองรับ และลิงก์ไปยัง resources เพิ่มเติม.
 
 /// note | Credentials
-Refer to [Raindrop credentials](/integrations/builtin/credentials/raindrop.md) for guidance on setting up authentication. 
+ดู [Raindrop credentials](/integrations/builtin/credentials/raindrop.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations

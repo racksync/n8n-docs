@@ -8,25 +8,25 @@ priority: medium
 
 # Crypto
 
-Use the Crypto node to encrypt data in workflows.
+ใช้ Crypto node เพื่อเข้ารหัส (encrypt) ข้อมูลใน workflow
 
 ## Actions
 
 * [**Generate** a random string](#generate-parameters)
-* [**Hash** a text or file](#hash-parameters) in a specified format
-* [**Hmac** a text or file](#hmac-parameters) in a specified format
-* [**Sign** a string](#sign-parameters) using a private key
+* [**Hash** a text or file](#hash-parameters) ใน format ที่เลือก
+* [**Hmac** a text or file](#hmac-parameters) ใน format ที่เลือก
+* [**Sign** a string](#sign-parameters) ด้วย private key
 
 ## Node parameters
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
-Node parameters depend on the action you select.
+parameter ของ node จะขึ้นอยู่กับ action ที่เลือก
 
 ### Generate parameters
 
-* **Property Name**: Enter the name of the property to write the random string to.
-* **Type**: Select the encoding type to use to generate the string. Choose from:
+* **Property Name**: ใส่ชื่อ property ที่จะเขียน random string ลงไป
+* **Type**: เลือก encoding type ที่จะใช้ generate string เลือกได้:
 	* **ASCII**
 	* **BASE64**
 	* **HEX**
@@ -34,7 +34,7 @@ Node parameters depend on the action you select.
 
 ### Hash parameters
 
-* **Type**: Select the hash type to use. Choose from:
+* **Type**: เลือก hash type ที่จะใช้ เลือกได้:
 	* **MD5**
 	* **SHA256**
 	* **SHA3-256**
@@ -42,20 +42,20 @@ Node parameters depend on the action you select.
 	* **SHA3-512**
 	* **SHA385**
 	* **SHA512**
-* **Binary File**: Turn this parameter on if the data you want to hash is from a binary file.
-	* **Value**: If you turn off **Binary File**, enter the value you want to hash.
-	* **Binary Property Name**: If you turn on **Binary File**, enter the name of the binary property that contains the data you want to hash.
-* **Property Name**: Enter the name of the property you want to write the hash to.
-* **Encoding**: Select the encoding type to use. Choose from:
+* **Binary File**: เปิดถ้าข้อมูลที่ต้องการ hash มาจาก binary file
+	* **Value**: ถ้าปิด **Binary File** ให้ใส่ค่าที่ต้องการ hash
+	* **Binary Property Name**: ถ้าเปิด **Binary File** ให้ใส่ชื่อ binary property ที่มีข้อมูลที่ต้องการ hash
+* **Property Name**: ใส่ชื่อ property ที่จะเขียน hash ลงไป
+* **Encoding**: เลือก encoding type ที่จะใช้ เลือกได้:
 	* **BASE64**
 	* **HEX**
 
 ### Hmac parameters
 
-* **Binary File**: Turn this parameter on if the data you want to encrypt is from a binary file.
-	* **Value**: If you turn off **Binary File**, enter the value you want to encrypt.
-	* **Binary Property Name**: If you turn on **Binary File**, enter the name of the binary property that contains the data you want to encrypt.
-* **Type**: Select the encryption type to use. Choose from:
+* **Binary File**: เปิดถ้าข้อมูลที่ต้องการ encrypt มาจาก binary file
+	* **Value**: ถ้าปิด **Binary File** ให้ใส่ค่าที่ต้องการ encrypt
+	* **Binary Property Name**: ถ้าเปิด **Binary File** ให้ใส่ชื่อ binary property ที่มีข้อมูลที่ต้องการ encrypt
+* **Type**: เลือก encryption type ที่จะใช้ เลือกได้:
 	* **MD5**
 	* **SHA256**
 	* **SHA3-256**
@@ -63,21 +63,21 @@ Node parameters depend on the action you select.
 	* **SHA3-512**
 	* **SHA385**
 	* **SHA512**
-* **Property Name**: Enter the name of the property you want to write the hash to.
-* **Secret**: Enter the secret or secret key used for decoding.
-* **Encoding**: Select the encoding type to use. Choose from:
+* **Property Name**: ใส่ชื่อ property ที่จะเขียน hash ลงไป
+* **Secret**: ใส่ secret หรือ secret key ที่ใช้สำหรับ decode
+* **Encoding**: เลือก encoding type ที่จะใช้ เลือกได้:
 	* **BASE64**
 	* **HEX**
 
 ### Sign parameters
 
-* **Value**: Enter the value you want to sign.
-* **Property Name**: Enter the name of the property you want to write the signed value to.
-* **Algorithm Name or ID**: Choose an algorithm name from the list or specify an ID using an [expression](/code/expressions.md).
-* **Encoding**: Select the encoding type to use. Choose from:
+* **Value**: ใส่ค่าที่ต้องการ sign
+* **Property Name**: ใส่ชื่อ property ที่จะเขียน signed value ลงไป
+* **Algorithm Name or ID**: เลือก algorithm name จาก list หรือใส่ ID ด้วย [expression](/code/expressions.md)
+* **Encoding**: เลือก encoding type ที่จะใช้ เลือกได้:
 	* **BASE64**
 	* **HEX**
-* **Private Key**: Enter a private key to use when signing the string.
+* **Private Key**: ใส่ private key ที่จะใช้ sign string
 
 ## Templates and examples
 

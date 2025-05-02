@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Dropcontact node
 
-Use the Dropcontact node to automate work in Dropcontact, and integrate Dropcontact with other applications. n8n has built-in support for a wide range of Dropcontact features, including  fetching contacts. 
+ใช้ Dropcontact node เพื่อทำงานอัตโนมัติใน Dropcontact และเชื่อมต่อ Dropcontact กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Dropcontact หลายอย่าง เช่น การดึงข้อมูล contacts
 
-On this page, you'll find a list of operations the Dropcontact node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Dropcontact node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Dropcontact credentials](/integrations/builtin/credentials/dropcontact.md) for guidance on setting up authentication. 
+โปรดดู [Dropcontact credentials](/integrations/builtin/credentials/dropcontact.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations

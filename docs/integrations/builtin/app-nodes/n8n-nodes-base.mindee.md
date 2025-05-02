@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Mindee node
 
-Use the Mindee node to automate work in Mindee, and integrate Mindee with other applications. n8n has built-in support for a wide range of Mindee features, including predicting invoices. 
+ใช้ Mindee node ในการทำงานอัตโนมัติใน Mindee และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ โดย n8n รองรับฟีเจอร์หลากหลาย เช่น การทำนายข้อมูลใน invoices และ receipts.
 
-On this page, you'll find a list of operations the Mindee node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Mindee node รองรับและลิงก์ไปยังข้อมูลเพิ่มเติม.
 
 /// note | Credentials
-Refer to [Mindee credentials](/integrations/builtin/credentials/mindee.md) for guidance on setting up authentication. 
+ดู [Mindee credentials] สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations

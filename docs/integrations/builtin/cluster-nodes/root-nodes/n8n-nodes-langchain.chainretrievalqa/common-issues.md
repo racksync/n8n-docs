@@ -8,33 +8,33 @@ priority: high
 
 # Question and Answer Chain node common issues
 
-Here are some common errors and issues with the [Question and Answer Chain node](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa/index.md) and steps to resolve or troubleshoot them.
+นี่คือข้อผิดพลาดและปัญหาทั่วไปบางประการเกี่ยวกับ [Question and Answer Chain node](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa/index.md) และขั้นตอนในการแก้ไขหรือแก้ไขปัญหา
 
 ## No prompt specified error
 
-This error displays when the **Prompt** is empty or invalid.
+ข้อผิดพลาดนี้จะแสดงขึ้นเมื่อ **Prompt** ว่างเปล่าหรือไม่ถูกต้อง
 
-You might see this in one of two scenarios:
+คุณอาจเห็นสิ่งนี้ในหนึ่งในสองสถานการณ์:
 
-1. When you've set the **Prompt** to **Define below** and have an expression in your **Text** that isn't generating a value.
-    * To resolve, enter a valid prompt in the **Text** field.
-    * Make sure any expressions reference valid fields and that they resolve to valid input rather than null.
-2. When you've set the **Prompt** to **Connected Chat Trigger Node** and the incoming data has null values.
-    * To resolve, make sure your input contains a `chatInput` field. Add an [Edit Fields (Set)](/integrations/builtin/core-nodes/n8n-nodes-base.set.md) node to edit an incoming field name to `chatInput`.
-    * Remove any null values from the `chatInput` field of the input node.
+1.  เมื่อคุณตั้งค่า **Prompt** เป็น **Define below** และมี expression ใน **Text** ของคุณที่ไม่ได้สร้างค่า
+    *   ในการแก้ไข ให้ป้อน prompt ที่ถูกต้องในช่อง **Text**
+    *   ตรวจสอบให้แน่ใจว่า expression ใดๆ อ้างอิงถึงฟิลด์ที่ถูกต้อง และ resolve เป็น input ที่ถูกต้องแทนที่จะเป็น null
+2.  เมื่อคุณตั้งค่า **Prompt** เป็น **Connected Chat Trigger Node** และข้อมูลขาเข้ามีค่า null
+    *   ในการแก้ไข ตรวจสอบให้แน่ใจว่า input ของคุณมีฟิลด์ `chatInput` เพิ่มโหนด [Edit Fields (Set)](/integrations/builtin/core-nodes/n8n-nodes-base.set.md) เพื่อแก้ไขชื่อฟิลด์ขาเข้าเป็น `chatInput`
+    *   ลบค่า null ใดๆ ออกจากฟิลด์ `chatInput` ของโหนด input
 
 <!-- vale from-write-good.Passive = NO -->
 ## A Retriever sub-node must be connected error
 <!-- vale from-write-good.Passive = YES -->
 
-This error displays when n8n tries to execute the node without having a Retriever connected.
+ข้อผิดพลาดนี้จะแสดงขึ้นเมื่อ n8n พยายาม execute โหนดโดยไม่มี Retriever เชื่อมต่ออยู่
 
-To resolve this, click the + Retriever button at the bottom of your screen when the node is open, or click the Retriever + connector when the node isn't open. n8n will then open a selection of possible Retrievers to pick from.
+ในการแก้ไขปัญหานี้ ให้คลิกปุ่ม + Retriever ที่ด้านล่างของหน้าจอเมื่อโหนดเปิดอยู่ หรือคลิกตัวเชื่อมต่อ Retriever + เมื่อโหนดไม่ได้เปิดอยู่ จากนั้น n8n จะเปิดรายการ Retrievers ที่เป็นไปได้ให้เลือก
 
 ## Can't produce longer responses
 
-If you need to generate longer responses than the Question and Answer Chain node produces by default, you can try one or more of the following techniques:
+หากคุณต้องการสร้างการตอบสนองที่ยาวกว่าที่ Question and Answer Chain node สร้างขึ้นโดยค่าเริ่มต้น คุณสามารถลองใช้เทคนิคต่อไปนี้อย่างน้อยหนึ่งอย่าง:
 
-* **Connect a more verbose model**: Some AI models produce more terse results than others. Swapping your model for one with a larger context window and more verbose output can increase the word length of your responses.
-* **Increase the maximum number of tokens**: Many model nodes (for example the [OpenAI Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/index.md#maximum-number-of-tokens)) include a **Maximum Number of Tokens** option. You can set this to increase the maximum number of tokens the model can use to produce a response.
-* **Build larger responses in stages**: For more detailed answers, you may want to construct replies in stages using a variety of AI nodes. You can use AI split up a single question into multiple prompts and create responses for each. You can then compose a final reply by combining the responses again. Though the details are different, you can find a good example of the general idea in this [template for writing a WordPress post with AI](https://n8n.io/workflows/2187-write-a-wordpress-post-with-ai-starting-from-a-few-keywords/).
+*   **Connect a more verbose model**: AI model บางตัวให้ผลลัพธ์ที่กระชับกว่าตัวอื่นๆ การเปลี่ยน model ของคุณเป็น model ที่มี context window ใหญ่ขึ้นและให้ output ที่ละเอียดมากขึ้นสามารถเพิ่มความยาวของคำตอบของคุณได้
+*   **Increase the maximum number of tokens**: โหนด model หลายตัว (เช่น [OpenAI Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/index.md#maximum-number-of-tokens)) มีตัวเลือก **Maximum Number of Tokens** คุณสามารถตั้งค่านี้เพื่อเพิ่มจำนวน tokens สูงสุดที่ model สามารถใช้เพื่อสร้างการตอบสนองได้
+*   **Build larger responses in stages**: สำหรับคำตอบที่มีรายละเอียดมากขึ้น คุณอาจต้องการสร้างการตอบกลับเป็นขั้นตอนโดยใช้โหนด AI ที่หลากหลาย คุณสามารถใช้ AI แบ่งคำถามเดียวออกเป็นหลาย prompts และสร้างการตอบสนองสำหรับแต่ละ prompt จากนั้นคุณสามารถเขียนคำตอบสุดท้ายโดยการรวมการตอบสนองเข้าด้วยกันอีกครั้ง แม้ว่ารายละเอียดจะแตกต่างกัน คุณสามารถหาตัวอย่างที่ดีของแนวคิดทั่วไปได้ใน [template สำหรับการเขียนโพสต์ WordPress ด้วย AI](https://n8n.io/workflows/2187-write-a-wordpress-post-with-ai-starting-from-a-few-keywords/) นี้

@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Wekan node
 
-Use the Wekan node to automate work in Wekan, and integrate Wekan with other applications. n8n has built-in support for a wide range of Wekan features, including creating, updating, deleting, and getting boards and cards. 
+ใช้ Wekan node ในการทำงานอัตโนมัติใน Wekan และเชื่อมต่อ Wekan กับแอปพลิเคชันอื่น ๆ. n8n รองรับฟีเจอร์ของ Wekan หลากหลาย เช่น การสร้าง, การอัปเดต, การลบ และการดึงข้อมูล boards และ cards.
 
-On this page, you'll find a list of operations the Wekan node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการของ operations ที่ Wekan node รองรับและลิงก์ไปยัง resource เพิ่มเติม.
 
 /// note | Credentials
-Refer to [Wekan credentials](/integrations/builtin/credentials/wekan.md) for guidance on setting up authentication. 
+ดู [Wekan credentials](/integrations/builtin/credentials/wekan.md) สำหรับคำแนะนำในการตั้งค่า authentication. 
 ///
 
 ## Operations
@@ -57,5 +57,5 @@ Refer to [Wekan credentials](/integrations/builtin/credentials/wekan.md) for gui
 
 ## Load all the parameters for the node
 
-To load all the parameters, for example, Author ID, you need to give admin permissions to the user. Refer to the [Wekan documentation](https://github.com/wekan/wekan/wiki/Features#members-click-member-initials-or-avatar--permissions-adminnormalcomment-only){:target=_blank .external-link} to learn how to change permissions.
+ในการโหลด parameters ทั้งหมด เช่น Author ID คุณต้องให้สิทธิ์ admin กับผู้ใช้. ดู [Wekan documentation](https://github.com/wekan/wekan/wiki/Features#members-click-member-initials-or-avatar--permissions-adminnormalcomment-only){:target=_blank .external-link} เพื่อดูวิธีการเปลี่ยนแปลง permissions.
 

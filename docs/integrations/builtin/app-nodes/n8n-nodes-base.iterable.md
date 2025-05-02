@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Iterable node
 
-Use the Iterable node to automate work in Iterable, and integrate Iterable with other applications. n8n has built-in support for a wide range of Iterable features, including creating users, recording the actions performed by the users, and adding and removing users from the list. 
+ใช้ Iterable node เพื่อทำงานอัตโนมัติใน Iterable และเชื่อมต่อ Iterable กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Iterable หลายอย่าง เช่น การสร้าง users, บันทึก actions ที่ users ทำ และเพิ่มหรือลบ users จาก list
 
-On this page, you'll find a list of operations the Iterable node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Iterable node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Iterable credentials](/integrations/builtin/credentials/iterable.md) for guidance on setting up authentication. 
+โปรดดู [Iterable credentials](/integrations/builtin/credentials/iterable.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations

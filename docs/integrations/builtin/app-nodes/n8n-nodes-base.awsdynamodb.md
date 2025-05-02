@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # AWS DynamoDB node
 
-Use the AWS DynamoDB node to automate work in AWS DynamoDB, and integrate AWS DynamoDB with other applications. n8n has built-in support for a wide range of AWS DynamoDB features, including creating, reading, updating, deleting items, and records on a database.
+ใช้ AWS DynamoDB node เพื่อทำงานอัตโนมัติใน AWS DynamoDB และผสานรวม AWS DynamoDB กับแอปพลิเคชันอื่นๆ n8n มีการรองรับฟีเจอร์หลากหลายของ AWS DynamoDB ในตัว รวมถึงการสร้าง, การอ่าน, การอัปเดต, การลบ items และ records บนฐานข้อมูล
 
-On this page, you'll find a list of operations the AWS DynamoDB node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ AWS DynamoDB node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [AWS credentials](/integrations/builtin/credentials/aws.md) for guidance on setting up authentication. 
+อ้างอิง [AWS credentials](/integrations/builtin/credentials/aws.md) สำหรับคำแนะนำในการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations

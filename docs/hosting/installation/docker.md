@@ -5,31 +5,31 @@ contentType: tutorial
 
 # Docker Installation
 
-[Docker](https://www.docker.com/){:target=_blank .external-link} offers the following advantages:
+[Docker](https://www.docker.com/){:target=_blank .external-link} มีข้อดีดังนี้:
 
-* Installs n8n in a clean environment.
-* Easier setup for your preferred database.
-* Can avoid issues due to different operating systems, as Docker provides a consistent system.
-* Can avoid compatibility issues due to differences in operating systems and tools.
-* Makes migrating to new hosts or environments more straightforward.
+* ติดตั้ง n8n ใน environment ที่สะอาด
+* ตั้งค่าฐานข้อมูลที่คุณต้องการได้ง่ายขึ้น
+* ลดปัญหาเรื่องความแตกต่างของระบบปฏิบัติการ เพราะ Docker ให้ environment ที่เหมือนกัน
+* ลดปัญหา compatibility ที่เกิดจากความแตกต่างของ OS และเครื่องมือ
+* ช่วยให้ย้ายไปยัง host หรือ environment ใหม่ได้ง่ายขึ้น
 
-You can also use n8n in Docker with [Docker Compose](/hosting/installation/server-setups/docker-compose.md). You can find Docker Compose configurations for various architectures in the [n8n-hosting repository](https://github.com/n8n-io/n8n-hosting).
+คุณสามารถใช้ n8n กับ Docker ร่วมกับ [Docker Compose](/hosting/installation/server-setups/docker-compose.md) ได้ด้วย โดยสามารถดูตัวอย่างไฟล์ Docker Compose สำหรับสถาปัตยกรรมต่างๆ ได้ที่ [n8n-hosting repository](https://github.com/n8n-io/n8n-hosting)
 
 --8<-- "_snippets/self-hosting/warning.md"
 
 ## Prerequisites
 
-Before proceeding, install [Docker Desktop](https://docs.docker.com/get-docker/){:target=_blank .external-link}.
+ก่อนเริ่มต้น ให้ติดตั้ง [Docker Desktop](https://docs.docker.com/get-docker/){:target=_blank .external-link}
 
 /// note | Linux Users
-Docker Desktop is available for Mac and Windows. Linux users must install [Docker Engine](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/) individually for your distribution.
+Docker Desktop มีให้สำหรับ Mac และ Windows ส่วน Linux ต้องติดตั้ง [Docker Engine](https://docs.docker.com/engine/install/) และ [Docker Compose](https://docs.docker.com/compose/install/) แยกเองตาม distro ของคุณ
 ///
 
 --8<-- "_snippets/self-hosting/installation/latest-next-version.md"
 
 ## Starting n8n
 
-From your terminal, run:
+เปิด terminal แล้วรัน:
 
 ```sh
 docker volume create n8n_data
@@ -37,24 +37,24 @@ docker volume create n8n_data
 docker run -it --rm --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n docker.n8n.io/n8nio/n8n
 ```
 
-This command creates a volume to store persistent data, downloads the required n8n image, and starts your container, exposed on port `5678`. To save your work between container restarts, it also mounts a docker volume, `n8n_data`, to persist your data locally.
+คำสั่งนี้จะสร้าง volume สำหรับเก็บข้อมูลถาวร, ดาวน์โหลด image n8n ที่ต้องใช้ และเริ่ม container โดยเปิด port `5678` ให้คุณเข้าใช้งานได้ และ mount docker volume `n8n_data` เพื่อเก็บข้อมูลของคุณไว้ระหว่างที่ container ถูกรีสตาร์ท
 
-Once running, you can access n8n by opening:
+เมื่อ container ทำงานแล้ว คุณสามารถเข้าใช้งาน n8n ได้ที่:
 [http://localhost:5678](http://localhost:5678)
 
 ## Using with PostgreSQL
 
-By default, n8n uses SQLite to save [credentials](/glossary.md#credential-n8n), past executions, and workflows. n8n also supports PostgreSQL, configurable using environment variables as detailed below.
+โดยปกติ n8n จะใช้ SQLite ในการเก็บ [credentials](/glossary.md#credential-n8n), execution ที่ผ่านมา และ workflow ต่างๆ แต่ n8n ก็รองรับ PostgreSQL ด้วย โดยตั้งค่าผ่าน environment variable ตามตัวอย่างด้านล่าง
 
-When using PostgreSQL, it's still important to persist the data stored in the `/home/node/.n8n` folder. This includes n8n user data and, even more importantly, the encryption key for credentials. It's also the name of the webhook when using the [n8n tunnel](#n8n-with-tunnel).
+ถ้าใช้ PostgreSQL ก็ยังควร mount ข้อมูลในโฟลเดอร์ `/home/node/.n8n` ไว้เหมือนเดิม เพราะมีข้อมูล user ของ n8n และที่สำคัญคือ encryption key สำหรับ credentials รวมถึงชื่อ webhook ถ้าใช้ [n8n tunnel](#n8n-with-tunnel)
 
-If n8n can't find the `/home/node/.n8n` directory on startup, it automatically creates one. In this case, all existing credentials that n8n saved with a different encryption key will no longer work.
+ถ้า n8n หาโฟลเดอร์ `/home/node/.n8n` ไม่เจอตอนเริ่มต้น มันจะสร้างใหม่ให้เอง ซึ่งจะทำให้ credentials เดิมที่เข้ารหัสด้วย key อันเก่าใช้ไม่ได้
 
 /// note | Keep in mind
-While persisting the `/home/node/.n8n` directory with PostgreSQL is the recommended best practice, it's not explicitly required. You can provide the encryption key by passing the [`N8N_ENCRYPTION_KEY` environment variable](/hosting/configuration/environment-variables/deployment.md) when starting your Docker container.
+แม้จะใช้ PostgreSQL ก็ยังแนะนำให้ mount `/home/node/.n8n` ไว้ แต่ถ้าไม่ mount ก็สามารถกำหนด encryption key เองได้โดยใช้ [`N8N_ENCRYPTION_KEY` environment variable](/hosting/configuration/environment-variables/deployment.md) ตอนสั่งรัน container
 ///
 
-To use n8n with PostgreSQL, execute the following commands, replacing the placeholders (depicted within angled brackets, for example `<POSTGRES_USER>`) with your actual values:
+ถ้าต้องการใช้ n8n กับ PostgreSQL ให้รันคำสั่งนี้ (แทนที่ค่าต่างๆ ใน <> ด้วยค่าจริงของคุณ):
 
 ```sh
 docker volume create n8n_data
@@ -73,15 +73,15 @@ docker run -it --rm \
  docker.n8n.io/n8nio/n8n
 ```
 
-You can find a complete `docker-compose` file for PostgreSQL in the [n8n hosting repository](https://github.com/n8n-io/n8n-hosting/tree/main/docker-compose/withPostgres).
+สามารถดูตัวอย่างไฟล์ `docker-compose` สำหรับ PostgreSQL ได้ที่ [n8n hosting repository](https://github.com/n8n-io/n8n-hosting/tree/main/docker-compose/withPostgres)
 
 ## Setting timezone
 
-To define the timezone n8n should use, you can set the [`GENERIC_TIMEZONE` environment variable](/hosting/configuration/environment-variables/timezone-localization.md). Schedule-oriented nodes, like the [Schedule Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/index.md) use this to determine the correct timezone.
+ถ้าต้องการกำหนด timezone ที่ n8n จะใช้ ให้ตั้งค่า [`GENERIC_TIMEZONE` environment variable](/hosting/configuration/environment-variables/timezone-localization.md) node ที่เกี่ยวกับ schedule เช่น [Schedule Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/index.md) จะใช้ค่านี้ในการกำหนด timezone ที่ถูกต้อง
 
-You can set the system timezone, which controls what some scripts and commands like `date` return, using the `TZ` environment variable.
+ถ้าต้องการตั้ง timezone ของระบบ (เช่นเวลาที่แสดงในคำสั่ง `date`) ให้ใช้ environment variable `TZ`
 
-This example sets the same timezone for both variables:
+ตัวอย่างนี้ตั้ง timezone ให้ทั้งสองตัวแปร:
 
 ```sh
 docker volume create n8n_data
@@ -97,36 +97,36 @@ docker run -it --rm \
 
 ## Updating
 
-To update n8n, in Docker Desktop, navigate to the **Images** tab and select **Pull** from the context menu to download the latest n8n image:
+ถ้าต้องการอัปเดต n8n ใน Docker Desktop ให้ไปที่แท็บ **Images** แล้วเลือก **Pull** จาก context menu เพื่อดาวน์โหลด image n8n เวอร์ชันล่าสุด
 
 ![Docker Desktop](/_images/hosting/installation/docker/docker_desktop.png)
 
-You can also use the command line to pull the latest, or a specific version:
+หรือจะใช้ command line เพื่อ pull เวอร์ชันล่าสุดหรือเวอร์ชันที่ต้องการก็ได้:
 
 ```sh
-# Pull latest (stable) version
+# ดึงเวอร์ชันล่าสุด (stable)
 docker pull docker.n8n.io/n8nio/n8n
 
-# Pull specific version
+# ดึงเวอร์ชันที่ต้องการ
 docker pull docker.n8n.io/n8nio/n8n:1.81.0
 
-# Pull next (unstable) version
+# ดึงเวอร์ชัน next (unstable)
 docker pull docker.n8n.io/n8nio/n8n:next
 ```
 
-After pulling the updated image, stop your n8n container and start it again. You can also use the command line. Replace `<container_id>` in the commands below with the container ID you find in the first command:
+หลังจาก pull image ใหม่แล้ว ให้หยุด container n8n เดิมแล้วสั่งรันใหม่อีกครั้ง สามารถใช้ command line ได้ โดยแทนที่ `<container_id>` ด้วย container ID ที่ได้จากคำสั่งแรก:
 
 ```sh
-# Find your container ID
+# ดู container ID
 docker ps -a
 
-# Stop the container with the `<container_id>`
+# หยุด container ที่ต้องการ
 docker stop <container_id>
 
-# Remove the container with the `<container_id>`
+# ลบ container ที่ต้องการ
 docker rm <container_id>
 
-# Start the container
+# สั่งรัน container ใหม่
 docker run --name=<container_name> [options] -d docker.n8n.io/n8nio/n8n
 ```
 
@@ -136,11 +136,11 @@ docker run --name=<container_name> [options] -d docker.n8n.io/n8nio/n8n
 
 ## Further reading
 
-You can find more information about Docker setup in the README file for the [Docker image](https://github.com/n8n-io/n8n/tree/master/docker/images/n8n).
+ดูข้อมูลเพิ่มเติมเกี่ยวกับการตั้งค่า Docker ได้ที่ README ของ [Docker image](https://github.com/n8n-io/n8n/tree/master/docker/images/n8n)
 
 --8<-- "_snippets/self-hosting/installation/tunnel.md"
 
-Start n8n with `--tunnel` by running:
+เริ่ม n8n ด้วย `--tunnel` โดยรัน:
 
 ```sh
 docker volume create n8n_data

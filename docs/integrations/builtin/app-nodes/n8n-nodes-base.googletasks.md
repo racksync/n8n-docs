@@ -1,18 +1,18 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Google Tasks node documentation
-description: Learn how to use the Google Tasks node in n8n. Follow technical documentation to integrate Google Tasks node into your workflows.
+description: เรียนรู้วิธีการใช้ Google Tasks node ใน n8n ทำตามเอกสารทางเทคนิคเพื่อรวม Google Tasks node เข้ากับเวิร์กโฟลว์ของคุณ
 contentType: [integration, reference]
 ---
 
 # Google Tasks node
 
-Use the Google Tasks node to automate work in Google Tasks, and integrate Google Tasks with other applications. n8n has built-in support for a wide range of Google Tasks features, including adding, updating, and retrieving contacts. 
+ใช้ Google Tasks node เพื่อทำงานอัตโนมัติใน Google Tasks และเชื่อมต่อ Google Tasks กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Google Tasks หลายอย่าง เช่น การเพิ่ม อัปเดต และดึงข้อมูล contacts
 
-On this page, you'll find a list of operations the Google Tasks node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Google Tasks node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Google Tasks credentials](/integrations/builtin/credentials/google/index.md) for guidance on setting up authentication. 
+โปรดดู [Google Tasks credentials](/integrations/builtin/credentials/google/index.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

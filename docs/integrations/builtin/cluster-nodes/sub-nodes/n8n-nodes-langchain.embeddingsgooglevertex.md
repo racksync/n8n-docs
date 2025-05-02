@@ -8,21 +8,21 @@ priority: medium
 
 # Embeddings Google Vertex node
 
-Use the Embeddings Google Vertex node to generate [embeddings](/glossary.md#ai-embedding) for a given text.
+ใช้ Embeddings Google Vertex node เพื่อสร้าง [embeddings](/glossary.md#ai-embedding) สำหรับข้อความที่กำหนด
 
-On this page, you'll find the node parameters for the Embeddings Google Vertex node, and links to more resources.
+ในหน้านี้ คุณจะพบพารามิเตอร์ของโหนดสำหรับ Embeddings Google Vertex node และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/google/service-account.md).
+คุณสามารถดูข้อมูลการยืนยันตัวตนสำหรับโหนดนี้ได้ [ที่นี่](/integrations/builtin/credentials/google/service-account.md)
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node parameters
 
-- **Model**: Select the model to use to generate the embedding.
+- **Model**: เลือกรุ่น (model) ที่จะใช้สร้าง embedding
 
-Learn more about available embedding models in [Google VertexAI embeddings API documentation](https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/text-embeddings-api).
+เรียนรู้เพิ่มเติมเกี่ยวกับรุ่น embedding ที่มีให้ใช้งานใน [เอกสารประกอบ Google VertexAI embeddings API](https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/text-embeddings-api)
 
 ## Templates and examples
 
@@ -32,7 +32,7 @@ Learn more about available embedding models in [Google VertexAI embeddings API d
 
 ## Related resources
 
-Refer to [LangChain's Google Generative AI embeddings documentation](https://js.langchain.com/docs/integrations/text_embedding/google_generativeai) for more information about the service.
+อ้างอิง [เอกสารประกอบ Google Generative AI embeddings ของ LangChain](https://js.langchain.com/docs/integrations/text_embedding/google_generativeai) สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

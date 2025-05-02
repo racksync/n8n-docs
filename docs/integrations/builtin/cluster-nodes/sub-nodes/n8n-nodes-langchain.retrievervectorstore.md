@@ -8,15 +8,15 @@ priority: medium
 
 # Vector Store Retriever node
 
-Use the Vector Store Retriever node to retrieve documents from a [vector store](/glossary.md#ai-vector-store).
+ใช้ Vector Store Retriever node เพื่อดึงเอกสารจาก [vector store](/glossary.md#ai-vector-store)
 
-On this page, you'll find the node parameters for the Vector Store Retriever node, and links to more resources.
+ในหน้านี้จะมี parameter ของ node Vector Store Retriever และลิงก์ resource อื่นๆ ที่เกี่ยวข้อง
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node parameters
 
-* **Limit**: Enter the maximum number of results to return.
+* **Limit**: ใส่จำนวนผลลัพธ์สูงสุดที่ต้องการให้แสดง
 
 ## Templates and examples
 
@@ -25,7 +25,7 @@ On this page, you'll find the node parameters for the Vector Store Retriever nod
 
 ## Related resources
 
-Refer to [LangChain's vector store retriever documentation](https://js.langchain.com/docs/how_to/vectorstore_retriever/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมได้ที่ [LangChain's vector store retriever documentation](https://js.langchain.com/docs/how_to/vectorstore_retriever/){:target=_blank .external-link}
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

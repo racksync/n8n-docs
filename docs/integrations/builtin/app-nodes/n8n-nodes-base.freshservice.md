@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Freshservice node
 
-Use the Freshservice node to automate work in Freshservice and integrate Freshservice with other applications. n8n has built-in support for a wide range of Freshdesk features, including creating, updating, deleting, and getting agent information and departments.
+ใช้ Freshservice node เพื่อทำงานอัตโนมัติใน Freshservice และเชื่อมต่อ Freshservice กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Freshdesk หลายอย่าง เช่น การสร้าง อัปเดต ลบ และดึงข้อมูล agent และ departments
 
-On this page, you'll find a list of operations the Freshservice node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Freshservice node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Freshservice credentials](/integrations/builtin/credentials/freshservice.md) for guidance on setting up authentication. 
+โปรดดู [Freshservice credentials](/integrations/builtin/credentials/freshservice.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations

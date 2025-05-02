@@ -8,30 +8,30 @@ priority: high
 
 # Structured Output Parser node common issues
 
-Here are some common errors and issues with the [Structured Output Parser node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured/index.md) and steps to resolve or troubleshoot them.
+นี่คือข้อผิดพลาดและปัญหาทั่วไปบางประการเกี่ยวกับ [Structured Output Parser node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured/index.md) และขั้นตอนในการแก้ไขหรือแก้ไขปัญหา
 
 ## Processing parameters
 
-The Structured Output Parser node is a [sub-node](/glossary.md#sub-node-n8n). Sub-nodes behave differently than other nodes when processing multiple items using expressions.
+Structured Output Parser node เป็น [sub-node](/glossary.md#sub-node-n8n) Sub-nodes มีพฤติกรรมแตกต่างจากโหนดอื่น ๆ เมื่อประมวลผลหลายรายการโดยใช้ expressions
 
-Most nodes, including [root nodes](/glossary.md#root-node-n8n), take any number of items as input, process these items, and output the results. You can use expressions to refer to input items, and the node resolves the expression for each item in turn. For example, given an input of five name values, the expression `{{ $json.name }}` resolves to each name in turn.
+โหนดส่วนใหญ่ รวมถึง [root nodes](/glossary.md#root-node-n8n) รับ input กี่รายการก็ได้ ประมวลผลรายการเหล่านี้ และส่ง output ผลลัพธ์ คุณสามารถใช้ expressions เพื่ออ้างอิงถึง input items และโหนดจะประมวลผล expression สำหรับแต่ละ item ตามลำดับ ตัวอย่างเช่น หากมี input เป็นค่าชื่อห้าค่า expression `{{ $json.name }}` จะประมวลผลเป็นแต่ละชื่อตามลำดับ
 
-In sub-nodes, the expression always resolves to the first item. For example, given an input of five name values, the expression `{{ $json.name }}` always resolves to the first name.
+ใน sub-nodes, expression จะประมวลผลเป็น item แรกเสมอ ตัวอย่างเช่น หากมี input เป็นค่าชื่อห้าค่า expression `{{ $json.name }}` จะประมวลผลเป็นชื่อแรกเสมอ
 
 ## Adding the structured output parser node to AI nodes
 
-You can attach output parser nodes to select [AI root nodes](/integrations/builtin/cluster-nodes/root-nodes/index.md).
+คุณสามารถแนบ output parser nodes เข้ากับ [AI root nodes](/integrations/builtin/cluster-nodes/root-nodes/index.md) ที่เลือกได้
 
-To add the Structured Output Parser to a node, enable the **Require Specific Output Format** option in the AI root node you wish to format. Once the option is enabled, a new **output parser** attachment point is displayed. Click the **output parser** attachment point to add the Structured Output Parser node to the node.
+หากต้องการเพิ่ม Structured Output Parser ไปยังโหนด ให้เปิดใช้งานตัวเลือก **Require Specific Output Format** ใน AI root node ที่คุณต้องการจัดรูปแบบ เมื่อเปิดใช้งานตัวเลือกแล้ว จุดแนบ **output parser** ใหม่จะปรากฏขึ้น คลิกที่จุดแนบ **output parser** เพื่อเพิ่ม Structured Output Parser node ไปยังโหนด
 
 ## Using the structured output parser to format intermediary steps
 
-The Structured Output Parser node structures the final output from AI agents. It's not intended to structure intermediary output to pass to other AI tools or stages.
+Structured Output Parser node จัดโครงสร้าง output สุดท้ายจาก AI agents ไม่ได้มีไว้สำหรับจัดโครงสร้าง output ขั้นกลางเพื่อส่งต่อไปยัง AI tools หรือ stages อื่นๆ
 
-To request a specific format for intermediary output, include the response structure in the **System Message** for the **AI Agent**. The message can include either a schema or example response for the agent to use as a template for its results.
+หากต้องการร้องขอรูปแบบเฉพาะสำหรับ output ขั้นกลาง ให้รวมโครงสร้างการตอบกลับไว้ใน **System Message** สำหรับ **AI Agent** ข้อความสามารถรวม schema หรือตัวอย่างการตอบกลับเพื่อให้ agent ใช้เป็น template สำหรับผลลัพธ์
 
 ## Structuring output from agents
 
-Structured output parsing is often not reliable when working with [agents](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md).
+การแยกวิเคราะห์ output แบบมีโครงสร้างมักไม่น่าเชื่อถือเมื่อทำงานกับ [agents](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md)
 
-If your workflow uses agents, n8n recommends using a separate [LLM-chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainllm.md) to receive the data from the agent and parse it. This leads to better, more consistent results than parsing directly in the agent workflow.
+หาก workflow ของคุณใช้ agents, n8n แนะนำให้ใช้ [LLM-chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainllm.md) แยกต่างหากเพื่อรับข้อมูลจาก agent และแยกวิเคราะห์ข้อมูลนั้น ซึ่งจะนำไปสู่ผลลัพธ์ที่ดีขึ้นและสอดคล้องกันมากกว่าการแยกวิเคราะห์โดยตรงใน agent workflow

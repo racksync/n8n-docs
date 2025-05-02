@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Bannerbear node
 
-Use the Bannerbear node to automate work in Bannerbear, and integrate Bannerbear with other applications. n8n has built-in support for a wide range of Bannerbear features, including creating and getting images and templates.
+ใช้ Bannerbear node เพื่อทำงานอัตโนมัติใน Bannerbear และ integrate Bannerbear กับแอปพลิเคชันอื่นๆ n8n มีการรองรับในตัวสำหรับฟีเจอร์ต่างๆ ของ Bannerbear รวมถึงการสร้างและดึง images และ templates
 
-On this page, you'll find a list of operations the Bannerbear node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Bannerbear node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [Bannerbear credentials](/integrations/builtin/credentials/bannerbear.md) for guidance on setting up authentication. 
+อ้างอิง [Bannerbear credentials](/integrations/builtin/credentials/bannerbear.md) สำหรับคำแนะนำในการตั้งค่า authentication
 ///
 
 ## Operations

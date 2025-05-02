@@ -1,18 +1,18 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: KoboToolbox node documentation
-description: Learn how to use the KoboToolbox node in n8n. Follow technical documentation to integrate KoboToolbox node into your workflows.
+description: เรียนรู้วิธีใช้ KoboToolbox node ใน n8n พร้อมคำแนะนำทางเทคนิคในการรวม KoboToolbox node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 ---
 
 # KoboToolbox node
 
-Use the KoboToolbox node to automate work in KoboToolbox, and integrate KoboToolbox with other applications. n8n has built-in support for a wide range of KoboToolbox features, including creating, updating, deleting, and getting files, forms, hooks, and submissions. 
+ใช้ KoboToolbox node เพื่อทำงานอัตโนมัติใน KoboToolbox และเชื่อมต่อ KoboToolbox กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ KoboToolbox หลายอย่าง เช่น การสร้าง อัปเดต ลบ และดึงข้อมูล files, forms, hooks, และ submissions
 
-On this page, you'll find a list of operations the KoboToolbox node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ KoboToolbox node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [KoboToolbox credentials](/integrations/builtin/credentials/kobotoolbox.md) for guidance on setting up authentication. 
+โปรดดู [KoboToolbox credentials](/integrations/builtin/credentials/kobotoolbox.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations
@@ -48,40 +48,40 @@ Refer to [KoboToolbox credentials](/integrations/builtin/credentials/kobotoolbox
 
 ### Query Options
 
-The Query Submission operation supports query options:
+Operation Query Submission รองรับ query options ดังนี้:
 
-* In the main section of the **Parameters** panel:
-    * **Start** controls the index offset to start the query from (to use the API pagination logic).
-    * **Limit** sets the maximum number of records to return. Note that the API always has a limit of 30,000 returned records, whatever value you provide.
-* In the **Query Options** section, you can activate the following parameters:
-    * **Query** lets you specify filter predicates in MongoDB's JSON query format. For example: `{"status": "success", "_submission_time": {"$lt": "2021-11-01T01:02:03"}}` queries for all submissions with the value `success` for the field `status`, and submitted before November 1st, 2021, 01:02:03.
-    * **Fields** lets you specify the list of fields you want to fetch, to make the response lighter.
-    * **Sort** lets you provide a list of sorting criteria in MongoDB JSON format. For example, `{"status": 1, "_submission_time": -1}` specifies a sort order by ascending status, and then descending submission time.
+* ในส่วนหลักของ **Parameters** panel:
+    * **Start** ใช้ควบคุม index offset ที่จะเริ่ม query (ใช้กับ pagination ของ API)
+    * **Limit** กำหนดจำนวน records สูงสุดที่จะคืนค่า (API จำกัดสูงสุด 30,000 records ไม่ว่าคุณจะใส่ค่าอะไร)
+* ในส่วน **Query Options** คุณสามารถเปิดใช้งาน parameters ต่อไปนี้:
+    * **Query** ให้คุณระบุ filter predicates ในรูปแบบ MongoDB JSON query เช่น `{"status": "success", "_submission_time": {"$lt": "2021-11-01T01:02:03"}}` เพื่อ query submissions ที่ status เป็น `success` และส่งก่อนวันที่ 1 พ.ย. 2021 เวลา 01:02:03
+    * **Fields** ระบุรายชื่อ fields ที่ต้องการดึงข้อมูล เพื่อลดขนาด response
+    * **Sort** ระบุลำดับการ sort ในรูปแบบ MongoDB JSON เช่น `{"status": 1, "_submission_time": -1}` จะ sort ตาม status จากน้อยไปมาก แล้วตาม submission time จากมากไปน้อย
 
-More details about these options can be found in the [Formhub API docs](https://github.com/SEL-Columbia/formhub/wiki/Formhub-Access-Points-(API)#api-parameters)
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับ options เหล่านี้ได้ที่ [Formhub API docs](https://github.com/SEL-Columbia/formhub/wiki/Formhub-Access-Points-(API)#api-parameters)
 
 ### Submission options
 
-All operations that return form submission data offer options to tweak the response. These include:
+ทุก operation ที่คืนข้อมูล form submission จะมี options ให้ปรับแต่ง response ได้ เช่น:
 
-- Download options lets you download any attachment linked to each particular form submissions, such as pictures and videos. It also lets you select the naming pattern, and the file size to download (if available - typically for images). 
-- Formatting options perform some reformatting as described in [About reformatting](#about-reformatting).
+- Download options ให้ดาวน์โหลดไฟล์แนบที่เชื่อมกับแต่ละ submission เช่น รูปภาพ วิดีโอ และเลือก pattern การตั้งชื่อไฟล์ รวมถึงขนาดไฟล์ที่จะดาวน์โหลด (ถ้ามี - ส่วนใหญ่ใช้กับรูปภาพ)
+- Formatting options จะช่วยจัดรูปแบบข้อมูลใหม่ ตามที่อธิบายไว้ใน [About reformatting](#about-reformatting)
 
 #### About reformatting
 
-The default JSON format for KoboToolbox submission data is sometimes hard to deal with, because it's not schema-aware, and all fields are therefore returned as strings.
+JSON format ปกติของข้อมูล submission ใน KoboToolbox อาจใช้งานยาก เพราะไม่ schema-aware และทุก field จะถูกส่งกลับมาเป็น string
 
-This node provides a lightweight opinionated reformatting logic, enabled with the **Reformat?** parameter, available on all operations that return form submissions: the submission query, get, and the attachment download operations.
+node นี้มี logic สำหรับ reformatting แบบเบาๆ เปิดใช้งานได้ด้วย parameter **Reformat?** ในทุก operation ที่คืนข้อมูล form submission: ทั้ง query, get, และ download attachment
 
-When enabled, the reformatting:
+เมื่อเปิดใช้งาน reformatting:
 
-- Reorganizes the JSON into a multi-level hierarchy following the form's groups. By default, question grouping hierarchy is materialized by a `/` character in the field names, for example `Group1/Question1`. With reformatting enabled, n8n reorganizes these into `Group1.Question1`, as nested JSON objects.
-- Renames fields to trim `_` (not supported by many downstream systems).
-- Parses all geospatial fields (Point, Line, and Area question types) into their standard GeoJSON equivalent.
-- Splits all fields matching any of the **Multiselect Mask** wildcard masks into an array. Since the multi-select fields appear as space-separated strings, they can't be guessed algorithmically, so you must provide a field naming mask. Format the masks as a comma-separated list. Lists support the `*` wildcard.
-- Converts all fields matching any of the **Number Mask** wildcard masks into a JSON float.
+- จะจัดโครงสร้าง JSON ใหม่เป็น multi-level hierarchy ตามกลุ่มในฟอร์ม โดยปกติชื่อ field จะใช้ `/` เช่น `Group1/Question1` ถ้าเปิด reformatting n8n จะเปลี่ยนเป็น `Group1.Question1` แบบ nested JSON object
+- เปลี่ยนชื่อ field เพื่อตัด `_` ออก (บางระบบ downstream ไม่รองรับ)
+- แปลง field ที่เป็น geospatial (Point, Line, Area) เป็น GeoJSON มาตรฐาน
+- แยก field ที่ตรงกับ **Multiselect Mask** ให้เป็น array (multi-select ปกติเป็น string คั่นด้วย space ต้องระบุ mask เอง เช่น `Crops_*`)
+- แปลง field ที่ตรงกับ **Number Mask** ให้เป็น float
 
-Here's a detailed example in JSON:
+ตัวอย่าง JSON:
 
 ```json
 {
@@ -112,7 +112,7 @@ Here's a detailed example in JSON:
 }
 ```
 
-With reformatting enabled, and the appropriate masks for multi-select and number formatting (for example, `Crops_*` and `*_sqm` respectively), n8n parses it into:
+ถ้าเปิด reformatting และตั้งค่า mask สำหรับ multi-select กับ number (เช่น `Crops_*` และ `*_sqm`) n8n จะ parse เป็นแบบนี้:
 
 ```json
 {
@@ -183,6 +183,5 @@ With reformatting enabled, and the appropriate masks for multi-select and number
   "submitted_by": null
 }
 ```
-
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

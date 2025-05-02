@@ -8,13 +8,9 @@ priority: medium
 
 # X (Formerly Twitter) node
 
-Use the X node to automate work in X and integrate X with other applications. n8n has built-in support for a wide range of X features, including creating direct messages and deleting, searching, liking, and retweeting a tweet. 
+ใช้ X (Formerly Twitter) node เพื่อช่วยให้งานใน X เป็นอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันอื่น ๆ โดย n8n รองรับฟีเจอร์ของ X หลากหลาย เช่น การส่ง direct message, การลบ, การค้นหา, การกดไลค์ และการ retweet
 
-On this page, you'll find a list of operations the X node supports and links to more resources.
-
-/// note | Credentials
-Refer to [X credentials](/integrations/builtin/credentials/twitter.md) for guidance on setting up authentication. 
-///
+ดู [X credentials](/integrations/builtin/credentials/twitter.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 

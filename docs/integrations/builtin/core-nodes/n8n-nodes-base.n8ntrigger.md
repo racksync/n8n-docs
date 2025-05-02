@@ -8,17 +8,17 @@ priority: medium
 
 # n8n Trigger node
 
-The n8n Trigger node triggers when the current workflow updates or activates, or when the n8n instance starts or restarts. You can use the n8n Trigger node to notify when these events occur.
+n8n Trigger node จะทำงานเมื่อ workflow ปัจจุบันถูกอัปเดตหรือเปิดใช้งาน หรือเมื่อ instance ของ n8n เริ่มต้นหรือรีสตาร์ท คุณสามารถใช้ n8n Trigger node เพื่อแจ้งเตือนเมื่อเกิด event เหล่านี้
 
 ## Node parameters
 
-The node includes a single parameter to identify the **Events** that should trigger it. Choose from these events:
+node นี้จะมี parameter เดียวสำหรับเลือก **Events** ที่ต้องการให้ trigger โดยเลือกได้จาก:
 
-- **Active Workflow Updated**: If you select this event, the node triggers when this workflow is updated.
-- **Instance started**: If you select this event, the node triggers when the n8n instance starts or restarts.
-- **Workflow Activated**: If you select this event, the node triggers when this workflow is activated.
+- **Active Workflow Updated**: ถ้าเลือก event นี้ node จะ trigger เมื่อ workflow นี้ถูกอัปเดต
+- **Instance started**: ถ้าเลือก event นี้ node จะ trigger เมื่อ instance ของ n8n เริ่มต้นหรือรีสตาร์ท
+- **Workflow Activated**: ถ้าเลือก event นี้ node จะ trigger เมื่อ workflow นี้ถูกเปิดใช้งาน
 
-You can select one or more of these events.
+คุณสามารถเลือก event ได้มากกว่าหนึ่งอย่าง
 
 ## Templates and examples
 

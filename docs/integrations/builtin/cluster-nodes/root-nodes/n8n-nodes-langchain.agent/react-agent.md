@@ -8,19 +8,19 @@ priority: critical
 
 # ReAct AI Agent node
 
-The ReAct Agent node implements [ReAct](https://react-lm.github.io/){:target=_blank .external-link} logic. ReAct (reasoning and acting) brings together the reasoning powers of chain-of-thought prompting and action plan generation.
+ReAct Agent node ใช้ตรรกะ [ReAct](https://react-lm.github.io/){:target=_blank .external-link} ReAct (reasoning and acting) รวบรวมพลังการให้เหตุผลของ chain-of-thought prompting และการสร้างแผนปฏิบัติการเข้าด้วยกัน
 
-The ReAct Agent reasons about a given task, determines the necessary actions, and then executes them. It follows the cycle of reasoning and acting until it completes the task. The ReAct agent can break down complex tasks into smaller sub-tasks, prioritise them, and execute them one after the other.
+ReAct Agent ให้เหตุผลเกี่ยวกับงานที่กำหนด กำหนดการดำเนินการที่จำเป็น แล้วจึงดำเนินการตามนั้น มันทำตามวงจรของการให้เหตุผลและการดำเนินการจนกว่าจะทำงานเสร็จ ReAct agent สามารถแบ่งงานที่ซับซ้อนออกเป็นงานย่อยๆ จัดลำดับความสำคัญ และดำเนินการทีละอย่าง
 
-Refer to [AI Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) for more information on the AI Agent node itself.
+อ้างอิง [AI Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) สำหรับข้อมูลเพิ่มเติมเกี่ยวกับ AI Agent node เอง
 
 /// note | No memory
-The ReAct agent doesn't support memory sub-nodes. This means it can't recall previous prompts or simulate an ongoing conversation.
+ReAct agent ไม่รองรับ memory sub-nodes ซึ่งหมายความว่ามันไม่สามารถจำ prompts ก่อนหน้าหรือจำลองการสนทนาที่ต่อเนื่องได้
 ///
 
 ## Node parameters
 
-Configure the ReAct Agent using the following parameters.
+กำหนดค่า ReAct Agent โดยใช้ parameters ต่อไปนี้
 
 ### Prompt
 
@@ -32,31 +32,31 @@ Configure the ReAct Agent using the following parameters.
 
 ## Node options
 
-Use the options to create a message to send to the agent at the start of the conversation. The message type depends on the model you're using:
+ใช้ options เพื่อสร้างข้อความที่จะส่งไปยัง agent ในตอนเริ่มต้นการสนทนา ประเภทข้อความขึ้นอยู่กับ model ที่คุณใช้:
 
-* **Chat models**: These models have the concept of three components interacting (AI, system, and human). They can receive system messages and human messages (prompts).
-* **Instruct models**: These models don't have the concept of separate AI, system, and human components. They receive one body of text, the instruct message.
+* **Chat models**: models เหล่านี้มีแนวคิดของสามองค์ประกอบที่โต้ตอบกัน (AI, system และ human) พวกเขาสามารถรับ system messages และ human messages (prompts)
+* **Instruct models**: models เหล่านี้ไม่มีแนวคิดขององค์ประกอบ AI, system และ human ที่แยกจากกัน พวกเขาได้รับข้อความเนื้อหาเดียวคือ instruct message
 
 ### Human Message Template
 
-Use this option to extend the user prompt. This is a way for the agent to pass information from one iteration to the next.
+ใช้ option นี้เพื่อขยาย user prompt นี่เป็นวิธีที่ agent จะส่งข้อมูลจากการวนซ้ำหนึ่งไปยังอีกครั้งหนึ่ง
 
-Available LangChain expressions:
+LangChain expressions ที่มีอยู่:
 
-* `{input}`: Contains the user prompt.
-* `{agent_scratchpad}`: Information to remember for the next iteration.
+* `{input}`: มี user prompt
+* `{agent_scratchpad}`: ข้อมูลที่ต้องจำสำหรับการวนซ้ำครั้งต่อไป
 
 ### Prefix Message
 
-Enter text to prefix the tools list at the start of the conversation. You don't need to add the list of tools. LangChain automatically adds the tools list.
+ป้อนข้อความเพื่อนำหน้า list ของ tools ในตอนเริ่มต้นการสนทนา คุณไม่จำเป็นต้องเพิ่ม list ของ tools LangChain จะเพิ่ม list ของ tools โดยอัตโนมัติ
 
 ### Suffix Message for Chat Model
 
-Add text to append after the tools list at the start of the conversation when the agent uses a chat model. You don't need to add the list of tools. LangChain automatically adds the tools list.
+เพิ่มข้อความเพื่อต่อท้าย list ของ tools ในตอนเริ่มต้นการสนทนาเมื่อ agent ใช้ chat model คุณไม่จำเป็นต้องเพิ่ม list ของ tools LangChain จะเพิ่ม list ของ tools โดยอัตโนมัติ
 
 ### Suffix Message for Regular Model
 
-Add text to append after the tools list at the start of the conversation when the agent uses a regular/instruct model. You don't need to add the list of tools. LangChain automatically adds the tools list.
+เพิ่มข้อความเพื่อต่อท้าย list ของ tools ในตอนเริ่มต้นการสนทนาเมื่อ agent ใช้ regular/instruct model คุณไม่จำเป็นต้องเพิ่ม list ของ tools LangChain จะเพิ่ม list ของ tools โดยอัตโนมัติ
 
 ### Return Intermediate Steps
 
@@ -64,14 +64,14 @@ Add text to append after the tools list at the start of the conversation when th
 
 ## Related resources
 
-Refer to LangChain's [ReAct Agents](https://js.langchain.com/docs/concepts/agents/){:target=_blank .external-link} documentation for more information.
+อ้างอิงเอกสาร [ReAct Agents](https://js.langchain.com/docs/concepts/agents/){:target=_blank .external-link} ของ LangChain สำหรับข้อมูลเพิ่มเติม
 
 ## Templates and examples
 
-Refer to the main AI Agent node's [Templates and examples](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md#templates-and-examples) section.
+อ้างอิงส่วน [Templates and examples](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md#templates-and-examples) ของ AI Agent node หลัก
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/common-issues.md).
+สำหรับคำถามหรือปัญหาทั่วไปและแนวทางแก้ไขที่แนะนำ โปรดดูที่ [Common issues](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/common-issues.md)
 
 --8<-- "_glossary/ai-glossary.md"

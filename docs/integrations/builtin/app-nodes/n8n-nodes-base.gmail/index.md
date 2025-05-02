@@ -8,12 +8,12 @@ priority: high
 
 # Gmail node
 
-Use the Gmail node to automate work in Gmail, and integrate Gmail with other applications. n8n has built-in support for a wide range of Gmail features, including creating, updating, deleting, and getting drafts, messages, labels, thread.  
+ใช้ Gmail node เพื่อทำงานอัตโนมัติใน Gmail และเชื่อมต่อ Gmail กับแอปพลิเคชันอื่นๆ n8n มีการรองรับฟีเจอร์ต่างๆ ของ Gmail ในตัว รวมถึงการสร้าง, อัปเดต, ลบ และดึงข้อมูล drafts, messages, labels, thread
 
-On this page, you'll find a list of operations the Gmail node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Gmail node รองรับและลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [Google credentials](/integrations/builtin/credentials/google/index.md) for guidance on setting up authentication. 
+อ้างอิง [Google credentials](/integrations/builtin/credentials/google/index.md) สำหรับคำแนะนำในการตั้งค่าการยืนยันตัวตน
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
@@ -40,6 +40,7 @@ Refer to [Google credentials](/integrations/builtin/credentials/google/index.md)
 	* [**Remove Label**](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/message-operations.md#remove-label-from-a-message) from a message
 	* [**Reply**](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/message-operations.md#reply-to-a-message) to a message
 	* [**Send**](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/message-operations.md#send-a-message) a message
+	* [**Send and Wait for Approval**](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/message-operations.md#send-a-message-and-wait-for-approval)
 * **Thread**
 	* [**Add Label**](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/thread-operations.md#add-label-to-a-thread) to a thread
 	* [**Delete**](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/thread-operations.md#delete-a-thread) a thread
@@ -57,12 +58,12 @@ Refer to [Google credentials](/integrations/builtin/credentials/google/index.md)
 
 ## Related resources
 
-Refer to Google's [Gmail API documentation](https://developers.google.com/gmail/api) for detailed information about the API that this node integrates with.
+อ้างอิง [Gmail API documentation](https://developers.google.com/gmail/api) ของ Google สำหรับข้อมูลโดยละเอียดเกี่ยวกับ API ที่ node นี้เชื่อมต่อด้วย
 
-n8n provides a trigger node for Gmail. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/index.md).
+n8n มี trigger node สำหรับ Gmail คุณสามารถดูเอกสาร trigger node ได้ [ที่นี่](/integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/index.md)
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 
 ## Common issues
 
-For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/common-issues.md).
+สำหรับข้อผิดพลาดหรือปัญหาทั่วไปและขั้นตอนการแก้ไขที่แนะนำ โปรดอ้างอิง [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/common-issues.md)

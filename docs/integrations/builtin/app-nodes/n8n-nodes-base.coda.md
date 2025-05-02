@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Coda node
 
-Use the Coda node to automate work in Coda, and integrate Coda with other applications. n8n has built-in support for a wide range of Coda features, including creating, getting, and deleting controls, formulas, tables, and views.
+ใช้ Coda node เพื่อทำงานอัตโนมัติใน Coda และ integrate Coda กับแอปพลิเคชันอื่นๆ n8n มีการรองรับในตัวสำหรับฟีเจอร์ต่างๆ ของ Coda รวมถึงการสร้าง, ดึง, และลบ controls, formulas, tables, และ views
 
-On this page, you'll find a list of operations the Coda node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Coda node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [Coda credentials](/integrations/builtin/credentials/coda.md) for guidance on setting up authentication. 
+อ้างอิง [Coda credentials](/integrations/builtin/credentials/coda.md) สำหรับคำแนะนำในการตั้งค่า authentication
 ///
 
 ## Operations

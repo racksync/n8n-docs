@@ -8,160 +8,160 @@ priority: high
 
 # Gmail node Thread Operations
 
-Use the Thread operations to delete, reply to, trash, untrash, add/remove labels, get one, or list threads. Refer to the [Gmail node](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/index.md) for more information on the Gmail node itself.
+ใช้ Thread operations เพื่อลบ, ตอบกลับ, ย้ายไปถังขยะ, นำออกจากถังขยะ, เพิ่ม/ลบ label, ดึงข้อมูลหนึ่งรายการ หรือแสดงรายการ thread ทั้งหมด อ้างอิง [Gmail node](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/index.md) สำหรับข้อมูลเพิ่มเติมเกี่ยวกับ Gmail node
 
 ## Add Label to a thread
 
-Use this operation to create a new draft.
+ใช้ operation นี้เพื่อเพิ่ม label ให้กับ thread
 
-Enter these parameters:
+ป้อนพารามิเตอร์เหล่านี้:
 
-* Select the **Credential to connect with** or create a new one.
-* **Resource**: Select **Thread**.
-* **Operation**: Select **Add Label**.
-* **Thread ID**: Enter the ID of the thread you want to add the label to.
-* **Label Names or IDs**: Select the Label names you want to apply or enter an expression to specify IDs. The dropdown populates based on the **Credential** you selected.
+*   เลือก **Credential to connect with** หรือสร้างใหม่
+*   **Resource**: เลือก **Thread**
+*   **Operation**: เลือก **Add Label**
+*   **Thread ID**: ป้อน ID ของ thread ที่คุณต้องการเพิ่ม label
+*   **Label Names or IDs**: เลือกชื่อ Label ที่คุณต้องการใช้ หรือป้อน expression เพื่อระบุ ID รายการใน dropdown จะขึ้นอยู่กับ **Credential** ที่คุณเลือก
 
 <!-- vale off -->
-Refer to the [Gmail API Method: users.threads.modify](https://developers.google.com/gmail/api/reference/rest/v1/users.threads/modify){:target=_blank .external-link} documentation for more information.
+อ้างอิงเอกสาร [Gmail API Method: users.threads.modify](https://developers.google.com/gmail/api/reference/rest/v1/users.threads/modify){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 <!-- vale on -->
 
 ## Delete a thread
 
-Use this operation to immediately and permanently delete a thread and all its messages.
+ใช้ operation นี้เพื่อลบ thread และข้อความทั้งหมดในนั้นทันทีและถาวร
 
-/// note | Permanent deletion
-This operation can't be undone. For recoverable deletions, use the [Trash operation](#trash-a-thread) instead.
+/// note | การลบถาวร
+Operation นี้ไม่สามารถยกเลิกได้ หากต้องการลบแบบกู้คืนได้ ให้ใช้ [Trash operation](#trash-a-thread) แทน
 ///
 
-Enter these parameters:
+ป้อนพารามิเตอร์เหล่านี้:
 
-* Select the **Credential to connect with** or create a new one.
-* **Resource**: Select **Thread**.
-* **Operation**: Select **Delete**.
-* **Thread ID**: Enter the ID of the thread you want to delete.
+*   เลือก **Credential to connect with** หรือสร้างใหม่
+*   **Resource**: เลือก **Thread**
+*   **Operation**: เลือก **Delete**
+*   **Thread ID**: ป้อน ID ของ thread ที่คุณต้องการลบ
 
-Refer to the [Gmail API Method: users.threads.delete](https://developers.google.com/gmail/api/reference/rest/v1/users.threads/delete){:target=_blank .external-link} documentation for more information.
+อ้างอิงเอกสาร [Gmail API Method: users.threads.delete](https://developers.google.com/gmail/api/reference/rest/v1/users.threads/delete){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 
 ## Get a thread
 
-Use this operation to get a single thread.
+ใช้ operation นี้เพื่อดึงข้อมูล thread เดียว
 
-Enter these parameters:
+ป้อนพารามิเตอร์เหล่านี้:
 
-* Select the **Credential to connect with** or create a new one.
-* **Resource**: Select **Thread**.
-* **Operation**: Select **Get**.
-* **Thread ID**: Enter the ID of the thread you wish to retrieve.
-* **Simplify**: Choose whether to return a simplified version of the response (turned on) or the raw data (turned off). Default is on.
-    * This is the same as setting the `format` for the API call to `metadata`, which returns email message IDs, labels, and email headers, including: From, To, CC, BCC, and Subject.
+*   เลือก **Credential to connect with** หรือสร้างใหม่
+*   **Resource**: เลือก **Thread**
+*   **Operation**: เลือก **Get**
+*   **Thread ID**: ป้อน ID ของ thread ที่คุณต้องการดึงข้อมูล
+*   **Simplify**: เลือกว่าจะให้แสดงผลลัพธ์แบบง่าย (เปิด) หรือข้อมูลดิบ (ปิด) ค่าเริ่มต้นคือเปิด
+    *   ซึ่งเหมือนกับการตั้งค่า `format` สำหรับ API call เป็น `metadata` ซึ่งจะคืนค่า ID ของข้อความอีเมล, label และ header ของอีเมล รวมถึง: From, To, CC, BCC และ Subject
 
 ### Get thread options
 
-Use these options to further refine the node's behavior:
+ใช้ options เหล่านี้เพื่อปรับแต่งการทำงานของ node เพิ่มเติม:
 
-* **Return Only Messages**: Choose whether to return only thread messages (turned on).
+*   **Return Only Messages**: เลือกว่าจะให้คืนค่าเฉพาะข้อความใน thread (เปิด) หรือไม่
 
-Refer to the [Gmail API Method: users.threads.get](https://developers.google.com/gmail/api/reference/rest/v1/users.threads/get){:target=_blank .external-link} documentation for more information.
+อ้างอิงเอกสาร [Gmail API Method: users.threads.get](https://developers.google.com/gmail/api/reference/rest/v1/users.threads/get){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 
 <!-- vale off -->
 ## Get Many threads
 <!-- vale on -->
 
-Use this operation to get two or more threads.
+ใช้ operation นี้เพื่อดึงข้อมูลตั้งแต่สอง thread ขึ้นไป
 
-Enter these parameters:
+ป้อนพารามิเตอร์เหล่านี้:
 
-* Select the **Credential to connect with** or create a new one.
-* **Resource**: Select **Thread**.
-* **Operation**: Select **Get Many**.
-* **Return All**: Choose whether the node returns all threads (turned on) or only up to a set limit (turned off).
-* **Limit**: Enter the maximum number of threads to return. Only used if you've turned off **Return All**.
+*   เลือก **Credential to connect with** หรือสร้างใหม่
+*   **Resource**: เลือก **Thread**
+*   **Operation**: เลือก **Get Many**
+*   **Return All**: เลือกว่าจะให้ node คืนค่า thread ทั้งหมด (เปิด) หรือจำกัดจำนวน (ปิด)
+*   **Limit**: ป้อนจำนวน thread สูงสุดที่จะคืนค่า ใช้เฉพาะเมื่อคุณปิด **Return All**
 
 <!-- vale off -->
 ### Get Many threads filters
 <!-- vale on -->
 
-Use these filters to further refine the node's behavior:
+ใช้ filters เหล่านี้เพื่อปรับแต่งการทำงานของ node เพิ่มเติม:
 
-* **Include Spam and Trash**: Select whether the node should get threads in the Spam and Trash folders (turned on) or not (turned off).
-* **Label Names or IDs**: Only return threads with the selected labels added to them. Select the Label names you want to apply or enter an expression to specify IDs. The dropdown populates based on the **Credential** you selected.
-* **Search**: Enter Gmail search refine filters, like `from:`, to filter the threads returned. Refer to [Refine searches in Gmail](https://support.google.com/mail/answer/7190?hl=en){:target=_blank .external-link} for more information.
-* **Read Status**: Choose whether to receive **Unread and read emails**, **Unread emails only** (default), or **Read emails only**.
-* **Received After**: Return only those emails received after the specified date and time. Use the date picker to select the day and time or enter an expression to set a date as a string in ISO format or a timestamp in milliseconds. Refer to [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601){:target=_blank .external-link} for more information on formatting the string.
-* **Received Before**: Return only those emails received before the specified date and time. Use the date picker to select the day and time or enter an expression to set a date as a string in ISO format or a timestamp in milliseconds. Refer to [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601){:target=_blank .external-link} for more information on formatting the string.
+*   **Include Spam and Trash**: เลือกว่าจะให้ node ดึง thread ในโฟลเดอร์ Spam และ Trash (เปิด) หรือไม่ (ปิด)
+*   **Label Names or IDs**: คืนค่าเฉพาะ thread ที่มี label ที่เลือกเพิ่มอยู่เท่านั้น เลือกชื่อ Label ที่คุณต้องการใช้ หรือป้อน expression เพื่อระบุ ID รายการใน dropdown จะขึ้นอยู่กับ **Credential** ที่คุณเลือก
+*   **Search**: ป้อน filter การค้นหาของ Gmail เช่น `from:` เพื่อกรอง thread ที่จะคืนค่า อ้างอิง [Refine searches in Gmail](https://support.google.com/mail/answer/7190?hl=en){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
+*   **Read Status**: เลือกว่าจะรับ **Unread and read emails**, **Unread emails only** (ค่าเริ่มต้น), หรือ **Read emails only**
+*   **Received After**: คืนค่าเฉพาะอีเมลที่ได้รับหลังจากวันที่และเวลาที่ระบุ ใช้ตัวเลือกวันที่เพื่อเลือกวันและเวลา หรือป้อน expression เพื่อตั้งค่าวันที่เป็น string ในรูปแบบ ISO หรือ timestamp ในหน่วยมิลลิวินาที อ้างอิง [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับรูปแบบ string
+*   **Received Before**: คืนค่าเฉพาะอีเมลที่ได้รับก่อนวันที่และเวลาที่ระบุ ใช้ตัวเลือกวันที่เพื่อเลือกวันและเวลา หรือป้อน expression เพื่อตั้งค่าวันที่เป็น string ในรูปแบบ ISO หรือ timestamp ในหน่วยมิลลิวินาที อ้างอิง [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับรูปแบบ string
 
-Refer to the [Gmail API Method: users.threads.list](https://developers.google.com/gmail/api/reference/rest/v1/users.threads/list){:target=_blank .external-link} documentation for more information.
+อ้างอิงเอกสาร [Gmail API Method: users.threads.list](https://developers.google.com/gmail/api/reference/rest/v1/users.threads/list){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 
 ## Remove label from a thread
 
-Use this operation to remove a label from a thread.
+ใช้ operation นี้เพื่อลบ label ออกจาก thread
 
-Enter these parameters:
+ป้อนพารามิเตอร์เหล่านี้:
 
-* Select the **Credential to connect with** or create a new one.
-* **Resource**: Select **Thread**.
-* **Operation**: Select **Remove Label**.
-* **Thread ID**: Enter the ID of the thread you want to remove the label from.
-* **Label Names or IDs**: Select the Label names you want to remove or enter an expression to specify their IDs. The dropdown populates based on the **Credential** you selected.
+*   เลือก **Credential to connect with** หรือสร้างใหม่
+*   **Resource**: เลือก **Thread**
+*   **Operation**: เลือก **Remove Label**
+*   **Thread ID**: ป้อน ID ของ thread ที่คุณต้องการลบ label ออก
+*   **Label Names or IDs**: เลือกชื่อ Label ที่คุณต้องการลบ หรือป้อน expression เพื่อระบุ ID รายการใน dropdown จะขึ้นอยู่กับ **Credential** ที่คุณเลือก
 
 <!-- vale off -->
-Refer to the [Gmail API Method: users.threads.modify](https://developers.google.com/gmail/api/reference/rest/v1/users.threads/modify){:target=_blank .external-link} documentation for more information.
+อ้างอิงเอกสาร [Gmail API Method: users.threads.modify](https://developers.google.com/gmail/api/reference/rest/v1/users.threads/modify){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 <!-- vale on -->
 
 ## Reply to a message
 
-Use this operation to reply to a message.
+ใช้ operation นี้เพื่อตอบกลับข้อความ
 
-Enter these parameters:
+ป้อนพารามิเตอร์เหล่านี้:
 
-* Select the **Credential to connect with** or create a new one.
-* **Resource**: Select **Thread**.
-* **Operation**: Select **Reply**.
-* **Thread ID**: Enter the ID of the thread you want to reply to.
-* **Message Snippet or ID**: Select the Message you want to reply to or enter an expression to specify its ID. The dropdown populates based on the **Credential** you selected.
-* Select the **Email Type**. Choose from **Text** or **HTML**.
-* **Message**: Enter the email message body.
+*   เลือก **Credential to connect with** หรือสร้างใหม่
+*   **Resource**: เลือก **Thread**
+*   **Operation**: เลือก **Reply**
+*   **Thread ID**: ป้อน ID ของ thread ที่คุณต้องการตอบกลับ
+*   **Message Snippet or ID**: เลือกข้อความที่คุณต้องการตอบกลับ หรือป้อน expression เพื่อระบุ ID รายการใน dropdown จะขึ้นอยู่กับ **Credential** ที่คุณเลือก
+*   เลือก **Email Type** เลือกจาก **Text** หรือ **HTML**
+*   **Message**: ป้อนเนื้อหาของอีเมล
 
 ### Reply options
 
-Use these options to further refine the node's behavior:
+ใช้ options เหล่านี้เพื่อปรับแต่งการทำงานของ node เพิ่มเติม:
 
-* **Attachments**: Select **Add Attachment** to add an attachment. Enter the **Attachment Field Name (in Input)** to identify which field from the input node contains the attachment.
-    * For multiple properties, enter a comma-separated list.
-* **BCC**: Enter one or more email addresses for blind copy recipients. Separate multiple email addresses with a comma, for example `jay@gatsby.com, jon@smith.com`.
-* **CC**: Enter one or more email addresses for carbon copy recipients. Separate multiple email addresses with a comma, for example `jay@gatsby.com, jon@smith.com`.
-* **Sender Name**: Enter the name you want displayed in your recipients' email as the sender.
-* **Reply to Sender Only**: Choose whether to reply all (turned off) or reply to the sender only (turned on).
+*   **Attachments**: เลือก **Add Attachment** เพื่อเพิ่มไฟล์แนบ ป้อน **Attachment Field Name (in Input)** เพื่อระบุว่า field ใดจาก input node ที่มีไฟล์แนบ
+    *   สำหรับหลาย properties ให้ป้อนรายการที่คั่นด้วยจุลภาค
+*   **BCC**: ป้อนที่อยู่อีเมลอย่างน้อยหนึ่งรายการสำหรับผู้รับสำเนาลับ แยกหลายที่อยู่อีเมลด้วยจุลภาค เช่น `jay@gatsby.com, jon@smith.com`
+*   **CC**: ป้อนที่อยู่อีเมลอย่างน้อยหนึ่งรายการสำหรับผู้รับสำเนา แยกหลายที่อยู่อีเมลด้วยจุลภาค เช่น `jay@gatsby.com, jon@smith.com`
+*   **Sender Name**: ป้อนชื่อที่คุณต้องการให้แสดงในอีเมลของผู้รับว่าเป็นผู้ส่ง
+*   **Reply to Sender Only**: เลือกว่าจะตอบกลับทุกคน (ปิด) หรือตอบกลับเฉพาะผู้ส่ง (เปิด)
 
-Refer to the [Gmail API Method: users.messages.send](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/send){:target=_blank .external-link} documentation for more information.
+อ้างอิงเอกสาร [Gmail API Method: users.messages.send](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/send){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 
 ## Trash a thread
 
-Use this operation to move a thread and all its messages to the trash.
+ใช้ operation นี้เพื่อย้าย thread และข้อความทั้งหมดในนั้นไปยังถังขยะ
 
-Enter these parameters:
+ป้อนพารามิเตอร์เหล่านี้:
 
-* Select the **Credential to connect with** or create a new one.
-* **Resource**: Select **Thread**.
-* **Operation**: Select **Trash**.
-* **Thread ID**: Enter the ID of the thread you want to move to the trash.
+*   เลือก **Credential to connect with** หรือสร้างใหม่
+*   **Resource**: เลือก **Thread**
+*   **Operation**: เลือก **Trash**
+*   **Thread ID**: ป้อน ID ของ thread ที่คุณต้องการย้ายไปยังถังขยะ
 
-Refer to the [Gmail API Method: users.threads.trash](https://developers.google.com/gmail/api/reference/rest/v1/users.threads/trash){:target=_blank .external-link} documentation for more information.
+อ้างอิงเอกสาร [Gmail API Method: users.threads.trash](https://developers.google.com/gmail/api/reference/rest/v1/users.threads/trash){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 
 ## Untrash a thread
 
-Use this operation to recover a thread and all its messages from the trash.
+ใช้ operation นี้เพื่อกู้คืน thread และข้อความทั้งหมดในนั้นจากถังขยะ
 
-Enter these parameters:
+ป้อนพารามิเตอร์เหล่านี้:
 
-* Select the **Credential to connect with** or create a new one.
-* **Resource**: Select **Thread**.
-* **Operation**: Select **Untrash**.
-* **Thread ID**: Enter the ID of the thread you want to move to the trash.
+*   เลือก **Credential to connect with** หรือสร้างใหม่
+*   **Resource**: เลือก **Thread**
+*   **Operation**: เลือก **Untrash**
+*   **Thread ID**: ป้อน ID ของ thread ที่คุณต้องการนำออกจากถังขยะ
 
-Refer to the [Gmail API Method: users.threads.untrash](https://developers.google.com/gmail/api/reference/rest/v1/users.threads/untrash){:target=_blank .external-link} documentation for more information.
+อ้างอิงเอกสาร [Gmail API Method: users.threads.untrash](https://developers.google.com/gmail/api/reference/rest/v1/users.threads/untrash){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 
 ## Common issues
 
-For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/common-issues.md).
+สำหรับข้อผิดพลาดหรือปัญหาทั่วไปและขั้นตอนการแก้ไขที่แนะนำ โปรดอ้างอิง [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/common-issues.md)

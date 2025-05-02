@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Freshdesk node
 
-Use the Freshdesk node to automate work in Freshdesk and integrate Freshdesk with other applications. n8n has built-in support for a wide range of Freshdesk features, including creating, updating, deleting, and getting contacts and tickets.
+ใช้ Freshdesk node เพื่อทำงานอัตโนมัติใน Freshdesk และเชื่อมต่อ Freshdesk กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Freshdesk หลายอย่าง เช่น การสร้าง อัปเดต ลบ และดึงข้อมูล contacts และ tickets
 
-On this page, you'll find a list of operations the Freshdesk node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Freshdesk node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Freshdesk credentials](/integrations/builtin/credentials/freshdesk.md) for guidance on setting up authentication. 
+โปรดดู [Freshdesk credentials](/integrations/builtin/credentials/freshdesk.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations

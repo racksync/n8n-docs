@@ -8,16 +8,16 @@ priority: medium
 
 # Token Splitter node
 
-The Token Splitter node splits a raw text string by first converting the text into BPE tokens, then splits these tokens into chunks and converts the tokens within a single chunk back into text.
+Token Splitter node จะช่วยแยก string ข้อความดิบ โดยจะแปลงข้อความเป็น BPE token ก่อน แล้วค่อยแบ่ง token เป็น chunk จากนั้นแปลง token ในแต่ละ chunk กลับเป็นข้อความ
 
-On this page, you'll find the node parameters for the Token Splitter node, and links to more resources.
+ในหน้านี้จะมี parameter ของ node Token Splitter และลิงก์ resource อื่นๆ ที่เกี่ยวข้อง
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node parameters
 
-* **Chunk Size**: Enter the number of characters in each chunk.
-* **Chunk Overlap**: Enter how much overlap to have between chunks.
+* **Chunk Size**: ใส่จำนวนตัวอักษรในแต่ละ chunk
+* **Chunk Overlap**: ใส่จำนวนตัวอักษรที่ chunk จะซ้อนทับกัน
 
 ## Templates and examples
 
@@ -26,7 +26,7 @@ On this page, you'll find the node parameters for the Token Splitter node, and l
 
 ## Related resources
 
-Refer to [LangChain's token documentation](https://js.langchain.com/docs/concepts/tokens/){:target=_blank .external-link} and [LangChain's text splitter documentation](https://js.langchain.com/docs/concepts/text_splitters/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมได้ที่ [LangChain's token documentation](https://js.langchain.com/docs/concepts/tokens/){:target=_blank .external-link} และ [LangChain's text splitter documentation](https://js.langchain.com/docs/concepts/text_splitters/){:target=_blank .external-link}
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

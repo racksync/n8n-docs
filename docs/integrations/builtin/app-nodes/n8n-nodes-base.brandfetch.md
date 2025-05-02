@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Brandfetch node
 
-Use the Brandfetch node to automate work in Brandfetch, and integrate Brandfetch with other applications. n8n has built-in support for a wide range of Brandfetch features, including returning a company’s information.
+ใช้ Brandfetch node เพื่อทำงานอัตโนมัติใน Brandfetch และ integrate Brandfetch กับแอปพลิเคชันอื่นๆ n8n มีการรองรับในตัวสำหรับฟีเจอร์ต่างๆ ของ Brandfetch รวมถึงการคืนข้อมูลของ company
 
-On this page, you'll find a list of operations the Brandfetch node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Brandfetch node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [Brandfetch credentials](/integrations/builtin/credentials/brandfetch.md) for guidance on setting up authentication. 
+อ้างอิง [Brandfetch credentials](/integrations/builtin/credentials/brandfetch.md) สำหรับคำแนะนำในการตั้งค่า authentication
 ///
 
 ## Operations

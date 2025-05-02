@@ -1,17 +1,17 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Remove Duplicates node templates and Examples
-description: Documentation for templates and examples in the Remove Duplicates node in n8n, a workflow automation platform. Includes templates using the node and examples of how to use it.
+description: เอกสารสำหรับ template และตัวอย่างใน Remove Duplicates node ใน n8n แพลตฟอร์ม workflow automation รวมถึง template ที่ใช้ node และตัวอย่างการใช้งาน
 contentType: [integration, reference]
 priority: medium
 ---
 
 # Templates and examples
 
-Here are some templates and examples for the [Remove Duplicates node](/integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/index.md).
+นี่คือตัวอย่าง workflow และ template สำหรับ [Remove Duplicates node](/integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/index.md)
 
 /// note | Continuous examples
-The examples included in this section are a sequence. Follow from one to another to avoid unexpected results.
+ตัวอย่างในส่วนนี้จะเรียงลำดับต่อเนื่องกัน แนะนำให้ทำตามลำดับเพื่อป้องกันผลลัพธ์ที่ไม่คาดคิด
 ///
 
 ## Templates
@@ -21,11 +21,11 @@ The examples included in this section are a sequence. Follow from one to another
 
 ## Set up sample data using the Code node
 
-Create a workflow with some example input data to try out the Remove Duplicates node.
+สร้าง workflow พร้อมข้อมูลตัวอย่างเพื่อทดลองใช้ Remove Duplicates node
 
-1. Add a Code node to the canvas and connect it to the Manual Trigger node.
-2. In the Code node, set **Mode** to **Run Once for Each Item** and **Language** to **JavaScript**.
-3. Paste the following JavaScript code snippet in the **JavaScript** field:
+1. เพิ่ม Code node ลงบน canvas แล้วเชื่อมต่อกับ Manual Trigger node
+2. ใน Code node ให้ตั้งค่า **Mode** เป็น **Run Once for Each Item** และ **Language** เป็น **JavaScript**
+3. วางโค้ด JavaScript ด้านล่างนี้ในช่อง **JavaScript**:
 ```js
 let data =[];
 
@@ -50,17 +50,17 @@ return {
   ]
 }
 ```
-4. Add a Split Out node to the canvas and connect it to the Code node.
-5. In the Split Out node, enter `data` in the **Fields To Split Out** field.
+4. เพิ่ม Split Out node ลงบน canvas แล้วเชื่อมต่อกับ Code node
+5. ใน Split Out node ให้กรอก `data` ในช่อง **Fields To Split Out**
 
 ## Removing duplicates from the current input
 
-1. Add a Remove Duplicates node to the canvas and connect it to the Split Out node. Choose **Remove items repeated within current input** as the **Action** to start.
-2. Open the Remove Duplicates node and ensure that the **Operation** is set to **Remove Items Repeated Within Current Input**.
-3. Choose **All fields** in the **Compare** field.
-4. Select **Test step** to run the Remove Duplicates node, removing duplicated data in the current input.
+1. เพิ่ม Remove Duplicates node ลงบน canvas แล้วเชื่อมต่อกับ Split Out node เลือก **Remove items repeated within current input** ใน **Action** เพื่อเริ่มต้น
+2. เปิด Remove Duplicates node แล้วตรวจสอบว่า **Operation** ตั้งเป็น **Remove Items Repeated Within Current Input**
+3. เลือก **All fields** ในช่อง **Compare**
+4. กด **Test step** เพื่อรัน Remove Duplicates node ข้อมูลที่ซ้ำกันใน input จะถูกลบออก
 
-n8n removes the items that have the same data across all fields. Your output in table view should look like this:
+n8n จะลบรายการที่มีข้อมูลเหมือนกันทุก field ผลลัพธ์ใน table view จะเป็นแบบนี้:
 
 <!-- vale off -->
 | **id** | **name**      | **job**           | **last_updated**         |
@@ -75,11 +75,11 @@ n8n removes the items that have the same data across all fields. Your output in 
 | 8      | Rihanna       | Pop star          | 2024-10-01T11:50:22.493Z |
 <!-- vale on -->
 
-5. Open the Remove Duplicates node again and change the **Compare** parameter to **Selected Fields**.
-6. In the **Fields To Compare** field, enter `job`.
-7. Select **Test step** to run the Remove Duplicates node, removing duplicated data in the current input.
+5. เปิด Remove Duplicates node อีกครั้งแล้วเปลี่ยน **Compare** เป็น **Selected Fields**
+6. ในช่อง **Fields To Compare** ให้กรอก `job`
+7. กด **Test step** เพื่อรัน Remove Duplicates node ข้อมูลที่ซ้ำกันใน field `job` จะถูกลบออก
 
-n8n removes the items in the current input that have the same `job` data. Your output in table view should look like this:
+n8n จะลบรายการที่มีค่า `job` ซ้ำกันใน input ผลลัพธ์ใน table view จะเป็นแบบนี้:
 
 <!-- vale off -->
 | **id** | **name**      | **job**           | **last_updated**         |
@@ -90,12 +90,12 @@ n8n removes the items in the current input that have the same `job` data. Your o
 
 ## Keep items where the value is new
 
-1. Open the Remove Duplicates node and set the **Operation** to **Remove Items Processed in Previous Executions**.
-2. Set the **Keep Items Where** parameter to **Value Is New**.
-3. Set the **Value to Dedupe On** parameter to `{{ $json.name }}`.
-4. On the canvas, select **Test workflow** to run the workflow. Open the Remove Duplicates node to examine the results.
+1. เปิด Remove Duplicates node แล้วตั้งค่า **Operation** เป็น **Remove Items Processed in Previous Executions**
+2. ตั้งค่า **Keep Items Where** เป็น **Value Is New**
+3. ตั้งค่า **Value to Dedupe On** เป็น `{{ $json.name }}`
+4. บน canvas ให้เลือก **Test workflow** เพื่อรัน workflow แล้วเปิด Remove Duplicates node เพื่อดูผลลัพธ์
 
-n8n compares the current input data to the items stored from previous executions. Since this is the first time running the Remove Duplicates node with this operation, n8n processes all data items and places them into the **Kept** output tab. The order of the items may be different than the order in the input data:
+n8n จะเปรียบเทียบข้อมูล input กับข้อมูลที่เก็บไว้จากการรันก่อนหน้า เนื่องจากนี่เป็นการรันครั้งแรก n8n จะ process ข้อมูลทั้งหมดและแสดงในแท็บ **Kept** ลำดับอาจไม่ตรงกับ input:
 
 <!-- vale off -->
 | **id** | **name**      | **job**           | **last_updated**         |
@@ -114,13 +114,13 @@ n8n compares the current input data to the items stored from previous executions
 <!-- vale on -->
 
 /// note | Items are only compared against previous executions
-The current input items are only compared against the stored items from previous executions. This means that items repeated within the current input aren't removed in this mode of operation. If you need to remove duplicate items within the current input *and* across executions, connect two Remove Duplicate nodes together sequentially. Set the first to use the **Remove Items Repated Within Current Input** operation and the second to use the **Remove Items Processed in Previous Executions** operation.
+ข้อมูล input จะถูกเปรียบเทียบกับข้อมูลที่เก็บไว้จากการรันก่อนหน้าเท่านั้น หมายความว่าข้อมูลที่ซ้ำกันใน input เดียวกันจะไม่ถูกลบในโหมดนี้ ถ้าต้องการลบทั้งข้อมูลซ้ำใน input และข้าม execution ให้เชื่อมต่อ Remove Duplicate node สองตัวต่อกัน โดยตัวแรกใช้ **Remove Items Repated Within Current Input** และตัวที่สองใช้ **Remove Items Processed in Previous Executions**
 ///
 
-5. Open the Code node and uncomment (remove the `//` from) the line for "Tom Hanks."
-6. On the canvas, select **Test workflow** again. Open the Remove Duplicates node again to examine the results.
+5. เปิด Code node แล้ว uncomment (ลบ `//`) บรรทัด "Tom Hanks"
+6. บน canvas เลือก **Test workflow** อีกครั้ง แล้วเปิด Remove Duplicates node เพื่อดูผลลัพธ์
 
-n8n compares the current input data to the items stored from previous executions. This time, the **Kept** tab contains the one new record from the Code node:
+n8n จะเปรียบเทียบข้อมูล input กับข้อมูลที่เก็บไว้จากการรันก่อนหน้า คราวนี้แท็บ **Kept** จะมีแค่ record ใหม่จาก Code node:
 
 <!-- vale off -->
 | **id** | **name**  | **job** | **last_updated**         |
@@ -128,7 +128,7 @@ n8n compares the current input data to the items stored from previous executions
 | 9      | Tom Hanks | Actor   | 2024-10-17T13:58:31.493Z |
 <!-- vale on -->
 
-The **Discarded** tab contains the items processed by the previous execution:
+แท็บ **Discarded** จะมีข้อมูลที่ process ไปแล้วจากการรันก่อนหน้า:
 
 <!-- vale off -->
 | **id** | **name**      | **job**           | **last_updated**         |
@@ -146,19 +146,19 @@ The **Discarded** tab contains the items processed by the previous execution:
 | 8      | Rihanna       | Pop star          | 2024-10-01T11:50:22.493Z |
 <!-- vale on -->
 
-Before continuing, clear the duplication history to get ready for the next example:
+ก่อนจะไปตัวอย่างถัดไป ให้เคลียร์ประวัติการ dedupe:
 
-7. Open the Remove Duplicates node and set the **Operation** to **Clear Deduplication History**.
-8. Select **Test step** to clear the current duplication history.
+7. เปิด Remove Duplicates node แล้วตั้งค่า **Operation** เป็น **Clear Deduplication History**
+8. กด **Test step** เพื่อเคลียร์ประวัติ dedupe
 
 ## Keep items where the value is higher than any previous value
 
-1. Open the Remove Duplicates node and set the **Operation** to **Remove Items Processed in Previous Executions**.
-2. Set the **Keep Items Where** parameter to **Value Is Higher than Any Previous Value**.
-3. Set the **Value to Dedupe On** parameter to `{{ $json.id }}`.
-4. On the canvas, select **Test workflow** to run the workflow. Open the Remove Duplicates node to examine the results.
+1. เปิด Remove Duplicates node แล้วตั้งค่า **Operation** เป็น **Remove Items Processed in Previous Executions**
+2. ตั้งค่า **Keep Items Where** เป็น **Value Is Higher than Any Previous Value**
+3. ตั้งค่า **Value to Dedupe On** เป็น `{{ $json.id }}`
+4. บน canvas เลือก **Test workflow** เพื่อรัน workflow แล้วเปิด Remove Duplicates node เพื่อดูผลลัพธ์
 
-n8n compares the current input data to the items stored from previous executions. Since this is the first time running the Remove Duplicates node after clearing the history, n8n processes all data items and places them into the **Kept** output tab. The order of the items may be different than the order in the input data:
+n8n จะเปรียบเทียบข้อมูล input กับข้อมูลที่เก็บไว้จากการรันก่อนหน้า เนื่องจากเพิ่งเคลียร์ประวัติ n8n จะ process ข้อมูลทั้งหมดและแสดงในแท็บ **Kept** ลำดับอาจไม่ตรงกับ input:
 
 <!-- vale off -->
 | **id** | **name**      | **job**           | **last_updated**         |
@@ -177,10 +177,10 @@ n8n compares the current input data to the items stored from previous executions
 | 9      | Tom Hanks     | Actor             | 2024-10-17T13:58:31.493Z |
 <!-- vale on -->
 
-5. Open the Code node and uncomment (remove the `//` from) the lines for "Madonna" and "Bob Dylan."
-6. On the canvas, select **Test workflow** again. Open the Remove Duplicates node again to examine the results.
+5. เปิด Code node แล้ว uncomment (ลบ `//`) บรรทัด "Madonna" และ "Bob Dylan"
+6. บน canvas เลือก **Test workflow** อีกครั้ง แล้วเปิด Remove Duplicates node เพื่อดูผลลัพธ์
 
-n8n compares the current input data to the items stored from previous executions. This time, the **Kept** tab contains a single entry for "Bob Dylan." n8n keeps this item because its `id` column value (15) is higher than any previous values (the previous maximum value was 9):
+n8n จะเปรียบเทียบข้อมูล input กับข้อมูลที่เก็บไว้จากการรันก่อนหน้า คราวนี้แท็บ **Kept** จะมีแค่ "Bob Dylan" เพราะค่า `id` (15) สูงกว่าค่าสูงสุดก่อนหน้า (9):
 
 <!-- vale off -->
 | **id** | **name**  | **job**     | **last_updated**         |
@@ -188,7 +188,7 @@ n8n compares the current input data to the items stored from previous executions
 | 15     | Bob Dylan | Folk singer | 2024-09-24T08:03:16.493Z |
 <!-- vale on -->
 
-The **Discarded** tab contains the 13 items with an `id` column value equal to or less than the previous maximum value (9). Even though it's new, this table includes the entry for "Madonna" because its `id` value isn't larger than the previous maximum value:
+แท็บ **Discarded** จะมีข้อมูล 13 รายการที่ค่า `id` เท่ากับหรือน้อยกว่าค่าสูงสุดก่อนหน้า (9) แม้ "Madonna" จะเป็นข้อมูลใหม่แต่ `id` ไม่สูงกว่าเดิม:
 
 <!-- vale off -->
 | **id** | **name**      | **job**           | **last_updated**         |
@@ -208,19 +208,19 @@ The **Discarded** tab contains the 13 items with an `id` column value equal to o
 | 9      | Tom Hanks     | Actor             | 2024-10-17T13:58:31.493Z |
 <!-- vale on -->
 
-Before continuing, clear the duplication history to get ready for the next example:
+ก่อนจะไปตัวอย่างถัดไป ให้เคลียร์ประวัติการ dedupe:
 
-7. Open the Remove Duplicates node and set the **Operation** to **Clear Deduplication History**.
-8. Select **Test step** to clear the current duplication history.
+7. เปิด Remove Duplicates node แล้วตั้งค่า **Operation** เป็น **Clear Deduplication History**
+8. กด **Test step** เพื่อเคลียร์ประวัติ dedupe
 
 ## Keep items where the value is a date later than any previous date
 
-1. Open the Remove Duplicates node and set the **Operation** to **Remove Items Processed in Previous Executions**.
-2. Set the **Keep Items Where** parameter to **Value Is a Date Later than Any Previous Date**.
-3. Set the **Value to Dedupe On** parameter to `{{ $json.last_updated }}`.
-4. On the canvas, select **Test workflow** to run the workflow. Open the Remove Duplicates node to examine the results.
+1. เปิด Remove Duplicates node แล้วตั้งค่า **Operation** เป็น **Remove Items Processed in Previous Executions**
+2. ตั้งค่า **Keep Items Where** เป็น **Value Is a Date Later than Any Previous Date**
+3. ตั้งค่า **Value to Dedupe On** เป็น `{{ $json.last_updated }}`
+4. บน canvas เลือก **Test workflow** เพื่อรัน workflow แล้วเปิด Remove Duplicates node เพื่อดูผลลัพธ์
 
-n8n compares the current input data to the items stored from previous executions. Since this is the first time running the Remove Duplicates node after clearing the history, n8n processes all data items and places them into the **Kept** output tab. The order of the items may be different than the order in the input data:
+n8n จะเปรียบเทียบข้อมูล input กับข้อมูลที่เก็บไว้จากการรันก่อนหน้า เนื่องจากเพิ่งเคลียร์ประวัติ n8n จะ process ข้อมูลทั้งหมดและแสดงในแท็บ **Kept** ลำดับอาจไม่ตรงกับ input:
 
 <!-- vale off -->
 | **id** | **name**      | **job**           | **last_updated**         |
@@ -242,12 +242,12 @@ n8n compares the current input data to the items stored from previous executions
 <!-- vale on -->
 
 <!-- vale off -->
-5. Open the Code node and uncomment (remove the `//` from) the lines for "Harry Nilsson" and "Kylie Minogue."
+5. เปิด Code node แล้ว uncomment (ลบ `//`) บรรทัด "Harry Nilsson" และ "Kylie Minogue"
 <!-- vale on -->
-6. On the canvas, select **Test workflow** again. Open the Remove Duplicates node again to examine the results.
+6. บน canvas เลือก **Test workflow** อีกครั้ง แล้วเปิด Remove Duplicates node เพื่อดูผลลัพธ์
 
 <!-- vale off -->
-n8n compares the current input data to the items stored from previous executions. This time, the **Kept** tab contains a single entry for "Kylie Minogue." n8n keeps this item because its `last_updated` column value (`2024-10-24T08:03:16.493Z`) is later than any previous values (the previous latest date was `2024-10-17T17:11:38.493Z`):
+n8n จะเปรียบเทียบข้อมูล input กับข้อมูลที่เก็บไว้จากการรันก่อนหน้า คราวนี้แท็บ **Kept** จะมีแค่ "Kylie Minogue" เพราะค่า `last_updated` (`2024-10-24T08:03:16.493Z`) ใหม่กว่าค่าสูงสุดก่อนหน้า (`2024-10-17T17:11:38.493Z`):
 <!-- vale on -->
 
 <!-- vale off -->
@@ -256,7 +256,7 @@ n8n compares the current input data to the items stored from previous executions
 | 11     | Kylie Minogue | Pop star          | 2024-10-24T08:03:16.493Z |
 <!-- vale on -->
 
-The **Discarded** tab contains the 15 items with a `last_updated` column value equal to or earlier than the previous latest date (`2024-10-17T17:11:38.493Z`). Even though it's new, this table includes the entry for "Harry Nilsson" because its `last_updated` value isn't later than the previous maximum value:
+แท็บ **Discarded** จะมีข้อมูล 15 รายการที่ค่า `last_updated` เท่ากับหรือน้อยกว่าค่าสูงสุดก่อนหน้า (`2024-10-17T17:11:38.493Z`) แม้ "Harry Nilsson" จะเป็นข้อมูลใหม่แต่ `last_updated` ไม่ใหม่กว่าเดิม:
 
 <!-- vale off -->
 | **id** | **name**      | **job**           | **last_updated**         |

@@ -1,90 +1,90 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Chat Trigger node documentation
-description: Learn how to use the Chat Trigger node in n8n. Follow technical documentation to integrate Chat Trigger node into your workflows.
+description: เรียนรู้วิธีใช้ Chat Trigger node ใน n8n ทำตามเอกสารทางเทคนิคเพื่อรวม Chat Trigger node เข้ากับ workflow ของคุณ
 priority: critical
 ---
 
 # Chat Trigger node
 
-Use the Chat Trigger node when building AI workflows for chatbots and other chat interfaces. You can configure how users access the chat, using one of n8n's provided interfaces, or your own. You can add authentication.
+ใช้ Chat Trigger node เวลาสร้าง workflow AI สำหรับ chatbot หรือ chat interface อื่นๆ สามารถตั้งค่าว่าผู้ใช้จะเข้าถึง chat ได้อย่างไร จะใช้ interface ที่ n8n มีให้ หรือจะใช้ของตัวเองก็ได้ สามารถเพิ่ม authentication ได้ด้วย
 
-You must connect either an agent or chain [root node](/integrations/builtin/cluster-nodes/root-nodes/index.md).
+คุณต้องเชื่อมต่อ agent หรือ chain [root node](/integrations/builtin/cluster-nodes/root-nodes/index.md) อย่างใดอย่างหนึ่ง
 
 /// warning | Workflow execution usage
-Every message to the Chat Trigger executes your workflow. This means that one conversation where a user sends 10 messages uses 10 executions from your execution allowance. Check your payment plan for details of your allowance.
+ทุกข้อความที่ส่งมาที่ Chat Trigger จะเป็นการรัน workflow หนึ่งครั้ง หมายความว่าถ้ามีการสนทนา 1 ครั้ง ผู้ใช้ส่ง 10 ข้อความ จะใช้ execution quota ไป 10 ครั้ง ตรวจสอบแผนการชำระเงินของคุณสำหรับรายละเอียด execution allowance
 ///
 
 /// note | Manual Chat trigger
-This node replaces the Manual Chat Trigger node from version 1.24.0.
+node นี้มาแทน Manual Chat Trigger node ตั้งแต่เวอร์ชัน 1.24.0
 ///
 
 ## Node parameters
 
 ### Make Chat Publicly Available
 
-Set whether the chat should be publicly available (turned on) or only available through the manual chat interface (turned off).
+ตั้งค่าว่าจะให้ chat นี้เปิดสาธารณะ (เปิด) หรือให้ใช้ได้เฉพาะผ่าน manual chat interface (ปิด)
 
-Leave this turned off while you're building the workflow. Turn it on when you're ready to activate the workflow and allow users to access the chat.
+แนะนำให้ปิดไว้ตอนสร้าง workflow และเปิดเมื่อพร้อมให้ผู้ใช้เข้าถึง chat
 
 ### Mode
 
-Choose how users access the chat. Select from:
+เลือกวิธีที่ผู้ใช้จะเข้าถึง chat มีตัวเลือกดังนี้:
 
-* **Hosted Chat**: Use n8n's hosted chat interface. Recommended for most users because you can configure the interface using the [node options](#node-options) and don't have to do any other setup.
-* **Embedded Chat**: This option requires you to create your own chat interface. You can use n8n's [chat widget](https://www.npmjs.com/package/@n8n/chat){:target=_blank .external-link} or build your own. Your chat interface must call the webhook URL shown in **Chat URL** in the node.
+* **Hosted Chat**: ใช้ interface chat ของ n8n เอง แนะนำสำหรับผู้ใช้ทั่วไป เพราะตั้งค่าได้จาก [node options](#node-options) โดยไม่ต้องตั้งค่าอะไรเพิ่ม
+* **Embedded Chat**: ตัวเลือกนี้ต้องสร้าง chat interface เอง สามารถใช้ [chat widget ของ n8n](https://www.npmjs.com/package/@n8n/chat){:target=_blank .external-link} หรือสร้างเองก็ได้ interface ของคุณต้องเรียก webhook URL ที่แสดงใน **Chat URL** ของ node
 
 ### Authentication
 
-Choose whether and how to restrict access to the chat. Select from:
+เลือกว่าจะจำกัดการเข้าถึง chat หรือไม่ มีตัวเลือกดังนี้:
 
-* **None**: The chat doesn't use authentication. Anyone can use the chat.
-* **Basic Auth**: The chat uses basic authentication.
-	* Select or create a **Credential for Basic Auth** with a username and password. All users must use the same username and password.
-* **n8n User Auth**: Only users logged in to an n8n account can use the chat.
+* **None**: ไม่มี authentication ใครก็ใช้ chat ได้
+* **Basic Auth**: ใช้ basic authentication
+	* เลือกหรือสร้าง **Credential for Basic Auth** พร้อม username และ password ทุกคนต้องใช้ username/password เดียวกัน
+* **n8n User Auth**: เฉพาะผู้ใช้ที่ login n8n เท่านั้นที่ใช้ chat ได้
 
 ### Initial Message(s)
 
-This parameter's only available if you're using **Hosted Chat**. Use it to configure the message the n8n chat interface displays when the user arrives on the page.
+parameter นี้จะมีเฉพาะถ้าใช้ **Hosted Chat** ใช้ตั้งค่าข้อความที่จะแสดงเมื่อผู้ใช้เข้าหน้า chat
 
 ## Node options
 
-Available options depend on the chat mode.
+option ที่มีให้เลือกขึ้นกับ chat mode
 
 ### Hosted chat options
 
 #### Allowed Origin (CORS)
 
-Set the origins that can access the chat URL. Enter a comma-separated list of URLs allowed for cross-origin non-preflight requests.
+ตั้งค่า origin ที่เข้าถึง chat URL ได้ ใส่ URL ที่อนุญาตแบบ comma-separated
 
-Use `*` (default) to allow all origins.
+ใช้ `*` (default) เพื่ออนุญาตทุก origin
 
 #### Input Placeholder, Title, and Subtitle
 
-Enter the text for these elements in the chat interface.
+ใส่ข้อความสำหรับแต่ละ element ใน chat interface
 
 ??? Details "View screenshot"
 	![Customizable text elements](/_images/integrations/builtin/core-nodes/chat-trigger/hosted-text-elements.png)
 
 #### Load Previous Session
 
-Select whether to load chat messages from a previous chat session.
+เลือกว่าจะโหลดข้อความจาก session ก่อนหน้าหรือไม่
 
-If you select any option other than **Off**, you must connect the Chat trigger and the Agent you're using to a memory sub-node. The memory connector on the Chat trigger appears when you set **Load Previous Session** to **From Memory**. n8n recommends connecting both the Chat trigger and Agent to the same memory sub-node, as this ensures a single source of truth for both nodes.
+ถ้าเลือก option อื่นที่ไม่ใช่ **Off** ต้องเชื่อมต่อ Chat trigger และ Agent ที่ใช้กับ memory sub-node ตัว memory connector จะโผล่ใน Chat trigger เมื่อเลือก **Load Previous Session** เป็น **From Memory** แนะนำให้เชื่อมต่อ Chat trigger และ Agent กับ memory sub-node เดียวกัน เพื่อให้ข้อมูลตรงกัน
 
 ??? Details "View screenshot"
 	![Connect nodes to memory](/_images/integrations/builtin/core-nodes/chat-trigger/connect-memory.png)
 
 #### Response Mode
 
-Use this option when building a workflow with steps after the agent or chain that's handling the chat. Choose from:
+ใช้ option นี้ถ้าสร้าง workflow ที่มี node ต่อท้าย agent หรือ chain ที่รับผิดชอบ chat เลือกได้ว่า:
 
-* **When Last Node Finishes**: The Chat Trigger node returns the response code and the data output from the last node executed in the workflow.
-* **Using 'Respond to Webhook' Node**: The Chat Trigger node responds as defined in the [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook.md) node.
+* **When Last Node Finishes**: Chat Trigger node จะส่ง response code และข้อมูล output จาก node สุดท้ายที่รันใน workflow
+* **Using 'Respond to Webhook' Node**: Chat Trigger node จะตอบกลับตามที่กำหนดใน [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook.md) node
 
 #### Require Button Click to Start Chat
 
-Set whether to display a **New Conversation** button on the chat interface (turned on) or not (turned off).
+ตั้งค่าว่าจะแสดงปุ่ม **New Conversation** ใน chat interface (เปิด) หรือไม่ (ปิด)
 
 ??? Details "View screenshot"
 	![New Conversation button](/_images/integrations/builtin/core-nodes/chat-trigger/new-conversation-button.png)
@@ -94,25 +94,25 @@ Set whether to display a **New Conversation** button on the chat interface (turn
 
 #### Allowed Origin (CORS)
 
-Set the origins that can access the chat URL. Enter a comma-separated list of URLs allowed for cross-origin non-preflight requests.
+ตั้งค่า origin ที่เข้าถึง chat URL ได้ ใส่ URL ที่อนุญาตแบบ comma-separated
 
-Use `*` (default) to allow all origins.
+ใช้ `*` (default) เพื่ออนุญาตทุก origin
 
 #### Load Previous Session
 
-Select whether to load chat messages from a previous chat session.
+เลือกว่าจะโหลดข้อความจาก session ก่อนหน้าหรือไม่
 
-If you select any option other than **Off**, you must connect the Chat trigger and the Agent you're using to a memory sub-node. The memory connector on the Chat trigger appears when you set **Load Previous Session** to **From Memory**. n8n recommends connecting both the Chat trigger and Agent to the same memory sub-node, as this ensures a single source of truth for both nodes.
+ถ้าเลือก option อื่นที่ไม่ใช่ **Off** ต้องเชื่อมต่อ Chat trigger และ Agent ที่ใช้กับ memory sub-node ตัว memory connector จะโผล่ใน Chat trigger เมื่อเลือก **Load Previous Session** เป็น **From Memory** แนะนำให้เชื่อมต่อ Chat trigger และ Agent กับ memory sub-node เดียวกัน เพื่อให้ข้อมูลตรงกัน
 
 ??? Details "View screenshot"
 	![Connect nodes to memory](/_images/integrations/builtin/core-nodes/chat-trigger/connect-memory.png)
 
 #### Response Mode
 
-Use this option when building a workflow with steps after the agent or chain that's handling the chat. Choose from:
+ใช้ option นี้ถ้าสร้าง workflow ที่มี node ต่อท้าย agent หรือ chain ที่รับผิดชอบ chat เลือกได้ว่า:
 
-* **When Last Node Finishes**: The Chat Trigger node returns the response code and the data output from the last node executed in the workflow.
-* **Using 'Respond to Webhook' Node**: The Chat Trigger node responds as defined in the [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook.md) node.
+* **When Last Node Finishes**: Chat Trigger node จะส่ง response code และข้อมูล output จาก node สุดท้ายที่รันใน workflow
+* **Using 'Respond to Webhook' Node**: Chat Trigger node จะตอบกลับตามที่กำหนดใน [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook.md) node
 
 ## Templates and examples
 
@@ -125,12 +125,12 @@ Use this option when building a workflow with steps after the agent or chain tha
 
 ## Set the chat response manually
 
-You need to manually set the chat response when you don't want to directly send the output of an Agent or Chain node to the user. Instead, you want to take the output of an Agent or Chain node and modify it or do something else with it before sending it back to the user.
+คุณต้องตั้งค่า chat response เองในกรณีที่ไม่ต้องการส่ง output ของ Agent หรือ Chain node ตรงๆ ให้ user แต่ต้องการนำ output ไปปรับแต่งหรือทำอย่างอื่นก่อนส่งกลับ
 
-In a basic workflow, the Agent and Chain nodes output a parameter named either `output` or `text`, and the Chat trigger sends the value of this parameter to the user as the chat response. 
+ใน workflow พื้นฐาน Agent และ Chain node จะ output parameter ชื่อ `output` หรือ `text` แล้ว Chat trigger จะส่งค่าของ parameter นี้เป็น chat response
 
-If you need to manually create the response sent to the user, you must create a parameter named either `text` or `output`. If you use a different parameter name, the Chat trigger sends the entire object as its response, not just the value.
+ถ้าต้องการสร้าง response เอง ต้องสร้าง parameter ชื่อ `text` หรือ `output` ถ้าใช้ชื่ออื่น Chat trigger จะส่ง object ทั้งก้อนเป็น response ไม่ใช่แค่ value
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common Issues](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/common-issues.md).
+สำหรับคำถามหรือปัญหาที่พบบ่อยและวิธีแก้ไข ดูที่ [Common Issues](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/common-issues.md)

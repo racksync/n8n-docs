@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Google Workspace Admin node
 
-Use the Google Workspace Admin node to automate work in Google Workspace Admin, and integrate Google Workspace Admin with other applications. n8n has built-in support for a wide range of Google Workspace Admin features, including creating, updating, deleting, and getting users, and groups. 
+ใช้ Google Workspace Admin node เพื่อทำงานอัตโนมัติใน Google Workspace Admin และเชื่อมต่อ Google Workspace Admin กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Google Workspace Admin หลายอย่าง เช่น การสร้าง อัปเดต ลบ และดึงข้อมูล users กับ groups
 
-On this page, you'll find a list of operations the Google Workspace Admin node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Google Workspace Admin node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Google credentials](/integrations/builtin/credentials/google/index.md) for guidance on setting up authentication. 
+โปรดดู [Google credentials](/integrations/builtin/credentials/google/index.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
@@ -34,20 +34,19 @@ Refer to [Google credentials](/integrations/builtin/credentials/google/index.md)
 
 ## Templates and examples
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
 [[ templatesWidget(page.title, 'google-workspace-admin') ]]
 
 ## How to project a user's information
 
-There are three different ways to project a user's information:
+มี 3 วิธีในการ project ข้อมูลของ user:
 
-- **Basic**: Doesn't include any custom fields.
-- **Custom**: Includes the custom fields from schemas in `customField`.
-- **Full**: Include all the fields associated with the user.
+- **Basic**: ไม่รวม custom fields ใดๆ
+- **Custom**: รวม custom fields จาก schemas ใน `customField`
+- **Full**: รวม fields ทั้งหมดที่เกี่ยวข้องกับ user
 
-To include custom fields, follow these steps:
+ถ้าอยากรวม custom fields ให้ทำตามนี้:
 
-1. Select **Custom** from the **Projection** dropdown list.
-2. Select the **Add Options** button and select **Custom Schemas** from the dropdown list.
-3. Select the schema names you want to include from the **Custom Schemas** dropdown list.
+1. เลือก **Custom** จาก dropdown **Projection**
+2. กด **Add Options** แล้วเลือก **Custom Schemas** จาก dropdown
+3. เลือกชื่อ schema ที่ต้องการรวมจาก dropdown **Custom Schemas**
 

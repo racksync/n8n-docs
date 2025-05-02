@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Metabase node
 
-Use the Metabase node to automate work in Metabase, and integrate Metabase with other applications. n8n has built-in support for a wide range of Metabase features, including adding, and getting alerts, databases, metrics, and questions. 
+ใช้ Metabase node ในการทำงานอัตโนมัติใน Metabase และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ โดย n8n รองรับฟีเจอร์ต่าง ๆ เช่น การจัดการ alerts, databases, metrics และ questions.
 
-On this page, you'll find a list of operations the Metabase node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Metabase node รองรับและลิงก์ไปยังข้อมูลเพิ่มเติม.
 
 /// note | Credentials
-Refer to [Metabase credentials](/integrations/builtin/credentials/metabase.md) for guidance on setting up authentication. 
+ดู [Metabase credentials](/integrations/builtin/credentials/metabase.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations

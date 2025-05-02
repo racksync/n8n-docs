@@ -1,6 +1,6 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: AI Agent node common issues 
+title: AI Agent node common issues
 description: Documentation for common issues and questions in the AI Agent node in n8n, a workflow automation platform. Includes details of the issue and suggested solutions.
 contentType: [integration, reference]
 priority: critical
@@ -8,11 +8,11 @@ priority: critical
 
 # AI Agent node common issues
 
-Here are some common errors and issues with the [AI Agent node](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) and steps to resolve or troubleshoot them.
+นี่คือข้อผิดพลาดและปัญหาทั่วไปบางประการเกี่ยวกับ [AI Agent node](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) และขั้นตอนในการแก้ไขหรือแก้ไขปัญหา
 
 ## Internal error: 400 Invalid value for 'content'
 
-A full error message might look like this:
+ข้อความแสดงข้อผิดพลาดแบบเต็มอาจมีลักษณะดังนี้:
 
 ```
 Internal error
@@ -20,31 +20,31 @@ Error: 400 Invalid value for 'content': expected a string, got null.
 <stack-trace>
 ```
 
-This error can occur if the **Prompt** input contains a null value.
+ข้อผิดพลาดนี้อาจเกิดขึ้นหาก input **Prompt** มีค่า null
 
-You might see this in one of two scenarios:
+คุณอาจเห็นสิ่งนี้ในหนึ่งในสองสถานการณ์:
 
-1. When you've set the **Prompt** to **Define below** and have an expression in your **Text** that isn't generating a value.
-    * To resolve, make sure your expressions reference valid fields and that they resolve to valid input rather than null.
-2. When you've set the **Prompt** to **Connected Chat Trigger Node** and the incoming data has null values.
-    * To resolve, remove any null values from the `chatInput` field of the input node.
+1. เมื่อคุณตั้งค่า **Prompt** เป็น **Define below** และมี expression ใน **Text** ของคุณที่ไม่ได้สร้างค่า
+    * ในการแก้ไข ตรวจสอบให้แน่ใจว่า expressions ของคุณอ้างอิงถึง fields ที่ถูกต้องและแก้ไขเป็น input ที่ถูกต้องแทนที่จะเป็น null
+2. เมื่อคุณตั้งค่า **Prompt** เป็น **Connected Chat Trigger Node** และข้อมูลขาเข้ามีค่า null
+    * ในการแก้ไข ให้ลบค่า null ใดๆ ออกจาก field `chatInput` ของ input node
 
 ## Error in sub-node Simple Memory
 
-This error displays when n8n runs into an issue with the [Simple Memory](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/index.md) sub-node.
+ข้อผิดพลาดนี้จะแสดงขึ้นเมื่อ n8n พบปัญหากับ [Simple Memory](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/index.md) sub-node
 
-It most often occurs when your workflow or the workflow template you copied uses an older version of the Simple memory node (previously known as "Window Buffer Memory").
+ส่วนใหญ่มักเกิดขึ้นเมื่อ workflow ของคุณหรือ workflow template ที่คุณคัดลอกมาใช้ Simple memory node เวอร์ชันเก่า (เดิมชื่อ "Window Buffer Memory")
 
-Try removing the Simple Memory node from your workflow and re-adding it, which will guarantee you're using the latest version of the node.
+ลองลบ Simple Memory node ออกจาก workflow ของคุณแล้วเพิ่มเข้าไปใหม่ ซึ่งจะรับประกันว่าคุณกำลังใช้ node เวอร์ชันล่าสุด
 
 ## A Chat Model sub-node must be connected error
 
-This error displays when n8n tries to execute the node without having a Chat Model connected.
+ข้อผิดพลาดนี้จะแสดงขึ้นเมื่อ n8n พยายาม execute node โดยไม่ได้เชื่อมต่อ Chat Model
 
-To resolve this, click the + Chat Model button at the bottom of your screen when the node is open, or click the Chat Model + connector when the node is closed. n8n will then open a selection of possible Chat Models to pick from.
+ในการแก้ไขปัญหานี้ ให้คลิกปุ่ม + Chat Model ที่ด้านล่างของหน้าจอเมื่อ node เปิดอยู่ หรือคลิกตัวเชื่อมต่อ Chat Model + เมื่อ node ปิดอยู่ จากนั้น n8n จะเปิดรายการ Chat Models ที่เป็นไปได้ให้เลือก
 
 ## No prompt specified error
 
-This error occurs when the agent expects to get the prompt from the previous node automatically. Typically, this happens when you're using the [Chat Trigger Node](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/). 
+ข้อผิดพลาดนี้เกิดขึ้นเมื่อ agent คาดว่าจะได้รับ prompt จาก node ก่อนหน้าโดยอัตโนมัติ โดยทั่วไป สิ่งนี้จะเกิดขึ้นเมื่อคุณใช้ [Chat Trigger Node](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/)
 
-To resolve this issue, find the **Prompt** parameter of the AI Agent node and change it from **Connected Chat Trigger Node** to **Define below**. This allows you to manually build your prompt by referencing output data from other nodes or by adding static text.
+ในการแก้ไขปัญหานี้ ให้ค้นหา parameter **Prompt** ของ AI Agent node และเปลี่ยนจาก **Connected Chat Trigger Node** เป็น **Define below** ซึ่งช่วยให้คุณสร้าง prompt ของคุณด้วยตนเองโดยอ้างอิงข้อมูล output จาก nodes อื่นๆ หรือโดยการเพิ่มข้อความคงที่

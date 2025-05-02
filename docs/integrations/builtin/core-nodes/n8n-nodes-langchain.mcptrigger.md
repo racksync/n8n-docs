@@ -1,59 +1,59 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: MCP Server Trigger node documentation
-description: Learn how to use the MCP Server Trigger node in n8n. Follow technical documentation to integrate the MCP Server Trigger node into your workflows.
+description: เรียนรู้วิธีการใช้ MCP Server Trigger node ใน n8n อ่านเอกสารทางเทคนิคเพื่อรวม MCP Server Trigger node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 ---
 
 # MCP Server Trigger node
 
-Use the MCP Server Trigger node to allow n8n to act as a [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) server, making n8n tools and workflows available to MCP clients.
+ใช้ MCP Server Trigger node เพื่อให้นn8n ทำหน้าที่เป็น [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) server ทำให้ tools และ workflow ของ n8n สามารถถูกเรียกใช้งานโดย MCP clients ได้
 
 ///  note  | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/httprequest.md).
+ดูข้อมูลการตั้งค่า authentication สำหรับ node นี้ได้ที่ [ที่นี่](/integrations/builtin/credentials/httprequest.md)
 ///
 
 ## How the MCP Server Trigger node works
 
-The MCP Server Trigger node acts as an entry point into n8n for MCP clients. It operates by exposing a URL that MCP clients can interact with to access n8n tools.
+MCP Server Trigger node จะเป็นจุดเริ่มต้นให้ MCP clients เข้ามาใช้งาน n8n โดย node นี้จะเปิด URL ให้ MCP clients เข้ามาเรียกใช้งาน tools ของ n8n ได้
 
-Unlike conventional [trigger nodes](/glossary.md#trigger-node-n8n), which respond to events and pass their output to the next [connected node](/workflows/components/connections.md), the MCP Server Trigger node only connects to and executes [tool](/advanced-ai/examples/understand-tools.md) nodes. Clients can list the available tools and call individual tools to perform work.
+ต่างจาก [trigger nodes](/glossary.md#trigger-node-n8n) แบบปกติ ที่จะตอบสนอง event แล้วส่ง output ไปยัง [connected node](/workflows/components/connections.md) ตัวถัดไป MCP Server Trigger node จะเชื่อมต่อและ execute เฉพาะ [tool](/advanced-ai/examples/understand-tools.md) node เท่านั้น Clients สามารถ list tools ที่มีอยู่และเรียกใช้แต่ละ tool เพื่อให้ทำงานได้
 
-You can expose n8n workflows to clients by attaching them with the [Custom n8n Workflow Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolworkflow.md) node.
+คุณสามารถเปิด workflow ของ n8n ให้ client ใช้งานได้โดยเชื่อม workflow กับ [Custom n8n Workflow Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolworkflow.md) node
 
 /// note | Server-Sent Events (SSE) support
-The MCP Server Trigger node supports [Server-Sent Events (SSE)](https://modelcontextprotocol.io/docs/concepts/transports#server-sent-events-sse), a long-lived transport built on top of HTTP, for connections between clients and the server. It currently doesn't support [standard input/output (stdio)](https://modelcontextprotocol.io/docs/concepts/transports#standard-input%2Foutput-stdio) transport.
+MCP Server Trigger node รองรับ [Server-Sent Events (SSE)](https://modelcontextprotocol.io/docs/concepts/transports#server-sent-events-sse) ซึ่งเป็น transport แบบ long-lived บน HTTP สำหรับเชื่อมต่อระหว่าง client กับ server ตอนนี้ยังไม่รองรับ [standard input/output (stdio)](https://modelcontextprotocol.io/docs/concepts/transports#standard-input%2Foutput-stdio)
 ///
 
 ## Node parameters
 
-Use these parameters to configure your node.
+ใช้ parameters เหล่านี้เพื่อปรับแต่ง node
 
 ### MCP URL
 
-The MCP Server Trigger node has two **MCP URLs**: test and production. n8n displays the URLs at the top of the node panel.
+MCP Server Trigger node จะมี **MCP URLs** สองแบบ: test และ production n8n จะแสดง URL เหล่านี้ที่ด้านบนของ panel node
 
-Select **Test URL** or **Production URL** to toggle which URL n8n displays.
+เลือก **Test URL** หรือ **Production URL** เพื่อสลับดู URL ที่ต้องการ
 
-* **Test**: n8n registers a test MCP URL when you select **Listen for Test Event** or **Test workflow**, if the workflow isn't active. When you call the MCP URL, n8n displays the data in the workflow.
-* **Production**: n8n registers a production MCP URL when you activate the workflow. When using the production URL, n8n doesn't display the data in the workflow. You can still view workflow data for a production execution: select the **Executions** tab in the workflow, then select the workflow execution you want to view.
+* **Test**: n8n จะ register test MCP URL เมื่อเลือก **Listen for Test Event** หรือ **Test workflow** ถ้า workflow ยังไม่ active เมื่อเรียก MCP URL นี้ n8n จะแสดงข้อมูลใน workflow
+* **Production**: n8n จะ register production MCP URL เมื่อ activate workflow เมื่อใช้ production URL n8n จะไม่แสดงข้อมูลใน workflow แต่ยังสามารถดูข้อมูล execution ได้โดยไปที่ tab **Executions** แล้วเลือก execution ที่ต้องการดู
 
 ### Authentication
 
-You can require authentication for clients connecting to your MCP URL. Choose from these authentication methods:
+คุณสามารถบังคับให้ client ที่เชื่อมต่อกับ MCP URL ต้อง authenticate ได้ เลือกวิธี authentication ได้จาก:
 
 - Bearer auth
 - Header auth
 
-Refer to the [HTTP request credentials](/integrations/builtin/credentials/httprequest.md) for more information on setting up each credential type.
+ดูรายละเอียดการตั้งค่าแต่ละ credential ได้ที่ [HTTP request credentials](/integrations/builtin/credentials/httprequest.md)
 
 ### Path
 
-By default, this field contains a randomly generated MCP URL path, to avoid conflicts with other MCP Server Trigger nodes. 
+โดย default field นี้จะมี path ของ MCP URL ที่สุ่มขึ้นมาเพื่อป้องกันชนกับ MCP Server Trigger node ตัวอื่น
 
-You can manually specify a URL path, including adding route parameters. For example, you may need to do this if you use n8n to prototype an API and want consistent endpoint URLs.
+คุณสามารถกำหนด path เองได้ รวมถึงใส่ route parameters เช่น ถ้าต้องการใช้ n8n สร้าง prototype API และอยากได้ endpoint URL ที่คงที่
 
-The **Path** field can take the following formats:
+**Path** field สามารถใช้รูปแบบเหล่านี้ได้:
 
 - `/:variable`
 - `/path/:variable`
@@ -68,9 +68,9 @@ The **Path** field can take the following formats:
 
 ### Integrating with Claude Desktop
 
-You can connect to the MCP Server Trigger node from [Claude Desktop](https://claude.ai/download) by running a gateway to proxy SSE messages to stdio-based servers.
+คุณสามารถเชื่อมต่อ MCP Server Trigger node กับ [Claude Desktop](https://claude.ai/download) ได้โดยรัน gateway เพื่อ proxy ข้อความ SSE ไปยัง server ที่ใช้ stdio
 
-To do so, add the following to your Claude Desktop configuration:
+ให้เพิ่ม config นี้ใน Claude Desktop:
 
 ```json
 {
@@ -90,38 +90,36 @@ To do so, add the following to your Claude Desktop configuration:
 }
 ```
 
-Be sure to replace the `<MCP_URL>` and `<MCP_BEARER_TOKEN>` placeholders with the values from your MCP Server Trigger node parameters and credentials.
+อย่าลืมแทนที่ `<MCP_URL>` และ `<MCP_BEARER_TOKEN>` ด้วยค่าจาก MCP Server Trigger node ของคุณ
 
 ## Limitations
 
 ### Configuring the MCP Server Trigger node with webhook replicas
 
-The MCP Server Trigger node relies on Server-Sent Events (SSE), which require the same server instance to handle persistent connections. This can cause problems when running n8n in [queue mode](/hosting/scaling/queue-mode.md) depending on your [webhook processor](/hosting/scaling/queue-mode.md#webhook-processors) configuration:
+MCP Server Trigger node ใช้ Server-Sent Events (SSE) ซึ่งต้องให้ server instance เดียวกันรับ connection ตลอดเวลา ถ้าใช้ n8n แบบ [queue mode](/hosting/scaling/queue-mode.md) อาจมีปัญหาขึ้นอยู่กับ [webhook processor](/hosting/scaling/queue-mode.md#webhook-processors) ที่ตั้งไว้:
 
-* If you use queue mode with a **single webhook replica**, the MCP Server Trigger node works as expected.
-* If you run **multiple webhook replicas**, you need to route all `/mcp*` requests to a single, dedicated webhook replica. Create a separate replica set with one webhook container for MCP requests. Afterward, update your ingress or load balancer configuration to direct all `/mcp*` traffic to that instance.
+* ถ้าใช้ queue mode กับ **single webhook replica** MCP Server Trigger node จะทำงานปกติ
+* ถ้าใช้ **multiple webhook replicas** ต้อง route request `/mcp*` ทั้งหมดไปที่ webhook replica เดียวเท่านั้น ให้สร้าง replica set แยกที่มี webhook container เดียวสำหรับ MCP แล้วปรับ ingress หรือ load balancer ให้ส่ง `/mcp*` ไปที่ instance นั้น
 
 /// warning | Caution when running with multiple webhook replicas
-If you run an MCP Server Trigger node with multiple webhook replicas and don't route all `/mcp*` requests to a single, dedicated webhook replica, your SSE connections will frequently break or fail to reliably deliver events.
+ถ้าใช้ MCP Server Trigger node กับ multiple webhook replicas แล้วไม่ได้ route `/mcp*` ไปที่ webhook replica เดียว connection SSE จะหลุดหรือส่ง event ไม่เสถียร
 ///
 
 ## Related resources
 
-n8n also provides an [MCP Client Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp.md) node that allows you to connect your n8n AI agents to external tools.
+n8n ยังมี [MCP Client Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp.md) node สำหรับเชื่อมต่อ AI agent ของ n8n กับ external tools
 
-Refer to the [MCP documentation](https://modelcontextprotocol.io/introduction) and [MCP specification](https://modelcontextprotocol.io/specification/) for more details about the protocol, servers, and clients.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับ protocol, server, client ได้ที่ [MCP documentation](https://modelcontextprotocol.io/introduction) และ [MCP specification](https://modelcontextprotocol.io/specification/)
 
 ## Common issues
 
-Here are some common errors and issues with the MCP Server Trigger node and steps to resolve or troubleshoot them.
+รวม error และปัญหาที่พบบ่อยของ MCP Server Trigger node พร้อมวิธีแก้ไขหรือแนวทางตรวจสอบ
 
 ### Running the MCP Server Trigger node with a reverse proxy
 
-When running n8n behind a reverse proxy like nginx, you may experience problems if the MCP endpoint isn't configured for SSE.
+ถ้าใช้งาน n8n หลัง reverse proxy เช่น nginx อาจเจอปัญหาถ้า endpoint MCP ไม่ได้ตั้งค่าสำหรับ SSE
 
-Specifically, you need to disable proxy buffering for the endpoint. Other items you might want to adjust include disabling gzip compression (n8n handles this itself), disabling chunked transfer encoding, and setting the `Connection` to an empty string to remove it from the forwarded headers. Explicitly disabling these in the MCP endpoint ensures they're not inherited from other places in your nginx configuration.
-
-An example nginx location block for serving MCP traffic with these settings may look like this:
+ต้องปิด proxy buffering สำหรับ endpoint นี้ และอาจต้องปิด gzip compression (n8n จัดการเอง), ปิด chunked transfer encoding และตั้ง `Connection` เป็นค่าว่างเพื่อไม่ให้ header นี้ถูก forward ไปยัง backend แนะนำให้ตั้งค่าเหล่านี้ใน location block ของ nginx สำหรับ MCP traffic เช่น:
 
 ```
 location /mcp/ {

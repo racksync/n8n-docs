@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Disqus node
 
-Use the Disqus node to automate work in Disqus, and integrate Disqus with other applications. n8n has built-in support for a wide range of Disqus features, including returning forums.
+ใช้ Disqus node เพื่อทำงานอัตโนมัติใน Disqus และเชื่อมต่อ Disqus กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Disqus หลายอย่าง เช่น การส่งคืน forums
 
-On this page, you'll find a list of operations the Disqus node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Disqus node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Disqus credentials](/integrations/builtin/credentials/disqus.md) for guidance on setting up authentication. 
+โปรดดู [Disqus credentials](/integrations/builtin/credentials/disqus.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations

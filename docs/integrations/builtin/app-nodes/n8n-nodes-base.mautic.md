@@ -8,12 +8,12 @@ priority: medium
 
 # Mautic node
 
-Use the Mautic node to automate work in Mautic, and integrate Mautic with other applications. n8n has built-in support for a wide range of Mautic features, including creating, updating, deleting, and getting companies, and contacts, as well as adding and removing campaign contacts. 
+ใช้ Mautic node ในการทำงานอัตโนมัติใน Mautic และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ โดย n8n รองรับฟีเจอร์ต่าง ๆ เช่น การสร้าง, อัปเดต, ลบ และดึงข้อมูล companies และ contacts รวมถึงการจัดการ campaign contacts.
 
-On this page, you'll find a list of operations the Mautic node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Mautic node รองรับและลิงก์ไปยังข้อมูลเพิ่มเติม.
 
 /// note | Credentials
-Refer to [Mautic credentials](/integrations/builtin/credentials/mautic.md) for guidance on setting up authentication. 
+ดู [Mautic credentials] สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

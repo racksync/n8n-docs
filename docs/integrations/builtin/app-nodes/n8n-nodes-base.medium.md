@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Medium node
 
-Use the Medium node to automate work in Medium, and integrate Medium with other applications. n8n has built-in support for a wide range of Medium features, including creating posts, and getting publications. 
+ใช้ Medium node ในการทำงานอัตโนมัติใน Medium และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ โดย n8n รองรับการสร้าง posts และการดึง publications.
 
-On this page, you'll find a list of operations the Medium node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Medium node รองรับและลิงก์ไปยังข้อมูลเพิ่มเติม.
 
 /// note | Credentials
-Refer to [Medium credentials](/integrations/builtin/credentials/medium.md) for guidance on setting up authentication. 
+ดู [Medium credentials](/integrations/builtin/credentials/medium.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

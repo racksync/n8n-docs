@@ -8,12 +8,12 @@ priority: high
 
 # Notion node
 
-Use the Notion node to automate work in Notion, and integrate Notion with other applications. n8n has built-in support for a wide range of Notion features, including getting and searching databases, creating pages, and getting users.
+ใช้ Notion node เพื่อทำงานอัตโนมัติใน Notion และเชื่อมต่อ Notion กับแอปพลิเคชันอื่นๆ n8n มี built-in support สำหรับฟีเจอร์ต่างๆ ของ Notion เช่น การดึง (get) และค้นหา (search) databases, การสร้าง pages และการดึงข้อมูล users
 
-On this page, you'll find a list of operations the Notion node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Notion node รองรับ พร้อมลิงก์ไปยัง resources เพิ่มเติม
 
 /// note | Credentials
-Refer to [Notion credentials](/integrations/builtin/credentials/notion.md) for guidance on setting up authentication. 
+อ้างอิงถึง [Notion credentials](/integrations/builtin/credentials/notion.md) เพื่อดูวิธีตั้งค่า authentication 
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
@@ -47,9 +47,9 @@ Refer to [Notion credentials](/integrations/builtin/credentials/notion.md) for g
 
 ## Related resources
 
-n8n provides an app node for Notion. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.notiontrigger.md).
+n8n มี app node สำหรับ Notion คุณสามารถดู docs ของ trigger node ได้ที่ [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.notiontrigger.md)
 
-Refer to [Notion's documentation](https://developers.notion.com/){:target=_blank .external-link} for details about their API.
+อ้างอิงถึง [Notion's documentation](https://developers.notion.com/){:target=_blank .external-link} เพื่อดูรายละเอียดของ API
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

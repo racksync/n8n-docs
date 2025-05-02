@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # CircleCI node
 
-Use the CircleCI node to automate work in CircleCI, and integrate CircleCI with other applications. n8n has built-in support for a wide range of CircleCI features, including getting and triggering pipelines.
+ใช้ CircleCI node เพื่อทำงานอัตโนมัติใน CircleCI และ integrate CircleCI กับแอปพลิเคชันอื่นๆ n8n มีการรองรับในตัวสำหรับฟีเจอร์ต่างๆ ของ CircleCI รวมถึงการดึงและ trigger pipelines
 
-On this page, you'll find a list of operations the CircleCI node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ CircleCI node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [CircleCI credentials](/integrations/builtin/credentials/circleci.md) for guidance on setting up authentication. 
+อ้างอิง [CircleCI credentials](/integrations/builtin/credentials/circleci.md) สำหรับคำแนะนำในการตั้งค่า authentication
 ///
 
 ## Operations

@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Mailjet node
 
-Use the Mailjet node to automate work in Mailjet, and integrate Mailjet with other applications. n8n has built-in support for a wide range of Mailjet features, including sending emails, and SMS. 
+ใช้ Mailjet node ในการทำงานอัตโนมัติใน Mailjet และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ โดย n8n รองรับการส่ง emails และ SMS.
 
-On this page, you'll find a list of operations the Mailjet node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Mailjet node รองรับและลิงก์ไปยังข้อมูลเพิ่มเติม.
 
 /// note | Credentials
-Refer to [Mailjet credentials](/integrations/builtin/credentials/mailjet.md) for guidance on setting up authentication. 
+ดู [Mailjet credentials](/integrations/builtin/credentials/mailjet.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations

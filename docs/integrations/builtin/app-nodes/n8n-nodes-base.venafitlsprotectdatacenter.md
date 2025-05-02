@@ -8,12 +8,12 @@ contentType: [integration, reference]
 <!-- disabled vale because of "Datacenter" Don't want to general approve it, but it's the brand name -->
 # Venafi TLS Protect Datacenter node
 
-Use the Venafi TLS Protect Datacenter node to automate work in Venafi TLS Protect Datacenter, and integrate Venafi TLS Protect Datacenter with other applications. n8n has built-in support for a wide range of Venafi TLS Protect Datacenter features, including creating, deleting, and getting certificates. 
+ใช้ Venafi TLS Protect Datacenter node ในการทำงานอัตโนมัติใน Venafi TLS Protect Datacenter และเชื่อมต่อ Venafi TLS Protect Datacenter กับแอปพลิเคชันอื่น ๆ. n8n รองรับฟีเจอร์ของ Venafi TLS Protect Datacenter หลากหลาย เช่น การสร้าง, การลบ และการดึงข้อมูล certificates.
 
-On this page, you'll find a list of operations the Venafi TLS Protect Datacenter node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการของ operations ที่ Venafi TLS Protect Datacenter node รองรับและลิงก์ไปยัง resource เพิ่มเติม.
 
 /// note | Credentials
-Refer to [Venafi TLS Protect Datacenter credentials](/integrations/builtin/credentials/venafitlsprotectdatacenter.md) for guidance on setting up authentication. 
+ดู [Venafi TLS Protect Datacenter credentials](/integrations/builtin/credentials/venafitlsprotectdatacenter.md) สำหรับคำแนะนำในการตั้งค่า authentication. 
 ///
 
 ## Operations
@@ -35,9 +35,8 @@ Refer to [Venafi TLS Protect Datacenter credentials](/integrations/builtin/crede
 
 ## Related resources
 
-n8n also provides:
-
-* A [node](/integrations/builtin/app-nodes/n8n-nodes-base.venafitlsprotectcloud.md) and [trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.venafitlsprotectcloudtrigger.md) node for Venafi TLS Protect Cloud.
+นอกจากนี้ n8n ยังมีให้:
+* A [node](/integrations/builtin/app-nodes/n8n-nodes-base.venafitlsprotectcloud.md) และ [trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.venafitlsprotectcloudtrigger.md) node สำหรับ Venafi TLS Protect Cloud.
 
 <!-- vale on -->
 

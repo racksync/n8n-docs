@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # QuestDB node
 
-Use the QuestDB node to automate work in QuestDB, and integrate QuestDB with other applications. n8n supports executing an SQL query and inserting rows in a database with QuestDB.
+ใช้ QuestDB node ในการอัตโนมัติงานใน QuestDB และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ. n8n รองรับการรัน SQL query และการแทรก rows ลงในฐานข้อมูลของ QuestDB.
 
-On this page, you'll find a list of operations the QuestDB node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ QuestDB node รองรับ พร้อมกับลิงก์ไปยัง resources เพิ่มเติม.
 
 /// note | Credentials
-Refer to [QuestDB credentials](/integrations/builtin/credentials/questdb.md) for guidance on setting up authentication. 
+ดู [QuestDB credentials](/integrations/builtin/credentials/questdb.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations
@@ -29,7 +29,7 @@ Refer to [QuestDB credentials](/integrations/builtin/credentials/questdb.md) for
 
 ### Specify a column's data type
 
-To specify a column's data type, append the column name with `:type`, where `type` is the data type you want for column. For example, if you want to specify the type `int` for the column **id** and type `text` for the column **name**, you can use the following snippet in the **Columns** field: `id:int,name:text`.
+ในการระบุ data type ของ column ให้นำชื่อ column ต่อด้วย `:type` โดยที่ `type` คือชนิดข้อมูลที่ต้องการสำหรับ column นั้น. ตัวอย่างเช่น หากคุณต้องการระบุชนิด `int` สำหรับ column **id** และชนิด `text` สำหรับ column **name** คุณสามารถใช้ snippet ต่อไปนี้ในช่อง **Columns**: `id:int,name:text`.
 
 
 

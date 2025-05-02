@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # PagerDuty node
 
-Use the PagerDuty node to automate work in PagerDuty, and integrate PagerDuty with other applications. n8n has built-in support for a wide range of PagerDuty features, including creating incident notes, as well as updating, and getting all log entries and users. 
+ใช้ PagerDuty node เพื่อช่วยทำงานใน PagerDuty แบบอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันอื่น ๆ. n8n มีการสนับสนุนคุณสมบัติของ PagerDuty หลากหลาย เช่น การสร้าง incident notes รวมถึงการอัปเดตและดึงข้อมูล log entries และ users.
 
-On this page, you'll find a list of operations the PagerDuty node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการของ operations ที่ PagerDuty node รองรับและลิงก์สำหรับข้อมูลเพิ่มเติม.
 
 /// note | Credentials
-Refer to [PagerDuty credentials](/integrations/builtin/credentials/pagerduty.md) for guidance on setting up authentication. 
+ดูรายละเอียดเพิ่มเติมได้ที่ [PagerDuty credentials](/integrations/builtin/credentials/pagerduty.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations

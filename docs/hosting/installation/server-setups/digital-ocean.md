@@ -5,10 +5,10 @@ contentType: tutorial
 
 # Hosting n8n on DigitalOcean
 
-This hosting guide shows you how to self-host n8n on a DigitalOcean droplet. It uses:
+คู่มือนี้จะสอนวิธีติดตั้ง n8n แบบ self-host บน DigitalOcean droplet โดยใช้:
 
-* [Caddy](https://caddyserver.com){:target="_blank" .external-link} (a reverse proxy) to allow access to the Droplet from the internet. Caddy will also automatically create and manage SSL / TLS certificates for your n8n instance.
-* [Docker Compose](https://docs.docker.com/compose/){:target="_blank" .external-link} to create and define the application components and how they work together.
+* [Caddy](https://caddyserver.com){:target="_blank" .external-link} (reverse proxy) สำหรับเปิดให้เข้าถึง n8n จากอินเทอร์เน็ต และจัดการ SSL/TLS certificate ให้อัตโนมัติ
+* [Docker Compose](https://docs.docker.com/compose/){:target="_blank" .external-link} สำหรับจัดการ container ของแต่ละ service
 
 --8<-- "_snippets/self-hosting/warning.md"
 
@@ -16,49 +16,49 @@ This hosting guide shows you how to self-host n8n on a DigitalOcean droplet. It 
 
 ## Create a Droplet
 
-1. [Log in](https://cloud.digitalocean.com/login){:target=_blank .external-link} to DigitalOcean. 
-2. Select the project to host the Droplet, or [create a new project](https://docs.digitalocean.com/products/projects/how-to/create/){:target=_blank .external-link}.
-3. In your project, select **Droplets** from the **Manage** menu. 
-4. [Create a new Droplet](https://docs.digitalocean.com/products/droplets/how-to/create/){:target=_blank .external-link} using the [Docker image](https://marketplace.digitalocean.com/apps/docker){:target="_blank" .external-link} available on the **Marketplace** tab.
+1. [Log in](https://cloud.digitalocean.com/login){:target=_blank .external-link} เข้า DigitalOcean
+2. เลือก project ที่จะใช้ หรือ [สร้าง project ใหม่](https://docs.digitalocean.com/products/projects/how-to/create/){:target=_blank .external-link}
+3. ใน project ของคุณ เลือก **Droplets** จากเมนู **Manage**
+4. [สร้าง Droplet ใหม่](https://docs.digitalocean.com/products/droplets/how-to/create/){:target=_blank .external-link} โดยเลือก [Docker image](https://marketplace.digitalocean.com/apps/docker){:target="_blank" .external-link} จากแท็บ **Marketplace**
 
 /// note | Droplet resources
-When creating the Droplet, DigitalOcean asks you to choose a plan. For most usage levels, a basic shared CPU plan is enough.
+ตอนสร้าง Droplet จะมีให้เลือก plan สำหรับการใช้งานทั่วไป เลือกแบบ shared CPU ธรรมดาก็พอ
 ///
 /// note | SSH key or Password
-DigitalOcean lets you choose between SSH key and password-based authentication. SSH keys are considered more secure.
+DigitalOcean ให้เลือกได้ว่าจะใช้ SSH key หรือ password-based authentication แนะนำให้ใช้ SSH key เพราะปลอดภัยกว่า
 ///
 ## Log in to your Droplet and create new user
 
-The rest of this guide requires you to log in to the Droplet using a terminal with SSH. Refer to [How to Connect to Droplets with SSH](https://docs.digitalocean.com/products/droplets/how-to/connect-with-ssh/){:target="_blank" .external-link} for more information.
+ขั้นตอนต่อไปต้อง SSH เข้าไปที่ Droplet ผ่าน terminal ดูวิธีได้ที่ [How to Connect to Droplets with SSH](https://docs.digitalocean.com/products/droplets/how-to/connect-with-ssh/){:target="_blank" .external-link}
 
-You should create a new user, to avoid working as the root user:
+แนะนำให้สร้าง user ใหม่ ไม่ควรใช้ root
 
-1. Log in as root.
-2. Create a new user:
+1. ล็อกอินเป็น root
+2. สร้าง user ใหม่:
 	```shell
 	adduser <username>
 	```
-3. Follow the prompts in the CLI to finish creating the user.
-4. Grant the new user administrative privileges:
+3. ทำตามขั้นตอนใน CLI เพื่อสร้าง user ให้เสร็จ
+4. ให้สิทธิ์ admin กับ user ใหม่:
 	```shell
 	usermod -aG sudo <username>
 	```
-	You can now run commands with superuser privileges by using `sudo` before the command.
-5. Follow the steps to set up SSH for the new user: [Add Public Key Authentication](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-14-04#step-four-add-public-key-authentication-recommended){:target=_blank .external-link}.
-5. Log out of the droplet.
-6. Log in using SSH as the new user.
+	จากนี้จะใช้ `sudo` สั่งงานแบบ admin ได้
+5. ตั้งค่า SSH ให้ user ใหม่: [Add Public Key Authentication](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-14-04#step-four-add-public-key-authentication-recommended){:target=_blank .external-link}
+5. logout ออกจาก droplet
+6. login ใหม่ด้วย SSH เป็น user ที่สร้าง
 
 ## Clone configuration repository
 
-Docker Compose, n8n, and Caddy require a series of folders and configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-docker-caddy){:target=_blank .external-link} into the home folder of the logged-in user on your Droplet. The following steps will tell you which file to change and what changes to make.
+Docker Compose, n8n, และ Caddy ต้องใช้ไฟล์ config หลายไฟล์ สามารถ clone repo ตัวอย่างจาก [ที่นี่](https://github.com/n8n-io/n8n-docker-caddy){:target=_blank .external-link} ไปไว้ใน home folder ของ user ที่ล็อกอินอยู่
 
-Clone the repository with the following command:
+รันคำสั่งนี้เพื่อ clone:
 
 ```shell
 git clone https://github.com/n8n-io/n8n-docker-caddy.git
 ```
 
-And change directory to the root of the repository you cloned:
+แล้วเข้าไปที่โฟลเดอร์ที่ clone มา:
 
 ```shell
 cd n8n-docker-caddy
@@ -66,20 +66,20 @@ cd n8n-docker-caddy
 
 ## Default folders and files
 
-The host operating system (the DigitalOcean Droplet) copies the two folders you created to Docker containers to make them available to Docker. The two folders are:
+ฝั่ง host (Droplet) จะมี 2 โฟลเดอร์หลักที่ใช้กับ Docker container:
 
-- `caddy_config`: Holds the Caddy configuration files.
-- `local_files`: A folder for files you upload or add using n8n.
+- `caddy_config`: เก็บไฟล์ config ของ Caddy
+- `local_files`: สำหรับไฟล์ที่อัปโหลดหรือเพิ่มผ่าน n8n
 
 ### Create Docker volumes
 
-To persist the Caddy cache between restarts and speed up start times, create [a Docker volume](https://docs.docker.com/storage/volumes/){:target="_blank" .external-link} that Docker reuses between restarts:
+สร้าง Docker volume สำหรับ cache ของ Caddy เพื่อให้ start เร็วขึ้น:
 
 ```shell
 sudo docker volume create caddy_data
 ```
 
-Create a Docker volume for the n8n data:
+สร้าง Docker volume สำหรับข้อมูล n8n:
 
 ```shell
 sudo docker volume create n8n_data
@@ -87,13 +87,13 @@ sudo docker volume create n8n_data
 
 ## Set up DNS
 
-n8n typically operates on a subdomain. Create a DNS record with your provider for the subdomain and point it to the IP address of the Droplet. The exact steps for this depend on your DNS provider, but typically you need to create a new "A" record for the n8n subdomain. DigitalOcean provide [An Introduction to DNS Terminology, Components, and Concepts](https://www.digitalocean.com/community/tutorials/an-introduction-to-dns-terminology-components-and-concepts){:target="_blank" .external-link}.
+โดยปกติ n8n จะรันบน subdomain ให้สร้าง DNS record ชนิด "A" ชี้ subdomain ไปที่ IP ของ Droplet วิธีการขึ้นกับผู้ให้บริการ DNS ของคุณ ดูข้อมูลพื้นฐานได้ที่ [An Introduction to DNS Terminology, Components, and Concepts](https://www.digitalocean.com/community/tutorials/an-introduction-to-dns-terminology-components-and-concepts){:target="_blank" .external-link}
 
 ## Open ports
 
-n8n runs as a web application, so the Droplet needs to allow incoming access to traffic on port 80 for non-secure traffic, and port 443 for secure traffic.
+n8n เป็น web app ต้องเปิด port 80 (HTTP) และ 443 (HTTPS) ให้เข้าถึงได้
 
-Open the following ports in the Droplet's firewall by running the following two commands:
+เปิด firewall ด้วยคำสั่ง:
 
 ```shell
 sudo ufw allow 80
@@ -102,26 +102,26 @@ sudo ufw allow 443
 
 ## Configure n8n
 
-n8n needs some environment variables set to pass to the application running in the Docker container. The example `.env` file contains placeholders you need to replace with values of your own.
+n8n ต้องการ environment variable บางตัวใน container ตัวอย่างไฟล์ `.env` มี placeholder ให้แก้ไข
 
-Open the file with the following command:
+เปิดไฟล์ด้วย:
 
 ```shell
 nano .env
 ```
 
-The file contains inline comments to help you know what to change.
+ในไฟล์จะมี comment อธิบายว่าต้องแก้ตรงไหน
 
-Refer to [Environment variables](/hosting/configuration/environment-variables/index.md) for n8n environment variables details.
+ดูรายละเอียด environment variable เพิ่มเติมได้ที่ [Environment variables](/hosting/configuration/environment-variables/index.md)
 
 ## The Docker Compose file
 
-The Docker Compose file (`docker-compose.yml`) defines the services the application needs, in this case Caddy and n8n.
+ไฟล์ Docker Compose (`docker-compose.yml`) จะกำหนด service ที่ต้องใช้ (Caddy กับ n8n)
 
-- The Caddy service definition defines the ports it uses and the local volumes to copy to the containers.
-- The n8n service definition defines the ports it uses, the environment variables n8n needs to run (some defined in the `.env` file), and the volumes it needs to copy to the containers.
+- Caddy: กำหนด port และ volume ที่จะ mount
+- n8n: กำหนด port, environment variable (บางตัวมาจาก `.env`), และ volume ที่ต้องใช้
 
-The Docker Compose file uses the environment variables set in the `.env` file, so you shouldn't need to change it's content, but to take a look, run the following command:
+โดยปกติไม่ต้องแก้ไขไฟล์นี้ แต่ถ้าอยากดูให้รัน:
 
 ```shell
 nano docker-compose.yml
@@ -129,13 +129,13 @@ nano docker-compose.yml
 
 ## Configure Caddy
 
-Caddy needs to know which domains it should serve, and which port to expose to the outside world. Edit the `Caddyfile` file in the `caddy_config` folder.
+Caddy ต้องรู้ว่าจะ serve domain ไหน และเปิด port อะไร แก้ไขไฟล์ `Caddyfile` ในโฟลเดอร์ `caddy_config`
 
 ```shell
 nano caddy_config/Caddyfile
 ```
 
-Change the placeholder domain to yours. If you followed the steps to name the subdomain n8n, your full domain is similar to `n8n.example.com`. The `n8n` in the `reverse_proxy` setting tells Caddy to use the service definition defined in the `docker-compose.yml` file:
+เปลี่ยน subdomain ที่เป็น placeholder ให้เป็นของคุณเอง เช่น ถ้าใช้ `n8n.example.com` ให้แก้ตามนี้ ส่วน `n8n` ใน `reverse_proxy` หมายถึง service ที่กำหนดไว้ใน `docker-compose.yml`:
 
 ```text
 n8n.<domain>.<suffix> {
@@ -145,7 +145,7 @@ n8n.<domain>.<suffix> {
 }
 ```
 
-If you were to use `automate.example.com`, your `Caddyfile` may look something like:
+ถ้าใช้ `automate.example.com` ก็จะเป็นแบบนี้:
 
 ```text
 automate.example.com {
@@ -157,21 +157,21 @@ automate.example.com {
 
 ## Start Docker Compose
 
-Start n8n and Caddy with the following command:
+เริ่มรัน n8n กับ Caddy ด้วยคำสั่ง:
 
 ```shell
 sudo docker compose up -d
 ```
 
-This may take a few minutes.
+อาจใช้เวลาสักครู่
 
 ## Test your setup
 
-In your browser, open the URL formed of the subdomain and domain name defined earlier. Enter the user name and password defined earlier, and you should be able to access n8n.
+เปิด browser แล้วเข้า URL ที่ตั้งไว้ใน DNS ใส่ username/password ที่ตั้งไว้ ก็จะเข้าใช้งาน n8n ได้
 
 ## Stop n8n and Caddy
 
-You can stop n8n and Caddy with the following command:
+หยุด n8n กับ Caddy ด้วยคำสั่ง:
 
 ```shell
 sudo docker compose stop

@@ -8,57 +8,57 @@ priority: high
 
 # Email Trigger (IMAP) node
 
-Use the IMAP Email node to receive emails using an IMAP email server. This node is a trigger node.
+ใช้ IMAP Email node เพื่อรับอีเมลผ่าน IMAP email server node นี้เป็น trigger node
 
 /// note | Credential
-You can find authentication information for this node [here](/integrations/builtin/credentials/imap/index.md).
+ดูข้อมูลการตั้งค่า authentication สำหรับ node นี้ได้ที่ [IMAP credential](/integrations/builtin/credentials/imap/index.md)
 ///
 
 ## Operations
 
-- Receive an email
+- รับอีเมล
 
 ## Node parameters
 
-Configure the node using the following parameters.
+ตั้งค่า node นี้โดยใช้ parameter เหล่านี้
 
 ### Credential to connect with
 
-Select or create an [IMAP credential](/integrations/builtin/credentials/imap/index.md) to connect to the server with.
+เลือกหรือสร้าง [IMAP credential](/integrations/builtin/credentials/imap/index.md) เพื่อเชื่อมต่อกับ server
 
 ### Mailbox Name
 
-Enter the mailbox from which you want to receive emails.
+ใส่ชื่อ mailbox ที่ต้องการรับอีเมลจาก
 
 ### Action
 
-Choose whether you want an email marked as read when n8n receives it. **None** will leave it marked unread. **Mark as Read** will mark it as read.
+เลือกว่าจะให้อีเมลถูก mark ว่าอ่านแล้วเมื่อ n8n รับหรือไม่ **None** คือยังไม่อ่าน **Mark as Read** คือ mark ว่าอ่านแล้ว
 
 ### Download Attachments
 
-This toggle controls whether to download email attachments (turned on) or not (turned off). Only set this if necessary, since it increases processing.
+toggle นี้ควบคุมว่าจะดาวน์โหลดไฟล์แนบอีเมลหรือไม่ (เปิด/ปิด) ถ้าไม่จำเป็นอย่าเปิด เพราะจะใช้ resource เพิ่ม
 
 ### Format
 
-Choose the format to return the message in from these options:
+เลือก format ที่จะคืนค่า message ได้จาก:
 
-* **RAW**: This format returns the full email message data with body content in the raw field as a base64url encoded string. It doesn't use the payload field.
-* **Resolved**: This format returns the full email with all data resolved and attachments saved as binary data.
-* **Simple**: This format returns the full email. Don't use it if you want to gather inline attachments.
+* **RAW**: คืนข้อมูลอีเมลทั้งหมดใน field raw เป็น base64url encoded string ไม่มี field payload
+* **Resolved**: คืนข้อมูลอีเมลทั้งหมดแบบ resolve แล้ว และแนบไฟล์เป็น binary
+* **Simple**: คืนข้อมูลอีเมลทั้งหมด ไม่เหมาะถ้าต้องการ inline attachments
 
 ## Node options
 
-You can further configure the node using these **Options**.
+ตั้งค่าเพิ่มเติมได้ใน **Options**
 
 ### Custom Email Rules
 
-Enter custom email fetching rules to determine which emails the node fetches.
+ใส่ rule สำหรับดึงอีเมลแบบ custom ได้
 
-Refer to [node-imap's search function criteria](https://github.com/mscdex/node-imap){:target=_blank .external-link} for more information.
+ดู [node-imap's search function criteria](https://github.com/mscdex/node-imap) สำหรับรายละเอียด
 
 ### Force Reconnect Every Minutes
 
-Set an interval in minutes to force reconnection.
+ตั้ง interval (นาที) สำหรับ reconnect ใหม่
 
 ## Templates and examples
 

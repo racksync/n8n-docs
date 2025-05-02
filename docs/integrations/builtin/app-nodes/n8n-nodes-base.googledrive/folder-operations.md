@@ -8,78 +8,78 @@ priority: high
 
 # Google Drive Folder operations
 
-Use this operation to create, delete, and share folders in Google Drive. Refer to [Google Drive](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/index.md) for more information on the Google Drive node itself.
+ใช้ Operation นี้เพื่อสร้าง, ลบ และแชร์ Folders ใน Google Drive โปรดดูข้อมูลเพิ่มเติมเกี่ยวกับ Google Drive node ที่ [Google Drive](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/index.md)
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Create a folder
 
-Use this operation to create a new folder in a drive.
+ใช้ Operation นี้เพื่อสร้าง Folder ใหม่ใน Drive
 
-Enter these parameters:
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
-- **Resource**: Select **Folder**.
-- **Operation**: Select **Create**.
-- **Folder Name**: The name to use for the new folder.
-- **Parent Drive**: Select **From list** to choose the drive from the dropdown list, **By URL** to enter the URL of the drive, or **By ID** to enter the `driveId`. 
-- **Parent Folder**: Select **From list** to choose the folder from the dropdown list, **By URL** to enter the URL of the folder, or **By ID** to enter the `folderId`. 
+ป้อน Parameters เหล่านี้:
+- **Credential to connect with**: สร้างหรือเลือก [Google Drive credentials](/integrations/builtin/credentials/google/index.md) ที่มีอยู่
+- **Resource**: เลือก **Folder**
+- **Operation**: เลือก **Create**
+- **Folder Name**: ชื่อที่จะใช้สำหรับ Folder ใหม่
+- **Parent Drive**: เลือก **From list** เพื่อเลือก Drive จากรายการ Dropdown, **By URL** เพื่อป้อน URL ของ Drive, หรือ **By ID** เพื่อป้อน `driveId`
+- **Parent Folder**: เลือก **From list** เพื่อเลือก Folder จากรายการ Dropdown, **By URL** เพื่อป้อน URL ของ Folder, หรือ **By ID** เพื่อป้อน `folderId`
 
-You can find the `driveId` and `folderID` by visiting the shared drive or folder in your browser and copying the last URL component: `https://drive.google.com/drive/u/1/folders/driveId`.
+คุณสามารถหา `driveId` และ `folderID` ได้โดยการเข้าไปที่ Shared drive หรือ Folder ในเบราว์เซอร์ของคุณและคัดลอกส่วนสุดท้ายของ URL: `https://drive.google.com/drive/u/1/folders/driveId`
 
 ### Options
 
-- **Simplify Output**: Choose whether to return a simplified version of the response instead of including all fields.
-- **Folder Color**: The color of the folder as an RGB hex string.
+- **Simplify Output**: เลือกว่าจะคืนค่า Response ในรูปแบบที่เรียบง่ายแทนที่จะรวม Fields ทั้งหมดหรือไม่
+- **Folder Color**: สีของ Folder ในรูปแบบ RGB hex string
 
-Refer to the [Method: files.insert | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files/insert){:target=_blank .external-link} API documentation for more information.
+โปรดดูเอกสาร API [Method: files.insert | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files/insert){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 
 ## Delete a folder
 
-Use this operation to delete a folder from a drive.
+ใช้ Operation นี้เพื่อลบ Folder ออกจาก Drive
 
-Enter these parameters:
+ป้อน Parameters เหล่านี้:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
-- **Resource**: Select **Folder**.
-- **Operation**: Select **Delete**.
-- **Folder**: Choose a folder you want to delete. 
-    - Select **From list** to choose the folder from the dropdown list, **By URL** to enter the URL of the folder, or **By ID** to enter the `folderId`. 
-    - You can find the `folderId` in a Google Drive folder URL: `https://drive.google.com/drive/u/0/folders/folderID`.
+- **Credential to connect with**: สร้างหรือเลือก [Google Drive credentials](/integrations/builtin/credentials/google/index.md) ที่มีอยู่
+- **Resource**: เลือก **Folder**
+- **Operation**: เลือก **Delete**
+- **Folder**: เลือก Folder ที่คุณต้องการลบ
+    - เลือก **From list** เพื่อเลือก Folder จากรายการ Dropdown, **By URL** เพื่อป้อน URL ของ Folder, หรือ **By ID** เพื่อป้อน `folderId`
+    - คุณสามารถหา `folderId` ได้ใน URL ของ Google Drive folder: `https://drive.google.com/drive/u/0/folders/folderID`
 
 ### Options
 
-- **Delete Permanently**: Choose whether to delete the folder now instead of moving it to the trash.
+- **Delete Permanently**: เลือกว่าจะลบ Folder ทันทีแทนที่จะย้ายไปยัง Trash หรือไม่
 
-Refer to the [Method: files.delete | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files/delete){:target=_blank .external-link} API documentation for more information.
+โปรดดูเอกสาร API [Method: files.delete | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files/delete){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 
 ## Share a folder
 
-Use this operation to add sharing permissions to a folder.
+ใช้ Operation นี้เพื่อเพิ่ม Permissions การแชร์ให้กับ Folder
 
-Enter these parameters:
+ป้อน Parameters เหล่านี้:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
-- **Resource**: Select **Folder**.
-- **Operation**: Select **Share**.
-- **Folder**: Choose a file you want to move. 
-    - Select **From list** to choose the folder from the dropdown list, **By URL** to enter the URL of the folder, or **By ID** to enter the `folderId`. 
-    - You can find the `folderId` in a Google Drive folder URL: `https://drive.google.com/drive/u/0/folders/folderID`.
-- **Permissions**: The permissions to add to the folder:
-	- **Role**: Select what users can do with the folder. Can be one of **Commenter**, **File Organizer**, **Organizer**, **Owner**, **Reader**, **Writer**.
-	- **Type**: Select the scope of the new permission:
-		- **User**: Grant permission to a specific user, defined by entering their **Email Address**.
-		- **Group**: Grant permission to a specific group, defined by entering its **Email Address**.
-		- **Domain**: Grant permission to a complete domain, defined by the **Domain**.
-		- **Anyone**: Grant permission to anyone. Can optionally **Allow File Discovery** to make the file discoverable through search.
+- **Credential to connect with**: สร้างหรือเลือก [Google Drive credentials](/integrations/builtin/credentials/google/index.md) ที่มีอยู่
+- **Resource**: เลือก **Folder**
+- **Operation**: เลือก **Share**
+- **Folder**: เลือก Folder ที่คุณต้องการย้าย
+    - เลือก **From list** เพื่อเลือก Folder จากรายการ Dropdown, **By URL** เพื่อป้อน URL ของ Folder, หรือ **By ID** เพื่อป้อน `folderId`
+    - คุณสามารถหา `folderId` ได้ใน URL ของ Google Drive folder: `https://drive.google.com/drive/u/0/folders/folderID`
+- **Permissions**: Permissions ที่จะเพิ่มให้กับ Folder:
+	- **Role**: เลือกว่า Users สามารถทำอะไรกับ Folder ได้บ้าง สามารถเป็นหนึ่งใน **Commenter**, **File Organizer**, **Organizer**, **Owner**, **Reader**, **Writer**
+	- **Type**: เลือกขอบเขตของ Permission ใหม่:
+		- **User**: ให้ Permission แก่ User ที่ระบุ โดยกำหนดโดยการป้อน **Email Address** ของพวกเขา
+		- **Group**: ให้ Permission แก่ Group ที่ระบุ โดยกำหนดโดยการป้อน **Email Address** ของกลุ่ม
+		- **Domain**: ให้ Permission แก่ Domain ทั้งหมด โดยกำหนดโดย **Domain**
+		- **Anyone**: ให้ Permission แก่ทุกคน สามารถเลือก **Allow File Discovery** เพื่อทำให้ File สามารถค้นพบได้ผ่านการค้นหา
 
 ### Options
 
-- **Email Message**: A plain text custom message to include in the notification email.
+- **Email Message**: ข้อความ Plain text ที่กำหนดเองเพื่อรวมไว้ในอีเมลแจ้งเตือน
 <!-- vale from-microsoft.FirstPerson = NO -->
-- **Move to New Owners Root**: Available when trying to transfer ownership while sharing an item not in a shared drive. When enabled, moves the folder to the new owner's My Drive root folder.
+- **Move to New Owners Root**: ใช้ได้เมื่อพยายามถ่ายโอน Ownership ขณะแชร์ Item ที่ไม่ได้อยู่ใน Shared drive เมื่อเปิดใช้งาน จะย้าย Folder ไปยัง My Drive root folder ของ Owner ใหม่
 <!-- vale from-microsoft.FirstPerson = YES -->
-- **Send Notification Email**: Whether to send a notification email when sharing to users or groups.
-- **Transfer Ownership**: Whether to transfer ownership to the specified user and downgrade the current owner to writer permissions.
-- **Use Domain Admin Access**: Whether to perform the action as a domain administrator.
+- **Send Notification Email**: ระบุว่าจะส่งอีเมลแจ้งเตือนเมื่อแชร์ไปยัง Users หรือ Groups หรือไม่
+- **Transfer Ownership**: ระบุว่าจะถ่ายโอน Ownership ให้กับ User ที่ระบุและลดระดับ Permissions ของ Owner ปัจจุบันเป็น Writer หรือไม่
+- **Use Domain Admin Access**: ระบุว่าจะดำเนินการในฐานะ Domain administrator หรือไม่
 
-Refer to the [REST Resources: files | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files){:target=_blank .external-link} API documentation for more information.
+โปรดดูเอกสาร API [REST Resources: files | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม

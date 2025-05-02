@@ -8,29 +8,29 @@ priority: medium
 
 # Hugging Face Inference Model node
 
-Use the Hugging Face Inference Model node to use Hugging Face's models.
+ใช้ Hugging Face Inference Model node เพื่อใช้งานโมเดลของ Hugging Face
 
-On this page, you'll find the node parameters for the Hugging Face Inference Model node, and links to more resources.
+ในหน้านี้จะมีพารามิเตอร์ของ node Hugging Face Inference Model และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/huggingface.md).
+คุณสามารถดูข้อมูลการเชื่อมต่อสำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/huggingface.md)
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node parameters
 
-* **Model**: Select the model to use to generate the completion.
+* **Model**: เลือกโมเดลที่ต้องการให้สร้างข้อความตอบกลับ
 
 ## Node options
 
-* **Custom Inference Endpoint**: Enter a custom inference endpoint URL.
-* **Frequency Penalty**: Use this option to control the chances of the model repeating itself. Higher values reduce the chance of the model repeating itself.
-* **Maximum Number of Tokens**: Enter the maximum number of tokens used, which sets the completion length.
-* **Presence Penalty**: Use this option to control the chances of the model talking about new topics. Higher values increase the chance of the model talking about new topics.
-* **Sampling Temperature**: Use this option to control the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
-* **Top K**: Enter the number of token choices the model uses to generate the next token.
-* **Top P**: Use this option to set the probability the completion should use. Use a lower value to ignore less probable options.
+* **Custom Inference Endpoint**: กรอก URL สำหรับ custom inference endpoint ได้ที่นี่
+* **Frequency Penalty**: ปรับโอกาสที่โมเดลจะตอบซ้ำๆ ค่าเยอะจะลดการตอบซ้ำ
+* **Maximum Number of Tokens**: กำหนดจำนวน tokens สูงสุดที่ใช้ ซึ่งจะเป็นการกำหนดความยาวของข้อความที่โมเดลจะตอบกลับ
+* **Presence Penalty**: ปรับโอกาสที่โมเดลจะพูดถึงหัวข้อใหม่ๆ ค่าเยอะจะเพิ่มโอกาสพูดเรื่องใหม่
+* **Sampling Temperature**: ปรับความสุ่มของการสร้างข้อความ ค่า temperature สูงจะทำให้โมเดลตอบหลากหลายมากขึ้น แต่ก็เสี่ยงต่อการตอบแบบหลุดประเด็น
+* **Top K**: กำหนดจำนวนตัวเลือก token ที่โมเดลจะใช้ในการสร้าง token ถัดไป
+* **Top P**: กำหนดความน่าจะเป็นรวมที่โมเดลจะใช้ในการเลือก token ถัดไป ค่า Top P ต่ำจะตัดตัวเลือกที่มีความน่าจะเป็นน้อยออก
 
 ## Templates and examples
 
@@ -39,7 +39,7 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Related resources
 
-Refer to [LangChains's Hugging Face Inference Model documentation](https://js.langchain.com/docs/integrations/llms/huggingface_inference/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมได้ที่ [LangChains's Hugging Face Inference Model documentation](https://js.langchain.com/docs/integrations/llms/huggingface_inference/){:target=_blank .external-link}
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

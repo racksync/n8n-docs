@@ -7,12 +7,10 @@ contentType: [integration, reference]
 
 # Travis CI node
 
-Use the Travis CI node to automate work in Travis CI, and integrate Travis CI with other applications. n8n has built-in support for a wide range of Travis CI features, including cancelling and getting builds. 
-
-On this page, you'll find a list of operations the Travis CI node supports and links to more resources.
+ใช้ Travis CI node เพื่อช่วยงานอัตโนมัติใน Travis CI และเชื่อมต่อ Travis CI กับแอปพลิเคชันอื่น ๆ โดย n8n มีการสนับสนุนคุณสมบัติหลากหลาย เช่น การยกเลิก build และการดึงข้อมูล build
 
 /// note | Credentials
-Refer to [Travis CI credentials](/integrations/builtin/credentials/travisci.md) for guidance on setting up authentication. 
+ดู [Travis CI credentials](/integrations/builtin/credentials/travisci.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations

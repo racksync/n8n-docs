@@ -8,12 +8,10 @@ priority: medium
 
 # SendGrid node
 
-Use the SendGrid node to automate work in SendGrid, and integrate SendGrid with other applications. n8n has built-in support for a wide range of SendGrid features, including creating, updating, deleting, and getting contacts, and lists, as well as sending emails. 
-
-On this page, you'll find a list of operations the SendGrid node supports and links to more resources.
+ใช้ SendGrid node เพื่อให้การทำงานใน SendGrid เป็นไปโดยอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันอื่น ๆ ได้อย่างมีประสิทธิภาพ. n8n รองรับฟีเจอร์ของ SendGrid หลากหลาย เช่น การสร้าง, อัปเดต, ลบ, และดึงข้อมูล contacts และ lists รวมถึงการส่ง emails.
 
 /// note | Credentials
-Refer to [SendGrid credentials](/integrations/builtin/credentials/sendgrid.md) for guidance on setting up authentication. 
+ดู [SendGrid credentials](/integrations/builtin/credentials/sendgrid.md) สำหรับคำแนะนำในการตั้งค่า authentication. 
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

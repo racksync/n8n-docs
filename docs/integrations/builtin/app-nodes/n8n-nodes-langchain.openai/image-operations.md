@@ -8,29 +8,28 @@ priority: critical
 
 # OpenAI Image operations
 
-Use this operation to analyze or generate an image in OpenAI. Refer to [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/index.md) for more information on the OpenAI node itself.
+ใช้ operation นี้เพื่อวิเคราะห์หรือสร้างภาพใน OpenAI. ดูข้อมูลเพิ่มเติมได้ที่ [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/index.md).
 
 ## Analyze Image
 
-Use this operation to take in images and answer questions about them.
+ใช้ operation นี้เพื่อนำเข้าภาพและตอบคำถามเกี่ยวกับภาพ.
 
 Enter these parameters:
-
-- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai.md).
-- **Resource**: Select **Image**.
-- **Operation**: Select **Analayze Image**.
-- **Model**: Select the model you want to use to generate an image. 
-- **Text Input**: Ask a question about the image.
-- **Input Type**: Select how you'd like to input the image. Options include:
-    - **Image URL(s)**: Enter the **URL(s)** of the image(s) to analyze. Add multiple URLs in a comma-separated list.
-    - **Binary File(s)**: Enter the name of the binary property which contains the image(s) in the **Input Data Field Name**.
+- **Credential to connect with**: สร้างหรือเลือก [OpenAI credential](/integrations/builtin/credentials/openai.md) ที่มีอยู่แล้ว.
+- **Resource**: เลือก **Image**.
+- **Operation**: เลือก **Analayze Image**.
+- **Model**: เลือก Model ที่จะใช้ในการวิเคราะห์ภาพ.
+- **Text Input**: ถามคำถามเกี่ยวกับภาพ.
+- **Input Type**: เลือกวิธีการนำเข้าภาพ. ตัวเลือกรวมถึง:
+    - **Image URL(s)**: ระบุ URL ของภาพที่ต้องการวิเคราะห์ โดยสามารถคั่นด้วยเครื่องหมายจุลภาคสำหรับหลาย URL.
+    - **Binary File(s)**: ระบุชื่อ property แบบ binary ที่มีภาพใน **Input Data Field Name**.
 
 ### Options
 
-- **Detail**: Specify the balance between response time versus token usage. 
-- **Length of Description (Max Tokens)**: Defaults to 300. Fewer tokens will result in shorter, less detailed image description.
+- **Detail**: ระบุสมดุลระหว่างเวลาในการตอบกลับกับการใช้ token.
+- **Length of Description (Max Tokens)**: ค่าเริ่มต้นคือ 300. จำนวน token ที่น้อยลงจะให้คำอธิบายภาพสั้นกว่าและมีรายละเอียดน้อยลง.
 
-Refer to [Images | OpenAI](https://platform.openai.com/docs/api-reference/images){:target=_blank .external-link} documentation for more information.
+ดูรายละเอียดเพิ่มเติมที่ [Images | OpenAI](https://platform.openai.com/docs/api-reference/images){:target=_blank .external-link}.
 
 ## Generate an Image
 

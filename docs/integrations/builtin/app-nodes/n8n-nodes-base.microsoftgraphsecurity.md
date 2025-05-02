@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Microsoft Graph Security node
 
-Use the Microsoft Graph Security node to automate work in Microsoft Graph Security, and integrate Microsoft Graph Security with other applications. n8n has built-in support for a wide range of Microsoft Graph Security features, including getting, and updating scores, and profiles. 
+ใช้ Microsoft Graph Security node ในการทำงานอัตโนมัติใน Microsoft Graph Security และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ โดย n8n รองรับการดึงและอัปเดต scores และ profiles.
 
-On this page, you'll find a list of operations the Microsoft Graph Security node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Microsoft Graph Security node รองรับและลิงก์ไปยังข้อมูลเพิ่มเติม.
 
 /// note | Credentials
-Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft.md) for guidance on setting up authentication.
+ดู [Microsoft credentials](/integrations/builtin/credentials/microsoft.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations

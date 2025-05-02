@@ -8,12 +8,12 @@ priority: medium
 
 # Google Docs node
 
-Use the Google Docs node to automate work in Google Docs, and integrate Google Docs with other applications. n8n has built-in support for a wide range of Google Docs features, including creating, updating, and getting documents. 
+ใช้ Google Docs node เพื่อทำงานอัตโนมัติใน Google Docs และเชื่อมต่อ Google Docs กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Google Docs หลายอย่าง เช่น การสร้าง อัปเดต และดึงข้อมูล documents
 
-On this page, you'll find a list of operations the Google Docs node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Google Docs node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Google Docs credentials](/integrations/builtin/credentials/google/index.md) for guidance on setting up authentication. 
+โปรดดู [Google Docs credentials](/integrations/builtin/credentials/google/index.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

@@ -8,61 +8,58 @@ priority: critical
 
 # Read/Write Files from Disk
 
-Use the Read/Write Files from Disk node to read and write files from/to the machine where n8n is running.
+ใช้ Read/Write Files from Disk node เพื่ออ่านหรือเขียนไฟล์จาก/ไปยังเครื่องที่รัน n8n อยู่
 
 /// note | Self-hosted n8n only
-This node isn't available on n8n Cloud.
+node นี้ใช้ได้เฉพาะกับ n8n แบบ self-hosted เท่านั้น
 ///
 
 ## Operations
 
-- [**Read File(s) From Disk**](#read-files-from-disk): Use this operation to retrieve one or more files from the computer that runs n8n.
-- [**Write File to Disk**](#write-file-to-disk): Use this operation to create a binary file on the computer that runs n8n.
+- [**Read File(s) From Disk**](#read-files-from-disk): ใช้ operation นี้เพื่อดึงไฟล์หนึ่งไฟล์หรือหลายไฟล์จากเครื่องที่รัน n8n
+- [**Write File to Disk**](#write-file-to-disk): ใช้ operation นี้เพื่อสร้างไฟล์ binary บนเครื่องที่รัน n8n
 
-Refer to the sections below for more information on configuring the node for each operation.
+ดูรายละเอียดการตั้งค่าแต่ละ operation ได้ในหัวข้อด้านล่าง
 
 ## Read File(s) From Disk
 
-Configure this operation with these parameters:
+ตั้งค่า operation นี้ด้วย parameter เหล่านี้:
 
-* **File(s) Selector**: Enter the path of the file you want to read.
-	- To enter multiple files, enter a page path pattern. You can use these characters to define a path pattern:
-		- `*`: Matches any character zero or more times, excluding path separators.
-		- `**`: Matches any character zero or more times, include path separators.
-		- `?`: Matches any character except for path separators one time.
-		- `[]`: Matches any characters inside the brackets. For example, `[abc]` would match the characters `a`, `b`, or `c`, and nothing else.
+* **File(s) Selector**: กรอก path ของไฟล์ที่ต้องการอ่าน
+	- ถ้าต้องการอ่านหลายไฟล์ ให้กรอก pattern ของ path โดยสามารถใช้ตัวอักษรพิเศษเหล่านี้:
+		- `*`: ตรงกับอักขระใด ๆ ศูนย์ตัวหรือมากกว่า ยกเว้น path separator
+		- `**`: ตรงกับอักขระใด ๆ ศูนย์ตัวหรือมากกว่า รวม path separator ด้วย
+		- `?`: ตรงกับอักขระใด ๆ ยกเว้น path separator หนึ่งตัว
+		- `[]`: ตรงกับอักขระใด ๆ ที่อยู่ในวงเล็บ ตัวอย่างเช่น `[abc]` จะตรงกับ `a`, `b` หรือ `c` เท่านั้น
 
-Refer to [Picomatch's Basic globbing](https://github.com/micromatch/picomatch#basic-globbing){:target=_blank .external-link} documentation for more information on these characters and their expected behavior.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับ pattern ได้ที่ [Picomatch's Basic globbing](https://github.com/micromatch/picomatch#basic-globbing){:target=_blank .external-link}
 
 ### Read File(s) From Disk options
 
-You can also configure this operation with these **Options**:
+สามารถตั้งค่า option เพิ่มเติมได้ดังนี้:
 
-* **File Extension**: Enter the extension for the file in the node output.
-* **File Name**: Enter the name for the file in the node output.
-* **MIME Type**: Enter the file's MIME type in the node output. Refer to [Common MIME types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types){:target=_blank .external-link} for a list of file extensions and their MIME types.
-* **Put Output File in Field**: Enter the name of the field in the output data to contain the file.
+* **File Extension**: กรอกนามสกุลไฟล์ที่ต้องการให้แสดงใน output
+* **File Name**: กรอกชื่อไฟล์ที่ต้องการให้แสดงใน output
+* **MIME Type**: กรอก MIME type ของไฟล์ใน output ดูตัวอย่าง MIME type ได้ที่ [Common MIME types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types){:target=_blank .external-link}
+* **Put Output File in Field**: กรอกชื่อ field ใน output data ที่จะเก็บไฟล์
 
 ## Write File to Disk
 
-Configure this operation with these parameters:
+ตั้งค่า operation นี้ด้วย parameter เหล่านี้:
 
-* **File Path and Name**: Enter the destination for the file, the file's name, and the file's extension.
-* **Input Binary Field**: Enter the name of the field in the node input data that will contain the binary file.
+* **File Path and Name**: กรอก path ปลายทาง ชื่อไฟล์ และนามสกุลไฟล์
+* **Input Binary Field**: กรอกชื่อ field ใน input data ที่จะเก็บไฟล์ binary
 
 ### Write File to Disk options
 
-You can also configure this operation with these **Options**:
-
-This operation includes a single option, whether to **Append** data to an existing file instead of creating a new one (turned on) or to create a new file instead of appending to existing (turned off).
+operation นี้จะมี option ให้เลือกเพียงอย่างเดียว คือ **Append** เลือกว่าจะเพิ่มข้อมูลเข้าไฟล์เดิม (เปิด) หรือสร้างไฟล์ใหม่แทน (ปิด)
 
 ## Templates and examples
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
 [[ templatesWidget(page.title, 'readwrite-files-from-disk') ]]
 
 ## File locations
 
-If you run n8n in Docker, your command runs in the n8n container and not the Docker host.
+ถ้าคุณรัน n8n ใน Docker คำสั่งจะถูกรันใน container ของ n8n ไม่ใช่บน host ของ Docker
 
-This node looks for files relative to the n8n install path. n8n recommends using absolute file paths to prevent any errors.
+node นี้จะมองหาไฟล์โดยอิงจาก path ที่ติดตั้ง n8n แนะนำให้ใช้ absolute path เพื่อป้องกัน error

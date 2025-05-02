@@ -8,218 +8,218 @@ priority: critical
 
 # Google Sheets Sheet Within Document operations
 
-Use this operation to create, update, clear or delete a sheet in a Google spreadsheet from Google Sheets. Refer to [Google Sheets](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/index.md) for more information on the Google Sheets node itself.
+ใช้ operation นี้เพื่อสร้าง, อัปเดต, ล้างข้อมูล หรือลบ sheet ใน Google spreadsheet จาก Google Sheets อ้างอิงถึง [Google Sheets](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/index.md) สำหรับข้อมูลเพิ่มเติมเกี่ยวกับ Google Sheets node
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Append or Update Row
 
-Use this operation to update an existing row or add a new row at the end of the data if a matching entry isn't found in a sheet. 
+ใช้ operation นี้เพื่ออัปเดตแถวที่มีอยู่ หรือเพิ่มแถวใหม่ต่อท้ายข้อมูล หากไม่พบรายการที่ตรงกันใน sheet
 
-Enter these parameters:
+ป้อน parameters เหล่านี้:
 
-- **Credential to connect with**: Create or select an existing [Google Sheets credentials](/integrations/builtin/credentials/google/index.md).
-- **Resource**: Select **Sheet Within Document**.
-- **Operation**: Select **Append or Update Row**.
-- **Document**: Choose a spreadsheet that contains the sheet you want to append or update row(s) to. 
-    - Select **From list** to choose the spreadsheet title from the dropdown list, **By URL** to enter the url of the spreadsheet, or **By ID** to enter the `spreadsheetId`. 
-    - You can find the `spreadsheetId` in a Google Sheets URL: `https://docs.google.com/spreadsheets/d/spreadsheetId/edit#gid=0`.
-- **Sheet**: Choose a sheet you want to append or update row(s) to. 
-    - Select **From list** to choose the sheet title from the dropdown list, **By URL** to enter the url of the sheet, **By ID** to enter the `sheetId`, or **By Name** to enter the sheet title. 
-    - You can find the `sheetId` in a Google Sheets URL: `https://docs.google.com/spreadsheets/d/aBC-123_xYz/edit#gid=sheetId`.
-- **Mapping Column Mode**: 
-	- **Map Each Column Manually**: Enter **Values to Send** for each column.
-	- **Map Automatically**: n8n looks for incoming data that matches the columns in Google Sheets automatically. In this mode, make sure the incoming data fields are the same as the columns in Google Sheets. (Use an [Edit Fields](/integrations/builtin/core-nodes/n8n-nodes-base.set.md) node before this node to change them if required.)
-    - **Nothing**: Don't map any data.
+- **Credential to connect with**: สร้างหรือเลือก [Google Sheets credentials](/integrations/builtin/credentials/google/index.md) ที่มีอยู่
+- **Resource**: เลือก **Sheet Within Document**
+- **Operation**: เลือก **Append or Update Row**
+- **Document**: เลือก spreadsheet ที่มี sheet ที่คุณต้องการเพิ่มหรืออัปเดตแถว
+    - เลือก **From list** เพื่อเลือกชื่อ spreadsheet จากรายการดรอปดาวน์, **By URL** เพื่อป้อน URL ของ spreadsheet, หรือ **By ID** เพื่อป้อน `spreadsheetId`
+    - คุณสามารถหา `spreadsheetId` ได้ใน URL ของ Google Sheets: `https://docs.google.com/spreadsheets/d/spreadsheetId/edit#gid=0`
+- **Sheet**: เลือก sheet ที่คุณต้องการเพิ่มหรืออัปเดตแถว
+    - เลือก **From list** เพื่อเลือกชื่อ sheet จากรายการดรอปดาวน์, **By URL** เพื่อป้อน URL ของ sheet, **By ID** เพื่อป้อน `sheetId`, หรือ **By Name** เพื่อป้อนชื่อ sheet
+    - คุณสามารถหา `sheetId` ได้ใน URL ของ Google Sheets: `https://docs.google.com/spreadsheets/d/aBC-123_xYz/edit#gid=sheetId`
+- **Mapping Column Mode**:
+	- **Map Each Column Manually**: ป้อน **Values to Send** สำหรับแต่ละคอลัมน์
+	- **Map Automatically**: n8n จะค้นหาข้อมูลขาเข้าที่ตรงกับคอลัมน์ใน Google Sheets โดยอัตโนมัติ ในโหมดนี้ ตรวจสอบให้แน่ใจว่าฟิลด์ข้อมูลขาเข้าเหมือนกับคอลัมน์ใน Google Sheets (ใช้ [Edit Fields](/integrations/builtin/core-nodes/n8n-nodes-base.set.md) node ก่อนหน้า node นี้เพื่อเปลี่ยนแปลงหากจำเป็น)
+    - **Nothing**: ไม่ต้อง map ข้อมูลใดๆ
 
 ### Options
 --8<-- "_snippets/integrations/builtin/app-nodes/googlesheets/node-options.md"
 
-Refer to the [Method: spreadsheets.values.update | Google Sheets](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/update){:target=_blank .external-link} API documentation for more information.
+อ้างอิงถึงเอกสาร API [Method: spreadsheets.values.update | Google Sheets](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/update){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 
 ## Append Row
 
-Use this operation to append a new row at the end of the data in a sheet. 
+ใช้ operation นี้เพื่อเพิ่มแถวใหม่ต่อท้ายข้อมูลใน sheet
 
-Enter these parameters:
+ป้อน parameters เหล่านี้:
 
-- **Credential to connect with**: Create or select an existing [Google Sheets credentials](/integrations/builtin/credentials/google/index.md).
-- **Resource**: Select **Sheet Within Document**.
-- **Operation**: Select **Append Row**.
-- **Document**: Choose a spreadsheet with the sheet you want to append a row to. 
-    - Select **From list** to choose the spreadsheet title from the dropdown list, **By URL** to enter the url of the spreadsheet, or **By ID** to enter the `spreadsheetId`. 
-    - You can find the `spreadsheetId` in a Google Sheets URL: `https://docs.google.com/spreadsheets/d/spreadsheetId/edit#gid=0`.
-- **Sheet**: Choose a sheet you want to append a row to. 
-    - Select **From list** to choose the sheet title from the dropdown list, **By URL** to enter the url of the sheet, **By ID** to enter the `sheetId`, or **By Name** to enter the sheet title. 
-    - You can find the `sheetId` in a Google Sheets URL: `https://docs.google.com/spreadsheets/d/aBC-123_xYz/edit#gid=sheetId`. 
-- **Mapping Column Mode**: 
-	- **Map Each Column Manually**: Select the **Column to Match On** when finding the rows to update. Enter **Values to Send** for each column.
-	- **Map Automatically**: n8n looks for incoming data that matches the columns in Google Sheets automatically. In this mode, make sure the incoming data fields are the same as the columns in Google Sheets. (Use an [Edit Fields](/integrations/builtin/core-nodes/n8n-nodes-base.set.md) node before this node to change them if required.)
-    - **Nothing**: Don't map any data.
+- **Credential to connect with**: สร้างหรือเลือก [Google Sheets credentials](/integrations/builtin/credentials/google/index.md) ที่มีอยู่
+- **Resource**: เลือก **Sheet Within Document**
+- **Operation**: เลือก **Append Row**
+- **Document**: เลือก spreadsheet ที่มี sheet ที่คุณต้องการเพิ่มแถว
+    - เลือก **From list** เพื่อเลือกชื่อ spreadsheet จากรายการดรอปดาวน์, **By URL** เพื่อป้อน URL ของ spreadsheet, หรือ **By ID** เพื่อป้อน `spreadsheetId`
+    - คุณสามารถหา `spreadsheetId` ได้ใน URL ของ Google Sheets: `https://docs.google.com/spreadsheets/d/spreadsheetId/edit#gid=0`
+- **Sheet**: เลือก sheet ที่คุณต้องการเพิ่มแถว
+    - เลือก **From list** เพื่อเลือกชื่อ sheet จากรายการดรอปดาวน์, **By URL** เพื่อป้อน URL ของ sheet, **By ID** เพื่อป้อน `sheetId`, หรือ **By Name** เพื่อป้อนชื่อ sheet
+    - คุณสามารถหา `sheetId` ได้ใน URL ของ Google Sheets: `https://docs.google.com/spreadsheets/d/aBC-123_xYz/edit#gid=sheetId`
+- **Mapping Column Mode**:
+	- **Map Each Column Manually**: เลือก **Column to Match On** เมื่อค้นหาแถวที่จะอัปเดต ป้อน **Values to Send** สำหรับแต่ละคอลัมน์
+	- **Map Automatically**: n8n จะค้นหาข้อมูลขาเข้าที่ตรงกับคอลัมน์ใน Google Sheets โดยอัตโนมัติ ในโหมดนี้ ตรวจสอบให้แน่ใจว่าฟิลด์ข้อมูลขาเข้าเหมือนกับคอลัมน์ใน Google Sheets (ใช้ [Edit Fields](/integrations/builtin/core-nodes/n8n-nodes-base.set.md) node ก่อนหน้า node นี้เพื่อเปลี่ยนแปลงหากจำเป็น)
+    - **Nothing**: ไม่ต้อง map ข้อมูลใดๆ
 
 ### Options
 --8<-- "_snippets/integrations/builtin/app-nodes/googlesheets/node-options.md"
 
-Refer to the [Method: spreadsheets.values.append | Google Sheets](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/append){:target=_blank .external-link} API documentation for more information.
+อ้างอิงถึงเอกสาร API [Method: spreadsheets.values.append | Google Sheets](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/append){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 
 ## Clear a sheet
 
-Use this operation to clear all data from a sheet.
+ใช้ operation นี้เพื่อล้างข้อมูลทั้งหมดออกจาก sheet
 
-Enter these parameters:
+ป้อน parameters เหล่านี้:
 
-- **Credential to connect with**: Create or select an existing [Google Sheets credentials](/integrations/builtin/credentials/google/index.md).
-- **Resource**: Select **Sheet Within Document**.
-- **Operation**: Select **Clear**.
-- **Document**: Choose a spreadsheet with the sheet you want to clear data from.
-    - Select **From list** to choose the spreadsheet title from the dropdown list, **By URL** to enter the url of the spreadsheet, or **By ID** to enter the `spreadsheetId`. 
-    - You can find the `spreadsheetId` in a Google Sheets URL: `https://docs.google.com/spreadsheets/d/spreadsheetId/edit#gid=0`.
-- **Sheet**: Choose a sheet you want to clear data from. 
-    - Select **From list** to choose the sheet title from the dropdown list, **By URL** to enter the url of the sheet, **By ID** to enter the `sheetId`, or **By Name** to enter the sheet title. 
-    - You can find the `sheetId` in a Google Sheets URL: `https://docs.google.com/spreadsheets/d/aBC-123_xYz/edit#gid=sheetId`.
-- **Clear**: Select what data you want cleared from the sheet.
-    - **Whole Sheet**: Clear the entire sheet's data. Turn on **Keep First Row** to keep the first row of the sheet. 
-    - **Specific Rows**: Clear data from specific rows. Also enter:
-        - **Start Row Number**: Enter the first row number you want to clear.
-        - **Number of Rows to Delete**: Enter the number of rows to clear. `1` clears data only the row in the **Start Row Number**.
-    - **Specific Columns**: Clear data from specific columns. Also enter:
-        - **Start Column**: Enter the first column you want to clear using the letter notation.
-        - **Number of Columns to Delete**: Enter the number of columns to clear. `1` clears data only in the **Start Column**.
-    - **Specific Range**: Enter the table range to clear data from, in [A1 notation](https://developers.google.com/sheets/api/guides/concepts#cell){:target=_blank .external-link}.
+- **Credential to connect with**: สร้างหรือเลือก [Google Sheets credentials](/integrations/builtin/credentials/google/index.md) ที่มีอยู่
+- **Resource**: เลือก **Sheet Within Document**
+- **Operation**: เลือก **Clear**
+- **Document**: เลือก spreadsheet ที่มี sheet ที่คุณต้องการล้างข้อมูล
+    - เลือก **From list** เพื่อเลือกชื่อ spreadsheet จากรายการดรอปดาวน์, **By URL** เพื่อป้อน URL ของ spreadsheet, หรือ **By ID** เพื่อป้อน `spreadsheetId`
+    - คุณสามารถหา `spreadsheetId` ได้ใน URL ของ Google Sheets: `https://docs.google.com/spreadsheets/d/spreadsheetId/edit#gid=0`
+- **Sheet**: เลือก sheet ที่คุณต้องการล้างข้อมูล
+    - เลือก **From list** เพื่อเลือกชื่อ sheet จากรายการดรอปดาวน์, **By URL** เพื่อป้อน URL ของ sheet, **By ID** เพื่อป้อน `sheetId`, หรือ **By Name** เพื่อป้อนชื่อ sheet
+    - คุณสามารถหา `sheetId` ได้ใน URL ของ Google Sheets: `https://docs.google.com/spreadsheets/d/aBC-123_xYz/edit#gid=sheetId`
+- **Clear**: เลือกข้อมูลที่คุณต้องการล้างออกจาก sheet
+    - **Whole Sheet**: ล้างข้อมูลทั้ง sheet เปิด **Keep First Row** เพื่อเก็บแถวแรกของ sheet ไว้
+    - **Specific Rows**: ล้างข้อมูลจากแถวที่ระบุ ป้อนข้อมูลเพิ่มเติม:
+        - **Start Row Number**: ป้อนหมายเลขแถวแรกที่คุณต้องการล้าง
+        - **Number of Rows to Delete**: ป้อนจำนวนแถวที่ต้องการล้าง `1` จะล้างข้อมูลเฉพาะแถวใน **Start Row Number**
+    - **Specific Columns**: ล้างข้อมูลจากคอลัมน์ที่ระบุ ป้อนข้อมูลเพิ่มเติม:
+        - **Start Column**: ป้อนคอลัมน์แรกที่คุณต้องการล้างโดยใช้สัญกรณ์ตัวอักษร
+        - **Number of Columns to Delete**: ป้อนจำนวนคอลัมน์ที่ต้องการล้าง `1` จะล้างข้อมูลเฉพาะใน **Start Column**
+    - **Specific Range**: ป้อนช่วงตารางที่ต้องการล้างข้อมูลในรูปแบบ [A1 notation](https://developers.google.com/sheets/api/guides/concepts#cell){:target=_blank .external-link}
 
-Refer to the [Method: spreadsheets.values.clear | Google Sheets](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/clear){:target=_blank .external-link} API documentation for more information.
+อ้างอิงถึงเอกสาร API [Method: spreadsheets.values.clear | Google Sheets](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/clear){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 
 ## Create a new sheet
 
-Use this operation to create a new sheet. 
+ใช้ operation นี้เพื่อสร้าง sheet ใหม่
 
-Enter these parameters:
+ป้อน parameters เหล่านี้:
 
-- **Credential to connect with**: Create or select an existing [Google Sheets credentials](/integrations/builtin/credentials/google/index.md).
-- **Resource**: Select **Sheet Within Document**.
-- **Operation**: Select **Create**.
-- **Document**: Choose a spreadsheet in which you want to create a new sheet. 
-    - Select **From list** to choose the spreadsheet title from the dropdown list, **By URL** to enter the url of the spreadsheet, or **By ID** to enter the `spreadsheetId`. 
-    - You can find the `spreadsheetId` in a Google Sheets URL: `https://docs.google.com/spreadsheets/d/spreadsheetId/edit#gid=0`.
-- **Title**: Enter the title for your new sheet. 
+- **Credential to connect with**: สร้างหรือเลือก [Google Sheets credentials](/integrations/builtin/credentials/google/index.md) ที่มีอยู่
+- **Resource**: เลือก **Sheet Within Document**
+- **Operation**: เลือก **Create**
+- **Document**: เลือก spreadsheet ที่คุณต้องการสร้าง sheet ใหม่
+    - เลือก **From list** เพื่อเลือกชื่อ spreadsheet จากรายการดรอปดาวน์, **By URL** เพื่อป้อน URL ของ spreadsheet, หรือ **By ID** เพื่อป้อน `spreadsheetId`
+    - คุณสามารถหา `spreadsheetId` ได้ใน URL ของ Google Sheets: `https://docs.google.com/spreadsheets/d/spreadsheetId/edit#gid=0`
+- **Title**: ป้อนชื่อสำหรับ sheet ใหม่ของคุณ
 
 ### Options
 
-- **Hidden**: Turn on this option to keep the sheet hidden in the UI. 
-- **Right To Left**: Turn on this option to use RTL sheet instead of an LTR sheet. 
-- **Sheet ID**: Enter the ID of the sheet. 
-	- You can find the `sheetId` in a Google Sheets URL: `https://docs.google.com/spreadsheets/d/aBC-123_xYz/edit#gid=sheetId`
-- **Sheet Index**: By default, the new sheet is the last sheet in the spreadsheet. To override this behavior, enter the index you want the new sheet to use. When you add a sheet at a given index, Google increments the indices for all following sheets. Refer to [Sheets | SheetProperties](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/sheets#SheetProperties){:target=_blank .external-link} documentation for more information.
-- **Tab Color**: Enter the color as hex code or use the color picker to set the color of the tab in the UI. 
+- **Hidden**: เปิดตัวเลือกนี้เพื่อซ่อน sheet ใน UI
+- **Right To Left**: เปิดตัวเลือกนี้เพื่อใช้ sheet แบบ RTL แทน sheet แบบ LTR
+- **Sheet ID**: ป้อน ID ของ sheet
+	- คุณสามารถหา `sheetId` ได้ใน URL ของ Google Sheets: `https://docs.google.com/spreadsheets/d/aBC-123_xYz/edit#gid=sheetId`
+- **Sheet Index**: โดยค่าเริ่มต้น sheet ใหม่จะเป็น sheet สุดท้ายใน spreadsheet หากต้องการเปลี่ยนค่านี้ ให้ป้อน index ที่คุณต้องการให้ sheet ใหม่ใช้ เมื่อคุณเพิ่ม sheet ที่ index ที่กำหนด Google จะเพิ่ม indices สำหรับ sheet ทั้งหมดที่ตามมา อ้างอิงถึงเอกสาร [Sheets | SheetProperties](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/sheets#SheetProperties){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
+- **Tab Color**: ป้อนสีเป็นรหัส hex หรือใช้ตัวเลือกสีเพื่อตั้งค่าสีของแท็บใน UI
 
-Refer to the [Method: spreadsheets.batchUpdate | Google Sheets](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/batchUpdate){:target=_blank .external-link} API documentation for more information.
+อ้างอิงถึงเอกสาร API [Method: spreadsheets.batchUpdate | Google Sheets](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/batchUpdate){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 
 ## Delete a sheet
 
-Use this operation to permanently delete a sheet. 
+ใช้ operation นี้เพื่อลบ sheet อย่างถาวร
 
-Enter these parameters:
+ป้อน parameters เหล่านี้:
 
-- **Credential to connect with**: Create or select an existing [Google Sheets credentials](/integrations/builtin/credentials/google/index.md).
-- **Resource**: Select **Sheet Within Document**.
-- **Operation**: Select **Delete**.
-- **Document**: Choose a spreadsheet that contains the sheet you want to delete. 
-    - Select **From list** to choose the spreadsheet title from the dropdown list, **By URL** to enter the url of the spreadsheet, or **By ID** to enter the `spreadsheetId`. 
-    - You can find the `spreadsheetId` in a Google Sheets URL: `https://docs.google.com/spreadsheets/d/spreadsheetId/edit#gid=0`.
-- **Sheet**: Choose the sheet you want to delete. 
-    - Select **From list** to choose the sheet title from the dropdown list, **By URL** to enter the url of the sheet, **By ID** to enter the `sheetId`, or **By Name** to enter the name of the sheet.
-    - You can find the `sheetId` in a Google Sheets URL: `https://docs.google.com/spreadsheets/d/aBC-123_xYz/edit#gid=sheetId`. 
+- **Credential to connect with**: สร้างหรือเลือก [Google Sheets credentials](/integrations/builtin/credentials/google/index.md) ที่มีอยู่
+- **Resource**: เลือก **Sheet Within Document**
+- **Operation**: เลือก **Delete**
+- **Document**: เลือก spreadsheet ที่มี sheet ที่คุณต้องการลบ
+    - เลือก **From list** เพื่อเลือกชื่อ spreadsheet จากรายการดรอปดาวน์, **By URL** เพื่อป้อน URL ของ spreadsheet, หรือ **By ID** เพื่อป้อน `spreadsheetId`
+    - คุณสามารถหา `spreadsheetId` ได้ใน URL ของ Google Sheets: `https://docs.google.com/spreadsheets/d/spreadsheetId/edit#gid=0`
+- **Sheet**: เลือก sheet ที่คุณต้องการลบ
+    - เลือก **From list** เพื่อเลือกชื่อ sheet จากรายการดรอปดาวน์, **By URL** เพื่อป้อน URL ของ sheet, **By ID** เพื่อป้อน `sheetId`, หรือ **By Name** เพื่อป้อนชื่อของ sheet
+    - คุณสามารถหา `sheetId` ได้ใน URL ของ Google Sheets: `https://docs.google.com/spreadsheets/d/aBC-123_xYz/edit#gid=sheetId`
 
-Refer to the [Method: spreadsheets.batchUpdate | Google Sheets](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/batchUpdate){:target=_blank .external-link} API documentation for more information.
+อ้างอิงถึงเอกสาร API [Method: spreadsheets.batchUpdate | Google Sheets](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/batchUpdate){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 
 ## Delete Rows or Columns
 
-Use this operation to delete rows or columns in a sheet.
+ใช้ operation นี้เพื่อลบแถวหรือคอลัมน์ใน sheet
 
-Enter these parameters:
+ป้อน parameters เหล่านี้:
 
-- **Credential to connect with**: Create or select an existing [Google Sheets credentials](/integrations/builtin/credentials/google/index.md).
-- **Resource**: Select **Sheet Within Document**.
-- **Operation**: Select **Delete Rows or Columns**.
-- **Document**: Choose a spreadsheet that contains the sheet you want to delete rows or columns from. 
-    - Select **From list** to choose the spreadsheet title from the dropdown list, **By URL** to enter the url of the spreadsheet, or **By ID** to enter the `spreadsheetId`. 
-    - You can find the `spreadsheetId` in a Google Sheets URL: `https://docs.google.com/spreadsheets/d/spreadsheetId/edit#gid=0`.
-- **Sheet**: Choose the sheet in which you want to delete rows or columns.
-    - Select **From list** to choose the sheet title from the dropdown list, **By URL** to enter the url of the sheet, **By ID** to enter the `sheetId`, or **By Name** to enter the name of the sheet.
-    - You can find the `sheetId` in a Google Sheets URL: `https://docs.google.com/spreadsheets/d/aBC-123_xYz/edit#gid=sheetId`. 
-- **Start Row Number** or **Start Column**: Enter the row number or column letter to start deleting.
-- **Number of Rows to Delete** or **Number of Columns to delete**: Enter the number of rows or columns to delete. 
+- **Credential to connect with**: สร้างหรือเลือก [Google Sheets credentials](/integrations/builtin/credentials/google/index.md) ที่มีอยู่
+- **Resource**: เลือก **Sheet Within Document**
+- **Operation**: เลือก **Delete Rows or Columns**
+- **Document**: เลือก spreadsheet ที่มี sheet ที่คุณต้องการลบแถวหรือคอลัมน์
+    - เลือก **From list** เพื่อเลือกชื่อ spreadsheet จากรายการดรอปดาวน์, **By URL** เพื่อป้อน URL ของ spreadsheet, หรือ **By ID** เพื่อป้อน `spreadsheetId`
+    - คุณสามารถหา `spreadsheetId` ได้ใน URL ของ Google Sheets: `https://docs.google.com/spreadsheets/d/spreadsheetId/edit#gid=0`
+- **Sheet**: เลือก sheet ที่คุณต้องการลบแถวหรือคอลัมน์
+    - เลือก **From list** เพื่อเลือกชื่อ sheet จากรายการดรอปดาวน์, **By URL** เพื่อป้อน URL ของ sheet, **By ID** เพื่อป้อน `sheetId`, หรือ **By Name** เพื่อป้อนชื่อของ sheet
+    - คุณสามารถหา `sheetId` ได้ใน URL ของ Google Sheets: `https://docs.google.com/spreadsheets/d/aBC-123_xYz/edit#gid=sheetId`
+- **Start Row Number** หรือ **Start Column**: ป้อนหมายเลขแถวหรือตัวอักษรคอลัมน์เพื่อเริ่มลบ
+- **Number of Rows to Delete** หรือ **Number of Columns to delete**: ป้อนจำนวนแถวหรือคอลัมน์ที่ต้องการลบ
 
-Refer to the [Method: spreadsheets.batchUpdate | Google Sheets](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/batchUpdate){:target=_blank .external-link} API documentation for more information.
+อ้างอิงถึงเอกสาร API [Method: spreadsheets.batchUpdate | Google Sheets](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/batchUpdate){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 
 ## Get Row(s)
 
-Use this operation to read one or more rows from a sheet. 
+ใช้ operation นี้เพื่ออ่านหนึ่งแถวหรือมากกว่าจาก sheet
 
-Enter these parameters:
+ป้อน parameters เหล่านี้:
 
-- **Credential to connect with**: Create or select an existing [Google Sheets credentials](/integrations/builtin/credentials/google/index.md).
-- **Resource**: Select **Sheet Within Document**.
-- **Operation**: Select **Get Row(s)**.
-- **Document**: Choose a spreadsheet that contains the sheet you want to get rows from. 
-    - Select **From list** to choose the spreadsheet title from the dropdown list, **By URL** to enter the url of the spreadsheet, or **By ID** to enter the `spreadsheetId`. 
-    - You can find the `spreadsheetId` in a Google Sheets URL: `https://docs.google.com/spreadsheets/d/spreadsheetId/edit#gid=0`. 
-- **Sheet**: Choose a sheet you want to read rows from.
-    - Select **From list** to choose the sheet title from the dropdown list, **By URL** to enter the url of the sheet, **By ID** to enter the `sheetId`, or **By Name** to enter the name of the sheet.
-    - You can find the `sheetId` in a Google Sheets URL: `https://docs.google.com/spreadsheets/d/aBC-123_xYz/edit#gid=sheetId`.
-- **Filters**: By default, the node returns all rows in the sheet. Set filters to return a limited set of results: 
-  	- **Column**: Select the column in your sheet to search against.
-  	- **Value**: Enter a cell value to search for. You can drag input data parameters here.
-	If your filter matches multiple rows, n8n returns the first result. If you want all matching rows: 
-    	1. Under **Options**, select **Add Option** > **When Filter Has Multiple Matches**.
-        2. Change **When Filter Has Multiple Matches** to **Return All Matches**.
+- **Credential to connect with**: สร้างหรือเลือก [Google Sheets credentials](/integrations/builtin/credentials/google/index.md) ที่มีอยู่
+- **Resource**: เลือก **Sheet Within Document**
+- **Operation**: เลือก **Get Row(s)**
+- **Document**: เลือก spreadsheet ที่มี sheet ที่คุณต้องการดึงข้อมูลแถว
+    - เลือก **From list** เพื่อเลือกชื่อ spreadsheet จากรายการดรอปดาวน์, **By URL** เพื่อป้อน URL ของ spreadsheet, หรือ **By ID** เพื่อป้อน `spreadsheetId`
+    - คุณสามารถหา `spreadsheetId` ได้ใน URL ของ Google Sheets: `https://docs.google.com/spreadsheets/d/spreadsheetId/edit#gid=0`
+- **Sheet**: เลือก sheet ที่คุณต้องการอ่านข้อมูลแถว
+    - เลือก **From list** เพื่อเลือกชื่อ sheet จากรายการดรอปดาวน์, **By URL** เพื่อป้อน URL ของ sheet, **By ID** เพื่อป้อน `sheetId`, หรือ **By Name** เพื่อป้อนชื่อของ sheet
+    - คุณสามารถหา `sheetId` ได้ใน URL ของ Google Sheets: `https://docs.google.com/spreadsheets/d/aBC-123_xYz/edit#gid=sheetId`
+- **Filters**: โดยค่าเริ่มต้น node จะคืนค่าทุกแถวใน sheet ตั้งค่า filters เพื่อคืนค่าชุดผลลัพธ์ที่จำกัด:
+  	- **Column**: เลือกคอลัมน์ใน sheet ของคุณเพื่อใช้ค้นหา
+  	- **Value**: ป้อนค่า cell ที่ต้องการค้นหา คุณสามารถลาก parameters ข้อมูลขาเข้ามาที่นี่ได้
+	หาก filter ของคุณตรงกับหลายแถว n8n จะคืนค่าผลลัพธ์แรก หากคุณต้องการแถวที่ตรงกันทั้งหมด:
+    	1. ใต้ **Options**, เลือก **Add Option** > **When Filter Has Multiple Matches**
+        2. เปลี่ยน **When Filter Has Multiple Matches** เป็น **Return All Matches**
 
 ### Options
 
-- **Data Location on Sheet**: Use this option to specify a data range. By default, n8n will detect the range automatically until the last row in the sheet. 
-- **Output Formatting**: Use this option to choose how n8n formats the data returned by Google Sheets.
-  - **General Formatting**: 
-    - **Values (unformatted)** (default): n8n removes currency signs and other special formatting. Data type remains as number.
-    - **Values (formatted)**: n8n displays the values as they appear in Google Sheets (for example, retaining commas or currency signs) by converting the data type from number to string.
-    - **Formulas**: n8n returns the formula. It doesn't calculate the formula output. For example, if a cell B2 has the formula `=A2`, n8n returns B2's value as `=A2` (in text). Refer to [About date & time values | Google Sheets](https://developers.google.com/sheets/api/guides/formats#about_date_time_values){:target=_blank .external-link} for more information. 
-  - **Date Formatting**: Refer to [DateTimeRenderOption | Google Sheets](https://developers.google.com/sheets/api/reference/rest/v4/DateTimeRenderOption){:target=_blank .external-link} for more information.
-     	- **Formatted Text** (default): As displayed in Google Sheets, which depends on the spreadsheet locale. For example `01/01/2024`.
-     	- **Serial Number**: Number of days since  December 30th 1899. 
-- **When Filter Has Multiple Matches**: Set to **Return All Matches** to get multiple matches. By default only the first result gets returned. 
+- **Data Location on Sheet**: ใช้ตัวเลือกนี้เพื่อระบุช่วงข้อมูล โดยค่าเริ่มต้น n8n จะตรวจจับช่วงโดยอัตโนมัติจนถึงแถวสุดท้ายใน sheet
+- **Output Formatting**: ใช้ตัวเลือกนี้เพื่อเลือกว่า n8n จะจัดรูปแบบข้อมูลที่คืนค่าโดย Google Sheets อย่างไร
+  - **General Formatting**:
+    - **Values (unformatted)** (ค่าเริ่มต้น): n8n จะลบสัญลักษณ์สกุลเงินและการจัดรูปแบบพิเศษอื่นๆ ประเภทข้อมูลยังคงเป็นตัวเลข
+    - **Values (formatted)**: n8n จะแสดงค่าตามที่ปรากฏใน Google Sheets (เช่น คงเครื่องหมายจุลภาคหรือสัญลักษณ์สกุลเงินไว้) โดยการแปลงประเภทข้อมูลจากตัวเลขเป็นสตริง
+    - **Formulas**: n8n จะคืนค่าสูตร ไม่คำนวณผลลัพธ์ของสูตร ตัวอย่างเช่น หากเซลล์ B2 มีสูตร `=A2`, n8n จะคืนค่าของ B2 เป็น `=A2` (ในรูปแบบข้อความ) อ้างอิงถึง [About date & time values | Google Sheets](https://developers.google.com/sheets/api/guides/formats#about_date_time_values){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
+  - **Date Formatting**: อ้างอิงถึง [DateTimeRenderOption | Google Sheets](https://developers.google.com/sheets/api/reference/rest/v4/DateTimeRenderOption){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
+     	- **Formatted Text** (ค่าเริ่มต้น): ตามที่แสดงใน Google Sheets ซึ่งขึ้นอยู่กับ locale ของ spreadsheet ตัวอย่างเช่น `01/01/2024`
+     	- **Serial Number**: จำนวนวันนับตั้งแต่วันที่ 30 ธันวาคม 1899
+- **When Filter Has Multiple Matches**: ตั้งค่าเป็น **Return All Matches** เพื่อรับผลลัพธ์ที่ตรงกันหลายรายการ โดยค่าเริ่มต้นจะคืนค่าเฉพาะผลลัพธ์แรกเท่านั้น
 
 /// note | First row
-n8n treats the first row in a Google Sheet as a heading row, and doesn't return it when reading all rows. If you want to read the first row, use the **Options** to set **Data Location on Sheet**.
+n8n ถือว่าแถวแรกใน Google Sheet เป็นแถวหัวเรื่อง และจะไม่คืนค่าเมื่ออ่านทุกแถว หากคุณต้องการอ่านแถวแรก ให้ใช้ **Options** เพื่อตั้งค่า **Data Location on Sheet**
 ///
 
-Refer to the [Method: spreadsheets.batchUpdate | Google Sheets](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/batchUpdate){:target=_blank .external-link} API documentation for more information.
+อ้างอิงถึงเอกสาร API [Method: spreadsheets.batchUpdate | Google Sheets](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/batchUpdate){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 
 ## Update Row
 
-Use this operation to update existing row in a sheet. This operation only updates existing rows. To append rows when a matching entry isn't found in a sheet, use **Append or Update Row** operation instead.
+ใช้ operation นี้เพื่ออัปเดตแถวที่มีอยู่ใน sheet operation นี้จะอัปเดตเฉพาะแถวที่มีอยู่เท่านั้น หากต้องการเพิ่มแถวเมื่อไม่พบรายการที่ตรงกันใน sheet ให้ใช้ operation **Append or Update Row** แทน
 
-Enter these parameters:
+ป้อน parameters เหล่านี้:
 
-- **Credential to connect with**: Create or select an existing [Google Sheets credentials](/integrations/builtin/credentials/google/index.md).
-- **Resource**: Select **Sheet Within Document**.
-- **Operation**: Select **Update Row**.
-- **Document**: Choose a spreadsheet with the sheet you want to update. 
-    - Select **From list** to choose the spreadsheet title from the dropdown list, **By URL** to enter the url of the spreadsheet, or **By ID** to enter the `spreadsheetId`. 
-    - You can find the `spreadsheetId` in a Google Sheets URL: `https://docs.google.com/spreadsheets/d/spreadsheetId/edit#gid=0`.
-- **Sheet**: Choose a sheet you want to update. 
-    - Select **From list** to choose the sheet title from the dropdown list, **By URL** to enter the url of the sheet, **By ID** to enter the `sheetId`, or **By Name** to enter the sheet title. 
-    - You can find the `sheetId` in a Google Sheets URL: `https://docs.google.com/spreadsheets/d/aBC-123_xYz/edit#gid=sheetId`.
-- **Mapping Column Mode**: 
-	- **Map Each Column Manually**: Enter **Values to Send** for each column.
-	- **Map Automatically**: n8n looks for incoming data that matches the columns in Google Sheets automatically. In this mode, make sure the incoming data fields are the same as the columns in Google Sheets. (Use an [Edit Fields](/integrations/builtin/core-nodes/n8n-nodes-base.set.md) node before this node to change them if required.)
-    - **Nothing**: Don't map any data.
+- **Credential to connect with**: สร้างหรือเลือก [Google Sheets credentials](/integrations/builtin/credentials/google/index.md) ที่มีอยู่
+- **Resource**: เลือก **Sheet Within Document**
+- **Operation**: เลือก **Update Row**
+- **Document**: เลือก spreadsheet ที่มี sheet ที่คุณต้องการอัปเดต
+    - เลือก **From list** เพื่อเลือกชื่อ spreadsheet จากรายการดรอปดาวน์, **By URL** เพื่อป้อน URL ของ spreadsheet, หรือ **By ID** เพื่อป้อน `spreadsheetId`
+    - คุณสามารถหา `spreadsheetId` ได้ใน URL ของ Google Sheets: `https://docs.google.com/spreadsheets/d/spreadsheetId/edit#gid=0`
+- **Sheet**: เลือก sheet ที่คุณต้องการอัปเดต
+    - เลือก **From list** เพื่อเลือกชื่อ sheet จากรายการดรอปดาวน์, **By URL** เพื่อป้อน URL ของ sheet, **By ID** เพื่อป้อน `sheetId`, หรือ **By Name** เพื่อป้อนชื่อ sheet
+    - คุณสามารถหา `sheetId` ได้ใน URL ของ Google Sheets: `https://docs.google.com/spreadsheets/d/aBC-123_xYz/edit#gid=sheetId`
+- **Mapping Column Mode**:
+	- **Map Each Column Manually**: ป้อน **Values to Send** สำหรับแต่ละคอลัมน์
+	- **Map Automatically**: n8n จะค้นหาข้อมูลขาเข้าที่ตรงกับคอลัมน์ใน Google Sheets โดยอัตโนมัติ ในโหมดนี้ ตรวจสอบให้แน่ใจว่าฟิลด์ข้อมูลขาเข้าเหมือนกับคอลัมน์ใน Google Sheets (ใช้ [Edit Fields](/integrations/builtin/core-nodes/n8n-nodes-base.set.md) node ก่อนหน้า node นี้เพื่อเปลี่ยนแปลงหากจำเป็น)
+    - **Nothing**: ไม่ต้อง map ข้อมูลใดๆ
 
 ### Options
 
-- **Cell Format**: Use this option to choose how to format the data in cells. Refer to [Google Sheets API | CellFormat](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/cells#CellFormat){:target=_blank .external-link} for more information.
-    - **Let Google Sheets format** (default): n8n formats text and numbers in the cells according to Google Sheets' default settings. 
-    - **Let n8n format**: New cells in your sheet will have the same data types as the input data provided by n8n.
-- **Data Location on Sheet**: Use this option when you need to specify where the data range on your sheet.
-    - **Header Row**: Specify the row index that contains the column headers.
-    - **First Data Row**: Specify the row index where the actual data starts.
-  
-Refer to the [Method: spreadsheets.batchUpdate | Google Sheets](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/batchUpdate){:target=_blank .external-link} API documentation for more information.
+- **Cell Format**: ใช้ตัวเลือกนี้เพื่อเลือกว่าจะจัดรูปแบบข้อมูลในเซลล์อย่างไร อ้างอิงถึง [Google Sheets API | CellFormat](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/cells#CellFormat){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
+    - **Let Google Sheets format** (ค่าเริ่มต้น): n8n จะจัดรูปแบบข้อความและตัวเลขในเซลล์ตามการตั้งค่าเริ่มต้นของ Google Sheets
+    - **Let n8n format**: เซลล์ใหม่ใน sheet ของคุณจะมีประเภทข้อมูลเหมือนกับข้อมูลขาเข้าที่ n8n ให้มา
+- **Data Location on Sheet**: ใช้ตัวเลือกนี้เมื่อคุณต้องการระบุตำแหน่งช่วงข้อมูลบน sheet ของคุณ
+    - **Header Row**: ระบุ index ของแถวที่มีส่วนหัวของคอลัมน์
+    - **First Data Row**: ระบุ index ของแถวที่ข้อมูลจริงเริ่มต้น
+
+อ้างอิงถึงเอกสาร API [Method: spreadsheets.batchUpdate | Google Sheets](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/batchUpdate){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม

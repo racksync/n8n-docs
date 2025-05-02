@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Netlify node
 
-Use the Netlify node to automate work in Netlify, and integrate Netlify with other applications. n8n has built-in support for a wide range of Netlify features, including getting and cancelling deployments, as well as deleting, and getting sites. 
+ใช้ Netlify node เพื่อทำงานอัตโนมัติใน Netlify และเชื่อมต่อกับแอปอื่น ๆ. n8n รองรับฟีเจอร์ของ Netlify เช่น การดึงและยกเลิก deployments รวมถึงการลบและดึงข้อมูล sites
 
-On this page, you'll find a list of operations the Netlify node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Netlify node รองรับ พร้อมลิงก์สำหรับข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [Netlify credentials](/integrations/builtin/credentials/netlify.md) for guidance on setting up authentication. 
+ดู [Netlify credentials](/integrations/builtin/credentials/netlify.md) เพื่อดูวิธีการตั้งค่า authentication
 ///
 
 ## Operations

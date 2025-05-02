@@ -1,61 +1,60 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Local File Trigger node documentation
-description: Learn how to use the Local File Trigger node in n8n. Follow technical documentation to integrate Local File Trigger node into your workflows.
+description: เรียนรู้วิธีการใช้ Local File Trigger node ใน n8n ทำตามเอกสารทางเทคนิคเพื่อรวม Local File Trigger node เข้ากับ workflow ของคุณ
 contentType: [integration, reference]
 priority: high
 ---
 
 # Local File Trigger node
 
-The Local File Trigger node starts a workflow when it detects changes on the file system. These changes involve a file or folder getting added, changed, or deleted.
+Local File Trigger node จะเริ่ม workflow เมื่อมีการเปลี่ยนแปลงใน file system เช่น มีไฟล์หรือโฟลเดอร์ถูกเพิ่ม เปลี่ยนแปลง หรือลบ
 
 /// note | Self-hosted n8n only
-This node isn't available on n8n Cloud.
+node นี้ใช้ได้เฉพาะบน n8n ที่ติดตั้งเองเท่านั้น (ไม่รองรับบน n8n Cloud)
 ///
 
 ## Node parameters
 
-You can choose what event to watch for using the **Trigger On** parameter.
+คุณสามารถเลือก event ที่ต้องการตรวจจับได้โดยใช้ parameter **Trigger On**
 
 ## Changes to a Specific File
 
-The node triggers when the specified file changes.
+node จะ trigger เมื่อไฟล์ที่ระบุมีการเปลี่ยนแปลง
 
-Enter the path for the file to watch in **File to Watch**.
+ใส่ path ของไฟล์ที่ต้องการตรวจสอบใน **File to Watch**
 
 ## Changes Involving a Specific Folder
 
-The node triggers when a change occurs in the selected folder.
+node จะ trigger เมื่อมีการเปลี่ยนแปลงในโฟลเดอร์ที่เลือก
 
-Configure these parameters:
+ตั้งค่า parameter เหล่านี้:
 
-- **Folder to Watch**: Enter the path of the folder to watch.
-- **Watch for**: Select the type of change to watch for.
-
+- **Folder to Watch**: ใส่ path ของโฟลเดอร์ที่ต้องการตรวจสอบ
+- **Watch for**: เลือกประเภทของการเปลี่ยนแปลงที่ต้องการตรวจสอบ
 
 ## Node options
 
-Use the node **Options** to include or exclude files and folders.
+ใช้ **Options** ของ node เพื่อกำหนดว่าจะรวม/ยกเว้นไฟล์หรือโฟลเดอร์ใดบ้าง
 
-- **Include Linked Files/Folders**: also watch for changes to linked files or folders.
-- **Ignore**: files or paths to ignore. n8n tests the whole path, not just the filename. Supports the [Anymatch](https://github.com/micromatch/anymatch){:target=_blank .external-link} syntax.
-- **Max Folder Depth**: how deep into the folder structure to watch for changes.
+- **Include Linked Files/Folders**: ตรวจสอบการเปลี่ยนแปลงของไฟล์หรือโฟลเดอร์ที่ลิงก์ด้วย
+- **Ignore**: ใส่ไฟล์หรือ path ที่ต้องการยกเว้น n8n จะตรวจสอบทั้ง path ไม่ใช่แค่ชื่อไฟล์ รองรับ syntax ของ [Anymatch](https://github.com/micromatch/anymatch){:target=_blank .external-link}
+- **Max Folder Depth**: กำหนดความลึกสูงสุดของโฟลเดอร์ที่จะตรวจสอบการเปลี่ยนแปลง
 
 ### Examples for Ignore
 
-Ignore a single file:
+ยกเว้นไฟล์เดียว:
 
 ```sh
 **/<fileName>.<suffix>
-# For example, **/myfile.txt
+# ตัวอย่าง **/myfile.txt
 ```
 
-Ignore a sub-directory of a directory you're watching:
+ยกเว้น sub-directory ของโฟลเดอร์ที่กำลังตรวจสอบ:
 
 ```sh
 **/<directoryName>/**
-# For example, **/myDirectory/**
+# ตัวอย่าง **/myDirectory/**
 ```
 
 ## Templates and examples

@@ -8,12 +8,12 @@ priority: medium
 
 # Microsoft Teams node
 
-Use the Microsoft Teams node to automate work in Microsoft Teams, and integrate Microsoft Teams with other applications. n8n has built-in support for a wide range of Microsoft Teams features, including creating and deleting, channels, messages, and tasks. 
+ใช้ Microsoft Teams node ในการทำงานอัตโนมัติใน Microsoft Teams และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ โดย n8n รองรับฟีเจอร์ต่าง ๆ เช่น การสร้างและลบ channels, messages และ tasks.
 
-On this page, you'll find a list of operations the Microsoft Teams node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Microsoft Teams node รองรับและลิงก์ไปยังข้อมูลเพิ่มเติม.
 
 /// note | Credentials
-Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft.md) for guidance on setting up authentication.
+ดู [Microsoft credentials](/integrations/builtin/credentials/microsoft.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

@@ -1,19 +1,19 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: GitLab node documentation
-description: Learn how to use the GitLab node in n8n. Follow technical documentation to integrate GitLab node into your workflows.
+description: เรียนรู้วิธีการใช้ GitLab node ใน n8n อ่านเอกสารทางเทคนิคเพื่อรวม GitLab node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 priority: medium
 ---
 
 # GitLab node
 
-Use the GitLab node to automate work in GitLab, and integrate GitLab with other applications. n8n has built-in support for a wide range of GitLab features, including creating, updating, deleting, and editing issues, repositories, releases and users. 
+ใช้ GitLab node เพื่อทำงานอัตโนมัติใน GitLab และเชื่อมต่อ GitLab กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ GitLab หลายอย่าง เช่น การสร้าง อัปเดต ลบ และแก้ไข issues, repositories, releases และ users
 
-On this page, you'll find a list of operations the GitLab node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ GitLab node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [GitLab credentials](/integrations/builtin/credentials/gitlab.md) for guidance on setting up authentication. 
+โปรดดู [GitLab credentials](/integrations/builtin/credentials/gitlab.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
@@ -51,9 +51,9 @@ Refer to [GitLab credentials](/integrations/builtin/credentials/gitlab.md) for g
 
 ## Related resources
 
-Refer to [GitLab's documentation](https://docs.gitlab.com/ee/api/rest/){:target=_blank .external-link} for more information about the service.
+โปรดดู [GitLab's documentation](https://docs.gitlab.com/ee/api/rest/){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
-n8n provides a trigger node for GitLab. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.gitlabtrigger.md).
+n8n มี trigger node สำหรับ GitLab คุณสามารถค้นหาเอกสาร trigger node ได้ [ที่นี่](/integrations/builtin/trigger-nodes/n8n-nodes-base.gitlabtrigger.md)
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

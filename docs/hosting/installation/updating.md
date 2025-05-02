@@ -12,13 +12,13 @@ hide:
 
 # Update self-hosted n8n
 
-It's important to keep your n8n version up to date. This ensures you get the latest features and fixes.
+การอัปเดต n8n ให้เป็นเวอร์ชันล่าสุดอยู่เสมอเป็นเรื่องสำคัญ เพื่อให้คุณได้รับฟีเจอร์ใหม่ๆ และการแก้ไขบั๊กต่างๆ
 
-Some tips when updating:
+ทิปเล็กๆ น้อยๆ เวลาจะอัปเดต:
 
 --8<-- "_snippets/manage-cloud/updating-best-practices.md"
 
-For instructions on how to update, refer to the documentation for your installation method:
+ถ้าต้องการดูวิธีอัปเดต ให้ดูเอกสารตามวิธีที่คุณติดตั้งไว้:
 
 * [Installed with npm](/hosting/installation/npm.md)
 * [Installed with Docker](/hosting/installation/docker.md)

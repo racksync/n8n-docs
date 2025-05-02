@@ -7,15 +7,15 @@ contentType: [integration, reference]
 
 # Webex by Cisco node
 
-Use the Webex by Cisco node to automate work in Webex, and integrate Webex with other applications. n8n has built-in support for a wide range of Webex features, including creating, getting, updating, and deleting meetings and messages.
+ใช้ Webex by Cisco node เพื่อทำงานอัตโนมัติใน Webex และ integrate Webex กับแอปพลิเคชันอื่นๆ n8n มีการรองรับในตัวสำหรับฟีเจอร์ต่างๆ ของ Webex รวมถึงการสร้าง, ดึง, อัปเดต, และลบ meetings และ messages
 
-On this page, you'll find a list of operations the Webex node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Webex node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [Webex credentials](/integrations/builtin/credentials/ciscowebex.md) for guidance on setting up authentication. 
+อ้างอิง [Webex credentials](/integrations/builtin/credentials/ciscowebex.md) สำหรับคำแนะนำในการตั้งค่า authentication
 ///
 /// note | Examples and Templates
-For usage examples and templates to help you get started, take a look at n8n's [Webex integrations](https://n8n.io/integrations/webex-by-cisco/){:target=_blank .external-link} list.
+สำหรับตัวอย่างการใช้งานและ templates เพื่อช่วยให้คุณเริ่มต้น โปรดดูรายการ [Webex integrations](https://n8n.io/integrations/webex-by-cisco/){:target=_blank .external-link} ของ n8n
 ///
 
 ## Operations

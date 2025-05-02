@@ -8,12 +8,12 @@ priority: medium
 
 # Pipedrive node
 
-Use the Pipedrive node to automate work in Pipedrive, and integrate Pipedrive with other applications. n8n has built-in support for a wide range of Pipedrive features, including creating, updating, deleting, and getting activity, files, notes, organizations, and leads. 
+ใช้ Pipedrive node เพื่อช่วยทำงานใน Pipedrive แบบอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันอื่น ๆ. n8n มีการสนับสนุนคุณสมบัติของ Pipedrive หลากหลาย เช่น การสร้าง, อัปเดต, ลบ และดึงข้อมูล activity, files, notes, organizations และ leads.
 
-On this page, you'll find a list of operations the Pipedrive node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการของ operations ที่ Pipedrive node รองรับและลิงก์สำหรับข้อมูลเพิ่มเติม.
 
 /// note | Credentials
-Refer to [Pipedrive credentials](/integrations/builtin/credentials/pipedrive.md) for guidance on setting up authentication. 
+ดูรายละเอียดเพิ่มเติมได้ที่ [Pipedrive credentials](/integrations/builtin/credentials/pipedrive.md) สำหรับคำแนะนำในการตั้งค่า authentication. 
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

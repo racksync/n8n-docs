@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Plivo node
 
-Use the Plivo node to automate work in Plivo, and integrate Plivo with other applications. n8n has built-in support for a wide range of Plivo features, including making calls, and sending SMS/MMS. 
+ใช้ Plivo node เพื่อช่วยทำงานใน Plivo แบบอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันอื่น ๆ. n8n มีการสนับสนุนคุณสมบัติของ Plivo หลากหลาย เช่น การโทรออกและการส่ง SMS/MMS.
 
-On this page, you'll find a list of operations the Plivo node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการของ operations ที่ Plivo node รองรับและลิงก์สำหรับข้อมูลเพิ่มเติม.
 
 /// note | Credentials
-Refer to [Plivo credentials](/integrations/builtin/credentials/plivo.md) for guidance on setting up authentication. 
+ดูรายละเอียดเพิ่มเติมได้ที่ [Plivo credentials](/integrations/builtin/credentials/plivo.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations

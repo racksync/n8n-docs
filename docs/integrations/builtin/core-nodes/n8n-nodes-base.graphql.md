@@ -8,7 +8,7 @@ priority: medium
 
 # GraphQL
 
-[GraphQL](https://graphql.org/){:target=_blank .external-link} is an open-source data query and manipulation language for APIs, and a runtime for fulfilling queries with existing data. Use the GraphQL node to query a GraphQL endpoint.
+[GraphQL](https://graphql.org/){:target=_blank .external-link} เป็นภาษา query และ runtime สำหรับ API แบบ open-source ใช้สำหรับดึงและแก้ไขข้อมูลจาก endpoint ที่รองรับ GraphQL ใช้ GraphQL node เพื่อ query endpoint แบบ GraphQL
 
 ## Node parameters
 
@@ -16,50 +16,49 @@ priority: medium
 
 ### Authentication
 
-Select the type of authentication to use.
+เลือกประเภท authentication ที่ต้องการใช้
 
-If you select anything other than **None**, the **Credential for <selected-auth-type>** parameter appears for you to select an existing or create a new authentication credential for that authentication type.
+ถ้าเลือกอย่างอื่นที่ไม่ใช่ **None** จะมี parameter **Credential for <selected-auth-type>** ให้เลือกหรือสร้าง credential สำหรับ authentication นั้น
 
 ### HTTP Request Method
 
-Select the underlying HTTP Request method the node should use. Choose from:
+เลือก HTTP Request method ที่ node จะใช้ มีให้เลือก:
 
 * **GET**
-* **POST**: If you select this method, you'll also need to select the **Request Format** the node should use for the query payload. Choose from:
+* **POST**: ถ้าเลือก POST ต้องเลือก **Request Format** สำหรับ query payload มีให้เลือก:
     * **GraphQL (Raw)**
     * **JSON**
 
 ### Endpoint
 
-Enter the GraphQL Endpoint you'd like to hit.
+กรอก GraphQL Endpoint ที่ต้องการเชื่อมต่อ
 
 ### Ignore SSL Issues
 
-When you turn on this control, n8n ignores SSL certificate validation failure.
+ถ้าเปิด option นี้ n8n จะไม่ตรวจสอบ SSL certificate
 
 ### Query
 
-Enter the GraphQL query you want to execute.
+กรอก GraphQL query ที่ต้องการรัน
 
-Refer to [Related Resources](#related-resources) for information on writing your query.
+ดูข้อมูลการเขียน query เพิ่มเติมได้ที่ [Related Resources](#related-resources)
 
 ### Response Format
 
-Select the format you'd like to receive query results in. Choose between:
+เลือก format ที่ต้องการรับผลลัพธ์ query มีให้เลือก:
 
 * **JSON**
-* **String**: If you select this format, enter a **Response Data Property Name** to define the property the string is written to.
+* **String**: ถ้าเลือกแบบนี้ ให้กรอก **Response Data Property Name** เพื่อกำหนด property ที่จะเก็บ string
 
 ## Headers
 
-Enter any **Headers** you want to pass as part of the query as **Name** / **Value** pairs.
+กรอก **Headers** ที่ต้องการส่งไปกับ query เป็นคู่ **Name** / **Value**
 
 ## Templates and examples
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
 [[ templatesWidget(page.title, 'graphql') ]]
 
 ## Related resources
 
-To use the GraphQL node, you need to understand GraphQL query language. GraphQL have their own [Introduction to GraphQL](https://graphql.org/learn/){:target=_blank .external-link} tutorial.
+ถ้าจะใช้ GraphQL node ควรเข้าใจภาษา query ของ GraphQL ดู tutorial ได้ที่ [Introduction to GraphQL](https://graphql.org/learn/){:target=_blank .external-link}
 

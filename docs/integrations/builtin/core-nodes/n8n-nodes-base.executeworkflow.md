@@ -8,42 +8,42 @@ priority: high
 
 # Execute Sub-workflow
 
-Use the Execute Sub-workflow node to run a different workflow on the host machine that runs n8n.
+ใช้ Execute Sub-workflow node เพื่อรัน workflow อื่นบนเครื่องที่รัน n8n
 
 ## Node parameters
 
 ### Source
 
-Select where the node should get the sub-workflow's information from:
+เลือกแหล่งข้อมูลของ sub-workflow ที่จะรัน:
 
-- **Database**: Select this option to load the workflow from the database by ID. You must also enter either:
-	- **From list**: Select the workflow from a list of workflows available to your account.
-	- **Workflow ID**: Enter the ID for the workflow. The URL of the workflow contains the ID after `/workflow/`. For example, if the URL of a workflow is `https://my-n8n-acct.app.n8n.cloud/workflow/abCDE1f6gHiJKL7`, the **Workflow ID** is `abCDE1f6gHiJKL7`.
-- **Local File**: Select this option to load the workflow from a locally saved JSON file. You must also enter:
-	- **Workflow Path**: Enter the path to the local JSON workflow file you want the node to execute.
-- **Parameter**: Select this option to load the workflow from a parameter. You must also enter:
-	- **Workflow JSON**: Enter the JSON code you want the node to execute.
-- **URL**: Select this option to load the workflow from a URL. You must also enter:
-	- **Workflow URL**: Enter the URL you want to load the workflow from.
+- **Database**: โหลด workflow จาก database โดยใช้ ID ต้องกรอกอย่างใดอย่างหนึ่ง:
+	- **From list**: เลือก workflow จาก list ที่มีใน account
+	- **Workflow ID**: ใส่ ID ของ workflow ดูได้จาก URL หลัง `/workflow/` เช่น `https://my-n8n-acct.app.n8n.cloud/workflow/abCDE1f6gHiJKL7` **Workflow ID** คือ `abCDE1f6gHiJKL7`
+- **Local File**: โหลด workflow จากไฟล์ JSON ที่บันทึกไว้ในเครื่อง ต้องกรอก:
+	- **Workflow Path**: ใส่ path ของไฟล์ workflow JSON ที่ต้องการรัน
+- **Parameter**: โหลด workflow จาก parameter ต้องกรอก:
+	- **Workflow JSON**: ใส่ JSON code ที่ต้องการรัน
+- **URL**: โหลด workflow จาก URL ต้องกรอก:
+	- **Workflow URL**: ใส่ URL ที่ต้องการโหลด workflow
 
 ### Workflow Inputs
 
-If you select a sub-workflow using the **database** and **From list** options, the sub-workflow's input items will automatically display, ready for you to fill in or map values.
+ถ้าเลือก sub-workflow แบบ **database** และ **From list** input items ของ sub-workflow จะโชว์ให้กรอกหรือ map ค่าได้
 
-You can optionally remove requested input items, in which case the sub-workflow receives `null` as the item's value. You can also enable **Attempt to convert types** to try to automatically convert data to the sub-workflow item's requested type.
+สามารถลบ input item ที่ไม่ต้องการได้ ถ้าลบ sub-workflow จะได้ค่า `null` สำหรับ item นั้นๆ สามารถเปิด **Attempt to convert types** เพื่อให้ n8n พยายามแปลง type ให้ตรงกับที่ sub-workflow ต้องการ
 
-Input items won't appear if the sub-workflow's Workflow Input Trigger node uses the "Accept all data" input data mode.
+input item จะไม่โชว์ถ้า sub-workflow ใช้ Workflow Input Trigger node แบบ "Accept all data"
 
 ### Mode
 
-Use this parameter to control the execution mode for the node. Choose from these options:
+parameter นี้ควบคุม mode การรัน node เลือกได้:
 
-- **Run once with all items**: Pass all input items into a single execution of the node.
-- **Run once for each item**: Execute the node once for each input item in turn.
+- **Run once with all items**: ส่ง input ทั้งหมดไปรันใน execution เดียว
+- **Run once for each item**: รัน node ทีละรอบสำหรับแต่ละ input
 
 ## Node options
 
-This node includes one option: **Wait for Sub-Workflow Completion**. This lets you control whether the main workflow should wait for the sub-workflow's completion before moving on to the next step (turned on) or whether the main workflow should continue without waiting (turned off).
+node นี้มี option เดียวคือ **Wait for Sub-Workflow Completion** เลือกได้ว่า workflow หลักจะรอ sub-workflow รันเสร็จก่อนค่อยไปขั้นต่อไป (เปิด) หรือจะไปต่อเลยโดยไม่รอ (ปิด)
 
 ## Templates and examples
 
@@ -52,10 +52,9 @@ This node includes one option: **Wait for Sub-Workflow Completion**. This lets y
 
 ## Set up and use a sub-workflow
 
-This section walks through setting up both the parent workflow and sub-workflow.
+ส่วนนี้อธิบายการตั้งค่า parent workflow และ sub-workflow
 
 --8<-- "_snippets/flow-logic/subworkflow-usage.md"
-
 
 ## How data passes between workflows
 

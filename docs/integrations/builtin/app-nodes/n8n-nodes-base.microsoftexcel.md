@@ -8,12 +8,12 @@ priority: high
 
 # Microsoft Excel 365 node
 
-Use the Microsoft Excel node to automate work in Microsoft Excel, and integrate Microsoft Excel with other applications. n8n has built-in support for a wide range of Microsoft Excel features, including adding and retrieving lists of table data, and workbooks, as well as getting worksheets. 
+ใช้ Microsoft Excel node ในการทำงานอัตโนมัติใน Microsoft Excel และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ โดย n8n รองรับการจัดการ table data, workbooks และ worksheets.
 
-On this page, you'll find a list of operations the Microsoft Excel node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Microsoft Excel node รองรับและลิงก์ไปยังข้อมูลเพิ่มเติม.
 
 /// note | Credentials
-Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft.md) for guidance on setting up authentication.
+ดู [Microsoft credentials](/integrations/builtin/credentials/microsoft.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

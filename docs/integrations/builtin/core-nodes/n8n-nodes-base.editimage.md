@@ -8,55 +8,55 @@ priority: medium
 
 # Edit Image
 
-Use the Edit Image node to manipulate and edit images.
+ใช้ Edit Image node เพื่อปรับแต่งและแก้ไขรูปภาพ
 
 /// note | Dependencies
-1. If you aren't running n8n on Docker, you need to install [GraphicsMagick](http://www.graphicsmagick.org/README.html){:target=_blank .external-link}.
-2. You need to use a node such as the [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md) node or the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) node to pass the image file as a data property to the Edit Image node.
+1. ถ้าไม่ได้รัน n8n บน Docker ต้องติดตั้ง [GraphicsMagick](http://www.graphicsmagick.org/README.html)
+2. ต้องใช้ node เช่น [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md) หรือ [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) เพื่อส่งไฟล์รูปภาพเป็น data property ให้ Edit Image node
 ///
 
 ## Operations
 
-- Add a **Blur** to the image to reduce sharpness
-- Add a **Border** to the image
-- **Composite** an image on top of another image
-- **Create** a new image
-- **Crop** the image
-- **Draw** on an image
-- **Get Information** about the image
-- **Multi Step** perform multiple operations on the image
-- **Resize**: Change the size of the image
-- **Rotate** the image
-- **Shear** image along the X or Y axis
-- Add **Text** to the image
-- Make a color in image **Transparent**
+- **Blur** ภาพเพื่อลดความคมชัด
+- **Border** เพิ่มขอบให้ภาพ
+- **Composite** วางภาพซ้อนบนอีกภาพ
+- **Create** สร้างภาพใหม่
+- **Crop** ตัดภาพ
+- **Draw** วาดบนภาพ
+- **Get Information** ดูข้อมูลของภาพ
+- **Multi Step** ทำหลาย operation กับภาพในครั้งเดียว
+- **Resize**: เปลี่ยนขนาดภาพ
+- **Rotate** หมุนภาพ
+- **Shear** เอียงภาพตามแกน X หรือ Y
+- **Text** ใส่ข้อความบนภาพ
+- **Transparent** ทำให้สีในภาพโปร่งใส
 
 ## Node parameters
 
-The parameters for this node depend on the operation you select.
+parameter ของ node จะขึ้นอยู่กับ operation ที่เลือก
 
 ### Blur parameters
 
-* **Property Name**: Enter the name of the binary property that stores the image data.
-* **Blur**: Enter a number to set how strong the blur should be, between 0 and 1000. Higher numbers create blurrier images.
-* **Sigma**: Enter a number to set the stigma for the blur, between 0 and 1000. Higher numbers create blurrier images.
+* **Property Name**: ใส่ชื่อ binary property ที่เก็บข้อมูลภาพ
+* **Blur**: ใส่ตัวเลขกำหนดความเบลอ 0-1000 ยิ่งมากยิ่งเบลอ
+* **Sigma**: ใส่ตัวเลขกำหนด sigma สำหรับ blur 0-1000 ยิ่งมากยิ่งเบลอ
 
-Refer to [Node options](#node-options) for optional configuration options.
+ดู [Node options](#node-options) สำหรับ option เพิ่มเติม
 
 ### Border parameters
 
-* **Property Name**: Enter the name of the binary property that stores the image data.
-* **Border Width**: Enter the width of the border.
-* **Border Height**: Enter the height of the border.
-* **Border Color**: Set the color for the border. You can either enter a hex or select the color swatch to open a color picker.
+* **Property Name**: ใส่ชื่อ binary property ที่เก็บข้อมูลภาพ
+* **Border Width**: ใส่ความกว้างขอบ
+* **Border Height**: ใส่ความสูงขอบ
+* **Border Color**: เลือกสีขอบ ใส่ hex หรือเลือกจาก color picker
 
-Refer to [Node options](#node-options) for optional configuration options.
+ดู [Node options](#node-options) สำหรับ option เพิ่มเติม
 
 ### Composite parameters
 
-* **Property Name**: Enter the name of the binary property that stores the image data. This image is your base image.
-* **Composite Image Property**: Enter the name of the binary property that stores image to composite on top of the **Property Name** image.
-* **Operator**: Select composite operator, which determines how the composite works. Options include:
+* **Property Name**: ใส่ชื่อ binary property ของภาพหลัก
+* **Composite Image Property**: ใส่ชื่อ binary property ของภาพที่จะวางซ้อน
+* **Operator**: เลือก composite operator เช่น:
 	* **Add**
 	* **Atop**
 	* **Bumpmap**
@@ -79,113 +79,113 @@ Refer to [Node options](#node-options) for optional configuration options.
 	* **Plus**
 	* **Subtract**
 	* **Xor**
-* **Position X**: Enter the x axis position (horizontal) of the composite image.
-* **Position Y**: Enter the y axis position (vertical) of the composite image.
+* **Position X**: ใส่ตำแหน่งแนวนอนของภาพซ้อน
+* **Position Y**: ใส่ตำแหน่งแนวตั้งของภาพซ้อน
 
-Refer to [Node options](#node-options) for optional configuration options.
+ดู [Node options](#node-options) สำหรับ option เพิ่มเติม
 
 ### Create parameters
 
-* **Property Name**: Enter the name of the binary property that stores the image data.
-* **Background Color**: Set the background color for the image. You can either enter a hex or select the color swatch to open a color picker.
-* **Image Width**: Enter the width of the image.
-* **Image Height**: Enter the height of the image.
+* **Property Name**: ใส่ชื่อ binary property ที่เก็บข้อมูลภาพ
+* **Background Color**: เลือกสีพื้นหลัง ใส่ hex หรือเลือกจาก color picker
+* **Image Width**: ใส่ความกว้างภาพ
+* **Image Height**: ใส่ความสูงภาพ
 
-Refer to [Node options](#node-options) for optional configuration options.
+ดู [Node options](#node-options) สำหรับ option เพิ่มเติม
 
 ### Crop parameters
 
-* **Property Name**: Enter the name of the binary property that stores the image data.
-* **Width**: Enter the width you'd like to crop to.
-* **Height**: Enter the height you'd like to crop to.
-* **Position X**: Enter the x axis position (horizontal) to start the crop from.
-* **Position Y**: Enter the y axis position (vertical) to start the crop from.
+* **Property Name**: ใส่ชื่อ binary property ที่เก็บข้อมูลภาพ
+* **Width**: ใส่ความกว้างที่ต้องการ crop
+* **Height**: ใส่ความสูงที่ต้องการ crop
+* **Position X**: ใส่ตำแหน่งแนวนอนเริ่ม crop
+* **Position Y**: ใส่ตำแหน่งแนวตั้งเริ่ม crop
 
-Refer to [Node options](#node-options) for optional configuration options.
+ดู [Node options](#node-options) สำหรับ option เพิ่มเติม
 
 ### Draw parameters
 
-* **Property Name**: Enter the name of the binary property that stores the image data.
-* **Primitive**: Select the primitive shape to draw. Choose from:
+* **Property Name**: ใส่ชื่อ binary property ที่เก็บข้อมูลภาพ
+* **Primitive**: เลือกรูปทรงที่จะวาด เช่น:
 	* **Circle**
 	* **Line**
 	* **Rectangle**
-* **Color**: Set the color for the primitive. You can either enter a hex or select the color swatch to open a color picker.
-* **Start Position X**: Enter the x axis position (horizontal) to start drawing from.
-* **Start Position Y**: Enter the y axis position (vertical) to start drawing from.
-* **End Position X**: Enter the x axis position (horizontal) to stop drawing at.
-* **End Position Y**: Enter the y axis position (vertical) to start drawing at.
-* **Corner Radius**: Enter a number to set the corner radius. Adding a corner radius will round the corners of the drawn primitive.
+* **Color**: เลือกสี ใส่ hex หรือเลือกจาก color picker
+* **Start Position X**: ตำแหน่งแนวนอนเริ่มวาด
+* **Start Position Y**: ตำแหน่งแนวตั้งเริ่มวาด
+* **End Position X**: ตำแหน่งแนวนอนหยุดวาด
+* **End Position Y**: ตำแหน่งแนวตั้งหยุดวาด
+* **Corner Radius**: ใส่เลขกำหนดความโค้งมุม
 
-Refer to [Node options](#node-options) for optional configuration options.
+ดู [Node options](#node-options) สำหรับ option เพิ่มเติม
 
 ### Get Information parameters
 
-For this operation, you only need to add the **Property Name** of the binary property that stores the image data.
+operation นี้แค่ใส่ **Property Name** ของ binary property ที่เก็บข้อมูลภาพ
 
-Refer to [Node options](#node-options) for optional configuration options.
+ดู [Node options](#node-options) สำหรับ option เพิ่มเติม
 
 ### Multi Step parameters
 
-* **Property Name**: Enter the name of the binary property that stores the image data.
-* **Operations**: Add the operations you want the multi step operation to perform. You can use any of the other operations.
+* **Property Name**: ใส่ชื่อ binary property ที่เก็บข้อมูลภาพ
+* **Operations**: เพิ่ม operation ที่ต้องการให้ multi step ทำ สามารถใช้ operation อื่นๆ ได้ทุกอัน
 
-Refer to [Node options](#node-options) for optional configuration options.
+ดู [Node options](#node-options) สำหรับ option เพิ่มเติม
 
 ### Resize parameters
 
-* **Property Name**: Enter the name of the binary property that stores the image data.
-* **Width**: Enter the new width you'd like for the image.
-* **Height**: Enter the new height you'd like for the image.
-* **Option**: Select how you'd like to resize the image. Choose from:
-	* **Ignore Aspect Ratio**: Ignore the aspect ratio and resize to the exact height and width you've entered.
-	* **Maximum Area**: The height and width you've entered is the maximum area/size for the image. The image maintains its aspect ratio and won't be larger than the height and/or width you've entered.
-	* **Minimum Area**: The height and width you've entered is the minimum area/size for the image. The image maintains its aspect ratio and won't be smaller than the height and/or width you've entered.
-	* **Only if Larger**: Resize the image only if it's larger than the width and height you entered. The image maintains its aspect ratio.
-	* **Only if Smaller**: Resize the image only if it's smaller than the width and height you entered. The image maintains its aspect ratio.
-	* **Percent**: Resize the image using the width and height as percentages of the original image.
+* **Property Name**: ใส่ชื่อ binary property ที่เก็บข้อมูลภาพ
+* **Width**: ใส่ความกว้างใหม่
+* **Height**: ใส่ความสูงใหม่
+* **Option**: เลือกวิธี resize เช่น:
+	* **Ignore Aspect Ratio**
+	* **Maximum Area**
+	* **Minimum Area**
+	* **Only if Larger**
+	* **Only if Smaller**
+	* **Percent**
 
-Refer to [Node options](#node-options) for optional configuration options.
+ดู [Node options](#node-options) สำหรับ option เพิ่มเติม
 
 ### Rotate parameters
 
-* **Property Name**: Enter the name of the binary property that stores the image data.
-* **Rotate**: Enter the number of degrees to rotate the image, from --360 to 360.
-* **Background Color**: Set the background color for the image. You can either enter a hex or select the color swatch to open a color picker. This color is used to fill in the empty background whenever the image is rotated by multiples of 90 degrees. If multipled of 90 degrees are used for the **Rotate** field, the background color isn't used.
+* **Property Name**: ใส่ชื่อ binary property ที่เก็บข้อมูลภาพ
+* **Rotate**: ใส่จำนวนองศาที่ต้องการหมุน --360 ถึง 360
+* **Background Color**: เลือกสีพื้นหลัง ใส่ hex หรือเลือกจาก color picker สีนี้จะเติมพื้นหลังเวลาหมุนภาพที่ไม่ใช่ 90 องศา ถ้าหมุนทีละ 90 องศา สีนี้จะไม่ถูกใช้
 
-Refer to [Node options](#node-options) for optional configuration options.
+ดู [Node options](#node-options) สำหรับ option เพิ่มเติม
 
 ### Shear parameters
 
-* **Property Name**: Enter the name of the binary property that stores the image data.
-* **Degrees X**: Enter the number of degrees to shear from the x axis.
-* **Degrees Y**: Enter the number of degrees to shear from the y axis.
+* **Property Name**: ใส่ชื่อ binary property ที่เก็บข้อมูลภาพ
+* **Degrees X**: ใส่องศาเอียงตามแกน x
+* **Degrees Y**: ใส่องศาเอียงตามแกน y
 
-Refer to [Node options](#node-options) for optional configuration options.
+ดู [Node options](#node-options) สำหรับ option เพิ่มเติม
 
 ### Text parameters
 
-* **Property Name**: Enter the name of the binary property that stores the image data.
-* **Text**: Enter the text you'd like to write on the image.
-* **Font Size**: Select the font size for the text.
-* **Font Color**: Set the font color. You can either enter a hex or select the color swatch to open a color picker.
-* **Position X**: Enter the x axis position (horizontal) to begin the text at.
-* **Position Y**: Enter the y axis position (vertical) to begin the text at.
-* **Max Line Length**: Enter the maximum amount of characters in a line before adding a line break.
+* **Property Name**: ใส่ชื่อ binary property ที่เก็บข้อมูลภาพ
+* **Text**: ใส่ข้อความที่ต้องการเขียนบนภาพ
+* **Font Size**: เลือกขนาด font
+* **Font Color**: เลือกสี font ใส่ hex หรือเลือกจาก color picker
+* **Position X**: ตำแหน่งแนวนอนเริ่มข้อความ
+* **Position Y**: ตำแหน่งแนวตั้งเริ่มข้อความ
+* **Max Line Length**: ใส่จำนวนตัวอักษรสูงสุดต่อบรรทัด
 
-Refer to [Node options](#node-options) for optional configuration options.
+ดู [Node options](#node-options) สำหรับ option เพิ่มเติม
 
 ### Transparent parameters
 
-* **Property Name**: Enter the name of the binary property that stores the image data.
-* **Color**: Set the color to make transparent. You can either enter a hex or select the color swatch to open a color picker.
+* **Property Name**: ใส่ชื่อ binary property ที่เก็บข้อมูลภาพ
+* **Color**: เลือกสีที่จะทำให้โปร่งใส ใส่ hex หรือเลือกจาก color picker
 
-Refer to [Node options](#node-options) for optional configuration options.
+ดู [Node options](#node-options) สำหรับ option เพิ่มเติม
 
 ## Node options
 
-- **File Name**: Enter the filename of the output file.
-- **Format**: Enter the image format of the output file. Choose from:
+- **File Name**: ใส่ชื่อไฟล์ output
+- **Format**: เลือก format ของไฟล์ output เช่น:
 	- **bmp**
 	- **gif**
 	- **jpeg**
@@ -193,7 +193,7 @@ Refer to [Node options](#node-options) for optional configuration options.
 	- **tiff**
 	- **WebP**
 
-The **Text** operation also includes the option for **Font Name or ID**. Select the text font from the dropdown or specify an ID using an [expression](/code/expressions.md).
+operation **Text** จะมี option **Font Name or ID** เพิ่ม สามารถเลือก font จาก dropdown หรือใส่ ID ด้วย [expression](/code/expressions.md)
 
 ## Templates and examples
 

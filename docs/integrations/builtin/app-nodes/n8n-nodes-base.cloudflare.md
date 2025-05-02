@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Cloudflare node
 
-Use the Cloudflare node to automate work in Cloudflare, and integrate Cloudflare with other applications. n8n has built-in support for a wide range of Cloudflare features, including deleting, getting, and uploading zone certificates.
+ใช้ Cloudflare node เพื่อทำงานอัตโนมัติใน Cloudflare และ integrate Cloudflare กับแอปพลิเคชันอื่นๆ n8n มีการรองรับในตัวสำหรับฟีเจอร์ต่างๆ ของ Cloudflare รวมถึงการลบ, ดึง, และอัปโหลด zone certificates
 
-On this page, you'll find a list of operations the Cloudflare node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Cloudflare node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [Cloudflare  credentials](/integrations/builtin/credentials/cloudflare.md) for guidance on setting up authentication. 
+อ้างอิง [Cloudflare credentials](/integrations/builtin/credentials/cloudflare.md) สำหรับคำแนะนำในการตั้งค่า authentication
 ///
 
 ## Operations
@@ -30,7 +30,7 @@ Refer to [Cloudflare  credentials](/integrations/builtin/credentials/cloudflare.
 
 ## Related resources
 
-Refer to [Cloudflare's API documentation on zone-level authentication](https://api.cloudflare.com/#zone-level-authenticated-origin-pulls-properties){:target=_blank .external-link} for more information on this service.
+อ้างอิง [Cloudflare's API documentation on zone-level authentication](https://api.cloudflare.com/#zone-level-authenticated-origin-pulls-properties){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับ service นี้
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

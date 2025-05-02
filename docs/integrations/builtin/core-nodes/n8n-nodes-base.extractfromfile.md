@@ -8,33 +8,33 @@ priority: high
 
 # Extract From File
 
-A common pattern in n8n workflows is to receive a file, either from and [HTTP Request node][] (for files you are fetching from a website), a [Webhook Node][] (for files which are sent to your workflow from elsewhere), or from a local source. Data obtained in this way is often in a binary format, for example a spreadsheet or PDF.
+workflow ใน n8n มักจะรับไฟล์เข้ามา ไม่ว่าจะจาก [HTTP Request node][] (สำหรับไฟล์ที่ดึงจากเว็บ), [Webhook Node][] (สำหรับไฟล์ที่ส่งมาจากที่อื่น) หรือจาก local source ข้อมูลที่ได้มามักเป็น binary format เช่น spreadsheet หรือ PDF
 
-The Extract From File node extracts data from a binary format file and converts it to JSON, which can then be easily manipulated by the rest of your workflow. For converting JSON back into a binary file type, please see the [Convert to File](/integrations/builtin/core-nodes/n8n-nodes-base.converttofile.md) node.
+Extract From File node จะ extract ข้อมูลจากไฟล์ binary format แล้วแปลงเป็น JSON เพื่อให้ workflow จัดการต่อได้ง่าย ถ้าอยากแปลง JSON กลับเป็น binary file ดูที่ [Convert to File](/integrations/builtin/core-nodes/n8n-nodes-base.converttofile.md) node
 
 ## Operations
 
-Use the **Operations** drop-down to select the format of the source file to extract data from.
+เลือก **Operations** เพื่อระบุ format ของไฟล์ต้นทางที่จะ extract ข้อมูล
 
-- **Extract From CSV**: The "Comma Separated Values" file type is commonly used for tabulated data.
-- **Extract From HTML**: Extract fields from standard web page HTML format files.
-- **Extract From JSON**: Extract JSON data from a binary file.
-- **Extract From ICS**: Extract fields from iCalendar format files.
-- **Extract From ODS**: Extract fields from ODS spreadsheet files.
-- **Extract From PDF**: Extract fields from Portable Document Format files.
-- **Extract From RTF**: Extract fields from Rich Text Format files.
-- **Extract From Text File**: Extract fields from a standard text file format.
-- **Extract From XLS**: Extract fields from a Microsoft Excel file (older format).
-- **Extract From XLSX**: Extract fields from a Microsoft Excel file.
-- **Move File to Base64 String**: Converts binary data to a text-friendly [base64][] format.
+- **Extract From CSV**: ไฟล์ Comma Separated Values ใช้สำหรับข้อมูลตาราง
+- **Extract From HTML**: extract field จากไฟล์ HTML
+- **Extract From JSON**: extract JSON data จาก binary file
+- **Extract From ICS**: extract field จากไฟล์ iCalendar
+- **Extract From ODS**: extract field จากไฟล์ ODS spreadsheet
+- **Extract From PDF**: extract field จากไฟล์ PDF
+- **Extract From RTF**: extract field จากไฟล์ Rich Text Format
+- **Extract From Text File**: extract field จากไฟล์ text ธรรมดา
+- **Extract From XLS**: extract field จากไฟล์ Excel (format เก่า)
+- **Extract From XLSX**: extract field จากไฟล์ Excel
+- **Move File to Base64 String**: แปลง binary data เป็น [base64][] string
 
 ## Example workflow
 
-In this example, a Webhook node is used to trigger the workflow. When a CSV file is sent to the webhook address, the file data is output and received by the Extract From File node.
+ตัวอย่างนี้ใช้ Webhook node เป็น trigger เมื่อมีไฟล์ CSV ส่งมาที่ webhook address ข้อมูลไฟล์จะถูกส่งต่อให้ Extract From File node
 
 [[ workflowDemo("file:///integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile/webhook-example.json") ]]
 
-Set to operate as 'Extract from CSV', the node then outputs the data as a series of JSON 'row' objects:
+ตั้งค่าเป็น 'Extract from CSV' node จะ output ข้อมูลเป็น JSON 'row' object:
 
 ```
 {
@@ -48,20 +48,20 @@ Set to operate as 'Extract from CSV', the node then outputs the data as a series
 ```
 
 /// tip | Receiving files with a webhook
-Select the Webhook Node's **Add Options** button and select **Raw body**, then enable that setting to get the node to output the binary file that the subsequent node is expecting.
+เลือก **Add Options** ของ Webhook Node แล้วเปิด **Raw body** เพื่อให้ node ส่ง output เป็น binary file ที่ node ถัดไปต้องการ
 ///
 
 ## Node parameters
 
 ### Input Binary Field
 
-Enter the name of the field from the node input data that contains the binary file. The default is 'data'.
+ใส่ชื่อ field ใน input data ที่เก็บไฟล์ binary ค่า default คือ 'data'
 
 ### Destination Output Field
 
-Enter the name of the field in the node output that will contain the extracted data.
+ใส่ชื่อ field ใน output ที่จะเก็บข้อมูลที่ extract ได้
 
-This parameter is only available for these operations:
+parameter นี้ใช้ได้เฉพาะกับ operation เหล่านี้:
 
 - Extract From JSON
 - Extract From ICS

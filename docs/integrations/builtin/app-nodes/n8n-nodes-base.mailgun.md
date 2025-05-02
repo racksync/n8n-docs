@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Mailgun node
 
-Use the Mailgun node to automate work in Mailgun, and integrate Mailgun with other applications. n8n has built-in support for sending emails with Mailgun. 
+ใช้ Mailgun node ในการทำงานอัตโนมัติใน Mailgun และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ โดย n8n รองรับการส่ง emails ด้วย Mailgun.
 
-On this page, you'll find a list of operations the Mailgun node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Mailgun node รองรับและลิงก์ไปยังข้อมูลเพิ่มเติม.
 
 /// note | Credentials
-Refer to [Mailgun credentials](/integrations/builtin/credentials/mailgun.md) for guidance on setting up authentication. 
+ดู [Mailgun credentials](/integrations/builtin/credentials/mailgun.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

@@ -7,25 +7,25 @@ contentType: [integration, reference]
 
 # CoinGecko node
 
-Use the CoinGecko node to automate work in CoinGecko, and integrate CoinGecko with other applications. n8n has built-in support for a wide range of CoinGecko features, including getting coins and events.
+ใช้ CoinGecko node เพื่อทำงานอัตโนมัติใน CoinGecko และ integrate CoinGecko กับแอปพลิเคชันอื่นๆ n8n มีการรองรับในตัวสำหรับฟีเจอร์ต่างๆ ของ CoinGecko รวมถึงการดึง coins และ events
 
-On this page, you'll find a list of operations the CoinGecko node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ CoinGecko node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 
 * Coin
-    * Get a candlestick open-high-low-close chart for the selected currency
-    * Get current data for a coin
-    * Get all coins
-    * Get historical data (name, price, market, stats) at a given date for a coin
-    * Get prices and market related data for all trading pairs that match the selected currency
-    * Get historical market data include price, market cap, and 24h volume (granularity auto)
-    * Get the current price of any cryptocurrencies in any other supported currencies that you need
-    * Get coin tickers
+    * รับกราฟแท่งเทียน open-high-low-close สำหรับสกุลเงินที่เลือก
+    * รับข้อมูลปัจจุบันสำหรับเหรียญ
+    * รับเหรียญทั้งหมด
+    * รับข้อมูลประวัติ (ชื่อ, ราคา, ตลาด, สถิติ) ในวันที่กำหนดสำหรับเหรียญ
+    * รับราคาหรือข้อมูลตลาดที่เกี่ยวข้องสำหรับคู่การซื้อขายทั้งหมดที่ตรงกับสกุลเงินที่เลือก
+    * รับข้อมูลตลาดประวัติรวมถึงราคา, มูลค่าตลาด, และปริมาณ 24 ชั่วโมง (ความละเอียดอัตโนมัติ)
+    * รับราคาปัจจุบันของสกุลเงินดิจิทัลใดๆ ในสกุลเงินอื่นๆ ที่รองรับที่คุณต้องการ
+    * รับ tickers ของเหรียญ
 * Event
-    * Get all events
+    * รับ events ทั้งหมด
 
 ## Templates and examples
 

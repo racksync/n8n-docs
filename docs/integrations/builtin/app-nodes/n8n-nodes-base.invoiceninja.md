@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Invoice Ninja node
 
-Use the Invoice Ninja node to automate work in Invoice Ninja, and integrate Invoice Ninja with other applications. n8n has built-in support for a wide range of Invoice Ninja features, including creating, updating, deleting, and getting clients, expense, invoice, payments and quotes. 
+ใช้ Invoice Ninja node เพื่อทำงานอัตโนมัติใน Invoice Ninja และเชื่อมต่อ Invoice Ninja กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Invoice Ninja หลายอย่าง เช่น การสร้าง อัปเดต ลบ และดึงข้อมูล clients, expense, invoice, payments และ quotes
 
-On this page, you'll find a list of operations the Invoice Ninja node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Invoice Ninja node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Invoice Ninja credentials](/integrations/builtin/credentials/invoiceninja.md) for guidance on setting up authentication. 
+โปรดดู [Invoice Ninja credentials](/integrations/builtin/credentials/invoiceninja.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations

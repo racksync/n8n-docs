@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Oura node
 
-Use the Oura node to automate work in Oura, and integrate Oura with other applications. n8n has built-in support for a wide range of Oura features, including getting profiles, and summaries. 
+ใช้ Oura node เพื่อทำงานอัตโนมัติใน Oura และเชื่อมต่อกับแอปอื่น ๆ ของคุณ. n8n รองรับฟีเจอร์ต่าง ๆ ของ Oura เช่น การดึงข้อมูลโปรไฟล์และสรุปข้อมูล
 
-On this page, you'll find a list of operations the Oura node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Oura node รองรับ พร้อมลิงก์สำหรับข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [Oura credentials](/integrations/builtin/credentials/oura.md) for guidance on setting up authentication. 
+ดู [Oura credentials](/integrations/builtin/credentials/oura.md) เพื่อดูวิธีการตั้งค่า authentication
 ///
 
 ## Operations

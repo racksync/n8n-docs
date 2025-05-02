@@ -8,22 +8,22 @@ priority: high
 
 # Limit
 
-Use the Limit node to remove items beyond a defined maximum number. You can choose whether n8n takes the items from the beginning or end of the input data.
+ใช้ Limit node เพื่อตัดข้อมูลที่เกินจำนวนสูงสุดที่กำหนดไว้ คุณสามารถเลือกได้ว่า n8n จะเก็บข้อมูลจากต้นหรือท้ายของข้อมูล input
 
 ## Node parameters
 
-Configure this node using the following parameters.
+ตั้งค่า node นี้โดยใช้ parameter ต่อไปนี้
 
 ### Max Items
 
-Enter the maximum number of items that n8n should keep. If the input data contains more than this value, n8n removes the items.
+ใส่จำนวนสูงสุดของรายการที่ n8n ควรเก็บไว้ ถ้าข้อมูล input มีมากกว่าค่านี้ n8n จะตัดรายการที่เกินออก
 
 ### Keep
 
-If the node has to remove items, select where it keeps the input items from:
+ถ้า node ต้องตัดข้อมูลออก ให้เลือกว่าจะเก็บข้อมูลจากตรงไหน:
 
-* **First Items**: Keeps the **Max Items** number of items from the beginning of the input data.
-* **Last Items**: Keeps the **Max Items** number of items from the end of the input data.
+* **First Items**: เก็บข้อมูลตามจำนวน **Max Items** จากต้นของข้อมูล input
+* **Last Items**: เก็บข้อมูลตามจำนวน **Max Items** จากท้ายของข้อมูล input
 
 ## Templates and examples
 

@@ -7,18 +7,18 @@ contentType: howto
 
 # Set up SSL
 
-There are two methods to support TLS/SSL in n8n.
+มี 2 วิธีในการตั้งค่า TLS/SSL ให้กับ n8n
 
 ## Use a reverse proxy (recommended)
 
-Use a reverse proxy like [Traefik](https://doc.traefik.io/traefik/){:target=_blank .external-link} or a Network Load Balancer (NLB) in front of the n8n instance. This should also take care of certificate renewals.
+แนะนำให้ใช้ reverse proxy เช่น [Traefik](https://doc.traefik.io/traefik/){:target=_blank .external-link} หรือ Network Load Balancer (NLB) ไว้หน้าตัว n8n instance ซึ่งจะช่วยจัดการเรื่อง certificate renewals ให้ด้วย
 
-Refer to [Security | Data encryption](https://n8n.io/legal/#security){:target=_blank .external-link} for more information.
+ดูข้อมูลเพิ่มเติมได้ที่ [Security | Data encryption](https://n8n.io/legal/#security){:target=_blank .external-link}
 
 ## Pass certificates into n8n directly
 
-You can also choose to pass certificates into n8n directly. To do so, set the `N8N_SSL_CERT` and `N8N_SSL_KEY` environment variables to point to your generated certificate and key file.
+อีกวิธีคือส่ง certificate เข้าไปที่ n8n โดยตรง โดยตั้งค่า environment variables `N8N_SSL_CERT` และ `N8N_SSL_KEY` ให้ชี้ไปที่ไฟล์ certificate และ key ที่สร้างไว้
 
-You'll need to make sure the certificate stays renewed and up to date.
+อย่าลืมดูแล certificate ให้ต่ออายุและอัปเดตอยู่เสมอ
 
-Refer to [Deployment environment variables](/hosting/configuration/environment-variables/deployment.md) for more information on these variables and [Configuration](/hosting/configuration/configuration-methods.md) for more information on setting environment variables.
+ดูรายละเอียด environment variables เหล่านี้ได้ที่ [Deployment environment variables](/hosting/configuration/environment-variables/deployment.md) และดูวิธีตั้งค่า environment variables ได้ที่ [Configuration](/hosting/configuration/configuration-methods.md)

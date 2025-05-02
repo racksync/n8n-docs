@@ -7,25 +7,24 @@ contentType: [integration, reference]
 
 # Text Classifier node
 
-Use the Text Classifier node to classify (categorize) incoming data. Using the categories provided in the parameters (see below), each item is passed to the model to determine its category.
+ใช้ Text Classifier node เพื่อจำแนก (จัดหมวดหมู่) ข้อมูลที่เข้ามา โดยใช้ categories ที่ระบุใน parameters (ดูด้านล่าง) แต่ละ item จะถูกส่งไปยัง model เพื่อกำหนด category ของมัน
 
-On this page, you'll find the node parameters for the Text Classifier node, and links to more resources.
+ในหน้านี้ คุณจะพบ node parameters สำหรับ Text Classifier node และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 ## Node parameters
 
-* **Input Prompt** defines the input to classify. This is usually an expression that references a field from the input items. For example, this could be `{{ $json.chatInput }}` if the input is a chat trigger. By default it references the `text` field.
-* **Categories**: Add the categories that you want to classify your input as. Categories have a name and a description. Use the description to tell the model what the category means. This is important if the meaning isn't obvious. You can add as many categories as you like.
+*   **Input Prompt** กำหนด input ที่จะจำแนก โดยปกติจะเป็น expression ที่อ้างอิงถึง field จาก input items ตัวอย่างเช่น อาจเป็น `{{ $json.chatInput }}` หาก input เป็น chat trigger โดยค่าเริ่มต้นจะอ้างอิงถึง field `text`
+*   **Categories**: เพิ่ม categories ที่คุณต้องการจำแนก input ของคุณ Categories มี name และ description ใช้ description เพื่อบอก model ว่า category นั้นหมายถึงอะไร นี่เป็นสิ่งสำคัญหากความหมายไม่ชัดเจน คุณสามารถเพิ่ม categories ได้มากเท่าที่คุณต้องการ
 
 ## Node options
 
-* **Allow Multiple Classes To Be True**: You can configure the classifier to always output a single class per item (turned off), or allow the model to select multiple classes (turned on).
-* **When No Clear Match**: Define what happens if the model can't find a good match for an item. There are two options:
-	- **Discard Item** (the default): If the node doesn't detect any of the categories, it drops the item.
-	- **Output on Extra, 'Other' Branch**: Creates a separate output branch called **Other**. When the node doesn't detect any of the categories, it outputs items in this branch.
-* **System Prompt Template**: Use this option to change the system prompt that's used for the classification. It uses the `{categories}` placeholder for the categories.
+*   **Allow Multiple Classes To Be True**: คุณสามารถกำหนดค่า classifier ให้ออกผลลัพธ์เป็น class เดียวต่อ item เสมอ (ปิด) หรืออนุญาตให้ model เลือกหลาย classes (เปิด)
+*   **When No Clear Match**: กำหนดว่าจะเกิดอะไรขึ้นหาก model ไม่พบการจับคู่ที่ดีสำหรับ item มีสองตัวเลือก:
+    *   **Discard Item** (ค่าเริ่มต้น): หาก node ไม่ตรวจพบ categories ใดๆ เลย มันจะทิ้ง item นั้นไป
+    *   **Output on Extra, 'Other' Branch**: สร้าง output branch แยกต่างหากชื่อ **Other** เมื่อ node ไม่ตรวจพบ categories ใดๆ มันจะส่ง output items ใน branch นี้
+*   **System Prompt Template**: ใช้ตัวเลือกนี้เพื่อเปลี่ยน system prompt ที่ใช้สำหรับการจำแนก มันใช้ placeholder `{categories}` สำหรับ categories
 
-* **Enable Auto-Fixing**: When enabled, the node automatically fixes model outputs to ensure they match the expected format. Do this by sending the schema parsing error to the LLM and asking it to fix it.
-
+*   **Enable Auto-Fixing**: เมื่อเปิดใช้งาน node จะแก้ไข outputs ของ model โดยอัตโนมัติเพื่อให้แน่ใจว่าตรงกับ format ที่คาดหวัง ทำได้โดยส่ง schema parsing error ไปยัง LLM และขอให้แก้ไข
 
 ## Related resources
 

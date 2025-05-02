@@ -8,10 +8,10 @@ priority: medium
 
 # SSH
 
-The SSH node is useful for executing commands using the Secure Shell Protocol.
+SSH node ใช้สำหรับรันคำสั่งผ่าน Secure Shell Protocol
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/ssh.md).
+คุณสามารถดูข้อมูลการตั้งค่า authentication สำหรับ node นี้ได้ที่ [ที่นี่](/integrations/builtin/credentials/ssh.md)
 ///
 
 ## Operations
@@ -21,36 +21,36 @@ You can find authentication information for this node [here](/integrations/built
 - [**Upload** a file](#upload-file)
 
 /// note | Uploading files
-To attach a file for upload, you will need to use an extra node such as the [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md) node or the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) node to pass the file as a data property.
+ถ้าจะอัปโหลดไฟล์ ต้องใช้ node เพิ่มเติม เช่น [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md) หรือ [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) เพื่อส่งไฟล์เป็น data property
 ///
 
 ### Execute Command
 
-Configure this operation with these parameters:
+ตั้งค่า operation นี้ด้วย parameters เหล่านี้:
 
-- **Credential to connect with**: Select an existing or create a new [SSH credential](/integrations/builtin/credentials/ssh.md) to connect with.
-- **Command**: Enter the command to execute on the remote device.
-- **Working Directory**: Enter the directory where n8n should execute the command.
+- **Credential to connect with**: เลือกหรือสร้าง [SSH credential](/integrations/builtin/credentials/ssh.md) ที่จะใช้เชื่อมต่อ
+- **Command**: ใส่คำสั่งที่ต้องการรันบนเครื่องปลายทาง
+- **Working Directory**: ใส่ path ของ directory ที่จะรันคำสั่ง
 
 ### Download File
 
-- **Credential to connect with**: Select an existing or create a new [SSH credential](/integrations/builtin/credentials/ssh.md) to connect with.
-- **Path**: Enter the path for the file you want to download. This path must include the file name. The downloaded file will use this file name. To use a different name, use the **File Name** option. Refer to [Download File options](#download-file-options) for more information.
-- **File Property**: Enter the name of the object property that holds the binary data you want to download.
+- **Credential to connect with**: เลือกหรือสร้าง [SSH credential](/integrations/builtin/credentials/ssh.md) ที่จะใช้เชื่อมต่อ
+- **Path**: ใส่ path ของไฟล์ที่ต้องการดาวน์โหลด ต้องรวมชื่อไฟล์ด้วย ไฟล์ที่ดาวน์โหลดจะใช้ชื่อนี้ ถ้าอยากใช้ชื่ออื่น ให้ใช้ option **File Name** ดูรายละเอียดที่ [Download File options](#download-file-options)
+- **File Property**: ใส่ชื่อ property ที่เก็บ binary data ที่ต้องการดาวน์โหลด
 
 #### Download File options
 
-You can further configure this operation with the **File Name** option. Use this option to override the binary data file name to a name of your choice.
+ตั้งค่าเพิ่มเติมได้ด้วย option **File Name** ใช้เปลี่ยนชื่อไฟล์ binary data ที่ดาวน์โหลด
 
 ### Upload File
 
-- **Credential to connect with**: Select an existing or create a new [SSH credential](/integrations/builtin/credentials/ssh.md) to connect with.
-- **Input Binary Field**: Enter the name of the input binary field that contains the file you want to upload.
-- **Target Directory**: The directory to upload the file to. The name of the file is taken from the binary data file name. To enter a different name, use the **File Name** option. Refer to [Upload File options](#upload-file-options) for more information.
+- **Credential to connect with**: เลือกหรือสร้าง [SSH credential](/integrations/builtin/credentials/ssh.md) ที่จะใช้เชื่อมต่อ
+- **Input Binary Field**: ใส่ชื่อ field ที่เก็บ binary file ที่จะอัปโหลด
+- **Target Directory**: ใส่ directory ที่จะอัปโหลดไฟล์ไป ชื่อไฟล์จะใช้ตาม binary data file name ถ้าอยากใช้ชื่ออื่น ให้ใช้ option **File Name** ดูรายละเอียดที่ [Upload File options](#upload-file-options)
 
 #### Upload File options
 
-You can further configure this operation with the **File Name** option. Use this option to override the binary data file name to a name of your choice.
+ตั้งค่าเพิ่มเติมได้ด้วย option **File Name** ใช้เปลี่ยนชื่อไฟล์ binary data ที่อัปโหลด
 
 ## Templates and examples
 

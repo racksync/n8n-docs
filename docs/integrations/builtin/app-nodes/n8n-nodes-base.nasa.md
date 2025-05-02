@@ -8,12 +8,12 @@ priority: medium
 
 # NASA node
 
-Use the NASA node to automate work in NASA, and integrate NASA with other applications. n8n has built-in support for a wide range of NASA features, including retrieving imagery and data. 
+ใช้ NASA node เพื่อทำงานอัตโนมัติใน NASA และเชื่อมต่อกับแอปอื่น ๆ. n8n รองรับฟีเจอร์ของ NASA เช่น การดึงข้อมูลภาพและข้อมูลต่าง ๆ
 
-On this page, you'll find a list of operations the NASA node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ NASA node รองรับ พร้อมลิงก์สำหรับข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [NASA credentials](/integrations/builtin/credentials/nasa.md) for guidance on setting up authentication. 
+ดู [NASA credentials](/integrations/builtin/credentials/nasa.md) เพื่อดูวิธีการตั้งค่า authentication
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

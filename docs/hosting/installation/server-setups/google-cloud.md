@@ -5,12 +5,12 @@ contentType: tutorial
 
 # Hosting n8n on Google Cloud
 
-This hosting guide shows you how to self-host n8n on Google Cloud (GCP). It uses n8n with Postgres as a database backend using Kubernetes to manage the necessary resources and reverse proxy.
+คู่มือนี้จะสอนวิธีติดตั้ง n8n แบบ self-host บน Google Cloud (GCP) โดยใช้ n8n กับ Postgres เป็น database backend และใช้ Kubernetes จัดการ resource ต่าง ๆ และ reverse proxy
 
 ## Prerequisites
 
-- The [gcloud command line tool](https://cloud.google.com/sdk/gcloud/){:target="_blank" .external-link}
-- The [gke-gcloud-auth-plugin](https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke){:target="_blank" .external-link} (install the gcloud CLI first)
+- [gcloud command line tool](https://cloud.google.com/sdk/gcloud/){:target="_blank" .external-link}
+- [gke-gcloud-auth-plugin](https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke){:target="_blank" .external-link} (ต้องติดตั้ง gcloud CLI ก่อน)
 
 --8<-- "_snippets/self-hosting/warning.md"
 
@@ -18,41 +18,41 @@ This hosting guide shows you how to self-host n8n on Google Cloud (GCP). It uses
 
 ## Hosting options
 
-Google Cloud offers several options suitable for hosting n8n, including Cloud Run (optimized for running containers), Compute Engine (VMs), and Kubernetes Engine (containers running with Kubernetes).
+Google Cloud มีหลายวิธีให้ deploy n8n เช่น Cloud Run, Compute Engine, หรือ Kubernetes Engine
 
-This guide uses the Google Kubernetes Engine (GKE) as the hosting option. Using Kubernetes requires some additional complexity and configuration, but is the best method for scaling n8n as demand changes.
+คู่มือนี้จะใช้ Google Kubernetes Engine (GKE) ซึ่งเหมาะกับการ scale ตามความต้องการ
 
-Most of the steps in this guide use the Google Cloud UI, but you can also use the [gcloud command line tool](https://cloud.google.com/sdk/gcloud/){:target="_blank" .external-link} instead to undertake all the steps.
+ส่วนใหญ่จะใช้ Google Cloud UI แต่จะใช้ [gcloud command line tool](https://cloud.google.com/sdk/gcloud/){:target="_blank" .external-link} ได้เหมือนกัน
 
 ## Create project
 
-GCP encourages you to create projects to logically organize resources and configuration. Create a new project for your n8n deployment from your Google Cloud Console: select the project dropdown menu and then the **NEW PROJECT** button. Then select the newly created project. As you follow the other steps in this guide, make sure you have the correct project selected.
+GCP แนะนำให้สร้าง project แยกสำหรับแต่ละงาน สร้าง project ใหม่สำหรับ n8n ได้จาก Google Cloud Console เลือก project dropdown แล้วกด **NEW PROJECT** จากนั้นเลือก project ที่สร้างไว้
 
 ## Enable the Kubernetes Engine API
 
-GKE isn't enabled by default. Search for "Kubernetes" in the top search bar and select "Kubernetes Engine" from the results.
+GKE ไม่ได้เปิดไว้ตั้งแต่แรก ให้ค้นหา "Kubernetes" ในช่องค้นหาด้านบน แล้วเลือก "Kubernetes Engine" จากผลลัพธ์
 
-Select **ENABLE** to enable the Kubernetes Engine API for this project.
+กด **ENABLE** เพื่อเปิด Kubernetes Engine API สำหรับ project นี้
 
 ## Create a cluster
 
-From the [GKE service page](https://console.cloud.google.com/kubernetes/list/overview){:target=_blank .external-link}, select **Clusters** > **CREATE**. Make sure you select the "Standard" cluster option, n8n doesn't work with an "Autopilot" cluster. You can leave the cluster configuration on defaults unless there's anything specifically you need to change, such as location.
+ไปที่ [GKE service page](https://console.cloud.google.com/kubernetes/list/overview){:target=_blank .external-link} เลือก **Clusters** > **CREATE** ให้เลือกแบบ "Standard" (n8n ใช้กับ "Autopilot" ไม่ได้) ตั้งค่าตามต้องการแล้วสร้าง cluster
 
 ## Set Kubectl context
 
-The rest of the steps in this guide require you to set the GCP instance as the Kubectl context. You can find the connection details for a cluster instance by opening its details page and selecting **CONNECT**. The displayed code snippet shows a connection string for the gcloud CLI tool. Paste and run the code snippet in the gcloud CLI to change your local Kubernetes settings to use the new gcloud cluster.
+ขั้นตอนต่อไปต้องตั้งค่า GCP instance ให้เป็น Kubectl context ดูรายละเอียดได้จากหน้า cluster แล้วกด **CONNECT** จะมี code snippet ให้ copy ไปวางใน gcloud CLI เพื่อเปลี่ยน context
 
 ## Clone configuration repository
 
-Kubernetes and n8n require a series of configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-kubernetes-hosting/tree/gcp){:target=_blank .external-link} locally. The following steps explain the file configuration and how to add your information.
+Kubernetes กับ n8n ต้องใช้ไฟล์ config หลายไฟล์ สามารถ clone repo ตัวอย่างจาก [ที่นี่](https://github.com/n8n-io/n8n-kubernetes-hosting/tree/gcp){:target=_blank .external-link}
 
-Clone the repository with the following command:
+รันคำสั่งนี้เพื่อ clone:
 
 ```shell
 git clone https://github.com/n8n-io/n8n-kubernetes-hosting.git -b gcp
 ```
 
-And change directory to the root of the repository you cloned:
+แล้วเข้าไปที่โฟลเดอร์ที่ clone มา:
 
 ```shell
 cd n8n-kubernetes-hosting
@@ -60,11 +60,11 @@ cd n8n-kubernetes-hosting
 
 ## Configure Postgres
 
-For larger scale n8n deployments, Postgres provides a more robust database backend than SQLite.
+สำหรับการใช้งาน n8n ขนาดใหญ่ แนะนำให้ใช้ Postgres เป็น database backend
 
 ### Create a volume for persistent storage
 
-To maintain data between pod restarts, the Postgres deployment needs a persistent volume. Running Postgres on GCP requires a specific Kubernetes Storage Class. You can read [this guide](https://cloud.google.com/architecture/deploying-highly-available-postgresql-with-gke){:target="_blank" .external-link} for specifics, but the `storage.yaml` manifest creates it for you. You may want to change the regions to create the storage in under the `allowedTopologies` > `matchedLabelExpressions` > `values` key. By default, they're set to `us-central`.
+เพื่อให้ข้อมูลไม่หายเวลามี pod restart, Postgres ต้องใช้ persistent volume บน GCP ต้องใช้ Storage Class เฉพาะ ดูรายละเอียดได้ที่ [คู่มือนี้](https://cloud.google.com/architecture/deploying-highly-available-postgresql-with-gke){:target="_blank" .external-link} แต่ไฟล์ `storage.yaml` ใน repo จะสร้างให้ ตัวอย่างเช่น:
 
 ```yaml
 …
@@ -78,22 +78,17 @@ allowedTopologies:
 
 ### Postgres environment variables
 
-Postgres needs some environment variables set to pass to the application running in the containers.
+Postgres ต้องการ environment variable บางตัวใน container ตัวอย่างไฟล์ `postgres-secret.yaml` มี placeholder ให้แก้ไข
 
-The example `postgres-secret.yaml` file contains placeholders you need to replace with your own values. Postgres will use these details when creating the database..
-
-The `postgres-deployment.yaml` manifest then uses the values from this manifest file to send to the application pods.
+`postgres-deployment.yaml` จะใช้ค่าจากไฟล์นี้ส่งเข้า pod
 
 ## Configure n8n
 
 ### Create a volume for file storage
 
-While not essential for running n8n, using persistent volumes is required for:
+ไม่จำเป็นต้องมี persistent volume ก็รัน n8n ได้ แต่ถ้าอยากเก็บไฟล์ที่อัปโหลด หรือเก็บ [encryption key ของ n8n แบบ manual](/hosting/configuration/environment-variables/deployment.md) ระหว่าง restart ต้องใช้ persistent volume
 
-* Using nodes that interact with files, such as the binary data node.
-* If you want to persist [manual n8n encryption keys](/hosting/configuration/environment-variables/deployment.md) between restarts. This saves a file containing the key into file storage during startup.
-
-The `n8n-claim0-persistentvolumeclaim.yaml` manifest creates this, and the n8n Deployment mounts that claim in the `volumes` section of the `n8n-deployment.yaml` manifest.
+ไฟล์ `n8n-claim0-persistentvolumeclaim.yaml` จะสร้าง volume นี้ และ deployment ของ n8n จะ mount volume ใน section `volumes` ของ `n8n-deployment.yaml`
 
 ```yaml
 …
@@ -106,7 +101,7 @@ volumes:
 
 ### Pod resources
 
-[Kubernetes lets you](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/) optionally specify the minimum resources application containers need and the limits they can run to. The example YAML files cloned above contain the following in the `resources` section of the `n8n-deployment.yaml` and `postgres-deployment.yaml` files:
+[Kubernetes lets you](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/) สามารถกำหนด resource ขั้นต่ำ/สูงสุดให้แต่ละ container ได้ ตัวอย่างในไฟล์ YAML ที่ clone มาจะมีแบบนี้ใน `resources` section ของ `n8n-deployment.yaml` และ `postgres-deployment.yaml`:
 
 ```yaml
 …
@@ -118,42 +113,40 @@ resources:
 …    
 ```
 
-This defines a minimum of 250mb per container, a maximum of 500mb, and lets Kubernetes handle CPU. You can change these values to match your own needs. As a guide, here are the resources values for the n8n cloud offerings:
+กำหนดขั้นต่ำ 250mb ต่อ container, สูงสุด 500mb, ส่วน CPU ให้ Kubernetes จัดการเอง สามารถปรับค่าตามต้องการได้
 
 --8<-- "_snippets/self-hosting/installation/suggested-pod-resources.md"
 
 ### Optional: Environment variables
 
-You can configure n8n settings and behaviors using environment variables.
+สามารถตั้งค่า n8n เพิ่มเติมด้วย environment variable
 
-Create an `n8n-secret.yaml` file. Refer to [Environment variables](/hosting/configuration/environment-variables/index.md) for n8n environment variables details.
+สร้างไฟล์ `n8n-secret.yaml` ดูรายละเอียด environment variable ได้ที่ [Environment variables](/hosting/configuration/environment-variables/index.md)
 
 ## Deployments
 
-The two deployment manifests (`n8n-deployment.yaml` and `postgres-deployment.yaml`) define the n8n and Postgres applications to Kubernetes.
+deployment manifest 2 ไฟล์ (`n8n-deployment.yaml` กับ `postgres-deployment.yaml`) จะกำหนดรายละเอียดของ n8n กับ Postgres ใน Kubernetes
 
-The manifests define the following:
-
-- Send the environment variables defined to each application pod
-- Define the container image to use
-- Set resource consumption limits with the `resources` object
-- The `volumes` defined earlier and `volumeMounts` to define the path in the container to mount volumes.
-- Scaling and restart policies. The example manifests define one instance of each pod. You should change this to meet your needs.
+- ส่ง environment variable ที่กำหนดเข้าแต่ละ pod
+- กำหนด container image ที่ใช้
+- กำหนด resource limit
+- กำหนด volume และ path ที่จะ mount
+- กำหนดจำนวน pod และ restart policy (ตัวอย่างนี้ใช้ 1 pod ต่อ service สามารถปรับได้)
 
 ## Services
 
-The two service manifests (`postgres-service.yaml` and `n8n-service.yaml`) expose the services to the outside world using the Kubernetes load balancer using ports 5432 and 5678 respectively.
+service manifest 2 ไฟล์ (`postgres-service.yaml` กับ `n8n-service.yaml`) จะ expose service ออกไปผ่าน Kubernetes load balancer ที่ port 5432 และ 5678 ตามลำดับ
 
 ## Send to Kubernetes cluster
 
-Send all the manifests to the cluster with the following command:
+deploy manifest ทั้งหมดเข้า cluster ด้วยคำสั่งนี้:
 
 ```shell
 kubectl apply -f .
 ```
 
 /// note | Namespace error
-You may see an error message about not finding an "n8n" namespace as that resources isn't ready yet. You can run the same command again, or apply the namespace manifest first with the following command:
+ถ้าเจอ error ว่าไม่เจอ namespace "n8n" ให้รันคำสั่งนี้ก่อน แล้วค่อยรัน apply อีกรอบ:
 
 ```shell
 kubectl apply -f namespace.yaml
@@ -163,14 +156,14 @@ kubectl apply -f namespace.yaml
 
 ## Set up DNS
 
-n8n typically operates on a subdomain. Create a DNS record with your provider for the subdomain and point it to the IP address of the n8n service. Find the IP address of the n8n service from the **Services & Ingress** menu item of the cluster you want to use under the **Endpoints** column.
+โดยปกติ n8n จะรันบน subdomain ให้สร้าง DNS record ชี้ subdomain ไปที่ IP ของ n8n service ดู IP ได้จาก **Services & Ingress** ของ cluster ใน column **Endpoints**
 
 /// note | GKE and IP addresses
-[Read this GKE tutorial](https://cloud.google.com/kubernetes-engine/docs/tutorials/configuring-domain-name-static-ip#configuring_your_domain_name_records){:target="_blank" .external-link} for more details on how reserved IP addresses work with GKE and Kubernetes resources.
+อ่านรายละเอียดการใช้ reserved IP กับ GKE ได้ที่ [GKE tutorial](https://cloud.google.com/kubernetes-engine/docs/tutorials/configuring-domain-name-static-ip#configuring_your_domain_name_records){:target="_blank" .external-link}
 ///
 ## Delete resources
 
-Remove the resources created by the manifests with the following command:
+ถ้าต้องการลบ resource ที่สร้างไว้ ให้ใช้คำสั่ง:
 
 ```shell
 kubectl delete -f .

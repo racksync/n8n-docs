@@ -1,4 +1,4 @@
----
+า---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Harvest node documentation
 description: Learn how to use the Harvest node in n8n. Follow technical documentation to integrate Harvest node into your workflows.
@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Harvest node
 
-Use the Harvest node to automate work in Harvest, and integrate Harvest with other applications. n8n has built-in support for a wide range of Harvest features, including creating, updating, deleting, and getting clients, contacts, invoices, tasks, expenses, users, and projects. 
+ใช้ Harvest node เพื่อทำงานอัตโนมัติใน Harvest และเชื่อมต่อ Harvest กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Harvest หลายอย่าง เช่น การสร้าง อัปเดต ลบ และดึงข้อมูล clients, contacts, invoices, tasks, expenses, users, และ projects
 
-On this page, you'll find a list of operations the Harvest node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Harvest node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Harvest credentials](/integrations/builtin/credentials/harvest.md) for guidance on setting up authentication. 
+โปรดดู [Harvest credentials](/integrations/builtin/credentials/harvest.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations

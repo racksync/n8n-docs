@@ -5,8 +5,8 @@ contentType: overview
 
 # Scaling n8n
 
-When running n8n at scale, with a large number of users, workflows, or executions, you need to change your n8n configuration to ensure good performance.
+ถ้าคุณรัน n8n ในระดับใหญ่ มีผู้ใช้, workflow หรือ execution จำนวนมาก คุณต้องปรับ config ของ n8n เพื่อให้ performance ดี
 
-n8n can run in different [modes](/hosting/scaling/queue-mode.md) depending on your needs. The `queue` mode provides the best scalability. Refer to [Queue mode](/hosting/scaling/queue-mode.md) for configuration details.
+n8n สามารถรันได้หลาย [modes](/hosting/scaling/queue-mode.md) ตามความต้องการ โดย `queue` mode จะขยายระบบได้ดีที่สุด ดูวิธีตั้งค่าที่ [Queue mode](/hosting/scaling/queue-mode.md)
 
-You can configure data saving and pruning to improve database performance. Refer to [Execution data](/hosting/scaling/execution-data.md) for details.
+คุณสามารถตั้งค่าการบันทึกและลบข้อมูล execution เพื่อช่วยให้ database ทำงานเร็วขึ้น ดูรายละเอียดที่ [Execution data](/hosting/scaling/execution-data.md)

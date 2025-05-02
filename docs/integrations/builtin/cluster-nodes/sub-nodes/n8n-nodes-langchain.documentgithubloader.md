@@ -7,25 +7,25 @@ contentType: [integration, reference]
 
 # GitHub Document Loader node
 
-Use the GitHub Document Loader node to load data from a GitHub repository for [vector stores](/glossary.md#ai-vector-store) or summarization.
+ใช้ GitHub Document Loader node เพื่อโหลดข้อมูลจาก GitHub repository สำหรับ [vector stores](/glossary.md#ai-vector-store) หรือการสรุปผล (summarization)
 
-On this page, you'll find the node parameters for the GitHub Document Loader node, and links to more resources.
+ในหน้านี้ คุณจะพบพารามิเตอร์ของโหนดสำหรับ GitHub Document Loader node และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/github.md). This node doesn't support OAuth for authentication.
+คุณสามารถดูข้อมูลการยืนยันตัวตนสำหรับโหนดนี้ได้ [ที่นี่](/integrations/builtin/credentials/github.md) โหนดนี้ไม่รองรับ OAuth สำหรับการยืนยันตัวตน
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node parameters
 
-* **Repository Link**: Enter the URL of your GitHub repository.
-* **Branch**: Enter the branch name to use.
+* **Repository Link**: ป้อน URL ของ GitHub repository ของคุณ
+* **Branch**: ป้อนชื่อ branch ที่จะใช้
 
 ## Node options
 
-* **Recursive**: Select whether to include sub-folders and files (turned on) or not (turned off).
-* **Ignore Paths**: Enter directories to ignore.
+* **Recursive**: เลือกว่าจะรวมโฟลเดอร์ย่อยและไฟล์ (เปิด) หรือไม่ (ปิด)
+* **Ignore Paths**: ป้อนไดเรกทอรีที่จะละเว้น
 
 ## Templates and examples
 

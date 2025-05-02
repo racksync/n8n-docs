@@ -8,24 +8,24 @@ priority: high
 
 # Airtable node common issues
 
-Here are some common errors and issues with the [Airtable node](/integrations/builtin/app-nodes/n8n-nodes-base.airtable/index.md) and steps to resolve or troubleshoot them.
+นี่คือข้อผิดพลาดหรือปัญหาทั่วไปที่เจอกับ [Airtable node](/integrations/builtin/app-nodes/n8n-nodes-base.airtable/index.md) พร้อมแนวทางแก้ไขหรือวิธีตรวจสอบปัญหา
 
 ## Forbidden - perhaps check your credentials
 
-This error displays when trying to perform actions not permitted by your current level of access. The full text looks something like this:
+ข้อผิดพลาดนี้จะขึ้นเมื่อคุณพยายามทำบางอย่างที่สิทธิ์ของคุณไม่อนุญาต ข้อความเต็มๆ จะประมาณนี้:
 
 ```
 There was a problem loading the parameter options from server: "Forbidden - perhaps check your credentials?"
 ```
 
-The error most often displays when the credential you're using doesn't have the scopes it requires on the resources you're attempting to manage.
+ปัญหานี้มักเกิดจาก credential ที่ใช้ไม่มี scopes ที่จำเป็นสำหรับ resources ที่คุณจะจัดการ
 
-Refer to the [Airtable credentials](/integrations/builtin/credentials/airtable.md) and [Airtables scopes documentation](https://airtable.com/developers/web/api/scopes) for more information.
+ดู [Airtable credentials](/integrations/builtin/credentials/airtable.md) และ [Airtables scopes documentation](https://airtable.com/developers/web/api/scopes) สำหรับข้อมูลเพิ่มเติม
 
 ## Service is receiving too many requests from you
 
-Airtable has a hard API limit on the number of requests generated using personal access tokens.
+Airtable มีข้อจำกัด API ที่เข้มงวดสำหรับจำนวน requests ที่สร้างด้วย personal access tokens
 
-If you send more than five requests per second per base, you will receive a 429 error, indicating that you have sent too many requests. You will have to wait 30 seconds before resuming requests. This same limit applies for sending more than 50 requests across all bases per access token.
+ถ้าคุณส่ง requests เกิน 5 ครั้งต่อวินาทีต่อ base จะเจอ error 429 ซึ่งหมายถึงส่ง requests มากเกินไป ต้องรอ 30 วินาทีก่อนจะส่งได้อีก ข้อจำกัดนี้ใช้กับการส่ง requests เกิน 50 ครั้งในทุก base ต่อ access token ด้วย
 
-You can find out more in the [Airtable's rate limits documentation](https://airtable.com/developers/web/api/rate-limits). If you find yourself running into rate limits with the Airtable node, consider implementing one of the suggestions on the [handling rate limits](/integrations/builtin/rate-limits.md) page.
+ดูข้อมูลเพิ่มเติมได้ที่ [Airtable's rate limits documentation](https://airtable.com/developers/web/api/rate-limits) ถ้าคุณเจอปัญหา rate limits กับ Airtable node ลองดูคำแนะนำในหน้า [handling rate limits](/integrations/builtin/rate-limits.md)

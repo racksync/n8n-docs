@@ -7,29 +7,28 @@ contentType: [integration, reference]
 
 # Cohere Model node
 
-Use the Cohere Model node to use Cohere's models.
+ใช้ Cohere Model node เพื่อใช้งานโมเดลของ Cohere
 
-On this page, you'll find the node parameters for the Cohere Model node, and links to more resources.
+ในหน้านี้จะมีพารามิเตอร์ของ node Cohere Model และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/cohere.md).
+คุณสามารถดูข้อมูลการเชื่อมต่อสำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/cohere.md)
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node Options
 
-* **Maximum Number of Tokens**: Enter the maximum number of tokens used, which sets the completion length.
-* **Sampling Temperature**: Use this option to control the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
+* **Maximum Number of Tokens**: กำหนดจำนวน tokens สูงสุดที่ใช้ ซึ่งจะเป็นการกำหนดความยาวของข้อความที่โมเดลจะตอบกลับ
+* **Sampling Temperature**: ปรับความสุ่มของการสร้างข้อความ ค่า temperature สูงจะทำให้โมเดลตอบหลากหลายมากขึ้น แต่ก็เสี่ยงต่อการตอบแบบหลุดประเด็น
 
 ## Templates and examples
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
 [[ templatesWidget(page.title, 'cohere-model') ]]
 
 ## Related resources
 
-Refer to [LangChains's Cohere documentation](https://js.langchain.com/docs/integrations/llms/cohere/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมได้ที่ [LangChains's Cohere documentation](https://js.langchain.com/docs/integrations/llms/cohere/){:target=_blank .external-link}
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

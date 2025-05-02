@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Emelia node
 
-Use the Emelia node to automate work in Emelia, and integrate Emelia with other applications. n8n has built-in support for a wide range of Emelia features, including creating campaigns, and adding contacts to a list. 
+ใช้ Emelia node เพื่อทำงานอัตโนมัติใน Emelia และเชื่อมต่อ Emelia กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Emelia หลายอย่าง เช่น การสร้าง campaigns และการเพิ่ม contacts ไปยัง list
 
-On this page, you'll find a list of operations the Emelia node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Emelia node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Emelia credentials](/integrations/builtin/credentials/emelia.md) for guidance on setting up authentication. 
+โปรดดู [Emelia credentials](/integrations/builtin/credentials/emelia.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations

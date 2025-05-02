@@ -7,13 +7,12 @@ contentType: [integration, reference]
 
 # urlscan.io node
 
-Use the urlscan.io node to automate work in urlscan.io, and integrate urlscan.io with other applications. n8n has built-in support for a wide range of urlscan.io features, including getting and performing scans. 
+ใช้ urlscan.io node เพื่อช่วยให้งานใน urlscan.io เป็นอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันอื่น ๆ โดย n8n รองรับฟีเจอร์ของ urlscan.io หลากหลาย เช่น การดึงข้อมูลและการสแกน
 
-On this page, you'll find a list of operations the urlscan.io node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ urlscan.io node รองรับ พร้อมทั้งลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [urlscan.io credentials](/integrations/builtin/credentials/urlscanio.md) for guidance on setting up authentication. 
-///
+ดู [urlscan.io credentials](/integrations/builtin/credentials/urlscanio.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 

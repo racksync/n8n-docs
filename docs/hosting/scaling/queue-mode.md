@@ -5,45 +5,44 @@ contentType: howto
 
 # Queue mode
 
-You can run n8n in different modes depending on your needs. The queue mode provides the best scalability.
+คุณสามารถรัน n8n ได้หลายโหมดตามความต้องการ Queue mode จะช่วยให้ขยายระบบได้ดีที่สุด
 
 /// note | Binary data storage
-n8n doesn't support queue mode with binary data storage in filesystem. If your workflows need to persist binary data in queue mode, you can use [S3 external storage](./external-storage.md).
+n8n ยังไม่รองรับ queue mode กับ binary data storage แบบ filesystem ถ้า workflow ของคุณต้องเก็บ binary data ใน queue mode ให้ใช้ [S3 external storage](./external-storage.md)
 ///
 
 ## How it works
 
-When running in queue mode, you have multiple n8n instances set up, with one main instance receiving workflow information (such as triggers) and the worker instances performing the executions. 
+เมื่อรันใน queue mode คุณจะมี n8n หลาย instance โดยมี instance หลัก (main) รับข้อมูล workflow (เช่น trigger) และ worker instance จะเป็นคนประมวลผล execution
 
-Each worker is its own Node.js instance, running in `main` mode, but able to handle multiple simultaneous workflow executions due to their high IOPS (input-output operations per second). 
+แต่ละ worker จะเป็น Node.js instance แยกกัน รันในโหมด `main` แต่สามารถประมวลผล workflow หลายตัวพร้อมกันได้ เพราะ worker มี IOPS (input-output operations per second) สูง
 
-By using worker instances and running in queue mode, you can scale n8n up (by adding workers) and down (by removing workers) as needed to handle the workload.
+การใช้ worker instance และ queue mode ช่วยให้คุณขยาย n8n ได้ตาม workload โดยเพิ่มหรือลดจำนวน worker
 
-This is the process flow:
+ขั้นตอนการทำงานเป็นแบบนี้:
 
-1. The main n8n instance handles timers and webhook calls, generating (but not running) a workflow execution. 
-1. It passes the execution ID to a message broker, [Redis](#start-redis), which maintains the queue of pending executions and allows the next available worker to pick them up.
-1. A worker in the pool picks up message from Redis.
-1. The worker uses the execution ID to get workflow information from the database.
-1. After completing the workflow execution, the worker:
-	- Writes the results to the database.
-	- Posts to Redis, saying that the execution has finished.
-1. Redis notifies the main instance.
-
+1. main n8n instance จะจัดการ timer และ webhook call สร้าง execution ของ workflow (แต่ยังไม่รัน)
+1. มันจะส่ง execution ID ไปที่ message broker คือ [Redis](#start-redis) ซึ่งจะคิว execution ที่รออยู่ และให้ worker ที่ว่างรับไปทำ
+1. worker ใน pool จะรับ message จาก Redis
+1. worker จะใช้ execution ID ไปดึงข้อมูล workflow จาก database
+1. เมื่อ workflow execution เสร็จ worker จะ:
+	- เขียนผลลัพธ์ลง database
+	- แจ้ง Redis ว่า execution เสร็จแล้ว
+1. Redis จะ notify กลับไปที่ main instance
 
 !["Diagram showing the flow of data between the main n8n instance, Redis, the n8n workers, and the n8n database"](/_images/hosting/scaling/queue-mode-flow.png)
 
 ## Configuring workers
 
-Workers are n8n instances that do the actual work. They receive information from the main n8n process about the workflows that have to get executed, execute the workflows, and update the status after each execution is complete.
+Worker คือ n8n instance ที่ทำงานจริง จะรับข้อมูลจาก main process ว่า workflow ไหนต้อง execute, ทำงานนั้น และอัปเดตสถานะเมื่อเสร็จ
 
 ### Set encryption key
 
-n8n automatically generates an encryption key upon first startup. You can also provide your own custom key using [environment variable](/hosting/configuration/environment-variables/index.md) if desired.
+n8n จะสร้าง encryption key อัตโนมัติเมื่อเริ่มต้นครั้งแรก หรือจะกำหนดเองผ่าน [environment variable](/hosting/configuration/environment-variables/index.md) ก็ได้
 
-The encryption key of the main n8n instance must be shared with all worker and webhooks processor nodes to ensure these worker nodes are able to access credentials stored in the database.
+encryption key ของ main instance ต้องใช้ร่วมกับ worker และ webhook processor ทุกตัว เพื่อให้ worker เข้าถึง credentials ใน database ได้
 
-Set the encryption key for each worker node in a [configuration file](/hosting/configuration/configuration-methods.md) or by setting the corresponding environment variable:
+ตั้งค่า encryption key ให้แต่ละ worker ใน [configuration file](/hosting/configuration/configuration-methods.md) หรือผ่าน environment variable:
 
 ```bash
 export N8N_ENCRYPTION_KEY=<main_instance_encryption_key>
@@ -52,116 +51,113 @@ export N8N_ENCRYPTION_KEY=<main_instance_encryption_key>
 ### Set executions mode
 
 /// note | Database considerations
-n8n recommends using Postgres 13+. Running n8n with execution mode set to `queue` with an SQLite database isn't recommended.
+n8n แนะนำให้ใช้ Postgres 13+ ถ้ารัน n8n execution mode เป็น `queue` กับ SQLite ไม่แนะนำ
 ///
 
-Set the environment variable `EXECUTIONS_MODE` to `queue` on the main instance and any workers using the following command.
+ตั้ง environment variable `EXECUTIONS_MODE` เป็น `queue` ทั้ง main instance และ worker ด้วยคำสั่งนี้
 
 ```bash
 export EXECUTIONS_MODE=queue
 ```
 
-Alternatively, you can set `executions.mode` to `queue` in the [configuration file](/hosting/configuration/environment-variables/index.md).
+หรือจะตั้ง `executions.mode` เป็น `queue` ใน [configuration file](/hosting/configuration/environment-variables/index.md) ก็ได้
 
 ### Start Redis
 
 /// note | Running Redis on a separate machine
-You can run Redis on a separate machine, just make sure that it's accessible by the n8n instance.
+คุณสามารถรัน Redis บนเครื่องอื่นได้ แค่ให้ n8n instance เข้าถึง Redis ได้
 ///
 
-To run Redis in a Docker container, follow the instructions below:
-
-Run the following command to start a Redis instance:
+ถ้าจะรัน Redis ใน Docker ใช้คำสั่งนี้:
 
 ```
 docker run --name some-redis -p 6379:6379  -d redis
 ```
 
-By default, Redis runs on `localhost` on port `6379` with no password. Based on your Redis configuration, set the following configurations for the main n8n process. These will allow n8n to interact with Redis.
+โดยปกติ Redis จะรันที่ `localhost` port `6379` ไม่มี password ถ้าคุณตั้งค่า Redis ต่างไป ให้ตั้งค่าตามนี้ใน main n8n process เพื่อให้ n8n ติดต่อ Redis ได้
 
 | Using configuration file | Using environment variables | Description |
 | ------ | ------ | ----- |
-| `queue.bull.redis.host:localhost` | `QUEUE_BULL_REDIS_HOST=localhost` | By default, Redis runs on `localhost`. |
-| `queue.bull.redis.port:6379` | `QUEUE_BULL_REDIS_PORT=6379` | The default port is `6379`. If Redis is running on a different port, configure the value. |
+| `queue.bull.redis.host:localhost` | `QUEUE_BULL_REDIS_HOST=localhost` | โดยปกติ Redis จะรันที่ `localhost` |
+| `queue.bull.redis.port:6379` | `QUEUE_BULL_REDIS_PORT=6379` | port เริ่มต้นคือ `6379` ถ้าเปลี่ยน port ให้ตั้งค่าตามนั้น |
 
-You can also set the following optional configurations:
+ตั้งค่าเพิ่มเติมได้ดังนี้:
 
 | Using configuration file | Using environment variables | Description |
 | ------ | ------ | ----- |
-| `queue.bull.redis.username:USERNAME` | `QUEUE_BULL_REDIS_USERNAME` | By default, Redis doesn't require a username. If you're using a specific user, configure it variable. |
-| `queue.bull.redis.password:PASSWORD` | `QUEUE_BULL_REDIS_PASSWORD` | By default, Redis doesn't require a password. If you're using a password, configure it variable. |
-| `queue.bull.redis.db:0` | `QUEUE_BULL_REDIS_DB` | The default value is `0`. If you change this value, update the configuration. |
-| `queue.bull.redis.timeoutThreshold:10000ms` | `QUEUE_BULL_REDIS_TIMEOUT_THRESHOLD` | Tells n8n how long it should wait if Redis is unavailable before exiting. The default value is `10000` (ms). |
-| `queue.bull.gracefulShutdownTimeout:30` | `N8N_GRACEFUL_SHUTDOWN_TIMEOUT` | A graceful shutdown timeout for workers to finish executing jobs before terminating the process. The default value is `30` seconds. |
+| `queue.bull.redis.username:USERNAME` | `QUEUE_BULL_REDIS_USERNAME` | โดยปกติ Redis ไม่ต้องใช้ username ถ้ามีให้ตั้งค่าตามนี้ |
+| `queue.bull.redis.password:PASSWORD` | `QUEUE_BULL_REDIS_PASSWORD` | โดยปกติ Redis ไม่ต้องใช้ password ถ้ามีให้ตั้งค่าตามนี้ |
+| `queue.bull.redis.db:0` | `QUEUE_BULL_REDIS_DB` | ค่าเริ่มต้นคือ `0` ถ้าเปลี่ยนให้ตั้งค่าตามนั้น |
+| `queue.bull.redis.timeoutThreshold:10000ms` | `QUEUE_BULL_REDIS_TIMEOUT_THRESHOLD` | กำหนดเวลารอ Redis ถ้าไม่พร้อม (ms) ค่าเริ่มต้น `10000` |
+| `queue.bull.gracefulShutdownTimeout:30` | `N8N_GRACEFUL_SHUTDOWN_TIMEOUT` | เวลารอให้ worker ทำงานเสร็จก่อนปิด process ค่าเริ่มต้น `30` วินาที |
 
-
-Now you can start your n8n instance and it will connect to your Redis instance.
+ตอนนี้คุณสามารถสตาร์ท n8n instance ให้เชื่อมต่อ Redis ได้แล้ว
 
 ### Start workers
 
-You will need to start worker processes to allow n8n to execute workflows. If you want to host workers on a separate machine, install n8n on the machine and make sure that it's connected to your Redis instance and the n8n database.
+คุณต้องสตาร์ท worker process เพื่อให้ n8n execute workflow ได้ ถ้าจะรัน worker บนเครื่องอื่น ให้ติดตั้ง n8n และเชื่อมต่อ Redis กับ database ให้เรียบร้อย
 
-Start worker processes by running the following command from the root directory:
+สตาร์ท worker ด้วยคำสั่งนี้จาก root directory:
 
 ```
 ./packages/cli/bin/n8n worker
 ```
 
-If you're using Docker, use the following command:
+ถ้าใช้ Docker ใช้คำสั่งนี้:
 
 ```
 docker run --name n8n-queue -p 5679:5678 docker.n8n.io/n8nio/n8n worker
 ```
 
-You can set up multiple worker processes. Make sure that all the worker processes have access to Redis and the n8n database.
+คุณสามารถตั้ง worker หลาย process ได้ ให้แน่ใจว่า worker ทุกตัวเข้าถึง Redis และ database ได้
 
 #### Worker server
 
-Each worker process runs a server that exposes optional endpoints:
+แต่ละ worker process จะรัน server ที่เปิด endpoint เหล่านี้ (ถ้าตั้ง `QUEUE_HEALTH_CHECK_ACTIVE`):
 
-- `/healthz`: returns whether the worker is up, if you enable the `QUEUE_HEALTH_CHECK_ACTIVE` environment variable
-- `/healthz/readiness`: returns whether worker's DB and Redis connections are ready, if you enable the `QUEUE_HEALTH_CHECK_ACTIVE` environment variable
+- `/healthz`: เช็คว่า worker ยังรันอยู่
+- `/healthz/readiness`: เช็คว่า worker ต่อ DB และ Redis ได้หรือยัง
 - [credentials overwrite endpoint](https://docs.n8n.io/embed/configuration/#credential-overwrites)
 - [`/metrics`](https://docs.n8n.io/hosting/configuration/configuration-examples/prometheus/)
 
 #### View running workers 
 
 /// info | Feature availability
-* Available on Self-hosted Enterprise plans.
-* If you want access to this feature on Cloud Enterprise, [contact n8n](https://n8n-community.typeform.com/to/y9X2YuGa){:target=_blank .external-link}.
+* ใช้ได้เฉพาะ Self-hosted Enterprise plans
+* ถ้าอยากใช้บน Cloud Enterprise [ติดต่อ n8n](https://n8n-community.typeform.com/to/y9X2YuGa){:target=_blank .external-link}
 ///
 
-You can view running workers and their performance metrics in n8n by selecting **Settings** > **Workers**.
+คุณสามารถดู worker ที่กำลังรันและ performance metrics ได้ใน n8n ที่ **Settings** > **Workers**
 
 ## Running n8n with queues
 
-When running n8n with queues, all the production workflow executions get processed by worker processes. This means that even the webhook calls get delegated to the worker processes, which might add some overhead and extra latency.
+เมื่อรัน n8n แบบ queue งาน workflow production ทั้งหมดจะถูกประมวลผลโดย worker process แม้แต่ webhook call ก็จะถูกส่งไป worker ซึ่งอาจเพิ่ม latency เล็กน้อย
 
-Redis acts as the message broker, and the database persists data, so access to both is required. Running a distributed system with this setup over SQLite isn't supported.
+Redis จะเป็น message broker และ database จะเก็บข้อมูล ต้องเข้าถึงทั้งสองตัวนี้ การรันแบบ distributed system ด้วย SQLite ไม่รองรับ
 
 /// note | Migrate data
-If you want to migrate data from one database to another, you can use the Export and Import commands. Refer to the [CLI commands for n8n](/hosting/cli-commands.md#export-workflows-and-credentials) documentation to learn how to use these commands.
+ถ้าต้องการย้ายข้อมูลจาก database หนึ่งไปอีกอัน ใช้คำสั่ง Export และ Import ดูรายละเอียดที่ [CLI commands for n8n](/hosting/cli-commands.md#export-workflows-and-credentials)
 ///
 
 ## Webhook processors
 
 /// note | Keep in mind
-Webhook processes rely on Redis and need the `EXECUTIONS_MODE` environment variable set too. Follow the [configure the workers](#configuring-workers) section above to setup webhook processor nodes.
+Webhook process ต้องใช้ Redis และต้องตั้ง `EXECUTIONS_MODE` ด้วย ดูวิธีตั้งค่าที่ [configure the workers](#configuring-workers)
 ///
 
-Webhook processors are another layer of scaling in n8n. Configuring the webhook processor is optional, and allows you to scale the incoming webhook requests.
+Webhook processor เป็นอีกวิธีขยายระบบ n8n การตั้งค่านี้เป็นทางเลือก ช่วยให้รองรับ webhook request จำนวนมากพร้อมกัน แค่เพิ่ม webhook process และ worker ตามต้องการ
 
-This method allows n8n to process a huge number of parallel requests. All you have to do is add more webhook processes and workers accordingly. The webhook process will listen to requests on the same port (default: `5678`). Run these processes in containers or separate machines, and have a load balancing system to route requests accordingly.
+Webhook process จะฟัง request ที่ port เดียวกับ main (ปกติ `5678`) รันใน container หรือเครื่องแยก แล้วใช้ load balancer ช่วยกระจาย request
 
-n8n doesn't recommend adding the main process to the load balancer pool. If you add the main process to the pool, it will receive requests and possibly a heavy load. This will result in degraded performance for editing, viewing, and interacting with the n8n UI.
+n8n ไม่แนะนำให้เอา main process ไปรวมใน pool ของ load balancer เพราะจะทำให้ main รับ request เยอะเกิน ส่งผลให้ UI ช้า
 
-You can start the webhook processor by executing the following command from the root directory:
+สตาร์ท webhook processor ด้วยคำสั่งนี้จาก root directory:
 
 ```
 ./packages/cli/bin/n8n webhook
 ```
 
-If you're using Docker, use the following command:
+ถ้าใช้ Docker ใช้คำสั่งนี้:
 
 ```
 docker run --name n8n-queue -p 5679:5678 -e "EXECUTIONS_MODE=queue" docker.n8n.io/n8nio/n8n webhook
@@ -169,40 +165,40 @@ docker run --name n8n-queue -p 5679:5678 -e "EXECUTIONS_MODE=queue" docker.n8n.i
 
 ### Configure webhook URL
 
-To configure your webhook URL, execute the following command on the machine running the main n8n instance:
+ตั้งค่า webhook URL ด้วยคำสั่งนี้บนเครื่องที่รัน main n8n instance:
 
 ```bash
 export WEBHOOK_URL=https://your-webhook-url.com
 ```
 
-You can also set this value in the configuration file.
+หรือจะตั้งใน configuration file ก็ได้
 
 ### Configure load balancer
 
-When using multiple webhook processes you will need a load balancer to route requests. If you are using the same domain name for your n8n instance and the webhooks, you can set up your load balancer to route requests as follows:
+ถ้าใช้ webhook process หลายตัว ต้องมี load balancer ช่วยกระจาย request ถ้าใช้ domain เดียวกับ n8n instance และ webhook ให้ตั้ง load balancer แบบนี้:
 
-- Redirect any request that matches `/webhook/*` to the webhook servers pool
-- All other paths (the n8n internal API, the static files for the editor, etc.) should get routed to the main process
+- redirect request ที่ขึ้นต้นด้วย `/webhook/*` ไปที่ webhook server pool
+- path อื่น (API, static file, editor) ให้ไป main process
 
-**Note:** The default URL for manual workflow executions is `/webhook-test/*`. Make sure that these URLs route to your main process.
+**Note:** URL สำหรับ manual workflow execution คือ `/webhook-test/*` ให้ route ไป main process ด้วย
 
-You can change this path in the configuration file `endpoints.webhook` or using the `N8N_ENDPOINT_WEBHOOK` environment variable. If you change these, update your load balancer accordingly.
+คุณสามารถเปลี่ยน path นี้ใน configuration file `endpoints.webhook` หรือใช้ `N8N_ENDPOINT_WEBHOOK` environment variable ถ้าเปลี่ยน path อย่าลืมอัปเดต load balancer
 
 ### Disable webhook processing in the main process (optional)
 
-You have webhook processors to execute the workflows. You can disable the webhook processing in the main process. This will make sure to execute all webhook executions in the webhook processors. In the configuration file set `endpoints.disableProductionWebhooksOnMainProcess` to `true` so that n8n doesn't process webhook requests on the main process.
+ถ้ามี webhook processor แล้ว คุณสามารถปิด webhook processing ใน main process ได้ เพื่อให้ webhook execution ไปที่ webhook processor ทั้งหมด ตั้งค่า `endpoints.disableProductionWebhooksOnMainProcess` เป็น `true` ใน configuration file
 
-Alternatively, you can use the following command:
+หรือใช้คำสั่งนี้:
 
 ```bash
 export N8N_DISABLE_PRODUCTION_MAIN_PROCESS=true
 ```
 
-When disabling the webhook process in the main process, run the main process and don't add it to the load balancer's webhook pool.
+เมื่อปิด webhook ใน main process ให้รัน main process ปกติ และอย่าเอาไปใส่ใน pool ของ load balancer
 
 ## Configure worker concurrency
 
-You can define the number of jobs a worker can run in parallel by using the `concurrency` flag. It defaults to `10`. To change it:
+คุณสามารถกำหนดจำนวน job ที่ worker ทำพร้อมกันได้ด้วย flag `concurrency` ค่าเริ่มต้นคือ `10` ถ้าจะเปลี่ยนใช้แบบนี้:
 
 ```bash
 n8n worker --concurrency=5
@@ -210,45 +206,45 @@ n8n worker --concurrency=5
 
 ## Concurrency and scaling recommendations
 
-n8n recommends setting concurrency to 5 or higher for your worker instances. Setting low concurrency values with a large numbers of workers can exhaust your database's connection pool, leading to processing delays and failures.
+n8n แนะนำให้ตั้ง concurrency ของ worker ที่ 5 ขึ้นไป ถ้าตั้งค่าน้อยแต่มี worker เยอะ อาจทำให้ database connection pool เต็ม ส่งผลให้ process ช้าและ error
 
 ## Multi-main setup
 
 /// info | Feature availability
-* Available on Self-hosted Enterprise plans.
-* If you want access to this feature on Cloud Enterprise, [contact n8n](https://n8n-community.typeform.com/to/y9X2YuGa){:target=_blank .external-link}.
+* ใช้ได้เฉพาะ Self-hosted Enterprise plans
+* ถ้าอยากใช้บน Cloud Enterprise [ติดต่อ n8n](https://n8n-community.typeform.com/to/y9X2YuGa){:target=_blank .external-link}
 ///
 
-In queue mode you can run more than one `main` process for high availability.
+ใน queue mode คุณสามารถรัน main process หลายตัวเพื่อ high availability
 
-In a single-mode setup, the `main` process does two sets of tasks: 
+ใน single-mode main process จะทำ 2 อย่าง:
 
-- **regular tasks**, such as running the API, serving the UI, and listening for webhooks, and 
-- **at-most-once tasks**, such as running non-HTTP triggers (timers, pollers, and persistent connections like RabbitMQ and IMAP), and pruning executions and binary data.
+- **regular tasks** เช่น รัน API, เสิร์ฟ UI, ฟัง webhook
+- **at-most-once tasks** เช่น รัน non-HTTP trigger (timer, poller, connection แบบ RabbitMQ, IMAP), ลบ execution เก่า, ลบ binary data
 
-In a multi-main setup, there are two kinds of `main` processes:
+ใน multi-main setup จะมี main process 2 แบบ:
 
-- **followers**, which run **regular tasks**, and
-- the **leader**, which runs **both regular and at-most-once tasks**.
+- **followers** ทำ **regular tasks**
+- **leader** ทำ **regular tasks** และ **at-most-once tasks**
 
 ### Leader designation
 
-In a multi-main setup, all main instances handle the leadership process transparently to users. In case the current leader becomes unavailable, for example because it crashed or its event loop became too busy, other followers can take over. If the previous leader becomes responsive again, it becomes a follower.
+ใน multi-main setup ทุก main instance จะจัดการ leadership เอง ถ้า leader เดิมล่ม (เช่น crash หรือ event loop ช้า) follower ตัวอื่นจะ takeover ถ้า leader เดิมกลับมา จะกลายเป็น follower
 
 ### Configuring multi-main setup
 
-To deploy n8n in multi-main setup, ensure: 
+ถ้าจะ deploy n8n แบบ multi-main ให้แน่ใจว่า:
 
-- All `main` processes are running in queue mode and are connected to Postgres and Redis.
-- All `main` and `worker` processes are running the same version of n8n.
-- All `main` processes have set the environment variable `N8N_MULTI_MAIN_SETUP_ENABLED` to `true`.
-- All `main` processes are running behind a load balancer with session persistence (sticky sessions) enabled.
+- main process ทุกตัวรัน queue mode และเชื่อมต่อ Postgres กับ Redis
+- main และ worker ทุกตัวใช้ n8n version เดียวกัน
+- main ทุกตัวตั้ง environment variable `N8N_MULTI_MAIN_SETUP_ENABLED` เป็น `true`
+- main ทุกตัวอยู่หลัง load balancer ที่เปิด session persistence (sticky session)
 
-If needed, you can adjust the leader key options:
+ถ้าต้องการ ปรับ leader key options ได้:
 
 | Using configuration file | Using environment variables | Description |
 | ------ | ------ | ----- |
-| `multiMainSetup.ttl:10` | `N8N_MULTI_MAIN_SETUP_KEY_TTL=10` | Time to live (in seconds) for leader key in multi-main setup. |
-| `multiMainSetup.interval:3` | `N8N_MULTI_MAIN_SETUP_CHECK_INTERVAL=3` | Interval (in seconds) for leader check in multi-main setup. |
+| `multiMainSetup.ttl:10` | `N8N_MULTI_MAIN_SETUP_KEY_TTL=10` | อายุ (วินาที) ของ leader key ใน multi-main setup |
+| `multiMainSetup.interval:3` | `N8N_MULTI_MAIN_SETUP_CHECK_INTERVAL=3` | interval (วินาที) สำหรับเช็ค leader ใน multi-main setup |
 
 

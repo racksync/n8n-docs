@@ -8,12 +8,12 @@ priority: medium
 
 # Action Network node
 
-Use the Action Network node to automate work in Action Network, and integrate Action Network with other applications. n8n has built-in support for a wide range of Action Network features, including creating, updating, and deleting events, people, tags, and signatures. 
+ใช้ Action Network node เพื่อทำงานอัตโนมัติใน Action Network และผสานรวม Action Network กับแอปพลิเคชันอื่นๆ n8n มีการรองรับฟีเจอร์หลากหลายของ Action Network ในตัว รวมถึงการสร้าง, การอัปเดต, และการลบ events, people, tags, และ signatures
 
-On this page, you'll find a list of operations the Action Network node supports, and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Action Network node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [Action Network credentials](/integrations/builtin/credentials/actionnetwork.md) for guidance on setting up authentication. 
+อ้างอิง [Action Network credentials](/integrations/builtin/credentials/actionnetwork.md) สำหรับคำแนะนำในการตั้งค่าการยืนยันตัวตน
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

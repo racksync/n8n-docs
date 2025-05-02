@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # LoneScale node
 
-Use the LoneScale node to automate work in LoneScale and integrate LoneScale with other applications. n8n has built-in support for managing Lists and Items in LoneScale. 
+ใช้ LoneScale node ในการทำงานอัตโนมัติใน LoneScale และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ โดย n8n รองรับการจัดการ Lists และ Items.
 
-On this page, you'll find a list of operations the LoneScale node supports, and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ LoneScale node รองรับและลิงก์ไปยังข้อมูลเพิ่มเติม.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/lonescale.md).
+ดู [LoneScale credentials] สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations

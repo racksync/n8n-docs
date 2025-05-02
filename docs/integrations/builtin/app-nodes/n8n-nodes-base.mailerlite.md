@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # MailerLite node
 
-Use the MailerLite node to automate work in MailerLite, and integrate MailerLite with other applications. n8n has built-in support for a wide range of MailerLite features, including creating, updating, deleting, and getting subscribers.
+ใช้ MailerLite node ในการทำงานอัตโนมัติใน MailerLite และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ โดย n8n รองรับการสร้าง, อัปเดต, ลบ และดึงข้อมูล subscribers.
 
-On this page, you'll find a list of operations the MailerLite node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ MailerLite node รองรับและลิงก์ไปยังข้อมูลเพิ่มเติม.
 
 /// note | Credentials
-Refer to [MailerLite credentials](/integrations/builtin/credentials/mailerlite.md) for guidance on setting up authentication. 
+ดู [MailerLite credentials](/integrations/builtin/credentials/mailerlite.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations

@@ -8,14 +8,14 @@ priority: critical
 
 # AI Agent node
 
-An [AI agent](/glossary.md#ai-agent) is an autonomous system that receives data, makes rational decisions, and acts within its environment to achieve specific goals. The AI agent's environment is everything the agent can access that isn't the agent itself. This agent uses external [tools](/glossary.md#ai-tool) and APIs to perform actions and retrieve information. It can understand the capabilities of different tools and determine which tool to use depending on the task. 
+[AI agent](/glossary.md#ai-agent) คือระบบอัตโนมัติที่รับข้อมูล ตัดสินใจอย่างมีเหตุผล และดำเนินการภายในสภาพแวดล้อมเพื่อบรรลุเป้าหมายที่เฉพาะเจาะจง สภาพแวดล้อมของ AI agent คือทุกสิ่งที่ agent สามารถเข้าถึงได้ซึ่งไม่ใช่ตัว agent เอง Agent นี้ใช้ [tools](/glossary.md#ai-tool) และ APIs ภายนอกเพื่อดำเนินการและดึงข้อมูล มันสามารถเข้าใจความสามารถของ tools ต่างๆ และตัดสินใจว่าจะใช้ tool ใดขึ้นอยู่กับงาน
 
 /// note | Connect a tool
-You must connect at least one tool [sub-node](/integrations/builtin/cluster-nodes/sub-nodes/index.md) to an AI Agent node.
+คุณต้องเชื่อมต่อ tool [sub-node](/integrations/builtin/cluster-nodes/sub-nodes/index.md) อย่างน้อยหนึ่งตัวเข้ากับ AI Agent node
 ///
 
 /// note | Agent type
-Prior to version 1.82.0, the AI Agent had a setting for working as different agent types. This has now been removed and all AI Agent nodes work as a `Tools Agent` which was the recommended and most frequently used setting. If you're working with older versions of the AI Agent in workflows or templates, as long as they were set to 'Tools Agent', they should continue to behave as intended with the updated node.
+ก่อนเวอร์ชัน 1.82.0 AI Agent มีการตั้งค่าสำหรับการทำงานเป็น agent types ต่างๆ สิ่งนี้ได้ถูกลบออกไปแล้ว และ AI Agent nodes ทั้งหมดทำงานเป็น `Tools Agent` ซึ่งเป็นค่าที่แนะนำและใช้บ่อยที่สุด หากคุณกำลังทำงานกับ AI Agent เวอร์ชันเก่าใน workflows หรือ templates ตราบใดที่ตั้งค่าเป็น 'Tools Agent' พวกมันควรจะยังคงทำงานตามที่ตั้งใจไว้กับ node ที่อัปเดตแล้ว
 ///
 
 
@@ -25,14 +25,14 @@ Prior to version 1.82.0, the AI Agent had a setting for working as different age
 
 ## Related resources
 
-Refer to [LangChain's documentation on agents](https://js.langchain.com/docs/concepts/agents/){:target=_blank .external-link} for more information about the service.
+อ้างอิง [LangChain's documentation on agents](https://js.langchain.com/docs/concepts/agents/){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการ
 
-New to AI Agents? Read the [n8n blog introduction to AI agents](https://blog.n8n.io/ai-agents/){:target=_blank .external-link}.
+ใหม่สำหรับ AI Agents? อ่าน [n8n blog introduction to AI agents](https://blog.n8n.io/ai-agents/){:target=_blank .external-link}
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
 ## Common issues
 
-For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/common-issues.md).
+สำหรับข้อผิดพลาดหรือปัญหาทั่วไปและขั้นตอนการแก้ไขที่แนะนำ โปรดดูที่ [Common Issues](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/common-issues.md)
 
 --8<-- "_glossary/ai-glossary.md"

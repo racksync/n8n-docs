@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Xero node
 
-Use the Xero node to automate work in Xero, and integrate Xero with other applications. n8n has built-in support for a wide range of Xero features, including creating, updating, and getting contacts and invoices. 
+ใช้ Xero node ในการทำงานอัตโนมัติใน Xero และเชื่อมต่อ Xero กับแอปพลิเคชันอื่น ๆ. n8n รองรับฟีเจอร์ของ Xero หลากหลาย เช่น การสร้าง, การอัปเดต และการดึงข้อมูล contacts และ invoices.
 
-On this page, you'll find a list of operations the Xero node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการของ operations ที่ Xero node รองรับและลิงก์ไปยัง resource เพิ่มเติม.
 
 /// note | Credentials
-Refer to [Xero credentials](/integrations/builtin/credentials/xero.md) for guidance on setting up authentication. 
+ดู [Xero credentials](/integrations/builtin/credentials/xero.md) สำหรับคำแนะนำในการตั้งค่า authentication. 
 ///
 
 ## Operations
@@ -30,11 +30,10 @@ Refer to [Xero credentials](/integrations/builtin/credentials/xero.md) for guida
 
 ## Templates and examples
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
 [[ templatesWidget(page.title, 'xero') ]]
 
 ## Related resources
 
-Refer to [Xero's API documentation](https://developer.xero.com/documentation/api/accounting/overview){:target=_blank .external-link} for more information about the service.
+ดู [Xero's API documentation](https://developer.xero.com/documentation/api/accounting/overview){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

@@ -7,32 +7,31 @@ contentType: [integration, reference]
 
 # Box node
 
-Use the Box node to automate work in Box, and integrate Box with other applications. n8n has built-in support for a wide range of Box features, including creating, copying, deleting, searching, uploading, and downloading files and folders.
+ใช้ Box node เพื่อทำงานอัตโนมัติใน Box และ integrate Box กับแอปพลิเคชันอื่นๆ n8n มีการรองรับในตัวสำหรับฟีเจอร์ต่างๆ ของ Box รวมถึงการสร้าง, คัดลอก, ลบ, ค้นหา, อัปโหลด, และดาวน์โหลด files และ folders
 
-On this page, you'll find a list of operations the Box node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Box node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [Box credentials](/integrations/builtin/credentials/box.md) for guidance on setting up authentication. 
+อ้างอิง [Box credentials](/integrations/builtin/credentials/box.md) สำหรับคำแนะนำในการตั้งค่า authentication
 ///
- 
 
 ## Operations
 
 * File
-    * Copy a file
-    * Delete a file
-    * Download a file
-    * Get a file
-    * Search files
-    * Share a file
-    * Upload a file
+    * คัดลอกไฟล์
+    * ลบไฟล์
+    * ดาวน์โหลดไฟล์
+    * รับไฟล์
+    * ค้นหาไฟล์
+    * แชร์ไฟล์
+    * อัปโหลดไฟล์
 * Folder
-    * Create a folder
-    * Get a folder
-    * Delete a folder
-    * Search files
-    * Share a folder
-    * Update folder
+    * สร้างโฟลเดอร์
+    * รับโฟลเดอร์
+    * ลบโฟลเดอร์
+    * ค้นหาไฟล์
+    * แชร์โฟลเดอร์
+    * อัปเดตโฟลเดอร์
 
 ## Templates and examples
 

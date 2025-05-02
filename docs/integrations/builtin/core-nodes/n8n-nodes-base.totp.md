@@ -7,41 +7,41 @@ contentType: [integration, reference]
 
 # TOTP
 
-The TOTP node provides a way to generate a TOTP (time-based one-time password).
+TOTP node ช่วยให้คุณสามารถสร้างรหัส TOTP (time-based one-time password) ได้ง่ายๆ
 
 /// note | Credentials
-Refer to [TOTP credentials](/integrations/builtin/credentials/totp.md) for guidance on setting up authentication. 
+ดูวิธีตั้งค่า authentication ได้ที่ [TOTP credentials](/integrations/builtin/credentials/totp.md)
 ///
 
 ## Node parameters
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
-Configure this node with these parameters.
+ตั้งค่า node นี้ด้วย parameters เหล่านี้
 
 ### Credential to connect with
 
-Select or create a [TOTP credential](/integrations/builtin/credentials/totp.md) for the node to use.
+เลือกหรือสร้าง [TOTP credential](/integrations/builtin/credentials/totp.md) ที่จะใช้กับ node นี้
 
 ### Operation
 
-**Generate Secret** is the only operation currently supported.
+**Generate Secret** เป็น operation เดียวที่รองรับในตอนนี้
 
 ## Node options
 
-Use these **Options** to further configure the node.
+ใช้ **Options** เหล่านี้เพื่อปรับแต่ง node เพิ่มเติม
 
 ### Algorithm
 
-Select the HMAC hashing algorithm to use. Default is SHA1.
+เลือก HMAC hashing algorithm ที่ต้องการใช้ ค่า default คือ SHA1
 
 ### Digits
 
-Enter the number of digits in the generated code. Default is `6`.
+ใส่จำนวนหลักของรหัสที่ต้องการให้สร้าง ค่า default คือ `6`
 
 ### Period
 
-Enter how many seconds the TOTP is valid for. Default is `30`.
+ใส่จำนวนวินาทีที่รหัส TOTP จะใช้งานได้ ค่า default คือ `30`
 
 ## Templates and examples
 

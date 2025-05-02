@@ -8,12 +8,12 @@ priority: medium
 
 # GitHub node
 
-Use the GitHub node to automate work in GitHub, and integrate GitHub with other applications. n8n has built-in support for a wide range of GitHub features, including creating, updating, deleting, and editing files, repositories, issues, releases, and users. 
+ใช้ GitHub node เพื่อทำงานอัตโนมัติใน GitHub และเชื่อมต่อ GitHub กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ GitHub หลายอย่าง เช่น การสร้าง อัปเดต ลบ และแก้ไข files, repositories, issues, releases, และ users
 
-On this page, you'll find a list of operations the GitHub node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ GitHub node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [GitHub credentials](/integrations/builtin/credentials/github.md) for guidance on setting up authentication. 
+โปรดดู [GitHub credentials](/integrations/builtin/credentials/github.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

@@ -8,14 +8,14 @@ priority: high
 
 # OpenAI Chat Model node common issues
 
-Here are some common errors and issues with the [OpenAI Chat Model node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/index.md) and steps to resolve or troubleshoot them.
+นี่คือข้อผิดพลาดและปัญหาที่พบบ่อยบางประการเกี่ยวกับ [OpenAI Chat Model node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/index.md) และขั้นตอนในการแก้ไขหรือแก้ไขปัญหาเหล่านั้น
 
 ## Processing parameters
 
-The OpenAI Chat Model node is a [sub-node](/glossary.md#sub-node-n8n). Sub-nodes behave differently than other nodes when processing multiple items using expressions.
+OpenAI Chat Model node เป็น [sub-node](/glossary.md#sub-node-n8n) Sub-node มีพฤติกรรมแตกต่างจาก node อื่นๆ เมื่อประมวลผลหลายรายการโดยใช้ expressions
 
-Most nodes, including [root nodes](/glossary.md#root-node-n8n), take any number of items as input, process these items, and output the results. You can use expressions to refer to input items, and the node resolves the expression for each item in turn. For example, given an input of five name values, the expression `{{ $json.name }}` resolves to each name in turn.
+Node ส่วนใหญ่ รวมถึง [root nodes](/glossary.md#root-node-n8n) จะรับรายการจำนวนเท่าใดก็ได้เป็น input ประมวลผลรายการเหล่านี้ และส่งออกผลลัพธ์ คุณสามารถใช้ expressions เพื่ออ้างอิงถึงรายการ input และ node จะประมวลผล expression สำหรับแต่ละรายการตามลำดับ ตัวอย่างเช่น หากมี input เป็นค่าชื่อห้าค่า expression `{{ $json.name }}` จะประมวลผลเป็นแต่ละชื่อตามลำดับ
 
-In sub-nodes, the expression always resolves to the first item. For example, given an input of five name values, the expression `{{ $json.name }}` always resolves to the first name.
+ใน sub-node expression จะประมวลผลเป็นรายการแรกเสมอ ตัวอย่างเช่น หากมี input เป็นค่าชื่อห้าค่า expression `{{ $json.name }}` จะประมวลผลเป็นชื่อแรกเสมอ
 
 --8<-- "_snippets/integrations/openai-api-issues.md"

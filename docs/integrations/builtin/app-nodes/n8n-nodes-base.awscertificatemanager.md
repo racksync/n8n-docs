@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # AWS Certificate Manager node
 
-Use the AWS Certificate Manager node to automate work in AWS Certificate Manager, and integrate AWS Certificate Manager with other applications. n8n has built-in support for a wide range of AWS Certificate Manager features, including creating, deleting, getting, and renewing SSL certificates.
+ใช้ AWS Certificate Manager node เพื่อทำงานอัตโนมัติใน AWS Certificate Manager และผสานรวม AWS Certificate Manager กับแอปพลิเคชันอื่นๆ n8n มีการรองรับฟีเจอร์หลากหลายของ AWS Certificate Manager ในตัว รวมถึงการสร้าง, การลบ, การดึงข้อมูล, และการต่ออายุ SSL certificates
 
-On this page, you'll find a list of operations the AWS Certificate Manager node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ AWS Certificate Manager node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [AWS Certificate Manager credentials](/integrations/builtin/credentials/aws.md) for guidance on setting up authentication. 
+อ้างอิง [AWS Certificate Manager credentials](/integrations/builtin/credentials/aws.md) สำหรับคำแนะนำในการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations
@@ -31,7 +31,7 @@ Refer to [AWS Certificate Manager credentials](/integrations/builtin/credentials
 
 ## Related resources
 
-Refer to [AWS Certificate Manager's documentation](https://docs.aws.amazon.com/acm/latest/userguide/acm-overview.html){:target=_blank .external-link} for more information on this service.
+อ้างอิง [เอกสารของ AWS Certificate Manager](https://docs.aws.amazon.com/acm/latest/userguide/acm-overview.html){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

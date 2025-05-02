@@ -5,93 +5,92 @@ contentType: howto
 
 # Logging in n8n
 
-Logging is an important feature for debugging. n8n uses the [winston](https://www.npmjs.com/package/winston){:target=_blank .external-link} logging library.
+Logging เป็นฟีเจอร์สำคัญสำหรับการ debug n8n ใช้ [winston](https://www.npmjs.com/package/winston){:target=_blank .external-link} เป็น logging library
 
 /// note | Log streaming
-n8n Self-hosted Enterprise tier includes [Log streaming](/log-streaming.md), in addition to the logging options described in this document.
+n8n Self-hosted Enterprise tier มี [Log streaming](/log-streaming.md) ให้ใช้งานเพิ่มจาก logging ปกติที่อธิบายไว้ในเอกสารนี้
 ///
 ## Setup
 
-To set up logging in n8n, you need to set the following environment variables (you can also set the values in the [configuration file](/hosting/configuration/environment-variables/index.md))
+ถ้าต้องการตั้งค่า logging ใน n8n ให้ตั้ง environment variable เหล่านี้ (หรือจะตั้งใน [configuration file](/hosting/configuration/environment-variables/index.md) ก็ได้)
 
 | Setting in the configuration file | Using environment variables | Description |
 |-----------------------------------|-----------------------------|-------------|
-| n8n.log.level | N8N_LOG_LEVEL | The log output level. The available options are (from lowest to highest level) are error, warn, info, and debug. The default value is `info`. You can learn more about these options [here](#log-levels). |
-| n8n.log.output | N8N_LOG_OUTPUT | Where to output logs. The available options are `console` and `file`. Multiple values can be used separated by a comma (`,`). `console` is used by default. |
-| n8n.log.file.location | N8N_LOG_FILE_LOCATION | The log file location, used only if log output is set to file. By default, `<n8nFolderPath>/logs/n8n.log` is used. |
-| n8n.log.file.maxsize | N8N_LOG_FILE_SIZE_MAX | The maximum size (in MB) for each log file. By default, n8n uses 16 MB. |
-| n8n.log.file.maxcount | N8N_LOG_FILE_COUNT_MAX | The maximum number of log files to keep. The default value is 100. This value should be set when using workers. |
+| n8n.log.level | N8N_LOG_LEVEL | ระดับ log output ที่ต้องการ เลือกได้จาก error, warn, info, debug (เรียงจากน้อยไปมาก) ค่าเริ่มต้นคือ `info` ดูรายละเอียดแต่ละระดับได้ที่ [ด้านล่าง](#log-levels) |
+| n8n.log.output | N8N_LOG_OUTPUT | จะให้ log ไปที่ไหน เลือกได้ `console` หรือ `file` หรือทั้งสองอย่าง (คั่นด้วย comma) ค่าเริ่มต้นคือ `console` |
+| n8n.log.file.location | N8N_LOG_FILE_LOCATION | ตำแหน่งไฟล์ log (ใช้เฉพาะถ้าเลือก output เป็น file) ค่าเริ่มต้นคือ `<n8nFolderPath>/logs/n8n.log` |
+| n8n.log.file.maxsize | N8N_LOG_FILE_SIZE_MAX | ขนาดสูงสุด (MB) ต่อไฟล์ log แต่ละไฟล์ ค่าเริ่มต้นคือ 16 MB |
+| n8n.log.file.maxcount | N8N_LOG_FILE_COUNT_MAX | จำนวนไฟล์ log สูงสุดที่จะเก็บไว้ ค่าเริ่มต้นคือ 100 (ควรตั้งค่านี้ถ้าใช้ worker) |
 
 
 ```bash
-# Set the logging level to 'debug'
+# ตั้งระดับ log เป็น 'debug'
 export N8N_LOG_LEVEL=debug
 
-# Set log output to both console and a log file
+# ให้ log ออกทั้ง console และไฟล์
 export N8N_LOG_OUTPUT=console,file
 
-# Set a save location for the log file
+# กำหนดที่เก็บไฟล์ log
 export N8N_LOG_FILE_LOCATION=/home/jim/n8n/logs/n8n.log
 
-# Set a 50 MB maximum size for each log file
+# กำหนดขนาดไฟล์ log สูงสุด 50 MB
 export N8N_LOG_FILE_MAXSIZE=50
 
-# Set 60 as the maximum number of log files to be kept
+# เก็บไฟล์ log สูงสุด 60 ไฟล์
 export N8N_LOG_FILE_MAXCOUNT=60
 ```
 
 ### Log levels
 
-n8n uses standard log levels to report:
+n8n ใช้ระดับ log มาตรฐานดังนี้:
 
-- `silent`: outputs nothing at all
-- `error`: outputs only errors and nothing else
-- `warn`: outputs errors and warning messages
-- `info`: contains useful information about progress
-- `debug`: the most verbose output. n8n outputs a lot of information to help you debug issues.
-
+- `silent`: ไม่แสดงอะไรเลย
+- `error`: แสดงเฉพาะ error
+- `warn`: แสดง error และ warning
+- `info`: แสดงข้อมูลที่มีประโยชน์เกี่ยวกับความคืบหน้า
+- `debug`: แสดงข้อมูลละเอียดสุด เหมาะกับ debug ปัญหา
 
 ## Development
 
-During development, adding log messages is a good practice. It assists in debugging errors. To configure logging for development, follow the guide below.
+ระหว่างพัฒนา การเพิ่ม log message จะช่วยให้ debug ง่ายขึ้น ถ้าต้องการตั้งค่า logging สำหรับ development ดูตัวอย่างด้านล่าง
 
 ### Implementation details
 
-n8n uses the `LoggerProxy` class, located in the `workflow` package. Calling the `LoggerProxy.init()` by passing in an instance of `Logger`, initializes the class before the usage.
+n8n ใช้คลาส `LoggerProxy` ที่อยู่ใน package `workflow` โดยต้องเรียก `LoggerProxy.init()` พร้อม instance ของ `Logger` เพื่อ initialize class นี้ก่อนใช้งาน
 
-The initialization process happens only once. The [`start.ts`](https://github.com/n8n-io/n8n/blob/master/packages/cli/src/commands/start.ts) file already does this process for you. If you are creating a new command from scratch, you need to initialize the `LoggerProxy` class.
+การ initialize จะเกิดขึ้นแค่ครั้งเดียว [`start.ts`](https://github.com/n8n-io/n8n/blob/master/packages/cli/src/commands/start.ts) ได้ทำไว้ให้แล้ว ถ้าคุณสร้าง command ใหม่เอง ต้อง initialize `LoggerProxy` เอง
 
-Once the `Logger` implementation gets created in the `cli` package, it can be obtained by calling the `getInstance` convenience method from the exported module.
+เมื่อสร้าง logger ใน package `cli` แล้ว สามารถเรียกใช้งานได้ด้วย method `getInstance` ที่ export ไว้
 
-Check the [start.ts](https://github.com/n8n-io/n8n/blob/master/packages/cli/src/commands/start.ts) file to learn more about how this process works.
+ดูตัวอย่างในไฟล์ [start.ts](https://github.com/n8n-io/n8n/blob/master/packages/cli/src/commands/start.ts) ได้เลย
 
 ### Adding logs
 
-Once the `LoggerProxy` class gets initialized in the project, you can import it to any other file and add logs.
+เมื่อ initialize `LoggerProxy` แล้ว สามารถ import ไปใช้ในไฟล์อื่นๆ เพื่อเพิ่ม log ได้
 
-Convenience methods are provided for all logging levels, so new logs can be added whenever needed using the format `Logger.<logLevel>('<message>', ...meta)`, where `meta` represents any additional properties desired beyond `message`.
+มี method สำหรับแต่ละระดับ log เช่น `Logger.<logLevel>('<message>', ...meta)` โดย `meta` คือ property เพิ่มเติมที่อยากแนบไปกับ message
 
-In the example above, we use the standard log levels described [above](#log-levels). The `message` argument is a string, and `meta` is a data object.
+ตัวอย่างนี้ใช้ log ระดับ info พร้อมแนบชื่อ workflow และ workflow ID เป็น metadata
 
 ```js
-// You have to import the LoggerProxy. We rename it to Logger to make it easier
+// ต้อง import LoggerProxy มาก่อน (เปลี่ยนชื่อเป็น Logger เพื่อให้ใช้ง่ายขึ้น)
 
 import {
 	LoggerProxy as Logger
 } from 'n8n-workflow';
 
-// Info-level logging of a trigger function, with workflow name and workflow ID as additional metadata properties
+// log ข้อมูล trigger function ระดับ info พร้อมชื่อ workflow และ workflow ID
 
 Logger.info(`Polling trigger initiated for workflow "${workflow.name}"`, {workflowName: workflow.name, workflowId: workflow.id});
 ```
 
-When creating new loggers, some useful standards to keep in mind are:
+เวลาสร้าง log ใหม่ๆ มีแนวทางที่ควรทำ เช่น:
 
-- Craft log messages to be as human-readable as possible. For example, always wrap names in quotes.
-- Duplicating information in the log message and metadata, like workflow name in the above example, can be useful as messages are easier to search and metadata enables easier filtering.
-- Include multiple IDs (for example, `executionId`, `workflowId`, and `sessionId`) throughout all logs.
-- Use node types instead of node names (or both) as this is more consistent, and so easier to search.
+- เขียนข้อความ log ให้อ่านง่าย เช่น ใส่ชื่อใน quote เสมอ
+- ข้อมูลที่ซ้ำกันใน message กับ metadata (เช่นชื่อ workflow) จะช่วยให้ค้นหาและ filter log ได้ง่ายขึ้น
+- ใส่ ID หลายตัว (เช่น executionId, workflowId, sessionId) ใน log ให้ครบ
+- ใช้ node type แทน node name (หรือใส่ทั้งสองอย่าง) เพราะ node type ค้นหาง่ายกว่า
 
 ## Front-end logs
 
-As of now, front-end logs aren't available. Using `Logger` or `LoggerProxy` would yield errors in the `editor-ui` package. This functionality will get implemented in the future versions.
+ตอนนี้ยังไม่มี log ฝั่ง front-end ถ้าใช้ `Logger` หรือ `LoggerProxy` ใน package `editor-ui` จะ error ฟีเจอร์นี้จะมีในเวอร์ชันถัดไป

@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # AWS Elastic Load Balancing node
 
-Use the AWS Elastic Load Balancing node to automate work in AWS ELB, and integrate AWS ELB with other applications. n8n has built-in support for a wide range of AWS ELB features, including adding, getting, removing, deleting certificates and load balancers.
+ใช้ AWS Elastic Load Balancing node เพื่อทำงานอัตโนมัติใน AWS ELB และผสานรวม AWS ELB กับแอปพลิเคชันอื่นๆ n8n มีการรองรับฟีเจอร์หลากหลายของ AWS ELB ในตัว รวมถึงการเพิ่ม, การดึงข้อมูล, การลบ certificates และ load balancers
 
-On this page, you'll find a list of operations the AWS ELB node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ AWS ELB node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [AWS ELB credentials](/integrations/builtin/credentials/aws.md){:target=_blank .external-link} for guidance on setting up authentication. 
+อ้างอิง [AWS ELB credentials](/integrations/builtin/credentials/aws.md){:target=_blank .external-link} สำหรับคำแนะนำในการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations
@@ -27,7 +27,7 @@ Refer to [AWS ELB credentials](/integrations/builtin/credentials/aws.md){:target
 	* Get
 	* Get Many
 
-This node supports creating and managing application and network load balancers. It doesn't currently support gateway load balancers.
+Node นี้รองรับการสร้างและจัดการ application และ network load balancers ปัจจุบันยังไม่รองรับ gateway load balancers
 
 ## Templates and examples
 
@@ -36,7 +36,7 @@ This node supports creating and managing application and network load balancers.
 
 ## Related resources
 
-Refer to [AWS ELB's documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html){:target=_blank .external-link} for more information on this service.
+อ้างอิง [เอกสารของ AWS ELB](https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

@@ -8,53 +8,50 @@ priority: critical
 
 # OpenAI File operations
 
-Use this operation to create, delete, list, message, or update a file in OpenAI. Refer to [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/index.md) for more information on the OpenAI node itself.
+ใช้ operation นี้เพื่อสร้าง, ลบ, แสดงรายการ, ส่งข้อความ หรืออัปเดตไฟล์ใน OpenAI. ดูข้อมูลเพิ่มเติมที่ [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/index.md).
 
 ## Delete a File
 
-Use this operation to delete a file from the server.
+ใช้ operation นี้เพื่อลบไฟล์ออกจากเซิร์ฟเวอร์.
 
 Enter these parameters:
+- **Credential to connect with**: สร้างหรือเลือก [OpenAI credential](/integrations/builtin/credentials/openai.md) ที่มีอยู่แล้ว.
+- **Resource**: เลือก **File**.
+- **Operation**: เลือก **Delete a File**.
+- **File**: ระบุ ID ของไฟล์หรือเลือกชื่อไฟล์จาก dropdown.
 
-- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai.md).
-- **Resource**: Select **File**.
-- **Operation**: Select **Delete a File**.
-- **File**: Enter the ID of the file to use for this operation or select the file name from the dropdown.
-
-Refer to [Delete file | OpenAI](https://platform.openai.com/docs/api-reference/files/delete){:target=_blank .external-link} documentation for more information.
+ดูรายละเอียดเพิ่มเติมที่ [Delete file | OpenAI](https://platform.openai.com/docs/api-reference/files/delete){:target=_blank .external-link}.
 
 ## List Files
 
-Use this operation to list files that belong to the user's organization. 
+ใช้ operation นี้เพื่อแสดงรายการไฟล์ขององค์กรผู้ใช้.
 
 Enter these parameters:
-
-- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai.md).
-- **Resource**: Select **File**.
-- **Operation**: Select **List Files**.
+- **Credential to connect with**: สร้างหรือเลือก [OpenAI credential](/integrations/builtin/credentials/openai.md) ที่มีอยู่แล้ว.
+- **Resource**: เลือก **File**.
+- **Operation**: เลือก **List Files**.
 
 ### Options
 
-- **Purpose**: Use this to only return files with the given purpose. Use **Assistants** to return only files related to Assistants and Message operations. Use **Fine-Tune** for files related to [Fine-tuning](https://platform.openai.com/docs/api-reference/fine-tuning){:target=_blank .external-link}.
+- **Purpose**: ใช้เพื่อคืนไฟล์ที่มีวัตถุประสงค์ตรงตามที่ระบุ. ใช้ **Assistants** สำหรับไฟล์ที่เกี่ยวกับ Assistants และ Message operations. ใช้ **Fine-Tune** สำหรับไฟล์ที่เกี่ยวข้องกับ [Fine-tuning](https://platform.openai.com/docs/api-reference/fine-tuning){:target=_blank .external-link}.
 
-Refer to [List files | OpenAI](https://platform.openai.com/docs/api-reference/files/list) documentation for more information.
+ดูรายละเอียดเพิ่มเติมที่ [List files | OpenAI](https://platform.openai.com/docs/api-reference/files/list){:target=_blank .external-link}.
 
 ## Upload a File
 
-Use this operation to upload a file. This can be used across various operations. 
+ใช้ operation นี้เพื่ออัปโหลดไฟล์ ซึ่งสามารถใช้ร่วมกับ operation อื่นๆ ได้.
 
 Enter these parameters:
-
-- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai.md).
-- **Resource**: Select **File**.
-- **Operation**: Select **Upload a File**.
-- **Input Data Field Name**: Defaults to `data`. Enter the name of the binary property which contains the file. The size of individual files can be a maximum of 512 MB or 2 million tokens for Assistants.
+- **Credential to connect with**: สร้างหรือเลือก [OpenAI credential](/integrations/builtin/credentials/openai.md) ที่มีอยู่แล้ว.
+- **Resource**: เลือก **File**.
+- **Operation**: เลือก **Upload a File**.
+- **Input Data Field Name**: ค่าเริ่มต้นคือ `data`. ระบุชื่อ property แบบ binary ที่มีไฟล์. ขนาดไฟล์สูงสุด 512 MB หรือ 2 ล้าน tokens สำหรับ Assistants.
 
 ### Options
 
-- **Purpose**: Enter the intended purpose of the uploaded file. Use **Assistants** for files associated with Assistants and Message operations. Use **Fine-Tune** for [Fine-tuning](https://platform.openai.com/docs/api-reference/fine-tuning){:target=_blank .external-link}.
+- **Purpose**: ระบุวัตถุประสงค์ของไฟล์ที่อัปโหลด. ใช้ **Assistants** สำหรับไฟล์ที่เกี่ยวข้องกับ Assistants และ Message operations. ใช้ **Fine-Tune** สำหรับ [Fine-tuning](https://platform.openai.com/docs/api-reference/files/create){:target=_blank .external-link}.
 
-Refer to [Upload file | OpenAI](https://platform.openai.com/docs/api-reference/files/create){:target=_blank .external-link} documentation for more information.
+ดูรายละเอียดเพิ่มเติมที่ [Upload file | OpenAI](https://platform.openai.com/docs/api-reference/files/create){:target=_blank .external-link}.
 
 ## Common issues
 

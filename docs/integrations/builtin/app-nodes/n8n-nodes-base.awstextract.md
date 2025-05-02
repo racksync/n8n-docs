@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # AWS Textract node
 
-Use the AWS Textract node to automate work in AWS Textract, and integrate AWS Textract with other applications. n8n has built-in support for a wide range of AWS Textract features, including analyzing invoices.
+ใช้ AWS Textract node เพื่อทำงานอัตโนมัติใน AWS Textract และผสานรวม AWS Textract กับแอปพลิเคชันอื่นๆ n8n มีการรองรับฟีเจอร์หลากหลายของ AWS Textract ในตัว รวมถึงการวิเคราะห์ใบแจ้งหนี้ (invoices)
 
-On this page, you'll find a list of operations the AWS Textract node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ AWS Textract node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [AWS Textract credentials](/integrations/builtin/credentials/aws.md) for guidance on setting up authentication. 
+อ้างอิง [AWS Textract credentials](/integrations/builtin/credentials/aws.md) สำหรับคำแนะนำในการตั้งค่าการยืนยันตัวตน
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

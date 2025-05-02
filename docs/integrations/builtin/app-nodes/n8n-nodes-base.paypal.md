@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # PayPal node
 
-Use the PayPal node to automate work in PayPal, and integrate PayPal with other applications. n8n has built-in support for a wide range of PayPal features, including creating a batch payout and canceling unclaimed payout items. 
+ใช้ PayPal node เพื่อช่วยทำงานใน PayPal แบบอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันอื่น ๆ. n8n มีการสนับสนุนคุณสมบัติของ PayPal หลากหลาย เช่น การสร้าง batch payout และการยกเลิก payout items ที่ยังไม่ได้รับ.
 
-On this page, you'll find a list of operations the PayPal node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการของ operations ที่ PayPal node รองรับและลิงก์สำหรับข้อมูลเพิ่มเติม.
 
 /// note | Credentials
-Refer to [PayPal credentials](/integrations/builtin/credentials/paypal.md) for guidance on setting up authentication. 
+ดูรายละเอียดเพิ่มเติมได้ที่ [PayPal credentials](/integrations/builtin/credentials/paypal.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations

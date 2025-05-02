@@ -8,12 +8,12 @@ priority: medium
 
 # Adalo node
 
-Use the Adalo node to automate work in Adalo, and integrate Adalo with other applications. n8n has built-in support for a wide range of Adalo features, including like creating, getting, updating and deleting databases, records, and collections.
+ใช้ Adalo node เพื่อทำงานอัตโนมัติใน Adalo และผสานรวม Adalo กับแอปพลิเคชันอื่นๆ n8n มีการรองรับฟีเจอร์หลากหลายของ Adalo ในตัว รวมถึงการสร้าง, การดึงข้อมูล, การอัปเดต และการลบ databases, records, และ collections
 
-On this page, you'll find a list of operations the Adalo node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Adalo node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [Adalo credentials](/integrations/builtin/credentials/adalo.md) for guidance on setting up authentication. 
+อ้างอิง [Adalo credentials](/integrations/builtin/credentials/adalo.md) สำหรับคำแนะนำในการตั้งค่าการยืนยันตัวตน
 ///	
 
 ## Operations
@@ -32,7 +32,7 @@ Refer to [Adalo credentials](/integrations/builtin/credentials/adalo.md) for gui
 
 ## Related resources
 
-Refer to [Adalo's documentation](https://help.adalo.com/){:target=_blank .external-link} for more information on using Adalo. Their [External Collections with APIs](https://help.adalo.com/integrations/external-collections-with-apis){:target=_blank .external-link} page gives more detail about what you can do with Adalo collections.
+อ้างอิง [เอกสารของ Adalo](https://help.adalo.com/){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับการใช้ Adalo หน้า [External Collections with APIs](https://help.adalo.com/integrations/external-collections-with-apis){:target=_blank .external-link} ของพวกเขาให้รายละเอียดเพิ่มเติมเกี่ยวกับสิ่งที่คุณสามารถทำได้กับ Adalo collections
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

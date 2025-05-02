@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # UptimeRobot node
 
-Use the UptimeRobot node to automate work in UptimeRobot, and integrate UptimeRobot with other applications. n8n has built-in support for a wide range of UptimeRobot features, including creating and deleting alerts, as well as getting account details. 
+ใช้ UptimeRobot node เพื่อช่วยให้งานใน UptimeRobot เป็นอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันอื่น ๆ โดย n8n รองรับฟีเจอร์ของ UptimeRobot ในด้านต่าง ๆ เช่น การสร้างและลบ alert รวมถึงการดึงข้อมูลบัญชี
 
-On this page, you'll find a list of operations the UptimeRobot node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ UptimeRobot node รองรับ พร้อมทั้งลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [UptimeRobot credentials](/integrations/builtin/credentials/uptimerobot.md) for guidance on setting up authentication. 
+ดู [UptimeRobot credentials](/integrations/builtin/credentials/uptimerobot.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations

@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Microsoft To Do node
 
-Use the Microsoft To Do node to automate work in Microsoft To Do, and integrate Microsoft To Do with other applications. n8n has built-in support for a wide range of Microsoft To Do features, including creating, updating, deleting, and getting linked resources, lists, and tasks. 
+ใช้ Microsoft To Do node ในการทำงานอัตโนมัติใน Microsoft To Do และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ โดย n8n รองรับการสร้าง, อัปเดต, ลบ และดึงข้อมูล linked resources, lists และ tasks.
 
-On this page, you'll find a list of operations the Microsoft To Do node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Microsoft To Do node รองรับและลิงก์ไปยังข้อมูลเพิ่มเติม.
 
 /// note | Credentials
-Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft.md) for guidance on setting up authentication.
+ดู [Microsoft credentials](/integrations/builtin/credentials/microsoft.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

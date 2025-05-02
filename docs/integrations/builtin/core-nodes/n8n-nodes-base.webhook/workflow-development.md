@@ -8,17 +8,17 @@ contentType: howto
 
 # Workflow development
 
-The [Webhook node](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md) works a bit differently from other core nodes. n8n recommends following these processes for building, testing, and using your Webhook node in production.
+[Webhook node](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md) จะทำงานแตกต่างจาก core node อื่นๆ เล็กน้อย n8n แนะนำให้ทำตามขั้นตอนนี้สำหรับการสร้าง ทดสอบ และใช้งาน Webhook node ใน production
 
-n8n generates two **Webhook URLs** for each Webhook node: a **Test URL** and a **Production URL**.
+n8n จะสร้าง **Webhook URLs** ให้แต่ละ Webhook node สองแบบ: **Test URL** และ **Production URL**
 
 ## Build and test workflows
 
-While building or testing a workflow, use the **Test** webhook URL.
+ตอนสร้างหรือทดสอบ workflow ให้ใช้ **Test** webhook URL
 
-Using a test webhook ensures that you can view the incoming data in the editor UI, which is useful for debugging. Select **Listen for test event** to register the webhook before sending the data to the test webhook. The test webhook stays active for 120 seconds.
+การใช้ test webhook จะช่วยให้คุณดูข้อมูลที่เข้ามาใน editor UI ได้ เหมาะสำหรับ debug ให้เลือก **Listen for test event** เพื่อ register webhook ก่อนส่งข้อมูลไปยัง test webhook โดย test webhook จะ active อยู่ 120 วินาที
 
-When using the Webhook node on localhost on a [self-hosted](/hosting/index.md) n8n instance, run n8n in tunnel mode:
+ถ้าใช้ Webhook node บน localhost ใน [self-hosted](/hosting/index.md) n8n instance ให้รัน n8n ใน tunnel mode:
 
 * [npm with tunnel](/hosting/installation/npm.md#n8n-with-tunnel)
 * [Docker with tunnel](/hosting/installation/docker.md#n8n-with-tunnel)
@@ -27,8 +27,8 @@ When using the Webhook node on localhost on a [self-hosted](/hosting/index.md) n
 
 ## Production workflows
 
-When your workflow is ready, switch to using the **Production** webhook URL. You can then activate your workflow, and n8n runs it automatically when an external service calls the webhook URL.
+เมื่อ workflow พร้อมใช้งานแล้ว ให้เปลี่ยนไปใช้ **Production** webhook URL จากนั้น activate workflow ได้เลย n8n จะรัน workflow อัตโนมัติเมื่อมี external service เรียก webhook URL นี้
 
-When working with a Production webhook, ensure that you have saved and activated the workflow. Data flowing through the webhook isn't visible in the editor UI with the production webhook.
+ถ้าใช้ Production webhook ต้องแน่ใจว่าได้ save และ activate workflow แล้ว ข้อมูลที่ผ่าน webhook จะไม่แสดงใน editor UI เมื่อใช้ production webhook
 
-Refer to [Create a workflow](/workflows/create.md) for more information on activating workflows.
+ดูรายละเอียดเพิ่มเติมที่ [Create a workflow](/workflows/create.md) สำหรับการ activate workflow

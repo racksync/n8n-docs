@@ -7,134 +7,134 @@ contentType: [integration, reference]
 
 # Git
 
-[Git](https://git-scm.com/) is a free and open-source distributed version control system designed to handle everything from small to large projects with speed and efficiency.
+[Git](https://git-scm.com/) คือระบบ distributed version control แบบ open-source ที่ออกแบบมาให้รองรับทั้งโปรเจ็กต์ขนาดเล็กและใหญ่ได้อย่างรวดเร็วและมีประสิทธิภาพ
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/git.md).
+คุณสามารถดูข้อมูลการตั้งค่า authentication สำหรับ node นี้ได้ที่ [Git credential](/integrations/builtin/credentials/git.md)
 ///
 
 ## Operations
 
-* [**Add**](#add) a file or folder to commit. Performs a [git add](https://git-scm.com/docs/git-add){:target=_blank .external-link}.
-* [**Add Config**](#add-config): Add configuration property. Performs a [git config](https://git-scm.com/docs/git-config){:target=_blank .external-link} set or add.
-* [**Clone**](#clone) a repository: Performs a [git clone](https://git-scm.com/docs/git-clone){:target=_blank .external-link}.
-* [**Commit**](#commit) files or folders to git. Performs a [git commit](https://git-scm.com/docs/git-commit){:target=_blank .external-link}.
-* [**Fetch**](#fetch) from remote repository. Performs a [git fetch](https://git-scm.com/docs/git-fetch){:target=_blank .external-link}.
-* [**List Config**](#list-config): Return current configuration. Performs a [git config](https://git-scm.com/docs/git-config){:target=_blank .external-link} query.
-* [**Log**](#log): Return git commit history. Performs a [git log](https://git-scm.com/docs/git-log){:target=_blank .external-link}.
-* [**Pull**](#pull) from remote repository: Performs a [git pull](https://git-scm.com/docs/git-pull){:target=_blank .external-link}.
-* [**Push**](#push) to remote repository: Performs a [git push](https://git-scm.com/docs/git-push){:target=_blank .external-link}.
-* [**Push Tags**](#push-tags) to remote repository: Performs a [git push --tags](https://git-scm.com/docs/git-push#Documentation/git-push.txt---tags){:target=_blank .external-link}.
-* Return [**Status**](#status) of current repository: Performs a [git status](https://git-scm.com/docs/git-status){:target=_blank .external-link}.
-* Create a new [**Tag**](#tag): Performs a [git tag](https://git-scm.com/docs/git-tag){:target=_blank .external-link}.
-* [**User Setup**](#user-setup): Set the user.
+* [**Add**](#add) เพิ่มไฟล์หรือโฟลเดอร์เข้า commit (เหมือน [git add](https://git-scm.com/docs/git-add){:target=_blank .external-link})
+* [**Add Config**](#add-config): เพิ่ม property ใน config (เหมือน [git config](https://git-scm.com/docs/git-config){:target=_blank .external-link})
+* [**Clone**](#clone) โคลน repository (เหมือน [git clone](https://git-scm.com/docs/git-clone){:target=_blank .external-link})
+* [**Commit**](#commit) commit ไฟล์หรือโฟลเดอร์ (เหมือน [git commit](https://git-scm.com/docs/git-commit){:target=_blank .external-link})
+* [**Fetch**](#fetch) ดึงข้อมูลจาก remote repository (เหมือน [git fetch](https://git-scm.com/docs/git-fetch){:target=_blank .external-link})
+* [**List Config**](#list-config): ดู config ปัจจุบัน (เหมือน [git config](https://git-scm.com/docs/git-config){:target=_blank .external-link})
+* [**Log**](#log): ดูประวัติ commit (เหมือน [git log](https://git-scm.com/docs/git-log){:target=_blank .external-link})
+* [**Pull**](#pull) ดึงข้อมูลจาก remote repository (เหมือน [git pull](https://git-scm.com/docs/git-pull){:target=_blank .external-link})
+* [**Push**](#push) ส่งข้อมูลไป remote repository (เหมือน [git push](https://git-scm.com/docs/git-push){:target=_blank .external-link})
+* [**Push Tags**](#push-tags) ส่ง tag ไป remote repository (เหมือน [git push --tags](https://git-scm.com/docs/git-push#Documentation/git-push.txt---tags){:target=_blank .external-link})
+* ดู [**Status**](#status) ของ repository ปัจจุบัน (เหมือน [git status](https://git-scm.com/docs/git-status){:target=_blank .external-link})
+* สร้าง [**Tag**](#tag) ใหม่ (เหมือน [git tag](https://git-scm.com/docs/git-tag){:target=_blank .external-link})
+* [**User Setup**](#user-setup): ตั้งค่าผู้ใช้
 
-Refer to the sections below for more details on the parameters and options for each operation.
+ดูรายละเอียด parameter และ options ของแต่ละ operation ได้ในหัวข้อด้านล่าง
 
 ## Add
 
-Configure this operation with these parameters:
+ตั้งค่า operation นี้ด้วย parameter เหล่านี้:
 
-* **Repository Path**: Enter the local path of the git repository.
-* **Paths to Add**: Enter a comma-separated list of paths of files or folders to add in this field. You can use absolute paths or relative paths from the **Repository Path**.
+* **Repository Path**: กรอก path ของ git repository ในเครื่อง
+* **Paths to Add**: กรอก path ของไฟล์หรือโฟลเดอร์ที่ต้องการ add (คั่นด้วย comma) จะใช้ path แบบ absolute หรือ relative จาก **Repository Path** ก็ได้
 
 <!--Vale doesn't like "Config"-->
 <!-- vale off -->
 ## Add Config
 
-Configure this operation with these parameters:
+ตั้งค่า operation นี้ด้วย parameter เหล่านี้:
 
-* **Repository Path**: Enter the local path of the git repository.
-* **Key**: Enter the name of the key to set.
-* **Value**: Enter the value of the key to set.
+* **Repository Path**: กรอก path ของ git repository ในเครื่อง
+* **Key**: กรอกชื่อ key ที่ต้องการตั้งค่า
+* **Value**: กรอกค่าของ key
 
 ### Add Config options
 
-The add config operation adds the **Mode** option. Choose whether to **Set** or **Append** the setting in the local config.
+add config operation จะมี option **Mode** ให้เลือกว่าจะ **Set** หรือ **Append** ค่าใน local config
 <!-- vale on -->
 
 ## Clone
 
-Configure this operation with these parameters:
+ตั้งค่า operation นี้ด้วย parameter เหล่านี้:
 
-* **Repository Path**: Enter the local path of the git repository.
-* **Authentication**: Select **Authenticate** to pass credentials in. Select **None** to not use authentication.
-    * **Credential for Git**: If you select **Authenticate**, you must select or create credentials for the node to use. Refer to [Git credential](/integrations/builtin/credentials/git.md) for more information.
-* **New Repository Path**: Enter the local path where you'd like to locate the cloned repository.
-* **Source Repository**: Enter the URL or path of the repository you want to clone.
+* **Repository Path**: กรอก path ของ git repository ในเครื่อง
+* **Authentication**: เลือก **Authenticate** เพื่อใช้ credentials หรือ **None** ถ้าไม่ต้องการใช้ authentication
+    * ถ้าเลือก **Authenticate** ต้องเลือกหรือสร้าง credentials สำหรับ node นี้ ดูรายละเอียดที่ [Git credential](/integrations/builtin/credentials/git.md)
+* **New Repository Path**: กรอก path ที่ต้องการเก็บ repository ที่โคลนมา
+* **Source Repository**: กรอก URL หรือ path ของ repository ที่ต้องการโคลน
 
 ## Commit
 
-Configure this operation with these parameters:
+ตั้งค่า operation นี้ด้วย parameter เหล่านี้:
 
-* **Repository Path**: Enter the local path of the git repository.
-* **Message**: Enter the commit message to use in this field.
+* **Repository Path**: กรอก path ของ git repository ในเครื่อง
+* **Message**: กรอกข้อความ commit
 
 ### Commit options
 
-The commit operation adds the **Paths to Add** option. To commit all "added" files and folders, leave this field blank. To commit specific "added" files and folders, enter a comma-separated list of paths of files or folders in this field.
+commit operation จะมี option **Paths to Add** ถ้าต้องการ commit ไฟล์หรือโฟลเดอร์ที่ "add" ไว้ทั้งหมด ให้เว้นว่างไว้ ถ้าต้องการ commit เฉพาะไฟล์หรือโฟลเดอร์ที่ระบุ ให้กรอก path (คั่นด้วย comma)
 
-You can use absolute paths or relative paths from the **Repository Path**.
+จะใช้ path แบบ absolute หรือ relative จาก **Repository Path** ก็ได้
 
 ## Fetch
 
-This operation only prompts you to enter the local path of the git repository in the **Repository Path** parameter.
+operation นี้มี parameter เดียวคือ **Repository Path** ให้กรอก path ของ git repository ในเครื่อง
 
 <!--Vale doesn't like "Config"-->
 <!-- vale off -->
 ## List Config
 
-This operation only prompts you to enter the local path of the git repository in the **Repository Path** parameter.
+operation นี้มี parameter เดียวคือ **Repository Path** ให้กรอก path ของ git repository ในเครื่อง
 <!-- vale on -->
 
 ## Log
 
-Configure this operation with these parameters:
+ตั้งค่า operation นี้ด้วย parameter เหล่านี้:
 
-* **Repository Path**: Enter the local path of the git repository.
-* **Return All**: When turned on, the node will return all results. When turned off, the node will return results up to the set **Limit**.
-* **Limit**: Only available when you turn off **Return All**. Enter the maximum number of results to return.
+* **Repository Path**: กรอก path ของ git repository ในเครื่อง
+* **Return All**: เปิดเพื่อให้ node คืนค่าทั้งหมด ปิดเพื่อกำหนด **Limit**
+* **Limit**: แสดงเมื่อปิด **Return All** กรอกจำนวนสูงสุดที่ต้องการคืนค่า
 
 ### Log options
 
-The log operation adds the **File** option. Enter the path of a file or folder to get the history of in this field.
+log operation จะมี option **File** กรอก path ของไฟล์หรือโฟลเดอร์ที่ต้องการดูประวัติ
 
-You can use absolute paths or relative paths from the **Repository Path**.
+จะใช้ path แบบ absolute หรือ relative จาก **Repository Path** ก็ได้
 
 ## Pull
 
-This operation only prompts you to enter the local path of the git repository in the **Repository Path** parameter.
+operation นี้มี parameter เดียวคือ **Repository Path** ให้กรอก path ของ git repository ในเครื่อง
 
 ## Push
 
-Configure this operation with these parameters:
+ตั้งค่า operation นี้ด้วย parameter เหล่านี้:
 
-* **Repository Path**: Enter the local path of the git repository.
-* **Authentication**: Select **Authenticate** to pass credentials in or **None** to not use authentication.
-    * If you select **Authenticate**, you must select or create **Credential for Git** for the node to use. Refer to [Git credential](/integrations/builtin/credentials/git.md) for more information.
+* **Repository Path**: กรอก path ของ git repository ในเครื่อง
+* **Authentication**: เลือก **Authenticate** เพื่อใช้ credentials หรือ **None** ถ้าไม่ต้องการใช้ authentication
+    * ถ้าเลือก **Authenticate** ต้องเลือกหรือสร้าง **Credential for Git** สำหรับ node นี้ ดูรายละเอียดที่ [Git credential](/integrations/builtin/credentials/git.md)
 
 ### Push options
 
-The push operation adds the **Target Repository** option. Enter the URL or path of the repository to push to in this field.
+push operation จะมี option **Target Repository** กรอก URL หรือ path ของ repository ที่ต้องการ push
 
 ## Push Tags
 
-This operation only prompts you to enter the local path of the git repository in the **Repository Path** parameter.
+operation นี้มี parameter เดียวคือ **Repository Path** ให้กรอก path ของ git repository ในเครื่อง
 
 ## Status
 
-This operation only prompts you to enter the local path of the git repository in the **Repository Path** parameter.
+operation นี้มี parameter เดียวคือ **Repository Path** ให้กรอก path ของ git repository ในเครื่อง
 
 ## Tag
 
-Configure this operation with these parameters:
+ตั้งค่า operation นี้ด้วย parameter เหล่านี้:
 
-* **Repository Path**: Enter the local path of the git repository.
-* **Name**: Enter the name of the tag to create in this field.
+* **Repository Path**: กรอก path ของ git repository ในเครื่อง
+* **Name**: กรอกชื่อ tag ที่ต้องการสร้าง
 
 ## User Setup
 
-This operation only prompts you to enter the local path of the git repository in the **Repository Path** parameter.
+operation นี้มี parameter เดียวคือ **Repository Path** ให้กรอก path ของ git repository ในเครื่อง
 
 ## Templates and examples
 

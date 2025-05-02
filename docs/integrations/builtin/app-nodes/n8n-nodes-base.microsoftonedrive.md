@@ -8,12 +8,12 @@ priority: medium
 
 # Microsoft OneDrive node
 
-Use the Microsoft OneDrive node to automate work in Microsoft OneDrive, and integrate Microsoft OneDrive with other applications. n8n has built-in support for a wide range of Microsoft OneDrive features, including creating, updating, deleting, and getting files, and folders.
+ใช้ Microsoft OneDrive node ในการทำงานอัตโนมัติใน Microsoft OneDrive และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ โดย n8n รองรับการสร้าง, อัปเดต, ลบ และดึงข้อมูล files และ folders.
 
-On this page, you'll find a list of operations the Microsoft OneDrive node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Microsoft OneDrive node รองรับและลิงก์ไปยังข้อมูลเพิ่มเติม.
 
 /// note | Credentials
-Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft.md) for guidance on setting up authentication.
+ดู [Microsoft credentials](/integrations/builtin/credentials/microsoft.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

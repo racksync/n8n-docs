@@ -8,12 +8,12 @@ priority: high
 
 # WhatsApp Business Cloud node
 
-Use the WhatsApp Business Cloud node to automate work in WhatsApp Business, and integrate WhatsApp Business with other applications. n8n has built-in support for a wide range of WhatsApp Business features, including sending messages, and uploading, downloading, and deleting media. 
+ใช้ WhatsApp Business Cloud node เพื่ออัตโนมัติการทำงานใน WhatsApp Business และเชื่อมต่อ WhatsApp Business เข้ากับแอปพลิเคชันอื่นๆ n8n รองรับฟีเจอร์หลากหลายของ WhatsApp Business ไม่ว่าจะเป็นการส่งข้อความ รวมถึงการอัปโหลด, ดาวน์โหลด และลบสื่อ
 
-On this page, you'll find a list of operations the WhatsApp Business Cloud node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการของ operations ที่ WhatsApp Business Cloud node รองรับและลิงก์ไปยังเอกสารเพิ่มเติม
 
 /// note | Credentials
-Refer to [WhatsApp Business Cloud credentials](/integrations/builtin/credentials/whatsapp.md) for guidance on setting up authentication. 
+ดูวิธีการตั้งค่า authentication ได้ที่ [WhatsApp Business Cloud credentials](/integrations/builtin/credentials/whatsapp.md)
 ///
 
 ## Operations
@@ -36,10 +36,10 @@ Refer to [WhatsApp Business Cloud credentials](/integrations/builtin/credentials
 
 ## Related resources
 
-Refer to [WhatsApp Business Platform's Cloud API documentation](https://developers.facebook.com/docs/whatsapp/cloud-api){:target=_blank} for details about the operations.
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับ operations ได้ที่ [WhatsApp Business Platform's Cloud API documentation](https://developers.facebook.com/docs/whatsapp/cloud-api){:target=_blank}
 
 ## Common issues
 
-For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-base.whatsapp/common-issues.md).
+สำหรับข้อผิดพลาดและปัญหาที่พบได้บ่อยรวมถึงขั้นตอนแนะนำการแก้ไข ให้ดูที่ [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-base.whatsapp/common-issues.md)
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

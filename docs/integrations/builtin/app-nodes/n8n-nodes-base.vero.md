@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Vero node
 
-Use the Vero node to automate work in Vero and integrate Vero with other applications. n8n has built-in support for a wide range of Vero features, including creating and deleting users. 
+ใช้ Vero node ในการทำงานอัตโนมัติใน Vero และเชื่อมต่อ Vero กับแอปพลิเคชันอื่น ๆ. n8n รองรับฟีเจอร์ของ Vero หลากหลาย เช่น การสร้างและลบ users.
 
-On this page, you'll find a list of operations the Vero node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการของ operations ที่ Vero node รองรับและลิงก์ไปยัง resource เพิ่มเติม.
 
 /// note | Credentials
-Refer to [Vero credentials](/integrations/builtin/credentials/vero.md) for guidance on setting up authentication. 
+ดู [Vero credentials](/integrations/builtin/credentials/vero.md) สำหรับคำแนะนำในการตั้งค่า authentication. 
 ///
 
 ## Operations

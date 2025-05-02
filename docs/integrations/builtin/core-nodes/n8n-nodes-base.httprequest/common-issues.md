@@ -8,33 +8,33 @@ priority: critical
 
 # HTTP Request node common issues
 
-Here are some common errors and issues with the [HTTP Request node](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) and steps to resolve or troubleshoot them.
+รวม error และปัญหาที่เจอบ่อยกับ [HTTP Request node](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) พร้อมวิธีแก้หรือแนวทางตรวจสอบ
 
 ## Bad request - please check your parameters
 
-This error displays when the node receives a 400 error indicating a bad request. This error most often occurs because:
+error นี้จะขึ้นเมื่อ node ได้รับ 400 error (bad request) สาเหตุที่เจอบ่อยคือ:
 
-* You're using an invalid name or value in a **Query Parameter**.
-* You're passing array values in a **Query Parameter** but the array isn't formatted correctly. Try using the [**Array Format in Query Parameters**](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md#array-format-in-query-parameters) option.
+* ใช้ชื่อหรือ value ของ **Query Parameter** ไม่ถูกต้อง
+* ส่ง array ใน **Query Parameter** แต่ format ไม่ถูก ลองใช้ option [**Array Format in Query Parameters**](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md#array-format-in-query-parameters) ดู
 
-Review the API documentation for your service to format your query parameters.
+แนะนำให้เช็คเอกสาร API ของบริการที่ใช้ว่าควร format query parameter ยังไง
 
 <!-- vale off -->
 ## The resource you are requesting could not be found
 <!-- vale on -->
 
-This error displays when the endpoint **URL** you entered is invalid.
+error นี้จะขึ้นเมื่อ endpoint **URL** ที่ใส่ไม่ถูกต้อง
 
-This may be due to a typo in the URL or a deprecated API. Refer to your service's API documentation to verify you have a valid endpoint.
+อาจจะพิมพ์ URL ผิด หรือ API นั้นเลิกใช้แล้ว ให้เช็คเอกสาร API ของบริการนั้นๆ ว่า endpoint ถูกต้องไหม
 
 ## JSON parameter need to be an valid JSON
 
-This error displays when you've passed a parameter as JSON and it's not formatted as valid JSON.
+error นี้จะขึ้นเมื่อส่ง parameter เป็น JSON แต่ format ไม่ถูกต้อง
 
-To resolve, review the JSON you've entered for these issues:
+วิธีแก้:
 
-* Test your JSON in a JSON checker or syntax parser to find errors like missing quotation marks, extra or missing commas, incorrectly formatted arrays, extra or missing square brackets or curly brackets, and so on.
-* If you've used an **Expression** in the node, be sure you've wrapped the entire JSON in double curly brackets, for example:
+* ลองเช็ค JSON ที่ใส่ใน JSON checker หรือ syntax parser เพื่อหาข้อผิดพลาด เช่น ลืมใส่เครื่องหมายคำพูด, มี comma เกิน/ขาด, array format ผิด, ลืมปิด [] หรือ {} ฯลฯ
+* ถ้าใช้ **Expression** ใน node ต้องครอบ JSON ทั้งหมดด้วย double curly brackets เช่น:
     ```
     {{
         {
@@ -51,33 +51,34 @@ To resolve, review the JSON you've entered for these issues:
 
 ## Forbidden - perhaps check your credentials
 
-This error displays when the node receives a 403 error indicating authentication failed.
+error นี้จะขึ้นเมื่อ node ได้รับ 403 error (authentication fail)
 
-To resolve, review the selected credentials and make sure you can authenticate with them. You may need to:
+วิธีแก้:
 
-* Update permissions or scopes so that your API key or account can perform the operation you've selected.
-* Format your generic credential in a different way.
-* Generate a new API key or token with the appropriate permissions or scopes.
+* ตรวจสอบ credential ที่เลือกว่าถูกต้องไหม และสามารถ authenticate ได้จริงหรือเปล่า
+* อาจจะต้องอัปเดต permission หรือ scope ของ API key/account ให้สามารถทำ operation ที่เลือกได้
+* ลอง format generic credential ใหม่
+* สร้าง API key หรือ token ใหม่ที่มี permission/scope ที่ต้องการ
 
 ## 429 - The service is receiving too many requests from you
 
-This error displays when the node receives a [429 error](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429){:target=_blank .external-link} from the service that you're calling. This often means that you have hit the rate limits of that service. You can find out more on the [Handling API rate limits](/integrations/builtin/rate-limits.md) page.
+error นี้จะขึ้นเมื่อ node ได้รับ [429 error](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429){:target=_blank .external-link} จากบริการที่เรียก ซึ่งมักจะหมายถึงคุณส่ง request ไปเยอะเกิน limit ของบริการนั้น ดูรายละเอียดเพิ่มเติมที่ [Handling API rate limits](/integrations/builtin/rate-limits.md)
 
-To resolve the error, you can use one of the built-in options of the HTTP request node:
+วิธีแก้ สามารถใช้ option ใน HTTP request node ได้ดังนี้:
 
 ### Batching
 
-Use this option to send requests in batches and introduce a delay between them.
+ใช้ option นี้เพื่อส่ง request ทีละ batch และหน่วงเวลาแต่ละ batch
 
-1. In the HTTP Request node, select **Add Option > Batching**.
-1. Set **Items per Batch** to the number of input items to include in each request.
-1. Set **Batch Interval (ms)** to introduce a delay between requests in milliseconds. For example, to send one request to an API per second, set **Batch Interval (ms)** to `1000`.
+1. ที่ HTTP Request node เลือก **Add Option > Batching**
+1. ตั้งค่า **Items per Batch** เป็นจำนวน input ที่จะรวมในแต่ละ request
+1. ตั้งค่า **Batch Interval (ms)** เพื่อหน่วงเวลาระหว่างแต่ละ request (ms) เช่น ถ้าจะส่ง 1 request ต่อวินาที ให้ตั้ง **Batch Interval (ms)** เป็น `1000`
 
 ### Retry on Fail
 
-Use this option to retry the node after a failed attempt.
+ใช้ option นี้เพื่อ retry node ถ้า request fail
 
-1. In the HTTP Request node, go to **Settings** and enable **Retry on Fail**.
-1. Set **Max Tries** to the maximum number of times n8n should retry the node.
-1. Set **Wait Between Tries (ms)** to the desired delay in milliseconds between retries. For example, to wait one second before retrying the request again, set **Wait Between Tries (ms)** to `1000`.
+1. ที่ HTTP Request node ไปที่ **Settings** แล้วเปิด **Retry on Fail**
+1. ตั้งค่า **Max Tries** เป็นจำนวนครั้งสูงสุดที่ n8n จะ retry node
+1. ตั้งค่า **Wait Between Tries (ms)** เป็นเวลาที่จะรอก่อน retry (ms) เช่น ถ้าจะรอ 1 วินาทีก่อน retry ให้ตั้ง **Wait Between Tries (ms)** เป็น `1000`
 

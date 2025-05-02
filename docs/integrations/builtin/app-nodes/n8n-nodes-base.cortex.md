@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Cortex node
 
-Use the Cortex node to automate work in Cortex, and integrate Cortex with other applications. n8n has built-in support for a wide range of Cortex features, including executing analyzers, and responders, as well as getting job details.
+ใช้ Cortex node เพื่อทำงานอัตโนมัติใน Cortex และ integrate Cortex กับแอปพลิเคชันอื่นๆ n8n มีการรองรับในตัวสำหรับฟีเจอร์ต่างๆ ของ Cortex รวมถึงการ execute analyzers และ responders รวมถึงการดึงรายละเอียด job
 
-On this page, you'll find a list of operations the Cortex node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Cortex node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [Cortex credentials](/integrations/builtin/credentials/cortex.md) for guidance on setting up authentication. 
+อ้างอิง [Cortex credentials](/integrations/builtin/credentials/cortex.md) สำหรับคำแนะนำในการตั้งค่า authentication
 ///
 
 ## Operations

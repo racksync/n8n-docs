@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Pushbullet node
 
-Use the Pushbullet node to automate work in Pushbullet, and integrate Pushbullet with other applications. n8n has built-in support for a wide range of Pushbullet features, including creating, updating, deleting, and getting a push. 
+ใช้ Pushbullet node เพื่อช่วยทำงานใน Pushbullet แบบอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันอื่น ๆ. n8n มีการสนับสนุนคุณสมบัติของ Pushbullet หลากหลายรูปแบบ รวมถึงการสร้าง, อัปเดต, ลบ และดึงข้อมูล push.
 
-On this page, you'll find a list of operations the Pushbullet node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการของ operations ที่ Pushbullet node รองรับและลิงก์สำหรับข้อมูลเพิ่มเติม.
 
 /// note | Credentials
-Refer to [Pushbullet credentials](/integrations/builtin/credentials/pushbullet.md) for guidance on setting up authentication. 
+ดูรายละเอียดเพิ่มเติมได้ที่ [Pushbullet credentials](/integrations/builtin/credentials/pushbullet.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations

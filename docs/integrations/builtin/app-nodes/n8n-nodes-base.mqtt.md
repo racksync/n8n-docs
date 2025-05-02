@@ -8,12 +8,12 @@ priority: medium
 
 # MQTT node
 
-Use the MQTT node to automate work in MQTT, and integrate MQTT with other applications. n8n supports transporting messages with MQTT.
+ใช้ MQTT node ในการทำงานอัตโนมัติใน MQTT และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ โดย n8n รองรับการส่งข้อความผ่าน MQTT.
 
-On this page, you'll find a list of operations the MQTT node supports and links to more resources.
+ในหน้านี้ คุณจะเห็นรายการ operations ที่ MQTT node รองรับและลิงก์ไปยังข้อมูลเพิ่มเติม.
 
 /// note | Credentials
-Refer to [MQTT credentials](/integrations/builtin/credentials/mqtt.md) for guidance on setting up authentication. 
+ดู [MQTT credentials](/integrations/builtin/credentials/mqtt.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

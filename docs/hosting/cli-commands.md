@@ -6,14 +6,14 @@ contentType: reference
 
 # CLI commands for n8n
 
-n8n includes a CLI (command line interface), allowing you to perform actions using the CLI rather than the n8n editor. These include starting workflows, and exporting and importing workflows and credentials.
+n8n มี CLI (command line interface) ให้ใช้งาน สามารถสั่งงานต่างๆ ผ่าน CLI แทนการใช้ n8n editor ได้ เช่น สั่งรัน workflow, export/import workflows และ credentials
 
 ## Running CLI commands
 
-You can use CLI commands with self-hosted n8n. Depending on how you choose to install n8n, there are differences in how to run the commands:
+คุณสามารถใช้ CLI commands กับ n8n แบบ self-hosted ได้ วิธีรันคำสั่งจะแตกต่างกันตามวิธีติดตั้ง:
 
-* npm: the `n8n` command is directly available. The documentation uses this in the examples below.
-* Docker: the `n8n` command is available within your Docker container:
+* npm: ใช้คำสั่ง `n8n` ได้เลย ตัวอย่างในเอกสารนี้จะใช้แบบนี้
+* Docker: ใช้คำสั่ง `n8n` ใน container ของคุณ:
 
     ```sh
     docker exec -u node -it <n8n-container-name> <n8n-cli-command>
@@ -21,9 +21,9 @@ You can use CLI commands with self-hosted n8n. Depending on how you choose to in
 
 ## Start a workflow
 
-You can start workflows directly using the CLI.
+คุณสามารถสั่งรัน workflow ได้โดยตรงผ่าน CLI
 
-Execute a saved workflow by its ID:
+รัน workflow ที่บันทึกไว้ด้วย ID:
 
 ```bash
 n8n execute --id <ID>
@@ -31,31 +31,31 @@ n8n execute --id <ID>
 
 ## Change the active status of a workflow
 
-You can change the active status of a workflow using the CLI.
+คุณสามารถเปลี่ยนสถานะ active ของ workflow ผ่าน CLI ได้
 
 /// note | Restart required
-These commands operate on your n8n database. If you execute them while n8n is running, the changes don't take effect until you restart n8n.
+คำสั่งนี้จะเปลี่ยนแปลงข้อมูลใน database ของ n8n ถ้าใช้ตอนที่ n8n กำลังรันอยู่ การเปลี่ยนแปลงจะยังไม่เกิดขึ้นจนกว่าจะ restart n8n
 ///
 
-Set the active status of a workflow by its ID to false:
+ตั้ง active status ของ workflow ตาม ID ให้เป็น false:
 
 ```bash
 n8n update:workflow --id=<ID> --active=false
 ```
 
-Set the active status of a workflow by its ID to true:
+ตั้ง active status ของ workflow ตาม ID ให้เป็น true:
 
 ```bash
 n8n update:workflow --id=<ID> --active=true
 ```
 
-Set the active status to false for all the workflows:
+ตั้ง active status เป็น false สำหรับ workflow ทั้งหมด:
 
 ```bash
 n8n update:workflow --all --active=false
 ```
 
-Set the active status to true for all the workflows:
+ตั้ง active status เป็น true สำหรับ workflow ทั้งหมด:
 
 ```bash
 n8n update:workflow --all --active=true
@@ -63,42 +63,42 @@ n8n update:workflow --all --active=true
 
 ## Export workflows and credentials
 
-You can export your workflows and credentials from n8n using the CLI.
+คุณสามารถ export workflows และ credentials จาก n8n ผ่าน CLI ได้
 
-Command flags:
+Flag ที่ใช้กับคำสั่ง:
 
 | Flag | Description |
 |-------------|-------|
-| --help | Help prompt. |
-| --all | Exports all workflows/credentials. |
-| --backup | Sets --all --pretty --separate for backups. You can optionally set --output. |
-| --id | The ID of the workflow to export. |
-| --output | Outputs file name or directory if using separate files. |
-| --pretty | Formats the output in an easier to read fashion. |
-| --separate | Exports one file per workflow (useful for versioning). Must set a directory using --output. |
-| --decrypted | Exports the credentials in a plain text format. |
+| --help | แสดง help |
+| --all | export workflows/credentials ทั้งหมด |
+| --backup | ตั้งค่า --all --pretty --separate สำหรับ backup สามารถกำหนด --output เพิ่มได้ |
+| --id | export workflow ตาม ID |
+| --output | กำหนดชื่อไฟล์หรือโฟลเดอร์ (ถ้าใช้ --separate) |
+| --pretty | จัดรูปแบบ output ให้อ่านง่ายขึ้น |
+| --separate | export เป็นไฟล์แยกแต่ละ workflow (เหมาะกับการทำ versioning) ต้องกำหนด directory ด้วย --output |
+| --decrypted | export credentials แบบ plain text |
 
 ### Workflows
 
-Export all your workflows to the standard output (terminal):
+export workflows ทั้งหมดไปที่ terminal:
 
 ```bash
 n8n export:workflow --all
 ```
 
-Export a workflow by its ID and specify the output file name:
+export workflow ตาม ID และกำหนดชื่อไฟล์ output:
 
 ```bash
 n8n export:workflow --id=<ID> --output=file.json
 ```
 
-Export all workflows to a specific directory in a single file:
+export workflows ทั้งหมดไปยังโฟลเดอร์ที่กำหนดในไฟล์เดียว:
 
 ```bash
 n8n export:workflow --all --output=backups/latest/file.json
 ```
 
-Export all the workflows to a specific directory using the `--backup` flag (details above):
+export workflows ทั้งหมดไปยังโฟลเดอร์ที่กำหนดโดยใช้ flag `--backup` (ดูรายละเอียดด้านบน):
 
 ```bash
 n8n export:workflow --backup --output=backups/latest/
@@ -106,34 +106,34 @@ n8n export:workflow --backup --output=backups/latest/
 
 ### Credentials
 
-Export all your credentials to the standard output (terminal):
+export credentials ทั้งหมดไปที่ terminal:
 
 ```bash
 n8n export:credentials --all
 ```
 
-Export credentials by their ID and specify the output file name:
+export credentials ตาม ID และกำหนดชื่อไฟล์ output:
 
 ```bash
 n8n export:credentials --id=<ID> --output=file.json
 ```
 
-Export all credentials to a specific directory in a single file:
+export credentials ทั้งหมดไปยังโฟลเดอร์ที่กำหนดในไฟล์เดียว:
 
 ```bash
 n8n export:credentials --all --output=backups/latest/file.json
 ```
 
-Export all the credentials to a specific directory using the `--backup` flag (details above):
+export credentials ทั้งหมดไปยังโฟลเดอร์ที่กำหนดโดยใช้ flag `--backup` (ดูรายละเอียดด้านบน):
 
 ```bash
 n8n export:credentials --backup --output=backups/latest/
 ```
 
-Export all the credentials in plain text format. You can use this to migrate from one installation to another that has a different secret key in the configuration file.
+export credentials ทั้งหมดแบบ plain text (ใช้สำหรับย้ายข้อมูลไป instance อื่นที่มี secret key ต่างกัน):
 
 /// warning | Sensitive information
-All sensitive information is visible in the files.
+ข้อมูลสำคัญทั้งหมดจะเห็นได้ในไฟล์นี้
 ///
 
 ```bash
@@ -142,39 +142,39 @@ n8n export:credentials --all --decrypted --output=backups/decrypted.json
 
 ## Import workflows and credentials
 
-You can import your workflows and credentials from n8n using the CLI.
+คุณสามารถ import workflows และ credentials เข้า n8n ผ่าน CLI ได้
 
 /// warning | Update the IDs
-When exporting workflows and credentials, n8n also exports their IDs. If you have workflows and credentials with the same IDs in your existing database, they will be overwritten. To avoid this, delete or change the IDs before importing.
+ตอน export workflows และ credentials จะ export ID มาด้วย ถ้าใน database เดิมมี ID ซ้ำกัน ข้อมูลจะถูกเขียนทับ เพื่อป้องกันให้ลบหรือเปลี่ยน ID ก่อน import
 ///
 
-Available flags:
+Flag ที่ใช้ได้:
 
 | Flag | Description |
 |------|-------------|
-| --help | Help prompt. |
-| --input | Input file name or directory if you use --separate. |
-| --projectId | Import the workflow or credential to the specified project. Can't be used with `--userId`. |
-| --separate | Imports `*.json` files from directory provided by --input. |
-| --userId | Import the workflow or credential to the specified user. Can't be used with `--projectId`. |
+| --help | แสดง help |
+| --input | ชื่อไฟล์ input หรือโฟลเดอร์ (ถ้าใช้ --separate) |
+| --projectId | import workflow หรือ credential ไปยัง project ที่กำหนด (ใช้กับ `--userId` ไม่ได้) |
+| --separate | import ไฟล์ `*.json` ทั้งหมดจากโฟลเดอร์ที่กำหนดใน --input |
+| --userId | import workflow หรือ credential ไปยัง user ที่กำหนด (ใช้กับ `--projectId` ไม่ได้) |
 
 /// note | Migrating to SQLite
-n8n limits workflow and credential names to 128 characters, but SQLite doesn't enforce size limits.
+n8n จำกัดชื่อ workflow และ credential ไว้ที่ 128 ตัวอักษร แต่ SQLite ไม่ได้บังคับขนาดนี้
 
-This might result in errors like **Data too long for column name** during the import process.
+อาจเกิด error เช่น **Data too long for column name** ตอน import
 
-In this case, you can edit the names from the n8n interface and export again, or edit the JSON file directly before importing.
+ในกรณีนี้ให้แก้ชื่อจาก n8n interface แล้ว export ใหม่ หรือแก้ไขไฟล์ JSON ก่อน import
 ///
 
 ### Workflows
 
-Import workflows from a specific file:
+import workflows จากไฟล์ที่กำหนด:
 
 ```bash
 n8n import:workflow --input=file.json
 ```
 
-Import all the workflow files as JSON from the specified directory:
+import workflow ไฟล์ทั้งหมดจากโฟลเดอร์ที่กำหนด:
 
 ```bash
 n8n import:workflow --separate --input=backups/latest/
@@ -182,13 +182,13 @@ n8n import:workflow --separate --input=backups/latest/
 
 ### Credentials
 
-Import credentials from a specific file:
+import credentials จากไฟล์ที่กำหนด:
 
 ```bash
 n8n import:credentials --input=file.json
 ```
 
-Import all the credentials files as JSON from the specified directory:
+import credentials ไฟล์ทั้งหมดจากโฟลเดอร์ที่กำหนด:
 
 ```bash
 n8n import:credentials --separate --input=backups/latest/
@@ -198,17 +198,17 @@ n8n import:credentials --separate --input=backups/latest/
 
 ### Clear
 
-Clear your existing license from n8n's database and reset n8n to default features:
+ลบ license ที่มีอยู่ใน database ของ n8n และรีเซ็ต n8n ให้กลับไปใช้ฟีเจอร์เริ่มต้น:
 
 ```sh
 n8n license:clear
 ```
 
-If your license includes [floating entitlements](/glossary.md#entitlement-n8n), running this command will also attempt to release them back to the pool, making them available for other instances.
+ถ้า license ของคุณมี [floating entitlements](/glossary.md#entitlement-n8n) การรันคำสั่งนี้จะพยายามคืน entitlement กลับ pool เพื่อให้ instance อื่นใช้ได้
 
 ### Info
 
-Display information about the existing license:
+แสดงข้อมูล license ที่มีอยู่:
 
 ```sh
 n8n license:info
@@ -216,9 +216,9 @@ n8n license:info
 
 ## User management
 
-You can reset user management using the n8n CLI. This returns user management to its pre-setup state. It removes all user accounts.
+คุณสามารถรีเซ็ต user management ผ่าน n8n CLI ได้ จะทำให้ระบบกลับไปเหมือนก่อนตั้งค่า user management และลบ user ทั้งหมด
 
-Use this if you forget your password, and don't have SMTP set up to do password resets by email.
+ใช้กรณีลืมรหัสผ่านและไม่มี SMTP สำหรับ reset รหัสผ่านทางอีเมล
 
 ```sh
 n8n user-management:reset
@@ -226,7 +226,7 @@ n8n user-management:reset
 
 ### Disable MFA for a user
 
-If a user loses their recovery codes you can disable MFA for a user with this command. The user will then be able to log back in to set up MFA again.
+ถ้าผู้ใช้ทำ recovery code หาย สามารถปิด MFA ให้ user ด้วยคำสั่งนี้ จากนั้น user จะล็อกอินและตั้งค่า MFA ใหม่ได้
 
 ```sh
 n8n mfa:disable --email=johndoe@example.com
@@ -234,7 +234,7 @@ n8n mfa:disable --email=johndoe@example.com
 
 ### Disable LDAP
 
-You can reset the LDAP settings using the command below.
+รีเซ็ต LDAP settings ด้วยคำสั่งนี้
 
 ```sh
 n8n ldap:reset
@@ -242,7 +242,7 @@ n8n ldap:reset
 
 ## Security audit
 
-You can run a [security audit](/hosting/securing/security-audit.md) on your n8n instance, to detect common security issues.
+คุณสามารถรัน [security audit](/hosting/securing/security-audit.md) บน n8n instance ของคุณ เพื่อตรวจสอบปัญหาความปลอดภัยทั่วไป
 
 ```sh
 n8n audit

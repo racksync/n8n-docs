@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Matrix node
 
-Use the Matrix node to automate work in Matrix, and integrate Matrix with other applications. n8n has built-in support for a wide range of Matrix features, including getting current user's account information, sending media and messages to a room, and getting room members and messages.
+ใช้ Matrix node ในการทำงานอัตโนมัติใน Matrix และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ โดย n8n รองรับฟีเจอร์ต่าง ๆ เช่น การดึงข้อมูลบัญชีผู้ใช้, ส่ง media และ messages ไปยังห้องแชท รวมถึงดึงรายชื่อสมาชิกและข้อความในห้อง.
 
-On this page, you'll find a list of operations the Matrix node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Matrix node รองรับและลิงก์ไปยังข้อมูลเพิ่มเติม.
 
 /// note | Credentials
-Refer to [Matrix credentials](/integrations/builtin/credentials/matrix.md) for guidance on setting up authentication. 
+ดู [Matrix credentials] สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations

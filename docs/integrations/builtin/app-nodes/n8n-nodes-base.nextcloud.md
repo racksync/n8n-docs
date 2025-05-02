@@ -8,12 +8,12 @@ priority: medium
 
 # Nextcloud node
 
-Use the Nextcloud node to automate work in Nextcloud, and integrate Nextcloud with other applications. n8n has built-in support for a wide range of Nextcloud features, including creating, updating, deleting, and getting files, and folders as well as retrieving, and inviting users. 
+ใช้ Nextcloud node เพื่อทำงานอัตโนมัติใน Nextcloud และเชื่อมต่อกับแอปอื่น ๆ. n8n รองรับฟีเจอร์ของ Nextcloud เช่น การสร้าง, การอัปเดต, การลบ และการดึงข้อมูลไฟล์และโฟลเดอร์ รวมถึงการดึงข้อมูลและเชิญผู้ใช้
 
-On this page, you'll find a list of operations the Nextcloud node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Nextcloud node รองรับ พร้อมลิงก์สำหรับข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [Nextcloud credentials](/integrations/builtin/credentials/nextcloud.md) for guidance on setting up authentication. 
+ดู [Nextcloud credentials](/integrations/builtin/credentials/nextcloud.md) เพื่อดูวิธีการตั้งค่า authentication
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

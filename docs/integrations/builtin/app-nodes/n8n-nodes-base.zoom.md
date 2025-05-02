@@ -7,13 +7,10 @@ contentType: [integration, reference]
 
 # Zoom node
 
-Use the Zoom node to automate work in Zoom, and integrate Zoom with other applications. n8n has built-in support for a wide range of Zoom features, including creating, retrieving, deleting, and updating meetings. 
-
-On this page, you'll find a list of operations the Zoom node supports and links to more resources.
+ใช้ Zoom node เพื่อช่วยงานอัตโนมัติใน Zoom และเชื่อมต่อ Zoom กับแอปพลิเคชันอื่น ๆ 
 
 /// note | Credentials
-Refer to [Zoom credentials](/integrations/builtin/credentials/zoom.md) for guidance on setting up authentication. 
-///
+ดู [Zoom credentials](/integrations/builtin/credentials/zoom.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 

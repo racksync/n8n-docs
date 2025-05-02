@@ -8,12 +8,12 @@ priority: high
 
 # OpenAI Chat Model node
 
-Use the OpenAI Chat Model node to use OpenAI's chat models with conversational [agents](/glossary.md#ai-agent).
+ใช้ OpenAI Chat Model node เพื่อใช้งาน Chat Model ของ OpenAI ร่วมกับ [agents](/glossary.md#ai-agent) ที่ใช้ในการสนทนา
 
-On this page, you'll find the node parameters for the OpenAI Chat Model node and links to more resources.
+ในหน้านี้ คุณจะพบกับพารามิเตอร์ของ OpenAI Chat Model node และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/openai.md).
+คุณสามารถดูข้อมูลการยืนยันตัวตนสำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/openai.md)
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
@@ -22,49 +22,49 @@ You can find authentication information for this node [here](/integrations/built
 
 ### Model
 
-Select the model to use to generate the completion.
+เลือก Model ที่จะใช้ในการสร้างข้อความ completion
 
-n8n dynamically loads models from OpenAI and you'll only see the models available to your account.
+n8n จะโหลด Model จาก OpenAI แบบไดนามิก และคุณจะเห็นเฉพาะ Model ที่มีให้สำหรับบัญชีของคุณเท่านั้น
 
 ## Node options
 
-Use these options to further refine the node's behavior.
+ใช้ตัวเลือกเหล่านี้เพื่อปรับแต่งการทำงานของ node เพิ่มเติม
 
 ### Base URL
 
-Enter a URL here to override the default URL for the API.
+ป้อน URL ที่นี่เพื่อแทนที่ URL เริ่มต้นสำหรับ API
 
 ### Frequency Penalty
 
-Use this option to control the chances of the model repeating itself. Higher values reduce the chance of the model repeating itself.
+ใช้ตัวเลือกนี้เพื่อควบคุมโอกาสที่ Model จะสร้างข้อความซ้ำ ค่าที่สูงขึ้นจะลดโอกาสที่ Model จะสร้างข้อความซ้ำ
 
 ### Maximum Number of Tokens
 
-Enter the maximum number of tokens used, which sets the completion length.
+ป้อนจำนวน Token สูงสุดที่จะใช้ ซึ่งจะเป็นการกำหนดความยาวของข้อความ completion
 
 ### Response Format
 
-Choose **Text** or **JSON**. **JSON** ensures the model returns valid JSON.
+เลือก **Text** หรือ **JSON** การเลือก **JSON** จะทำให้มั่นใจได้ว่า Model จะส่งคืนค่าเป็น JSON ที่ถูกต้อง
 
 ### Presence Penalty
 
-Use this option to control the chances of the model talking about new topics. Higher values increase the chance of the model talking about new topics.
+ใช้ตัวเลือกนี้เพื่อควบคุมโอกาสที่ Model จะพูดคุยเกี่ยวกับหัวข้อใหม่ๆ ค่าที่สูงขึ้นจะเพิ่มโอกาสที่ Model จะพูดคุยเกี่ยวกับหัวข้อใหม่ๆ
 
 ### Sampling Temperature
 
-Use this option to control the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
+ใช้ตัวเลือกนี้เพื่อควบคุมความสุ่มของการสุ่มตัวอย่าง (sampling process) ค่า temperature ที่สูงขึ้นจะสร้างการสุ่มตัวอย่างที่หลากหลายมากขึ้น แต่ก็เพิ่มความเสี่ยงที่จะเกิดภาพหลอน (hallucinations)
 
 ### Timeout
 
-Enter the maximum request time in milliseconds.
+ป้อนเวลาร้องขอสูงสุดในหน่วยมิลลิวินาที
 
 ### Max Retries
 
-Enter the maximum number of times to retry a request.
+ป้อนจำนวนครั้งสูงสุดที่จะลองส่งคำขอใหม่
 
 ### Top P
 
-Use this option to set the probability the completion should use. Use a lower value to ignore less probable options. 
+ใช้ตัวเลือกนี้เพื่อกำหนดความน่าจะเป็นที่ completion ควรใช้ ใช้ค่าที่ต่ำลงเพื่อละเว้นตัวเลือกที่มีความน่าจะเป็นน้อยกว่า
 
 ## Templates and examples
 
@@ -73,12 +73,12 @@ Use this option to set the probability the completion should use. Use a lower va
 
 ## Related resources
 
-Refer to [LangChains's OpenAI documentation](https://js.langchain.com/docs/integrations/chat/openai/){:target=_blank .external-link} for more information about the service.
+อ้างอิง [เอกสาร OpenAI ของ LangChain](https://js.langchain.com/docs/integrations/chat/openai/){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/common-issues.md).
+สำหรับคำถามหรือปัญหาที่พบบ่อยและแนวทางแก้ไข โปรดดูที่ [Common issues](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/common-issues.md)
 
 --8<-- "_glossary/ai-glossary.md"

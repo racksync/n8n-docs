@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # DeepL node
 
-Use the DeepL node to automate work in DeepL, and integrate DeepL with other applications. n8n has built-in support for a wide range of DeepL features, including translating languages.
+ใช้ DeepL node เพื่อทำงานอัตโนมัติใน DeepL และเชื่อมต่อ DeepL กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ DeepL หลายอย่าง เช่น การแปลภาษา
 
-On this page, you'll find a list of operations the DeepL node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ DeepL node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [DeepL credentials](/integrations/builtin/credentials/deepl.md) for guidance on setting up authentication. 
+โปรดดู [DeepL credentials](/integrations/builtin/credentials/deepl.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

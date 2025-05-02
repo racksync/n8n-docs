@@ -8,25 +8,25 @@ priority: critical
 
 # Manual Trigger node
 
-Use this node if you want to start a workflow by selecting **Test Workflow** and don't want any option for the workflow to run automatically.
+ใช้ node นี้ถ้าคุณต้องการเริ่ม workflow ด้วยการเลือก **Test Workflow** และไม่ต้องการให้ workflow ทำงานอัตโนมัติ
 
-Workflows always need a trigger, or start point. Most workflows start with a trigger node firing in response to an external event or the [Schedule Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/index.md) firing on a set schedule.
+workflow ทุกอันต้องมี trigger หรือจุดเริ่มต้น ส่วนใหญ่ workflow จะเริ่มด้วย trigger node ที่ตอบสนองต่อ event ภายนอก หรือ [Schedule Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/index.md) ที่ตั้งเวลาไว้
 
-The Manual Trigger node serves as the workflow trigger for workflows that don't have an automatic trigger.
+Manual Trigger node ใช้เป็น trigger สำหรับ workflow ที่ไม่ต้องการ trigger อัตโนมัติ
 
-Use this trigger:
+ใช้ trigger นี้เมื่อ:
 
-* To test your workflow before you add an automatic trigger of some kind.
-* When you don't want the workflow to run automatically.
+* ต้องการทดสอบ workflow ก่อนจะเพิ่ม trigger อัตโนมัติ
+* ไม่ต้องการให้ workflow ทำงานเองอัตโนมัติ
 
 ## Common issues
 
-Here are some common errors and issues with the Manual Trigger node and steps to resolve or troubleshoot them.
+ปัญหาที่พบบ่อยเกี่ยวกับ Manual Trigger node และวิธีแก้ไข
 
 <!-- vale off -->
 ### Only one 'Manual Trigger' node is allowed in a workflow
 <!-- vale on -->
 
-This error displays if you try to add a Manual Trigger node to a workflow which already includes a Manual Trigger node.
+ถ้าคุณพยายามเพิ่ม Manual Trigger node ใน workflow ที่มีอยู่แล้ว จะขึ้น error นี้
 
-Remove your existing Manual Trigger or edit your workflow to connect that trigger to a different node.
+ให้ลบ Manual Trigger เดิมออก หรือแก้ workflow ให้เชื่อมต่อ trigger นั้นกับ node อื่น

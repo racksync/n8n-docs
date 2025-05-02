@@ -1,18 +1,18 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Keap node documentation
-description: Learn how to use the Keap node in n8n. Follow technical documentation to integrate Keap node into your workflows.
+description: เรียนรู้วิธีการใช้ Keap node ใน n8n ทำตามเอกสารทางเทคนิคเพื่อรวม Keap node เข้ากับเวิร์กโฟลว์ของคุณ
 contentType: [integration, reference]
 ---
 
 # Keap node
 
-Use the Keap node to automate work in Keap, and integrate Keap with other applications. n8n has built-in support for a wide range of Keap features, including creating, updating, deleting, and getting companies, products, ecommerce orders, emails, and files. 
+ใช้ Keap node เพื่อทำงานอัตโนมัติใน Keap และเชื่อมต่อ Keap กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Keap หลายอย่าง เช่น การสร้าง อัปเดต ลบ และดึงข้อมูล companies, products, ecommerce orders, emails, และ files
 
-On this page, you'll find a list of operations the Keap node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Keap node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Keap credentials](/integrations/builtin/credentials/keap.md) for guidance on setting up authentication. 
+โปรดดู [Keap credentials](/integrations/builtin/credentials/keap.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations

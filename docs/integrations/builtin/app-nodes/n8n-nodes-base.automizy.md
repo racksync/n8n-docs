@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Automizy node
 
-Use the Automizy node to automate work in Automizy, and integrate Automizy with other applications. n8n has built-in support for a wide range of Automizy features, including creating, reading, listing, updating, deleting contacts, and lists.
+ใช้ Automizy node เพื่อทำงานอัตโนมัติใน Automizy และผสานรวม Automizy กับแอปพลิเคชันอื่นๆ n8n มีการรองรับฟีเจอร์หลากหลายของ Automizy ในตัว รวมถึงการสร้าง, การอ่าน, การแสดงรายการ, การอัปเดต, การลบ contacts และ lists
 
-On this page, you'll find a list of operations the Automizy node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Automizy node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [Automizy credentials](/integrations/builtin/credentials/automizy.md) for guidance on setting up authentication. 
+อ้างอิง [Automizy credentials](/integrations/builtin/credentials/automizy.md) สำหรับคำแนะนำในการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations

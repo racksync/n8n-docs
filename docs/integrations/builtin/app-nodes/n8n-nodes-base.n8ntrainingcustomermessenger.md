@@ -8,5 +8,5 @@ priority: medium
 
 # Customer Messenger (n8n Training) node
 
-Use this node only for the n8n new user onboarding tutorial. It provides no further functionality.
+ใช้ node นี้เฉพาะสำหรับบทเรียน onboarding ผู้ใช้ใหม่ของ n8n เท่านั้น เพราะไม่มีฟังก์ชันเพิ่มเติม
 

@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Grist node
 
-Use the Grist node to automate work in Grist, and integrate Grist with other applications. n8n has built-in support for a wide range of Grist features, including creating, updating, deleting, and reading rows in a table. 
+ใช้ Grist node เพื่อทำงานอัตโนมัติใน Grist และเชื่อมต่อ Grist กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Grist หลายอย่าง เช่น การสร้าง อัปเดต ลบ และอ่าน rows ใน table
 
-On this page, you'll find a list of operations the Grist node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Grist node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Grist credentials](/integrations/builtin/credentials/grist.md) for guidance on setting up authentication. 
+โปรดดู [Grist credentials](/integrations/builtin/credentials/grist.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations
@@ -29,22 +29,21 @@ Refer to [Grist credentials](/integrations/builtin/credentials/grist.md) for gui
 
 ## Get the Row ID
 
-To update or delete a particular record, you need the Row ID. There are two ways to get the Row ID:
+ถ้าต้องการอัปเดตหรือลบ record ใดๆ ต้องใช้ Row ID โดยมี 2 วิธีในการหา Row ID:
 
-**Create a Row ID column in Grist**
+**สร้างคอลัมน์ Row ID ใน Grist**
 
-Create a new column in your Grist table with the formula `$id`.
+สร้างคอลัมน์ใหม่ในตาราง Grist ของคุณ แล้วใส่สูตร `$id`
 
-**Use the Get All operation**
+**ใช้ Operation Get All**
 
-The **Get All** operation returns the Row ID of each record along with the fields.
- 
-You can get it with the expression `{{$node["GristNodeName"].json["id"]}}`.
+Operation **Get All** จะคืนค่า Row ID ของแต่ละ record พร้อม fields
 
+สามารถดึง Row ID ได้ด้วย expression `{{$node["GristNodeName"].json["id"]}}`
 
 ## Filter records when using the Get All operation
 
-- Select **Add Option** and select **Filter** from the dropdown list.
-- You can add filters for any number of columns. The result will only include records which match all the columns.
-- For each column, you can enter any number of values separated by commas. The result will include records which match any of the values for that column.
+- เลือก **Add Option** แล้วเลือก **Filter** จาก dropdown
+- สามารถเพิ่ม filter ได้หลายคอลัมน์ ผลลัพธ์จะรวมเฉพาะ records ที่ตรงกับทุกคอลัมน์
+- สำหรับแต่ละคอลัมน์ สามารถใส่ค่าหลายค่าโดยคั่นด้วย comma ผลลัพธ์จะรวม records ที่ตรงกับค่าใดค่าหนึ่งในคอลัมน์นั้น
 

@@ -7,12 +7,10 @@ contentType: [integration, reference]
 
 # Twist node
 
-Use the Twist node to automate work in Twist, and integrate Twist with other applications. n8n has built-in support for a wide range of Twist features, including creating conversations in a channel, as well as creating and deleting comments on a thread. 
-
-On this page, you'll find a list of operations the Twist node supports and links to more resources.
+ใช้ Twist node เพื่อช่วยให้งานใน Twist เป็นอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันต่างๆ โดย n8n รองรับฟีเจอร์ของ Twist หลากหลาย เช่น การสร้าง conversation ใน channel และการสร้างรวมถึงการลบ comment ใน thread
 
 /// note | Credentials
-Refer to [Twist credentials](/integrations/builtin/credentials/twist.md) for guidance on setting up authentication. 
+ดู [Twist credentials](/integrations/builtin/credentials/twist.md) สำหรับคำแนะนำในการตั้งค่า authentication
 ///
 
 ## Operations
@@ -53,9 +51,10 @@ Refer to [Twist credentials](/integrations/builtin/credentials/twist.md) for gui
 
 ## Get the User ID
 
-To get the User ID for a user:
+สำหรับการดึง User ID ของผู้ใช้:
 
-1. Open the **Team** tab.
-2. Select a user's avatar.
-3. Copy the string of characters located after `/u/` in your Twist URL. This string is the User ID. For example, if the URL is `https://twist.com/a/4qw45/people/u/475370` the User ID is `475370`.
+1. เปิดแท็บ **Team**
+2. เลือก avatar ของผู้ใช้
+3. คัดลอกชุดตัวอักษรที่อยู่หลัง `/u/` ใน Twist URL ของคุณ ซึ่งชุดตัวอักษรนี้คือ User ID
+4. ตัวอย่างเช่น ถ้า URL เป็น `https://twist.com/a/4qw45/people/u/475370` User ID จะเป็น `475370`
 

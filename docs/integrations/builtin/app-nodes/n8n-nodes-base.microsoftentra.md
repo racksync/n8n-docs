@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Microsoft Entra ID node
 
-Use the Microsoft Entra ID node to automate work in Microsoft Entra ID and integrate Microsoft Entra ID with other applications. n8n has built-in support for a wide range of Microsoft Entra ID features, which includes creating, getting, updating, and deleting users and groups, as well as adding users to and removing them from groups.
+ใช้ Microsoft Entra ID node ในการทำงานอัตโนมัติใน Microsoft Entra ID และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ โดย n8n รองรับฟีเจอร์ต่าง ๆ เช่น การสร้าง, ดึง, อัปเดต และลบ users และ groups พร้อมทั้งการจัดการผู้ใช้ในกลุ่ม.
 
-On this page, you'll find a list of operations the Microsoft Entra ID node supports, and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Microsoft Entra ID node รองรับและลิงก์ไปยังข้อมูลเพิ่มเติม.
 
 ///  note  | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/microsoftentra.md).
+ดู [Microsoft Entra ID credentials] สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 

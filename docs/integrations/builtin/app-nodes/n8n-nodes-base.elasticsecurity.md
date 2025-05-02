@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Elastic Security node
 
-Use the Elastic Security node to automate work in Elastic Security, and integrate Elastic Security with other applications. n8n's has built-in support for a wide range of Elastic Security features, including creating, updating, deleting, retrieving, and getting cases.
+ใช้ Elastic Security node เพื่อทำงานอัตโนมัติใน Elastic Security และเชื่อมต่อ Elastic Security กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Elastic Security หลายอย่าง เช่น การสร้าง อัปเดต ลบ ดึงข้อมูล และรับ cases
 
-On this page, you'll find a list of operations the Elastic Security node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Elastic Security node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Elastic Security credentials](/integrations/builtin/credentials/elasticsecurity.md) for guidance on setting up authentication. 
+โปรดดู [Elastic Security credentials](/integrations/builtin/credentials/elasticsecurity.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations

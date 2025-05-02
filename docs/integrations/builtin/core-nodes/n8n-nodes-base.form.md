@@ -7,7 +7,7 @@ contentType: [integration, reference]
 
 # n8n Form node
 
-Use the n8n Form node to create user-facing forms with multiple steps. You can add other nodes with custom logic between to process user input. You must start the workflow with the [n8n Form Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md).
+ใช้ n8n Form node เพื่อสร้างฟอร์มสำหรับผู้ใช้ที่มีหลายขั้นตอน คุณสามารถเพิ่ม node อื่นๆ พร้อม logic เฉพาะเพื่อประมวลผลข้อมูลที่ผู้ใช้กรอกได้ โดยต้องเริ่ม workflow ด้วย [n8n Form Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md)
 
 [[ workflowDemo("file:///integrations/builtin/core-nodes/n8n-nodes-base.form/mutually-exclusive-branching.json") ]]
 
@@ -15,62 +15,62 @@ Use the n8n Form node to create user-facing forms with multiple steps. You can a
 
 ### Set default selections with query parameters
 
-You can set the initial values for fields by using [query parameters](https://en.wikipedia.org/wiki/Query_string#Web_forms){:target=_blank .external-link} with the initial URL provided by the [n8n Form Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md). Every page in the form receives the same query parameters sent to the n8n Form Trigger URL.
+คุณสามารถตั้งค่าเริ่มต้นของฟิลด์ต่างๆ ได้โดยใช้ [query parameters](https://en.wikipedia.org/wiki/Query_string#Web_forms){:target=_blank .external-link} กับ URL ที่ได้จาก [n8n Form Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md) ทุกหน้าของฟอร์มจะได้รับ query parameters เดียวกันที่ส่งไปยัง URL ของ n8n Form Trigger
 
 /// note | Only for production
-Query parameters are only available when using the form in production mode. n8n won't populate field values from query parameters in testing mode.
+Query parameters จะใช้ได้เฉพาะตอนใช้งานฟอร์มใน production mode เท่านั้น n8n จะไม่เติมค่าฟิลด์จาก query parameters ใน testing mode
 ///
 
 <!-- vale from-microsoft.Percentages = NO -->
-When using query parameters, [percent-encode](https://en.wikipedia.org/wiki/Percent-encoding){:target=_blank .external-link} any field names or values that use special characters. This ensures n8n uses the initial values for the given fields. You can use tools like [URL Encode/Decode](https://www.url-encode-decode.com/) to format your query parameters using percent-encoding.
+เมื่อใช้ query parameters ให้ [percent-encode](https://en.wikipedia.org/wiki/Percent-encoding){:target=_blank .external-link} ชื่อฟิลด์หรือค่าที่มีอักขระพิเศษ เพื่อให้ n8n ใช้ค่าเริ่มต้นได้ถูกต้อง คุณสามารถใช้เครื่องมืออย่าง [URL Encode/Decode](https://www.url-encode-decode.com/) เพื่อช่วยแปลง query parameters ให้เป็น percent-encoding
 
-As an example, imagine you have a form with the following properties:
+ตัวอย่างเช่น ถ้าคุณมีฟอร์มที่มีข้อมูลดังนี้:
 
 * Production URL: `https://my-account.n8n.cloud/form/my-form`
 * Fields:
 	* `name`: `Jane Doe`
 	* `email`: `jane.doe@example.com`
 
-With query parameters and percent-encoding, you could use the following URL to set initial field values to the data above:
+เมื่อใช้ query parameters และ percent-encoding จะได้ URL แบบนี้:
 
 ```
 https://my-account.n8n.cloud/form/my-form?email=jane.doe%40example.com&name=Jane%20Doe
 ```
 
-Here, percent-encoding replaces the at-symbol (`@`) with the string `%40` and the space character (` `) with the string `%20`. This will set the initial value for these fields no matter which page of the form they appear on.
+ในตัวอย่างนี้ percent-encoding จะเปลี่ยนเครื่องหมาย @ เป็น `%40` และช่องว่างเป็น `%20` ซึ่งจะตั้งค่าเริ่มต้นให้ฟิลด์เหล่านี้ในทุกหน้าของฟอร์ม
 <!-- vale from-microsoft.Percentages = YES -->
 
 ### Displaying custom HTML
 
-You can display custom HTML on your form by adding a **Custom HTML** field to your form. This provides an **HTML** box where you can insert arbitrary HTML code to display as part of the form page.
+คุณสามารถแสดง HTML ที่กำหนดเองในฟอร์มได้โดยเพิ่มฟิลด์ **Custom HTML** จะมีช่อง **HTML** ให้ใส่โค้ด HTML ที่ต้องการแสดงในหน้าฟอร์ม
 
-You can use the HTML field to enrich your form page by including things like links, images, videos, and more. n8n will render the content with the rest of the form fields in the normal document flow.
+คุณสามารถใช้ HTML field เพื่อเพิ่มเนื้อหา เช่น ลิงก์ รูปภาพ วิดีโอ ฯลฯ n8n จะ render เนื้อหานี้รวมกับฟิลด์อื่นๆ ตามปกติ
 
-Because custom HTML content is read-only, these fields aren't included in the form output data by default. To include the raw HTML content in the node output, provide a name for the data using the **Element Name** field.
+เนื่องจาก custom HTML เป็นแบบ read-only ฟิลด์นี้จะไม่ถูกส่งออกใน output ของฟอร์มโดยอัตโนมัติ ถ้าต้องการให้ส่งออกด้วย ให้ตั้งชื่อใน **Element Name**
 
-The HTML field doesn't support `<script>`, `<style>`, or `<input>` elements.
+HTML field ไม่รองรับ `<script>`, `<style>`, หรือ `<input>`
 
 ### Including hidden fields
 
-It's possible to include fields in a form without displaying them to users. This is useful when you want to pass extra data to the form that doesn't require interactive user input.
+คุณสามารถเพิ่มฟิลด์ที่ซ่อนไม่ให้ผู้ใช้เห็นได้ เหมาะสำหรับส่งข้อมูลเพิ่มเติมที่ไม่ต้องการให้ผู้ใช้กรอกเอง
 
-To add fields that won't show up on the form, use the **Hidden Field** form element. There, you can define the **Field Name** and optionally provide a default value by filling out the **Field Value**.
+ให้ใช้ **Hidden Field** ในการเพิ่มฟิลด์แบบซ่อน กำหนด **Field Name** และตั้งค่าเริ่มต้นใน **Field Value** ได้
 
-When serving the form, you can pass values for hidden fields using [query parameters](#set-default-selections-with-query-parameters).
+เวลาส่งฟอร์ม สามารถส่งค่าฟิลด์ hidden ผ่าน [query parameters](#set-default-selections-with-query-parameters)
 
 ### Defining the form using JSON
 
-Use **Define Form** > **Using JSON** to define the fields of your form with a [JSON array of objects](/data/data-structure.md). Each object defines a single field by using a combination of these keys:
+ใช้ **Define Form** > **Using JSON** เพื่อกำหนดฟิลด์ของฟอร์มด้วย [JSON array of objects](/data/data-structure.md) โดยแต่ละ object จะกำหนดฟิลด์หนึ่งช่อง โดยใช้ key เหล่านี้:
 
-- `fieldLabel`: The label that appears above the input field. 
-- `fieldType`: Choose from `date`, `dropdown`, `email`, `file`, `number`, `password`, `text`, or `textarea`.
-    - Use `date` to include a date picker in the form. Refer to [Date and time with Luxon](/code/cookbook/luxon.md) for more information on formatting dates.
-	- When using `dropdown`, set the choices with `fieldOptions` (reference the example below). By default, the dropdown is single-choice. To make it multiple-choice, set `multiselect` to `true`.
-	- When using `file`, set `multipleFiles` to `true` to allow users to select more than one file. To define the file types to allow, set `acceptFileTypes` to a string containing a comma-separated list of file extensions (reference the example below).
-- `placeholder`: Specify placeholder data for the field. You can use this for every `fieldType` except `dropdown`, `date`, and `file`.
-- `requiredField`: Require users to complete this field on the form.
+- `fieldLabel`: ป้ายกำกับที่แสดงเหนือ input field
+- `fieldType`: เลือกจาก `date`, `dropdown`, `email`, `file`, `number`, `password`, `text`, หรือ `textarea`
+    - ใช้ `date` เพื่อเพิ่ม date picker ดูวิธี format วันที่ได้ที่ [Date and time with Luxon](/code/cookbook/luxon.md)
+	- ถ้าใช้ `dropdown` ให้กำหนดตัวเลือกด้วย `fieldOptions` (ดูตัวอย่าง) โดยปกติ dropdown จะเลือกได้ข้อเดียว ถ้าต้องการเลือกได้หลายข้อ ให้ตั้ง `multiselect` เป็น `true`
+	- ถ้าใช้ `file` ให้ตั้ง `multipleFiles` เป็น `true` เพื่อให้เลือกไฟล์ได้หลายไฟล์ และกำหนดชนิดไฟล์ที่อนุญาตด้วย `acceptFileTypes` เป็น string รายการนามสกุลไฟล์ (ดูตัวอย่าง)
+- `placeholder`: ข้อความตัวอย่างในช่อง input ใช้ได้กับทุก `fieldType` ยกเว้น `dropdown`, `date`, และ `file`
+- `requiredField`: กำหนดให้ฟิลด์นี้ต้องกรอก
 
-An example JSON that shows the general format required and the keys available:
+ตัวอย่าง JSON ที่แสดงรูปแบบและ key ที่ใช้ได้:
 
 ```javascript
 // Use the "requiredField" key on any field to mark it as mandatory
@@ -146,65 +146,65 @@ An example JSON that shows the general format required and the keys available:
 
 ### Form Ending
 
-Use the **Form Ending** Page Type to end a form and either show a completion page, redirect the user to a URL, or display custom HTML or text. Only one Form Ending page displays per execution, even when n8n executes [multiple branches](#forms-with-branches) that contain Form Ending nodes.
+ใช้ **Form Ending** Page Type เพื่อจบฟอร์มและแสดงหน้าสำเร็จ, redirect ไป URL หรือแสดง HTML/text ที่กำหนดเอง จะมีแค่ Form Ending node เดียวที่แสดงต่อหนึ่ง execution แม้จะมีหลาย branch
 
-Choose between these options when using **On n8n Form Submission**:
+เลือกได้ระหว่าง:
 
-- **Show Completion Screen**: Shows users a final screen to confirm that they submitted the form.
-	- Fill in **Completion Title** to set the `h1` title on the form.
-	- n8n displays the **Completion Message** as a subtitle below the main `h1` title on the form. Use `\n` or `<br>` to add a line break. 
-	- Select **Add option** and fill in **Completion Page Title** to set the page's title in the browser tab.
+- **Show Completion Screen**: แสดงหน้าสำเร็จให้ผู้ใช้
+	- กรอก **Completion Title** เพื่อเป็นหัวข้อหลัก
+	- **Completion Message** จะเป็นข้อความย่อยด้านล่าง ใช้ `\n` หรือ `<br>` เพื่อขึ้นบรรทัดใหม่
+	- เพิ่ม **Completion Page Title** เพื่อเป็น title ใน browser tab
 
-When using **Redirect to URL**, fill in the **URL** field with the page you want to redirect to when users complete the form.
+ถ้าเลือก **Redirect to URL** ให้กรอก URL ที่ต้องการ redirect เมื่อผู้ใช้กรอกฟอร์มเสร็จ
 
-Use **Show Text** to display a final page defined by arbitrary plain text and HTML. Fill in the **Text** field with the HTML or plain text content you wish to show.
+เลือก **Show Text** เพื่อแสดงหน้าสุดท้ายด้วย HTML หรือ plain text ที่กำหนดเอง
 
 ### Forms with branches
 
-The n8n Form node executes and displays its associated form page whenever it receives data from a previous node. When building forms with n8n, to avoid confusion, it's important to understand how forms behave when branching occurs.
+n8n Form node จะ execute และแสดงหน้าฟอร์มทุกครั้งที่ได้รับข้อมูลจาก node ก่อนหน้า ถ้า workflow มี branch หลายทาง ควรเข้าใจการทำงานของฟอร์มในแต่ละกรณี
 
 #### Workflows with mutually exclusive branches
 
-Form workflows containing mutually exclusive branches work as expected. n8n will execute a single branch according to the submitted data and conditions you outline. As it executes, n8n will display each page in the branch, ending with an n8n Form node with the **Form Ending** page type.
+ถ้า workflow มี branch ที่เลือกได้ทางเดียว n8n จะ execute branch เดียวตามข้อมูลที่ส่งมา และจบด้วย Form Ending node
 
-This workflow demonstrates mutually exclusive branching. Each selection can only execute a single branch.
+ตัวอย่าง workflow แบบ mutually exclusive branching:
 
 [[ workflowDemo("file:///integrations/builtin/core-nodes/n8n-nodes-base.form/mutually-exclusive-branching.json") ]]
 
 #### Workflows that may execute multiple branches
 
-Form workflows that send data to multiple branches at the same time require more care. When multiple branches receive data during an execution (for example, from a [switch](/integrations/builtin/core-nodes/n8n-nodes-base.switch.md) node), n8n executes each branch that receives data [sequentially](/flow-logic/execution-order.md). Upon reaching the end of one branch, the execution will move to the next branch with data.
+ถ้า workflow ส่งข้อมูลไปหลาย branch พร้อมกัน (เช่น จาก [switch](/integrations/builtin/core-nodes/n8n-nodes-base.switch.md)) n8n จะ execute ทุก branch ที่ได้รับข้อมูลแบบ [sequentially](/flow-logic/execution-order.md) เมื่อจบ branch หนึ่งจะไป branch ถัดไป
 
-n8n only executes a single **Form Ending** n8n Form node for each execution. When multiple branches of a form workflow receive data, n8n ignores all Form Ending nodes except for the one associated with the final branch.
+n8n จะ execute แค่ Form Ending node เดียวต่อ execution ถ้ามีหลาย branch ที่มี Form Ending node n8n จะเลือกแค่ node สุดท้าย
 
-This workflow may execute more than one branch during an execution. Here, n8n executes all valid branches sequentially. This impacts which n8n Form nodes n8n executes (in particular, which **Form Ending** node displays):
+ตัวอย่าง workflow ที่ execute หลาย branch:
 
 [[ workflowDemo("file:///integrations/builtin/core-nodes/n8n-nodes-base.form/multiple-branch-execution.json") ]]
 
 ### Node options
 
-Select **Add Option** to view more configuration options: 
+เลือก **Add Option** เพื่อดูตัวเลือกเพิ่มเติม:
 
-- **Form Title**: The title for your form. n8n displays the **Form Title** as the webpage title and main `h1` title on the form.
-- **Form Description**: The description for your form. n8n displays the **Form Description** as a subtitle below the main `h1` title on the form. This field supports HTML. Use `\n` or `<br>` to add a line break. The Form Description also populates the [HTML meta description](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name#standard_metadata_names_defined_in_the_html_specification) for the page.
-- **Button Label**: The label to use for your form's submit button. n8n displays the **Button Label** as the name of the submit button.
+- **Form Title**: ชื่อฟอร์ม n8n จะแสดงเป็น title และ h1
+- **Form Description**: คำอธิบายฟอร์ม แสดงใต้ h1 และใช้เป็น meta description ของหน้า รองรับ HTML ใช้ `\n` หรือ `<br>` เพื่อขึ้นบรรทัดใหม่
+- **Button Label**: ข้อความบนปุ่ม submit
 
 ## Running the node
 
 ### Build and test workflows
 
-While building or testing a workflow, use the **Test URL** in the [n8n Form Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md). Using a test URL ensures that you can view the incoming data in the editor UI, which is useful for debugging. 
+ขณะสร้างหรือทดสอบ workflow ให้ใช้ **Test URL** ใน [n8n Form Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md) เพื่อดูข้อมูลที่เข้ามาใน editor UI สะดวกสำหรับ debug
 
-There are two ways to test:
+มี 2 วิธีทดสอบ:
 
-- Select **Test Step**. n8n opens the form. When you submit the form, n8n runs the node and any previous nodes, but not the rest of the workflow.
-- Select **Test Workflow**. n8n opens the form. When you submit the form, n8n runs the workflow.
+- เลือก **Test Step** n8n จะเปิดฟอร์ม เมื่อ submit แล้วจะ run node นี้และ node ก่อนหน้า แต่ไม่ run workflow ทั้งหมด
+- เลือก **Test Workflow** n8n จะเปิดฟอร์ม เมื่อ submit แล้วจะ run workflow ทั้งหมด
 
 ### Production workflows
 
-When your workflow is ready, switch to using the n8n Form Trigger's **Production URL** by opening the trigger node and selecting the **Production URL** in the **From URLS** selector. You can then activate your workflow, and n8n runs it automatically when a user submits the form.
+เมื่อ workflow พร้อมใช้งาน ให้เปลี่ยนไปใช้ **Production URL** ใน n8n Form Trigger โดยเลือก Production URL ใน **From URLS** จากนั้น activate workflow n8n จะ run อัตโนมัติเมื่อมีผู้ใช้ submit ฟอร์ม
 
-When working with a production URL, ensure that you have saved and activated the workflow. Data flowing through the Form trigger isn't visible in the editor UI with the production URL.
+เมื่อใช้ production URL ต้อง save และ activate workflow ข้อมูลที่ผ่าน Form trigger จะไม่แสดงใน editor UI
 
 ## Templates and examples
 

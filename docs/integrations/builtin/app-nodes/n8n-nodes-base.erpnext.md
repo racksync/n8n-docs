@@ -1,18 +1,18 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: ERPNext node documentation
-description: Learn how to use the ERPNext node in n8n. Follow technical documentation to integrate ERPNext node into your workflows.
+description: เรียนรู้วิธีการใช้ ERPNext node ใน n8n ทำตามเอกสารทางเทคนิคเพื่อรวม ERPNext node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 ---
 
 # ERPNext node
 
-Use the ERPNext node to automate work in ERPNext, and integrate ERPNext with other applications. n8n has built-in support for a wide range of ERPNext features, including creating, updating, retrieving, and deleting documents. 
+ใช้ ERPNext node เพื่อทำงานอัตโนมัติใน ERPNext และเชื่อมต่อ ERPNext กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ ERPNext หลายอย่าง เช่น การสร้าง อัปเดต ดึงข้อมูล และลบ documents
 
-On this page, you'll find a list of operations the ERPNext node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ ERPNext node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [ERPNext credentials](/integrations/builtin/credentials/erpnext.md) for guidance on setting up authentication. 
+โปรดดู [ERPNext credentials](/integrations/builtin/credentials/erpnext.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

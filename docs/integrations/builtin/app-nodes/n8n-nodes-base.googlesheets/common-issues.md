@@ -8,27 +8,27 @@ priority: critical
 
 # Google Sheets node common issues
 
-Here are some common errors and issues with the [Google Sheets node](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/index.md) and steps to resolve or troubleshoot them.
+นี่คือข้อผิดพลาดและปัญหาทั่วไปบางประการเกี่ยวกับ [Google Sheets node](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/index.md) และขั้นตอนในการแก้ไขหรือแก้ไขปัญหา
 
 ## Append an array
 
-To insert an array of data into Google Sheets, you must convert the array into a valid JSON (key, value) format.
+ในการแทรก array ของข้อมูลลงใน Google Sheets คุณต้องแปลง array ให้อยู่ในรูปแบบ JSON (key, value) ที่ถูกต้อง
 
-To do so, consider using:
+ในการทำเช่นนั้น ลองพิจารณาใช้:
 
-1. The [Split Out](/integrations/builtin/core-nodes/n8n-nodes-base.splitout.md) node.
-1. The [AI Transform](/integrations/builtin/core-nodes/n8n-nodes-base.aitransform.md) node. For example, try entering something like:
+1.  [Split Out](/integrations/builtin/core-nodes/n8n-nodes-base.splitout.md) node
+1.  [AI Transform](/integrations/builtin/core-nodes/n8n-nodes-base.aitransform.md) node ตัวอย่างเช่น ลองป้อนข้อความเช่น:
     ```
     Convert 'languages' array to JSON (key, value) pairs.
     ```
-1. The [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md).
+1.  [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md)
 
 <!-- vale off -->
 ## Column names were updated after the node's setup
 <!-- vale on -->
 
-You'll receive this error if the Google Sheet's column names have changed since you set up the node.
+คุณจะได้รับข้อผิดพลาดนี้หากชื่อคอลัมน์ของ Google Sheet มีการเปลี่ยนแปลงตั้งแต่คุณตั้งค่า node
 
-To refresh the column names, re-select **Mapping Column Mode**. This should prompt the node to fetch the column names again.
+หากต้องการรีเฟรชชื่อคอลัมน์ ให้เลือก **Mapping Column Mode** อีกครั้ง ซึ่งควรจะกระตุ้นให้ node ดึงชื่อคอลัมน์มาใหม่อีกครั้ง
 
-Once the column names refresh, update the node parameters.
+เมื่อชื่อคอลัมน์รีเฟรชแล้ว ให้อัปเดต parameters ของ node

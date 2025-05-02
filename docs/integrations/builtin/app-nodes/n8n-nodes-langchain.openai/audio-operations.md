@@ -8,65 +8,62 @@ priority: critical
 
 # OpenAI Audio operations
 
-Use this operation to generate an audio, or transcribe or translate a recording in OpenAI. Refer to [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/index.md) for more information on the OpenAI node itself.
+ใช้ operation นี้เพื่อสร้างเสียง หรือถอดความ/แปลไฟล์เสียงใน OpenAI. ดูข้อมูลเพิ่มเติมที่ [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/index.md).
 
 ## Generate Audio
 
-Use this operation to create audio from a text prompt. 
+ใช้ operation นี้เพื่อสร้างเสียงจากข้อความ prompt.
 
 Enter these parameters:
-
-- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai.md).
-- **Resource**: Select **Audio**.
-- **Operation**: Select **Generate Audio**.
-- **Model**: Select the model you want to use to generate the audio. Refer to [TTS | OpenAI](https://platform.openai.com/docs/models/tts){:target=_blank .external-link} for more information.
-    - **TTS-1**: Use this to optimize for speed.
-    - **TTS-1-HD**:	Use this to optimize for quality.
-- **Text Input**: Enter the text to generate the audio for. The maximum length is 4096 characters.
-- **Voice**: Select a voice to use when generating the audio. Listen to the previews of the voices in [Text to speech guide | OpenAI](https://platform.openai.com/docs/guides/text-to-speech/quickstart){:target=_blank .external-link}.
+- **Credential to connect with**: สร้างหรือเลือก [OpenAI credential](/integrations/builtin/credentials/openai.md) ที่มีอยู่แล้ว.
+- **Resource**: เลือก **Audio**.
+- **Operation**: เลือก **Generate Audio**.
+- **Model**: เลือก Model ที่ต้องการใช้สร้างเสียง. ดูรายละเอียดเพิ่มเติมที่ [TTS | OpenAI](https://platform.openai.com/docs/models/tts){:target=_blank .external-link}.
+    - **TTS-1**: ใช้สำหรับความเร็ว.
+    - **TTS-1-HD**: ใช้สำหรับคุณภาพที่สูงกว่า.
+- **Text Input**: ระบุข้อความที่ต้องการแปลงเป็นเสียง. ความยาวสูงสุด 4096 ตัวอักษร.
+- **Voice**: เลือกเสียงที่จะใช้สร้างเสียง. ฟังตัวอย่างได้ที่ [Text to speech guide | OpenAI](https://platform.openai.com/docs/guides/text-to-speech/quickstart){:target=_blank .external-link}.
 
 ### Options
 
-- **Response Format**: Select the format for the audio response. Choose from **MP3** (default), **OPUS**, **AAC**, **FLAC**, **WAV**, and **PCM**.
-- **Audio Speed**: Enter the speed for the generated audio from a value from `0.25` to `4.0`. Defaults to `1`.
-- **Put Output in Field**: Defaults to `data`. Enter the name of the output field to put the binary file data in. 
+- **Response Format**: เลือกรูปแบบของการตอบกลับเสียง เช่น **MP3** (ค่าเริ่มต้น), **OPUS**, **AAC**, **FLAC**, **WAV**, หรือ **PCM**.
+- **Audio Speed**: ระบุความเร็วของเสียงที่สร้าง โดยมีค่าระหว่าง `0.25` ถึง `4.0` (ค่าเริ่มต้นคือ `1`).
+- **Put Output in Field**: ค่าเริ่มต้นคือ `data`. ระบุชื่อฟิลด์สำหรับเก็บข้อมูล binary.
 
-Refer to [Create speech | OpenAI](https://platform.openai.com/docs/api-reference/audio/createSpeech){:target=_blank .external-link} documentation for more information.
+ดูรายละเอียดเพิ่มเติมที่ [Create speech | OpenAI](https://platform.openai.com/docs/api-reference/audio/createSpeech){:target=_blank .external-link}.
 
 ## Transcribe a Recording
 
-Use this operation to transcribe audio into text. OpenAI API limits the size of the audio file to 25 MB. OpenAI will use the `whisper-1` model by default. 
+ใช้ operation นี้เพื่อถอดความเสียงเป็นข้อความ. การอัปโหลดไฟล์เสียงมีจำกัดสูงสุด 25 MB. ค่าเริ่มต้น model คือ `whisper-1`.
 
 Enter these parameters:
-
-- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai.md).
-- **Resource**: Select **Audio**.
-- **Operation**: Select **Transcribe a Recording**.
-- **Input Data Field Name**: Defaults to `data`. Enter the name of the binary property that contains the audio file in one of these formats: `.flac`, `.mp3`, `.mp4`, `.mpeg`, `.mpga`, `.m4a`, `.ogg`, `.wav`, or `.webm`. 
+- **Credential to connect with**: สร้างหรือเลือก [OpenAI credential](/integrations/builtin/credentials/openai.md) ที่มีอยู่แล้ว.
+- **Resource**: เลือก **Audio**.
+- **Operation**: เลือก **Transcribe a Recording**.
+- **Input Data Field Name**: ค่าเริ่มต้นคือ `data`. ระบุชื่อ property แบบ binary ที่มีไฟล์เสียง (รองรับฟอร์แมท: `.flac`, `.mp3`, `.mp4`, `.mpeg`, `.mpga`, `.m4a`, `.ogg`, `.wav`, หรือ `.webm`).
 
 ### Options
 
-- **Language of the Audio File**: Enter the language of the input audio in  [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes){:target=_blank .external-link}. Use this option to improve accuracy and latency.
-- **Output Randomness (Temperature)**: Defaults to `1.0`. Adjust the randomness of the response. The range is between `0.0` (deterministic) and `1.0` (maximum randomness). We recommend altering this or **Output Randomness (Top P)** but not both. Start with a medium temperature (around 0.7) and adjust based on the outputs you observe. If the responses are too repetitive or rigid, increase the temperature. If they’re too chaotic or off-track, decrease it. 
+- **Language of the Audio File**: ระบุภาษาของไฟล์เสียงแบบ [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes){:target=_blank .external-link} เพื่อเพิ่มความแม่นยำ.
+- **Output Randomness (Temperature)**: ค่าเริ่มต้นคือ `1.0`. ปรับความสุ่มของผลลัพธ์ในช่วง `0.0` ถึง `1.0`. แนะนำเริ่มที่ประมาณ `0.7`.
 
-Refer to [Create transcription | OpenAI](https://platform.openai.com/docs/api-reference/audio/createTranscription){:target=_blank .external-link} documentation for more information.
+ดูรายละเอียดเพิ่มเติมที่ [Create transcription | OpenAI](https://platform.openai.com/docs/api-reference/audio/createTranscription){:target=_blank .external-link}.
 
 ## Translate a Recording
 
-Use this operation to translate audio into English. OpenAI API limits the size of the audio file to 25 MB. OpenAI will use the `whisper-1` model by default. 
+ใช้ operation นี้เพื่อแปลเสียงเป็นภาษาอังกฤษ. ขนาดไฟล์เสียงจำกัดสูงสุด 25 MB. ค่าเริ่มต้น model คือ `whisper-1`.
 
 Enter these parameters:
-
-- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai.md).
-- **Resource**: Select **Audio**.
-- **Operation**: Select **Translate a Recording**.
-- **Input Data Field Name**: Defaults to `data`. Enter the name of the binary property that contains the audio file in one of these formats: `.flac`, `.mp3`, `.mp4`, `.mpeg`, `.mpga`, `.m4a`, `.ogg`, `.wav`, or `.webm`. 
+- **Credential to connect with**: สร้างหรือเลือก [OpenAI credential](/integrations/builtin/credentials/openai.md) ที่มีอยู่แล้ว.
+- **Resource**: เลือก **Audio**.
+- **Operation**: เลือก **Translate a Recording**.
+- **Input Data Field Name**: ค่าเริ่มต้นคือ `data`. ระบุชื่อ property แบบ binary ที่มีไฟล์เสียงในฟอร์แมท: `.flac`, `.mp3`, `.mp4`, `.mpeg`, `.mpga`, `.m4a`, `.ogg`, `.wav`, หรือ `.webm`.
 
 ### Options
 
-- **Output Randomness (Temperature)**: Defaults to `1.0`. Adjust the randomness of the response. The range is between `0.0` (deterministic) and `1.0` (maximum randomness). We recommend altering this or **Output Randomness (Top P)** but not both. Start with a medium temperature (around 0.7) and adjust based on the outputs you observe. If the responses are too repetitive or rigid, increase the temperature. If they’re too chaotic or off-track, decrease it. 
+- **Output Randomness (Temperature)**: ค่าเริ่มต้นคือ `1.0`. ปรับความสุ่มของผลลัพธ์ โดยมีช่วง `0.0` ถึง `1.0`. แนะนำเริ่มประมาณ `0.7`.
 
-Refer to [Create transcription | OpenAI](https://platform.openai.com/docs/api-reference/audio/createTranscription){:target=_blank .external-link} documentation for more information.
+ดูรายละเอียดเพิ่มเติมที่ [Create transcription | OpenAI](https://platform.openai.com/docs/api-reference/audio/createTranscription){:target=_blank .external-link}.
 
 ## Common issues
 

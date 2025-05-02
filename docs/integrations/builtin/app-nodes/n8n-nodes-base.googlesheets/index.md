@@ -8,28 +8,28 @@ priority: critical
 
 # Google Sheets
 
-Use the Google Sheets node to automate work in Google Sheets, and integrate Google Sheets with other applications. n8n has built-in support for a wide range of Google Sheets features, including creating, updating, deleting, appending, removing and getting documents. 
+ใช้ Google Sheets node เพื่อทำงานอัตโนมัติใน Google Sheets และรวม Google Sheets เข้ากับแอปพลิเคชันอื่นๆ n8n มีการรองรับฟีเจอร์ต่างๆ ของ Google Sheets ในตัว รวมถึงการสร้าง, อัปเดต, ลบ, เพิ่มต่อท้าย, ลบออก และดึงข้อมูลเอกสาร
 
-On this page, you'll find a list of operations the Google Sheets node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Google Sheets node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [Google Sheets credentials](/integrations/builtin/credentials/google/index.md) for guidance on setting up authentication. 
+อ้างอิงถึง [Google Sheets credentials](/integrations/builtin/credentials/google/index.md) สำหรับคำแนะนำในการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations
 
 * **Document**
-    * [**Create**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/document-operations.md#create-a-spreadsheet) a spreadsheet.
-	* [**Delete**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/document-operations.md#delete-a-spreadsheet) a spreadsheet.
+    * [**Create**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/document-operations.md#create-a-spreadsheet): สร้าง spreadsheet
+	* [**Delete**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/document-operations.md#delete-a-spreadsheet): ลบ spreadsheet
 * **Sheet Within Document**
-	* [**Append or Update Row**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/sheet-operations.md#append-or-update-row): Append a new row, or update the current one if it already exists.
-	* [**Append Row**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/sheet-operations.md#append-row): Create a new row.
-	* [**Clear**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/sheet-operations.md#clear-a-sheet) all data from a sheet.
-	* [**Create**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/sheet-operations.md#create-a-new-sheet) a new sheet.
-	* [**Delete**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/sheet-operations.md#delete-a-sheet) a sheet.
-	* [**Delete Rows or Columns**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/sheet-operations.md#delete-rows-or-columns): Delete columns and rows from a sheet.
-	* [**Get Row(s)**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/sheet-operations.md#get-rows): Read all rows in a sheet.
-	* [**Update Row**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/sheet-operations.md#update-row): Update a row in a sheet. 
+	* [**Append or Update Row**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/sheet-operations.md#append-or-update-row): เพิ่มแถวใหม่ หรืออัปเดตแถวปัจจุบันหากมีอยู่แล้ว
+	* [**Append Row**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/sheet-operations.md#append-row): สร้างแถวใหม่
+	* [**Clear**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/sheet-operations.md#clear-a-sheet): ล้างข้อมูลทั้งหมดออกจาก sheet
+	* [**Create**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/sheet-operations.md#create-a-new-sheet): สร้าง sheet ใหม่
+	* [**Delete**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/sheet-operations.md#delete-a-sheet): ลบ sheet
+	* [**Delete Rows or Columns**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/sheet-operations.md#delete-rows-or-columns): ลบคอลัมน์และแถวออกจาก sheet
+	* [**Get Row(s)**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/sheet-operations.md#get-rows): อ่านทุกแถวใน sheet
+	* [**Update Row**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/sheet-operations.md#update-row): อัปเดตแถวใน sheet
 
 
 ## Templates and examples
@@ -39,7 +39,7 @@ Refer to [Google Sheets credentials](/integrations/builtin/credentials/google/in
 
 ## Related resources
 
-Refer to [Google Sheet's API documentation](https://developers.google.com/sheets/api){:target=_blank .external-link} for more information about the service.
+อ้างอิงถึง [Google Sheet's API documentation](https://developers.google.com/sheets/api){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 <!-- ## Examples
 This example uses the Customer Datastore node to provide sample data to load into Google Sheets. It assumes you've already set up your [credentials](/integrations/builtin/credentials/google/index.md).	
@@ -59,6 +59,6 @@ This example uses the Customer Datastore node to provide sample data to load int
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/common-issues.md).
+สำหรับคำถามหรือปัญหาทั่วไปและแนวทางแก้ไขที่แนะนำ โปรดอ้างอิงถึง [Common issues](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/common-issues.md)
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

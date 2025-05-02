@@ -8,9 +8,9 @@ priority: high
 
 # Custom Code Tool node
 
-Use the Custom Code Tool node to write code that an [agent](/glossary.md#ai-agent) can run.
+ใช้ Custom Code Tool node เพื่อเขียนโค้ดที่ [agent](/glossary.md#ai-agent) สามารถรันได้
 
-On this page, you'll find the node parameters for the Custom Code Tool node and links to more resources.
+ในหน้านี้จะมี parameter ของ node Custom Code Tool และลิงก์ไปยัง resource อื่นๆ ที่เกี่ยวข้อง
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
@@ -18,19 +18,19 @@ On this page, you'll find the node parameters for the Custom Code Tool node and 
 
 ### Description
 
-Give your custom code a description. This tells the agent when to use this tool. For example:
+ใส่คำอธิบายสำหรับ custom code ของคุณ ตรงนี้จะช่วยบอก agent ว่าควรใช้ tool นี้เมื่อไหร่ เช่น
 
 > Call this tool to get a random color. The input should be a string with comma separated names of colors to exclude.
 
 ### Language
 
-You can use JavaScript or Python.
+เลือกได้ว่าจะใช้ JavaScript หรือ Python
 
 ### JavaScript / Python box
 
-Write the code here.
+เขียนโค้ดของคุณตรงนี้
 
-You can access the tool input using `query`. For example, to take the input string and lowercase it:
+คุณสามารถเข้าถึง input ของ tool ได้ด้วย `query` เช่น ถ้าต้องการรับ string แล้วแปลงเป็นตัวพิมพ์เล็กทั้งหมด:
 
 ```js
 let myString = query;

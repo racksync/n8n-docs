@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Vonage node
 
-Use the Vonage node to automate work in Vonage, and integrate Vonage with other applications. n8n supports sending SMS with Vonage. 
+ใช้ Vonage node ในการทำงานอัตโนมัติใน Vonage และเชื่อมต่อ Vonage กับแอปพลิเคชันอื่น ๆ. n8n รองรับการส่ง SMS ผ่าน Vonage.
 
-On this page, you'll find a list of operations the Vonage node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการของ operations ที่ Vonage node รองรับและลิงก์ไปยัง resource เพิ่มเติม.
 
 /// note | Credentials
-Refer to [Vonage credentials](/integrations/builtin/credentials/vonage.md) for guidance on setting up authentication. 
+ดู [Vonage credentials](/integrations/builtin/credentials/vonage.md) สำหรับคำแนะนำในการตั้งค่า authentication. 
 ///
 
 ## Operations

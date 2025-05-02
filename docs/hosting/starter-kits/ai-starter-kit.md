@@ -1,42 +1,42 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Self-hosted AI Starter Kit
-description: Use n8n's curated self-hosted AI Starter Kit to get a list of AI elements to quickly start building AI workflows.
+description: ใช้ Self-hosted AI Starter Kit ที่คัดสรรโดย n8n เพื่อเริ่มต้นสร้าง workflow AI แบบ self-hosted ได้อย่างรวดเร็ว
 contentType: howto
 ---
 
 # Self-hosted AI Starter Kit
 
-The Self-hosted AI Starter Kit is an open, docker compose template that bootstraps a fully featured Local AI and Low Code development environment.
+Self-hosted AI Starter Kit คือ docker compose template ที่รวมเครื่องมือ Local AI และ Low Code development environment ไว้ให้พร้อมใช้งาน
 
-Curated by [n8n](https://github.com/n8n-io), it combines the self-hosted n8n platform with a list of compatible AI products and components to get you started building self-hosted AI workflows.
+คัดสรรโดย [n8n](https://github.com/n8n-io) รวม self-hosted n8n platform กับ AI products และ components ที่ใช้งานร่วมกันได้ ให้คุณเริ่มสร้าง workflow AI แบบ self-hosted ได้ทันที
 
 ## What’s included
 
-✅ [**Self-hosted n8n**](/hosting/index.md): Low-code platform with over 400 integrations and advanced AI components.
+✅ [**Self-hosted n8n**](/hosting/index.md): Low-code platform ที่มี integration กว่า 400 ตัว และ component AI ขั้นสูง
 
-✅ [**Ollama**](https://ollama.com/){:target=_blank .external-link}: Cross-platform LLM platform to install and run the latest local LLMs.
+✅ [**Ollama**](https://ollama.com/){:target=_blank .external-link}: LLM platform ข้ามแพลตฟอร์มสำหรับติดตั้งและรัน LLMs ล่าสุดแบบ local
 
-✅ [**Qdrant**](https://qdrant.tech/){:target=_blank .external-link}: Open-source, high performance vector store with a comprehensive API.
+✅ [**Qdrant**](https://qdrant.tech/){:target=_blank .external-link}: vector store แบบ open-source ประสิทธิภาพสูง พร้อม API ครบถ้วน
 
-✅ [**PostgreSQL**](https://www.postgresql.org/){:target=_blank .external-link}: The workhorse of the Data Engineering world, handles large amounts of data safely.
+✅ [**PostgreSQL**](https://www.postgresql.org/){:target=_blank .external-link}: database ยอดนิยมสำหรับงาน Data Engineering จัดการข้อมูลขนาดใหญ่ได้ดี
 
 ## What you can build
 
-⭐️ [AI Agents](/glossary.md#ai-agent){ data-preview} that can schedule appointments
+⭐️ [AI Agents](/glossary.md#ai-agent){ data-preview} ที่ช่วยนัดหมาย
 
-⭐️ Summaries of company PDFs without leaking data
+⭐️ สรุปเนื้อหา PDF ของบริษัทโดยไม่ต้องส่งข้อมูลออกนอก
 
-⭐️ Smarter Slackbots for company communications and IT-ops
+⭐️ Slackbot อัจฉริยะสำหรับสื่อสารในบริษัทและ IT-ops
 
-⭐️ Private, low-cost analyses of financial documents
+⭐️ วิเคราะห์เอกสารการเงินแบบ private และประหยัดค่าใช้จ่าย
 
 ## Get the kit
 
 <!-- vale off -->
-Head to [the GitHub repository](https://github.com/n8n-io/self-hosted-ai-starter-kit){:target=_blank .external-link} to clone the repo and get started!
+ไปที่ [the GitHub repository](https://github.com/n8n-io/self-hosted-ai-starter-kit){:target=_blank .external-link} เพื่อ clone repo และเริ่มต้นใช้งานได้เลย!
 <!-- vale on -->
 
 /// note | For testing only
-n8n designed this kit to help you get started with self-hosted AI workflows. While it’s not fully optimized for production environments, it combines robust components that work well together for proof-of-concept projects. Customize it to meet your needs. Secure and harden it before using in production.
+n8n ออกแบบ kit นี้เพื่อให้คุณเริ่มต้นสร้าง workflow AI แบบ self-hosted ได้ง่ายๆ ยังไม่เหมาะกับ production เต็มรูปแบบ แต่รวม component ที่ทำงานร่วมกันได้ดีสำหรับ proof-of-concept สามารถปรับแต่งได้ตามต้องการ อย่าลืม secure และ harden ก่อนนำไปใช้จริง
 ///

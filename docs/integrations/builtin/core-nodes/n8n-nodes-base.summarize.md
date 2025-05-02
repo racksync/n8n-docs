@@ -8,56 +8,56 @@ priority: high
 
 # Summarize
 
-Use the Summarize node to aggregate items together, in a manner similar to Excel pivot tables.
+ใช้ Summarize node เพื่อรวมข้อมูลหลายๆ item เข้าด้วยกัน คล้ายๆ กับ pivot table ใน Excel
 
 ## Node parameters
 
 ### Fields to Summarize
 
-Use these fields to define how you want to summarize your input data.
+ใช้ fields เหล่านี้เพื่อกำหนดว่าจะสรุปข้อมูล input ยังไง
 
-* **Aggregation**: Select the aggregation method to use on a given field. Options include:
-	* **Append**: Append 
-		* If you select this option, decide whether you want to **Include Empty Values** or not.
-	* **Average**: Calculate the numeric average of your input data.
-	* **Concatenate**: Combine together values in your input data.
-		* If you select this option, decide whether you want to **Include Empty Values** or not.
-		* **Separator**: Select the separator you want to insert between concatenated values.
-	* **Count**: Count the total number of values in your input data.
-	* **Count Unique**: Count the number of unique values in your input data.
-	* **Max**: Find the highest numeric value in your input data.
-	* **Min**: Find the lowest numeric value in your input data.
-	* **Sum**: Add together the numeric values in your input data.
-* **Field**: Enter the name of the field you want to perform the aggregation on.
+* **Aggregation**: เลือกวิธีการรวมข้อมูลในแต่ละ field ตัวเลือกเช่น:
+	* **Append**: เอาค่ามาต่อกัน
+		* ถ้าเลือกอันนี้ ให้เลือกว่าจะ **Include Empty Values** หรือไม่
+	* **Average**: คำนวณค่าเฉลี่ยของข้อมูลตัวเลข
+	* **Concatenate**: เอาค่ามาต่อกันเป็นข้อความเดียว
+		* ถ้าเลือกอันนี้ ให้เลือกว่าจะ **Include Empty Values** หรือไม่
+		* **Separator**: เลือกตัวคั่นระหว่างค่าที่ต่อกัน
+	* **Count**: นับจำนวนค่าทั้งหมดในข้อมูล
+	* **Count Unique**: นับจำนวนค่าที่ไม่ซ้ำกันในข้อมูล
+	* **Max**: หาค่าสูงสุดในข้อมูลตัวเลข
+	* **Min**: หาค่าต่ำสุดในข้อมูลตัวเลข
+	* **Sum**: รวมค่าตัวเลขทั้งหมดเข้าด้วยกัน
+* **Field**: ใส่ชื่อ field ที่อยากจะรวมข้อมูล
 
 ### Fields to Split By
 
-Enter the name of the input fields that you want to split the summary by (similar to a group by statement). This allows you to get separate summaries based on values in other fields.
+ใส่ชื่อ field ใน input ที่อยากจะแยกกลุ่มสรุปข้อมูล (คล้ายๆ กับ group by) จะได้สรุปแยกตามค่าของ field เหล่านั้น
 
-For example, if our input data contains columns for `Sales Rep` and `Deal Amount` and we're performing a **Sum** on the `Deal Amount` field, we could split by `Sales Rep` to get a **Sum** total for each Sales Rep.
+เช่น ถ้ามีข้อมูล `Sales Rep` กับ `Deal Amount` แล้วเลือก **Sum** ที่ field `Deal Amount` และ split by `Sales Rep` จะได้ยอดรวมแยกตามแต่ละ Sales Rep
 
-To enter multiple fields to split by, enter a comma-separated list.
+ถ้าอยากใส่หลาย field ให้คั่นด้วย comma
 
 ## Node options
 
 ### Continue if Field Not Found
 
-By default, if a **Field to Summarize** isn't in any items, the node throws an error. Use this option to continue and return a single empty item (turned on) instead or keep the default error behavior (turned off).
+โดยปกติ ถ้า **Field to Summarize** ไม่มีใน item ไหนเลย node จะ error ถ้าเปิด option นี้ (turned on) จะให้ node ทำงานต่อและคืนค่าเป็น item ว่างๆ 1 อัน แทนที่จะ error
 
 ### Disable Dot Notation
 
-By default, n8n enables dot notation to reference child fields in the format `parent.child`. Use this option to disable dot notation (turned on) or to continue using dot (turned off).
+โดยปกติ n8n จะเปิดใช้ dot notation เพื่ออ้างถึง child field ในรูปแบบ `parent.child` ถ้าอยากปิดการใช้ dot notation ให้เปิด option นี้ (turned on) หรือถ้าอยากใช้ dot notation ต่อไปให้ปิด (turned off)
 
 ### Output Format
 
-Select the format for your output format. This option is recommended if you're using **Fields to Split By**
+เลือก format สำหรับ output แนะนำให้ใช้ option นี้ถ้าใช้ **Fields to Split By**
 
-* **Each Split in a Separate Item**: Use this option to generate a separate output item for each split out field.
-* **All Splits in a Single Item**: Use this option to generate a single item that lists the split out fields.
+* **Each Split in a Separate Item**: สร้าง output แยก item สำหรับแต่ละกลุ่มที่ split
+* **All Splits in a Single Item**: สร้าง output เป็น item เดียวที่รวมทุกกลุ่มที่ split
 
 ## Ignore items without valid fields to group by
 
-Set whether to ignore input items that don't contain the **Fields to Split By** (turned on) or not (turned off).
+ตั้งค่าว่าจะข้าม input item ที่ไม่มี **Fields to Split By** (เปิด = ข้าม, ปิด = ไม่ข้าม)
 
 ## Templates and examples
 

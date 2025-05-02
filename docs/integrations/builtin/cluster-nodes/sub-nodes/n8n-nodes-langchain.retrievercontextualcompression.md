@@ -8,7 +8,7 @@ priority: medium
 
 # Contextual Compression Retriever node
 
-The Contextual Compression Retriever node improves the answers returned from [vector store](/glossary.md#ai-vector-store) document similarity searches by taking into account the context from the query.
+Contextual Compression Retriever node จะช่วยให้ผลลัพธ์จากการค้นหา similarity ใน [vector store](/glossary.md#ai-vector-store) ตรงกับ context ของ query มากขึ้น
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
@@ -19,7 +19,7 @@ The Contextual Compression Retriever node improves the answers returned from [ve
 
 ## Related resources
 
-Refer to [LangChain's contextual compression retriever documentation](https://js.langchain.com/docs/how_to/contextual_compression/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมได้ที่ [LangChain's contextual compression retriever documentation](https://js.langchain.com/docs/how_to/contextual_compression/){:target=_blank .external-link}
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

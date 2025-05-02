@@ -7,12 +7,10 @@ contentType: [integration, reference]
 
 # Strava node
 
-Use the Strava node to automate work in Strava, and integrate Strava with other applications. n8n has built-in support for a wide range of Strava features, including creating new activities, and getting activity information. 
-
-On this page, you'll find a list of operations the Strava node supports and links to more resources.
+ใช้ Strava node เพื่อทำให้งานใน Strava เป็นไปโดยอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันอื่น ๆ ได้อย่างง่ายดาย. n8n รองรับฟีเจอร์ของ Strava หลายอย่าง เช่น การสร้าง activity ใหม่และการดึงข้อมูลของ activity.
 
 /// note | Credentials
-Refer to [Strava credentials](/integrations/builtin/credentials/strava.md) for guidance on setting up authentication. 
+ดู [Strava credentials](/integrations/builtin/credentials/strava.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations

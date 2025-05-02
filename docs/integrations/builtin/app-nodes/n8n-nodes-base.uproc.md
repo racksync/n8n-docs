@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # uProc node
 
-Use the uProc node to automate work in uProc, and integrate uProc with other applications. n8n has built-in support for a wide range of uProc features, including getting advanced human audio file, communication data, company, finance and product information. 
+ใช้ uProc node เพื่อช่วยให้งานใน uProc เป็นอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันอื่น ๆ โดย n8n รองรับฟีเจอร์ของ uProc หลากหลายด้าน เช่น การดึงข้อมูลเสียงขั้นสูง, ข้อมูลการสื่อสาร, บริษัท, การเงิน และข้อมูลผลิตภัณฑ์
 
-On this page, you'll find a list of operations the uProc node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ uProc node รองรับ พร้อมทั้งลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [uProc credentials](/integrations/builtin/credentials/uproc.md) for guidance on setting up authentication. 
+ดู [uProc credentials](/integrations/builtin/credentials/uproc.md) สำหรับคำแนะนำในการตั้งค่า authentication. 
 ///
 
 ## Operations

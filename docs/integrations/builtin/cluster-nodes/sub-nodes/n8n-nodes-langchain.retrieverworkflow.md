@@ -8,9 +8,9 @@ priority: medium
 
 # Workflow Retriever node
 
-Use the Workflow Retriever node to retrieve data from an n8n workflow for use in a Retrieval QA Chain or another Retriever node.
+ใช้ Workflow Retriever node เพื่อดึงข้อมูลจาก workflow ของ n8n ไปใช้กับ Retrieval QA Chain หรือ Retriever node อื่นๆ
 
-On this page, you'll find the node parameters for the Workflow Retriever node, and links to more resources.
+ในหน้านี้จะมี parameter ของ node Workflow Retriever และลิงก์ resource อื่นๆ ที่เกี่ยวข้อง
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
@@ -18,10 +18,10 @@ On this page, you'll find the node parameters for the Workflow Retriever node, a
 
 ### Source
 
-Tell n8n which workflow to call. You can choose either:
+บอก n8n ว่าจะเรียก workflow ไหน โดยเลือกได้ระหว่าง:
 
-* **Database** and enter a workflow ID.
-* **Parameter** and copy in a complete [workflow JSON](/workflows/export-import.md).
+* **Database** แล้วใส่ workflow ID
+* **Parameter** แล้วใส่ [workflow JSON](/workflows/export-import.md) ทั้งหมด
 
 ### Workflow values
 
@@ -34,7 +34,7 @@ Tell n8n which workflow to call. You can choose either:
 
 ## Related resources
 
-Refer to [LangChain's general retriever documentation](https://js.langchain.com/docs/concepts/retrievers/){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมได้ที่ [LangChain's general retriever documentation](https://js.langchain.com/docs/concepts/retrievers/){:target=_blank .external-link}
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

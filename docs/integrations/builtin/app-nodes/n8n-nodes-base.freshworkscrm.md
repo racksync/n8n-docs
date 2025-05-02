@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Freshworks CRM node
 
-Use the Freshworks CRM node to automate work in Freshworks CRM, and integrate Freshworks CRM with other applications. n8n has built-in support for a wide range of Freshworks CRM features, including creating, updating, deleting, and retrieve, accounts, appointments, contacts, deals, notes, sales activity and more. 
+ใช้ Freshworks CRM node เพื่อทำงานอัตโนมัติใน Freshworks CRM และเชื่อมต่อ Freshworks CRM กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Freshworks CRM หลายอย่าง เช่น การสร้าง อัปเดต ลบ และดึงข้อมูล accounts, appointments, contacts, deals, notes, sales activity และอื่นๆ
 
-On this page, you'll find a list of operations the Freshworks CRM node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Freshworks CRM node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Freshworks CRM credentials](/integrations/builtin/credentials/freshworkscrm.md) for guidance on setting up authentication. 
+โปรดดู [Freshworks CRM credentials](/integrations/builtin/credentials/freshworkscrm.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations

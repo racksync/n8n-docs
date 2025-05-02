@@ -8,12 +8,12 @@ priority: medium
 
 # MongoDB node
 
-Use the MongoDB node to automate work in MongoDB, and integrate MongoDB with other applications. n8n has built-in support for a wide range of MongoDB features, including aggregating, updating, finding, deleting, and getting documents. 
+ใช้ MongoDB node ในการทำงานอัตโนมัติใน MongoDB และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ โดย n8n รองรับฟีเจอร์หลากหลาย เช่น aggregation, update, find, delete และการดึงเอกสาร.
 
-On this page, you'll find a list of operations the MongoDB node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ MongoDB node รองรับและลิงก์ไปยังข้อมูลเพิ่มเติม.
 
 /// note | Credentials
-Refer to [MongoDB credentials](/integrations/builtin/credentials/mongodb.md) for guidance on setting up authentication. 
+ดู [MongoDB credentials](/integrations/builtin/credentials/mongodb.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

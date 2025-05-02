@@ -8,7 +8,7 @@ priority: high
 
 # Stop And Error
 
-Use the Stop And Error node to display custom error messages, cause executions to fail under certain conditions, and send custom error information to error workflows.
+ใช้ Stop And Error node เพื่อแสดง error message แบบ custom, ทำให้ execution ล้มเหลวตามเงื่อนไขที่กำหนด และส่ง error ข้อมูล custom ไปยัง error workflow
 
 ## Operations
 
@@ -17,17 +17,17 @@ Use the Stop And Error node to display custom error messages, cause executions t
 
 ## Node parameters
 
-Both operations include one node parameter, the **Error Type**. Use this parameter to select the type of error to throw. Choose between the two operations: **Error Message** and **Error Object**.
+ทั้งสอง operation มี parameter หลักคือ **Error Type** ใช้เลือกประเภท error ที่จะ throw เลือกได้ระหว่าง **Error Message** กับ **Error Object**
 
-The other parameters depend on which operation you select.
+parameters อื่นๆ จะขึ้นอยู่กับ operation ที่เลือก
 
 ### Error Message parameters
 
-The Error Message Error Type adds one parameter, the **Error Message** field. Enter the message you'd like to throw.
+ถ้าเลือก Error Message Error Type จะมี parameter เพิ่มคือ **Error Message** ให้ใส่ข้อความที่อยาก throw
 
 ### Error Object parameters
 
-The Error Object Error Type adds one parameter, the **Error Object**. Enter a JSON object that contains the error properties you'd like to throw.
+ถ้าเลือก Error Object Error Type จะมี parameter เพิ่มคือ **Error Object** ให้ใส่ JSON object ที่มี property ของ error ที่อยาก throw
 
 ## Templates and examples
 
@@ -36,7 +36,7 @@ The Error Object Error Type adds one parameter, the **Error Object**. Enter a JS
 
 ## Related resources
 
-You can use the Stop And Error node with the [Error trigger](/integrations/builtin/core-nodes/n8n-nodes-base.errortrigger.md) node.
+สามารถใช้ Stop And Error node คู่กับ [Error trigger](/integrations/builtin/core-nodes/n8n-nodes-base.errortrigger.md) node ได้
 
-Read more about [Error workflows](/flow-logic/error-handling.md) in n8n workflows.
+อ่านเพิ่มเติมเกี่ยวกับ [Error workflows](/flow-logic/error-handling.md) ใน n8n workflows
 

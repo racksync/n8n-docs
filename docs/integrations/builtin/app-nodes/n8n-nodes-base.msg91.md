@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # MSG91 node
 
-Use the MSG91 node to automate work in MSG91, and integrate MSG91 with other applications. n8n supports sending SMS with MSG91.
+ใช้ MSG91 node ในการทำงานอัตโนมัติใน MSG91 และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ โดย n8n รองรับการส่ง SMS ผ่าน MSG91.
 
-On this page, you'll find a list of operations the MSG91 node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ MSG91 node รองรับและลิงก์ไปยังข้อมูลเพิ่มเติม.
 
 /// note | Credentials
-Refer to [MSG91 credentials](/integrations/builtin/credentials/msg91.md) for guidance on setting up authentication. 
+ดู [MSG91 credentials](/integrations/builtin/credentials/msg91.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations

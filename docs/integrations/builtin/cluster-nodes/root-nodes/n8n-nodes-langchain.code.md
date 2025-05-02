@@ -8,55 +8,55 @@ priority: medium
 
 # LangChain Code node
 
-Use the LangChain Code node to import LangChain. This means if there is functionality you need that n8n hasn't created a node for, you can still use it. By configuring the LangChain Code node connectors you can use it as a normal node, root node or sub-node.
+ใช้ LangChain Code node เพื่อ import LangChain ซึ่งหมายความว่าหากมีฟังก์ชันที่คุณต้องการแต่ n8n ยังไม่ได้สร้าง node ให้ คุณก็ยังสามารถใช้งานได้ โดยการกำหนดค่า LangChain Code node connectors คุณสามารถใช้มันเป็น node ปกติ, root node หรือ sub-node ได้
 
-On this page, you'll find the node parameters, guidance on configuring the node, and links to more resources.
+ในหน้านี้ คุณจะพบ node parameters, คำแนะนำในการกำหนดค่า node และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Not available on Cloud
-This node is only available on self-hosted n8n.
+Node นี้มีให้ใช้งานเฉพาะบน n8n แบบ self-hosted เท่านั้น
 ///
 
 ## Node parameters
 
 ### Add Code
 
-Add your custom code. Choose either **Execute** or **Supply Data** mode. You can only use one mode.
+เพิ่ม custom code ของคุณ เลือกโหมด **Execute** หรือ **Supply Data** คุณสามารถใช้ได้เพียงโหมดเดียว
 
-Unlike the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md), the LangChain Code node doesn't support Python.
+ต่างจาก [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md) LangChain Code node ไม่รองรับ Python
 
-* **Execute**: use the LangChain Code node like n8n's own Code node. This takes input data from the workflow, processes it, and returns it as the node output. This mode requires a main input and output. You must create these connections in **Inputs** and **Outputs**.
-* **Supply Data**: use the LangChain Code node as a sub-node, sending data to a root node. This uses an output other than main.
+*   **Execute**: ใช้ LangChain Code node เหมือนกับ Code node ของ n8n เอง ซึ่งจะรับ input data จาก workflow, ประมวลผล และส่งคืนเป็น node output โหมดนี้ต้องการ main input และ output คุณต้องสร้างการเชื่อมต่อเหล่านี้ใน **Inputs** และ **Outputs**
+*   **Supply Data**: ใช้ LangChain Code node เป็น sub-node โดยส่งข้อมูลไปยัง root node ซึ่งจะใช้ output อื่นที่ไม่ใช่ main
 
-By default, you can't load built-in or external modules in this node. Self-hosted users can [enable built-in and external modules](/hosting/configuration/configuration-methods.md).
+โดยค่าเริ่มต้น คุณไม่สามารถโหลด built-in หรือ external modules ใน node นี้ได้ ผู้ใช้ self-hosted สามารถ [เปิดใช้งาน built-in และ external modules](/hosting/configuration/configuration-methods.md) ได้
 
 ### Inputs
 
-Choose the input types. 
+เลือกประเภท input
 
-The main input is the normal connector found in all n8n workflows. If you have a main input and output set in the node, **Execute** code is required.
+Main input คือ connector ปกติที่พบใน n8n workflows ทั้งหมด หากคุณมี main input และ output ที่ตั้งค่าไว้ใน node จำเป็นต้องใช้ code แบบ **Execute**
 
 ### Outputs
 
-Choose the output types. 
+เลือกประเภท output
 
-The main output is the normal connector found in all n8n workflows. If you have a main input and output set in the node, **Execute** code is required.
+Main output คือ connector ปกติที่พบใน n8n workflows ทั้งหมด หากคุณมี main input และ output ที่ตั้งค่าไว้ใน node จำเป็นต้องใช้ code แบบ **Execute**
 
 ## Node inputs and outputs configuration
 
-By configuring the LangChain Code node connectors (inputs and outputs) you can use it as an app node, root node or sub-node.
+โดยการกำหนดค่า LangChain Code node connectors (inputs และ outputs) คุณสามารถใช้มันเป็น app node, root node หรือ sub-node ได้
 
 ![Screenshot of a workflow with four LangChain nodes, configured as different node types](/_images/integrations/builtin/cluster-nodes/langchaincode/create-node-types.png)
 
 | Node type | Inputs | Outputs | Code mode |
 | --------- | ------ | ------- | --------- |
-| App node. Similar to the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md). | Main | Main | Execute |
-| Root node | Main; at least one other type | Main | Execute |
-| Sub-node | - | A type other than main. Must match the input type you want to connect to. | Supply Data |
-| Sub-node with sub-nodes | A type other than main |A type other than main. Must match the input type you want to connect to. | Supply Data |
+| App node คล้ายกับ [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md) | Main | Main | Execute |
+| Root node | Main; อย่างน้อยหนึ่งประเภทอื่น | Main | Execute |
+| Sub-node | - | ประเภทอื่นที่ไม่ใช่ main ต้องตรงกับประเภท input ที่คุณต้องการเชื่อมต่อ | Supply Data |
+| Sub-node พร้อม sub-nodes | ประเภทอื่นที่ไม่ใช่ main | ประเภทอื่นที่ไม่ใช่ main ต้องตรงกับประเภท input ที่คุณต้องการเชื่อมต่อ | Supply Data |
 
 ## Built-in methods
 
-n8n provides these methods to make it easier to perform common tasks in the LangChain Code node.
+n8n มี methods เหล่านี้เพื่อให้ง่ายต่อการทำงานทั่วไปใน LangChain Code node
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/langchaincode/builtin-methods.md"
 

@@ -7,24 +7,24 @@ contentType: [integration, reference]
 
 # Activation Trigger node
 
-The Activation Trigger node gets triggered when an event gets fired by n8n or a workflow.
+Activation Trigger node จะถูก trigger เมื่อมี event จาก n8n หรือ workflow
 
 /// warning
-n8n has deprecated the Activation Trigger node and replaced it with two new nodes: the [n8n Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.n8ntrigger.md) and the [Workflow Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.workflowtrigger.md). For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01170) page.
+n8n ได้ deprecated Activation Trigger node แล้ว และแทนที่ด้วย node ใหม่ 2 ตัว คือ [n8n Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.n8ntrigger.md) และ [Workflow Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.workflowtrigger.md) ดูรายละเอียดเพิ่มเติมได้ที่ [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01170)
 ///
 
 /// note | Keep in mind
-If you want to use the Activation Trigger node for a workflow, add the node to the workflow. You don't have to create a separate workflow.
+ถ้าอยากใช้ Activation Trigger node กับ workflow ให้เพิ่ม node นี้เข้าไปใน workflow ได้เลย ไม่ต้องสร้าง workflow แยก
 ///
 
-The Activation Trigger node gets triggered for the workflow that it gets added to. You can use the Activation Trigger node to trigger a workflow to notify the state of the workflow.
+Activation Trigger node จะ trigger เฉพาะ workflow ที่มี node นี้อยู่ สามารถใช้ node นี้เพื่อ trigger workflow เพื่อแจ้งสถานะของ workflow ได้
 
 ## Node parameters
 
 - Events
-    - **Activation**: Run when the workflow gets activated
-    - **Start**: Run when n8n starts or restarts
-    - **Update**: Run when the workflow gets saved while it's active
+    - **Activation**: ทำงานเมื่อ workflow ถูก activate
+    - **Start**: ทำงานเมื่อ n8n start หรือ restart
+    - **Update**: ทำงานเมื่อ workflow ถูก save ขณะที่ active อยู่
 
 ## Templates and examples
 

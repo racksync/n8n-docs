@@ -8,94 +8,94 @@ priority: critical
 
 # Common issues and questions
 
-Here are some common issues and questions for the [Webhook node](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md) and suggested solutions.
+รวมปัญหาและคำถามที่พบบ่อยสำหรับ [Webhook node](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md) พร้อมวิธีแก้ไข
 
 ## Listen for multiple HTTP methods
 
-By default, the Webhook node accepts calls that use a single method. For example, it can accept GET or POST requests, but not both. If you want to accept calls using multiple methods:
+โดยปกติ Webhook node จะรับแค่ HTTP method เดียว เช่น รับ GET หรือ POST อย่างใดอย่างหนึ่ง ถ้าอยากให้รับได้หลาย method:
 
-1. Open the node **Settings**.
-1. Turn on **Allow Multiple HTTP Methods**.
-1. Return to **Parameters**. By default, the node now accepts GET and POST calls. You can add other methods in the **HTTP Methods** field.
+1. เปิด **Settings** ของ node
+1. เปิด **Allow Multiple HTTP Methods**
+1. กลับไปที่ **Parameters** ตอนนี้ node จะรับ GET และ POST ได้แล้วโดย default สามารถเพิ่ม method อื่นใน field **HTTP Methods** ได้
 
-The Webhook node has an output for each method, so you can perform different actions depending on the method.
+Webhook node จะมี output แยกตามแต่ละ method ทำให้กำหนด action ต่างกันได้ตาม method ที่รับ
 
 ## Use the HTTP Request node to trigger the Webhook node
 
-The [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) node makes HTTP requests to the URL you specify.
+[HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) node ใช้ส่ง HTTP request ไปยัง URL ที่กำหนด
 
-1. Create a new workflow.
-2. Add the HTTP Request node to the workflow.
-3. Select a method from the **Request Method** dropdown list. For example, if you select GET as the **HTTP method** in your Webhook node, select GET as the request method in the HTTP Request node.
-4. Copy the URL from the Webhook node, and paste it in the **URL** field in the HTTP Request node.
-5. If using the test URL for the webhook node: execute the workflow with the Webhook node.
-6. Execute the HTTP Request node.
+1. สร้าง workflow ใหม่
+2. เพิ่ม HTTP Request node ใน workflow
+3. เลือก method ที่ต้องการใน **Request Method** เช่น ถ้า Webhook node ใช้ GET ให้ HTTP Request node ใช้ GET ด้วย
+4. คัดลอก URL จาก Webhook node ไปวางใน **URL** ของ HTTP Request node
+5. ถ้าใช้ test URL ของ webhook node: ให้ execute workflow ที่มี Webhook node ก่อน
+6. Execute HTTP Request node
 
 ## Use curl to trigger the Webhook node
 
-You can use [curl](https://curl.se/){:target=_blank .external-link} to make HTTP requests that trigger the Webhook node. 
+สามารถใช้ [curl](https://curl.se/){:target=_blank .external-link} เพื่อส่ง HTTP request ไป trigger Webhook node ได้
 
 /// note
-In the examples, replace `<https://your-n8n.url/webhook/path>` with your webhook URL.  
-The examples make GET requests. You can use whichever HTTP method you set in **HTTP Method**.
+ในตัวอย่าง ให้แทนที่ `<https://your-n8n.url/webhook/path>` ด้วย webhook URL ของคุณ  
+ตัวอย่างใช้ GET request แต่สามารถใช้ method อื่นที่ตั้งไว้ใน **HTTP Method** ได้
 ///
 
-Make an HTTP request without any parameters:
+ส่ง HTTP request โดยไม่มี parameter:
 
 ```sh
 curl --request GET <https://your-n8n.url/webhook/path>
 ```
 
-Make an HTTP request with a body parameter:
+ส่ง HTTP request พร้อม body parameter:
 
 ```sh
 curl --request GET <https://your-n8n.url/webhook/path> --data 'key=value'
 ```
 
-Make an HTTP request with header parameter:
+ส่ง HTTP request พร้อม header parameter:
 
 ```sh
 curl --request GET <https://your-n8n.url/webhook/path> --header 'key=value'
 ```
 
-Make an HTTP request to send a file:
+ส่ง HTTP request เพื่ออัปโหลดไฟล์:
 
 ```sh
 curl --request GET <https://your-n8n.url/webhook/path> --from 'key=@/path/to/file'
 ```
-Replace `/path/to/file` with the path of the file you want to send.
+แทนที่ `/path/to/file` ด้วย path ของไฟล์ที่ต้องการส่ง
 
 ## Send a response of type string
 
-By default, the response format is JSON or an array. To send a response of type string:
+โดยปกติ response format จะเป็น JSON หรือ array ถ้าอยากให้ส่ง response เป็น string:
 
-1. Select **Response Mode** > **When Last Node Finishes**.
-2. Select **Response Data** > **First Entry JSON**.
-3. Select **Add Option** > **Property Name**.
-4. Enter the name of the property that contains the response. This defaults to `data`.
-5. Connect an [Edit Fields node](/integrations/builtin/core-nodes/n8n-nodes-base.set.md) to the Webhook node.
-6. In the Edit Fields node, select **Add Value** > **String**.
-7. Enter the name of the property in the **Name** field. The name should match the property name from step 4.
-8. Enter the string value in the **Value** field.
-9. Toggle **Keep Only Set** to on (green).
+1. เลือก **Response Mode** > **When Last Node Finishes**
+2. เลือก **Response Data** > **First Entry JSON**
+3. เลือก **Add Option** > **Property Name**
+4. ใส่ชื่อ property ที่เก็บ response โดย default คือ `data`
+5. เชื่อม [Edit Fields node](/integrations/builtin/core-nodes/n8n-nodes-base.set.md) กับ Webhook node
+6. ใน Edit Fields node เลือก **Add Value** > **String**
+7. ใส่ชื่อ property ใน **Name** ให้ตรงกับข้อ 4
+8. ใส่ค่าที่ต้องการใน **Value**
+9. เปิด **Keep Only Set** (ให้เป็นสีเขียว)
 
-When you call the Webhook, it sends the string response from the Edit Fields node.
+เมื่อเรียก Webhook จะได้ string response จาก Edit Fields node
 
 ## Test URL versus Production URL
 
-n8n generates two **Webhook URLs** for each Webhook node: a **Test URL** and a **Production URL**.
+n8n จะสร้าง **Webhook URLs** สองแบบให้แต่ละ Webhook node: **Test URL** และ **Production URL**
 
-While building or testing a workflow, use the **Test URL**. Once you're ready to use your Webhook URL in production, use the **Production URL**.
+ตอนสร้างหรือทดสอบ workflow ให้ใช้ **Test URL** เมื่อพร้อมใช้งานจริงให้เปลี่ยนไปใช้ **Production URL**
 
 | **URL type** | **How to trigger** | **Listening duration** | **Data shown in editor UI?** | 
 | :--- | --- | --- | :---: |
-| Test URL | Select **Listen for test event** and trigger a test event from the source. | 120 seconds | :white_check_mark: |
-| Production URL | Activate the workflow | Until workflow deactivated | :x: |
+| Test URL | เลือก **Listen for test event** แล้ว trigger event จากต้นทาง | 120 seconds | :white_check_mark: |
+| Production URL | Activate workflow | จนกว่าจะ deactivate workflow | :x: |
 
-Refer to [Workflow development](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/workflow-development.md) for more information.
+ดูรายละเอียดเพิ่มเติมที่ [Workflow development](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/workflow-development.md)
 
 ## IPs in Whitelist are failing to connect
 
-If you're unable to connect from IPs in your IP Whitelist, check if you are running n8n behind a reverse proxy.
+ถ้าเชื่อมต่อจาก IP ที่อยู่ใน IP Whitelist ไม่ได้ ให้ตรวจสอบว่ารัน n8n อยู่หลัง reverse proxy หรือไม่
 
-If so, set the `N8N_PROXY_HOPS` [environment variable](/hosting/configuration/environment-variables/index.md) to the number of reverse-proxies n8n is running behind.
+ถ้าใช่ ให้ตั้งค่า [environment variable](/hosting/configuration/environment-variables/index.md) `N8N_PROXY_HOPS` เป็นจำนวน reverse-proxy ที่ n8n อยู่ข้างหลัง

@@ -8,38 +8,38 @@ priority: high
 
 # Postgres node common issues
 
-Here are some common errors and issues with the [Postgres node](/integrations/builtin/app-nodes/n8n-nodes-base.postgres/index.md) and steps to resolve or troubleshoot them.
+ด้านล่างเป็นข้อผิดพลาดหรือปัญหาทั่วไปกับ [Postgres node](/integrations/builtin/app-nodes/n8n-nodes-base.postgres/index.md) และขั้นตอนในการแก้ไขหรือวิเคราะห์ปัญหา
 
 ## Dynamically populate SQL `IN` groups with parameters
 
-In Postgres, you can use the SQL [`IN` comparison construct](https://www.postgresql.org/docs/current/functions-comparisons.html#FUNCTIONS-COMPARISONS-IN-SCALAR) to make comparisons between groups of values:
+ใน Postgres คุณสามารถใช้ SQL [`IN` comparison construct](https://www.postgresql.org/docs/current/functions-comparisons.html#FUNCTIONS-COMPARISONS-IN-SCALAR) เพื่อเปรียบเทียบกลุ่มของค่า:
 
 ```sql
 SELECT color, shirt_size FROM shirts WHERE shirt_size IN ('small', 'medium', 'large');
 ```
 
-While you can use n8n [expressions](/code/expressions.md) in your query to dynamically populate the values in an `IN` group, combining this with [query parameters](/integrations/builtin/app-nodes/n8n-nodes-base.postgres/index.md#use-query-parameters) provides extra protection by automatically sanitizing input.
+ถึงแม้จะใช้ n8n [expressions](/code/expressions.md) เพื่อเติมค่าลงในกลุ่ม `IN` แบบไดนามิกได้ การผสานกับ [query parameters](/integrations/builtin/app-nodes/n8n-nodes-base.postgres/index.md#use-query-parameters) จะช่วยเพิ่มความปลอดภัยด้วยการ sanitize ข้อมูลให้โดยอัตโนมัติ
 
-To construct an `IN` group query with query parameters:
+เพื่อสร้าง `IN` group query พร้อม query parameters:
 
-1. Set the **Operation** to **Execute Query**.
-2. In **Options**, select **Query Parameters**.
-3. Use an expression to select an array from the input data. For example, `{{ $json.input_shirt_sizes }}`.
-4. In the **Query** parameter, write your query with the `IN` construct with an empty set of parentheses. For example:
-	```sql
-	SELECT color, shirt_size FROM shirts WHERE shirt_size IN ();
-	```
-5. Inside of the `IN` parentheses, use an expression to dynamically create index-based placeholders (like `$1`, `$2`, and `$3`) for the number of items in your query parameter array. You can do this by increasing each array index by one since the placeholder variables are 1 indexed:
-	```sql
-	SELECT color, shirt_size FROM shirts WHERE shirt_size IN ({{ $json.input_shirt_sizes.map((i, pos) => "$" + (pos+1)).join(', ') }});
-	```
+1. ตั้ง **Operation** เป็น **Execute Query**  
+2. ใน **Options** ให้เลือก **Query Parameters**  
+3. ใช้ expression เพื่อดึงอาร์เรย์จาก input data เช่น `{{ $json.input_shirt_sizes }}`  
+4. ในพารามิเตอร์ **Query** ให้เว้นวงเล็บ `IN` ไว้เปล่า เช่น:
+    ```sql
+    SELECT color, shirt_size FROM shirts WHERE shirt_size IN ();
+    ```
+5. ในวงเล็บ `IN` ให้ใช้ expression สร้าง placeholders (`$1`, `$2`, `$3`…) ตามจำนวนไอเท็มในอาร์เรย์ โดยเพิ่ม index แต่ละตัวขึ้นหนึ่งเพราะ placeholder เริ่มนับที่ 1:
+    ```sql
+    SELECT color, shirt_size FROM shirts WHERE shirt_size IN ({{ $json.input_shirt_sizes.map((i, pos) => "$" + (pos+1)).join(', ') }});
+    ```
 
-With this technique, n8n automatically creates the correct number of [prepared statement placeholders](https://www.postgresql.org/docs/current/sql-prepare.html) for the `IN` values according to the number of items in your array.
+ด้วยเทคนิคนี้ n8n จะสร้าง [prepared statement placeholders](https://www.postgresql.org/docs/current/sql-prepare.html) ตามจำนวนค่าของอาร์เรย์ให้โดยอัตโนมัติ
 
 ## Working with timestamps and time zones
 
-To avoid complications with how n8n and Postgres interpret timestamp and time zone data, follow these general tips:
+เพื่อหลีกเลี่ยงปัญหาเกี่ยวกับ timestamp และ time zone ระหว่าง n8n กับ Postgres ให้ทำตามเคล็ดลับเหล่านี้:
 
-- **Use UTC when storing and passing dates**: Using UTC helps avoid confusion over timezone conversions when converting dates between different representations and systems.
-- **Set the execution timezone**: Set the global timezone in n8n using either [environment variables](/hosting/configuration/configuration-examples/time-zone.md) (for self-hosted) or in the [settings](/manage-cloud/set-cloud-timezone.md) (for n8n Cloud). You can set a workflow-specific timezone in the [workflow settings](/workflows/settings.md).
-- **Use ISO 8601 format**: The [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601) encodes the day of the month, month, year, hour, minutes, and seconds in a standardized string. n8n passes dates between nodes as strings and uses [Luxon](/code/cookbook/luxon.md) to parse dates. If you need to cast to ISO 8601 explicitly, you can use the [Date & Time node](/integrations/builtin/core-nodes/n8n-nodes-base.datetime.md) and a custom format set to the string `yyyy-MM-dd'T'HH:mm:ss`.
+- **Use UTC when storing and passing dates**: ควรใช้ UTC ในการเก็บและส่งวันที่เพื่อป้องกันความสับสนจากการแปลง time zone ระหว่างระบบ  
+- **Set the execution timezone**: กำหนด global timezone ใน n8n ผ่าน [environment variables](/hosting/configuration/configuration-examples/time-zone.md) (self-hosted) หรือผ่าน [settings](/manage-cloud/set-cloud-timezone.md) (n8n Cloud) และยังสามารถตั้ง workflow-specific timezone ใน [workflow settings](/workflows/settings.md)  
+- **Use ISO 8601 format**: รูปแบบ [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) จะเก็บวัน เดือน ปี ชั่วโมง นาที และวินาทีเป็นสตริง มาตรฐาน n8n ส่งวันที่ข้ามโหนดในรูปแบบสตริงใช้ [Luxon](/code/cookbook/luxon.md) parse หากต้องการ cast เป็น ISO 8601 ให้ใช้ [Date & Time node](/integrations/builtin/core-nodes/n8n-nodes-base.datetime.md) แล้วตั้ง custom format เป็น `yyyy-MM-dd'T'HH:mm:ss`

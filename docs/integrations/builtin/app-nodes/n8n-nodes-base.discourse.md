@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Discourse node
 
-Use the Discourse node to automate work in Discourse, and integrate Discourse with other applications. n8n has built-in support for a wide range of Discourse features, including creating, getting, updating, and removing categories, groups, posts, and users.
+ใช้ Discourse node เพื่อทำงานอัตโนมัติใน Discourse และเชื่อมต่อ Discourse กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Discourse หลายอย่าง เช่น การสร้าง ดึงข้อมูล อัปเดต และลบ categories, groups, posts, และ users
 
-On this page, you'll find a list of operations the Discourse node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Discourse node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Discourse credentials](/integrations/builtin/credentials/discourse.md) for guidance on setting up authentication. 
+โปรดดู [Discourse credentials](/integrations/builtin/credentials/discourse.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations

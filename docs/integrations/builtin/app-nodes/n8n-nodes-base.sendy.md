@@ -7,12 +7,10 @@ contentType: [integration, reference]
 
 # Sendy node
 
-Use the Sendy node to automate work in Sendy, and integrate Sendy with other applications. n8n has built-in support for a wide range of Sendy features, including creating campaigns, and adding, counting, deleting, and getting subscribers.
-
-On this page, you'll find a list of operations the Sendy node supports and links to more resources.
+ใช้ Sendy node เพื่อช่วยให้งานใน Sendy เป็นไปโดยอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันอื่น ๆ ได้อย่างราบรื่น. n8n รองรับฟีเจอร์ของ Sendy หลากหลาย เช่น การสร้าง campaigns, การเพิ่ม, นับ, ลบ, และดึงข้อมูล subscribers.
 
 /// note | Credentials
-Refer to [Sendy credentials](/integrations/builtin/credentials/sendy.md) for guidance on setting up authentication. 
+ดู [Sendy credentials](/integrations/builtin/credentials/sendy.md) สำหรับคำแนะนำในการตั้งค่า authentication. 
 ///
 
 ## Operations

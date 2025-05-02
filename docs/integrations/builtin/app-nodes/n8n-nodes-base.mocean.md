@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Mocean node
 
-Use the Mocean node to automate work in Mocean, and integrate Mocean with other applications. n8n has built-in support for a wide range of Mocean features, including sending SMS, and voice messages. 
+ใช้ Mocean node ในการทำงานอัตโนมัติใน Mocean และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ โดย n8n รองรับฟีเจอร์ต่าง ๆ เช่น การส่ง SMS และข้อความเสียง.
 
-On this page, you'll find a list of operations the Mocean node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Mocean node รองรับและลิงก์ไปยังข้อมูลเพิ่มเติม.
 
 /// note | Credentials
-Refer to [Mocean credentials](/integrations/builtin/credentials/mocean.md) for guidance on setting up authentication. 
+ดู [Mocean credentials](/integrations/builtin/credentials/mocean.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations

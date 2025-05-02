@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Copper node
 
-Use the Copper node to automate work in Copper, and integrate Copper with other applications. n8n has built-in support for a wide range of Copper features, including getting, updating, deleting, and creating companies, customer sources, leads, projects and tasks.
+ใช้ Copper node เพื่อทำงานอัตโนมัติใน Copper และ integrate Copper กับแอปพลิเคชันอื่นๆ n8n มีการรองรับในตัวสำหรับฟีเจอร์ต่างๆ ของ Copper รวมถึงการ get, update, delete, และ create companies, customer sources, leads, projects และ tasks
 
-On this page, you'll find a list of operations the Copper node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Copper node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [Copper credentials](/integrations/builtin/credentials/copper.md) for guidance on setting up authentication. 
+อ้างอิง [Copper credentials](/integrations/builtin/credentials/copper.md) สำหรับคำแนะนำในการตั้งค่า authentication
 ///
 
 ## Operations

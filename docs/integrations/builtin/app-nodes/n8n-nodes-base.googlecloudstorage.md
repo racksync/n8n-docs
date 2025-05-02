@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Google Cloud Storage node
 
-Use the Google Cloud Storage node to automate work in Google Cloud Storage, and integrate Google Cloud Storage with other applications. n8n has built-in support for a wide range of Google Cloud Storage features, including creating, updating, deleting, and getting buckets and objects. 
+ใช้ Google Cloud Storage node เพื่อทำงานอัตโนมัติใน Google Cloud Storage และเชื่อมต่อ Google Cloud Storage กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Google Cloud Storage หลายอย่าง เช่น การสร้าง อัปเดต ลบ และดึงข้อมูล buckets และ objects
 
-On this page, you'll find a list of operations the Google Cloud Storage node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Google Cloud Storage node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Google Cloud Storage credentials](/integrations/builtin/credentials/google/index.md) for guidance on setting up authentication. 
+โปรดดู [Google Cloud Storage credentials](/integrations/builtin/credentials/google/index.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations
@@ -37,6 +37,6 @@ Refer to [Google Cloud Storage credentials](/integrations/builtin/credentials/go
 
 ## Related resources
 
-Refer to Google's [Cloud Storage API documentation](https://cloud.google.com/storage/docs/apis){:target=_blank .external-link} for detailed information about the API that this node integrates with.
+โปรดดู [Cloud Storage API documentation](https://cloud.google.com/storage/docs/apis){:target=_blank .external-link} ของ Google สำหรับข้อมูลโดยละเอียดเกี่ยวกับ API ที่ node นี้ผสานรวมด้วย
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

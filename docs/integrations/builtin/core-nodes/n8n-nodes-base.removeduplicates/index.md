@@ -8,99 +8,99 @@ priority: medium
 
 # Remove Duplicates node
 
-Use the Remove Duplicates node to identify and delete items that are:
+ใช้ Remove Duplicates node เพื่อช่วยหาข้อมูลที่ซ้ำกันและลบออก ไม่ว่าจะเป็น:
 
-* identical across all fields or a subset of fields in a single execution
-* identical to or surpassed by items seen in previous executions
+* ข้อมูลที่เหมือนกันทุก field หรือบาง field ในการรันเดียวกัน
+* ข้อมูลที่เหมือนหรือถูกแทนที่ด้วยข้อมูลจากการรันก่อนหน้า
 
-This is helpful in situations where you can end up with duplicate data, such as a user creating multiple accounts, or a customer submitting the same order multiple times. When working with large datasets it becomes more difficult to spot and remove these items.
+เหมาะกับกรณีที่อาจมีข้อมูลซ้ำ เช่น user สมัคร account หลายรอบ หรือ customer ส่ง order ซ้ำ เมื่อ dataset ใหญ่ขึ้นจะยิ่งหาข้อมูลซ้ำได้ยากขึ้น
 
-By comparing against data from previous executions, the Remove Duplicates node can  delete items seen in earlier executions. It can also ensure that new items have a later date or a higher value than previous values.
+Remove Duplicates node สามารถเปรียบเทียบกับข้อมูลจาก execution ก่อนหน้าเพื่อลบข้อมูลที่เคยเจอแล้ว หรือจะเลือกให้เก็บเฉพาะข้อมูลใหม่ที่มีวันที่ใหม่กว่า หรือค่ามากกว่าก็ได้
 
 /// note | Major changes in 1.64.0
-The n8n team overhauled this node in n8n 1.64.0. This document reflects the latest version of the node. If you're using an older version of n8n, you can find the previous version of this document [here](https://github.com/n8n-io/n8n-docs/blob/7a66308290e6e5b104fcb82a3beafa0d6987df36/docs/integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates.md){:target=_blank .external-link}.
+ทีม n8n ได้ปรับปรุง node นี้ครั้งใหญ่ใน n8n 1.64.0 เอกสารนี้อ้างอิงเวอร์ชันล่าสุด ถ้าใช้ n8n เวอร์ชันเก่า ดูเอกสารเวอร์ชันก่อนหน้าได้ที่ [here](https://github.com/n8n-io/n8n-docs/blob/7a66308290e6e5b104fcb82a3beafa0d6987df36/docs/integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates.md){:target=_blank .external-link}
 ///
 
 ## Operation modes
 
-The remove duplication node works differently depending on the value of the **operation** parameter:
+Remove Duplicates node จะทำงานแตกต่างกันตามค่าของ **operation** ที่เลือก:
 
-* **[Remove Items Repeated Within Current Input](#remove-items-repeated-within-current-input)**: Identify and remove duplicate items in the current input across all fields or a subset of fields.
-* **[Remove Items Processed in Previous Executions](#remove-items-processed-in-previous-executions)**: Compare items in the current input to items from previous executions and remove duplicates.
-* **[Clear Deduplication History](#clear-deduplication-history)**: Wipe the memory of items from previous executions.
+* **[Remove Items Repeated Within Current Input](#remove-items-repeated-within-current-input)**: หาข้อมูลซ้ำใน input เดียวกัน ทั้งหมดหรือบาง field แล้วลบออก
+* **[Remove Items Processed in Previous Executions](#remove-items-processed-in-previous-executions)**: เปรียบเทียบ input กับข้อมูลจาก execution ก่อนหน้าแล้วลบข้อมูลซ้ำ
+* **[Clear Deduplication History](#clear-deduplication-history)**: ล้างประวัติข้อมูลที่เคยใช้เปรียบเทียบ
 
 ### Remove Items Repeated Within Current Input
 
-When you set the "Operations" field to **Remove Items Repeated Within Current Input**, the Remove Duplicate node identifies and removes duplicate items in the current input. It can do this across all fields, or within a subset of fields.
+ถ้าตั้งค่า "Operations" เป็น **Remove Items Repeated Within Current Input** Remove Duplicate node จะหาข้อมูลซ้ำใน input เดียวกัน สามารถเลือกเปรียบเทียบทุก field หรือเฉพาะบาง field ก็ได้
 
 #### Remove Items Repeated Within Current Input parameters
 
-When using the **Remove Items Repeated Within Current Input** operation, the following parameter is available:
+เมื่อใช้ operation นี้ จะมี parameter ให้เลือกดังนี้:
 
-* **Compare**: Select which fields of the input data n8n should compare to check if they're the same. The following options are available:
-	* **All Fields**: Compares all fields of the input data.
-	* **All Fields Except**: Enter which input data fields n8n should exclude from the comparison. You can provide multiple values separated by commas.
-	* **Selected Fields**: Enter which input data fields n8n should include in the comparison. You can provide multiple values separated by commas.
+* **Compare**: เลือกว่าจะเปรียบเทียบ field ไหนบ้างเพื่อหาข้อมูลซ้ำ มีตัวเลือกดังนี้:
+	* **All Fields**: เปรียบเทียบทุก field
+	* **All Fields Except**: ระบุ field ที่ไม่ต้องการเปรียบเทียบ (ใส่หลายค่าคั่นด้วย comma)
+	* **Selected Fields**: ระบุ field ที่ต้องการเปรียบเทียบ (ใส่หลายค่าคั่นด้วย comma)
 
 #### Remove Items Repeated Within Current Input options
 
-If you choose **All Fields Except** or **Selected Fields** as your compare type, you can add these options:
+ถ้าเลือก **All Fields Except** หรือ **Selected Fields** จะมี option เพิ่มเติม:
 
-* **Disable Dot Notation**: Set whether to use dot notation to reference child fields in the format `parent.child` (turned off) or not (turn on).
-* **Remove Other Fields**: Set whether to remove any fields that aren't used in the comparison (turned on) or not (turned off).
+* **Disable Dot Notation**: เลือกว่าจะใช้ dot notation อ้างอิง child field แบบ `parent.child` หรือไม่ (ปิด/เปิด)
+* **Remove Other Fields**: เลือกว่าจะลบ field อื่นที่ไม่ได้ใช้เปรียบเทียบออกหรือไม่ (เปิด/ปิด)
 
 ### Remove Items Processed in Previous Executions
 
-When you set the "Operation" field to **Remove Items Processed in Previous Executions**, the Remove Duplicate node compares items in the current input to items from previous executions.
+ถ้าตั้งค่า "Operation" เป็น **Remove Items Processed in Previous Executions** Remove Duplicate node จะเปรียบเทียบ input กับข้อมูลจาก execution ก่อนหน้า
 
 #### Remove Items Processed in Previous Executions parameters
 
-When using the **Remove Items Processed in Previous Executions** operation, the following parameters are available:
+เมื่อใช้ operation นี้ จะมี parameter ให้เลือกดังนี้:
 
-* **Keep Items Where**: Select how n8n decides which items to keep. The following options are available:
-	* **Value Is New**: n8n removes items if their value matches items from earlier executions.
-	* **Value Is Higher than Any Previous Value**: n8n removes items if the current value isn't higher than previous values.
-	* **Value Is a Date Later than Any Previous Date**: n8n removes date items if the current date isn't later than previous dates.
+* **Keep Items Where**: เลือกวิธีที่ n8n จะตัดสินใจเก็บข้อมูล มีตัวเลือกดังนี้:
+	* **Value Is New**: ลบข้อมูลถ้าค่าตรงกับข้อมูลจาก execution ก่อนหน้า
+	* **Value Is Higher than Any Previous Value**: ลบข้อมูลถ้าค่าไม่มากกว่าค่าก่อนหน้า
+	* **Value Is a Date Later than Any Previous Date**: ลบข้อมูลถ้าวันที่ไม่ใหม่กว่าก่อนหน้า
 
-* **Value to Dedupe On**: The input field or fields to compare. The option you select for the **Keep Items Where** parameter determines the exact format you need:
-	* When using **Value Is New**, this must be an input field or combination of fields with a unique ID.
-	* When using **Value Is Higher than Any Previous Value**, this must be an input field or combination of fields that has an incremental value.
-	* When using **Value Is a Date Later than Any Previous Date**, this must be an input field that has a date value in ISO format.
+* **Value to Dedupe On**: ระบุ field ที่จะใช้เปรียบเทียบ ขึ้นกับ **Keep Items Where** ที่เลือก:
+	* ถ้าใช้ **Value Is New** ต้องเป็น field หรือ combination ที่เป็น unique ID
+	* ถ้าใช้ **Value Is Higher than Any Previous Value** ต้องเป็น field หรือ combination ที่มีค่าเพิ่มขึ้นได้
+	* ถ้าใช้ **Value Is a Date Later than Any Previous Date** ต้องเป็น field ที่เป็นวันที่ในรูปแบบ ISO
 
 #### Remove Items Processed in Previous Executions options
 
-When using the **Remove Items Processed in Previous Executions** operation, the following option is available:
+เมื่อใช้ operation นี้ จะมี option ให้เลือกดังนี้:
 
-* **Scope**: Sets how n8n stores and uses the deduplication data for comparisons. The following options are available:
-	* **Node**: (default) Stores the data for this node independently from other Remove Duplicates instances in the workflow. When you use this scope, you can [clear the duplication history](#clear-deduplication-history) for this node instance without affecting other nodes.
-	* **Workflow**: Stores the duplication data at the workflow level. This shares duplication data with any other Remove Duplicate nodes set to use "workflow" scope.  n8n will still manage the duplication data for other Remove Duplicate nodes set to "node" scope independently.
+* **Scope**: เลือกวิธีที่ n8n จะเก็บและใช้ข้อมูล dedupe มีตัวเลือกดังนี้:
+	* **Node**: (default) เก็บข้อมูลเฉพาะ node นี้ ไม่เกี่ยวกับ Remove Duplicates node อื่นใน workflow เดียวกัน ถ้าใช้ scope นี้ สามารถ [clear the duplication history](#clear-deduplication-history) เฉพาะ node นี้ได้โดยไม่กระทบ node อื่น
+	* **Workflow**: เก็บข้อมูล dedupe ระดับ workflow แชร์กับ Remove Duplicate node อื่นที่ใช้ workflow scope node ที่ใช้ node scope จะไม่เกี่ยวข้อง
 
-When you select **Value Is New** as your **Keep Items Where** choice, this option is also available:
+ถ้าเลือก **Value Is New** ใน **Keep Items Where** จะมี option เพิ่มเติม:
 
-* **History Size**: The number of items for n8n to store to track duplicates across executions. The value of the **Scope** option determines whether this history size is specific to this individual Remove Duplicate node instance or shared with other instances in the workflow. By default, n8n stores 10,000 items.
+* **History Size**: จำนวนข้อมูลที่ n8n จะเก็บไว้เพื่อ track duplicate ข้าม execution ขึ้นกับ **Scope** ว่าเก็บเฉพาะ node หรือทั้ง workflow ค่า default คือ 10,000 รายการ
 
 ### Clear Deduplication History
 
-When you set the "Operation" field to **Clear Deduplication History**, the Remove Duplicates node manages and clears the stored items from previous executions. This operation doesn't affect any items in the current input. Instead, it manages the database of items that the "Remove Items Processed in Previous Executions" operation uses.
+ถ้าตั้งค่า "Operation" เป็น **Clear Deduplication History** Remove Duplicates node จะจัดการและล้างข้อมูลที่เก็บไว้จาก execution ก่อนหน้า operation นี้จะไม่กระทบข้อมูล input ปัจจุบัน แต่จะล้าง database ที่ operation "Remove Items Processed in Previous Executions" ใช้เปรียบเทียบ
 
 #### Clear Deduplication History parameters
 
-When using the **Clear Deduplication History** operation, the following parameter is available:
+เมื่อใช้ operation นี้ จะมี parameter ให้เลือกดังนี้:
 
-* **Mode**: How you want to manage the key / value items stored in the database. The following option is available:
-	* **Clean Database**: Deletes all duplication data stored in the database. This resets the duplication database to its original state.
+* **Mode**: เลือกวิธีจัดการข้อมูล key/value ที่เก็บไว้ใน database มีตัวเลือกดังนี้:
+	* **Clean Database**: ลบข้อมูล dedupe ทั้งหมดใน database รีเซ็ต database กลับสู่สถานะเริ่มต้น
 
 #### Clear Deduplication History options
 
-When using the **Clear Deduplication History** operation, the following option is available:
+เมื่อใช้ operation นี้ จะมี option ให้เลือกดังนี้:
 
-* **Scope**: Sets the scope n8n uses when managing the duplication database.
-	* **Node**: (default) Manages the duplication database specific to this Remove Duplicates node instance.
-	* **Workflow**: Manages the duplication database shared by all Remove Duplicate node instances that use workflow scope.
+* **Scope**: เลือก scope ที่ n8n จะใช้จัดการ database dedupe
+	* **Node**: (default) จัดการ database เฉพาะ Remove Duplicates node นี้
+	* **Workflow**: จัดการ database ที่แชร์กับ Remove Duplicate node อื่นที่ใช้ workflow scope
 
 ## Templates and examples
 
-For templates using the Remove Duplicates node and examples of how to use it, refer to [Templates and examples](/integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/templates-and-examples.md).
+สำหรับ template และตัวอย่างการใช้งาน Remove Duplicates node ดูได้ที่ [Templates and examples](/integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/templates-and-examples.md)
 
 ## Related resources
 

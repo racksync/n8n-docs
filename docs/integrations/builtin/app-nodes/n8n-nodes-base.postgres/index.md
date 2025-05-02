@@ -8,12 +8,12 @@ priority: critical
 
 # Postgres node
 
-Use the Postgres node to automate work in Postgres, and integrate Postgres with other applications. n8n has built-in support for a wide range of Postgres features, including executing queries, as well as inserting and updating rows in a database. 
+ใช้ Postgres node เพื่ออัตโนมัติการทำงานใน Postgres และผสาน Postgres กับแอปพลิเคชันอื่นๆ n8n มี built-in support สำหรับฟีเจอร์ Postgres หลากหลาย เช่น การ execute queries รวมถึงการ insert และ update แถวในฐานข้อมูล
 
-On this page, you'll find a list of operations the Postgres node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายชื่อ operations ที่ Postgres node รองรับและลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [Postgres credentials](/integrations/builtin/credentials/postgres.md) for guidance on setting up authentication. 
+Refer to [Postgres credentials](/integrations/builtin/credentials/postgres.md) for guidance on setting up authentication.
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

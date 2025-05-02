@@ -8,12 +8,12 @@ priority: medium
 
 # DHL node
 
-Use the DHL node to automate work in DHL, and integrate DHL with other applications. n8n has built-in support for a wide range of DHL features, including tracking shipment. 
+ใช้ DHL node เพื่อทำงานอัตโนมัติใน DHL และเชื่อมต่อ DHL กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ DHL หลายอย่าง เช่น การติดตาม shipment
 
-On this page, you'll find a list of operations the DHL node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ DHL node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [DHL credentials](/integrations/builtin/credentials/dhl.md) for guidance on setting up authentication. 
+โปรดดู [DHL credentials](/integrations/builtin/credentials/dhl.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

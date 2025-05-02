@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Google Cloud Natural Language node
 
-Use the Google Cloud Natural Language node to automate work in Google Cloud Natural Language, and integrate Google Cloud Natural Language with other applications. n8n has built-in support for a wide range of Google Cloud Natural Language features, including analyzing documents.
+ใช้ Google Cloud Natural Language node เพื่อทำงานอัตโนมัติใน Google Cloud Natural Language และเชื่อมต่อ Google Cloud Natural Language กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Google Cloud Natural Language หลายอย่าง เช่น การวิเคราะห์ documents
 
-On this page, you'll find a list of operations the Google Cloud Natural Language node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Google Cloud Natural Language node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Google Cloud Natural Language credentials](/integrations/builtin/credentials/google/index.md) for guidance on setting up authentication. 
+โปรดดู [Google Cloud Natural Language credentials](/integrations/builtin/credentials/google/index.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations

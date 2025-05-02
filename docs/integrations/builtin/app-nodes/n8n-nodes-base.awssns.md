@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # AWS SNS node
 
-Use the AWS SNS node to automate work in AWS SNS, and integrate AWS SNS with other applications. n8n has built-in support for a wide range of AWS SNS features, including publishing messages.
+ใช้ AWS SNS node เพื่อทำงานอัตโนมัติใน AWS SNS และผสานรวม AWS SNS กับแอปพลิเคชันอื่นๆ n8n มีการรองรับฟีเจอร์หลากหลายของ AWS SNS ในตัว รวมถึงการเผยแพร่ข้อความ (publishing messages)
 
-On this page, you'll find a list of operations the AWS SNS node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ AWS SNS node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [AWS SNS credentials](/integrations/builtin/credentials/aws.md) for guidance on setting up authentication.
+อ้างอิง [AWS SNS credentials](/integrations/builtin/credentials/aws.md) สำหรับคำแนะนำในการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations

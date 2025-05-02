@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # APITemplate.io node
 
-Use the APITemplate.io node to automate work in APITemplate.io, and integrate APITemplate.io with other applications. n8n has built-in support for a wide range of APITemplate.io features, including getting and creating accounts and PDF.
+ใช้ APITemplate.io node เพื่อทำงานอัตโนมัติใน APITemplate.io และผสานรวม APITemplate.io กับแอปพลิเคชันอื่นๆ n8n มีการรองรับฟีเจอร์หลากหลายของ APITemplate.io ในตัว รวมถึงการดึงข้อมูลและการสร้าง accounts และ PDF
 
-On this page, you'll find a list of operations the APITemplate.io node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ APITemplate.io node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [APITemplate.io credentials](/integrations/builtin/credentials/apitemplateio.md) for guidance on setting up authentication. 
+อ้างอิง [APITemplate.io credentials](/integrations/builtin/credentials/apitemplateio.md) สำหรับคำแนะนำในการตั้งค่าการยืนยันตัวตน
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

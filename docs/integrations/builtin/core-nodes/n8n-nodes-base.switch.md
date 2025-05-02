@@ -8,46 +8,46 @@ priority: critical
 
 # Switch
 
-Use the Switch node to route a workflow conditionally based on comparison operations. It's similar to the [IF](/integrations/builtin/core-nodes/n8n-nodes-base.if.md) node, but supports multiple output routes.
+ใช้ Switch node เพื่อกำหนดเส้นทาง workflow ตามเงื่อนไขที่ตั้งไว้ คล้ายกับ [IF](/integrations/builtin/core-nodes/n8n-nodes-base.if.md) node แต่รองรับหลายเส้นทาง output
 
 ## Node parameters
 
-Select the **Mode** the node should use:
+เลือก **Mode** ที่ node จะใช้:
 
-* **Rules**: Select this mode to build a matching rule for each output.
-* **Expression**: Select this mode to write an expression to return the output index programmatically.
+* **Rules**: เลือก mode นี้เพื่อสร้าง rule สำหรับแต่ละ output
+* **Expression**: เลือก mode นี้เพื่อเขียน expression เพื่อคืนค่า output index แบบโปรแกรม
 
-Node configuration depends on the **Mode** you select.
+การตั้งค่า node จะขึ้นอยู่กับ **Mode** ที่เลือก
 
 ### Rules
 
-To configure the node with this operation, use these parameters:
+ตั้งค่า node ด้วย operation นี้โดยใช้ parameters เหล่านี้:
 
-* Create **Routing Rules** to define comparison conditions.
-    * Use the data type dropdown to select the data type and comparison operation type for your condition. For example, to create a rules for dates after a particular date, select **Date & Time > is after**.
-    * The fields and values to enter into the condition change based on the data type and comparison you select. Refer to [Available data type comparisons](#available-data-type-comparisons) for a full list of all comparisons by data type.
-* **Rename Output**: Turn this control on to rename the output field to put matching data into. Enter your desired **Output Name**.
+* สร้าง **Routing Rules** เพื่อกำหนดเงื่อนไขเปรียบเทียบ
+    * ใช้ dropdown data type เพื่อเลือกชนิดข้อมูลและประเภทการเปรียบเทียบ เช่น ถ้าอยากสร้าง rule สำหรับวันที่หลังจากวันที่ที่กำหนด ให้เลือก **Date & Time > is after**
+    * field และค่าที่ต้องใส่ในเงื่อนไขจะเปลี่ยนไปตาม data type และการเปรียบเทียบที่เลือก ดูรายละเอียดที่ [Available data type comparisons](#available-data-type-comparisons) สำหรับรายการเปรียบเทียบทั้งหมด
+* **Rename Output**: เปิด option นี้เพื่อเปลี่ยนชื่อ output field ที่จะใส่ข้อมูลที่ตรงกับเงื่อนไข ใส่ **Output Name** ที่ต้องการ
 
-Select **Add Routing Rule** to add more rules.
+เลือก **Add Routing Rule** เพื่อเพิ่ม rule เพิ่มเติม
 
 #### Rule options
 
-You can further configure the node with this operation using these **Options**:
+ตั้งค่าเพิ่มเติมได้ด้วย **Options** เหล่านี้:
 
-- **Fallback Output**: Choose how to route the workflow when an item doesn't match any of the rules or conditions.
-    - **None**: Ignore the item. This is the default behavior.
-    - **Extra Output**: Send items to an extra, separate output.
-    - **Output 0**: Send items to the same output as those matching the first rule.
-- **Ignore Case**: Set whether to ignore letter case when evaluating conditions (turned on) or enforce letter case (turned off).
-- **Less Strict Type Validation**: Set whether you want n8n to attempt to convert value types based on the operator you choose (turned on) or not (turned off).
-- **Send data to all matching outputs**: Set whether to send data to all outputs meeting conditions (turned on) or whether to send the data to the first output matching the conditions (turned off).
+- **Fallback Output**: เลือกว่าจะให้ workflow ไปทางไหนถ้า item ไม่ตรงกับ rule หรือเงื่อนไขใดๆ
+    - **None**: ข้าม item นั้น (default)
+    - **Extra Output**: ส่ง item ไป output พิเศษแยกต่างหาก
+    - **Output 0**: ส่ง item ไป output เดียวกับที่ตรงกับ rule แรก
+- **Ignore Case**: ตั้งค่าว่าจะไม่สนใจตัวพิมพ์เล็ก/ใหญ่ตอนเช็คเงื่อนไข (เปิด = ไม่สนใจ, ปิด = สนใจ)
+- **Less Strict Type Validation**: ตั้งค่าว่าให้ n8n พยายามแปลง type ของค่าตาม operator ที่เลือก (เปิด = แปลง, ปิด = ไม่แปลง)
+- **Send data to all matching outputs**: ตั้งค่าว่าจะส่งข้อมูลไปทุก output ที่ตรงเงื่อนไข (เปิด = ส่งทุกอัน, ปิด = ส่งเฉพาะอันแรกที่ตรง)
 
 ### Expression
 
-To configure the node with this operation, use these parameters:
+ตั้งค่า node ด้วย operation นี้โดยใช้ parameters เหล่านี้:
 
-- **Number of Outputs**: Set how many outputs the node should have.
-- **Output Index**: Create an expression to calculate which input item should be routed to which output. The expression must return a number.
+- **Number of Outputs**: กำหนดจำนวน output ที่ node จะมี
+- **Output Index**: สร้าง expression เพื่อคำนวณว่า input item ไหนควรไป output ไหน expression ต้องคืนค่าเป็นตัวเลข
 
 ## Templates and examples
 
@@ -56,7 +56,7 @@ To configure the node with this operation, use these parameters:
 
 ## Related resources
 
-Refer to [Splitting with conditionals](/flow-logic/splitting.md) for more information on using conditionals to create complex logic in n8n.
+ดู [Splitting with conditionals](/flow-logic/splitting.md) สำหรับข้อมูลเพิ่มเติมเกี่ยวกับการใช้เงื่อนไขสร้าง logic ซับซ้อนใน n8n
 
 --8<-- "_snippets/integrations/builtin/core-nodes/data-types.md"
 

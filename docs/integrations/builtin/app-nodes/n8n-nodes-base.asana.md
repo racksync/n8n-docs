@@ -8,16 +8,16 @@ priority: medium
 
 # Asana node
 
-Use the Asana node to automate work in Asana, and integrate Asana with other applications. n8n has built-in support for a wide range of Asana features, including creating, updating, deleting, and getting users, tasks, projects, and subtasks.
+ใช้ Asana node เพื่อทำงานอัตโนมัติใน Asana และผสานรวม Asana กับแอปพลิเคชันอื่นๆ n8n มีการรองรับฟีเจอร์หลากหลายของ Asana ในตัว รวมถึงการสร้าง, การอัปเดต, การลบ, และการดึงข้อมูล users, tasks, projects, และ subtasks
 
-On this page, you'll find a list of operations the Asana node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Asana node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [Asana credentials](/integrations/builtin/credentials/asana.md) for guidance on setting up authentication.
+อ้างอิง [Asana credentials](/integrations/builtin/credentials/asana.md) สำหรับคำแนะนำในการตั้งค่าการยืนยันตัวตน
 ///
 
 /// note | Update to 1.22.2 or above
-Due to changes in Asana's API, some operations in this node stopped working on 17th January 2023. Upgrade to n8n 1.22.2 or above.
+เนื่องจากการเปลี่ยนแปลงใน API ของ Asana บาง operations ใน node นี้หยุดทำงานเมื่อวันที่ 17 มกราคม 2023 โปรดอัปเกรดเป็น n8n 1.22.2 หรือสูงกว่า
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

@@ -8,95 +8,95 @@ priority: high
 
 # Gmail node Draft Operations
 
-Use the Draft operations to create, delete, or get a draft or list drafts in Gmail. Refer to the [Gmail node](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/index.md) for more information on the Gmail node itself.
+ใช้ Draft operations เพื่อสร้าง, ลบ, หรือดึงข้อมูล draft เดียว หรือแสดงรายการ draft ใน Gmail อ้างอิง [Gmail node](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/index.md) สำหรับข้อมูลเพิ่มเติมเกี่ยวกับ Gmail node
 
 ## Create a draft
 
-Use this operation to create a new draft.
+ใช้ operation นี้เพื่อสร้าง draft ใหม่
 
-Enter these parameters:
+ป้อนพารามิเตอร์เหล่านี้:
 
-* Select the **Credential to connect with** or create a new one.
-* **Resource**: Select **Draft**.
-* **Operation**: Select **Create**.
-* **Subject**: Enter the subject line.
-* Select the **Email Type**. Choose from **Text** or **HTML**.
-* **Message**: Enter the email message body.
+*   เลือก **Credential to connect with** หรือสร้างใหม่
+*   **Resource**: เลือก **Draft**
+*   **Operation**: เลือก **Create**
+*   **Subject**: ป้อนหัวเรื่อง
+*   เลือก **Email Type** เลือกจาก **Text** หรือ **HTML**
+*   **Message**: ป้อนเนื้อหาของอีเมล
 
 ### Create draft options
 
-Use these options to further refine the node's behavior:
+ใช้ options เหล่านี้เพื่อปรับแต่งการทำงานของ node เพิ่มเติม:
 
-* **Attachments**: Select **Add Attachment** to add an attachment. Enter the **Attachment Field Name (in Input)** to identify which field from the input node contains the attachment.
-    * For multiple properties, enter a comma-separated list.
-* **BCC**: Enter one or more email addresses for blind copy recipients. Separate multiple email addresses with a comma, for example `jay@gatsby.com, jon@smith.com`.
-* **CC**: Enter one or more email addresses for carbon copy recipients. Separate multiple email addresses with a comma, for example `jay@gatsby.com, jon@smith.com`.
-* **From Alias Name or ID**: Select an alias to send the draft from. This field populates based on the credential you selected in the parameters.
-* **Send Replies To**: Enter an email address to set as the reply to address.
-* **Thread ID**: If you want this draft attached to a thread, enter the ID for that thread.
-* **To Email**: Enter one or more email addresses for recipients. Separate multiple email addresses with a comma, for example `jay@gatsby.com, jon@smith.com`.
+*   **Attachments**: เลือก **Add Attachment** เพื่อเพิ่มไฟล์แนบ ป้อน **Attachment Field Name (in Input)** เพื่อระบุว่า field ใดจาก input node ที่มีไฟล์แนบ
+    *   สำหรับหลาย properties ให้ป้อนรายการที่คั่นด้วยจุลภาค
+*   **BCC**: ป้อนที่อยู่อีเมลอย่างน้อยหนึ่งรายการสำหรับผู้รับสำเนาลับ แยกหลายที่อยู่อีเมลด้วยจุลภาค เช่น `jay@gatsby.com, jon@smith.com`
+*   **CC**: ป้อนที่อยู่อีเมลอย่างน้อยหนึ่งรายการสำหรับผู้รับสำเนา แยกหลายที่อยู่อีเมลด้วยจุลภาค เช่น `jay@gatsby.com, jon@smith.com`
+*   **From Alias Name or ID**: เลือก alias เพื่อส่ง draft จาก รายการใน field นี้จะขึ้นอยู่กับ credential ที่คุณเลือกในพารามิเตอร์
+*   **Send Replies To**: ป้อนที่อยู่อีเมลเพื่อตั้งเป็นที่อยู่สำหรับตอบกลับ
+*   **Thread ID**: หากคุณต้องการให้ draft นี้แนบไปกับ thread ให้ป้อน ID ของ thread นั้น
+*   **To Email**: ป้อนที่อยู่อีเมลอย่างน้อยหนึ่งรายการสำหรับผู้รับ แยกหลายที่อยู่อีเมลด้วยจุลภาค เช่น `jay@gatsby.com, jon@smith.com`
 
-Refer to the [Gmail API Method: users.drafts.create](https://developers.google.com/gmail/api/reference/rest/v1/users.drafts/create){:target=_blank .external-link} documentation for more information.
+อ้างอิงเอกสาร [Gmail API Method: users.drafts.create](https://developers.google.com/gmail/api/reference/rest/v1/users.drafts/create){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 
 ## Delete a draft
 
-Use this operation to delete a draft.
+ใช้ operation นี้เพื่อลบ draft
 
-Enter these parameters:
+ป้อนพารามิเตอร์เหล่านี้:
 
-* Select the **Credential to connect with** or create a new one.
-* **Resource**: Select **Draft**.
-* **Operation**: Select **Delete**.
-* **Draft ID**: Enter the ID of the draft you wish to delete.
+*   เลือก **Credential to connect with** หรือสร้างใหม่
+*   **Resource**: เลือก **Draft**
+*   **Operation**: เลือก **Delete**
+*   **Draft ID**: ป้อน ID ของ draft ที่คุณต้องการลบ
 
-Refer to the [Gmail API Method: users.drafts.delete](https://developers.google.com/gmail/api/reference/rest/v1/users.drafts/delete){:target=_blank .external-link} documentation for more information.
+อ้างอิงเอกสาร [Gmail API Method: users.drafts.delete](https://developers.google.com/gmail/api/reference/rest/v1/users.drafts/delete){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 
 ## Get a draft
 
-Use this operation to get a single draft.
+ใช้ operation นี้เพื่อดึงข้อมูล draft เดียว
 
-Enter these parameters:
+ป้อนพารามิเตอร์เหล่านี้:
 
-* Select the **Credential to connect with** or create a new one.
-* **Resource**: Select **Draft**.
-* **Operation**: Select **Get**.
-* **Draft ID**: Enter the ID of the draft you wish to get information about.
+*   เลือก **Credential to connect with** หรือสร้างใหม่
+*   **Resource**: เลือก **Draft**
+*   **Operation**: เลือก **Get**
+*   **Draft ID**: ป้อน ID ของ draft ที่คุณต้องการดึงข้อมูล
 
 ### Get draft options
 
-Use these options to further refine the node's behavior:
+ใช้ options เหล่านี้เพื่อปรับแต่งการทำงานของ node เพิ่มเติม:
 
-* **Attachment Prefix**: Enter a prefix for the name of the binary property the node should write any attachments to. n8n adds an index starting with `0` to the prefix. For example, if you enter `attachment_' as the prefix, the first attachment saves to 'attachment_0'.
-* **Download Attachments**: Select whether the node should download the draft's attachments (turned on) or not (turned off).
+*   **Attachment Prefix**: ป้อน prefix สำหรับชื่อของ binary property ที่ node ควรเขียนไฟล์แนบใดๆ ลงไป n8n จะเพิ่ม index ที่เริ่มต้นด้วย `0` ต่อท้าย prefix ตัวอย่างเช่น หากคุณป้อน `attachment_` เป็น prefix ไฟล์แนบแรกจะบันทึกเป็น 'attachment_0'
+*   **Download Attachments**: เลือกว่าจะให้ node ดาวน์โหลดไฟล์แนบของ draft (เปิด) หรือไม่ (ปิด)
 
-Refer to the [Gmail API Method: users.drafts.get](https://developers.google.com/gmail/api/reference/rest/v1/users.drafts/get){:target=_blank .external-link} documentation for more information.
+อ้างอิงเอกสาร [Gmail API Method: users.drafts.get](https://developers.google.com/gmail/api/reference/rest/v1/users.drafts/get){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 
 <!-- vale off -->
 ## Get Many drafts
 <!-- vale on -->
 
-Use this operation to get two or more drafts.
+ใช้ operation นี้เพื่อดึงข้อมูลตั้งแต่สอง draft ขึ้นไป
 
-Enter these parameters:
+ป้อนพารามิเตอร์เหล่านี้:
 
-* Select the **Credential to connect with** or create a new one.
-* **Resource**: Select **Draft**.
-* **Operation**: Select **Get Many**.
-* **Return All**: Choose whether the node returns all drafts (turned on) or only up to a set limit (turned off).
-* **Limit**: Enter the maximum number of drafts to return. Only used if you've turned off **Return All**.
+*   เลือก **Credential to connect with** หรือสร้างใหม่
+*   **Resource**: เลือก **Draft**
+*   **Operation**: เลือก **Get Many**
+*   **Return All**: เลือกว่าจะให้ node คืนค่า draft ทั้งหมด (เปิด) หรือจำกัดจำนวน (ปิด)
+*   **Limit**: ป้อนจำนวน draft สูงสุดที่จะคืนค่า ใช้เฉพาะเมื่อคุณปิด **Return All**
 
 <!-- vale off -->
 ### Get Many drafts options
 <!-- vale on -->
 
-Use these options to further refine the node's behavior:
+ใช้ options เหล่านี้เพื่อปรับแต่งการทำงานของ node เพิ่มเติม:
 
-* **Attachment Prefix**: Enter a prefix for the name of the binary property the node should write any attachments to. n8n adds an index starting with `0` to the prefix. For example, if you enter `attachment_' as the prefix, the first attachment saves to 'attachment_0'.
-* **Download Attachments**: Select whether the node should download the draft's attachments (turned on) or not (turned off).
-* **Include Spam and Trash**: Select whether the node should get drafts in the Spam and Trash folders (turned on) or not (turned off).
+*   **Attachment Prefix**: ป้อน prefix สำหรับชื่อของ binary property ที่ node ควรเขียนไฟล์แนบใดๆ ลงไป n8n จะเพิ่ม index ที่เริ่มต้นด้วย `0` ต่อท้าย prefix ตัวอย่างเช่น หากคุณป้อน `attachment_` เป็น prefix ไฟล์แนบแรกจะบันทึกเป็น 'attachment_0'
+*   **Download Attachments**: เลือกว่าจะให้ node ดาวน์โหลดไฟล์แนบของ draft (เปิด) หรือไม่ (ปิด)
+*   **Include Spam and Trash**: เลือกว่าจะให้ node ดึง draft ในโฟลเดอร์ Spam และ Trash (เปิด) หรือไม่ (ปิด)
 
-Refer to the [Gmail API Method: users.drafts.list](https://developers.google.com/gmail/api/reference/rest/v1/users.drafts/list){:target=_blank .external-link} documentation for more information.
+อ้างอิงเอกสาร [Gmail API Method: users.drafts.list](https://developers.google.com/gmail/api/reference/rest/v1/users.drafts/list){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 
 ## Common issues
 
-For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/common-issues.md).
+สำหรับข้อผิดพลาดหรือปัญหาทั่วไปและขั้นตอนการแก้ไขที่แนะนำ โปรดอ้างอิง [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/common-issues.md)

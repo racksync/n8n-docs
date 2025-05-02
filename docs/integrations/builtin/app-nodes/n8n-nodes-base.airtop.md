@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Airtop node
 
-Use the Airtop node to automate work in Airtop, and integrate Airtop with other applications. n8n has built-in support for a wide range of Airtop features, enabling you to control a cloud-based web browser for tasks like querying, scraping, and interacting with web pages.
+ใช้ Airtop node เพื่อทำงานอัตโนมัติใน Airtop และผสานรวม Airtop กับแอปพลิเคชันอื่นๆ n8n มีการรองรับฟีเจอร์หลากหลายของ Airtop ในตัว ช่วยให้คุณสามารถควบคุม web browser บนคลาวด์สำหรับงานต่างๆ เช่น การ query, การ scrape, และการโต้ตอบกับหน้าเว็บ
 
-On this page, you'll find a list of operations the Airtop node supports, and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Airtop node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 ///  note  | Credentials
-Refer to [Airtop credentials](/integrations/builtin/credentials/airtop.md) for guidance on setting up authentication.
+อ้างอิง [Airtop credentials](/integrations/builtin/credentials/airtop.md) สำหรับคำแนะนำในการตั้งค่าการยืนยันตัวตน
 ///
 
 
@@ -45,32 +45,32 @@ Refer to [Airtop credentials](/integrations/builtin/credentials/airtop.md) for g
 
 ## Related resources
 
-Refer to [Airtop's documentation](https://docs.airtop.ai/api-reference/airtop-api) for more information about the service.
+อ้างอิง [เอกสารของ Airtop](https://docs.airtop.ai/api-reference/airtop-api) สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 
-Contact [Airtop's Support](https://docs.airtop.ai/guides/misc/support) for assistance or to create a feature request.
+ติดต่อ [ฝ่ายสนับสนุนของ Airtop](https://docs.airtop.ai/guides/misc/support) เพื่อขอความช่วยเหลือหรือสร้างคำขอฟีเจอร์
 
 ## Node reference
 
 ### Create a session and window
 
-Create an Airtop browser session to get a **Session ID**, then use it to create a new browser window. After this, you can use any extraction or interaction operation.
+สร้าง Airtop browser session เพื่อรับ **Session ID** จากนั้นใช้ ID นี้เพื่อสร้างหน้าต่างเบราว์เซอร์ใหม่ หลังจากนี้ คุณสามารถใช้ operation การดึงข้อมูล (extraction) หรือการโต้ตอบ (interaction) ใดๆ ก็ได้
 
 ### Extract content
 
-Extract content from a web browser using these operations:
+ดึงเนื้อหาจาก web browser โดยใช้ operations เหล่านี้:
 
-- **Query page**: Extract information from the current window.
-- **Query page with pagination**: Extract information from pages with pagination or infinite scrolling.
-- **Smart scrape page**: Get the window content as markdown.
+- **Query page**: ดึงข้อมูลจากหน้าต่างปัจจุบัน
+- **Query page with pagination**: ดึงข้อมูลจากหน้าที่มี pagination หรือ infinite scrolling
+- **Smart scrape page**: รับเนื้อหาของหน้าต่างเป็น markdown
 
-Get JSON responses by using the **JSON Output Schema** parameter in query operations.
+รับการตอบกลับเป็น JSON โดยใช้พารามิเตอร์ **JSON Output Schema** ใน query operations
 
 ### Interacting with pages
 
-Click, hover, or type on elements by describing the element you want to interact with.
+คลิก, วางเมาส์เหนือ (hover), หรือพิมพ์บน elements โดยอธิบาย element ที่คุณต้องการโต้ตอบด้วย
 
 ### Terminate a session
 
-End your session to save resources. Sessions are automatically terminated based on the **Idle Timeout** set in the **Create Session** operation or can be manually terminated using the **Terminate Session** operation.
+สิ้นสุด session ของคุณเพื่อประหยัดทรัพยากร Sessions จะถูกยุติโดยอัตโนมัติตาม **Idle Timeout** ที่ตั้งค่าไว้ใน operation **Create Session** หรือสามารถยุติด้วยตนเองโดยใช้ operation **Terminate Session**

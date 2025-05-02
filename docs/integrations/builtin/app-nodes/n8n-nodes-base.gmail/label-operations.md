@@ -8,73 +8,73 @@ priority: high
 
 # Gmail node Label Operations
 
-Use the Label operations to create, delete, or get a label or list labels in Gmail. Refer to the [Gmail node](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/index.md) for more information on the Gmail node itself.
+ใช้ Label operations เพื่อสร้าง, ลบ, หรือดึงข้อมูล label เดียว หรือแสดงรายการ label ใน Gmail อ้างอิง [Gmail node](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/index.md) สำหรับข้อมูลเพิ่มเติมเกี่ยวกับ Gmail node
 
 ## Create a label
 
-Use this operation to create a new label.
+ใช้ operation นี้เพื่อสร้าง label ใหม่
 
-Enter these parameters:
+ป้อนพารามิเตอร์เหล่านี้:
 
-* Select the **Credential to connect with** or create a new one.
-* **Resource**: Select **Label**.
-* **Operation**: Select **Create**.
-* **Name**: Enter a display name for the label.
+*   เลือก **Credential to connect with** หรือสร้างใหม่
+*   **Resource**: เลือก **Label**
+*   **Operation**: เลือก **Create**
+*   **Name**: ป้อนชื่อที่แสดงสำหรับ label
 
 ### Create label options
 
-Use these options to further refine the node's behavior:
+ใช้ options เหล่านี้เพื่อปรับแต่งการทำงานของ node เพิ่มเติม:
 
-* **Label List Visibility**: Sets the visibility of the label in the label list in the Gmail web interface. Choose from:
-    * **Hide**: Don't show the label in the label list.
-    * **Show** (default): Show the label in the label list.
-    * **Show if Unread**: Show the label if there are any unread messages with that label.
-* **Message List Visibility**: Sets the visibility of messages with this label in the message list in the Gmail web interface. Choose whether to **Show** or **Hide** messages with this label.
+*   **Label List Visibility**: ตั้งค่าการมองเห็นของ label ในรายการ label ในหน้าเว็บ Gmail เลือกจาก:
+    *   **Hide**: ไม่แสดง label ในรายการ label
+    *   **Show** (ค่าเริ่มต้น): แสดง label ในรายการ label
+    *   **Show if Unread**: แสดง label หากมีข้อความที่ยังไม่ได้อ่านที่มี label นั้น
+*   **Message List Visibility**: ตั้งค่าการมองเห็นของข้อความที่มี label นี้ในรายการข้อความในหน้าเว็บ Gmail เลือกว่าจะ **Show** หรือ **Hide** ข้อความที่มี label นี้
 
-Refer to the [Gmail API Method: users.labels.create](https://developers.google.com/gmail/api/reference/rest/v1/users.labels/create){:target=_blank .external-link} documentation for more information.
+อ้างอิงเอกสาร [Gmail API Method: users.labels.create](https://developers.google.com/gmail/api/reference/rest/v1/users.labels/create){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 
 ## Delete a label
 
-Use this operation to delete an existing label.
+ใช้ operation นี้เพื่อลบ label ที่มีอยู่
 
-Enter these parameters:
+ป้อนพารามิเตอร์เหล่านี้:
 
-* Select the **Credential to connect with** or create a new one.
-* **Resource**: Select **Label**.
-* **Operation**: Select **Delete**.
-* **Label ID**: Enter the ID of the label you want to delete.
+*   เลือก **Credential to connect with** หรือสร้างใหม่
+*   **Resource**: เลือก **Label**
+*   **Operation**: เลือก **Delete**
+*   **Label ID**: ป้อน ID ของ label ที่คุณต้องการลบ
 
-Refer to the [Gmail API Method: users.labels.delete](https://developers.google.com/gmail/api/reference/rest/v1/users.labels/delete){:target=_blank .external-link} documentation for more information.
+อ้างอิงเอกสาร [Gmail API Method: users.labels.delete](https://developers.google.com/gmail/api/reference/rest/v1/users.labels/delete){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 
 ## Get a label
 
-Use this operation to get an existing label.
+ใช้ operation นี้เพื่อดึงข้อมูล label ที่มีอยู่
 
-Enter these parameters:
+ป้อนพารามิเตอร์เหล่านี้:
 
-* Select the **Credential to connect with** or create a new one.
-* **Resource**: Select **Label**.
-* **Operation**: Select **Get**.
-* **Label ID**: Enter the ID of the label you want to get.
+*   เลือก **Credential to connect with** หรือสร้างใหม่
+*   **Resource**: เลือก **Label**
+*   **Operation**: เลือก **Get**
+*   **Label ID**: ป้อน ID ของ label ที่คุณต้องการดึงข้อมูล
 
-Refer to the [Gmail API Method: users.labels.get](https://developers.google.com/gmail/api/reference/rest/v1/users.labels/get){:target=_blank .external-link} documentation for more information.
+อ้างอิงเอกสาร [Gmail API Method: users.labels.get](https://developers.google.com/gmail/api/reference/rest/v1/users.labels/get){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 
 <!-- vale off -->
 ## Get Many labels
 <!-- vale on -->
 
-Use this operation to get two or more labels.
+ใช้ operation นี้เพื่อดึงข้อมูลตั้งแต่สอง label ขึ้นไป
 
-Enter these parameters:
+ป้อนพารามิเตอร์เหล่านี้:
 
-* Select the **Credential to connect with** or create a new one.
-* **Resource**: Select **Label**.
-* **Operation**: Select **Get Many**.
-* **Return All**: Choose whether the node returns all labels (turned on) or only up to a set limit (turned off).
-* **Limit**: Enter the maximum number of labels to return. Only used if you've turned off **Return All**.
+*   เลือก **Credential to connect with** หรือสร้างใหม่
+*   **Resource**: เลือก **Label**
+*   **Operation**: เลือก **Get Many**
+*   **Return All**: เลือกว่าจะให้ node คืนค่า label ทั้งหมด (เปิด) หรือจำกัดจำนวน (ปิด)
+*   **Limit**: ป้อนจำนวน label สูงสุดที่จะคืนค่า ใช้เฉพาะเมื่อคุณปิด **Return All**
 
-Refer to the [Gmail API Method: users.labels.list](https://developers.google.com/gmail/api/reference/rest/v1/users.labels/list){:target=_blank .external-link} documentation for more information.
+อ้างอิงเอกสาร [Gmail API Method: users.labels.list](https://developers.google.com/gmail/api/reference/rest/v1/users.labels/list){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 
 ## Common issues
 
-For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/common-issues.md).
+สำหรับข้อผิดพลาดหรือปัญหาทั่วไปและขั้นตอนการแก้ไขที่แนะนำ โปรดอ้างอิง [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/common-issues.md)

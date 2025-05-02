@@ -8,9 +8,9 @@ priority: critical
 
 # Telegram node
 
-Use the Telegram node to automate work in [Telegram](https://telegram.org/){:target=_blank .external-link} and integrate Telegram with other applications. n8n has built-in support for a wide range of Telegram features, including getting files as well as deleting and editing messages. 
+ใช้ Telegram node เพื่อทำงานอัตโนมัติกับ [Telegram](https://telegram.org/){:target=_blank .external-link} และเชื่อมต่อกับแอปอื่นๆ n8n รองรับฟีเจอร์ของ Telegram หลายอย่าง ตั้งแต่การดึงไฟล์ ไปจนถึงการลบหรือแก้ไขข้อความ
 
-On this page, you'll find a list of operations the Telegram node supports and links to more resources.
+บนหน้านี้จะมีรายการ operations ที่ Telegram node รองรับ พร้อมลิงก์ไปยังรายละเอียดเพิ่มเติม
 
 /// note | Credentials
 Refer to [Telegram credentials](/integrations/builtin/credentials/telegram.md) for guidance on setting up authentication. 

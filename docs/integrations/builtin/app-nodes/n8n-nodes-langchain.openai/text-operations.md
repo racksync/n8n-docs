@@ -8,57 +8,57 @@ priority: critical
 
 # OpenAI Text operations
 
-Use this operation to message a model or classify text for violations in OpenAI. Refer to [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/index.md) for more information on the OpenAI node itself.
+ใช้ operation นี้เพื่อส่งข้อความหรือ prompt ไปยัง OpenAI model และรับคำตอบกลับ. ดูข้อมูลเพิ่มเติมที่ [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/index.md).
 
 ## Message a Model
 
-Use this operation to send a message or prompt to an OpenAI model and receive a response.
+ใช้ operation นี้เพื่อส่งข้อความหรือ prompt ไปยัง OpenAI model และรับผลลัพธ์ตอบกลับ.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai.md).
-- **Resource**: Select **Text**.
-- **Operation**: Select **Message a Model**.
-- **Model**: Select the model you want to use. If you’re not sure which model to use, try `gpt-4o` if you need high intelligence or `gpt-4o-mini` if you need the fastest speed and lowest cost. Refer to [Models overview | OpenAI Platform](https://platform.openai.com/docs/models){:target=_blank .external-link} for more information. 
-- **Messages**: Enter a **Text** prompt and assign a **Role** that the model will use to generate responses. Refer to [Prompt engineering | OpenAI](https://platform.openai.com/docs/guides/prompt-engineering){:target=_blank .external-link} for more information on how to write a better prompt by using these roles. Choose from one of these roles: 
-    - **User**: Sends a message as a user and gets a response from the model. 
-    - **Assistant**: Tells the model to adopt a specific tone or personality. 
-    - **System**: By default, the system message is `"You are a helpful assistant"`. You can define instructions in the user message, but the instructions set in the system message are more effective. You can only set one system message per conversation. Use this to set the model's behavior or context for the next user message. 
-- **Simplify Output**: Turn on to return a simplified version of the response instead of the raw data. 
-- **Output Content as JSON**: Turn on to attempt to return the response in JSON format. Compatible with `GPT-4 Turbo` and all `GPT-3.5 Turbo` models newer than `gpt-3.5-turbo-1106`.
+- **Credential to connect with**: สร้างหรือเลือก [OpenAI credential](/integrations/builtin/credentials/openai.md) ที่มีอยู่แล้ว.
+- **Resource**: เลือก **Text**.
+- **Operation**: เลือก **Message a Model**.
+- **Model**: เลือก Model ที่ต้องการใช้. หากไม่แน่ใจ ให้ลองใช้ `gpt-4o` สำหรับความฉลาดสูง หรือ `gpt-4o-mini` สำหรับความเร็วและต้นทุนต่ำสุด. ดูรายละเอียดเพิ่มเติมได้ที่ [Models overview | OpenAI Platform](https://platform.openai.com/docs/models){:target=_blank .external-link}.
+- **Messages**: ระบุ prompt แบบ **Text** และกำหนด **Role** ที่ model ควรใช้ในการตอบกลับ. ดูรายละเอียดเพิ่มเติมได้ที่ [Prompt engineering | OpenAI](https://platform.openai.com/docs/guides/prompt-engineering){:target=_blank .external-link} สำหรับวิธีการเขียน prompt โดยใช้ roles. ให้เลือกหนึ่งในบทบาทดังนี้:
+    - **User**: ส่งข้อความในฐานะผู้ใช้และรับคำตอบจาก model.
+    - **Assistant**: บอกให้ model ใช้น้ำเสียงหรือบุคลิกเฉพาะ.
+    - **System**: ค่าเริ่มต้นคือ `"You are a helpful assistant"`. สามารถกำหนดคำแนะนำในข้อความ user ได้ แต่คำสั่งใน system message มีประสิทธิภาพมากกว่า. สามารถตั้งได้เพียงหนึ่งข้อความ system ต่อการสนทนา.
+- **Simplify Output**: เปิดเพื่อคืนผลลัพธ์แบบย่อแทนข้อมูลดิบ.
+- **Output Content as JSON**: เปิดเพื่อพยายามคืนผลลัพธ์ในรูปแบบ JSON. ใช้งานกับ `GPT-4 Turbo` และทุก model ใหม่ของ `GPT-3.5 Turbo` ที่ใหม่กว่า `gpt-3.5-turbo-1106`.
 
 ### Options
 
-- **Frequency Penalty**: Apply a penalty to reduce the model's tendency to repeat similar lines. The range is between `0.0` and `2.0`.
-- **Maximum Number of Tokens**: Set the maximum number of tokens for the response. One token is roughly four characters for standard English text. Use this to limit the length of the output. 
-- **Number of Completions**: Defaults to 1. Set the number of completions you want to generate for each prompt. Use carefully since setting a high number will quickly consume your tokens. 
-- **Presence Penalty**: Apply a penalty to influence the model to discuss new topics. The range is between `0.0` and `2.0`.
-- **Output Randomness (Temperature)**: Adjust the randomness of the response. The range is between `0.0` (deterministic) and `1.0` (maximum randomness). We recommend altering this or **Output Randomness (Top P)** but not both. Start with a medium temperature (around `0.7`) and adjust based on the outputs you observe. If the responses are too repetitive or rigid, increase the temperature. If they’re too chaotic or off-track, decrease it. Defaults to `1.0`. 
-- **Output Randomness (Top P)**: Adjust the Top P setting to control the diversity of the assistant's responses. For example, `0.5` means half of all likelihood-weighted options are considered. We recommend altering this or **Output Randomness (Temperature)** but not both. Defaults to `1.0`. 
+- **Frequency Penalty**: ใช้ลดแนวโน้มที่ model จะทำซ้ำคำในลักษณะเดียวกัน. ระหว่าง `0.0` ถึง `2.0`.
+- **Maximum Number of Tokens**: กำหนดจำนวน tokens สูงสุดสำหรับคำตอบ (token หนึ่งประมาณ 4 ตัวอักษรภาษาอังกฤษ).
+- **Number of Completions**: ค่าเริ่มต้นคือ 1. กำหนดจำนวน completions ที่ต้องการสร้างต่อ prompt.
+- **Presence Penalty**: ใช้กระตุ้นให้ model นำเสนอหัวข้อใหม่. ช่วง `0.0` ถึง `2.0`.
+- **Output Randomness (Temperature)**: ปรับความสุ่มของคำตอบในช่วง `0.0` ถึง `1.0`. แนะนำเริ่มประมาณ `0.7`.
+- **Output Randomness (Top P)**: ปรับค่า Top P เพื่อควบคุมความหลากหลายของคำตอบ. เช่น `0.5` หมายถึงใช้ครึ่งหนึ่งของตัวเลือกที่มีน้ำหนักความน่าจะเป็น.
 
-Refer to [Message a Model | OpenAI](https://platform.openai.com/docs/api-reference/text-completion/create){:target=_blank .external-link} documentation for more information.
+ดูรายละเอียดเพิ่มเติมที่ [Message a Model | OpenAI](https://platform.openai.com/docs/api-reference/text-completion/create){:target=_blank .external-link}.
 
 ## Classify Text for Violations
 
-Use this operation to identify and flag content that might be harmful. OpenAI model will analyze the text and return a response containing:
+ใช้ operation นี้เพื่อตรวจจับและทำเครื่องหมายข้อความที่อาจเป็นอันตราย. OpenAI model จะวิเคราะห์ข้อความและคืนผลลัพธ์ประกอบด้วย:
 
-- `flagged`: A boolean field indicating if the content is potentially harmful.
-- `categories`: A list of category-specific violation flags.
-- `category_scores`: Scores for each category.
+- `flagged`: ฟิลด์ boolean ระบุว่าข้อความอาจเป็นอันตราย.
+- `categories`: รายการของการแจ้งเตือนประเภทความผิด.
+- `category_scores`: คะแนนสำหรับแต่ละประเภท.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai.md).
-- **Resource**: Select **Text**.
-- **Operation**: Select **Classify Text for Violations**.
-- **Text Input**: Enter text to classify if it violates the moderation policy. 
-- **Simplify Output**: Turn on to return a simplified version of the response instead of the raw data.
+- **Credential to connect with**: สร้างหรือเลือก [OpenAI credential](/integrations/builtin/credentials/openai.md) ที่มีอยู่แล้ว.
+- **Resource**: เลือก **Text**.
+- **Operation**: เลือก **Classify Text for Violations**.
+- **Text Input**: ระบุข้อความที่ต้องการตรวจสอบหากละเมิดนโยบาย moderation.
+- **Simplify Output**: เปิดเพื่อคืนผลลัพธ์แบบย่อแทนข้อมูลดิบ.
 
 ### Options
 
-- **Use Stable Model**: Turn on to use the stable version of the model instead of the latest version, accuracy may be slightly lower.
+- **Use Stable Model**: เปิดเพื่อใช้ model เวอร์ชันที่เสถียรแทนเวอร์ชันล่าสุด แม้อาจมีความแม่นยำน้อยลง.
 
-Refer to [Moderations | OpenAI](https://platform.openai.com/docs/api-reference/moderations){:target=_blank .external-link} documentation for more information.
+ดูรายละเอียดเพิ่มเติมที่ [Moderations | OpenAI](https://platform.openai.com/docs/api-reference/moderations){:target=_blank .external-link}.
 
 ## Common issues
 

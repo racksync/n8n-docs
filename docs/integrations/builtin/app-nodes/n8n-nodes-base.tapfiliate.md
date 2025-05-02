@@ -7,12 +7,10 @@ contentType: [integration, reference]
 
 # Tapfiliate node
 
-Use the Tapfiliate node to automate work in Tapfiliate, and integrate Tapfiliate with other applications. n8n has built-in support for a wide range of Tapfiliate features, including creating and deleting affiliates, and adding affiliate metadata. 
-
-On this page, you'll find a list of operations the Tapfiliate node supports and links to more resources.
+ใช้ Tapfiliate node เพื่อช่วยงานอัตโนมัติใน Tapfiliate และเชื่อมต่อ Tapfiliate กับแอปพลิเคชันอื่น ๆ โดย n8n สนับสนุนฟีเจอร์หลากหลาย เช่น การสร้างและลบ affiliate และการเพิ่ม metadata ให้ affiliate
 
 /// note | Credentials
-Refer to [Tapfiliate credentials](/integrations/builtin/credentials/tapfiliate.md) for guidance on setting up authentication. 
+ดู [Tapfiliate credentials](/integrations/builtin/credentials/tapfiliate.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations

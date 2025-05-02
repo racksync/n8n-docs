@@ -8,12 +8,12 @@ priority: medium
 
 # RabbitMQ node
 
-Use the RabbitMQ node to automate work in RabbitMQ, and integrate RabbitMQ with other applications. n8n has built-in support for a wide range of RabbitMQ features, including accepting, and forwarding messages. 
+ใช้ RabbitMQ node ในการอัตโนมัติงานใน RabbitMQ และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ. n8n มีการสนับสนุนฟีเจอร์ของ RabbitMQ ที่หลากหลาย รวมถึงการรับและส่งต่อข้อความ.
 
-On this page, you'll find a list of operations the RabbitMQ node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ RabbitMQ node รองรับ พร้อมทั้งลิงก์ไปยัง resources เพิ่มเติม.
 
 /// note | Credentials
-Refer to [RabbitMQ credentials](/integrations/builtin/credentials/rabbitmq.md) for guidance on setting up authentication. 
+ดู [RabbitMQ credentials](/integrations/builtin/credentials/rabbitmq.md) สำหรับคำแนะนำในการตั้งค่า authentication. 
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

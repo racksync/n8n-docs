@@ -8,72 +8,72 @@ priority: medium
 
 # FTP
 
-The FTP node is useful to access and upload files to an FTP or SFTP server.
+FTP node ใช้สำหรับเข้าถึงและอัปโหลดไฟล์ไปยัง FTP หรือ SFTP server
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/ftp.md).
+คุณสามารถดูข้อมูลการตั้งค่า authentication สำหรับ node นี้ได้ที่ [FTP credentials](/integrations/builtin/credentials/ftp.md)
 ///
 
-To connect to an SFTP server, use an SFTP credential. Refer to [FTP credentials](/integrations/builtin/credentials/ftp.md) for more information.
+ถ้าต้องการเชื่อมต่อ SFTP server ให้ใช้ SFTP credential ดูรายละเอียดได้ที่ [FTP credentials](/integrations/builtin/credentials/ftp.md)
 
 ## Operations
 
-- [**Delete**](#delete) a file or folder
-- [**Download**](#download) a file
-- [**List**](#list) folder content
-- [**Rename**](#rename) or move a file or folder
-- [**Upload**](#upload) a file
+- [**Delete**](#delete) ลบไฟล์หรือโฟลเดอร์
+- [**Download**](#download) ดาวน์โหลดไฟล์
+- [**List**](#list) ดูเนื้อหาในโฟลเดอร์
+- [**Rename**](#rename) หรือย้ายไฟล์/โฟลเดอร์
+- [**Upload**](#upload) อัปโหลดไฟล์
 
 /// note | Uploading files
-To attach a file for upload, you'll need to use an extra node such as the [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md) node or the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) node to pass the file as a data property.
+ถ้าต้องการแนบไฟล์เพื่ออัปโหลด ต้องใช้ node เพิ่มเติม เช่น [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md) หรือ [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) เพื่อส่งไฟล์เป็น data property
 ///
 
 ## Delete
 
-This operation includes one parameter: **Path**. Enter the remote path that you would like to connect to.
+operation นี้มี parameter เดียวคือ **Path** ให้กรอก path ของไฟล์หรือโฟลเดอร์บน server ที่ต้องการลบ
 
 ### Delete options
 
-The delete operation adds one new option: **Folder**. If you turn this option on, the node can delete both folders and files. This configuration also displays one more option:
+delete operation จะมี option เพิ่มคือ **Folder** ถ้าเปิด option นี้ node จะสามารถลบทั้งโฟลเดอร์และไฟล์ได้ และจะมี option เพิ่มอีกหนึ่งตัวคือ:
 
-- **Recursive**: If you turn this option on and you delete a folder or directory, the node will delete all files and directories within the target directory.
+- **Recursive**: ถ้าเปิด option นี้และลบโฟลเดอร์ node จะลบไฟล์และโฟลเดอร์ย่อยทั้งหมดใน directory เป้าหมาย
 
 ## Download
 
-Configure this operation with these parameters:
+ตั้งค่า operation นี้ด้วย parameter เหล่านี้:
 
-* **Path**: Enter the remote path that you would like to connect to.
-* **Put Output File in Field**: Enter the name of the output binary field to put the file in.
+* **Path**: กรอก path ของไฟล์บน server ที่ต้องการดาวน์โหลด
+* **Put Output File in Field**: กรอกชื่อ field ที่จะเก็บไฟล์ output แบบ binary
 
 ## List
 
-Configure this operation with these parameters:
+ตั้งค่า operation นี้ด้วย parameter เหล่านี้:
 
-* **Path**: Enter the remote path that you would like to connect to.
-* **Recursive**: Select whether to return an object representing all directories / objects recursively found within the FTP/SFTP server (turned on) or not (turned off).
+* **Path**: กรอก path ของโฟลเดอร์บน server ที่ต้องการดูเนื้อหา
+* **Recursive**: เลือกว่าจะให้แสดงเนื้อหาทั้งหมดแบบ recursive (เปิด) หรือไม่ (ปิด)
 
 ## Rename
 
-Configure this operation with these parameters:
+ตั้งค่า operation นี้ด้วย parameter เหล่านี้:
 
-- **Old Path**: Enter the existing path of the file you'd like to rename in this field.
-- **New Path**: Enter the new path for the renamed file in this field.
+- **Old Path**: กรอก path เดิมของไฟล์ที่ต้องการเปลี่ยนชื่อ
+- **New Path**: กรอก path ใหม่หลังเปลี่ยนชื่อ
 
 ### Rename options
 
-This operation adds one new option: **Create Directories**. If you turn this option on, the node will recursively create the destination directory when renaming an existing file or folder.
+operation นี้จะมี option เพิ่มคือ **Create Directories** ถ้าเปิด option นี้ node จะสร้างโฟลเดอร์ปลายทางให้อัตโนมัติเมื่อเปลี่ยนชื่อไฟล์หรือโฟลเดอร์
 
 ## Upload
 
-Configure this operation with these parameters:
+ตั้งค่า operation นี้ด้วย parameter เหล่านี้:
 
-* **Path**: Enter the remote path that you would like to connect to.
-* **Binary File**: Select whether you'll upload a binary file (turned on) or enter text content to be uploaded (turned off). Other parameters depend on your selection in this field.
-    * **Input Binary Field**: Displayed if you turn on **Binary File**. Enter the name of the input binary field that contains the file you'll upload in this field.
-    * **File Content**: Displayed if you turn off **Binary File** Enter the text content of the file you'll upload in this field.
+* **Path**: กรอก path ของไฟล์บน server ที่ต้องการอัปโหลด
+* **Binary File**: เลือกว่าจะอัปโหลดไฟล์แบบ binary (เปิด) หรือกรอกเนื้อหาไฟล์เป็น text (ปิด) parameter อื่นๆ จะเปลี่ยนไปตามที่เลือก
+    * **Input Binary Field**: แสดงถ้าเปิด **Binary File** กรอกชื่อ field ที่เก็บไฟล์ binary ที่จะอัปโหลด
+    * **File Content**: แสดงถ้าปิด **Binary File** กรอกเนื้อหา text ของไฟล์ที่จะอัปโหลด
 
 /// note | Uploading files
-To attach a file for upload, you'll need to use an extra node such as the [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md) node or the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) node to pass the file as a data property.
+ถ้าต้องการแนบไฟล์เพื่ออัปโหลด ต้องใช้ node เพิ่มเติม เช่น [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md) หรือ [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) เพื่อส่งไฟล์เป็น data property
 ///
 
 ## Templates and examples

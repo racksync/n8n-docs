@@ -6,33 +6,33 @@ contentType: explanation
 # Self-hosted concurrency control
 
 /// info | Only for self-hosted n8n
-This document is for self-hosted concurrency control. Read [Cloud concurrency](/manage-cloud/concurrency.md) to learn how concurrency works with n8n Cloud accounts.
+เอกสารนี้สำหรับ self-hosted concurrency control ถ้าใช้ n8n Cloud ดู [Cloud concurrency](/manage-cloud/concurrency.md) สำหรับการจัดการ concurrency ของ n8n Cloud
 ///
 
-In regular mode, n8n doesn't limit how many production executions may run at the same time. This can lead to a scenario where too many concurrent executions thrash the event loop, causing performance degradation and unresponsiveness. 
+ใน regular mode, n8n จะไม่จำกัดจำนวน production execution ที่รันพร้อมกัน อาจทำให้มี execution เยอะเกินจน event loop ช้า ระบบช้า หรือไม่ตอบสนอง
 
-To prevent this, you can set a concurrency limit for production executions in regular mode. Use this to control how many production executions run concurrently, and queue up any concurrent production executions over the limit. These executions remain in the queue until concurrency capacity frees up, and are then processed in FIFO order.
+เพื่อป้องกันปัญหานี้ คุณสามารถตั้ง limit สำหรับ production execution ใน regular mode ได้ ใช้ควบคุมจำนวน execution ที่รันพร้อมกัน ส่วนที่เกินจะถูก queue ไว้จนกว่าจะมี execution ว่าง แล้วจะเอาออกจาก queue แบบ FIFO
 
-Concurrency control is disabled by default. To enable it:
+Concurrency control ถูกปิดไว้เป็นค่าเริ่มต้น ถ้าจะเปิดให้ใช้แบบนี้:
 
 ```sh
 export N8N_CONCURRENCY_PRODUCTION_LIMIT=20
 ```
 
-Keep in mind:
+ข้อควรจำ:
 
-- Concurrency control applies only to production executions: those started from a webhook or [trigger](/glossary.md#trigger-node-n8n) node. It doesn't apply to any other kinds, such as manual executions, sub-workflow executions, error executions, or started from CLI.
-- You can't retry queued executions. Cancelling or deleting a queued execution also removes it from the queue.
-- On instance startup, n8n resumes queued executions up to the concurrency limit and re-enqueues the rest.
+- Concurrency control ใช้กับ production execution เท่านั้น: execution ที่เริ่มจาก webhook หรือ [trigger](/glossary.md#trigger-node-n8n) node ไม่รวม execution แบบ manual, sub-workflow, error, หรือที่เริ่มจาก CLI
+- คุณไม่สามารถ retry execution ที่อยู่ใน queue ได้ ถ้ายกเลิกหรือ delete execution ที่ queue อยู่ execution นั้นจะถูกลบออกจาก queue ด้วย
+- ตอน instance startup, n8n จะ resume execution ที่ queue ไว้ตาม limit ที่ตั้งไว้ ส่วนที่เหลือจะ re-enqueue
 <!-- vale off -->
-- To monitor concurrency control, watch logs for executions being added to the queue and released. In a future version, n8n will show concurrency control in the UI.
+- ถ้าจะ monitor concurrency control ให้ดู log ว่ามี execution ถูก queue หรือถูกปล่อยออกจาก queue ในอนาคต n8n จะมี UI สำหรับ concurrency control
 <!-- vale on -->
 
-When you enable concurrency control, you can view the number of active executions and the configured limit at the top of a project's or workflow's executions tab.
+เมื่อเปิด concurrency control แล้ว คุณจะเห็นจำนวน execution ที่ active และ limit ที่ตั้งไว้ที่ด้านบนของแท็บ executions ของ project หรือ workflow
 
 ## Comparison to queue mode
 
-In queue mode, you can control how many jobs a worker may run concurrently using the [`--concurrency` flag](/hosting/scaling/queue-mode.md#configure-worker-concurrency).
+ใน queue mode, คุณสามารถควบคุมจำนวน job ที่ worker ทำพร้อมกันได้ด้วย [`--concurrency` flag](/hosting/scaling/queue-mode.md#configure-worker-concurrency)
 
-Concurrency control in queue mode is a separate mechanism from concurrency control in regular mode, but the environment variable `N8N_CONCURRENCY_PRODUCTION_LIMIT` controls both of them. In queue mode, n8n takes the limit from this variable if set to a value other than `-1`, falling back to the `--concurrency` flag or its default.
+Concurrency control ใน queue mode เป็นคนละกลไกกับ regular mode แต่ environment variable `N8N_CONCURRENCY_PRODUCTION_LIMIT` จะควบคุมทั้งสองแบบ ถ้าตั้งค่านี้ (ไม่ใช่ `-1`) n8n จะใช้ค่านี้ใน queue mode แทนค่า default หรือ flag
 

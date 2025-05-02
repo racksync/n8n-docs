@@ -1,16 +1,16 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: PostBin node documentation
-description: Learn how to use the PostBin node in n8n. Follow technical documentation to integrate PostBin node into your workflows.
+description: เรียนรู้วิธีการใช้ PostBin node ใน n8n. ติดตามเอกสารทางเทคนิคเพื่อรวม PostBin node เข้ากับ workflows ของคุณ.
 contentType: [integration, reference]
 priority: high
 ---
 
 # PostBin node
 
-PostBin is a service that helps you test API clients and webhooks. Use the PostBin node to automate work in PostBin, and integrate PostBin with other applications. n8n has built-in support for a wide range of PostBin features, including creating and deleting bins, and getting and sending requests. 
+PostBin เป็นบริการที่ช่วยให้คุณทดสอบ API clients และ webhooks ได้อย่างง่ายดาย. ใช้ PostBin node เพื่อช่วยทำงานใน PostBin แบบอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันอื่น ๆ. n8n มีการสนับสนุนคุณสมบัติของ PostBin หลากหลาย เช่น การสร้างและลบ bins รวมถึงการดึงและส่ง requests.
 
-On this page, you'll find a list of operations the PostBin node supports, and links to more resources.
+ในหน้านี้ คุณจะพบรายการของ operations ที่ PostBin node รองรับและลิงก์สำหรับข้อมูลเพิ่มเติม.
 
 ## Operations
 
@@ -30,16 +30,16 @@ On this page, you'll find a list of operations the PostBin node supports, and li
 
 ## Send requests
 
-To send requests to a PostBin bin:
+การส่ง requests ไปที่ PostBin bin:
 
-1. Go to [PostBin](https://www.toptal.com/developers/postbin/){:target=_blank .external-link} and follow the steps to generate a new bin. PostBin gives you a unique URL, including a bin ID.
-2. In the PostBin node, select the **Request** resource.
-3. Choose the type of **Operation** you want to perform.
-4. Enter your bin ID in **Bin ID**.
+1. ไปที่ [PostBin](https://www.toptal.com/developers/postbin/){:target=_blank .external-link} แล้วทำตามขั้นตอนเพื่อสร้าง bin ใหม่. PostBin จะให้ URL ที่ไม่ซ้ำกัน รวมถึง bin ID.
+2. ใน PostBin node ให้เลือก **Request** resource.
+3. เลือกประเภทของ **Operation** ที่คุณต้องการดำเนินการ.
+4. ป้อน bin ID ของคุณใน **Bin ID**.
 
 ## Create and manage bins
 
-You can create and manage PostBin bins using the PostBin node. 
+คุณสามารถสร้างและจัดการ PostBin bins โดยใช้ PostBin node.
 
-1. In **Resource**, select **Bin**.
-2. Choose an **Operation**. You can create, delete, or get a bin.
+1. ใน **Resource** ให้เลือก **Bin**.
+2. เลือก **Operation** คุณสามารถสร้าง, ลบ หรือดึงข้อมูล bin.

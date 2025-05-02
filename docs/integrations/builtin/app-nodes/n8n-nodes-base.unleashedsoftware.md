@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Unleashed Software node
 
-Use the Unleashed Software node to automate work in Unleashed Software, and integrate Unleashed Software with other applications. n8n has built-in support for a wide range of Unleashed Software features, including getting sales orders and stock on hand. 
+ใช้ Unleashed Software node เพื่อช่วยให้งานใน Unleashed Software เป็นอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันอื่น ๆ โดย n8n รองรับฟีเจอร์ของ Unleashed Software หลากหลาย เช่น การดึงข้อมูล sales orders และ stock on hand
 
-On this page, you'll find a list of operations the Unleashed Software node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Unleashed Software node รองรับ พร้อมทั้งลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [Unleashed Software credentials](/integrations/builtin/credentials/unleashedsoftware.md) for guidance on setting up authentication. 
+ดู [Unleashed Software credentials](/integrations/builtin/credentials/unleashedsoftware.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations

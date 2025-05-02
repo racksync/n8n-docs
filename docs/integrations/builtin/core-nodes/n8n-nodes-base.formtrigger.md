@@ -8,55 +8,55 @@ priority: critical
 
 # n8n Form Trigger node
 
-Use the n8n Form trigger to start a workflow when a user submits a form, taking the input data from the form. The node generates the form web page for you to use.
+ใช้ n8n Form trigger เพื่อเริ่ม workflow เมื่อมีผู้ใช้ submit ฟอร์ม โดยจะรับ input data จากฟอร์ม Node นี้จะสร้างหน้าเว็บฟอร์มให้คุณใช้งาน
 
-You can add more pages to continue the form with the [n8n Form](/integrations/builtin/core-nodes/n8n-nodes-base.form.md) node.
+คุณสามารถเพิ่มหน้าอื่นๆ ต่อจากนี้ได้ด้วย [n8n Form](/integrations/builtin/core-nodes/n8n-nodes-base.form.md) node
 
 ## Build and test workflows
 
-While building or testing a workflow, use the **Test URL**. Using a test URL ensures that you can view the incoming data in the editor UI, which is useful for debugging. 
+ขณะสร้างหรือทดสอบ workflow ให้ใช้ **Test URL** การใช้ test URL จะช่วยให้คุณดูข้อมูลที่เข้ามาใน editor UI ได้ เหมาะสำหรับ debug
 
-There are two ways to test:
+มี 2 วิธีทดสอบ:
 
-- Select **Test Step**. n8n opens the form. When you submit the form, n8n runs the node, but not the rest of the workflow.
-- Select **Test Workflow**. n8n opens the form. When you submit the form, n8n runs the workflow.
+- เลือก **Test Step** n8n จะเปิดฟอร์ม เมื่อ submit แล้ว n8n จะ run node นี้ แต่ยังไม่ run workflow ทั้งหมด
+- เลือก **Test Workflow** n8n จะเปิดฟอร์ม เมื่อ submit แล้ว n8n จะ run workflow
 
 ## Production workflows
 
-When your workflow is ready, switch to using the **Production URL**. You can then activate your workflow, and n8n runs it automatically when a user submits the form.
+เมื่อ workflow พร้อมใช้งาน ให้เปลี่ยนไปใช้ **Production URL** จากนั้น activate workflow n8n จะ run อัตโนมัติเมื่อมีผู้ใช้ submit ฟอร์ม
 
-When working with a production URL, ensure that you have saved and activated the workflow. Data flowing through the Form trigger isn't visible in the editor UI with the production URL.
+ถ้าใช้ production URL ต้อง save และ activate workflow ข้อมูลที่ผ่าน Form trigger จะไม่แสดงใน editor UI
 
 ## Set default selections with query parameters
 
-You can set the initial values for fields by using [query parameters](https://en.wikipedia.org/wiki/Query_string#Web_forms){:target=_blank .external-link} with the initial URL provided by the n8n Form Trigger. Every [page in the form](/integrations/builtin/core-nodes/n8n-nodes-base.form.md) receives the same query parameters sent to the n8n Form Trigger URL.
+คุณสามารถตั้งค่าเริ่มต้นของฟิลด์ต่างๆ ได้โดยใช้ [query parameters](https://en.wikipedia.org/wiki/Query_string#Web_forms){:target=_blank .external-link} กับ URL ที่ได้จาก n8n Form Trigger ทุกหน้าของฟอร์มจะได้รับ query parameters เดียวกัน
 
 /// note | Only for production
-Query parameters are only available when using the form in production mode. n8n won't populate field values from query parameters in testing mode.
+Query parameters จะใช้ได้เฉพาะตอนใช้งานฟอร์มใน production mode เท่านั้น n8n จะไม่เติมค่าฟิลด์จาก query parameters ใน testing mode
 ///
 
 <!-- vale from-microsoft.Percentages = NO -->
-When using query parameters, [percent-encode](https://en.wikipedia.org/wiki/Percent-encoding){:target=_blank .external-link} any field names or values that use special characters. This ensures n8n uses the initial values for the given fields. You can use tools like [URL Encode/Decode](https://www.url-encode-decode.com/) to format your query parameters using percent-encoding.
+เมื่อใช้ query parameters ให้ [percent-encode](https://en.wikipedia.org/wiki/Percent-encoding){:target=_blank .external-link} ชื่อฟิลด์หรือค่าที่มีอักขระพิเศษ เพื่อให้ n8n ใช้ค่าเริ่มต้นได้ถูกต้อง คุณสามารถใช้เครื่องมืออย่าง [URL Encode/Decode](https://www.url-encode-decode.com/) เพื่อช่วยแปลง query parameters ให้เป็น percent-encoding
 
-As an example, imagine you have a form with the following properties:
+ตัวอย่างเช่น ถ้าคุณมีฟอร์มที่มีข้อมูลดังนี้:
 
 * Production URL: `https://my-account.n8n.cloud/form/my-form`
 * Fields:
 	* `name`: `Jane Doe`
 	* `email`: `jane.doe@example.com`
 
-With query parameters and percent-encoding, you could use the following URL to set initial field values to the data above:
+เมื่อใช้ query parameters และ percent-encoding จะได้ URL แบบนี้:
 
 ```
 https://my-account.n8n.cloud/form/my-form?email=jane.doe%40example.com&name=Jane%20Doe
 ```
 
-Here, percent-encoding replaces the at-symbol (`@`) with the string `%40` and the space character (` `) with the string `%20`. This will set the initial value for these fields no matter which page of the form they appear on.
+ในตัวอย่างนี้ percent-encoding จะเปลี่ยนเครื่องหมาย @ เป็น `%40` และช่องว่างเป็น `%20` ซึ่งจะตั้งค่าเริ่มต้นให้ฟิลด์เหล่านี้ในทุกหน้าของฟอร์ม
 <!-- vale from-microsoft.Percentages = YES -->
 
 ## Node parameters
 
-These are the main node configuration fields:
+นี่คือฟิลด์หลักสำหรับตั้งค่า node:
 
 ### Authentication
 
@@ -65,65 +65,65 @@ These are the main node configuration fields:
 
 #### Using basic auth
 
-To configure this credential, you'll need:
+ถ้าต้องการใช้ credential นี้ ให้เตรียมข้อมูลดังนี้:
 
-- The **Username** you use to access the app or service your HTTP Request is targeting.
-- The **Password** that goes with that username.
+- **Username** ที่ใช้เข้าถึงแอปหรือบริการที่ HTTP Request ของคุณจะเชื่อมต่อ
+- **Password** ที่ตรงกับ username
 
 ### Form URLs
 
-The Form Trigger node has two URLs: **Test URL** and **Production URL**. n8n displays the URLs at the top of the node panel. Select **Test URL** or **Production URL** to toggle which URL n8n displays.
+Form Trigger node จะมี 2 URL: **Test URL** และ **Production URL** n8n จะแสดง URL เหล่านี้ที่ด้านบนของ panel node เลือก **Test URL** หรือ **Production URL** เพื่อสลับดู URL ที่ต้องการ
 
 ![Screenshot of the form URLs](/_images/integrations/builtin/core-nodes/form-trigger/form-urls.png)
 
-- **Test URL**: n8n registers a test webhook when you select **Test Step** or **Test Workflow**, if the workflow isn't active. When you call the URL, n8n displays the data in the workflow.
-- **Production URL**: n8n registers a production webhook when you activate the workflow. When using the production URL, n8n doesn't display the data in the workflow. You can still view workflow data for a production execution. Select the **Executions** tab in the workflow, then select the workflow execution you want to view.
+- **Test URL**: n8n จะ register test webhook เมื่อเลือก **Test Step** หรือ **Test Workflow** ถ้า workflow ยังไม่ active เมื่อเรียก URL นี้ n8n จะแสดงข้อมูลใน workflow
+- **Production URL**: n8n จะ register production webhook เมื่อ activate workflow เมื่อใช้ production URL ข้อมูลจะไม่แสดงใน workflow แต่สามารถดู execution ได้ใน tab **Executions**
 
 ### Form Path
 
-Set a custom slug for the form.
+ตั้ง slug สำหรับฟอร์ม
 
 ### Form Title
 
-Enter the title for your form. n8n displays the **Form Title** as the webpage title and main `h1` title on the form.
+กรอกชื่อฟอร์ม n8n จะแสดง **Form Title** เป็น title ของเว็บและ h1 หลักในฟอร์ม
 
 ### Form Description
 
-Enter the description for your form. n8n displays the **Form Description** as a subtitle below the main `h1` title on the form. Use `\n` or `<br>` to add a line break. 
+กรอกคำอธิบายฟอร์ม n8n จะแสดง **Form Description** เป็น subtitle ใต้ h1 หลักในฟอร์ม ใช้ `\n` หรือ `<br>` เพื่อขึ้นบรรทัดใหม่
 
 ### Form Elements
 
-Create the question fields for your form. Select **Add Form Element** to add a new field.
+สร้างฟิลด์คำถามในฟอร์ม เลือก **Add Form Element** เพื่อเพิ่มฟิลด์ใหม่
 
-Every field has the following settings:
+แต่ละฟิลด์จะมีการตั้งค่าดังนี้:
 
-- **Field Label**: Enter the label that appears above the input field. 
-- **Element Type**: Choose from **Custom HTML**, **Date**, **Dropdown List**, **Email**, **File**, **Hidden Field**, **Number**, **Password**, **Text**, or **Textarea**.
-	- Select **Custom HTML** to insert arbitrary HTML.
-		- You can include elements like links, images, video, and more. You can't include `<script>`, `<style>`, or `<input>` elements.
-		- By default, Custom HTML fields aren't included in the node output. To include the Custom HTML content in the output, fill out the associated **Element Name** field.
-    - Select **Date** to include a date picker in the form. Refer to [Date and time with Luxon](/code/cookbook/luxon.md) for more information on formatting dates.
-	- Select **Dropdown List** > **Add Field Option** to add multiple options. By default, the dropdown is single-choice. To make it multiple-choice, turn on **Multiple Choice**. 
-	- Select **Hidden Field** to include a form element without displaying it on the form. You can set a default value using the **Field Value** parameter or pass values for the field using [query parameters](#set-default-selections-with-query-parameters).
-- **Required Field**: Turn on to require users to complete this field on the form. 
+- **Field Label**: ป้ายกำกับที่แสดงเหนือ input field
+- **Element Type**: เลือกจาก **Custom HTML**, **Date**, **Dropdown List**, **Email**, **File**, **Hidden Field**, **Number**, **Password**, **Text**, หรือ **Textarea**
+	- เลือก **Custom HTML** เพื่อแทรก HTML ที่กำหนดเอง
+		- สามารถใส่ลิงก์ รูปภาพ วิดีโอ ฯลฯ แต่ไม่รองรับ `<script>`, `<style>`, หรือ `<input>`
+		- โดยปกติ Custom HTML จะไม่ถูกส่งออกใน output ถ้าต้องการให้ส่งออกด้วย ให้กรอก **Element Name**
+    - เลือก **Date** เพื่อเพิ่ม date picker ดูวิธี format วันที่ได้ที่ [Date and time with Luxon](/code/cookbook/luxon.md)
+	- เลือก **Dropdown List** > **Add Field Option** เพื่อเพิ่มตัวเลือก dropdown โดยปกติเลือกได้ข้อเดียว ถ้าต้องการเลือกได้หลายข้อ ให้เปิด **Multiple Choice**
+	- เลือก **Hidden Field** เพื่อเพิ่มฟิลด์ที่ไม่แสดงในฟอร์ม สามารถตั้งค่าเริ่มต้นใน **Field Value** หรือส่งค่าผ่าน [query parameters](#set-default-selections-with-query-parameters)
+- **Required Field**: เปิดเพื่อบังคับให้ผู้ใช้กรอกฟิลด์นี้
 
 ### Respond When
 
-Choose when n8n sends a response to the form submission. You can respond when:
+เลือกเวลาที่ n8n จะตอบกลับหลัง submit ฟอร์ม สามารถเลือกได้ว่า:
 
-- **Form Is Submitted**: Send a response to the user as soon as they submit the form.
-- **Workflow Finishes**: Use this if you want the workflow to complete its execution before you send a response to the user. If the workflow errors, it sends a response to the user telling them there was a problem submitting the form.
+- **Form Is Submitted**: ตอบกลับทันทีที่ผู้ใช้ submit
+- **Workflow Finishes**: ตอบกลับหลัง workflow ทำงานเสร็จ ถ้า workflow error จะตอบกลับว่ามีปัญหา
 
 ## Node options
 
-Select **Add Option** to view more configuration options: 
+เลือก **Add Option** เพื่อดูตัวเลือกเพิ่มเติม:
 
-- **Append n8n Attribution**: Turn off to hide the **Form automated with n8n** attribute at the bottom of the form.
-- **Form Response**: Choose how to respond when the user submits the form. 
-    - **Respond With** > **Form Submitted Text**: Show a message to the user.
-    - **Respond With** > **Redirect URL**: Send the user to a new page.
-- **Ignore Bots**: Turn on to ignore requests from bots like link previewers and web crawlers. 
-- **Use Workflow Timezone**: Turn on to use the timezone in the [Workflow settings](/workflows/settings.md) instead of UTC (default). This affects the value of the `submittedAt` timestamp in the node output. 
+- **Append n8n Attribution**: ปิดเพื่อซ่อนข้อความ **Form automated with n8n** ด้านล่างฟอร์ม
+- **Form Response**: เลือกวิธีตอบกลับเมื่อผู้ใช้ submit ฟอร์ม
+    - **Respond With** > **Form Submitted Text**: แสดงข้อความให้ผู้ใช้
+    - **Respond With** > **Redirect URL**: ส่งผู้ใช้ไปหน้าใหม่
+- **Ignore Bots**: เปิดเพื่อไม่รับ request จาก bot เช่น link previewer หรือ web crawler
+- **Use Workflow Timezone**: เปิดเพื่อใช้ timezone จาก [Workflow settings](/workflows/settings.md) แทน UTC (ค่าเริ่มต้น) มีผลกับค่า `submittedAt` ใน output
 
 ## Templates and examples
 

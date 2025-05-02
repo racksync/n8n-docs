@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # ConvertKit node
 
-Use the ConvertKit node to automate work in ConvertKit, and integrate ConvertKit with other applications. n8n has built-in support for a wide range of ConvertKit features, including creating and deleting custom fields, getting tags, and adding subscribers.
+ใช้ ConvertKit node เพื่อทำงานอัตโนมัติใน ConvertKit และ integrate ConvertKit กับแอปพลิเคชันอื่นๆ n8n มีการรองรับในตัวสำหรับฟีเจอร์ต่างๆ ของ ConvertKit รวมถึงการสร้างและลบ custom fields, การดึง tags, และการเพิ่ม subscribers
 
-On this page, you'll find a list of operations the ConvertKit node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ ConvertKit node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [ConvertKit credentials](/integrations/builtin/credentials/convertkit.md) for guidance on setting up authentication. 
+อ้างอิง [ConvertKit credentials](/integrations/builtin/credentials/convertkit.md) สำหรับคำแนะนำในการตั้งค่า authentication
 ///
 
 ## Operations

@@ -8,22 +8,22 @@ priority: high
 
 # Simple Memory node
 
-Use the Simple Memory node to [persist](/glossary.md#ai-memory) chat history in your workflow.
+ใช้ Simple Memory node เพื่อ [persist](/glossary.md#ai-memory) ประวัติการแชทใน workflow ของคุณ
 
-On this page, you'll find a list of operations the Simple Memory node supports, and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Simple Memory node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// warning | Don't use this node if running n8n in queue mode
-If your n8n instance uses [queue mode](/hosting/scaling/queue-mode.md), this node doesn't work in an active production workflow. This is because n8n can't guarantee that every call to Simple Memory will go to the same worker.
+หาก n8n instance ของคุณใช้ [queue mode](/hosting/scaling/queue-mode.md) node นี้จะไม่ทำงานใน production workflow ที่ใช้งานอยู่ เนื่องจาก n8n ไม่สามารถรับประกันได้ว่าทุกการเรียก Simple Memory จะไปที่ worker เดียวกัน
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node parameters
 
-Configure these parameters to configure the node:
+ตั้งค่า parameters เหล่านี้เพื่อกำหนดค่า node:
 
-* **Session Key**: Enter the key to use to store the memory in the workflow data.
-* **Context Window Length**: Enter the number of previous interactions to consider for context.
+* **Session Key**: ป้อน key ที่จะใช้เก็บ memory ในข้อมูล workflow
+* **Context Window Length**: ป้อนจำนวน interactions ก่อนหน้าที่จะพิจารณาสำหรับ context
 
 ## Templates and examples
 
@@ -32,12 +32,12 @@ Configure these parameters to configure the node:
 
 ## Related resources
 
-Refer to [LangChain's Buffer Window Memory documentation](https://v03.api.js.langchain.com/classes/langchain.memory.BufferWindowMemory.html){:target=_blank .external-link} for more information about the service.
+อ้างอิง [LangChain's Buffer Window Memory documentation](https://v03.api.js.langchain.com/classes/langchain.memory.BufferWindowMemory.html){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับ service
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/common-issues.md).
+สำหรับคำถามหรือปัญหาทั่วไปและแนวทางแก้ไขที่แนะนำ โปรดดูที่ [Common issues](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/common-issues.md)
 
 --8<-- "_glossary/ai-glossary.md"

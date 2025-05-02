@@ -8,49 +8,49 @@ priority: medium
 
 # XML
 
-Use the XML node to convert data from and to XML.
+ใช้ XML node เพื่อแปลงข้อมูลจากและเป็น XML
 
 /// note | Binary files
-If your XML is within a binary file, use the [Extract from File](/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile.md) node to convert it to text first.
+ถ้า XML ของคุณอยู่ใน binary file ให้ใช้ [Extract from File](/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile.md) node เพื่อแปลงเป็น text ก่อน
 ///
 
 ## Node parameters
 
-- **Mode**: The format the data should be converted from and to.
-	- **JSON to XML**: Converts data from JSON to XML.
-    - **XML to JSON**: Converts data from XML to JSON.
-- **Property Name**: Enter the name of the property which contains the data to convert.
+- **Mode**: รูปแบบที่ต้องการแปลงข้อมูลจากและเป็น
+	- **JSON to XML**: แปลงข้อมูลจาก JSON เป็น XML
+    - **XML to JSON**: แปลงข้อมูลจาก XML เป็น JSON
+- **Property Name**: ใส่ชื่อ property ที่เก็บข้อมูลที่ต้องการแปลง
 
 ## Node options
 
-These options are available regardless of the **Mode** you select:
+options เหล่านี้จะมีให้เลือกไม่ว่าจะเลือก **Mode** อะไร:
 
-- **Attribute Key**: Enter the prefix used to access the attributes. Default is `$`.
-- **Character Key**: Enter the prefix used to access the character content. Default is `_`.
+- **Attribute Key**: ใส่ prefix ที่ใช้เข้าถึง attributes ค่า default คือ `$`
+- **Character Key**: ใส่ prefix ที่ใช้เข้าถึง character content ค่า default คือ `_`
 
-All other options depend on the selected **Mode**.
+options อื่นๆ จะขึ้นอยู่กับ **Mode** ที่เลือก
 
 ### JSON to XML options
 
-These options only appear if you select **JSON to XML** as the **Mode**:
+options เหล่านี้จะมีให้เลือกเฉพาะถ้าเลือก **JSON to XML** เป็น **Mode**:
 
-- **Allow Surrogate Chars**: Set whether to allow using characters from the Unicode surrogate blocks (turned on) or not (turned off).
-- **Cdata**: Set whether to wrap text nodes in `<![CDATA[ ... ]]>` instead of escaping when it's required (turned on) or not (turned off).
-    * Turning this option on doesn't add `<![CDATA[ ... ]]>` if it's not required.
-- **Headless**: Set whether to omit the XML header (turned on) or include it (turned off).
-- **Root Name**: Enter the root element name to use.
+- **Allow Surrogate Chars**: ตั้งค่าว่าจะอนุญาตให้ใช้ตัวอักษรจาก Unicode surrogate blocks หรือไม่ (เปิด/ปิด)
+- **Cdata**: ตั้งค่าว่าจะ wrap text node ใน `<![CDATA[ ... ]]>` แทนการ escape เมื่อจำเป็น (เปิด/ปิด)
+    * ถ้าเปิด option นี้ จะไม่เพิ่ม `<![CDATA[ ... ]]>` ถ้าไม่จำเป็น
+- **Headless**: ตั้งค่าว่าจะตัด XML header ออก (เปิด) หรือใส่ header (ปิด)
+- **Root Name**: ใส่ชื่อ root element ที่ต้องการใช้
 
 ### XML to JSON options
 
-These options only appear if you select **XML to JSON** as the **Mode**:
+options เหล่านี้จะมีให้เลือกเฉพาะถ้าเลือก **XML to JSON** เป็น **Mode**:
 
-- **Explicit Array**: Set whether to put child nodes in an array (turned on) or create an array only if there's more than one child node (turned off).
-- **Explicit Root**: Set whether to get the root node in the resulting object (turned on) or not (turned off).
-- **Ignore Attributes**: Set whether to ignore all XML attributes and only create text nodes (turned on) or not (turned off).
-- **Merge Attributes**: Set whether to merge attributes and child elements as properties of the parent (turned on) or key attributes off a child attribute object (turned off). This option is ignored if **Ignore Attribute** is turned on.
-- **Normalize**: Set whether to trim whitespaces inside the text nodes (turned on) or not to trim them (turned off).
-- **Normalize Tags**: Set whether to normalize all tag names to lowercase (turned on) or keep tag names as-is (turned off).
-- **Trim**: Set whether to trim the whitespace at the beginning and end of text nodes (turned on) or to leave the whitespace as-is (turned off).
+- **Explicit Array**: ตั้งค่าว่าจะใส่ child node ใน array เสมอ (เปิด) หรือสร้าง array เฉพาะถ้ามี child node มากกว่า 1 ตัว (ปิด)
+- **Explicit Root**: ตั้งค่าว่าจะให้ root node อยู่ใน object ที่ได้ (เปิด) หรือไม่ (ปิด)
+- **Ignore Attributes**: ตั้งค่าว่าจะ ignore attribute ทั้งหมดและสร้างเฉพาะ text node (เปิด) หรือไม่ (ปิด)
+- **Merge Attributes**: ตั้งค่าว่าจะรวม attribute และ child element เป็น property ของ parent (เปิด) หรือแยก attribute ออกเป็น object (ปิด) option นี้จะถูก ignore ถ้า **Ignore Attribute** เปิดอยู่
+- **Normalize**: ตั้งค่าว่าจะ trim whitespace ใน text node (เปิด) หรือไม่ (ปิด)
+- **Normalize Tags**: ตั้งค่าว่าจะเปลี่ยนชื่อ tag ทั้งหมดเป็นตัวพิมพ์เล็ก (เปิด) หรือคงชื่อ tag เดิม (ปิด)
+- **Trim**: ตั้งค่าว่าจะ trim whitespace ต้นและท้ายของ text node (เปิด) หรือไม่ (ปิด)
 
 ## Templates and examples
 

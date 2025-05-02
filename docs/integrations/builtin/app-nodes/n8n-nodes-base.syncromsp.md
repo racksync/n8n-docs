@@ -7,12 +7,10 @@ contentType: [integration, reference]
 
 # SyncroMSP node
 
-Use the SyncroMSP node to automate work in SyncroMSP, and integrate SyncroMSP with other applications. n8n has built-in support for a wide range of SyncroMSP features, including creating and deleting new customers, tickets, and contacts. 
-
-On this page, you'll find a list of operations the SyncroMSP node supports and links to more resources.
+ใช้ SyncroMSP node เพื่อทำให้งานใน SyncroMSP เป็นไปโดยอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันอื่น ๆ ได้อย่างลงตัว. n8n มีการรองรับฟีเจอร์ของ SyncroMSP ที่หลากหลาย เช่น การสร้างและลบลูกค้า, tickets, และ contacts.
 
 /// note | Credentials
-Refer to [SyncroMSP credentials](/integrations/builtin/credentials/syncromsp.md) for guidance on setting up authentication. 
+ดู [SyncroMSP credentials](/integrations/builtin/credentials/syncromsp.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations

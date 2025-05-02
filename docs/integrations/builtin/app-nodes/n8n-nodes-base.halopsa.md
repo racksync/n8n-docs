@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # HaloPSA node
 
-Use the HaloPSA node to automate work in HaloPSA, and integrate HaloPSA with other applications. n8n has built-in support for a wide range of HaloPSA features, including creating, updating, deleting, and getting clients, sites and tickets. 
+ใช้ HaloPSA node เพื่อทำงานอัตโนมัติใน HaloPSA และเชื่อมต่อ HaloPSA กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ HaloPSA หลายอย่าง เช่น การสร้าง อัปเดต ลบ และดึงข้อมูล clients, sites และ tickets
 
-On this page, you'll find a list of operations the HaloPSA node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ HaloPSA node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [HaloPSA credentials](/integrations/builtin/credentials/halopsa.md) for guidance on setting up authentication. 
+โปรดดู [HaloPSA credentials](/integrations/builtin/credentials/halopsa.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations

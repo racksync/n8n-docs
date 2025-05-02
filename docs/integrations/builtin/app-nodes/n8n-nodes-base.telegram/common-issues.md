@@ -8,51 +8,52 @@ priority: critical
 
 # Telegram node common issues
 
-Here are some common errors and issues with the [Telegram node](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/index.md) and steps to resolve or troubleshoot them.
+ต่อไปนี้คือข้อผิดพลาดและปัญหาที่พบบ่อยกับ [Telegram node](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/index.md) พร้อมวิธีแก้ไขหรือวินิจฉัย
 
 ## Add a bot to a Telegram channel
 
-For a bot to send a message to a channel, you must add the bot to the channel. If you haven't added the bot to the channel, you'll see an error with a description like:
+เพื่อให้ bot ส่งข้อความไปยัง channel ได้ ต้องเพิ่ม bot ลงใน channel ก่อน  
+หากยังไม่เพิ่ม คุณจะเห็น error ประมาณ:  
 `Error: Forbidden: bot is not a participant of the channel`.
 
-To add a bot to a channel:
+วิธีเพิ่ม bot:
 
-1. In the Telegram app, access the target channel and select the channel name.
-2. Label the channel name as **public channel**.
-3. Select **Administrators** > **Add Admin**.
-4. Search for the bot's username and select it.
-5. Select the checkmark on the top-right corner to add the bot to the channel.
+1. เปิด channel ใน Telegram app แล้วแตะชื่อ channel  
+2. ตรวจสอบว่า channel ตั้งเป็น **public channel**  
+3. เลือก **Administrators** > **Add Admin**  
+4. ค้นหา username ของ bot แล้วเลือก  
+5. แตะ ✔️ มุมขวาบนเพื่อยืนยัน
 
 ## Get the Chat ID
 
-You can only use `@channelusername` on public channels. To interact with a Telegram group, you need that group's Chat ID.
+คุณสามารถใช้ `@channelusername` กับ public channel เท่านั้น หากเป็น group จะต้องใช้ Chat ID จริง  
 
-There are three ways to get that ID:
+มี 3 วิธีรับ Chat ID:
 
-1. From the Telegram Trigger: Use the [Telegram Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/index.md) node in your workflow to get a Chat ID. This node can trigger on different events and returns a Chat ID on successful execution.
-2. From your web browser: Open Telegram in a web browser and open the group chat. The group's Chat ID is the series of digits behind the letter "g." Prefix your group Chat ID with a `-` when you enter it in n8n.
-3. Invite Telegram's [@RawDataBot](https://t.me/RawDataBot){:target=_blank .external-link} to the group: Once you add it, the bot outputs a JSON file that includes a `chat` object. The `id` for that object is the group Chat ID. Then remove the RawDataBot from your group.
+1. จาก [Telegram Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/index.md) node ใน workflow  
+2. จากเว็บเบราว์เซอร์: เปิด Telegram เว็บ, เข้ากลุ่ม แล้วดูเลขหลัง “g.” จากนั้นเติม `-` ข้างหน้าเมื่อนำไปใส่ใน n8n  
+3. เชิญ [@RawDataBot](https://t.me/RawDataBot){:target=_blank .external-link} เข้า group แล้วมันจะส่ง JSON ที่มี `chat.id` คือ Chat ID ของกลุ่ม จากนั้นลบ bot ออก
 
 ## Send more than 30 messages per second
 
-The Telegram API has a [limitation](https://core.telegram.org/bots/faq#broadcasting-to-users){:target=_blank .external-link} of sending only 30 messages per second. Follow these steps to send more than 30 messages:
+Telegram API จำกัดการส่ง 30 ข้อความต่อวินาที ให้ทำตามนี้:
 
-1. **Loop Over Items node**: Use the [Loop Over Items](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches.md) node to get at most 30 chat IDs from your database.
-2. **Telegram node**: Connect the Telegram node with the Loop Over Items node. Use the **Expression Editor** to select the Chat IDs from the Loop Over Items node.
-3. **Code node**: Connect the [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md) node with the Telegram node. Use the Code node to wait for a few seconds before fetching the next batch of chat IDs. Connect this node with the Loop Over Items node.
+1. ใช้ [Loop Over Items](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches.md) node ดึง Chat IDs ไม่เกิน 30  
+2. ต่อเข้ากับ Telegram node และใช้ Expression Editor เลือก Chat IDs จาก Loop Over Items  
+3. ใช้ [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md) node รอสักครู่ก่อนดึง batch ถัดไป
 
-You can also use this [workflow](https://n8n.io/workflows/772){:target=_blank .external-link}.
+หรือดู [workflow ตัวอย่าง](https://n8n.io/workflows/772){:target=_blank .external-link}
 
 ## Remove the n8n attribution from sent messages
 
-If you're using the node to [send Telegram messages](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations.md#send-message), the message automatically gets an n8n attribution appended to the end:
+ถ้าใช้ node ในการ [send Telegram messages](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations.md#send-message) ข้อความจะมี attribution ต่อท้าย:
 
 > This message was sent automatically with n8n
 
-To remove this attribution:
+วิธีลบ attribution:
 
-1. In the node's **Additional Fields** section, select **Add Field**.
-2. Select **Append n8n attribution**.
-3. Turn the toggle off.
+1. ใน node’s **Additional Fields** เลือก **Add Field**  
+2. เลือก **Append n8n Attribution**  
+3. ปิด toggle  
 
-Refer to [Send Message additional fields](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations.md#send-message-additional-fields) for more information.
+ดู [Send Message additional fields](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations.md#send-message-additional-fields) สำหรับรายละเอียดเพิ่มเติม

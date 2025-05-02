@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Netscaler ADC node
 
-Use the Netscaler ADC node to automate work in Netscaler ADC, and integrate Netscaler ADC with other applications. n8n has built-in support for a wide range of Netscaler ADC features, including creating and installing certificates and files.
+ใช้ Netscaler ADC node เพื่อทำงานอัตโนมัติใน Netscaler ADC และเชื่อมต่อกับแอปอื่น ๆ. n8n รองรับฟีเจอร์ของ Netscaler ADC เช่น การสร้างและติดตั้ง certificates และไฟล์
 
-On this page, you'll find a list of operations the Netscaler ADC node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Netscaler ADC node รองรับ พร้อมลิงก์สำหรับข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [Netscaler ADC credentials](/integrations/builtin/credentials/netscaleradc.md) for guidance on setting up authentication. 
+ดู [Netscaler ADC credentials](/integrations/builtin/credentials/netscaleradc.md) เพื่อดูวิธีการตั้งค่า authentication
 ///
 
 ## Operations
@@ -32,7 +32,7 @@ Refer to [Netscaler ADC credentials](/integrations/builtin/credentials/netscaler
 
 ## Related resources
 
-Refer to [Netscaler ADC's documentation](https://docs.citrix.com/en-us/citrix-adc/current-release/){:target=_blank .external-link} for more information about the service.
+ดู [Netscaler ADC's documentation](https://docs.citrix.com/en-us/citrix-adc/current-release/){:target=_blank .external-link} เพื่อข้อมูลเพิ่มเติมเกี่ยวกับบริการ
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

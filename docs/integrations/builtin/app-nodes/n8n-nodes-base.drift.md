@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Drift node
 
-Use the Drift node to automate work in Drift, and integrate Drift with other applications. n8n has built-in support for a wide range of Drift features, including creating, updating, deleting, and getting contacts. 
+ใช้ Drift node เพื่อทำงานอัตโนมัติใน Drift และเชื่อมต่อ Drift กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Drift หลายอย่าง เช่น การสร้าง อัปเดต ลบ และดึงข้อมูล contacts
 
-On this page, you'll find a list of operations the Drift node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Drift node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Drift credentials](/integrations/builtin/credentials/drift.md) for guidance on setting up authentication. 
+โปรดดู [Drift credentials](/integrations/builtin/credentials/drift.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 ## Operations

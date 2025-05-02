@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # PostHog node
 
-Use the PostHog node to automate work in PostHog, and integrate PostHog with other applications. n8n has built-in support for a wide range of PostHog features, including creating aliases, events, and identity, as well as tracking pages.
+ใช้ PostHog node เพื่อช่วยทำงานใน PostHog แบบอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันอื่น ๆ. n8n มีการสนับสนุนคุณสมบัติของ PostHog หลากหลาย เช่น การสร้าง aliases, events, identity รวมถึงการติดตาม pages.
 
-On this page, you'll find a list of operations the PostHog node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการของ operations ที่ PostHog node รองรับและลิงก์สำหรับข้อมูลเพิ่มเติม.
 
 /// note | Credentials
-Refer to [PostHog credentials](/integrations/builtin/credentials/posthog.md) for guidance on setting up authentication. 
+ดูรายละเอียดเพิ่มเติมได้ที่ [PostHog credentials](/integrations/builtin/credentials/posthog.md) สำหรับคำแนะนำในการตั้งค่า authentication. 
 ///
 
 ## Operations

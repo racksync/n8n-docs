@@ -8,12 +8,12 @@ priority: medium
 
 # WooCommerce node
 
-Use the WooCommerce node to automate work in WooCommerce, and integrate WooCommerce with other applications. n8n has built-in support for a wide range of WooCommerce features, including creating and deleting customers, orders, and products. 
+ใช้ WooCommerce node ในการทำงานอัตโนมัติใน WooCommerce และเชื่อมต่อ WooCommerce กับแอปพลิเคชันอื่น ๆ. n8n รองรับฟีเจอร์ของ WooCommerce หลากหลาย เช่น การสร้างและการลบ customers, orders และ products.
 
-On this page, you'll find a list of operations the WooCommerce node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการของ operations ที่ WooCommerce node รองรับและลิงก์ไปยัง resource เพิ่มเติม.
 
 /// note | Credentials
-Refer to [WooCommerce credentials](/integrations/builtin/credentials/woocommerce.md) for guidance on setting up authentication. 
+ดู [WooCommerce credentials](/integrations/builtin/credentials/woocommerce.md) สำหรับคำแนะนำในการตั้งค่า authentication. 
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

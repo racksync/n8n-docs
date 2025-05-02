@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Rocket.Chat node
 
-Use the Rocket.Chat node to automate work in Rocket.Chat, and integrate Rocket.Chat with other applications. n8n supports posting messages to channels, and sending direct messages, with Rocket.Chat. 
+ใช้ Rocket.Chat node ในการอัตโนมัติงานใน Rocket.Chat และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ. n8n รองรับการส่งข้อความไปยัง channels และการส่ง direct messages ผ่าน Rocket.Chat.
 
-On this page, you'll find a list of operations the Rocket.Chat node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Rocket.Chat node รองรับ พร้อมทั้งลิงก์ไปยัง resources เพิ่มเติม.
 
 /// note | Credentials
-Refer to [Rocket.Chat credentials](/integrations/builtin/credentials/rocketchat.md) for guidance on setting up authentication. 
+ดู [Rocket.Chat credentials](/integrations/builtin/credentials/rocketchat.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

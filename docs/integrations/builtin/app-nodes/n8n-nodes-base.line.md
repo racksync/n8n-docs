@@ -14,12 +14,12 @@ LINE Notify is discontinuing service as of April 1st 2025 and this node will no 
 ///
 <!-- vale on -->
 
-Use the Line node to automate work in Line, and integrate Line with other applications. n8n has built-in support for a wide range of Line features, including sending notifications. 
+ใช้ Line node ในการทำงานอัตโนมัติใน Line และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ โดย n8n รองรับการส่ง notifications ไปยังผู้ใช้หรือกลุ่ม.
 
-On this page, you'll find a list of operations the Line node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Line node รองรับและลิงก์ไปยังข้อมูลเพิ่มเติม.
 
 /// note | Credentials
-Refer to [Line credentials](/integrations/builtin/credentials/line.md) for guidance on setting up authentication. 
+ดู [Line credentials](/integrations/builtin/credentials/line.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

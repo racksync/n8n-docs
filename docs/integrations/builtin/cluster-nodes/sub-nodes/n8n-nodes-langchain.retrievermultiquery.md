@@ -8,15 +8,15 @@ priority: medium
 
 # MultiQuery Retriever node
 
-The MultiQuery Retriever node automates the process of prompt tuning by using an LLM to generate multiple queries from different perspectives for a given user input query.
+MultiQuery Retriever node จะช่วย automate การปรับ prompt โดยใช้ LLM สร้าง query หลายแบบจากมุมมองต่างๆ สำหรับ input query ที่ผู้ใช้กรอกเข้ามา
 
-On this page, you'll find the node parameters for the MultiQuery Retriever node, and links to more resources.
+ในหน้านี้จะมี parameter ของ node MultiQuery Retriever และลิงก์ resource อื่นๆ ที่เกี่ยวข้อง
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node options
 
-* **Query Count**: Enter how many different versions of the query to generate.
+* **Query Count**: ใส่จำนวน query ที่ต้องการให้สร้าง (แต่ละอันจะต่างมุมมองกัน)
 
 ## Templates and examples
 
@@ -25,7 +25,7 @@ On this page, you'll find the node parameters for the MultiQuery Retriever node,
 
 ## Related resources
 
-Refer to [LangChain's retriever conceptual documentation](https://js.langchain.com/docs/concepts/retrievers){:target=_blank .external-link} and [LangChain's multiquery retriever API documentation](https://v03.api.js.langchain.com/classes/langchain.retrievers_multi_query.MultiQueryRetriever.html){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมได้ที่ [LangChain's retriever conceptual documentation](https://js.langchain.com/docs/concepts/retrievers){:target=_blank .external-link} และ [LangChain's multiquery retriever API documentation](https://v03.api.js.langchain.com/classes/langchain.retrievers_multi_query.MultiQueryRetriever.html){:target=_blank .external-link}
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

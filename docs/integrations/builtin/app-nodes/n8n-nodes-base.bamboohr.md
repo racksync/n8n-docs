@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # BambooHR node
 
-Use the BambooHR node to automate work in BambooHR, and integrate BambooHR with other applications. n8n has built-in support for a wide range of BambooHR features, including creating, deleting, downloading, and getting company reports, employee documents, and files.
+ใช้ BambooHR node เพื่อทำงานอัตโนมัติใน BambooHR และ integrate BambooHR กับแอปพลิเคชันอื่นๆ n8n มีการรองรับในตัวสำหรับฟีเจอร์ต่างๆ ของ BambooHR รวมถึงการสร้าง, ลบ, ดาวน์โหลด, และดึง company reports, employee documents, และ files
 
-On this page, you'll find a list of operations the BambooHR node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ BambooHR node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [BambooHR credentials](/integrations/builtin/credentials/bamboohr.md) for guidance on setting up authentication. 
+อ้างอิง [BambooHR credentials](/integrations/builtin/credentials/bamboohr.md) สำหรับคำแนะนำในการตั้งค่า authentication
 ///
 
 ## Operations

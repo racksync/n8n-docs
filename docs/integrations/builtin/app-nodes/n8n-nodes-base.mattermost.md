@@ -8,12 +8,12 @@ priority: medium
 
 # Mattermost node
 
-Use the Mattermost node to automate work in Mattermost, and integrate Mattermost with other applications. n8n has built-in support for a wide range of Mattermost features, including creating, deleting, and getting channels, and users, as well as posting messages, and adding reactions.
+ใช้ Mattermost node ในการทำงานอัตโนมัติใน Mattermost และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ โดย n8n รองรับการสร้าง, ลบ และดึงข้อมูล channels, users รวมถึงการโพสต์ messages และการเพิ่ม reactions.
 
-On this page, you'll find a list of operations the Mattermost node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Mattermost node รองรับและลิงก์ไปยังข้อมูลเพิ่มเติม.
 
 /// note | Credentials
-Refer to [Mattermost credentials](/integrations/builtin/credentials/mattermost.md) for guidance on setting up authentication. 
+ดู [Mattermost credentials](/integrations/builtin/credentials/mattermost.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

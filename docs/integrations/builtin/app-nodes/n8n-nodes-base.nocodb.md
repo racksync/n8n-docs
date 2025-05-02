@@ -8,12 +8,12 @@ priority: medium
 
 # NocoDB node
 
-Use the NocoDB node to automate work in NocoDB, and integrate NocoDB with other applications. n8n has built-in support for a wide range of NocoDB features, including creating, updating, deleting, and retrieving rows. 
+ใช้ NocoDB node เพื่อทำงานอัตโนมัติใน NocoDB และเชื่อมต่อกับแอปอื่น ๆ. n8n รองรับฟีเจอร์ของ NocoDB เช่น การสร้าง, การอัปเดต, การลบ และการดึงข้อมูล rows
 
-On this page, you'll find a list of operations the NocoDB node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ NocoDB node รองรับ พร้อมลิงก์สำหรับข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [NocoDB credentials](/integrations/builtin/credentials/nocodb.md) for guidance on setting up authentication. 
+ดู [NocoDB credentials](/integrations/builtin/credentials/nocodb.md) เพื่อดูวิธีการตั้งค่า authentication
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
@@ -34,6 +34,6 @@ Refer to [NocoDB credentials](/integrations/builtin/credentials/nocodb.md) for g
 
 ## Relates resources
 
-Refer to [NocoDB's documentation](https://docs.nocodb.com/){:target=_blank .external-link} for more information about the service.
+ดู [NocoDB's documentation](https://docs.nocodb.com/){:target=_blank .external-link} เพื่อข้อมูลเพิ่มเติมเกี่ยวกับบริการ
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

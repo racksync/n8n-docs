@@ -10,17 +10,17 @@ contentType: [integration, reference]
 # HTTP Request Tool node
 
 /// warning | Legacy tool version
-New instances of the HTTP Request tool node that you add to workflows use the standard [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) node as a tool. This page is describes the legacy, standalone HTTP Request tool node.
+ถ้าคุณเพิ่ม HTTP Request tool node ใหม่ใน workflow ตอนนี้จะใช้ node [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) แบบมาตรฐานเป็น tool อัตโนมัติ หน้านี้อธิบายเฉพาะเวอร์ชัน legacy ของ HTTP Request tool node
 
-You can identify which tool version is in your workflow by checking if the node has an **Add option** property when you open the node on the canvas. If that button is present, you're using the new version, not the one described on this page.
+คุณสามารถดูว่า workflow ของคุณใช้ tool เวอร์ชันไหนได้โดยดูว่ามีปุ่ม **Add option** ใน node หรือไม่ ถ้ามีปุ่มนี้ แสดงว่าคุณใช้เวอร์ชันใหม่ ไม่ใช่เวอร์ชันที่อธิบายไว้ในหน้านี้
 ///
 
-The HTTP Request tool works just like the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) node, but it's designed to be used with an [AI agent](/glossary.md#ai-agent) as a tool to collect information from a website or API.
+HTTP Request tool ทำงานเหมือนกับ [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) node ปกติ แต่ถูกออกแบบมาให้ใช้กับ [AI agent](/glossary.md#ai-agent) เป็น tool เพื่อดึงข้อมูลจากเว็บไซต์หรือ API
 
-On this page, you'll find a list of operations the HTTP Request node supports and links to more resources.
+ในหน้านี้จะมีรายการ operation ที่ HTTP Request node รองรับ และลิงก์ไปยัง resource อื่นๆ
 
 /// note | Credentials
-Refer to [HTTP Request credentials](/integrations/builtin/credentials/httprequest.md) for guidance on setting up authentication. 
+ดูวิธีตั้งค่า authentication ได้ที่ [HTTP Request credentials](/integrations/builtin/credentials/httprequest.md)
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"

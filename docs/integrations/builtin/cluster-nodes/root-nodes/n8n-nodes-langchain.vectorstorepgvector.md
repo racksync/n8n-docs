@@ -7,43 +7,43 @@ priority: medium
 
 # PGVector Vector Store node
 
-PGVector is an extension of Postgresql. Use this node to interact with the PGVector tables in your Postgresql database. You can insert documents into a vector table, get documents from a vector table, retrieve documents to provide them to a retriever connected to a [chain](/glossary.md#ai-chain), or connect directly to an [agent](/glossary.md#ai-agent) as a [tool](/glossary.md#ai-tool).
+PGVector เป็น extension ของ Postgresql ใช้ node นี้เพื่อโต้ตอบกับตาราง PGVector ใน Postgresql database ของคุณ คุณสามารถใส่ documents เข้าไปใน vector table, ดึง documents จาก vector table, เรียกดู documents เพื่อส่งต่อไปยัง retriever ที่เชื่อมต่อกับ [chain](/glossary.md#ai-chain) หรือเชื่อมต่อโดยตรงกับ [agent](/glossary.md#ai-agent) ในฐานะ [tool](/glossary.md#ai-tool)
 
-On this page, you'll find the node parameters for the PGVector node, and links to more resources.
+ในหน้านี้ คุณจะพบ node parameters สำหรับ PGVector node และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/postgres.md).
+คุณสามารถดูข้อมูล authentication สำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/postgres.md)
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node usage patterns
 
-You can use the PGVector Vector Store node in the following patterns.
+คุณสามารถใช้ PGVector Vector Store node ในรูปแบบต่อไปนี้
 
 ### Use as a regular node to insert and retrieve documents
 
-You can use the PGVector Vector Store as a regular node to insert or get documents. This pattern places the PGVector Vector Store in the regular connection flow without using an agent.
+คุณสามารถใช้ PGVector Vector Store เป็น node ปกติเพื่อ insert หรือ get documents รูปแบบนี้จะวาง PGVector Vector Store ไว้ใน flow การเชื่อมต่อปกติโดยไม่ต้องใช้ agent
 
-You can see an example of this in scenario 1 of [this template](https://n8n.io/workflows/2621-ai-agent-to-chat-with-files-in-supabase-storage/) (the template uses the Supabase Vector Store, but the pattern is the same).
+คุณสามารถดูตัวอย่างได้ใน scenario 1 ของ [template นี้](https://n8n.io/workflows/2621-ai-agent-to-chat-with-files-in-supabase-storage/) (template ใช้ Supabase Vector Store แต่รูปแบบเหมือนกัน)
 
 ### Connect directly to an AI agent as a tool
 
-You can connect the PGVector Vector Store node directly to the tool connector of an [AI agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) to use a vector store as a resource when answering queries.
+คุณสามารถเชื่อมต่อ PGVector Vector Store node โดยตรงกับ tool connector ของ [AI agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) เพื่อใช้ vector store เป็น resource เมื่อตอบคำถาม
 
-Here, the connection would be: AI agent (tools connector) -> PGVector Vector Store node.
+ในกรณีนี้ การเชื่อมต่อจะเป็น: AI agent (tools connector) -> PGVector Vector Store node
 
 ### Use a retriever to fetch documents
 
-You can use the [Vector Store Retriever](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) node with the PGVector Vector Store node to fetch documents from the PGVector Vector Store node. This is often used with the [Question and Answer Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa/index.md) node to fetch documents from the vector store that match the given chat input.
+คุณสามารถใช้ [Vector Store Retriever](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) node ร่วมกับ PGVector Vector Store node เพื่อดึง documents จาก PGVector Vector Store node ซึ่งมักใช้กับ [Question and Answer Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa/index.md) node เพื่อดึง documents จาก vector store ที่ตรงกับ input ของ chat ที่กำหนด
 
-An [example of the connection flow](https://n8n.io/workflows/1960-ask-questions-about-a-pdf-using-ai/) (the linked example uses Pinecone, but the pattern is the same) would be: Question and Answer Chain (Retriever connector) -> Vector Store Retriever (Vector Store connector) -> PGVector Vector Store.
+[ตัวอย่างของ flow การเชื่อมต่อ](https://n8n.io/workflows/1960-ask-questions-about-a-pdf-using-ai/) (ตัวอย่างที่ลิงก์ใช้ Pinecone แต่รูปแบบเหมือนกัน) จะเป็น: Question and Answer Chain (Retriever connector) -> Vector Store Retriever (Vector Store connector) -> PGVector Vector Store
 
 ### Use the Vector Store Question Answer Tool to answer questions
 
-Another pattern uses the [Vector Store Question Answer Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore.md) to summarize results and answer questions from the PGVector Vector Store node. Rather than connecting the PGVector Vector Store directly as a tool, this pattern uses a tool specifically designed to summarizes data in the vector store.
+อีกรูปแบบหนึ่งคือการใช้ [Vector Store Question Answer Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore.md) เพื่อสรุปผลลัพธ์และตอบคำถามจาก PGVector Vector Store node แทนที่จะเชื่อมต่อ PGVector Vector Store โดยตรงในฐานะ tool รูปแบบนี้จะใช้ tool ที่ออกแบบมาโดยเฉพาะเพื่อสรุปข้อมูลใน vector store
 
-The [connections flow](https://n8n.io/workflows/2465-building-your-first-whatsapp-chatbot/) (the linked example uses the Simple Vector Store, but the pattern is the same) in this case would look like this: AI agent (tools connector) -> Vector Store Question Answer Tool (Vector Store connector) -> Simple Vector store.
+[flow การเชื่อมต่อ](https://n8n.io/workflows/2465-building-your-first-whatsapp-chatbot/) (ตัวอย่างที่ลิงก์ใช้ Simple Vector Store แต่รูปแบบเหมือนกัน) ในกรณีนี้จะมีลักษณะดังนี้: AI agent (tools connector) -> Vector Store Question Answer Tool (Vector Store connector) -> Simple Vector store
 
 ## Node parameters
 
@@ -53,43 +53,43 @@ The [connections flow](https://n8n.io/workflows/2465-building-your-first-whatsap
 ### Get Many parameters
 <!-- vale on -->
 
-* **Table name**: Enter the name of the table you want to query.
-* **Prompt**: Enter your search query.
-* **Limit**: Enter a number to set how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
+*   **Table name**: ป้อนชื่อตารางที่คุณต้องการ query
+*   **Prompt**: ป้อนคำค้นหา (search query) ของคุณ
+*   **Limit**: ป้อนตัวเลขเพื่อกำหนดจำนวนผลลัพธ์ที่จะดึงจาก vector store ตัวอย่างเช่น ตั้งค่าเป็น `10` เพื่อรับผลลัพธ์ที่ดีที่สุดสิบรายการ
 
 ### Insert Documents parameters
 
-* **Table name**: Enter the name of the table you want to query.
+*   **Table name**: ป้อนชื่อตารางที่คุณต้องการ query
 
 ### Retrieve Documents parameters (As Vector Store for Chain/Tool)
 
-* **Table name**: Enter the name of the table you want to query.
+*   **Table name**: ป้อนชื่อตารางที่คุณต้องการ query
 
 ### Retrieve Documents (As Tool for AI Agent) parameters
 
-* **Name**: The name of the vector store.
-* **Description**: Explain to the LLM what this tool does. A good, specific description allows LLMs to produce expected results more often.
-* **Table Name**: Enter the PGVector table to use.
-* **Limit**: Enter how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
+*   **Name**: ชื่อของ vector store
+*   **Description**: อธิบายให้ LLM ทราบว่า tool นี้ทำอะไร คำอธิบายที่ดีและเฉพาะเจาะจงช่วยให้ LLM สร้างผลลัพธ์ที่คาดหวังได้บ่อยขึ้น
+*   **Table Name**: ป้อนตาราง PGVector ที่จะใช้
+*   **Limit**: ป้อนจำนวนผลลัพธ์ที่ต้องการดึงจาก vector store ตัวอย่างเช่น ตั้งค่าเป็น `10` เพื่อรับผลลัพธ์ที่ดีที่สุดสิบรายการ
 
 ## Node options
 
 ### Collection
 
-A way to separate datasets in PGVector. This creates a separate table and column to keep track of which collection a vector belongs to.
+วิธีแยก datasets ใน PGVector สิ่งนี้จะสร้างตารางและคอลัมน์แยกต่างหากเพื่อติดตามว่า vector ใดอยู่ใน collection ใด
 
-* **Use Collection**: Select whether to use a collection (turned on) or not (turned off).
-* **Collection Name**: Enter the name of the collection you want to use.
-* **Collection Table Name**: Enter the name of the table to store collection information in.
+*   **Use Collection**: เลือกว่าจะใช้ collection (เปิด) หรือไม่ (ปิด)
+*   **Collection Name**: ป้อนชื่อ collection ที่คุณต้องการใช้
+*   **Collection Table Name**: ป้อนชื่อตารางที่จะจัดเก็บข้อมูล collection
 
 ### Column Names
 
-The following options specify the names of the columns to store the vectors and corresponding information in:
+ตัวเลือกต่อไปนี้ระบุชื่อคอลัมน์ที่จะจัดเก็บ vectors และข้อมูลที่เกี่ยวข้อง:
 
-* **ID Column Name**
-* **Vector Column Name**
-* **Content Column Name**
-* **Metadata Column Name**
+*   **ID Column Name**
+*   **Vector Column Name**
+*   **Content Column Name**
+*   **Metadata Column Name**
 
 ### Metadata Filter
 
@@ -102,7 +102,7 @@ The following options specify the names of the columns to store the vectors and 
 
 ## Related resources
 
-Refer to [LangChain's PGVector documentation](https://js.langchain.com/docs/integrations/vectorstores/pgvector){:target=_blank .external-link} for more information about the service.
+อ้างอิง [เอกสาร PGVector ของ LangChain](https://js.langchain.com/docs/integrations/vectorstores/pgvector){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการ
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 

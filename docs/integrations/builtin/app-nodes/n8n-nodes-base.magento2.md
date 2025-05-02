@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Magento 2 node
 
-Use the Magento 2 node to automate work in Magento 2, and integrate Magento 2 with other applications. n8n has built-in support for a wide range of Magento 2 features, including creating, updating, deleting, and getting customers, invoices, orders, and projects. 
+ใช้ Magento 2 node ในการทำงานอัตโนมัติใน Magento 2 และเชื่อมต่อกับแอปพลิเคชันอื่น ๆ ได้อย่างง่ายดาย โดย n8n รองรับฟีเจอร์หลัก เช่น การสร้าง, อัปเดต, ลบ และดึงข้อมูลลูกค้า, invoices, orders และ products.
 
-On this page, you'll find a list of operations the Magento 2 node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Magento 2 node รองรับและลิงก์ไปยังข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [Magento 2 credentials](/integrations/builtin/credentials/magento2.md) for guidance on setting up authentication. 
+ดู [Magento 2 credentials] สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations

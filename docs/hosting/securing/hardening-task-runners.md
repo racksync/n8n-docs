@@ -7,8 +7,8 @@ contentType: howto
 
 # Hardening task runners
 
-[Task runners](/hosting/configuration/task-runners.md) are responsible for executing code from the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md). While Code node executions are secure, you can follow these recommendations to further harden your task runners.
+[Task runners](/hosting/configuration/task-runners.md) มีหน้าที่รันโค้ดจาก [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md) ถึงแม้ Code node จะรันอย่างปลอดภัยอยู่แล้ว แต่คุณสามารถทำตามคำแนะนำนี้เพื่อเพิ่มความปลอดภัยให้ task runners ได้อีก
 
 ## Run task runners as sidecars in external mode
 
-To increase the isolation between the core n8n process and code in the Code node, run task runners in [external mode](/hosting/configuration/task-runners.md#setting-up-external-mode). External task runners launch as separate containers, providing a fully isolated environment to execute the JavaScript defined in the Code node.
+เพื่อเพิ่ม isolation ระหว่าง core n8n process กับโค้ดใน Code node ให้รัน task runners แบบ [external mode](/hosting/configuration/task-runners.md#setting-up-external-mode) ซึ่งจะ launch เป็น container แยกต่างหาก ทำให้โค้ด JavaScript ที่รันใน Code node ถูกแยกออกจากกันอย่างสมบูรณ์

@@ -8,37 +8,37 @@ priority: high
 
 # Compare Datasets
 
-The Compare Datasets node helps you compare data from two input streams.
+Compare Datasets node ช่วยให้คุณเปรียบเทียบข้อมูลจาก input สองชุดได้ง่ายๆ
 
 ## Node parameters
 
-1. Decide which fields to compare. In **Input A Field**, enter the name of the field you want to use from input stream A. In **Input B Field**, enter the name of the field you want to use from input stream B. 
-2. **Optional**: You can compare by multiple fields. Select **Add Fields to Match** to set up more comparisons.
-3. Choose how to handle differences between the datasets. In **When There Are Differences**, select one of the following:
-	* **Use Input A Version** to treat input stream A as the source of truth.
-	* **Use Input B Version** to treat input stream B as the source of truth.
-	* **Use a Mix of Versions** to use different inputs for different fields.
-		* Use **Prefer** to select either **Input A Version** or **Input B Version** as the main source of truth.
-		* Enter input fields that are exceptions to **For Everything Except** to pull from the other input source. To add multiple input fields, enter a comma-separated list.
-	* **Include Both Versions** to include both input streams in the output, which may make the structure more complex.
-4. Decide whether to use **Fuzzy Compare**. When turned on, the comparison will tolerate small type differences when comparing fields. For example, the number 3 and the string `3` are treated as the same with **Fuzzy Compare** turned on, but wouldn't be treated the same with it turned off.
+1. เลือกว่าจะเปรียบเทียบ field ไหน ใน **Input A Field** ให้ใส่ชื่อ field ที่ต้องการใช้จาก input stream A ส่วน **Input B Field** ให้ใส่ชื่อ field ที่ต้องการใช้จาก input stream B 
+2. **Optional**: ถ้าอยากเปรียบเทียบหลาย field ก็เลือก **Add Fields to Match** เพื่อเพิ่ม field ที่จะเปรียบเทียบได้เลย
+3. เลือกว่าจะจัดการกับความแตกต่างของ dataset ยังไง ใน **When There Are Differences** เลือกได้ดังนี้:
+	* **Use Input A Version** จะถือว่า input stream A คือข้อมูลหลัก
+	* **Use Input B Version** จะถือว่า input stream B คือข้อมูลหลัก
+	* **Use a Mix of Versions** จะเลือกใช้ input แต่ละอันสำหรับแต่ละ field ได้
+		* ใช้ **Prefer** เพื่อเลือกว่าจะให้ **Input A Version** หรือ **Input B Version** เป็นหลัก
+		* ใส่ชื่อ field ที่เป็นข้อยกเว้นใน **For Everything Except** เพื่อดึงข้อมูลจาก input อีกฝั่ง (ใส่หลาย field ได้โดยคั่นด้วย comma)
+	* **Include Both Versions** จะรวมข้อมูลจากทั้งสอง input ใน output ซึ่งอาจทำให้โครงสร้างซับซ้อนขึ้น
+4. เลือกว่าจะใช้ **Fuzzy Compare** ไหม ถ้าเปิดไว้ การเปรียบเทียบจะยืดหยุ่นเรื่อง type มากขึ้น เช่น 3 กับ "3" จะถือว่าเหมือนกัน แต่ถ้าปิดไว้จะถือว่าไม่เหมือนกัน
 
 ## Understand item comparison
 
-Item comparison is a two stage process:
+การเปรียบเทียบ item จะมี 2 ขั้นตอน:
 
-1. n8n checks if the values of the fields you selected to compare match across both inputs.
-2. If the fields to compare match, n8n then compares all fields within the items, to determine if the items are the same or different.
+1. n8n จะเช็คค่าของ field ที่เลือกเปรียบเทียบว่าตรงกันไหมระหว่าง input ทั้งสอง
+2. ถ้า field ที่เปรียบเทียบตรงกัน n8n จะเปรียบเทียบ field ทั้งหมดใน item นั้นๆ เพื่อดูว่าข้อมูลเหมือนกันหรือไม่
 
 ## Node options
 
-Use the node **Options** to refine your comparison or tweak comparison behavior.
+ใช้ **Options** ของ node เพื่อปรับแต่งการเปรียบเทียบหรือเปลี่ยนพฤติกรรมการเปรียบเทียบ
 
 ### Fields to Skip Comparing
 
-Enter field names that you want to ignore in the comparison.
+ใส่ชื่อ field ที่ไม่อยากให้เอามาเปรียบเทียบ
 
-For example, if you compare the two datasets below using `person.language` as the **Fields to Match**, n8n returns them as different. If you add `person.name` to **Fields to Skip Comparing**, n8n returns them as matching.
+ตัวอย่าง ถ้าเปรียบเทียบ dataset ด้านล่างโดยใช้ `person.language` เป็น **Fields to Match** n8n จะบอกว่าข้อมูลต่างกัน แต่ถ้าเพิ่ม `person.name` ใน **Fields to Skip Comparing** n8n จะถือว่าข้อมูลเหมือนกัน
 
 ```json
 	// Input 1
@@ -93,13 +93,13 @@ For example, if you compare the two datasets below using `person.language` as th
 
 ### Disable Dot Notation
 
-Whether to disallow referencing child fields using `parent.child` in the field name (turned on) or allow it (turned off, default).
+เลือกว่าจะปิดการอ้างถึง field ลูกด้วย `parent.child` ในชื่อ field หรือไม่ (เปิดไว้คือปิดการอ้างถึง, ปิดไว้คือใช้ได้ตามปกติ)
 
 ### Multiple Matches
 
-Choose how to handle duplicate data. The default is **Include All Matches**. You can choose **Include First Match Only**.
+เลือกว่าจะจัดการกับข้อมูลซ้ำยังไง ค่า default คือ **Include All Matches** หรือจะเลือก **Include First Match Only** ก็ได้
 
-For example, given these two datasets:
+ตัวอย่าง ถ้ามี dataset แบบนี้:
 ```json
 	// Input 1
 	[
@@ -145,19 +145,18 @@ For example, given these two datasets:
 	]
 ```
 
-n8n returns three items in the **Same Branch** tab. The data is the same in both branches.
+n8n จะคืนค่า 3 item ใน **Same Branch** tab ข้อมูลเหมือนกันทั้งสอง branch
 
-If you select **Include First Match Only**, n8n returns two items, in the **Same Branch** tab. The data is the same in both branches, but n8n only returns the first occurrence of the matching "apple" items.
-
+ถ้าเลือก **Include First Match Only** n8n จะคืนค่า 2 item ใน **Same Branch** tab ข้อมูลเหมือนกันแต่จะเอาเฉพาะอันแรกของที่ซ้ำ
 
 ## Understand the output
 
-There are four output options:
+output จะมี 4 แบบ:
 
-* **In A only Branch**: Contains data that occurs only in the first input.
-* **Same Branch**: Contains data that's the same in both inputs.
-* **Different Branch**: Contains data that's different between inputs.
-* **In B only Branch**: Contains data that occurs only in the second output.
+* **In A only Branch**: ข้อมูลที่มีเฉพาะใน input แรก
+* **Same Branch**: ข้อมูลที่เหมือนกันทั้งสอง input
+* **Different Branch**: ข้อมูลที่ต่างกันระหว่าง input
+* **In B only Branch**: ข้อมูลที่มีเฉพาะใน input ที่สอง
 
 ## Templates and examples
 

@@ -8,27 +8,27 @@ priority: medium
 
 # Embeddings HuggingFace Inference node
 
-Use the Embeddings HuggingFace Inference node to generate [embeddings](/glossary.md#ai-embedding) for a given text.
+ใช้ Embeddings HuggingFace Inference node เพื่อสร้าง [embeddings](/glossary.md#ai-embedding) สำหรับข้อความที่กำหนด
 
-On this page, you'll find the node parameters for the Embeddings HuggingFace Inference, and links to more resources.
+ในหน้านี้ คุณจะพบพารามิเตอร์ของโหนดสำหรับ Embeddings HuggingFace Inference และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/huggingface.md).
+คุณสามารถดูข้อมูลการยืนยันตัวตนสำหรับโหนดนี้ได้ [ที่นี่](/integrations/builtin/credentials/huggingface.md)
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node parameters
 
-* **Model**: Select the model to use to generate the embedding.
+* **Model**: เลือกรุ่น (model) ที่จะใช้สร้าง embedding
 
-Refer to the [Hugging Face models documentation](https://huggingface.co/models?other=embeddings){:target=_blank .external-link} for available models.
+อ้างอิง [เอกสารประกอบ Hugging Face models](https://huggingface.co/models?other=embeddings){:target=_blank .external-link} สำหรับรุ่นที่มีให้ใช้งาน
 
 ## Node options
 
-* **Custom Inference Endpoint**: Enter the URL of your deployed model, hosted by HuggingFace. If you set this, n8n ignores the **Model Name**.
+* **Custom Inference Endpoint**: ป้อน URL ของโมเดลที่คุณ deploy ซึ่งโฮสต์โดย HuggingFace หากคุณตั้งค่านี้ n8n จะไม่สนใจ **Model Name**
 
-Refer to [HuggingFace's guide to inference](https://huggingface.co/inference-endpoints){:target=_blank .external-link} for more information.
+อ้างอิง [คู่มือ inference ของ HuggingFace](https://huggingface.co/inference-endpoints){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 
 ## Templates and examples
 
@@ -37,7 +37,7 @@ Refer to [HuggingFace's guide to inference](https://huggingface.co/inference-end
 
 ## Related resources
 
-Refer to [Langchain's HuggingFace Inference embeddings documentation](https://js.langchain.com/docs/integrations/text_embedding/hugging_face_inference/){:target=_blank .external-link} for more information about the service.
+อ้างอิง [เอกสารประกอบ HuggingFace Inference embeddings ของ Langchain](https://js.langchain.com/docs/integrations/text_embedding/hugging_face_inference/){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

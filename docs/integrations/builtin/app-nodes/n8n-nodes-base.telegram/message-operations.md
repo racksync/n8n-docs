@@ -8,28 +8,30 @@ priority: critical
 
 # Telegram node Message operations
 
-Use these operations to send, edit, and delete messages in a chat; send files to a chat; and pin/unpin message from a chat. Refer to [Telegram](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/index.md) for more information on the Telegram node itself.
+ใช้ operations เหล่านี้เพื่อส่ง แก้ไข และลบข้อความใน chat; ส่งไฟล์ไปยัง chat; และปัก/ปลดปักข้อความใน chat  
+ดูรายละเอียดเพิ่มเติมเกี่ยวกับ Telegram node ได้ที่ [Telegram](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/index.md)
 
 /// note | Add bot to channel
-To use most of these operations, you must add your bot to a channel so that it can send messages to that channel. Refer to [Common Issues | Add a bot to a Telegram channel](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/common-issues.md#add-a-bot-to-a-telegram-channel) for more information.
+เพื่อใช้ operations ส่วนใหญ่เหล่านี้ คุณต้องเพิ่ม bot ของคุณลงใน channel ก่อน  
+ดูรายละเอียดเพิ่มเติมได้ที่ [Common Issues | Add a bot to a Telegram channel](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/common-issues.md#add-a-bot-to-a-telegram-channel)
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 s
 ## Delete Chat Message
 
-Use this operation to delete a message from chat using the Bot API [deleteMessage](https://core.telegram.org/bots/api#deletemessage){:target=_blank .external-link} method.
+ใช้ operation นี้เพื่อลบข้อความจาก chat ผ่าน Bot API [deleteMessage](https://core.telegram.org/bots/api#deletemessage){:target=_blank .external-link}
 
-Enter these parameters:
+ป้อนพารามิเตอร์เหล่านี้:
 
-* **Credential to connect with**: Create or select an existing [Telegram credential](/integrations/builtin/credentials/telegram.md).
-* **Resource**: Select **Message**.
-* **Operation**: Select **Delete Chat Message**.
-* **Chat ID**: Enter the Chat ID or username of the channel you wish to delete in the format `@channelusername`.
-    * To feed a Chat ID directly into this node, use the [Telegram Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/index.md) node. Refer to [Common Issues | Get the Chat ID](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/common-issues.md#get-the-chat-id) for more information.
-* **Message ID**: Enter the unique identifier of the message you want to delete.
+* **Credential to connect with**: สร้างหรือเลือก [Telegram credential](/integrations/builtin/credentials/telegram.md) ที่มีอยู่  
+* **Resource**: เลือก **Message**  
+* **Operation**: เลือก **Delete Chat Message**  
+* **Chat ID**: ใส่ Chat ID หรือ username ของ channel ที่ต้องการลบ ในรูปแบบ `@channelusername`  
+    * หากต้องการส่ง Chat ID โดยตรง ให้ใช้ [Telegram Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/index.md) แล้วดู [Common Issues | Get the Chat ID](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/common-issues.md#get-the-chat-id)  
+* **Message ID**: ใส่ตัวระบุของข้อความที่ต้องการลบ  
 
-Refer to the Telegram Bot API [deleteMessage](https://core.telegram.org/bots/api#deletemessage){:target=_blank .external-link} documentation for more information.
+ดูเอกสาร Bot API [deleteMessage](https://core.telegram.org/bots/api#deletemessage){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
 
 ## Edit Message Text
 

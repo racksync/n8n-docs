@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # crowd.dev node
 
-Use the crowd.dev node to automate work in crowd.dev and integrate crowd.dev with other applications. n8n has built-in support for a wide range of crowd.dev features, which includes creating, updating, and deleting members, notes, organizations, and tasks.
+ใช้ crowd.dev node เพื่อทำงานอัตโนมัติใน crowd.dev และ integrate crowd.dev กับแอปพลิเคชันอื่นๆ n8n มีการรองรับในตัวสำหรับฟีเจอร์ต่างๆ ของ crowd.dev ซึ่งรวมถึงการสร้าง, อัปเดต, และลบ members, notes, organizations, และ tasks
 
-On this page, you'll find a list of operations the crowd.dev node supports, and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ crowd.dev node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/crowddev.md).
+คุณสามารถดูข้อมูล authentication สำหรับ node นี้ได้ [here](/integrations/builtin/credentials/crowddev.md)
 ///
 
 ## Operations
@@ -54,9 +54,9 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Related resources
 
-n8n provides a trigger node for crowd.dev. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.crowddevtrigger.md).
+n8n มี trigger node สำหรับ crowd.dev คุณสามารถดูเอกสาร trigger node ได้ [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.crowddevtrigger.md)
 
-Refer to [crowd.dev's documentation](https://docs.crowd.dev/reference/getting-started-with-crowd-dev-api){:target=_blank .external-link} for more information about the service.
+อ้างอิง [crowd.dev's documentation](https://docs.crowd.dev/reference/getting-started-with-crowd-dev-api){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับ service นี้
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

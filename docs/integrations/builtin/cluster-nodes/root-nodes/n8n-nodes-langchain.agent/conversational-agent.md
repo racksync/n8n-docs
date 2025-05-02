@@ -8,17 +8,17 @@ priority: critical
 
 # Conversational AI Agent node
 
-The Conversational Agent has human-like conversations. It can maintain context, understand user intent, and provide relevant answers. This agent is typically used for building chatbots, virtual assistants, and customer support systems.
+Conversational Agent มีการสนทนาที่เหมือนมนุษย์ มันสามารถรักษาบริบท เข้าใจเจตนาของผู้ใช้ และให้คำตอบที่เกี่ยวข้อง Agent นี้มักใช้สำหรับการสร้าง chatbots, virtual assistants และระบบสนับสนุนลูกค้า
 
-The Conversational Agent describes [tools](/glossary.md#ai-tool) in the system prompt and parses JSON responses for tool calls. If your preferred AI model doesn't support tool calling or you're handling simpler interactions, this agent is a good general option. It's more flexible but may be less accurate than the [Tools Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent.md).
+Conversational Agent อธิบาย [tools](/glossary.md#ai-tool) ใน system prompt และแยกวิเคราะห์ JSON responses สำหรับการเรียก tool หาก AI model ที่คุณต้องการไม่รองรับการเรียก tool หรือคุณกำลังจัดการกับการโต้ตอบที่ง่ายกว่า agent นี้เป็นตัวเลือกทั่วไปที่ดี มันมีความยืดหยุ่นมากกว่า แต่อาจมีความแม่นยำน้อยกว่า [Tools Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent.md)
 
-Refer to [AI Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) for more information on the AI Agent node itself.
+อ้างอิง [AI Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) สำหรับข้อมูลเพิ่มเติมเกี่ยวกับ AI Agent node เอง
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/use-with-chat-trigger.md"
 
 ## Node parameters
 
-Configure the Conversational Agent using the following parameters.
+กำหนดค่า Conversational Agent โดยใช้ parameters ต่อไปนี้
 
 ### Prompt
 
@@ -30,19 +30,19 @@ Configure the Conversational Agent using the following parameters.
 
 ## Node options
 
-Refine the Conversational Agent node's behavior using these options:
+ปรับแต่งพฤติกรรมของ Conversational Agent node โดยใช้ options เหล่านี้:
 
 ### Human Message
 
-Tell the agent about the tools it can use and add context to the user's input.
+บอก agent เกี่ยวกับ tools ที่สามารถใช้และเพิ่มบริบทให้กับ input ของผู้ใช้
 
-You must include these expressions and variable:
+คุณต้องรวม expressions และ variable เหล่านี้:
 
-* `{tools}`: A LangChain expression that provides a string of the tools you've connected to the Agent. Provide some context or explanation about who should use the tools and how they should use them.
-* `{format_instructions}`: A LangChain expression that provides the schema or format from the output parser node you've connected. Since the instructions themselves are context, you don't need to provide context for this expression.
-* `{{input}}`: A LangChain variable containing the user's prompt. This variable populates with the value of the **Prompt** parameter. Provide some context that this is the user's input.
+* `{tools}`: LangChain expression ที่ให้สตริงของ tools ที่คุณเชื่อมต่อกับ Agent ให้บริบทหรือคำอธิบายเกี่ยวกับว่าใครควรใช้ tools และควรใช้อย่างไร
+* `{format_instructions}`: LangChain expression ที่ให้ schema หรือ format จาก output parser node ที่คุณเชื่อมต่อ เนื่องจาก instructions เองเป็นบริบท คุณไม่จำเป็นต้องให้บริบทสำหรับ expression นี้
+* `{{input}}`: LangChain variable ที่มี prompt ของผู้ใช้ variable นี้จะเติมค่าด้วยค่าของ parameter **Prompt** ให้บริบทว่านี่คือ input ของผู้ใช้
 
-Here's an example of how you might use these strings:
+นี่คือตัวอย่างวิธีที่คุณอาจใช้สตริงเหล่านี้:
 
 Example:
 
@@ -62,7 +62,7 @@ Here is the user's input (remember to respond with a markdown code snippet of a 
 {{input}}
 ```
 
-### System Message 
+### System Message
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/system-message.md"
 
@@ -76,10 +76,10 @@ Here is the user's input (remember to respond with a markdown code snippet of a 
 
 ## Templates and examples
 
-Refer to the main AI Agent node's [Templates and examples](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md#templates-and-examples) section.
+อ้างอิงส่วน [Templates and examples](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md#templates-and-examples) ของ AI Agent node หลัก
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/common-issues.md).
+สำหรับคำถามหรือปัญหาทั่วไปและแนวทางแก้ไขที่แนะนำ โปรดดูที่ [Common issues](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/common-issues.md)
 
 --8<-- "_glossary/ai-glossary.md"

@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # PhantomBuster node
 
-Use the PhantomBuster node to automate work in PhantomBuster, and integrate PhantomBuster with other applications. n8n has built-in support for a wide range of PhantomBuster features, including adding, deleting, and getting agents. 
+ใช้ PhantomBuster node เพื่อช่วยทำงานใน PhantomBuster แบบอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันอื่น ๆ. n8n มีการสนับสนุนคุณสมบัติของ PhantomBuster หลากหลาย เช่น การเพิ่ม, ลบ, และดึงข้อมูล agents.
 
-On this page, you'll find a list of operations the PhantomBuster node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการของ operations ที่ PhantomBuster node รองรับและลิงก์สำหรับข้อมูลเพิ่มเติม.
 
 /// note | Credentials
-Refer to [PhantomBuster credentials](/integrations/builtin/credentials/phantombuster.md) for guidance on setting up authentication. 
+ดูรายละเอียดเพิ่มเติมได้ที่ [PhantomBuster credentials](/integrations/builtin/credentials/phantombuster.md) สำหรับคำแนะนำในการตั้งค่า authentication.
 ///
 
 ## Operations

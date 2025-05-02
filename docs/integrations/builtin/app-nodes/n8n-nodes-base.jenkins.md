@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Jenkins node
 
-Use the Jenkins node to automate work in Jenkins, and integrate Jenkins with other applications. n8n has built-in support for a wide range of Jenkins features, including listing builds, managing instances, and creating and copying jobs. 
+ใช้ Jenkins node เพื่อทำงานอัตโนมัติใน Jenkins และเชื่อมต่อ Jenkins กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Jenkins หลายอย่าง เช่น การแสดงรายการ builds, จัดการ instances, และการสร้างหรือคัดลอก jobs
 
-On this page, you'll find a list of operations the Jenkins node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Jenkins node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Jenkins credentials](/integrations/builtin/credentials/jenkins.md) for guidance on setting up authentication. 
+โปรดดู [Jenkins credentials](/integrations/builtin/credentials/jenkins.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

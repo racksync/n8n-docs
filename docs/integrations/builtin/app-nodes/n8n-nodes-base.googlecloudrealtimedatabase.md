@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Google Cloud Realtime Database node
 
-Use the Google Cloud Realtime Database node to automate work in Google Cloud Realtime Database, and integrate Google Cloud Realtime Database with other applications. n8n has built-in support for a wide range of Google Cloud Realtime Database features, including writing, deleting, getting, and appending databases.
+ใช้ Google Cloud Realtime Database node เพื่อทำงานอัตโนมัติใน Google Cloud Realtime Database และเชื่อมต่อ Google Cloud Realtime Database กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Google Cloud Realtime Database หลายอย่าง เช่น การเขียน ลบ ดึงข้อมูล และต่อท้าย databases
 
-On this page, you'll find a list of operations the Google Cloud Realtime Database node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Google Cloud Realtime Database node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Google Cloud Realtime Database credentials](/integrations/builtin/credentials/google/index.md) for guidance on setting up authentication. 
+โปรดดู [Google Cloud Realtime Database credentials](/integrations/builtin/credentials/google/index.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

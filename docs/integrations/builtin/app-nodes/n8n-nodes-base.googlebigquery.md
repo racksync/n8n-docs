@@ -8,12 +8,12 @@ priority: medium
 
 # Google BigQuery node
 
-Use the Google BigQuery node to automate work in Google BigQuery, and integrate Google BigQuery with other applications. n8n has built-in support for a wide range of Google BigQuery features, including creating, and retrieving records.
+ใช้ Google BigQuery node เพื่อทำงานอัตโนมัติใน Google BigQuery และเชื่อมต่อ Google BigQuery กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Google BigQuery หลายอย่าง เช่น การสร้าง และดึงข้อมูล records
 
-On this page, you'll find a list of operations the Google BigQuery node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Google BigQuery node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Google BigQuery credentials](/integrations/builtin/credentials/google/index.md) for guidance on setting up authentication. 
+โปรดดู [Google BigQuery credentials](/integrations/builtin/credentials/google/index.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
@@ -30,6 +30,6 @@ Refer to [Google BigQuery credentials](/integrations/builtin/credentials/google/
 
 ## Related resources
 
-Refer to [Google BigQuery's documentation](https://cloud.google.com/bigquery/docs/reference/rest){:target=_blank .external-link} for more information about the service.
+โปรดดู [Google BigQuery's documentation](https://cloud.google.com/bigquery/docs/reference/rest){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

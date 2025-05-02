@@ -12,9 +12,9 @@ description: Understand cluster nodes in n8n, and browse the cluster nodes libra
 
 ## Root nodes
 
-Each cluster starts with one [root node](/glossary.md#root-node-n8n).
+Cluster แต่ละอันจะเริ่มต้นด้วย [root node](/glossary.md#root-node-n8n) หนึ่งตัว
 
 ## Sub-nodes
 
-Each root node can have one or more [sub-nodes](/glossary.md#sub-node-n8n) attached to it.
+แต่ละ root node สามารถมี [sub-nodes](/glossary.md#sub-node-n8n) ได้มากกว่าหนึ่งตัวที่เชื่อมต่ออยู่
 

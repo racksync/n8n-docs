@@ -8,29 +8,29 @@ priority: medium
 
 # Mistral Cloud Chat Model node
 
-Use the Mistral Cloud Chat Model node to combine Mistral Cloud's chat models with conversational [agents](/glossary.md#ai-agent).
+ใช้ Mistral Cloud Chat Model node เพื่อใช้งานโมเดลแชทของ Mistral Cloud กับ conversational [agents](/glossary.md#ai-agent)
 
-On this page, you'll find the node parameters for the Mistral Cloud Chat Model node, and links to more resources.
+ในหน้านี้จะมีพารามิเตอร์ของ node Mistral Cloud Chat Model และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/mistral.md).
+คุณสามารถดูข้อมูลการเชื่อมต่อสำหรับ node นี้ได้ [ที่นี่](/integrations/builtin/credentials/mistral.md)
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node parameters
 
-* **Model**: Select the model to use to generate the completion. n8n dynamically loads models from Mistral Cloud and you'll only see the models available to your account.
+* **Model**: เลือกโมเดลที่ต้องการให้สร้างข้อความตอบกลับ n8n จะโหลดโมเดลจาก Mistral Cloud แบบ dynamic คุณจะเห็นเฉพาะโมเดลที่บัญชีของคุณเข้าถึงได้
 
 ## Node options
 
-* **Maximum Number of Tokens**: Enter the maximum number of tokens used, which sets the completion length.
-* **Sampling Temperature**: Use this option to control the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
-* **Timeout**: Enter the maximum request time in milliseconds.
-* **Max Retries**: Enter the maximum number of times to retry a request.
-* **Top P**: Use this option to set the probability the completion should use. Use a lower value to ignore less probable options. 
-* **Enable Safe Mode**: Enable safe mode by injecting a safety prompt at the beginning of the completion. This helps prevent the model from generating offensive content.
-* **Random Seed**: Enter a seed to use for random sampling. If set, different calls will generate deterministic results.
+* **Maximum Number of Tokens**: กำหนดจำนวน tokens สูงสุดที่ใช้ ซึ่งจะเป็นการกำหนดความยาวของข้อความที่โมเดลจะตอบกลับ
+* **Sampling Temperature**: ปรับความสุ่มของการสร้างข้อความ ค่า temperature สูงจะทำให้โมเดลตอบหลากหลายมากขึ้น แต่ก็เสี่ยงต่อการตอบแบบหลุดประเด็น
+* **Timeout**: กำหนดเวลาสูงสุด (ms) ที่จะรอผลลัพธ์
+* **Max Retries**: กำหนดจำนวนครั้งสูงสุดที่ระบบจะลองส่ง request ใหม่
+* **Top P**: กำหนดความน่าจะเป็นรวมที่โมเดลจะใช้ในการเลือก token ถัดไป ค่า Top P ต่ำจะตัดตัวเลือกที่มีความน่าจะเป็นน้อยออก
+* **Enable Safe Mode**: เปิด Safe Mode เพื่อเพิ่มข้อความความปลอดภัยในตอนต้นของการตอบกลับ ช่วยลดโอกาสที่โมเดลจะตอบเนื้อหาที่ไม่เหมาะสม
+* **Random Seed**: กำหนด seed สำหรับการสุ่ม ถ้าตั้งค่าไว้ การเรียกแต่ละครั้งจะได้ผลลัพธ์ที่เหมือนกัน
 
 ## Templates and examples
 
@@ -39,7 +39,7 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Related resources
 
-Refer to [LangChains's Mistral documentation](https://js.langchain.com/docs/integrations/chat/mistral){:target=_blank .external-link} for more information about the service.
+ดูข้อมูลเพิ่มเติมได้ที่ [LangChains's Mistral documentation](https://js.langchain.com/docs/integrations/chat/mistral){:target=_blank .external-link}
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

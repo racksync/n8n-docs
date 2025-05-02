@@ -7,33 +7,33 @@ contentType: howto
 
 # Block access to nodes
 
-For security reasons, you may want to block your users from accessing or working with specific n8n nodes. This is helpful if your users might be untrustworthy.
+ถ้าอยากเพิ่มความปลอดภัย อาจจะต้อง block ไม่ให้ผู้ใช้เข้าถึงหรือใช้งาน nodes บางตัวใน n8n โดยเฉพาะถ้าผู้ใช้อาจไม่น่าไว้ใจ
 
-Use the `NODES_EXCLUDE` environment variable to prevent your users from accessing specific nodes.
+ใช้ environment variable `NODES_EXCLUDE` เพื่อป้องกันไม่ให้ผู้ใช้เข้าถึง nodes ที่ต้องการ
 
 ## Exclude nodes
 
-Update your `NODES_EXCLUDE` environment variable to include an array of strings containing any nodes you want to block your users from using.
+ตั้งค่า `NODES_EXCLUDE` เป็น array ของ string ที่ระบุชื่อ nodes ที่ต้องการ block
 
-For example, setting the variable this way:
+ตัวอย่างเช่น ตั้งค่าตามนี้:
 
 ```
 NODES_EXCLUDE: "[\"n8n-nodes-base.executeCommand\", \"n8n-nodes-base.readWriteFile\"]"
 ```
 
-Blocks the [Execute Command](/integrations/builtin/core-nodes/n8n-nodes-base.executecommand/index.md) and [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md) nodes.
+จะ block [Execute Command](/integrations/builtin/core-nodes/n8n-nodes-base.executecommand/index.md) และ [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md) nodes
 
-Your n8n users won't be able to search for or use these nodes.
+ผู้ใช้ n8n จะไม่สามารถค้นหาหรือใช้งาน nodes เหล่านี้ได้
 
 ## Suggested nodes to block
 
-The nodes that can pose security risks vary based on your use case and user profile. Here are some nodes you might want to start with:
+nodes ที่เสี่ยงต่อความปลอดภัยขึ้นอยู่กับ use case และ profile ของผู้ใช้ ลองเริ่มต้น block nodes เหล่านี้ก่อน:
 
 * [Execute Command](/integrations/builtin/core-nodes/n8n-nodes-base.executecommand/index.md)
 * [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md)
 
 ## Related resources
 
-Refer to [Nodes environment variables](/hosting/configuration/environment-variables/nodes.md) for more information on this environment variable.
+ดูข้อมูลเพิ่มเติมเกี่ยวกับ environment variable นี้ได้ที่ [Nodes environment variables](/hosting/configuration/environment-variables/nodes.md)
 
-Refer to [Configuration](/hosting/configuration/configuration-methods.md) for more information on setting environment variables.
+ดูวิธีตั้งค่า environment variables ได้ที่ [Configuration](/hosting/configuration/configuration-methods.md)

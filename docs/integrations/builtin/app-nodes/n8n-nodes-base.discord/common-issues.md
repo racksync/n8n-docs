@@ -1,6 +1,6 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Discord node common issues 
+title: Discord node common issues
 description: Documentation for common issues and questions in the Discord node in n8n, a workflow automation platform. Includes details of the issue and suggested solutions.
 contentType: [integration, reference]
 priority: high
@@ -8,17 +8,17 @@ priority: high
 
 # Discord node common issues
 
-Here are some common errors and issues with the [Discord node](/integrations/builtin/app-nodes/n8n-nodes-base.discord/index.md) and steps to resolve or troubleshoot them.
+นี่คือข้อผิดพลาดและปัญหาทั่วไปบางประการเกี่ยวกับ [Discord node](/integrations/builtin/app-nodes/n8n-nodes-base.discord/index.md) และขั้นตอนในการแก้ไขหรือแก้ไขปัญหา
 
 ## Add extra fields to embeds
 
-Discord messages can optionally include embeds, a rich preview component that can include a title, description, image, link, and more.
+ข้อความ Discord สามารถเลือกที่จะรวม `embeds` ซึ่งเป็นส่วนประกอบ rich preview ที่สามารถรวม title, description, image, link และอื่นๆ ได้
 
-The Discord node supports embeds when using the **Send** operation on the **Message** resource. Select **Add Embeds** to set extra fields including Description, Author, Title, URL, and URL Image.
+Discord node รองรับ `embeds` เมื่อใช้ operation **Send** บน resource **Message** เลือก **Add Embeds** เพื่อตั้งค่าฟิลด์เพิ่มเติม รวมถึง Description, Author, Title, URL และ URL Image
 
-To add fields that aren't included by default, set **Input Method** to **Raw JSON**. From here, add a JSON object to the **Value** parameter defining the [field names](https://discord.com/developers/docs/resources/message#embed-object) and values you want to include.
+หากต้องการเพิ่มฟิลด์ที่ไม่ได้รวมไว้ตามค่าเริ่มต้น ให้ตั้งค่า **Input Method** เป็น **Raw JSON** จากตรงนี้ ให้เพิ่ม JSON object ไปยัง parameter **Value** เพื่อกำหนด [field names](https://discord.com/developers/docs/resources/message#embed-object) และค่าที่คุณต้องการรวม
 
-For example, to include `footer` and `fields`, neither of which are available using the **Enter Fields** Input Method, you could use a JSON object like this:
+ตัวอย่างเช่น หากต้องการรวม `footer` และ `fields` ซึ่งไม่มีให้ใช้งานโดยใช้ Input Method **Enter Fields** คุณสามารถใช้ JSON object เช่นนี้:
 
 ```json
 {
@@ -37,15 +37,15 @@ For example, to include `footer` and `fields`, neither of which are available us
 }
 ```
 
-You can learn more about embeds in [Using Webhooks and Embeds | Discord](https://discord.com/safety/using-webhooks-and-embeds).
+คุณสามารถเรียนรู้เพิ่มเติมเกี่ยวกับ embeds ได้ใน [Using Webhooks and Embeds | Discord](https://discord.com/safety/using-webhooks-and-embeds)
 
-If you experience issues when working with embeds with the Discord node, you can use the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) with your existing Discord credentials to `POST` to the following URL:
+หากคุณประสบปัญหาเมื่อทำงานกับ embeds ด้วย Discord node คุณสามารถใช้ [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) กับ credentials ของ Discord ที่มีอยู่ของคุณเพื่อ `POST` ไปยัง URL ต่อไปนี้:
 
 ```
 https://discord.com/api/v10/channels/<CHANNEL_ID>/messages
 ```
 
-In the body, include your embed information in the message content like this:
+ใน `body` ให้รวมข้อมูล embed ของคุณใน `content` ของข้อความดังนี้:
 
 ```json
 {
@@ -71,13 +71,13 @@ In the body, include your embed information in the message content like this:
 
 ## Mention users and channels
 
-To mention users and channels in Discord messages, you need to format your message according to [Discord's message formatting guidelines](https://discord.com/developers/docs/reference#message-formatting).
+หากต้องการ mention ผู้ใช้และช่องในข้อความ Discord คุณต้องจัดรูปแบบข้อความของคุณตาม [Discord's message formatting guidelines](https://discord.com/developers/docs/reference#message-formatting)
 
-To mention a user, you need to know the Discord user's user ID. Keep in mind that the user ID is different from the user's display name. Similarly, you need a channel ID to link to a specific channel.
+หากต้องการ mention ผู้ใช้ คุณจำเป็นต้องทราบ `user ID` ของผู้ใช้ Discord โปรดทราบว่า `user ID` แตกต่างจากชื่อที่แสดงของผู้ใช้ ในทำนองเดียวกัน คุณต้องมี `channel ID` เพื่อลิงก์ไปยังช่องเฉพาะ
 
-You can learn how to enable developer mode and copy the user or channel IDs in [Discord's documentation on finding User/Server/Message IDs](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID).
+คุณสามารถเรียนรู้วิธีเปิดใช้งาน `developer mode` และคัดลอก `user ID` หรือ `channel ID` ได้ใน [Discord's documentation on finding User/Server/Message IDs](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID)
 
-Once you have the user or channel ID, you can format your message with the following syntax:
+เมื่อคุณมี `user ID` หรือ `channel ID` แล้ว คุณสามารถจัดรูปแบบข้อความของคุณด้วย syntax ต่อไปนี้:
 
 * **User**: `<@USER_ID>`
 * **Channel**: `<#CHANNEL_ID>`

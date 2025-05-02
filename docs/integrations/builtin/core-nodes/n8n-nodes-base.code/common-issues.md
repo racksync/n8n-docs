@@ -8,56 +8,56 @@ priority: high
 
 # Code node common issues
 
-Here are some common errors and issues with the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md) and steps to resolve or troubleshoot them.
+นี่คือข้อผิดพลาดและปัญหาที่พบบ่อยกับ [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md) พร้อมวิธีแก้ไขหรือแนวทางตรวจสอบ
 
 <!-- vale off -->
 ## Code doesn't return items properly
 <!-- vale on -->
 
-This error occurs when the code in your Code node doesn't return data in the expected format.
+ข้อผิดพลาดนี้เกิดขึ้นเมื่อโค้ดใน Code node ของคุณไม่ได้ return ข้อมูลในรูปแบบที่ n8n คาดหวัง
 
-In n8n, all data passed between nodes is an array of objects. Each of these objects wraps another object with the `json` key:
+ใน n8n ข้อมูลที่ส่งต่อระหว่าง node จะเป็น array ของ object โดยแต่ละ object จะมี key ชื่อ `json` ครอบข้อมูลอีกที
 
 ```javascript
 [
   {
     "json": {
-	  // your data goes here
+	  // ข้อมูลของคุณใส่ตรงนี้
 	}
   }
 ]
 ```
 
-To troubleshoot this error, check the following:
+วิธีตรวจสอบปัญหานี้:
 
-* Read the [data structure](/data/data-structure.md) to understand the data you receive in the Code node and the requirements for outputting data from the node.
-* Understand how data items work and how to connect data items from previous nodes with [item linking](/data/data-mapping/data-item-linking/index.md).
+* อ่าน [data structure](/data/data-structure.md) เพื่อเข้าใจโครงสร้างข้อมูลที่ Code node ได้รับและข้อกำหนดสำหรับการ return ข้อมูลออกจาก node
+* ทำความเข้าใจการทำงานของ data item และการเชื่อมโยงข้อมูลจาก node ก่อนหน้าด้วย [item linking](/data/data-mapping/data-item-linking/index.md)
 
 <!-- vale off -->
 ## A 'json' property isn't an object
 <!-- vale on -->
 
-This error occurs when the Code node returns data where the `json` key isn't pointing to an object.
+ข้อผิดพลาดนี้เกิดขึ้นเมื่อ Code node return ข้อมูลที่ key `json` ไม่ได้ชี้ไปที่ object
 
-This may happen if you set `json` to a different data structure, like an array:
+เช่น ถ้าคุณตั้งค่า `json` ให้เป็น array แทน object:
 
 ```javascript
 [
   {
     "json": [
-	  // Setting `json` to an array like this will produce an error
+	  // ตั้ง json เป็น array แบบนี้จะ error
 	]
   }
 ]
 ```
 
-To resolve this, ensure that the `json` key references an object in your return data:
+วิธีแก้ไข: ให้แน่ใจว่า key `json` อ้างอิง object เสมอ
 
 ```javascript
 [
   {
     "json": {
-	  // Setting `json` to an object as expected
+	  // ตั้ง json เป็น object ตามที่ระบบต้องการ
 	}
   }
 ]
@@ -65,32 +65,32 @@ To resolve this, ensure that the `json` key references an object in your return 
 
 ## Code doesn't return an object
 
-This error may occur when your Code node doesn't return anything or if it returns an unexpected result.
+ข้อผิดพลาดนี้อาจเกิดขึ้นเมื่อ Code node ของคุณไม่ได้ return อะไรเลย หรือ return ผลลัพธ์ที่ไม่ถูกต้อง
 
-To resolve this, ensure that your Code node returns the [expected data structure](/data/data-structure.md):
+วิธีแก้ไข: ให้แน่ใจว่า Code node ของคุณ return [expected data structure](/data/data-structure.md):
 
 ```javascript
 [
   {
     "json": {
-	  // your data goes here
+	  // ข้อมูลของคุณใส่ตรงนี้
 	}
   }
 ]
 ```
 
-This error may also occur if the code you provided returns `'undefined'` instead of the expected result. In that case, ensure that the data you are referencing in your Code node exists in each execution and that it has the structure your code expects.
+ข้อผิดพลาดนี้อาจเกิดขึ้นถ้าโค้ดของคุณ return `'undefined'` แทนผลลัพธ์ที่ต้องการ กรณีนี้ให้ตรวจสอบว่าข้อมูลที่คุณอ้างอิงใน Code node มีอยู่จริงในทุก execution และมีโครงสร้างตรงกับที่โค้ดของคุณคาดหวัง
 
 ## 'import' and 'export' may only appear at the top level
 
-This error occurs if you try to use `import` or `export` in the Code node. These aren't supported by n8n's JavaScript sandbox. Instead, use the `require` function to load modules.
+ข้อผิดพลาดนี้เกิดขึ้นถ้าคุณพยายามใช้ `import` หรือ `export` ใน Code node ซึ่ง n8n ไม่รองรับใน JavaScript sandbox ให้ใช้ `require` แทน
 
-To resolve this issue, try changing your `import` statements to use `require`:
+วิธีแก้ไข: เปลี่ยนจาก `import` เป็น `require` เช่น
 
 ```javascript
-// Original code:
+// โค้ดเดิม:
 // import express from "express";
-// New code:
+// โค้ดใหม่:
 const express = require("express");
 ```
 
@@ -98,25 +98,25 @@ const express = require("express");
 ## Cannot find module '&lt;module&gt;'
 <!-- vale on -->
 
-This error occurs if you try to use `require` in the Code node and n8n can't find the module.
+ข้อผิดพลาดนี้เกิดขึ้นเมื่อคุณใช้ `require` ใน Code node แล้ว n8n หา module ไม่เจอ
 
 /// warning | Only for self-hosted
-n8n doesn't support importing modules in the [Cloud](/manage-cloud/overview.md) version.
+n8n ไม่รองรับการ import module ใน [Cloud](/manage-cloud/overview.md) version
 ///
 
-If you're [self-hosting](/hosting/index.md) n8n, follow these steps:
+ถ้าคุณ [self-hosting](/hosting/index.md) n8n ให้ทำตามขั้นตอนนี้:
 
-* Install the module into your n8n environment.
-	* If you are running n8n with [npm](/hosting/installation/npm.md), install the module in the same environment as n8n.
-	* If you are running n8n with [Docker](/hosting/installation/docker.md), you need to extend the official n8n image with a [custom image](https://docs.docker.com/build/building/base-images/){:target=_blank .external-link} that includes your module.
-* Set the `NODE_FUNCTION_ALLOW_BUILTIN` and `NODE_FUNCTION_ALLOW_EXTERNAL` [environment variables](/hosting/configuration/configuration-examples/modules-in-code-node.md) to allow importing modules.
+* ติดตั้ง module ลงใน environment เดียวกับที่รัน n8n
+	* ถ้าใช้ [npm](/hosting/installation/npm.md) ให้ติดตั้ง module ใน environment เดียวกับ n8n
+	* ถ้าใช้ [Docker](/hosting/installation/docker.md) ต้อง extend image n8n ด้วย [custom image](https://docs.docker.com/build/building/base-images/){:target=_blank .external-link} ที่มี module ที่ต้องการ
+* ตั้งค่า environment variable `NODE_FUNCTION_ALLOW_BUILTIN` และ `NODE_FUNCTION_ALLOW_EXTERNAL` [ดูตัวอย่าง](/hosting/configuration/configuration-examples/modules-in-code-node.md) เพื่ออนุญาต import module
 
 ## Using global variables
 
-Sometimes you may wish to set and retrieve simple global data related to a workflow across and within executions. For example, you may wish to include the date of the previous report when compiling a report with a list of project updates.
+บางครั้งคุณอาจอยากเก็บหรือดึงข้อมูลแบบ global ที่เกี่ยวกับ workflow ข้าม execution หรือในแต่ละ execution เช่น อยากเก็บวันที่ของ report ก่อนหน้าไว้ใช้ใน report รอบถัดไป
 
-To set, update, and retrieve data directly to a workflow, use the [static data](/code/cookbook/builtin/get-workflow-static-data.md) functions within your code. You can manage data either globally or tied to specific nodes.
+ให้ใช้ [static data](/code/cookbook/builtin/get-workflow-static-data.md) ในโค้ดของคุณเพื่อ set, update, และดึงข้อมูล workflow-level สามารถจัดการข้อมูลแบบ global หรือผูกกับ node เฉพาะก็ได้
 
 /// info | Use Remove Duplicates when possible
-If you're interested in using variables to avoid processing the same data items more than once, consider using the [Remove Duplicates node](/integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/index.md) instead. The Remove Duplicates node can save information across executions to avoid processing the same items multiple times.
+ถ้าคุณอยากใช้ตัวแปรเพื่อป้องกันการประมวลผลข้อมูลซ้ำ ลองใช้ [Remove Duplicates node](/integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/index.md) แทน Remove Duplicates node จะช่วยเก็บข้อมูลข้าม execution เพื่อป้องกันการประมวลผลซ้ำ
 ///

@@ -8,21 +8,21 @@ priority: critical
 
 # HTTP Request node
 
-The HTTP Request node is one of the most versatile nodes in n8n. It allows you to make HTTP requests to query data from any app or service with a REST API. You can use the HTTP Request node a regular node or attached to an [AI agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent.md) to use as a [tool](/advanced-ai/examples/understand-tools.md){ data-preview }.
+HTTP Request node เป็นหนึ่งใน node ที่ยืดหยุ่นที่สุดใน n8n เลยนะ มันช่วยให้คุณสามารถส่ง HTTP request เพื่อดึงข้อมูลจากแอปหรือบริการไหนก็ได้ที่มี REST API คุณสามารถใช้ HTTP Request node เป็น node ปกติ หรือจะต่อกับ [AI agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent.md) เพื่อใช้เป็น [tool](/advanced-ai/examples/understand-tools.md){ data-preview } ก็ได้
 
-When using this node, you're creating a REST API call. You need some understanding of basic API terminology and concepts.
+เวลาคุณใช้ node นี้ คุณกำลังสร้าง REST API call อยู่ ดังนั้นควรเข้าใจคำศัพท์และแนวคิดพื้นฐานของ API ด้วยนะ
 
-There are two ways to create an HTTP request: configure the [node parameters](#node-parameters) or [import a curl command](#import-curl-command).
+มี 2 วิธีในการสร้าง HTTP request: ตั้งค่าผ่าน [node parameters](#node-parameters) หรือ [import curl command](#import-curl-command)
 
 /// note | Credentials
-Refer to [HTTP Request credentials](/integrations/builtin/credentials/httprequest.md) for guidance on setting up authentication. 
+ดูวิธีตั้งค่า authentication ได้ที่ [HTTP Request credentials](/integrations/builtin/credentials/httprequest.md)
 ///
 
 ## Node parameters
 
 ### Method
 
-Select the method to use for the request:
+เลือก method ที่จะใช้กับ request นี้:
 
 - DELETE
 - GET
@@ -34,21 +34,21 @@ Select the method to use for the request:
 
 ### URL
 
-Enter the endpoint you want to use.
+ใส่ endpoint ที่คุณต้องการใช้
 
 ### Authentication
 
-n8n recommends using the **Predefined Credential Type** option when it's available. It offers an easier way to set up and manage credentials, compared to configuring generic credentials.
+n8n แนะนำให้ใช้ **Predefined Credential Type** ถ้ามีให้เลือก เพราะจะตั้งค่าและจัดการ credentials ได้ง่ายกว่าการตั้งค่าแบบ generic
 
 #### Predefined credentials
 
-Credentials for integrations supported by n8n, including both built-in and community nodes. Use **Predefined Credential Type** for custom operations without extra setup. Refer to [Custom API operations](/integrations/custom-operations.md) for more information.
+Credentials สำหรับ integration ที่ n8n รองรับอยู่แล้ว ทั้ง built-in และ community node ใช้ **Predefined Credential Type** สำหรับ custom operation ได้เลยโดยไม่ต้องตั้งค่าอะไรเพิ่ม ดูรายละเอียดที่ [Custom API operations](/integrations/custom-operations.md)
 
 #### Generic credentials
 
-Credentials for integrations not supported by n8n. You'll need to manually configure the authentication process, including specifying the required API endpoints, necessary parameters, and the authentication method. 
+Credentials สำหรับ integration ที่ n8n ยังไม่รองรับ คุณต้องตั้งค่าการ authentication เองทั้งหมด รวมถึงระบุ endpoint, parameter ที่ต้องใช้ และวิธี authentication
 
-You can select one of the following methods:
+คุณสามารถเลือกวิธีเหล่านี้ได้:
 
 * Basic auth
 * Custom auth
@@ -58,165 +58,165 @@ You can select one of the following methods:
 * OAuth2 API
 * Query auth
 
-Refer to [HTTP request credentials](/integrations/builtin/credentials/httprequest.md) for more information on setting up each credential type.
+ดูวิธีตั้งค่าแต่ละ credential type ได้ที่ [HTTP request credentials](/integrations/builtin/credentials/httprequest.md)
 
 ### Send Query Parameters
 
-Query parameters act as filters on HTTP requests. If the API you're interacting with supports them and the request you're making needs a filter, turn this option on.
+Query parameter คือ filter สำหรับ HTTP request ถ้า API ที่คุณใช้รองรับ และ request ที่คุณจะส่งต้องใช้ filter ให้เปิด option นี้
 
-**Specify your query parameters** using one of the available options:
+**ระบุ query parameter** ได้ 2 แบบ:
 
-* **Using Fields Below**: Enter **Name**/**Value** pairs of **Query Parameters**. To enter more query parameter name/value pairs, select **Add Parameter**. The name is the name of the field you're filtering on, and the value is the filter value.
-* **Using JSON**: Enter **JSON** to define your query parameters.
+* **Using Fields Below**: ใส่ **Name**/**Value** ของ **Query Parameters** ถ้าจะเพิ่มคู่ name/value ให้เลือก **Add Parameter** ชื่อคือ field ที่จะ filter และ value คือค่าที่จะ filter
+* **Using JSON**: ใส่ **JSON** เพื่อกำหนด query parameter
 
-Refer to your service's API documentation for detailed guidance.
+ดูรายละเอียดในเอกสาร API ของบริการที่คุณใช้
 
 ### Send Headers
 
-Use this parameter to send headers with your request. Headers contain metadata or context about your request.
+ใช้ option นี้ถ้าต้องการส่ง header ไปกับ request ด้วย Header จะเก็บ metadata หรือ context ของ request
 
-**Specify Headers** using one of the available options:
+**ระบุ Header** ได้ 2 แบบ:
 
-* **Using Fields Below**: Enter **Name**/**Value** pairs of **Header Parameters**. To enter more header parameter name/value pairs, select **Add Parameter**. The name is the header you wish to set, and the value is the value you want to pass for that header.
-* **Using JSON**: Enter **JSON** to define your header parameters.
+* **Using Fields Below**: ใส่ **Name**/**Value** ของ **Header Parameters** ถ้าจะเพิ่มคู่ name/value ให้เลือก **Add Parameter** ชื่อคือ header ที่ต้องการ set และ value คือค่าที่จะส่ง
+* **Using JSON**: ใส่ **JSON** เพื่อกำหนด header parameter
 
-Refer to your service's API documentation for detailed guidance.
+ดูรายละเอียดในเอกสาร API ของบริการที่คุณใช้
 
 ### Send Body
 
-If you need to send a body with your API request, turn this option on.
+ถ้าต้องการส่ง body ไปกับ API request ให้เปิด option นี้
 
-Then select the **Body Content Type** that best matches the format for the body content you wish to send.
+จากนั้นเลือก **Body Content Type** ที่ตรงกับรูปแบบข้อมูลที่ต้องการส่ง
 
 <!-- vale Vale.Spelling = NO -->
 #### Form URLencoded
 <!-- vale Vale.Spelling = YES -->
 
-Use this option to send your body as `application/x-www-form-urlencoded`.
+ใช้ option นี้ถ้าต้องการส่ง body แบบ `application/x-www-form-urlencoded`
 
-**Specify Body** using one of the available options:
+**ระบุ Body** ได้ 2 แบบ:
 
-* **Using Fields Below**: Enter **Name**/**Value** pairs of **Body Parameters**. To enter more body parameter name/value pairs, select **Add Parameter**. The name should be the form field name, and the value is what you wish to set that field to.
-* **Using Single Field**: Enter your name/value pairs in a single **Body** parameter with format `fieldname1=value1&fieldname2=value2`.
+* **Using Fields Below**: ใส่ **Name**/**Value** ของ **Body Parameters** ถ้าจะเพิ่มคู่ name/value ให้เลือก **Add Parameter** ชื่อคือชื่อ field ใน form และ value คือค่าที่จะ set
+* **Using Single Field**: ใส่ name/value ทั้งหมดใน **Body** เดียวกัน เช่น `fieldname1=value1&fieldname2=value2`
 
-Refer to your service's API documentation for detailed guidance.
+ดูรายละเอียดในเอกสาร API ของบริการที่คุณใช้
 
 #### Form-Data
 
-Use this option to send your body as `multipart/form-data`.
+ใช้ option นี้ถ้าต้องการส่ง body แบบ `multipart/form-data`
 
-Configure your **Body Parameters** by selecting the **Parameter Type**:
+ตั้งค่า **Body Parameters** โดยเลือก **Parameter Type**:
 
-* Choose **Form Data** to enter **Name**/**Value** pairs.
-* Choose **n8n Binary File** to pull the body from a file the node has access to.
-    * **Name**: Enter the ID of the field to set.
-    * **Input Data Field Name**: Enter the name of the incoming field containing the binary file data you want to process.
+* เลือก **Form Data** เพื่อใส่ **Name**/**Value** คู่
+* เลือก **n8n Binary File** เพื่อดึง body จากไฟล์ที่ node เข้าถึงได้
+    * **Name**: ใส่ ID ของ field ที่จะ set
+    * **Input Data Field Name**: ใส่ชื่อ field ที่มี binary file data ที่ต้องการใช้
 
-Select **Add Parameter** to enter more parameters.
+เลือก **Add Parameter** เพื่อเพิ่ม parameter ได้
 
-Refer to your service's API documentation for detailed guidance.
+ดูรายละเอียดในเอกสาร API ของบริการที่คุณใช้
 
 #### JSON
 
-Use this option to send your body as JSON.
+ใช้ option นี้ถ้าต้องการส่ง body เป็น JSON
 
-**Specify Body** using one of the available options:
+**ระบุ Body** ได้ 2 แบบ:
 
-* **Using Fields Below**: Enter **Name**/**Value** pairs of **Body Parameters**. To enter more body parameter name/value pairs, select **Add Parameter**.
-* **Using JSON**: Enter **JSON** to define your body.
+* **Using Fields Below**: ใส่ **Name**/**Value** ของ **Body Parameters** ถ้าจะเพิ่มคู่ name/value ให้เลือก **Add Parameter**
+* **Using JSON**: ใส่ **JSON** เพื่อกำหนด body
 
-Refer to your service's API documentation for detailed guidance.
+ดูรายละเอียดในเอกสาร API ของบริการที่คุณใช้
 
 #### n8n Binary File
 
-Use this option to send the contents of a file stored in n8n as the body.
+ใช้ option นี้ถ้าต้องการส่งไฟล์ที่เก็บใน n8n เป็น body
 
-Enter the name of the incoming field that contains the file as the **Input Data Field Name**.
+ใส่ชื่อ field ที่มีไฟล์ใน **Input Data Field Name**
 
-Refer to your service's API documentation for detailed guidance on how to format the file.
+ดูรายละเอียดในเอกสาร API ของบริการที่คุณใช้ว่าต้อง format ไฟล์ยังไง
 
 #### Raw
 
-Use this option to send raw data in the body.
+ใช้ option นี้ถ้าต้องการส่ง raw data ใน body
 
-* **Content Type**: Enter the `Content-Type` header to use for the raw body content. Refer to the IANA [Media types](https://www.iana.org/assignments/media-types/media-types.xhtml){:target=_blank .external-link} documentation for a full list of MIME content types.
-* **Body**: Enter the raw body content to send.
+* **Content Type**: ใส่ header `Content-Type` ที่จะใช้กับ raw body ดู MIME content type ได้ที่ IANA [Media types](https://www.iana.org/assignments/media-types/media-types.xhtml){:target=_blank .external-link}
+* **Body**: ใส่ raw body ที่จะส่ง
 
-Refer to your service's API documentation for detailed guidance.
+ดูรายละเอียดในเอกสาร API ของบริการที่คุณใช้
 
 ## Node options
 
-Select **Add Option** to view and select these options. Options are available to all parameters unless otherwise noted.
+เลือก **Add Option** เพื่อดูและเลือก option เหล่านี้ Option เหล่านี้ใช้ได้กับทุก parameter เว้นแต่จะระบุไว้
 
 ### Array Format in Query Parameters
 
 /// note | Option availability
-This option is only available when you turn on **Send Query Parameters**.
+Option นี้จะมีให้เลือกเมื่อเปิด **Send Query Parameters**
 ///
 
-Use this option to control the format for arrays included in query parameters. Choose from these options:
+ใช้ option นี้เพื่อกำหนดรูปแบบ array ใน query parameter เลือกได้ดังนี้:
 
-* **No Brackets**: Arrays will format as the name=value for each item in the array, for example: `foo=bar&foo=qux`.
-* **Brackets Only**: The node adds square brackets after each array name, for example: `foo[]=bar&foo[]=qux`.
-* **Brackets with Indices**: The node adds square brackets with an index value after each array name, for example: `foo[0]=bar&foo[1]=qux`.
+* **No Brackets**: array จะถูก format เป็น name=value สำหรับแต่ละ item เช่น `foo=bar&foo=qux`
+* **Brackets Only**: node จะเติม [] หลังชื่อ array เช่น `foo[]=bar&foo[]=qux`
+* **Brackets with Indices**: node จะเติม [index] หลังชื่อ array เช่น `foo[0]=bar&foo[1]=qux`
 
-Refer to your service's API documentation for guidance on which option to use.
+ดูเอกสาร API ของบริการที่คุณใช้ว่าควรใช้แบบไหน
 
 ### Batching
 
-Control how to batch large numbers of input items:
+ควบคุมการ batch input จำนวนมาก:
 
-* **Items per Batch**: Enter the number of input items to include in each batch.
-* **Batch Interval**: Enter the time to wait between each batch of requests in milliseconds. Enter 0 for no batch interval.
+* **Items per Batch**: ใส่จำนวน input ที่จะรวมในแต่ละ batch
+* **Batch Interval**: ใส่เวลาที่จะรอระหว่างแต่ละ batch ของ request (ms) ใส่ 0 ถ้าไม่ต้องการ delay
 
 ### Ignore SSL Issues
 
-By default, n8n only downloads the response if SSL certificate validation succeeds. If you'd like to download the response even if SSL certificate validation fails, turn this option on.
+โดยปกติ n8n จะดาวน์โหลด response เฉพาะเมื่อ SSL certificate validation ผ่าน ถ้าอยากดาวน์โหลด response แม้ validation จะ fail ให้เปิด option นี้
 
 ### Lowercase Headers
 
-Choose whether to lowercase header names (turned on, default) or not (turned off).
+เลือกว่าจะให้ชื่อ header เป็นตัวพิมพ์เล็ก (เปิดไว้เป็นค่า default) หรือไม่
 
 ### Redirects
 
-Choose whether to follow redirects (turned on by default) or not (turned off). If turned on, enter the maximum number of redirects the request should follow in **Max Redirects**.
+เลือกว่าจะให้ตาม redirect (เปิดไว้เป็น default) หรือไม่ ถ้าเปิด ให้ใส่จำนวน redirect สูงสุดใน **Max Redirects**
 
 ### Response
 
-Use this option to set some details about the expected API response, including:
+ตั้งค่ารายละเอียดเกี่ยวกับ API response ที่คาดว่าจะได้รับ เช่น:
 
-* **Include Response Headers and Status**: By default, the node returns only the body. Turn this option on to return the full response (headers and response status code) as well as the body.
-* **Never Error**: By default, the node returns success only when the response returns with a 2xx code. Turn this option on to return success regardless of the code returned.
-* **Response Format**: Select the format in which the data gets returned. Choose from:
-    * **Autodetect** (default): The node detects and formats the response based on the data returned.
-    * **File**: Select this option to put the response into a file. Enter the field name where you want the file returned in **Put Output in Field**.
-    * **JSON**: Select this option to format the response as JSON.
-    * **Text**: Select this option to format the response as plain text. Enter the field name where you want the file returned in **Put Output in Field**.
+* **Include Response Headers and Status**: ปกติ node จะคืนแค่ body ถ้าเปิด option นี้จะได้ response เต็ม (header และ status code) ด้วย
+* **Never Error**: ปกติ node จะคืน success เฉพาะเมื่อ response เป็น 2xx ถ้าเปิด option นี้จะคืน success ไม่ว่า code อะไร
+* **Response Format**: เลือกรูปแบบข้อมูลที่ต้องการให้ node คืน เลือกได้:
+    * **Autodetect** (default): node จะตรวจสอบและ format response ตามข้อมูลที่ได้
+    * **File**: เลือก option นี้เพื่อให้ response เป็นไฟล์ ใส่ชื่อ field ที่ต้องการใน **Put Output in Field**
+    * **JSON**: เลือก option นี้เพื่อให้ response เป็น JSON
+    * **Text**: เลือก option นี้เพื่อให้ response เป็น plain text ใส่ชื่อ field ที่ต้องการใน **Put Output in Field**
 
 ### Pagination
 
-Use this option to paginate results, useful for handling query results that are too big for the API to return in a single call.
+ใช้ option นี้เพื่อ paginate ผลลัพธ์ เหมาะกับกรณีที่ API คืนข้อมูลเยอะเกินจะส่งใน call เดียว
 
 /// note | Inspect the API data first
-Some options for pagination require knowledge of the data returned by the API you're using. Before setting up pagination, either check the API documentation, or do an API call without pagination, to see the data it returns.
+บาง option ของ pagination ต้องรู้โครงสร้างข้อมูลที่ API คืนมา ก่อนตั้งค่า pagination ควรเช็คเอกสาร API หรือทดลอง call API โดยไม่เปิด pagination ก่อน
 ///
 ??? Details "Understand pagination"
-    Pagination means splitting a large set of data into multiple pages. The amount of data on each page depends on the limit you set.
-  
-    For example, you make an API call to an endpoint called `/users`. The API wants to send back information on 300 users, but this is too much data for the API to send in one response. 
-  
-    If the API supports pagination, you can incrementally fetch the data. To do this, you call `/users` with a pagination limit, and a page number or URL to tell the API which page to send. In this example, say you use a limit of 10, and start from page 0. The API sends the first 10 users in its response. You then call the API again, increasing the page number by 1, to get the next 10 results.
+    Pagination คือการแบ่งข้อมูลชุดใหญ่เป็นหลายหน้า ข้อมูลแต่ละหน้าจะขึ้นกับ limit ที่ตั้งไว้
 
-Configure the pagination settings:
+    เช่น คุณ call API `/users` แล้ว API มีข้อมูล user 300 คน ซึ่งเยอะเกินจะส่งใน response เดียว
+
+    ถ้า API รองรับ pagination คุณสามารถดึงข้อมูลทีละน้อยได้ โดย call `/users` พร้อม limit และ page number หรือ URL เพื่อบอก API ว่าจะเอาหน้าไหน เช่น limit 10, page 0 API จะส่ง user 10 คนแรกมา จากนั้น call ใหม่โดยเพิ่ม page number อีก 1 เพื่อเอา 10 คนถัดไป
+
+ตั้งค่า pagination ได้ดังนี้:
 
 * **Pagination Mode**:
-    * **Off**: Turn off pagination.
-    * **Update a Parameter in Each Request**: Use this when you need to dynamically set parameters for each request.
-    * **Response Contains Next URL**: Use this when the API response includes the URL of the next page. Use an expression to set **Next URL**.
+    * **Off**: ปิด pagination
+    * **Update a Parameter in Each Request**: ใช้เมื่อคุณต้อง set parameter ใหม่ทุก request
+    * **Response Contains Next URL**: ใช้เมื่อ API response มี URL ของหน้าถัดไป ใช้ expression ตั้งค่า **Next URL**
 
-For example setups, refer to [HTTP Request node cookbook | Pagination](/code/cookbook/http-node/pagination.md).
+ดูตัวอย่างได้ที่ [HTTP Request node cookbook | Pagination](/code/cookbook/http-node/pagination.md)
 
-n8n provides built-in variables for working with HTTP node requests and responses when using pagination:
+n8n มี built-in variable สำหรับใช้กับ HTTP node request/response ตอนใช้ pagination:
 
 --8<-- "_snippets/integrations/builtin/core-nodes/http/pagination-variables.md"
 
@@ -224,66 +224,66 @@ n8n provides built-in variables for working with HTTP node requests and response
 
 ### Proxy
 
-Use this option if you need to specify an HTTP proxy.
+ใช้ option นี้ถ้าต้องการระบุ HTTP proxy
 
-Enter the **Proxy** the request should use.
+ใส่ **Proxy** ที่ request จะใช้
 
 ### Timeout
 
-Use this option to set how long the node should wait for the server to send response headers (and start the response body). The node aborts requests that exceed this value for the initial response.
+ใช้ option นี้เพื่อตั้งเวลารอ server ส่ง response header (และเริ่ม response body) node จะยกเลิก request ที่เกินเวลานี้
 
-Enter the **Timeout** time to wait in milliseconds.
+ใส่ **Timeout** ที่ต้องการ (ms)
 
 ## Tool-only options
 
-The following options are only available when attached to an [AI agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent.md) as a [tool](/advanced-ai/examples/understand-tools.md){ data-preview }.
+option เหล่านี้จะมีให้เลือกเฉพาะตอนต่อกับ [AI agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent.md) เป็น [tool](/advanced-ai/examples/understand-tools.md){ data-preview }
 
 ### Optimize Response
 
-Whether to optimize the tool response to reduce the amount of data passed to the LLM. Optimizing the response can reduce costs and can help the LLM ignore unimportant details, often leading to better results.
+เลือกว่าจะ optimize response ที่ส่งไป LLM เพื่อลดข้อมูลและช่วยให้ LLM โฟกัสเฉพาะจุดสำคัญ (ช่วยลด cost และได้ผลลัพธ์ดีขึ้น)
 
-When optimizing responses, you select an expected response type, which determines other options you can configure. The supported response types are:
+เวลาทำ optimize response คุณจะเลือก expected response type ซึ่งจะมี option ให้ตั้งค่าเพิ่มดังนี้
 
 #### JSON
 
-When expecting a **JSON** response, you can configure which parts of the JSON data to use as a response with the following choices:
+ถ้าคาดว่าจะได้ **JSON** response คุณสามารถเลือกส่วนของ JSON ที่จะใช้กับ LLM ได้:
 
-* **Field Containing Data**: This field identifies a specific part of the JSON object that contains your relevant data. You can leave this blank to use the entire response.
-* **Include Fields**: This is how you choose which fields you want in your response object. There are three choices:
-	* **All**: Include all fields in the response object.
-	* **Selected**: Include only the fields specified below.
-		* **Fields**: A comma-separated list of fields to include in the response. You can use dot notation to specify nested fields. You can drag fields from the Input panel to add them to the field list.
-	* **Exclude**: Include all fields *except* the fields specified below.
-		* **Fields**: A comma-separated list of fields to exclude from the response. You can use dot notation to specify nested fields. You can drag fields from the Input panel to add them to the field list.
+* **Field Containing Data**: ระบุ field ใน JSON ที่มีข้อมูลสำคัญ จะเว้นว่างไว้เพื่อใช้ทั้ง response ก็ได้
+* **Include Fields**: เลือก field ที่จะเอาไปใน response มี 3 แบบ:
+	* **All**: เอาทุก field ใน response object
+	* **Selected**: เอาเฉพาะ field ที่ระบุ
+		* **Fields**: ใส่ชื่อ field ที่ต้องการ (comma-separated) ใช้ dot notation ได้ เช่น a.b.c สามารถลาก field จาก Input panel มาใส่ได้
+	* **Exclude**: เอาทุก field ยกเว้น field ที่ระบุ
+		* **Fields**: ใส่ชื่อ field ที่ไม่ต้องการ (comma-separated) ใช้ dot notation ได้ เช่น a.b.c สามารถลาก field จาก Input panel มาใส่ได้
 
 #### HTML
 
-When expecting **HTML**, you can identify the part of an HTML document relevant to the LLM and optimize the response with the following options:
+ถ้าคาดว่าจะได้ **HTML** response คุณสามารถเลือกส่วนของ HTML ที่เกี่ยวข้องกับ LLM และ optimize ได้ดังนี้:
 
-* **Selector (CSS)**: A specific element or element type to include in the response HTML. Uses the `body` element by default.
-* **Return Only Content**: Whether to strip HTML tags and attributes from the response, leaving only the actual content. This uses fewer tokens and may be easier for the model to understand.
-	* **Elements To Omit**: A comma-separated list of CSS selectors to exclude when extracting content.
-* **Truncate Response**: Whether to limit the response size to save tokens.
-	* **Max Response Characters**: The maximum number of characters to include in the HTML response. The default value is 1000.
+* **Selector (CSS)**: ระบุ element หรือชนิด element ที่จะเอาไปใน response HTML (default คือ `body`)
+* **Return Only Content**: เลือกว่าจะลบ tag/attribute HTML ออก เหลือแต่เนื้อหา (ช่วยลด token และ LLM เข้าใจง่ายขึ้น)
+	* **Elements To Omit**: ใส่ selector ของ element ที่ไม่ต้องการใน content (comma-separated)
+* **Truncate Response**: เลือกว่าจะจำกัดขนาด response เพื่อประหยัด token
+	* **Max Response Characters**: จำนวน character สูงสุดใน HTML response (default 1000)
 
 #### Text
 
-When expecting a generic **Text** response, you can optimize the results with the following options:
+ถ้าคาดว่าจะได้ **Text** response ทั่วไป สามารถ optimize ได้ดังนี้:
 
-* **Truncate Response**: Whether to limit the response size to save tokens.
-	* **Max Response Characters**: The maximum number of characters to include in the HTML response. The default value is 1000.
+* **Truncate Response**: เลือกว่าจะจำกัดขนาด response เพื่อประหยัด token
+	* **Max Response Characters**: จำนวน character สูงสุดใน response (default 1000)
 
 ## Import curl command
 
-[curl](https://curl.se/){:target=_blank .external-link} is a command line tool and library for transferring data with URLs.
+[curl](https://curl.se/){:target=_blank .external-link} คือ command line tool และ library สำหรับ transfer ข้อมูลผ่าน URL
 
-You can use curl to call REST APIs. If the API documentation of the service you want to use provides curl examples, you can copy them out of the documentation and into n8n to configure the HTTP Request node.
+คุณสามารถใช้ curl เพื่อ call REST API ได้ ถ้าเอกสาร API ของบริการที่คุณใช้มีตัวอย่าง curl ก็ copy มาใส่ใน n8n เพื่อ config HTTP Request node ได้เลย
 
-Import a curl command:
+วิธี import curl command:
 
-1. From the HTTP Request node's **Parameters** tab, select **Import cURL**. The **Import cURL command** modal opens.
-2. Paste your curl command into the text box.
-3. Select **Import**. n8n loads the request configuration into the node fields. This overwrites any existing configuration.
+1. ที่ HTTP Request node แท็บ **Parameters** เลือก **Import cURL** จะมี modal **Import cURL command** ขึ้นมา
+2. วาง curl command ลงในช่องข้อความ
+3. เลือก **Import** n8n จะโหลดค่าจาก curl เข้า node ให้เลย (จะทับ config เดิมทั้งหมด)
 
 ## Templates and examples
 
@@ -292,4 +292,4 @@ Import a curl command:
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common Issues](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/common-issues.md).
+ถ้ามีคำถามหรือปัญหาที่พบบ่อย ดูวิธีแก้ได้ที่ [Common Issues](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/common-issues.md)

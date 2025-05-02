@@ -1,112 +1,118 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Schedule Trigger node documentation
-description: Learn how to use the Schedule Trigger node in n8n. Follow technical documentation to integrate Schedule Trigger node into your workflows.
+description: เรียนรู้วิธีการใช้ Schedule Trigger node ใน n8n อ่านเอกสารทางเทคนิคเพื่อรวม Schedule Trigger node เข้ากับ workflow ของคุณ
 contentType: [integration, reference]
 priority: critical
 ---
 
 # Schedule Trigger node
 
-Use the Schedule Trigger node to run workflows at fixed intervals and times. This works in a similar way to the Cron software utility in Unix-like systems.
+ใช้ Schedule Trigger node เพื่อให้ workflow ของคุณทำงานตามเวลาที่กำหนดไว้ล่วงหน้า เหมือนกับการใช้ Cron utility ในระบบ Unix
 
 /// note | You must activate the workflow
-If a workflow uses the Schedule node as a trigger, make sure that you save and activate the workflow. 
+ถ้า workflow ของคุณใช้ Schedule node เป็น trigger อย่าลืมกด Save และ Activate workflow ด้วยนะ
 ///
 
 --8<-- "_snippets/integrations/builtin/core-nodes/schedule/timezone-settings.md"
 
 ## Node parameters
 
-Add **Trigger Rules** to determine when the trigger should run.
+เพิ่ม **Trigger Rules** เพื่อกำหนดว่า trigger จะทำงานเมื่อไหร่
 
-Use the **Trigger Interval** to select the time interval unit of measure to schedule the trigger for. All other parameters depend on the interval you select. Choose from:
+ใช้ **Trigger Interval** เพื่อเลือกหน่วยเวลาที่จะใช้ตั้งเวลาให้ trigger ทำงาน พารามิเตอร์อื่นๆ จะขึ้นอยู่กับ interval ที่เลือก สามารถเลือกได้จาก:
 
-- [Seconds trigger interval](#seconds-trigger-interval)
-- [Minutes trigger interval](#minutes-trigger-interval)
-- [Hours trigger interval](#hours-trigger-interval)
-- [Days trigger interval](#days-trigger-interval)
-- [Weeks trigger interval](#weeks-trigger-interval)
-- [Months trigger interval](#months-trigger-interval)
-- [Custom (Cron) interval](#custom-cron-interval)
+- [Schedule Trigger node](#schedule-trigger-node)
+  - [Node parameters](#node-parameters)
+    - [Seconds trigger interval](#seconds-trigger-interval)
+    - [Minutes trigger interval](#minutes-trigger-interval)
+    - [Hours trigger interval](#hours-trigger-interval)
+    - [Days trigger interval](#days-trigger-interval)
+    - [Weeks trigger interval](#weeks-trigger-interval)
+    - [Months trigger interval](#months-trigger-interval)
+    - [Custom (Cron) interval](#custom-cron-interval)
+      - [Examples](#examples)
+      - [Why there are six asterisks in the Cron expression](#why-there-are-six-asterisks-in-the-cron-expression)
+  - [Templates and examples](#templates-and-examples)
+  - [Common issues](#common-issues)
 
-You can add multiple **Trigger Rules** to run the node on different schedules.
+คุณสามารถเพิ่ม **Trigger Rules** ได้หลายอัน เพื่อให้ node ทำงานตามเวลาต่างๆ กัน
 
-Refer to the sections below for more detail on configuring each **Trigger Interval**. Refer to [Templates and examples](#templates-and-examples) for further examples.
+ดูรายละเอียดการตั้งค่าแต่ละ **Trigger Interval** ได้ในหัวข้อด้านล่าง และดูตัวอย่างเพิ่มเติมได้ที่ [Templates and examples](#templates-and-examples)
 
 ### Seconds trigger interval
 
-* **Seconds Between Triggers**: Enter the number of seconds between each workflow trigger. For example, if you enter `30` here, the trigger will run every 30 seconds.
+* **Seconds Between Triggers**: ใส่จำนวนวินาทีที่ต้องการให้ workflow ทำงานแต่ละครั้ง เช่น ถ้าใส่ `30` trigger จะทำงานทุก 30 วินาที
 
 ### Minutes trigger interval
 
-* **Minutes Between Triggers**: Enter the number of minutes between each workflow trigger. For example, if you enter `5` here, the trigger will run every 5 minutes.
+* **Minutes Between Triggers**: ใส่จำนวนนาทีที่ต้องการให้ workflow ทำงานแต่ละครั้ง เช่น ถ้าใส่ `5` trigger จะทำงานทุก 5 นาที
 
 ### Hours trigger interval
 
-* **Hours Between Triggers**: Enter the number of hours between each workflow trigger.
-* **Trigger at Minute**: Enter the minute past the hour to trigger the node when it runs, from `0` to `59`.
+* **Hours Between Triggers**: ใส่จำนวนชั่วโมงที่ต้องการให้ workflow ทำงานแต่ละครั้ง
+* **Trigger at Minute**: ใส่นาทีที่ต้องการให้ trigger ทำงานในแต่ละชั่วโมง (0 ถึง 59)
 
-For example, if you enter `6` **Hours Between Triggers** and `30` **Trigger at Minute**, the node will run every six hours at 30 minutes past the hour.
+ตัวอย่างเช่น ถ้าใส่ `6` ใน **Hours Between Triggers** และ `30` ใน **Trigger at Minute** node จะทำงานทุก 6 ชั่วโมงที่นาทีที่ 30 ของชั่วโมงนั้น
 
 ### Days trigger interval
 
-* **Days Between Triggers**: Enter the number of days between each workflow trigger.
-* **Trigger at Hour**: Select the hour of the day to trigger the node.
-* **Trigger at Minute**: Enter the minute past the hour to trigger the node when it runs, from `0` to `59`.
+* **Days Between Triggers**: ใส่จำนวนวันที่ต้องการให้ workflow ทำงานแต่ละครั้ง
+* **Trigger at Hour**: เลือกชั่วโมงที่ต้องการให้ trigger ทำงาน
+* **Trigger at Minute**: ใส่นาทีที่ต้องการให้ trigger ทำงานในแต่ละชั่วโมง (0 ถึง 59)
 
 <!-- vale from-microsoft.AMPM = NO -->
-For example, if you enter `2` **Days Between Triggers**, **9am** for **Trigger at Hour**, and `15` **Trigger at Minute**, the node will run every two days at 9:15am.
+ตัวอย่างเช่น ถ้าใส่ `2` ใน **Days Between Triggers**, เลือก **9am** ใน **Trigger at Hour** และใส่ `15` ใน **Trigger at Minute** node จะทำงานทุก 2 วัน เวลา 9:15am
 <!-- vale from-microsoft.AMPM = YES -->
 
 ### Weeks trigger interval
 
-* **Weeks Between Triggers**: Enter the number of weeks between each workflow trigger.
-* **Trigger on Weekdays**: Select the day(s) of the week you want to trigger the node.
-* **Trigger at Hour**: Select the hour of the day to trigger the node.
-* **Trigger at Minute**: Enter the minute past the hour to trigger the node when it runs, from `0` to `59`.
+* **Weeks Between Triggers**: ใส่จำนวนสัปดาห์ที่ต้องการให้ workflow ทำงานแต่ละครั้ง
+* **Trigger on Weekdays**: เลือกวันในสัปดาห์ที่ต้องการให้ trigger ทำงาน
+* **Trigger at Hour**: เลือกชั่วโมงที่ต้องการให้ trigger ทำงาน
+* **Trigger at Minute**: ใส่นาทีที่ต้องการให้ trigger ทำงานในแต่ละชั่วโมง (0 ถึง 59)
 
-For example, if you enter `2` **Weeks Between Triggers**, **Monday** for **Trigger on Weekdays**, **3pm** for **Trigger at Hour**, and `30` **Trigger at Minute**, the node will run every two weeks on Monday at 3:30 PM.
+ตัวอย่างเช่น ถ้าใส่ `2` ใน **Weeks Between Triggers**, เลือก **Monday** ใน **Trigger on Weekdays**, เลือก **3pm** ใน **Trigger at Hour** และใส่ `30` ใน **Trigger at Minute** node จะทำงานทุก 2 สัปดาห์ในวันจันทร์ เวลา 3:30 PM
 
 ### Months trigger interval
 
-* **Months Between Triggers**: Enter the number of months between each workflow trigger.
-* **Trigger at Day of Month**: Enter the day of the month the day should trigger at, from `1` to `31`. If a month doesn't have this day, the node won't trigger. For example, if you enter `30` here, the node won't trigger in February.
-* **Trigger at Hour**: Select the hour of the day to trigger the node.
-* **Trigger at Minute**: Enter the minute past the hour to trigger the node when it runs, from `0` to `59`.
+* **Months Between Triggers**: ใส่จำนวนเดือนที่ต้องการให้ workflow ทำงานแต่ละครั้ง
+* **Trigger at Day of Month**: ใส่วันที่ของเดือนที่ต้องการให้ trigger ทำงาน (1 ถึง 31) ถ้าเดือนนั้นไม่มีวันดังกล่าว node จะไม่ทำงาน เช่น ถ้าใส่ `30` node จะไม่ทำงานในเดือนกุมภาพันธ์
+* **Trigger at Hour**: เลือกชั่วโมงที่ต้องการให้ trigger ทำงาน
+* **Trigger at Minute**: ใส่นาทีที่ต้องการให้ trigger ทำงานในแต่ละชั่วโมง (0 ถึง 59)
 
-For example, if you enter `3` **Months Between Triggers**, `28` **Trigger at Day of Month**, **9am** for **Trigger at Hour**, and `0` **Trigger at Minute**, the node will run each quarter on the 28th day of the month at 9:00 AM.
+ตัวอย่างเช่น ถ้าใส่ `3` ใน **Months Between Triggers**, ใส่ `28` ใน **Trigger at Day of Month**, เลือก **9am** ใน **Trigger at Hour** และใส่ `0` ใน **Trigger at Minute** node จะทำงานทุกไตรมาสในวันที่ 28 ของเดือน เวลา 9:00 AM
 
 ### Custom (Cron) interval
 
-Enter a custom cron **Expression** to set the schedule for the trigger.
+ใส่ custom cron **Expression** เพื่อกำหนดเวลาที่ต้องการให้ trigger ทำงาน
 
-To generate a Cron expression, you can use [crontab guru](https://crontab.guru){:target=_blank .external-link}. Paste the Cron expression that you generated using crontab guru in the **Expression** field in n8n.
+ถ้าต้องการสร้าง Cron expression สามารถใช้ [crontab guru](https://crontab.guru){:target=_blank .external-link} ได้เลย แล้วนำ expression ที่ได้มาใส่ในช่อง **Expression** ใน n8n
 
 #### Examples
 
 <!-- vale from-write-good.Weasel = NO -->
 |Type|Cron Expression|Description|
 |---|---|---|
-|Every X Seconds|`*/10 * * * * *`|Every 10 seconds.|
-|Every X Minutes|`*/5 * * * *`|Every 5 minutes.|
-|Hourly|`0 * * * *`|Every hour on the hour.|
-|Daily|`0 6 * * *`|At 6:00 AM every day.|
-|Weekly|`0 12 * * 1`|At noon every Monday.|
-|Monthly|`0 0 1 * *`|At midnight on the 1st of every month.|
-|Every X Days|`0 0 */3 * *`|At midnight every 3rd day.|
-|Only Weekdays|`0 9 * * 1-5`|At 9:00 AM Monday through Friday.|
-|Custom Hourly Range|`0 9-17 * * *`|Every hour from 9:00 AM to 5:00 PM every day.|
-|Quarterly|`0 0 1 1,4,7,10 *`|At midnight on the 1st of January, April, July, and October.|
+|Every X Seconds|`*/10 * * * * *`|ทุก 10 วินาที|
+|Every X Minutes|`*/5 * * * *`|ทุก 5 นาที|
+|Hourly|`0 * * * *`|ทุกชั่วโมงตรง|
+|Daily|`0 6 * * *`|ทุกวันเวลา 6:00 AM|
+|Weekly|`0 12 * * 1`|ทุกวันจันทร์เวลาเที่ยงตรง|
+|Monthly|`0 0 1 * *`|เที่ยงคืนของวันที่ 1 ของทุกเดือน|
+|Every X Days|`0 0 */3 * *`|เที่ยงคืนของทุก 3 วัน|
+|Only Weekdays|`0 9 * * 1-5`|ทุกวันจันทร์ถึงศุกร์ เวลา 9:00 AM|
+|Custom Hourly Range|`0 9-17 * * *`|ทุกชั่วโมงตั้งแต่ 9:00 AM ถึง 5:00 PM ทุกวัน|
+|Quarterly|`0 0 1 1,4,7,10 *`|เที่ยงคืนของวันที่ 1 มกราคม, เมษายน, กรกฎาคม, และตุลาคม|
 <!-- vale from-write-good.Weasel = YES -->
 
 /// warning | Using variables in the Cron expression
-While variables can be used in the scheduled trigger, their values only get evaluated when the workflow is activated. If you alter a variable's value in the settings after a workflow is activated, the changes won't alter the cron schedule. To re-evaluate the variable, set the workflow to **Inactive** and then back to **Active** again
+ถึงจะใช้ตัวแปรใน scheduled trigger ได้ แต่ค่าของตัวแปรจะถูกประเมินแค่ตอนที่ workflow ถูก activate เท่านั้น ถ้าเปลี่ยนค่าตัวแปรใน settings หลังจาก activate แล้ว schedule จะไม่เปลี่ยนตาม ต้อง set workflow เป็น **Inactive** แล้ว activate ใหม่อีกรอบเพื่อให้ค่าตัวแปรถูกนำไปใช้
 /// 
 
 #### Why there are six asterisks in the Cron expression
 
-The sixth asterisk in the Cron expression represents seconds. Setting this is optional. The node will execute even if you don't set the value for seconds.
+เครื่องหมายดอกจันตัวที่หกใน Cron expression คือค่าของวินาที ซึ่งเป็น optional จะใส่หรือไม่ใส่ก็ได้ node ก็จะทำงานอยู่ดี
 
 |  (*)  |  *  |  *  |  *  |  *  |  *  |
 |:--:|:--:|:--:|:--:|:--:|:--:|
@@ -119,4 +125,4 @@ The sixth asterisk in the Cron expression represents seconds. Setting this is op
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common Issues](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/common-issues.md).
+สำหรับคำถามหรือปัญหาที่พบบ่อยและวิธีแก้ไข ดูได้ที่ [Common Issues](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/common-issues.md)

@@ -1,19 +1,19 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Dropbox node documentation
-description: Learn how to use the Dropbox node in n8n. Follow technical documentation to integrate Dropbox node into your workflows.
+description: เรียนรู้วิธีการใช้ Dropbox node ใน n8n ทำตามเอกสารทางเทคนิคเพื่อรวม Dropbox node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 priority: medium
 ---
 
 # Dropbox node
 
-Use the Dropbox node to automate work in Dropbox, and integrate Dropbox with other applications. n8n has built-in support for a wide range of Dropbox features, including creating, downloading, moving, and copying files and folders.
+ใช้ Dropbox node เพื่อทำงานอัตโนมัติใน Dropbox และเชื่อมต่อ Dropbox กับแอปอื่นๆ ได้เลย n8n รองรับฟีเจอร์ของ Dropbox หลายอย่าง เช่น การสร้าง ดาวน์โหลด ย้าย และคัดลอก files และ folders
 
-On this page, you'll find a list of operations the Dropbox node supports and links to more resources.
+ในหน้านี้จะมีรายการ operations ที่ Dropbox node รองรับ พร้อมลิงก์ไปยังแหล่งข้อมูลอื่นๆ
 
 /// note | Credentials
-Refer to [Dropbox credentials](/integrations/builtin/credentials/dropbox.md) for guidance on setting up authentication. 
+โปรดดู [Dropbox credentials](/integrations/builtin/credentials/dropbox.md) สำหรับคำแนะนำการตั้งค่าการยืนยันตัวตน
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

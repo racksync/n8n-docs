@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Chargebee node
 
-Use the Chargebee node to automate work in Chargebee, and integrate Chargebee with other applications. n8n has built-in support for a wide range of Chargebee features, including creating customers, returning invoices, and canceling subscriptions.
+ใช้ Chargebee node เพื่อทำงานอัตโนมัติใน Chargebee และ integrate Chargebee กับแอปพลิเคชันอื่นๆ n8n มีการรองรับในตัวสำหรับฟีเจอร์ต่างๆ ของ Chargebee รวมถึงการสร้าง customers, การคืน invoices, และการยกเลิก subscriptions
 
-On this page, you'll find a list of operations the Chargebee node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Chargebee node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [Chargebee credentials](/integrations/builtin/credentials/chargebee.md) for guidance on setting up authentication. 
+อ้างอิง [Chargebee credentials](/integrations/builtin/credentials/chargebee.md) สำหรับคำแนะนำในการตั้งค่า authentication
 ///
 
 ## Operations

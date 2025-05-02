@@ -8,12 +8,12 @@ priority: high
 
 # Google Drive node
 
-Use the Google Drive node to automate work in Google Drive, and integrate Google Drive with other applications. n8n has built-in support for a wide range of Google Drive features, including creating, updating, listing, deleting, and getting drives, files, and folders. 
+ใช้ Google Drive node เพื่อทำงานอัตโนมัติใน Google Drive และเชื่อมต่อ Google Drive กับแอปพลิเคชันอื่นๆ n8n รองรับฟีเจอร์ต่างๆ ของ Google Drive ในตัว เช่น การสร้าง, อัปเดต, แสดงรายการ, ลบ และดึงข้อมูล Drives, Files และ Folders
 
-On this page, you'll find a list of operations the Google Drive node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ Operations ที่ Google Drive node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [Google Drive credentials](/integrations/builtin/credentials/google/index.md) for guidance on setting up authentication. 
+โปรดดู [Google Drive credentials](/integrations/builtin/credentials/google/index.md) สำหรับคำแนะนำในการตั้งค่า Authentication
 ///
 
 ## Operations
@@ -47,6 +47,6 @@ Refer to [Google Drive credentials](/integrations/builtin/credentials/google/ind
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/common-issues.md).
+สำหรับคำถามหรือปัญหาที่พบบ่อยและแนวทางแก้ไข โปรดดูที่ [Common issues](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/common-issues.md)
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

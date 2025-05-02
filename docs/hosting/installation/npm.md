@@ -5,64 +5,63 @@ contentType: tutorial
 
 # npm
 
-npm is a quick way to get started with n8n on your local machine. You must have [Node.js](https://nodejs.org/en/){:target=_blank .external-link} installed. n8n requires Node.js 18 or above.
+npm เป็นวิธีที่ง่ายและรวดเร็วในการเริ่มต้นใช้งาน n8n บนเครื่องของคุณเอง คุณต้องติดตั้ง [Node.js](https://nodejs.org/en/){:target=_blank .external-link} ก่อน โดย n8n ต้องการ Node.js เวอร์ชัน 18 ขึ้นไป
 
 --8<-- "_snippets/self-hosting/installation/latest-next-version.md"
 
 ## Try n8n with npx
 
-You can try n8n without installing it using npx.
+คุณสามารถลองใช้ n8n ได้โดยไม่ต้องติดตั้ง เพียงใช้ npx
 
-From the terminal, run:
+เปิด terminal แล้วรันคำสั่งนี้:
 
 ```bash
 npx n8n
 ```
 
-This command will download everything that's needed to start n8n. You can then access n8n and start building workflows by opening [http://localhost:5678](http://localhost:5678){:target=_blank .external-link}.
+คำสั่งนี้จะดาวน์โหลดทุกอย่างที่จำเป็นสำหรับการเริ่มต้นใช้งาน n8n จากนั้นคุณสามารถเข้าใช้งาน n8n และเริ่มสร้าง workflow ได้ที่ [http://localhost:5678](http://localhost:5678){:target=_blank .external-link}
 
 ## Install globally with npm
 
-To install n8n globally, use npm:
+ถ้าต้องการติดตั้ง n8n แบบ global ให้ใช้ npm:
 
 ```bash
 npm install n8n -g
 ```
 
-To install or update to a specific version of n8n use the `@` syntax to specify the version. For example:
+ถ้าต้องการติดตั้งหรืออัปเดตเป็นเวอร์ชันที่ต้องการ ให้ใช้ `@` ตามด้วยเวอร์ชัน เช่น:
 
 ```bash
 npm install -g n8n@0.126.1
 ```
 
-To install `next`:
+ถ้าต้องการติดตั้ง `next`:
 
 ```bash
 npm install -g n8n@next
 ```
 
-After the installation, start n8n by running:
+หลังติดตั้งเสร็จ ให้เริ่มต้น n8n โดยรัน:
 
 ```bash
 n8n
-# or
+# หรือ
 n8n start
 ```
 
-
 ### Next steps
 
-Try out n8n using the [Quickstarts](/try-it-out/index.md).
+ลองใช้งาน n8n ได้ที่ [Quickstarts](/try-it-out/index.md)
 
 ## Updating
 
-To update your n8n instance to the `latest` version, run:
+ถ้าต้องการอัปเดต n8n เป็นเวอร์ชันล่าสุด ให้รัน:
 
 ```bash
 npm update -g n8n
 ```
 
-To install the `next` version:
+ถ้าต้องการติดตั้งเวอร์ชัน `next`:
 
 ```bash
 npm install -g n8n@next
@@ -70,7 +69,7 @@ npm install -g n8n@next
 
 --8<-- "_snippets/self-hosting/installation/tunnel.md"
 
-Start n8n with `--tunnel` by running:
+เริ่ม n8n ด้วย `--tunnel` โดยรัน:
 
 ```bash
 n8n start --tunnel
@@ -78,13 +77,13 @@ n8n start --tunnel
 
 ## Reverting an upgrade
 
-Install the older version that you want to go back to.
+ถ้าต้องการย้อนกลับไปใช้เวอร์ชันเก่า ให้ติดตั้งเวอร์ชันที่ต้องการ
 
-If the upgrade involved a database migration:
+ถ้าการอัปเกรดมีการเปลี่ยนแปลง database migration:
 
-1. Check the feature documentation and release notes to see if there are any manual changes you need to make.
-1. Run `n8n db:revert` on your current version to roll back the database. If you want to revert more than one database migration, you need to repeat this process.
+1. ตรวจสอบเอกสารฟีเจอร์และ release notes ว่าต้องทำอะไรเพิ่มเติมหรือไม่
+1. รัน `n8n db:revert` บนเวอร์ชันปัจจุบันเพื่อย้อน database กลับ ถ้าต้องการย้อน migration มากกว่าหนึ่งครั้ง ให้ทำซ้ำขั้นตอนนี้
 
 ## Windows troubleshooting
 
-If you are experiencing issues running n8n on Windows, make sure your Node.js environment is correctly set up. Follow Microsoft's guide to [Install NodeJS on Windows](https://learn.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-windows){:target=_blank .external-link}.
+ถ้าคุณเจอปัญหาในการใช้งาน n8n บน Windows ให้ตรวจสอบว่า Node.js ถูกติดตั้งและตั้งค่าอย่างถูกต้อง ดูคู่มือของ Microsoft ได้ที่ [Install NodeJS on Windows](https://learn.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-windows){:target=_blank .external-link}

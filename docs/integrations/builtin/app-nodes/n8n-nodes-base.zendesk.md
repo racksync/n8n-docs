@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Zendesk node
 
-Use the Zendesk node to automate work in Zendesk, and integrate Zendesk with other applications. n8n has built-in support for a wide range of Zendesk features, including creating, and deleting tickets, users, and organizations. 
+ใช้ Zendesk node ในการทำงานอัตโนมัติใน Zendesk และเชื่อมต่อ Zendesk กับแอปพลิเคชันอื่น ๆ. n8n มีการสนับสนุนฟีเจอร์ของ Zendesk หลากหลาย เช่น การสร้างและการลบ tickets, users และ organizations.
 
-On this page, you'll find a list of operations the Zendesk node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการของ operations ที่ Zendesk node รองรับและลิงก์ไปยัง resource เพิ่มเติม.
 
 /// note | Credentials
-Refer to [Zendesk credentials](/integrations/builtin/credentials/zendesk.md) for guidance on setting up authentication. 
+ดู [Zendesk credentials](/integrations/builtin/credentials/zendesk.md) สำหรับคำแนะนำในการตั้งค่า authentication. 
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

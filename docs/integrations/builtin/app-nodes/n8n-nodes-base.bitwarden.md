@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Bitwarden node
 
-Use the Bitwarden node to automate work in Bitwarden, and integrate Bitwarden with other applications. n8n has built-in support for a wide range of Bitwarden features, including creating, getting, deleting, and updating collections, events, groups, and members.
+ใช้ Bitwarden node เพื่อทำงานอัตโนมัติใน Bitwarden และ integrate Bitwarden กับแอปพลิเคชันอื่นๆ n8n มีการรองรับในตัวสำหรับฟีเจอร์ต่างๆ ของ Bitwarden รวมถึงการสร้าง, ดึง, ลบ, และอัปเดต collections, events, groups, และ members
 
-On this page, you'll find a list of operations the Bitwarden node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการ operations ที่ Bitwarden node รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [Bitwarden credentials](/integrations/builtin/credentials/bitwarden.md) for guidance on setting up authentication. 
+อ้างอิง [Bitwarden credentials](/integrations/builtin/credentials/bitwarden.md) สำหรับคำแนะนำในการตั้งค่า authentication
 ///
 
 ## Operations

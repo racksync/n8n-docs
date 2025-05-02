@@ -8,12 +8,10 @@ priority: medium
 
 # Shopify node
 
-Use the Shopify node to automate work in Shopify, and integrate Shopify with other applications. n8n has built-in support for a wide range of Shopify features, including creating, updating, deleting, and getting orders and products. 
-
-On this page, you'll find a list of operations the Shopify node supports and links to more resources.
+ใช้ Shopify node เพื่อทำให้งานใน Shopify เป็นไปโดยอัตโนมัติและเชื่อมต่อกับแอปพลิเคชันอื่น ๆ ได้อย่างราบรื่น. n8n รองรับฟีเจอร์ของ Shopify หลากหลาย เช่น การสร้าง, อัปเดต, ลบ, และดึงข้อมูล orders และ products.
 
 /// note | Credentials
-Refer to [Shopify credentials](/integrations/builtin/credentials/shopify.md) for guidance on setting up authentication. 
+ดู [Shopify credentials](/integrations/builtin/credentials/shopify.md) สำหรับคำแนะนำในการตั้งค่า authentication. 
 ///
 
 ## Operations

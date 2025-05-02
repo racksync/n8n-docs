@@ -7,12 +7,10 @@ contentType: [integration, reference]
 
 # Spontit node
 
-Use the Spontit node to automate work in Spontit, and integrate Spontit with other applications. n8n supports creating push notifications with Spontit. 
-
-On this page, you'll find a list of operations the Spontit node supports and links to more resources.
+ใช้ Spontit node เพื่อช่วยให้งานใน Spontit เป็นไปโดยอัตโนมัติและผสานกับแอปพลิเคชันอื่น ๆ ได้อย่างง่ายดาย. n8n รองรับการสร้าง push notifications ผ่าน Spontit.
 
 /// note | Credentials
-Refer to [Spontit credentials](/integrations/builtin/credentials/spontit.md) for guidance on setting up authentication. 
+ดู [Spontit credentials](/integrations/builtin/credentials/spontit.md) สำหรับคำแนะนำในการตั้งค่า authentication. 
 ///
 
 ## Operations

@@ -8,11 +8,11 @@ priority: medium
 
 # SSE Trigger node
 
-Server-Sent Events (SSE) is a server push technology enabling a client to receive automatic updates from a server using HTTP connection. The SSE Trigger node is used to receive server-sent events.
+Server-Sent Events (SSE) คือเทคโนโลยี server push ที่ให้ client รับอัปเดตอัตโนมัติจาก server ผ่าน HTTP connection SSE Trigger node ใช้สำหรับรับ server-sent events
 
 ## Node parameters
 
-The SSE Trigger node has one parameter, the **URL**. Enter the URL from which to receive the server-sent events (SSE).
+SSE Trigger node มี parameter เดียวคือ **URL** ให้ใส่ URL ที่จะรับ server-sent events (SSE)
 
 
 ## Templates and examples

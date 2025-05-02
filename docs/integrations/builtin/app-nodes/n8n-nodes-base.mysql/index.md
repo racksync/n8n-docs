@@ -8,12 +8,12 @@ priority: high
 
 # MySQL node
 
-Use the MySQL node to automate work in MySQL, and integrate MySQL with other applications. n8n has built-in support for a wide range of MySQL features, including executing an SQL query, as well as inserting, and updating rows in a database.
+ใช้โหนด MySQL เพื่อทำงานอัตโนมัติใน MySQL และเชื่อมต่อ MySQL กับแอปพลิเคชันอื่นๆ n8n มีการสนับสนุนฟีเจอร์ของ MySQL มากมาย รวมถึงการรันคำสั่ง SQL query การเพิ่มข้อมูล และการอัปเดตแถวในฐานข้อมูล
 
-On this page, you'll find a list of operations the MySQL node supports and links to more resources.
+ในหน้านี้ คุณจะพบรายการของการดำเนินการที่โหนด MySQL รองรับ และลิงก์ไปยังแหล่งข้อมูลเพิ่มเติม
 
 /// note | Credentials
-Refer to [MySQL credentials](/integrations/builtin/credentials/mysql.md) for guidance on setting up authentication. 
+ดูที่ [MySQL credentials](/integrations/builtin/credentials/mysql.md) สำหรับคำแนะนำในการตั้งค่าการยืนยันตัวตน 
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
@@ -34,15 +34,15 @@ Refer to [MySQL credentials](/integrations/builtin/credentials/mysql.md) for gui
 
 ## Related resources
 
-Refer to [MySQL's Connectors and APIs documentation](https://dev.mysql.com/doc/index-connectors.html){:target=_blank .external-link} for more information about the service.
+อ้างอิงถึง [MySQL's Connectors and APIs documentation](https://dev.mysql.com/doc/index-connectors.html){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติมเกี่ยวกับบริการนี้
 
-Refer to MySQL's [SELECT statement documentation](https://dev.mysql.com/doc/refman/8.4/en/select.html){:target=_blank .external-link} for more information on writing SQL queries.
+อ้างอิงถึง [SELECT statement documentation](https://dev.mysql.com/doc/refman/8.4/en/select.html){:target=_blank .external-link} ของ MySQL สำหรับข้อมูลเพิ่มเติมเกี่ยวกับการเขียนคำสั่ง SQL queries
 
 ## Use query parameters
 
-When creating a query to run on a MySQL database, you can use the **Query Parameters** field in the **Options** section to load data into the query. n8n sanitizes data in query parameters, which prevents SQL injection.
+เมื่อสร้างคำสั่ง query เพื่อรันบนฐานข้อมูล MySQL คุณสามารถใช้ฟิลด์ **Query Parameters** ในส่วน **Options** เพื่อโหลดข้อมูลเข้าไปในคำสั่ง query n8n ทำการ sanitize ข้อมูลในพารามิเตอร์ของคำสั่ง query ซึ่งช่วยป้องกันการโจมตีแบบ SQL injection
 
-For example, you want to find a person by their email address. Given the following input data:
+ตัวอย่างเช่น คุณต้องการค้นหาบุคคลด้วยอีเมล์ของพวกเขา จากข้อมูลนำเข้าต่อไปนี้:
 
 ```js
 [
@@ -59,13 +59,13 @@ For example, you want to find a person by their email address. Given the followi
 ]
 ```
 
-You can write a query like:
+คุณสามารถเขียนคำสั่ง query แบบนี้ได้:
 
 ```sql
 SELECT * FROM $1:name WHERE email = $2;
 ```
 
-Then in **Query Parameters**, provide the field values to use. You can provide fixed values or expressions. For this example, use expressions so the node can pull the email address from each input item in turn:
+จากนั้นใน **Query Parameters** ให้ระบุค่าฟิลด์ที่จะใช้ คุณสามารถใส่ค่าคงที่หรือใช้นิพจน์ (expressions) สำหรับตัวอย่างนี้ ใช้นิพจน์เพื่อให้โหนดสามารถดึงอีเมล์จากแต่ละรายการนำเข้าตามลำดับ:
 
 ```js
 // users is an example table name
@@ -74,4 +74,4 @@ users, {{ $json.email }}
 
 ## Common issues
 
-For common errors or issues and suggested resolution steps, refer to [Common issues](/integrations/builtin/app-nodes/n8n-nodes-base.mysql/common-issues.md).
+สำหรับข้อผิดพลาดทั่วไปหรือปัญหาและขั้นตอนการแก้ไขที่แนะนำ ดูที่ [Common issues](/integrations/builtin/app-nodes/n8n-nodes-base.mysql/common-issues.md)

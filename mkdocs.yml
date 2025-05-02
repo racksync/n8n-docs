@@ -3,6 +3,7 @@ site_url: https://n8n-docs.racksync.com/
 site_description: Documentation for n8n, a workflow automation platform.
 # Must be the docs repo for the edit page buttons to work
 repo_url: https://github.com/racksync/n8n-docs
+repo_name: racksync/n8n-docs
 edit_uri: edit/main/docs/
 validation:
   nav:
@@ -23,7 +24,8 @@ theme:
   icon:
     repo: fontawesome/brands/git-alt
   palette:
-    scheme: light
+    scheme: slate
+    primary: orange
   features:
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-header/#announcement-bar
     - announce.dismiss

@@ -1,4 +1,4 @@
-pip install --upgrade pip && pip install mkdocs-i18n mkdocs mkdocs-material && mkdocs build
+pip install --upgrade pip && pip install mkdocs-i18n mkdocs mkdocs-dracula-theme mkdocs-material && mkdocs build
 
 # Add a step to validate and fix broken links
 # echo "--- Fixing broken links by adding language prefixes ---"

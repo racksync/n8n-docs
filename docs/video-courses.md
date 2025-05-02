@@ -7,9 +7,9 @@ contentType: overview
 
 # Video courses
 
-n8n provides two video courses on YouTube.
+ไปชมวีดีโอที่ n8n YouTube กันเลย! เรียนรู้แนวคิดหลักและฟีเจอร์ n8n พร้อมสร้างตัวอย่างไปพร้อมกัน
 
-For support, join the [Forum](https://community.n8n.io/){:target=_blank .external-link}. หากต้องการความช่วยเหลือ เข้าร่วมได้ที่ [Forum](https://community.n8n.io/){:target=_blank .external-link}
+หากต้องการความช่วยเหลือ อย่ารีรอ [Forum](https://community.n8n.io/){:target=_blank .external-link}. หากต้องการความช่วยเหลือ เข้าร่วมได้ที่ [Forum](https://community.n8n.io/){:target=_blank .external-link}
 
 ## Beginner
 
@@ -28,7 +28,7 @@ The [Beginner](https://www.youtube.com/playlist?list=PLlET0GsrLUL59YbxstZE71WszP
 
 ## Advanced
 
-The [Advanced](https://www.youtube.com/playlist?list=PLlET0GsrLUL5bxmx5c1H1Ms_OtOPYZIEG){:target=_blank .external-link} course covers more complex workflows, more technical nodes, and enterprise features:
+คอร์สระดับสูงแบบ [Advanced](https://www.youtube.com/playlist?list=PLlET0GsrLUL5bxmx5c1H1Ms_OtOPYZIEG){:target=_blank .external-link} ครอบคลุม workflows ที่ซับซ้อนมากขึ้น, nodes ที่มีความ technical มากขึ้น และฟีเจอร์ enterprise:
 
 - [Introduction and complex data flows](https://youtu.be/TFTLMQLozCI?si=vX0ooIH1RmbsgAkC){:target=_blank .external-link}
 - [Advanced technical nodes](https://youtu.be/JM4jqYs4Fxo?si=YSNMeSay3C29C8HS){:target=_blank .external-link}

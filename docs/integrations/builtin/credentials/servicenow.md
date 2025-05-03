@@ -1,7 +1,6 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: ServiceNow credentials
-description: Documentation for ServiceNow credentials. Use these credentials to authenticate ServiceNow in n8n, a workflow automation platform.
+title: ข้อมูลเข้าสู่ระบบ ServiceNow
+description: คู่มือการตั้งค่า ServiceNow credentials สำหรับเชื่อมต่อ ServiceNow กับ n8n
 contentType: [integration, reference]
 ---
 

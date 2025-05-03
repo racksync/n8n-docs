@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Kafka credentials
-description: Documentation for Kafka credentials. Use these credentials to authenticate Kafka in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน Kafka
+description: เอกสารสำหรับ Kafka credentials ใช้เพื่อเชื่อมต่อ Kafka ใน n8n
 contentType: [integration, reference]
 priority: medium
 ---

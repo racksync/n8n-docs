@@ -1,7 +1,6 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Trellix ePO credentials
-description: Documentation for the Trellix ePO credentials. Use these credentials to authenticate Trellix ePO in n8n, a workflow automation platform.
+title: คู่มือ Trellix ePO credentials
+description: คู่มือการตั้งค่า Trellix ePO credentials สำหรับเชื่อมต่อ Trellix ePO กับ n8n
 contentType: [integration, reference]
 priority: medium
 ---

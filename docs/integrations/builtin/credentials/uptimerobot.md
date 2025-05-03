@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: UptimeRobot credentials
-description: Documentation for UptimeRobot credentials. Use these credentials to authenticate UptimeRobot in n8n, a workflow automation platform.
+title: ข้อมูลเข้าสู่ระบบ UptimeRobot
+description: คู่มือการตั้งค่า credentials สำหรับเชื่อมต่อ UptimeRobot กับ n8n เพื่อใช้งาน workflow automation
 contentType: [integration, reference]
 ---
 

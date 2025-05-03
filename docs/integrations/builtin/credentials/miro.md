@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Miro credentials
-description: Documentation for the Miro credentials. Use these credentials to authenticate Miro in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน Miro
+description: เอกสารสำหรับ Miro credentials ใช้เพื่อเชื่อมต่อ Miro ใน n8n
 contentType: [integration, reference]
 ---
 

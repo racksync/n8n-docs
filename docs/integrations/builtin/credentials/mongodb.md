@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: MongoDB credentials
-description: Documentation for MongoDB credentials. Use these credentials to authenticate MongoDB in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน MongoDB
+description: เอกสารสำหรับ MongoDB credentials ใช้เพื่อเชื่อมต่อ MongoDB ใน n8n
 contentType: [integration, reference]
 priority: medium
 ---

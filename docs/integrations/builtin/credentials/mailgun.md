@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Mailgun credentials
-description: Documentation for Mailgun credentials. Use these credentials to authenticate Mailgun in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน Mailgun
+description: เอกสารสำหรับ Mailgun credentials ใช้เพื่อเชื่อมต่อ Mailgun ใน n8n
 contentType: [integration, reference]
 ---
 

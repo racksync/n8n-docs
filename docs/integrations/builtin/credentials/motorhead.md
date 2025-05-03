@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Motorhead credentials
-description: Documentation for the Motorhead credentials. Use these credentials to authenticate Motorhead in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน Motorhead
+description: เอกสารสำหรับ Motorhead credentials ใช้เพื่อเชื่อมต่อ Motorhead ใน n8n
 contentType: [integration, reference]
 priority: medium
 ---
@@ -30,7 +30,7 @@ priority: medium
 - **API Key**
 - **Client ID**
 
-วิธีตั้งค่า คุณจะต้องสร้าง API key:
+วิธีตั้งค่า คุณจะต้องสร้าง API key:k
 
 1. หากคุณ self-host Motorhead ให้อัปเดต **Host** URL ให้ตรงกับ Motorhead URL ของคุณ
 2. ใน Motorhead ไปที่ [**Settings > Organization**](https://app.getmetal.io/settings/organization){:target=_blank .external-link}

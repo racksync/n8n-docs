@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Pinecone credentials
-description: Documentation for the Pinecone credentials. Use these credentials to authenticate Pinecone in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน Pinecone
+description: เอกสารสำหรับข้อมูลยืนยันตัวตน Pinecone ใช้ข้อมูลนี้เพื่อยืนยันตัวตน Pinecone ใน n8n แพลตฟอร์ม workflow automation
 contentType: [integration, reference]
 priority: medium
 ---

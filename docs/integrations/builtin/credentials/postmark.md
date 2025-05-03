@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Postmark credentials
-description: Documentation for Postmark credentials. Use these credentials to authenticate Postmark in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน Postmark
+description: เอกสารสำหรับข้อมูลยืนยันตัวตน Postmark ใช้ข้อมูลนี้เพื่อยืนยันตัวตน Postmark ใน n8n แพลตฟอร์ม workflow automation
 contentType: [integration, reference]
 ---
 

@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: OpenWeatherMap credentials
-description: Documentation for OpenWeatherMap credentials. Use these credentials to authenticate OpenWeatherMap in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน OpenWeatherMap
+description: เอกสารสำหรับข้อมูลยืนยันตัวตน OpenWeatherMap ใช้ข้อมูลนี้เพื่อยืนยันตัวตน OpenWeatherMap ใน n8n แพลตฟอร์ม workflow automation
 contentType: [integration, reference]
 priority: medium
 ---

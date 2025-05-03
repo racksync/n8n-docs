@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Brevo credentials
-description: Documentation for Brevo credentials. Use these credentials to authenticate Brevo in n8n, a workflow automation platform.
+title: ข้อมูลรับรอง Brevo
+description: เอกสารข้อมูลรับรอง Brevo ใช้ข้อมูลนี้เพื่อยืนยันตัวตน Brevo ใน n8n
 contentType: [integration, reference]
 ---
 

@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: OpenAI credentials
-description: Documentation for OpenAI credentials. Use these credentials to authenticate OpenAI in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน OpenAI
+description: เอกสารสำหรับข้อมูลยืนยันตัวตน OpenAI ใช้ข้อมูลนี้เพื่อยืนยันตัวตน OpenAI ใน n8n แพลตฟอร์ม workflow automation
 contentType: [integration, reference]
 priority: critical
 ---

@@ -1,7 +1,6 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: MySQL credentials
-description: Documentation for MySQL credentials. Use these credentials to authenticate MySQL in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน MySQL
+description: เอกสารสำหรับการยืนยันตัวตน MySQL. ใช้ข้อมูลเหล่านี้เพื่อยืนยันตัวตน MySQL ใน n8n.
 contentType: [integration, reference]
 priority: high
 ---

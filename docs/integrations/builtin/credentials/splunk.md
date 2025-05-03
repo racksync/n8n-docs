@@ -1,7 +1,6 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Splunk credentials
-description: Documentation for Splunk credentials. Use these credentials to authenticate Splunk in n8n, a workflow automation platform.
+title: ข้อมูลเข้าสู่ระบบ Splunk
+description: คู่มือการตั้งค่า Splunk credentials สำหรับเชื่อมต่อ Splunk กับ n8n
 contentType: [integration, reference]
 ---
 

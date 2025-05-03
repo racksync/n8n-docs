@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: ProfitWell credentials
-description: Documentation for ProfitWell credentials. Use these credentials to authenticate ProfitWell in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน ProfitWell
+description: เอกสารสำหรับข้อมูลยืนยันตัวตน ProfitWell ใช้ข้อมูลนี้เพื่อยืนยันตัวตน ProfitWell ใน n8n แพลตฟอร์ม workflow automation
 contentType: [integration, reference]
 ---
 

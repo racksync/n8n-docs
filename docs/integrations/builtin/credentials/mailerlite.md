@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: MailerLite credentials
-description: Documentation for MailerLite credentials. Use these credentials to authenticate MailerLite in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน MailerLite
+description: เอกสารสำหรับ MailerLite credentials ใช้เพื่อเชื่อมต่อ MailerLite ใน n8n
 contentType: [integration, reference]
 ---
 

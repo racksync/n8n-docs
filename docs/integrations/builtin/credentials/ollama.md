@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Ollama credentials
-description: Documentation for the Ollama credentials. Use these credentials to authenticate Ollama in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน Ollama
+description: เอกสารสำหรับข้อมูลยืนยันตัวตน Ollama ใช้ข้อมูลนี้เพื่อยืนยันตัวตน Ollama ใน n8n แพลตฟอร์ม workflow automation
 contentType: [integration, reference]
 priority: high
 ---

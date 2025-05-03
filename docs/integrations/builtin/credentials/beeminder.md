@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Beeminder credentials
-description: Documentation for Beeminder credentials. Use these credentials to authenticate Beeminder in n8n, a workflow automation platform.
+title: ข้อมูลรับรอง Beeminder
+description: เอกสารข้อมูลรับรอง Beeminder ใช้ข้อมูลนี้เพื่อยืนยันตัวตน Beeminder ใน n8n
 contentType: [integration, reference]
 ---
 

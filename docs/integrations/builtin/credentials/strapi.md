@@ -1,7 +1,6 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Strapi credentials
-description: Documentation for Strapi credentials. Use these credentials to authenticate Strapi in n8n, a workflow automation platform.
+title: ข้อมูลเข้าสู่ระบบ Strapi
+description: คู่มือการตั้งค่า Strapi credentials สำหรับเชื่อมต่อ Strapi กับ n8n
 contentType: [integration, reference]
 ---
 

@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Mailcheck credentials
-description: Documentation for Mailcheck credentials. Use these credentials to authenticate Mailcheck in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน Mailcheck
+description: เอกสารสำหรับ Mailcheck credentials ใช้เพื่อเชื่อมต่อ Mailcheck ใน n8n
 contentType: [integration, reference]
 ---
 

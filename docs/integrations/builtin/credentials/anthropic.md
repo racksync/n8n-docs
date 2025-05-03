@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Anthropic credentials
-description: Documentation for the Anthropic credentials. Use these credentials to authenticate Anthropic in n8n, a workflow automation platform.
+title: ข้อมูลรับรอง Anthropic
+description: เอกสารข้อมูลรับรอง Anthropic ใช้ข้อมูลนี้เพื่อยืนยันตัวตน Anthropic ใน n8n
 contentType: [integration, reference]
 priority: medium
 ---

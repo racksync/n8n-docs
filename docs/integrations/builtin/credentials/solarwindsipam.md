@@ -1,7 +1,6 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: SolarWinds IPAM credentials
-description: Documentation for the SolarWinds IPAM credentials. Use these credentials to authenticate SolarWinds IPAM in n8n, a workflow automation platform.
+title: ข้อมูลเข้าสู่ระบบ SolarWinds IPAM
+description: คู่มือการตั้งค่า SolarWinds IPAM credentials สำหรับเชื่อมต่อ SolarWinds IPAM กับ n8n
 contentType: [integration, reference]
 ---
 # SolarWinds IPAM credentials

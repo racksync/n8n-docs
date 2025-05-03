@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: AMQP credentials
-description: Documentation for AMQP credentials. Use these credentials to authenticate AMQP in n8n, a workflow automation platform.
+title: ข้อมูลรับรอง AMQP
+description: เอกสารข้อมูลรับรอง AMQP ใช้ข้อมูลนี้เพื่อยืนยันตัวตน AMQP ใน n8n
 contentType: [integration, reference]
 priority: medium
 ---

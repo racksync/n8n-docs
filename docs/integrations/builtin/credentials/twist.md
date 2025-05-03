@@ -1,7 +1,6 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Twist credentials
-description: Documentation for Twist credentials. Use these credentials to authenticate Twist in n8n, a workflow automation platform.
+title: คู่มือ Twist credentials
+description: คู่มือการตั้งค่า Twist credentials สำหรับเชื่อมต่อ Twist กับ n8n
 contentType: [integration, reference]
 ---
 

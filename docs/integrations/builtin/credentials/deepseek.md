@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: DeepSeek credentials
-description: Documentation for DeepSeek credentials. Use these credentials to authenticate Deepseek in n8n, a workflow automation platform.
+title: ข้อมูลรับรอง DeepSeek
+description: เอกสารข้อมูลรับรอง DeepSeek ใช้ข้อมูลนี้เพื่อยืนยันตัวตน Deepseek ใน n8n
 contentType: [integration, reference]
 priority: critical
 ---

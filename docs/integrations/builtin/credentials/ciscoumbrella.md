@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Cisco Umbrella credentials
-description: Documentation for the Cisco Umbrella credentials. Use these credentials to authenticate Cisco Umbrella in n8n, a workflow automation platform.
+title: ข้อมูลรับรอง Cisco Umbrella
+description: เอกสารข้อมูลรับรอง Cisco Umbrella ใช้ข้อมูลนี้เพื่อยืนยันตัวตน Cisco Umbrella ใน n8n
 contentType: [integration, reference]
 priority: medium
 ---

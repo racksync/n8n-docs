@@ -1,7 +1,6 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: npm credentials
-description: Documentation for the npm credentials. Use these credentials to authenticate npm in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน npm
+description: เอกสารสำหรับการยืนยันตัวตน npm. ใช้ข้อมูลเหล่านี้เพื่อยืนยันตัวตน npm ใน n8n.
 contentType: [integration, reference]
 ---
 

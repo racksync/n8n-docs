@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Raindrop credentials
-description: Documentation for Raindrop credentials. Use these credentials to authenticate Raindrop in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน Raindrop
+description: เอกสารสำหรับข้อมูลยืนยันตัวตน Raindrop ใช้ข้อมูลนี้เพื่อยืนยันตัวตน Raindrop ใน n8n แพลตฟอร์ม workflow automation
 contentType: [integration, reference]
 ---
 

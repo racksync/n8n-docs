@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Cal.com credentials
-description: Documentation for Cal.com credentials. Use these credentials to authenticate Cal.com in n8n, a workflow automation platform.
+title: ข้อมูลรับรอง Cal.com
+description: เอกสารข้อมูลรับรอง Cal.com ใช้ข้อมูลนี้เพื่อยืนยันตัวตน Cal.com ใน n8n
 contentType: [integration, reference]
 ---
 

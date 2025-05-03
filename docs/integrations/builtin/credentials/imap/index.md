@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: IMAP credentials
-description: Documentation for IMAP credentials. Use these credentials to authenticate IMAP in n8n, a workflow automation platform.
+description: เอกสารสำหรับ IMAP credentials ใช้ credential นี้เพื่อยืนยันตัวตน IMAP ใน n8n แพลตฟอร์ม workflow automation
 contentType: [integration, reference]
 priority: high
 ---

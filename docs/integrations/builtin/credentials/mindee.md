@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Mindee credentials
-description: Documentation for Mindee credentials. Use these credentials to authenticate Mindee in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน Mindee
+description: เอกสารสำหรับ Mindee credentials ใช้เพื่อยืนยันตัวตน Mindee ใน n8n
 contentType: [integration, reference]
 ---
 

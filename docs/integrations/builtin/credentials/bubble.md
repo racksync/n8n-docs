@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Bubble credentials
-description: เอกสารสำหรับ Bubble credentials ใช้ credentials นี้เพื่อยืนยันตัวตน Bubble ใน n8n ซึ่งเป็นแพลตฟอร์มสำหรับการทำงานอัตโนมัติของ workflow
+title: ข้อมูลรับรอง Bubble
+description: เอกสารข้อมูลรับรอง Bubble ใช้ข้อมูลนี้เพื่อยืนยันตัวตน Bubble ใน n8n
 contentType: [integration, reference]
 priority: medium
 ---

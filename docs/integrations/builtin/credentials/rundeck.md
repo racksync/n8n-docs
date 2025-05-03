@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Rundeck credentials
-description: Documentation for Rundeck credentials. Use these credentials to authenticate Rundeck in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน Rundeck
+description: เอกสารสำหรับข้อมูลยืนยันตัวตน Rundeck ใช้ข้อมูลนี้เพื่อยืนยันตัวตน Rundeck ใน n8n แพลตฟอร์ม workflow automation
 contentType: [integration, reference]
 ---
 

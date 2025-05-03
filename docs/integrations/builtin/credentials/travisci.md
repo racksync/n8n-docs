@@ -1,7 +1,6 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Travis CI credentials
-description: Documentation for Travis CI credentials. Use these credentials to authenticate Travis CI in n8n, a workflow automation platform.
+title: คู่มือ Travis CI credentials
+description: คู่มือการตั้งค่า Travis CI credentials สำหรับเชื่อมต่อ Travis CI กับ n8n
 contentType: [integration, reference]
 ---
 

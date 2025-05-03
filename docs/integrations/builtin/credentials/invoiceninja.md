@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Invoice Ninja credentials
-description: Documentation for Invoice Ninja credentials. Use these credentials to authenticate Invoice Ninja in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน Invoice Ninja
+description: เอกสารสำหรับ Invoice Ninja credentials ใช้เพื่อเชื่อมต่อ Invoice Ninja ใน n8n
 contentType: [integration, reference]
 ---
 

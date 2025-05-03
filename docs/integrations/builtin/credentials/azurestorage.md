@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Azure Storage credentials
-description: Documentation for the Azure Storage credentials. Use these credentials to authenticate Azure Storage in n8n, a workflow automation platform.
+title: ข้อมูลรับรอง Azure Storage
+description: เอกสารข้อมูลรับรอง Azure Storage ใช้ข้อมูลนี้เพื่อยืนยันตัวตน Azure Storage ใน n8n
 contentType: [integration, reference]
 ---
 

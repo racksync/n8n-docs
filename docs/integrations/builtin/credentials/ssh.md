@@ -1,7 +1,6 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: SSH credentials
-description: Documentation for SSH credentials. Use these credentials to authenticate SSH in n8n, a workflow automation platform.
+title: ข้อมูลเข้าสู่ระบบ SSH
+description: คู่มือการตั้งค่า SSH credentials สำหรับเชื่อมต่อ SSH กับ n8n
 contentType: [integration, reference]
 priority: medium
 ---

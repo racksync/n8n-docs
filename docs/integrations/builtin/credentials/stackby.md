@@ -1,7 +1,6 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Stackby credentials
-description: Documentation for Stackby credentials. Use these credentials to authenticate Stackby in n8n, a workflow automation platform.
+title: ข้อมูลเข้าสู่ระบบ Stackby
+description: คู่มือการตั้งค่า Stackby credentials สำหรับเชื่อมต่อ Stackby กับ n8n
 contentType: [integration, reference]
 ---
 

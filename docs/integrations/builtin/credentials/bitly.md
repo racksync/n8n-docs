@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Bitly credentials
-description: Documentation for Bitly credentials. Use these credentials to authenticate Bitly in n8n, a workflow automation platform.
+title: ข้อมูลรับรอง Bitly
+description: เอกสารข้อมูลรับรอง Bitly ใช้ข้อมูลนี้เพื่อยืนยันตัวตน Bitly ใน n8n
 contentType: [integration, reference]
 ---
 

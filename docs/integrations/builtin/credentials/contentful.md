@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Contentful credentials
-description: Documentation for Contentful credentials. Use these credentials to authenticate Contentful in n8n, a workflow automation platform.
+title: ข้อมูลรับรอง Contentful
+description: เอกสารข้อมูลรับรอง Contentful ใช้ข้อมูลนี้เพื่อยืนยันตัวตน Contentful ใน n8n
 contentType: [integration, reference]
 ---
 

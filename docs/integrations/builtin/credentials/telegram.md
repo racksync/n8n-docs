@@ -1,7 +1,6 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Telegram credentials
-description: Documentation for Telegram credentials. Use these credentials to authenticate Telegram in n8n, a workflow automation platform.
+title: คู่มือ Telegram credentials
+description: คู่มือการตั้งค่า Telegram credentials สำหรับเชื่อมต่อ Telegram กับ n8n
 contentType: [integration, reference]
 priority: critical
 ---

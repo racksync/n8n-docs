@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Demio credentials
-description: Documentation for Demio credentials. Use these credentials to authenticate Demio in n8n, a workflow automation platform.
+title: ข้อมูลรับรอง Demio
+description: เอกสารข้อมูลรับรอง Demio ใช้ข้อมูลนี้เพื่อยืนยันตัวตน Demio ใน n8n
 contentType: [integration, reference]
 ---
 

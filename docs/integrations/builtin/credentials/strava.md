@@ -1,7 +1,6 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Strava credentials
-description: Documentation for Strava credentials. Use these credentials to authenticate Strava in n8n, a workflow automation platform.
+title: ข้อมูลเข้าสู่ระบบ Strava
+description: คู่มือการตั้งค่า Strava credentials สำหรับเชื่อมต่อ Strava กับ n8n
 contentType: [integration, reference]
 ---
 

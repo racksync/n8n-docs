@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Malcore credentials
-description: Documentation for the Malcore credentials. Use these credentials to authenticate Malcore in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน Malcore
+description: เอกสารสำหรับ Malcore credentials ใช้เพื่อเชื่อมต่อ Malcore ใน n8n
 contentType: [integration, reference]
 ---
 # Malcore credentials

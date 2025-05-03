@@ -1,7 +1,6 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: SyncroMSP credentials
-description: Documentation for SyncroMSP credentials. Use these credentials to authenticate SyncroMSP in n8n, a workflow automation platform.
+title: ข้อมูลเข้าสู่ระบบ SyncroMSP
+description: คู่มือการตั้งค่า SyncroMSP credentials สำหรับเชื่อมต่อ SyncroMSP กับ n8n
 contentType: [integration, reference]
 ---
 

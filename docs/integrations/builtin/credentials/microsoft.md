@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Microsoft credentials
-description: Documentation for Microsoft credentials. Use these credentials to authenticate Microsoft in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน Microsoft
+description: เอกสารสำหรับ Microsoft credentials ใช้เพื่อเชื่อมต่อ Microsoft บน n8n
 contentType: [integration, reference]
 priority: high
 ---

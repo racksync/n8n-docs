@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Redis credentials
-description: Documentation for Redis credentials. Use these credentials to authenticate Redis in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน Redis
+description: เอกสารสำหรับข้อมูลยืนยันตัวตน Redis ใช้ข้อมูลนี้เพื่อยืนยันตัวตน Redis ใน n8n แพลตฟอร์ม workflow automation
 contentType: [integration, reference]
 priority: medium
 ---

@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Mistral Cloud credentials
-description: Documentation for the Mistral Cloud credentials. Use these credentials to authenticate Mistral Cloud in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน Mistral Cloud
+description: เอกสารสำหรับ Mistral Cloud credentials ใช้เพื่อยืนยันตัวตน Mistral Cloud ใน n8n
 contentType: [integration, reference]
 priority: medium
 ---

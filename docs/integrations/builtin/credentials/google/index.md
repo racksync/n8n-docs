@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Google credentials
-description: Documentation for Google credentials. Use these credentials to authenticate Google in n8n, a workflow automation platform.
+description: เอกสารสำหรับ Google credentials ใช้ credential นี้เพื่อยืนยันตัวตน Google ใน n8n แพลตฟอร์ม workflow automation
 contentType: overview
 ---
 

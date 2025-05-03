@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Imperva WAF credentials
-description: Documentation for the Imperva WAF credentials. Use these credentials to authenticate Imperva WAF in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน Imperva WAF
+description: เอกสารสำหรับ Imperva WAF credentials ใช้เพื่อเชื่อมต่อ Imperva WAF ใน n8n
 contentType: [integration, reference]
 priority: medium
 ---

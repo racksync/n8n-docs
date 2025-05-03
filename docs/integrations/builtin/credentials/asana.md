@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Asana credentials
-description: Documentation for Asana credentials. Use these credentials to authenticate Asana in n8n, a workflow automation platform.
+title: ข้อมูลรับรอง Asana
+description: เอกสารข้อมูลรับรอง Asana ใช้ข้อมูลนี้เพื่อยืนยันตัวตน Asana ใน n8n
 contentType: [integration, reference]
 priority: medium
 ---

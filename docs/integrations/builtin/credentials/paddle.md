@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Paddle credentials
-description: Documentation for Paddle credentials. Use these credentials to authenticate Paddle in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน Paddle
+description: เอกสารสำหรับข้อมูลยืนยันตัวตน Paddle ใช้ข้อมูลนี้เพื่อยืนยันตัวตน Paddle ใน n8n แพลตฟอร์ม workflow automation
 contentType: [integration, reference]
 ---
 

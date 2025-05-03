@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Mocean credentials
-description: Documentation for Mocean credentials. Use these credentials to authenticate Mocean in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน Mocean
+description: เอกสารสำหรับ Mocean credentials ใช้เพื่อยืนยันตัวตน Mocean ใน n8n
 contentType: [integration, reference]
 ---
 

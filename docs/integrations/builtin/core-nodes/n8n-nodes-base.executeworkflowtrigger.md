@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Execute Sub-workflow Trigger node documentation
-description: Learn how to use the Execute Sub-workflow Trigger node in n8n. Follow technical documentation to integrate Execute Sub-workflow Trigger node into your workflows.
+title: เอกสาร Execute Sub-workflow Trigger node
+description: เรียนรู้วิธีใช้ Execute Sub-workflow Trigger node ใน n8n ทำตามเอกสารเพื่อนำ Execute Sub-workflow Trigger node ไปใช้ใน workflow ของคุณ
 contentType: [integration, reference]
 priority: high
 ---

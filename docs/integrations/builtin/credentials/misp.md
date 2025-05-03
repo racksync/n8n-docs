@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: MISP credentials
-description: Documentation for MISP credentials. Use these credentials to authenticate MISP in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน MISP
+description: เอกสารสำหรับ MISP credentials ใช้เพื่อยืนยันตัวตน MISP ใน n8n
 contentType: [integration, reference]
 ---
 

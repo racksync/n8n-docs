@@ -1,7 +1,6 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: SecurityScorecard credentials
-description: Documentation for SecurityScorecard credentials. Use these credentials to authenticate SecurityScorecard in n8n, a workflow automation platform.
+title: ข้อมูลเข้าสู่ระบบ SecurityScorecard
+description: คู่มือการตั้งค่า SecurityScorecard credentials สำหรับเชื่อมต่อ SecurityScorecard กับ n8n
 contentType: [integration, reference]
 ---
 

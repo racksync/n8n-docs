@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Peekalink credentials
-description: Documentation for Peekalink credentials. Use these credentials to authenticate Peekalink in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน Peekalink
+description: เอกสารสำหรับข้อมูลยืนยันตัวตน Peekalink ใช้ข้อมูลนี้เพื่อยืนยันตัวตน Peekalink ใน n8n แพลตฟอร์ม workflow automation
 contentType: [integration, reference]
 ---
 

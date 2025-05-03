@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Local File Trigger node documentation
-description: เรียนรู้วิธีการใช้ Local File Trigger node ใน n8n ทำตามเอกสารทางเทคนิคเพื่อรวม Local File Trigger node เข้ากับ workflow ของคุณ
+title: เอกสาร Local File Trigger node
+description: เรียนรู้วิธีใช้ Local File Trigger node ใน n8n ทำตามเอกสารเพื่อนำ Local File Trigger node ไปใช้ใน workflow ของคุณ
 contentType: [integration, reference]
 priority: high
 ---

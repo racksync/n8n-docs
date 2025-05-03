@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Zoom credentials
-description: Documentation for Zoom credentials. Use these credentials to authenticate Zoom in n8n, a workflow automation platform.
+title: คู่มือการตั้งค่า Zoom credentials
+description: วิธีตั้งค่า Zoom credentials เพื่อเชื่อมต่อและยืนยันตัวตนกับ Zoom ใน n8n
 contentType: [integration, reference]
 ---
 

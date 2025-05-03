@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Oura credentials
-description: Documentation for Oura credentials. Use these credentials to authenticate Oura in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน Oura
+description: เอกสารสำหรับข้อมูลยืนยันตัวตน Oura ใช้ข้อมูลนี้เพื่อยืนยันตัวตน Oura ใน n8n แพลตฟอร์ม workflow automation
 contentType: [integration, reference]
 ---
 

@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Iterable credentials
-description: Documentation for Iterable credentials. Use these credentials to authenticate Iterable in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน Iterable
+description: เอกสารสำหรับ Iterable credentials ใช้เพื่อเชื่อมต่อ Iterable ใน n8n
 contentType: [integration, reference]
 ---
 

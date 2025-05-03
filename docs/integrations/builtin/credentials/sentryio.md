@@ -1,7 +1,6 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Sentry.io credentials
-description: Documentation for Sentry.io credentials. Use these credentials to authenticate Sentry.io in n8n, a workflow automation platform.
+title: ข้อมูลเข้าสู่ระบบ Sentry.io
+description: คู่มือการตั้งค่า Sentry.io credentials สำหรับเชื่อมต่อ Sentry.io กับ n8n
 contentType: [integration, reference]
 ---
 

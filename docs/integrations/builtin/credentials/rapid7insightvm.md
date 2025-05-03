@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Rapid7 InsightVM credentials
-description: Documentation for the Rapid7 InsightVM credentials. Use these credentials to authenticate Rapid7 InsightVm in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน Rapid7 InsightVM
+description: เอกสารสำหรับข้อมูลยืนยันตัวตน Rapid7 InsightVM ใช้ข้อมูลนี้เพื่อยืนยันตัวตน Rapid7 InsightVm ใน n8n แพลตฟอร์ม workflow automation
 contentType: [integration, reference]
 ---
 

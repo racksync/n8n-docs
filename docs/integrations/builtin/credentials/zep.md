@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Zep credentials
-description: Documentation for the Zep credentials. Use these credentials to authenticate Zep in n8n, a workflow automation platform.
+title: คู่มือการตั้งค่า Zep credentials
+description: วิธีตั้งค่า Zep credentials เพื่อเชื่อมต่อและยืนยันตัวตนกับ Zep ใน n8n
 contentType: [integration, reference]
 priority: medium
 ---

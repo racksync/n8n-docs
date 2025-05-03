@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Pushcut credentials
-description: Documentation for Pushcut credentials. Use these credentials to authenticate Pushcut in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน Pushcut
+description: เอกสารสำหรับข้อมูลยืนยันตัวตน Pushcut ใช้ข้อมูลนี้เพื่อยืนยันตัวตน Pushcut ใน n8n แพลตฟอร์ม workflow automation
 contentType: [integration, reference]
 ---
 

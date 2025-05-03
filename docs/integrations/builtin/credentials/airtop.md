@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Airtop credentials
-description: Documentation for the Airtop credentials. Use these credentials to authenticate Airtop in n8n, a workflow automation platform.
+title: ข้อมูลรับรอง Airtop
+description: เอกสารข้อมูลรับรอง Airtop ใช้ข้อมูลนี้เพื่อยืนยันตัวตน Airtop ใน n8n
 contentType: [integration, reference]
 ---
 

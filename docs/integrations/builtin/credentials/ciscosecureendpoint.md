@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Cisco Secure Endpoint credentials
-description: Documentation for the Cisco Secure Endpoint credentials. Use these credentials to authenticate Cisco Secure Endpoint in n8n, a workflow automation platform.
+title: ข้อมูลรับรอง Cisco Secure Endpoint
+description: เอกสารข้อมูลรับรอง Cisco Secure Endpoint ใช้ข้อมูลนี้เพื่อยืนยันตัวตน Cisco Secure Endpoint ใน n8n
 contentType: [integration, reference]
 priority: medium
 ---

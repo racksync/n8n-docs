@@ -1,7 +1,6 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: seven credentials
-description: Documentation for seven credentials. Use these credentials to authenticate seven in n8n, a workflow automation platform.
+title: ข้อมูลเข้าสู่ระบบ seven
+description: คู่มือการตั้งค่า seven credentials สำหรับเชื่อมต่อ seven กับ n8n
 contentType: [integration, reference]
 ---
 

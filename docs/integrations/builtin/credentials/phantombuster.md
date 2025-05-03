@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: PhantomBuster credentials
-description: Documentation for PhantomBuster credentials. Use these credentials to authenticate PhantomBuster in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน PhantomBuster
+description: เอกสารสำหรับข้อมูลยืนยันตัวตน PhantomBuster ใช้ข้อมูลนี้เพื่อยืนยันตัวตน PhantomBuster ใน n8n แพลตฟอร์ม workflow automation
 contentType: [integration, reference]
 ---
 

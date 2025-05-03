@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Brandfetch credentials
-description: Documentation for Brandfetch credentials. Use these credentials to authenticate Brandfetch in n8n, a workflow automation platform.
+title: ข้อมูลรับรอง Brandfetch
+description: เอกสารข้อมูลรับรอง Brandfetch ใช้ข้อมูลนี้เพื่อยืนยันตัวตน Brandfetch ใน n8n
 contentType: [integration, reference]
 ---
 

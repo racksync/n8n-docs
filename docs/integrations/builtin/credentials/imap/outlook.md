@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Outlook.com
-description: Documentation for Outlook.com IMAP credentials. Use these credentials to authenticate Outlook.com IMAP in n8n, a workflow automation platform.
+description: เอกสารสำหรับ Outlook.com IMAP credentials ใช้ credential นี้เพื่อยืนยันตัวตน Outlook.com IMAP ใน n8n แพลตฟอร์ม workflow automation
 contentType: [integration, reference]
 priority: high
 ---

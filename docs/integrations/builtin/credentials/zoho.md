@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Zoho credentials
-description: Documentation for Zoho credentials. Use these credentials to authenticate Zoho in n8n, a workflow automation platform.
+title: คู่มือการตั้งค่า Zoho credentials
+description: วิธีตั้งค่า Zoho credentials เพื่อเชื่อมต่อและยืนยันตัวตนกับ Zoho ใน n8n
 contentType: [integration, reference]
 ---
 

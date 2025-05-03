@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Intercom credentials
-description: Documentation for Intercom credentials. Use these credentials to authenticate Intercom in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน Intercom
+description: เอกสารสำหรับ Intercom credentials ใช้เพื่อเชื่อมต่อ Intercom ใน n8n
 contentType: [integration, reference]
 ---
 

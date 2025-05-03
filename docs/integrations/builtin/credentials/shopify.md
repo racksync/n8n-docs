@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Shopify credentials
-description: Documentation for Shopify credentials. Use these credentials to authenticate Shopify in n8n, a workflow automation platform.
+title: ข้อมูลเข้าสู่ระบบ Shopify (Shopify credentials)
+description: คู่มือการตั้งค่า Shopify credentials สำหรับเชื่อมต่อและยืนยันตัวตนกับ Shopify ใน n8n
 contentType: [integration, reference]
 priority: medium
 ---

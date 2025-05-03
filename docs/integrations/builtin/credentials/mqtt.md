@@ -1,7 +1,6 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: MQTT credentials
-description: Documentation for MQTT credentials. Use these credentials to authenticate MQTT in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน MQTT
+description: เอกสารสำหรับการยืนยันตัวตน MQTT. ใช้ข้อมูลเหล่านี้เพื่อยืนยันตัวตน MQTT ใน n8n.
 contentType: [integration, reference]
 priority: medium
 ---

@@ -1,7 +1,6 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: TOTP credentials
-description: Documentation for TOTP credentials. Use these credentials to authenticate TOTP in n8n, a workflow automation platform.
+title: คู่มือ TOTP credentials
+description: คู่มือการตั้งค่า TOTP credentials สำหรับเชื่อมต่อ TOTP กับ n8n
 contentType: [integration, reference]
 ---
 

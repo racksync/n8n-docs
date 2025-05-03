@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Datadog credentials
-description: Documentation for the Datadog credentials. Use these credentials to authenticate Datadog in n8n, a workflow automation platform.
+title: ข้อมูลรับรอง Datadog
+description: เอกสารข้อมูลรับรอง Datadog ใช้ข้อมูลนี้เพื่อยืนยันตัวตน Datadog ใน n8n
 contentType: [integration, reference]
 ---
 # Datadog credentials

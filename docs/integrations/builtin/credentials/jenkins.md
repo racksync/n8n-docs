@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Jenkins credentials
-description: Documentation for Jenkins credentials. Use these credentials to authenticate Jenkins in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน Jenkins
+description: เอกสารสำหรับ Jenkins credentials ใช้เพื่อเชื่อมต่อ Jenkins ใน n8n
 contentType: [integration, reference]
 ---
 

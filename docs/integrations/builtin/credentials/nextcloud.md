@@ -1,7 +1,6 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Nextcloud credentials
-description: Documentation for Nextcloud credentials. Use these credentials to authenticate Nextcloud in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน Nextcloud
+description: เอกสารสำหรับการยืนยันตัวตน Nextcloud. ใช้ข้อมูลเหล่านี้เพื่อยืนยันตัวตน Nextcloud ใน n8n.
 contentType: [integration, reference]
 priority: medium
 ---

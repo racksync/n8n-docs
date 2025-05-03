@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: LDAP credentials
-description: Documentation for the LDAP credentials. Use these credentials to authenticate LDAP in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน LDAP
+description: เอกสารสำหรับ LDAP credentials ใช้เพื่อเชื่อมต่อ LDAP ใน n8n
 contentType: [integration, reference]
 ---
 

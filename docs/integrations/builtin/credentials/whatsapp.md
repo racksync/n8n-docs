@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: WhatsApp Business Cloud credentials
-description: Documentation for WhatsApp Business Cloud credentials. Use these credentials to authenticate WhatsApp Business Cloud in n8n, a workflow automation platform.
+title: คู่มือการตั้งค่า WhatsApp Business Cloud credentials
+description: วิธีตั้งค่า WhatsApp Business Cloud credentials เพื่อเชื่อมต่อและยืนยันตัวตนกับ WhatsApp Business Cloud ใน n8n
 contentType: [integration, reference]
 priority: high
 ---

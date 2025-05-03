@@ -1,7 +1,6 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: TheHive credentials
-description: Documentation for TheHive credentials. Use these credentials to authenticate TheHive in n8n, a workflow automation platform.
+title: คู่มือ TheHive credentials
+description: คู่มือการตั้งค่า TheHive credentials สำหรับเชื่อมต่อ TheHive กับ n8n
 contentType: [integration, reference]
 ---
 

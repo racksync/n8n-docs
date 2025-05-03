@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Bannerbear credentials
-description: Documentation for Bannerbear credentials. Use these credentials to authenticate Bannerbear in n8n, a workflow automation platform.
+title: ข้อมูลรับรอง Bannerbear
+description: เอกสารข้อมูลรับรอง Bannerbear ใช้ข้อมูลนี้เพื่อยืนยันตัวตน Bannerbear ใน n8n
 contentType: [integration, reference]
 ---
 

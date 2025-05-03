@@ -1,7 +1,6 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Twake credentials
-description: Documentation for Twake credentials. Use these credentials to authenticate Twake in n8n, a workflow automation platform.
+title: คู่มือ Twake credentials
+description: คู่มือการตั้งค่า Twake credentials สำหรับเชื่อมต่อ Twake กับ n8n
 contentType: [integration, reference]
 ---
 

@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Copper credentials
-description: Documentation for Copper credentials. Use these credentials to authenticate Copper in n8n, a workflow automation platform.
+title: ข้อมูลรับรอง Copper
+description: เอกสารข้อมูลรับรอง Copper ใช้ข้อมูลนี้เพื่อยืนยันตัวตน Copper ใน n8n
 contentType: [integration, reference]
 ---
 

@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: JWT credentials
-description: Documentation for the JWT credentials. Use these credentials to authenticate JWT in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน JWT
+description: เอกสารสำหรับ JWT credentials ใช้เพื่อยืนยันตัวตน JWT และ Webhook ใน n8n
 contentType: [integration, reference]
 priority: medium
 ---

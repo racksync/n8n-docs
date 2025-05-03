@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Gmail
-description: Documentation for Gmail Send Email credentials. Use these credentials to authenticate Send Email with Gmail in n8n, a workflow automation platform.
+description: เอกสารสำหรับ Gmail Send Email credentials ใช้ credential นี้เพื่อยืนยันตัวตน Send Email กับ Gmail ใน n8n แพลตฟอร์ม workflow automation
 contentType: [integration, reference]
 priority: high
 ---

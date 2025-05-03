@@ -1286,7 +1286,7 @@ nav:
       - Pagination: api/pagination.md
       - การใช้งาน API Playground: api/using-api-playground.md
       - การอ้างอิง API: api/api-reference.md
-  - การฝัง (Embed):
+  - การ Embed:
       - embed/index.md
       - ข้อกำหนดเบื้องต้น: embed/prerequisites.md
       - Deployment: embed/deployment.md

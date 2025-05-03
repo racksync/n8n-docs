@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Pushover credentials
-description: Documentation for Pushover credentials. Use these credentials to authenticate Pushover in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน Pushover
+description: เอกสารสำหรับข้อมูลยืนยันตัวตน Pushover ใช้ข้อมูลนี้เพื่อยืนยันตัวตน Pushover ใน n8n แพลตฟอร์ม workflow automation
 contentType: [integration, reference]
 ---
 

@@ -1,7 +1,6 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Tapfiliate credentials
-description: Documentation for Tapfiliate credentials. Use these credentials to authenticate Tapfiliate in n8n, a workflow automation platform.
+title: คู่มือ Tapfiliate credentials
+description: คู่มือการตั้งค่า Tapfiliate credentials สำหรับเชื่อมต่อ Tapfiliate กับ n8n
 contentType: [integration, reference]
 ---
 

@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Automizy credentials
-description: Documentation for Automizy credentials. Use these credentials to authenticate Automizy in n8n, a workflow automation platform.
+title: ข้อมูลรับรอง Automizy
+description: เอกสารข้อมูลรับรอง Automizy ใช้ข้อมูลนี้เพื่อยืนยันตัวตน Automizy ใน n8n
 contentType: [integration, reference]
 priority: medium
 ---

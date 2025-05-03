@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Pushbullet credentials
-description: Documentation for Pushbullet credentials. Use these credentials to authenticate Pushbullet in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน Pushbullet
+description: เอกสารสำหรับข้อมูลยืนยันตัวตน Pushbullet ใช้ข้อมูลนี้เพื่อยืนยันตัวตน Pushbullet ใน n8n แพลตฟอร์ม workflow automation
 contentType: [integration, reference]
 ---
 

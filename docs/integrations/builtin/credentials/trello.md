@@ -1,7 +1,6 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Trello credentials
-description: เอกสารสำหรับ Trello credentials ใช้ credentials นี้เพื่อยืนยันตัวตน Trello ใน n8n ซึ่งเป็นแพลตฟอร์มสำหรับการทำงานอัตโนมัติ
+title: คู่มือ Trello credentials
+description: คู่มือการตั้งค่า Trello credentials สำหรับเชื่อมต่อ Trello กับ n8n
 contentType: [integration, reference]
 priority: medium
 ---

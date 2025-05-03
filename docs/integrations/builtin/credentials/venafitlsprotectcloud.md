@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Venafi TLS Protect Cloud credentials
-description: Documentation for Venafi TLS Protect Cloud credentials. Use these credentials to authenticate Venafi TLS Protect Cloud in n8n, a workflow automation platform.
+title: ข้อมูลเข้าสู่ระบบ Venafi TLS Protect Cloud
+description: คู่มือการตั้งค่า credentials สำหรับเชื่อมต่อ Venafi TLS Protect Cloud กับ n8n เพื่อใช้งาน workflow automation
 contentType: [integration, reference]
 ---
 

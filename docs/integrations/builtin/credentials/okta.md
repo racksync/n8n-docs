@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Okta credentials
-description: Documentation for the Okta credentials. Use these credentials to authenticate Okta in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน Okta
+description: เอกสารสำหรับข้อมูลยืนยันตัวตน Okta ใช้ข้อมูลนี้เพื่อยืนยันตัวตน Okta ใน n8n แพลตฟอร์ม workflow automation
 contentType: [integration, reference]
 ---
 

@@ -1,7 +1,6 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Twilio credentials
-description: Documentation for Twilio credentials. Use these credentials to authenticate Twilio in n8n, a workflow automation platform.
+title: คู่มือ Twilio credentials
+description: คู่มือการตั้งค่า Twilio credentials สำหรับเชื่อมต่อ Twilio กับ n8n
 contentType: [integration, reference]
 priority: medium
 ---

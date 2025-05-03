@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Wufoo credentials
-description: Documentation for Wufoo credentials. Use these credentials to authenticate Wufoo in n8n, a workflow automation platform.
+title: คู่มือการตั้งค่า Wufoo credentials
+description: วิธีตั้งค่า Wufoo credentials เพื่อเชื่อมต่อและยืนยันตัวตนกับ Wufoo ใน n8n
 contentType: [integration, reference]
 ---
 

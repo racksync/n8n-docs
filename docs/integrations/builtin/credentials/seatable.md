@@ -1,7 +1,6 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: SeaTable credentials
-description: Documentation for SeaTable credentials. Use these credentials to authenticate SeaTable in n8n, a workflow automation platform.
+title: ข้อมูลเข้าสู่ระบบ SeaTable
+description: คู่มือการตั้งค่า SeaTable credentials สำหรับเชื่อมต่อ SeaTable กับ n8n
 contentType: [integration, reference]
 ---
 

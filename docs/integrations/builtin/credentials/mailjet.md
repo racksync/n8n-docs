@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Mailjet credentials
-description: Documentation for Mailjet credentials. Use these credentials to authenticate Mailjet in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน Mailjet
+description: เอกสารสำหรับ Mailjet credentials ใช้เพื่อเชื่อมต่อ Mailjet ใน n8n
 contentType: [integration, reference]
 ---
 

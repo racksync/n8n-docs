@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Webhook credentials
-description: Documentation for Webhook credentials. Use these credentials to authenticate Webhook in n8n, a workflow automation platform.
+title: ข้อมูลเข้าสู่ระบบ Webhook
+description: คู่มือการตั้งค่า credentials สำหรับเชื่อมต่อ Webhook กับ n8n เพื่อใช้งาน workflow automation
 contentType: [integration, reference]
 priority: critical
 ---

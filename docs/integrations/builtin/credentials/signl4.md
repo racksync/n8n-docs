@@ -1,7 +1,6 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: SIGNL4 credentials
-description: Documentation for SIGNL4 credentials. Use these credentials to authenticate SIGNL4 in n8n, a workflow automation platform.
+title: ข้อมูลเข้าสู่ระบบ SIGNL4
+description: คู่มือการตั้งค่า SIGNL4 credentials สำหรับเชื่อมต่อ SIGNL4 กับ n8n
 contentType: [integration, reference]
 ---
 

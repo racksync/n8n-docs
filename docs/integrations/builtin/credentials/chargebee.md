@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Chargebee credentials
-description: Documentation for Chargebee credentials. Use these credentials to authenticate Chargebee in n8n, a workflow automation platform.
+title: ข้อมูลรับรอง Chargebee
+description: เอกสารข้อมูลรับรอง Chargebee ใช้ข้อมูลนี้เพื่อยืนยันตัวตน Chargebee ใน n8n
 contentType: [integration, reference]
 ---
 

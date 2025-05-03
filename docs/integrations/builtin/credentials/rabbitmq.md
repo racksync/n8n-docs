@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: RabbitMQ credentials
-description: Documentation for RabbitMQ credentials. Use these credentials to authenticate RabbitMQ in n8n, a workflow automation platform.
+title: ข้อมูลยืนยันตัวตน RabbitMQ
+description: เอกสารสำหรับข้อมูลยืนยันตัวตน RabbitMQ ใช้ข้อมูลนี้เพื่อยืนยันตัวตน RabbitMQ ใน n8n แพลตฟอร์ม workflow automation
 contentType: [integration, reference]
 priority: medium
 ---

@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Google OAuth2 single service
-description: Documentation for single service OAuth2 Google credentials. Use these credentials to authenticate Google in n8n, a workflow automation platform.
+title: Google OAuth2 สำหรับบริการเดียว
+description: เอกสารสำหรับ Google credentials ประเภท OAuth2 สำหรับบริการเดียว ใช้ credential นี้เพื่อยืนยันตัวตน Google ใน n8n แพลตฟอร์ม workflow automation
 contentType: [integration, reference]
 priority: critical
 ---

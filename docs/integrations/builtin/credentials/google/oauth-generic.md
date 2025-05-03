@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Google OAuth2 generic
-description: Documentation for generic OAuth2 Google credentials. Use these credentials to authenticate Google services in n8n, a workflow automation platform.
+title: Google OAuth2 แบบทั่วไป
+description: เอกสารสำหรับ Google credentials ประเภท OAuth2 แบบทั่วไป ใช้ credential นี้เพื่อยืนยันตัวตนบริการ Google ใน n8n แพลตฟอร์ม workflow automation
 contentType: [integration, reference]
 ---
 
@@ -19,11 +19,19 @@ contentType: [integration, reference]
 
 มีห้าขั้นตอนในการเชื่อมต่อ credential ของ n8n กับบริการของ Google:
 
-1. [Create a Google Cloud Console project](#create-a-google-cloud-console-project)
-1. [Enable APIs](#enable-apis)
-1. [Configure your OAuth consent screen](#configure-your-oauth-consent-screen)
-1. [Create your Google OAuth client credentials](#create-your-google-oauth-client-credentials)
-1. [Finish your n8n credential](#finish-your-n8n-credential)
+- [Google: OAuth2 generic](#google-oauth2-generic)
+	- [Prerequisites](#prerequisites)
+	- [Set up OAuth](#set-up-oauth)
+		- [Create a Google Cloud Console project](#create-a-google-cloud-console-project)
+		- [Enable APIs](#enable-apis)
+		- [Configure your OAuth consent screen](#configure-your-oauth-consent-screen)
+		- [Create your Google OAuth client credentials](#create-your-google-oauth-client-credentials)
+		- [Finish your n8n credential](#finish-your-n8n-credential)
+	- [Video](#video)
+	- [Scopes](#scopes)
+	- [Troubleshooting](#troubleshooting)
+		- [Google hasn't verified this app](#google-hasnt-verified-this-app)
+		- [Google Cloud app becoming unauthorized](#google-cloud-app-becoming-unauthorized)
 
 ### Create a Google Cloud Console project
 

@@ -1,7 +1,6 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: SolarWinds Observability SaaS credentials
-description: Documentation for the SolarWinds Observability SaaS credential, Use these credentials to authenticate SolarWinds Observability SaaS in n8n, a workflow automation platform
+title: ข้อมูลเข้าสู่ระบบ SolarWinds Observability SaaS
+description: คู่มือการตั้งค่า SolarWinds Observability SaaS credentials สำหรับเชื่อมต่อ SolarWinds Observability SaaS กับ n8n
 contentType: [integration, reference]
 ---
 

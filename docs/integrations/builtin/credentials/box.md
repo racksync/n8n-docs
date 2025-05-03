@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Box credentials
-description: Documentation for Box credentials. Use these credentials to authenticate Box in n8n, a workflow automation platform.
+title: ข้อมูลรับรอง Box
+description: เอกสารข้อมูลรับรอง Box ใช้ข้อมูลนี้เพื่อยืนยันตัวตน Box ใน n8n
 contentType: [integration, reference]
 ---
 

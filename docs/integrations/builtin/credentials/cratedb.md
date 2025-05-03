@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: CrateDB credentials
-description: Documentation for CrateDB credentials. Use these credentials to authenticate CrateDB in n8n, a workflow automation platform.
+title: ข้อมูลรับรอง CrateDB
+description: เอกสารข้อมูลรับรอง CrateDB ใช้ข้อมูลนี้เพื่อยืนยันตัวตน CrateDB ใน n8n
 contentType: [integration, reference]
 ---
 

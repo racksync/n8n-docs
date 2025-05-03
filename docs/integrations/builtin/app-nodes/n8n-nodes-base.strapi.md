@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Strapi node documentation
-description: Learn how to use the Strapi node in n8n. Follow technical documentation to integrate Strapi node into your workflows.
+title: เอกสารคู่มือโหนด Strapi
+description: เรียนรู้วิธีใช้โหนด Strapi ใน n8n ดูเอกสารทางเทคนิคเพื่อผสานโหนด Strapi เข้ากับ workflow ของคุณ
 contentType: [integration, reference]
 ---
 

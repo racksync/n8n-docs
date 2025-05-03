@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Microsoft Dynamics CRM node documentation
-description: Learn how to use the Microsoft Dynamics CRM node in n8n. Follow technical documentation to integrate Microsoft Dynamics CRM node into your workflows.
+title: เอกสารคู่มือ Microsoft Dynamics CRM node
+description: เรียนรู้วิธีใช้ Microsoft Dynamics CRM node ใน n8n และดูเอกสารทางเทคนิคเพื่อเชื่อมต่อ Microsoft Dynamics CRM node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 ---
 

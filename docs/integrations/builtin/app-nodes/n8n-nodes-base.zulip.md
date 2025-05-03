@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Zulip node documentation
-description: Learn how to use the Zulip node in n8n. Follow technical documentation to integrate Zulip node into your workflows.
+title: เอกสารคู่มือ Zulip node
+description: เรียนรู้วิธีใช้ Zulip node ใน n8n และเชื่อมต่อ Zulip node เข้ากับ workflow ของคุณ
 contentType: [integration, reference]
 ---
 
@@ -34,7 +34,7 @@ contentType: [integration, reference]
     * Get a user.
     * Get all users.
     * Update a user.
-
+า
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->

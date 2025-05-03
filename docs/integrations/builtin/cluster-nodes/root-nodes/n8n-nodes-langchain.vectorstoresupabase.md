@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Supabase Vector Store node documentation
-description: Learn how to use the Supabase Vector Store node in n8n. Follow technical documentation to integrate Supabase Vector Store node into your workflows.
+title: คู่มือ Supabase Vector Store node
+description: วิธีใช้งาน Supabase Vector Store node ใน n8n สำหรับเชื่อมต่อและจัดการ Supabase vector database
 contentType: [integration, reference]
 priority: medium
 ---

@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Humantic AI node documentation
-description: Learn how to use the Humantic AI node in n8n. Follow technical documentation to integrate Humantic AI node into your workflows.
+title: เอกสารคู่มือ Humantic AI node
+description: เรียนรู้วิธีใช้ Humantic AI node ใน n8n และดูเอกสารทางเทคนิคเพื่อเชื่อมต่อ Humantic AI node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 ---
 

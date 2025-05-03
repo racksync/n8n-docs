@@ -1,8 +1,8 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: overview
-title: Root nodes
-description: Understand root nodes in n8n, and browse the root nodes library.
+title: สรุป root nodes
+description: ทำความเข้าใจ root nodes ใน n8n และดูรายการ root nodes ที่มีให้ใช้งาน
 ---
 
 # Root nodes

@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Google Business Profile node documentation
-description: Learn how to use the Google Business Profile node in n8n. Follow technical documentation to integrate Google Business Profile node into your workflows.
+title: เอกสารคู่มือ Google Business Profile node
+description: เรียนรู้วิธีใช้ Google Business Profile node ใน n8n และดูเอกสารทางเทคนิคเพื่อเชื่อมต่อ Google Business Profile node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 ---
 

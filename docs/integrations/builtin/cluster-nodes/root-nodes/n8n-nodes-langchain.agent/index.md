@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: AI Agent node documentation
-description: Learn how to use the AI Agent node in n8n. Follow technical documentation to integrate AI Agent node into your workflows.
+title: คู่มือ AI Agent node
+description: วิธีใช้งาน AI Agent node ใน n8n สำหรับสร้าง agent ที่ใช้ tools และ API ภายนอก
 contentType: [integration, reference]
 priority: critical
 ---

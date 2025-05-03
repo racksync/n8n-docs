@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: TheHive 5 node documentation
-description: Learn how to use the TheHive 5 node in n8n. Follow technical documentation to integrate TheHive 5 node into your workflows.
+title: เอกสารคู่มือโหนด TheHive 5
+description: เรียนรู้วิธีใช้โหนด TheHive 5 ใน n8n ดูเอกสารทางเทคนิคเพื่อผสานโหนด TheHive 5 เข้ากับ workflow ของคุณ
 contentType: [integration, reference]
 ---
 

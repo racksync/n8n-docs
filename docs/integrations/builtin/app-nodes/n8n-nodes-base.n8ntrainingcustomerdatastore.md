@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Customer Datastore (n8n Training) node documentation
-description: Learn how to use the Customer Datastore (n8n Training) node in n8n. Follow technical documentation to integrate Customer Datastore (n8n Training) node into your workflows.
+title: เอกสารคู่มือ Customer Datastore (n8n Training) node
+description: เรียนรู้วิธีใช้ Customer Datastore (n8n Training) node ใน n8n และดูเอกสารทางเทคนิคเพื่อเชื่อมต่อ Customer Datastore (n8n Training) node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 priority: medium
 ---

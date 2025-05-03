@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Peekalink node documentation
-description: Learn how to use the Peekalink node in n8n. Follow technical documentation to integrate Peekalink node into your workflows.
+title: เอกสารคู่มือ Peekalink node
+description: เรียนรู้วิธีใช้ Peekalink node ใน n8n และดูเอกสารทางเทคนิคเพื่อเชื่อมต่อ Peekalink node เข้ากับ workflow ของคุณ
 contentType: [integration, reference]
 ---
 

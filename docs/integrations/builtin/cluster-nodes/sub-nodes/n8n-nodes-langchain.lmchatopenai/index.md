@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: OpenAI Chat Model node documentation
-description: Learn how to use the OpenAI Chat Model node in n8n. Follow technical documentation to integrate OpenAI Chat Model node into your workflows.
+title: คู่มือ OpenAI Chat Model node
+description: วิธีใช้ OpenAI Chat Model node ใน n8n พร้อมขั้นตอนการตั้งค่าและเชื่อมต่อ workflow
 contentType: [integration, reference]
 priority: high
 ---

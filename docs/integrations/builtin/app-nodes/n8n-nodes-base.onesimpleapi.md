@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: One Simple API node documentation
-description: Learn how to use the One Simple API node in n8n. Follow technical documentation to integrate One Simple API node into your workflows.
+title: เอกสารคู่มือ One Simple API node
+description: เรียนรู้วิธีใช้ One Simple API node ใน n8n และดูเอกสารทางเทคนิคเพื่อเชื่อมต่อ One Simple API node เข้ากับ workflow ของคุณ
 contentType: [integration, reference]
 ---
 <!-- vale off -->

@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Venafi TLS Protect Datacenter node documentation
-description: Learn how to use the Venafi TLS Protect Datacenter node in n8n. Follow technical documentation to integrate Venafi TLS Protect Datacenter node into your workflows.
+title: เอกสารคู่มือ Venafi TLS Protect Datacenter node
+description: เรียนรู้วิธีใช้ Venafi TLS Protect Datacenter node ใน n8n และเชื่อมต่อ Venafi TLS Protect Datacenter node เข้ากับ workflow ของคุณ
 contentType: [integration, reference]
 ---
 <!-- vale off -->

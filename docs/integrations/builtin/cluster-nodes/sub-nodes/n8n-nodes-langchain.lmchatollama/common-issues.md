@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Ollama Chat Model node common issues
-description: Documentation for common issues and questions in the Ollama Chat Model node in n8n, a workflow automation platform. Includes details of the issue and suggested solutions.
+title: ปัญหาที่พบบ่อย Ollama Chat Model node
+description: รวมปัญหาและวิธีแก้ Ollama Chat Model node ใน n8n สำหรับ workflow automation
 contentType: [integration, reference]
 priority: high
 ---

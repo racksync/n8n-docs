@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: MongoDB Chat Memory node documentation
-description: Learn how to use the MongoDB Chat Memory node in n8n. Follow technical documentation to integrate MongoDB Chat Memory node into your workflows.
+title: คู่มือการใช้งาน MongoDB Chat Memory node
+description: วิธีใช้ MongoDB Chat Memory node ใน n8n สำหรับจัดการ memory ด้วย MongoDB
 contentType: [integration, reference]
 ---
 

@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Chat Memory Manager node documentation
-description: Learn how to use the Chat Memory Manager node in n8n. Follow technical documentation to integrate Chat Memory Manager node into your workflows.
+title: คู่มือการใช้งาน Chat Memory Manager node
+description: วิธีใช้ Chat Memory Manager node ใน n8n สำหรับจัดการ memory ข้อความแชท
 contentType: [integration, reference]
 priority: medium
 ---

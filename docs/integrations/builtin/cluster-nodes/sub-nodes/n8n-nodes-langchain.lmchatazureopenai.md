@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Azure OpenAI Chat Model node documentation
-description: Learn how to use the Azure OpenAI Chat Model node in n8n. Follow technical documentation to integrate Azure OpenAI Chat Model node into your workflows.
+title: คู่มือการใช้งาน Azure OpenAI Chat Model node
+description: วิธีใช้ Azure OpenAI Chat Model node ใน n8n เพื่อเชื่อมต่อโมเดล OpenAI ผ่าน Azure
 contentType: [integration, reference]
 priority: medium
 ---

@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Help Scout node documentation
-description: เรียนรู้วิธีการใช้ Help Scout node ใน n8n ทำตามเอกสารทางเทคนิคเพื่อรวม Help Scout node เข้ากับเวิร์กโฟลว์ของคุณ
+title: เอกสารคู่มือ Help Scout node
+description: เรียนรู้วิธีใช้ Help Scout node ใน n8n และดูเอกสารทางเทคนิคเพื่อเชื่อมต่อ Help Scout node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 ---
 

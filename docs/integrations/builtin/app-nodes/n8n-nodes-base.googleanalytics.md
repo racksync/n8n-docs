@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Google Analytics node documentation
-description: Learn how to use the Google Analytics node in n8n. Follow technical documentation to integrate Google Analytics node into your workflows.
+title: เอกสารคู่มือ Google Analytics node
+description: เรียนรู้วิธีใช้ Google Analytics node ใน n8n และดูเอกสารทางเทคนิคเพื่อเชื่อมต่อ Google Analytics node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 priority: medium
 ---

@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: SeaTable node documentation
-description: Learn how to use the SeaTable node in n8n. Follow technical documentation to integrate SeaTable node into your workflows.
+title: เอกสารคู่มือโหนด SeaTable
+description: เรียนรู้วิธีใช้โหนด SeaTable ใน n8n ดูเอกสารทางเทคนิคเพื่อผสานโหนด SeaTable เข้ากับ workflow ของคุณ
 contentType: [integration, reference]
 ---
 

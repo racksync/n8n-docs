@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Mailjet node documentation
-description: Learn how to use the Mailjet node in n8n. Follow technical documentation to integrate Mailjet node into your workflows.
+title: เอกสารคู่มือ Mailjet node
+description: เรียนรู้วิธีใช้ Mailjet node ใน n8n และดูเอกสารทางเทคนิคเพื่อเชื่อมต่อ Mailjet node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 ---
 

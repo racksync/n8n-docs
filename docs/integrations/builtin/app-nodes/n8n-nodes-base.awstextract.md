@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: AWS Textract node documentation
-description: Learn how to use the AWS Textract node in n8n. Follow technical documentation to integrate AWS Textract node into your workflows.
+title: เอกสารคู่มือ AWS Textract node
+description: เรียนรู้วิธีใช้ AWS Textract node ใน n8n และดูเอกสารทางเทคนิคเพื่อเชื่อมต่อ AWS Textract node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 ---
 

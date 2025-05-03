@@ -1,8 +1,8 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: overview
-title: Cluster nodes
-description: Understand cluster nodes in n8n, and browse the cluster nodes library.
+title: โหนดคลัสเตอร์ (Cluster nodes)
+description: ทำความเข้าใจโหนดคลัสเตอร์ใน n8n และดูคลังโหนดคลัสเตอร์
 ---
 
 # Cluster nodes

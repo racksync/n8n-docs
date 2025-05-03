@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: MSG91 node documentation
-description: Learn how to use the MSG91 node in n8n. Follow technical documentation to integrate MSG91 node into your workflows.
+title: เอกสารคู่มือ MSG91 node
+description: เรียนรู้วิธีใช้ MSG91 node ใน n8n และดูเอกสารทางเทคนิคเพื่อเชื่อมต่อ MSG91 node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 ---
 

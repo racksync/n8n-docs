@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Spotify node documentation
-description: Learn how to use the Spotify node in n8n. Follow technical documentation to integrate Spotify node into your workflows.
+title: เอกสารคู่มือโหนด Spotify
+description: เรียนรู้วิธีใช้โหนด Spotify ใน n8n ดูเอกสารทางเทคนิคเพื่อผสานโหนด Spotify เข้ากับ workflow ของคุณ
 contentType: [integration, reference]
 priority: medium
 ---

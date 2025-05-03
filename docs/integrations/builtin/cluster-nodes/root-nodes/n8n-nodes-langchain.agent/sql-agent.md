@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: SQL AI Agent node documentation
-description: Learn how to use the SQL Agent of the AI Agent node in n8n. Follow technical documentation to integrate the SQL Agent into your workflows.
+title: คู่มือ SQL AI Agent node
+description: วิธีใช้งาน SQL Agent ของ AI Agent node ใน n8n สำหรับถาม-ตอบข้อมูลจากฐานข้อมูล SQL
 contentType: [integration, reference]
 priority: critical
 ---

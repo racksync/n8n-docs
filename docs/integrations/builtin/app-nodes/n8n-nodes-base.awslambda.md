@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: AWS Lambda node documentation
-description: Learn how to use the AWS Lambda node in n8n. Follow technical documentation to integrate AWS Lambda node into your workflows.
+title: เอกสารคู่มือ AWS Lambda node
+description: เรียนรู้วิธีใช้ AWS Lambda node ใน n8n และดูเอกสารทางเทคนิคเพื่อเชื่อมต่อ AWS Lambda node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 ---
 

@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Telegram node documentation
-description: Documentation for the Telegram node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Telegram node
+description: เรียนรู้วิธีใช้ Telegram node ใน n8n เพื่อเชื่อมต่อกับเวิร์กโฟลว์ของคุณ.
 contentType: [integration, reference]
 priority: critical
 ---

@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: PostBin node documentation
-description: เรียนรู้วิธีการใช้ PostBin node ใน n8n. ติดตามเอกสารทางเทคนิคเพื่อรวม PostBin node เข้ากับ workflows ของคุณ.
+title: เอกสารคู่มือ PostBin node
+description: เรียนรู้วิธีใช้ PostBin node ใน n8n และดูเอกสารทางเทคนิคเพื่อเชื่อมต่อ PostBin node เข้ากับ workflow ของคุณ
 contentType: [integration, reference]
 priority: high
 ---

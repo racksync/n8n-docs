@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: WhatsApp Business Cloud node documentation
-description: Learn how to use the WhatsApp Business Cloud node in n8n. Follow technical documentation to integrate WhatsApp Business Cloud node into your workflows.
+title: WhatsApp Business Cloud node
+description: เรียนรู้วิธีใช้ WhatsApp Business Cloud node ใน n8n เพื่อเชื่อมต่อกับเวิร์กโฟลว์ของคุณ.
 contentType: [integration, reference]
 priority: high
 ---

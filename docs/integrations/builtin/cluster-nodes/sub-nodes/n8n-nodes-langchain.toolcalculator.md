@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Calculator node documentation
-description: Learn how to use the Calculator node in n8n. Follow technical documentation to integrate Calculator node into your workflows.
+title: คู่มือ Calculator node
+description: วิธีใช้ Calculator node ใน n8n สำหรับงานคำนวณใน workflow ของคุณ
 contentType: [integration, reference]
 priority: high
 ---

@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Custom Code Tool node documentation
-description: Learn how to use the Custom Code Tool node in n8n. Follow technical documentation to integrate Custom Code Tool node into your workflows.
+title: คู่มือ Custom Code Tool node
+description: วิธีใช้ Custom Code Tool node ใน n8n สำหรับเขียนโค้ดใน workflow
 contentType: [integration, reference]
 priority: high
 ---

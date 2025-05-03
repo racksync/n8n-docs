@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Slack node documentation
-description: Learn how to use the Slack node in n8n. Follow technical documentation to integrate Slack node into your workflows.
+title: เอกสารคู่มือโหนด Slack
+description: เรียนรู้วิธีใช้โหนด Slack ใน n8n ดูเอกสารทางเทคนิคเพื่อผสานโหนด Slack เข้ากับ workflow ของคุณ
 contentType: [integration, reference]
 priority: high
 ---

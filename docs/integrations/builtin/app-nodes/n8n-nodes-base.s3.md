@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: S3 node documentation
-description: Learn how to use the S3 node in n8n. Follow technical documentation to integrate S3 node into your workflows.
+title: เอกสารคู่มือโหนด S3
+description: เรียนรู้วิธีใช้โหนด S3 ใน n8n ดูเอกสารทางเทคนิคเพื่อผสานโหนด S3 เข้ากับ workflow ของคุณ
 contentType: [integration, reference]
 priority: medium
 ---

@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Snowflake node documentation
-description: Learn how to use the Snowflake node in n8n. Follow technical documentation to integrate Snowflake node into your workflows.
+title: เอกสารคู่มือโหนด Snowflake
+description: เรียนรู้วิธีใช้โหนด Snowflake ใน n8n ดูเอกสารทางเทคนิคเพื่อผสานโหนด Snowflake เข้ากับ workflow ของคุณ
 contentType: [integration, reference]
 ---
 

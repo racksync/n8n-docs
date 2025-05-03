@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Call n8n Workflow Tool node documentation
-description: Learn how to use the Call n8n Workflow Tool node in n8n. Follow technical documentation to integrate Call n8n Workflow Tool node into your workflows.
+title: คู่มือ Call n8n Workflow Tool node
+description: วิธีใช้ Call n8n Workflow Tool node ใน n8n เพื่อเรียก workflow อื่น
 contentType: [integration, reference]
 priority: high
 ---

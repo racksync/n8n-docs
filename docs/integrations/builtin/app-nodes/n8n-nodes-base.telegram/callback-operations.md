@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Telegram node Callback operations documentation
-description: Documentation for the Callback operations in the Telegram node in n8n, a workflow automation platform. Includes details to configure all Callback operations.
+title: Telegram Callback operations
+description: เอกสารสำหรับ Callback operations ใน Telegram node ของ n8n. รวมรายละเอียดการตั้งค่า.
 contentType: [integration, reference]
 priority: critical
 ---

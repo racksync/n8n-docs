@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Embeddings HuggingFace Inference node documentation
-description: Learn how to use the Embeddings HuggingFace Inference node in n8n. Follow technical documentation to integrate Embeddings HuggingFace Inference node into your workflows.
+title: คู่มือ Embeddings HuggingFace Inference node
+description: วิธีใช้ Embeddings HuggingFace Inference node ใน n8n สำหรับสร้าง embedding ข้อความ
 contentType: [integration, reference]
 priority: medium
 ---

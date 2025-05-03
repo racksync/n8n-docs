@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: MCP Client Tool node documentation
-description: เรียนรู้วิธีการใช้ MCP Client Tool node ใน n8n พร้อมคำแนะนำทางเทคนิคสำหรับการรวม MCP Client Tool node เข้ากับ workflow ของคุณ
+title: คู่มือ MCP Client Tool node
+description: วิธีใช้ MCP Client Tool node ใน n8n เพื่อเชื่อมต่อ external tool ผ่าน MCP
 contentType: [integration, reference]
 ---
 

@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Keap node documentation
-description: เรียนรู้วิธีการใช้ Keap node ใน n8n ทำตามเอกสารทางเทคนิคเพื่อรวม Keap node เข้ากับเวิร์กโฟลว์ของคุณ
+title: เอกสารคู่มือ Keap node
+description: เรียนรู้วิธีใช้ Keap node ใน n8n และดูเอกสารทางเทคนิคเพื่อเชื่อมต่อ Keap node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 ---
 

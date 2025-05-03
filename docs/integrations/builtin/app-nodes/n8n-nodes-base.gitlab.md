@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: GitLab node documentation
-description: เรียนรู้วิธีการใช้ GitLab node ใน n8n อ่านเอกสารทางเทคนิคเพื่อรวม GitLab node เข้ากับ workflows ของคุณ
+title: เอกสารคู่มือ GitLab node
+description: เรียนรู้วิธีใช้ GitLab node ใน n8n และดูเอกสารทางเทคนิคเพื่อเชื่อมต่อ GitLab node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 priority: medium
 ---

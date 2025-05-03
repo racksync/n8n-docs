@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Embeddings Google PaLM node documentation
-description: Learn how to use the Embeddings Google PaLM node in n8n. Follow technical documentation to integrate Embeddings Google PaLM node into your workflows.
+title: คู่มือ Embeddings Google PaLM node
+description: วิธีใช้ Embeddings Google PaLM node ใน n8n สำหรับสร้าง embedding ข้อความ
 contentType: [integration, reference]
 ---
 

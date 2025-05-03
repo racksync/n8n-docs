@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: DeepL node documentation
-description: Learn how to use the DeepL node in n8n. Follow technical documentation to integrate DeepL node into your workflows.
+title: เอกสารคู่มือ DeepL node
+description: เรียนรู้วิธีใช้ DeepL node ใน n8n และดูเอกสารทางเทคนิคเพื่อเชื่อมต่อ DeepL node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 ---
 

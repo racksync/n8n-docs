@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Basic LLM Chain node documentation
-description: Learn how to use the Basic LLM Chain node in n8n. Follow technical documentation to integrate Basic LLM Chain node into your workflows.
+title: คู่มือ Basic LLM Chain node
+description: วิธีใช้งาน Basic LLM Chain node ใน n8n สำหรับตั้งค่า prompt และ parser ให้โมเดล AI
 contentType: [integration, reference]
 priority: critical
 ---

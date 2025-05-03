@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Redis Chat Memory node documentation
-description: Learn how to use the Redis Chat Memory node in n8n. Follow technical documentation to integrate Redis Chat Memory node into your workflows.
+title: คู่มือการใช้งาน Redis Chat Memory node
+description: วิธีใช้ Redis Chat Memory node ใน n8n สำหรับเชื่อมต่อและจัดการ memory ด้วย Redis
 contentType: [integration, reference]
 priority: medium
 ---

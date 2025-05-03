@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Google Cloud Storage node documentation
-description: Learn how to use the Google Cloud Storage node in n8n. Follow technical documentation to integrate Google Cloud Storage node into your workflows.
+title: เอกสารคู่มือ Google Cloud Storage node
+description: เรียนรู้วิธีใช้ Google Cloud Storage node ใน n8n และดูเอกสารทางเทคนิคเพื่อเชื่อมต่อ Google Cloud Storage node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 ---
 

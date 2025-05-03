@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Microsoft Outlook node documentation
-description: Learn how to use the Microsoft Outlook node in n8n. Follow technical documentation to integrate Microsoft Outlook node into your workflows.
+title: เอกสารคู่มือ Microsoft Outlook node
+description: เรียนรู้วิธีใช้ Microsoft Outlook node ใน n8n และดูเอกสารทางเทคนิคเพื่อเชื่อมต่อ Microsoft Outlook node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 priority: high
 ---

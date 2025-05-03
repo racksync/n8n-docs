@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Embeddings Mistral Cloud node documentation
-description: Learn how to use the Embeddings Mistral Cloud node in n8n. Follow technical documentation to integrate Embeddings Mistral Cloud node into your workflows.
+title: คู่มือ Embeddings Mistral Cloud node
+description: วิธีใช้ Embeddings Mistral Cloud node ใน n8n สำหรับสร้าง embedding ข้อความ
 contentType: [integration, reference]
 ---
 

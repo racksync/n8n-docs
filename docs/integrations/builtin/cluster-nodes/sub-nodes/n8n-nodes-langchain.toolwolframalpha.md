@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Wolfram|Alpha tool node documentation
-description: Learn how to use the Wolfram|Alpha tool node in n8n. Follow technical documentation to integrate Wolfram|Alpha tool node into your workflows.
+title: คู่มือ Wolfram|Alpha tool node
+description: วิธีใช้ Wolfram|Alpha tool node ใน n8n สำหรับเชื่อมต่อกับ Wolfram|Alpha
 contentType: [integration, reference]
 priority: medium
 ---

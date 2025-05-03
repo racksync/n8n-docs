@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Microsoft Graph Security node documentation
-description: Learn how to use the Microsoft Graph Security node in n8n. Follow technical documentation to integrate Microsoft Graph Security node into your workflows.
+title: เอกสารคู่มือ Microsoft Graph Security node
+description: เรียนรู้วิธีใช้ Microsoft Graph Security node ใน n8n และดูเอกสารทางเทคนิคเพื่อเชื่อมต่อ Microsoft Graph Security node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 ---
 

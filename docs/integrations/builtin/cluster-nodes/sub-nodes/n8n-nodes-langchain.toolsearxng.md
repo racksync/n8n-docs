@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: SearXNG Tool node documentation
-description: Learn how to use the SearXNG Tool node in n8n. Follow technical documentation to integrate SearXNG Tool node into your workflows.
+title: คู่มือ SearXNG Tool node
+description: วิธีใช้ SearXNG Tool node ใน n8n สำหรับค้นหาข้อมูลแบบรวม search engine
 contentType: [integration, reference]
 ---
 

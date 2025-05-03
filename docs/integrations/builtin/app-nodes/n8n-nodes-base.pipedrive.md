@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Pipedrive node documentation
-description: Learn how to use the Pipedrive node in n8n. Follow technical documentation to integrate Pipedrive node into your workflows.
+title: เอกสารคู่มือ Pipedrive node
+description: เรียนรู้วิธีใช้ Pipedrive node ใน n8n และดูเอกสารทางเทคนิคเพื่อเชื่อมต่อ Pipedrive node เข้ากับ workflow ของคุณ
 contentType: [integration, reference]
 priority: medium
 ---

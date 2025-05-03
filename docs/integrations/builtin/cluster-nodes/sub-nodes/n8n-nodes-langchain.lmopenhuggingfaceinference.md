@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Hugging Face Inference Model node documentation
-description: Learn how to use the Hugging Face Inference Model node in n8n. Follow technical documentation to integrate Hugging Face Inference Model node into your workflows.
+title: คู่มือการใช้งาน Hugging Face Inference Model node
+description: วิธีใช้ Hugging Face Inference Model node ใน n8n เพื่อเชื่อมต่อโมเดล Hugging Face กับ workflow
 contentType: [integration, reference]
 priority: medium
 ---

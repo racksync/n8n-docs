@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Google Books node documentation
-description: Learn how to use the Google Books node in n8n. Follow technical documentation to integrate Google Books node into your workflows.
+title: เอกสารคู่มือ Google Books node
+description: เรียนรู้วิธีใช้ Google Books node ใน n8n และดูเอกสารทางเทคนิคเพื่อเชื่อมต่อ Google Books node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 ---
 

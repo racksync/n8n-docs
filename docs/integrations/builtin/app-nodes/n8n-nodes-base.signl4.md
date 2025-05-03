@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: SIGNL4 node documentation
-description: Learn how to use the SIGNL4 node in n8n. Follow technical documentation to integrate SIGNL4 node into your workflows.
+title: เอกสารคู่มือโหนด SIGNL4
+description: เรียนรู้วิธีใช้โหนด SIGNL4 ใน n8n ดูเอกสารทางเทคนิคเพื่อผสานโหนด SIGNL4 เข้ากับ workflow ของคุณ
 contentType: [integration, reference]
 ---
 

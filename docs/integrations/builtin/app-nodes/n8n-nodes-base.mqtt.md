@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: MQTT node documentation
-description: Learn how to use the MQTT node in n8n. Follow technical documentation to integrate MQTT node into your workflows.
+title: เอกสารคู่มือ MQTT node
+description: เรียนรู้วิธีใช้ MQTT node ใน n8n และดูเอกสารทางเทคนิคเพื่อเชื่อมต่อ MQTT node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 priority: medium
 ---

@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Flow node documentation
-description: Learn how to use the Flow node in n8n. Follow technical documentation to integrate Flow node into your workflows.
+title: เอกสารคู่มือ Flow node
+description: เรียนรู้วิธีใช้ Flow node ใน n8n และดูเอกสารทางเทคนิคเพื่อเชื่อมต่อ Flow node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 ---
 

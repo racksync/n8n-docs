@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Pinecone Vector Store node documentation
-description: Learn how to use the Pinecone Vector Store node in n8n. Follow technical documentation to integrate Pinecone Vector Store node into your workflows.
+title: คู่มือ Pinecone Vector Store node
+description: วิธีใช้งาน Pinecone Vector Store node ใน n8n สำหรับเชื่อมต่อและจัดการ Pinecone vector database
 contentType: [integration, reference]
 priority: medium
 ---

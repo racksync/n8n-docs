@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Simple Memory node common issues
-description: Documentation for common issues and questions in the Simple Memory node in n8n, a workflow automation platform. Includes details of the issue and suggested solutions.
+title: ปัญหาที่พบบ่อย Simple Memory node
+description: รวมปัญหาและวิธีแก้ Simple Memory node ใน n8n สำหรับ workflow automation
 contentType: [integration, reference]
 priority: high
 ---

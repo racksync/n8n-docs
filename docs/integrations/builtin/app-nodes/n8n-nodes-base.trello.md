@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Trello node documentation
-description: Learn how to use the Trello node in n8n. Follow technical documentation to integrate Trello node into your workflows.
+title: เอกสารคู่มือโหนด Trello
+description: เรียนรู้วิธีใช้โหนด Trello ใน n8n ดูเอกสารทางเทคนิคเพื่อผสานโหนด Trello เข้ากับ workflow ของคุณ
 contentType: [integration, reference]
 priority: medium
 ---

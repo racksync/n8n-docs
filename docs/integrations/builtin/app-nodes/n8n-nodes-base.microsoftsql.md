@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Microsoft SQL node documentation
-description: Learn how to use the Microsoft SQL node in n8n. Follow technical documentation to integrate Microsoft SQL node into your workflows.
+title: เอกสารคู่มือ Microsoft SQL node
+description: เรียนรู้วิธีใช้ Microsoft SQL node ใน n8n และดูเอกสารทางเทคนิคเพื่อเชื่อมต่อ Microsoft SQL node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 priority: medium
 ---

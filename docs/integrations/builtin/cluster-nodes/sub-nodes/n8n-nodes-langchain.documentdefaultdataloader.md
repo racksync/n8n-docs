@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Default Data Loader node documentation
-description: Learn how to use the Default Data Loader node in n8n. Follow technical documentation to integrate Default Data Loader node into your workflows.
+title: คู่มือ Default Data Loader node
+description: วิธีใช้ Default Data Loader node ใน n8n สำหรับโหลดไฟล์หรือ JSON เข้า workflow
 contentType: [integration, reference]
 priority: medium
 ---

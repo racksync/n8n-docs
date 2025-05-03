@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Structured Output Parser node documentation
-description: Learn how to use the Structured Output Parser node in n8n. Follow technical documentation to integrate Structured Output Parser node into your workflows.
+title: คู่มือ Structured Output Parser node
+description: วิธีใช้ Structured Output Parser node ใน n8n พร้อมขั้นตอนการตั้งค่าและเชื่อมต่อ workflow
 contentType: [integration, reference]
 priority: high
 ---

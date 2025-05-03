@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Home Assistant node documentation
-description: Learn how to use the Home Assistant node in n8n. Follow technical documentation to integrate Home Assistant node into your workflows.
+title: เอกสารคู่มือ Home Assistant node
+description: เรียนรู้วิธีใช้ Home Assistant node ใน n8n และดูเอกสารทางเทคนิคเพื่อเชื่อมต่อ Home Assistant node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 priority: medium
 ---

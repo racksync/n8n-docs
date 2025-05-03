@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: DHL node documentation
-description: Learn how to use the DHL node in n8n. Follow technical documentation to integrate DHL node into your workflows.
+title: เอกสารคู่มือ DHL node
+description: เรียนรู้วิธีใช้ DHL node ใน n8n และดูเอกสารทางเทคนิคเพื่อเชื่อมต่อ DHL node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 priority: medium
 ---

@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Anthropic Chat Model node documentation
-description: เรียนรู้วิธีการใช้งาน Anthropic Chat Model node ใน n8n พร้อมคำแนะนำทางเทคนิคเพื่อรวม Anthropic Chat Model node เข้ากับเวิร์กโฟลว์ของคุณ
+title: คู่มือการใช้งาน Anthropic Chat Model node
+description: วิธีใช้ Anthropic Chat Model node ใน n8n สำหรับเชื่อมต่อโมเดล Claude กับ workflow ของคุณ
 contentType: [integration, reference]
 priority: medium
 ---

@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: OpenAI Text operations 
-description: Documentation for the Text operations in OpenAI node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: OpenAI Text operations
+description: เอกสารสำหรับ Text operations ใน OpenAI node ของ n8n. รวมรายละเอียด operations, การตั้งค่า, และลิงก์.
 contentType: [integration, reference]
 priority: critical
 ---

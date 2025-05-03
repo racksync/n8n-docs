@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Mailgun node documentation
-description: Learn how to use the Mailgun node in n8n. Follow technical documentation to integrate Mailgun node into your workflows.
+title: เอกสารคู่มือ Mailgun node
+description: เรียนรู้วิธีใช้ Mailgun node ใน n8n และดูเอกสารทางเทคนิคเพื่อเชื่อมต่อ Mailgun node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 ---
 

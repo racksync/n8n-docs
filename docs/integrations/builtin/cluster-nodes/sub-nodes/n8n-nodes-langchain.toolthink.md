@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Think Tool node documentation
-description: Learn how to use the Think Tool node in n8n. Follow technical documentation to integrate the Tool Think node into your workflows.
+title: คู่มือ Think Tool node
+description: วิธีใช้ Think Tool node ใน n8n เพื่อให้ agent คิดก่อนตอบ
 contentType: [integration, reference]
 priority: medium
 ---

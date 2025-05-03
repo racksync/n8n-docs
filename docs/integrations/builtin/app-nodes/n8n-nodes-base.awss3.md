@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: AWS S3 node documentation
-description: Learn how to use the AWS S3 node in n8n. Follow technical documentation to integrate AWS S3 node into your workflows.
+title: เอกสารคู่มือ AWS S3 node
+description: เรียนรู้วิธีใช้ AWS S3 node ใน n8n และดูเอกสารทางเทคนิคเพื่อเชื่อมต่อ AWS S3 node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 priority: medium
 ---

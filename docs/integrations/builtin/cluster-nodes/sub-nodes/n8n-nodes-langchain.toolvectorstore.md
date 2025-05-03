@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Vector Store Question Answer Tool node documentation
-description: เรียนรู้วิธีการใช้ Vector Store Question Answer Tool node ใน n8n อ่านเอกสารทางเทคนิคเพื่อรวม Vector Store Question Answer Tool node เข้ากับ workflow ของคุณ
+title: คู่มือ Vector Store Question Answer Tool node
+description: วิธีใช้ Vector Store Question Answer Tool node ใน n8n สำหรับถาม-ตอบจาก vector store
 contentType: [integration, reference]
 ---
 

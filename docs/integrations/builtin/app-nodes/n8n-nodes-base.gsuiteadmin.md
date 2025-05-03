@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Google Workspace Admin node documentation
-description: Learn how to use the Google Workspace Admin node in n8n. Follow technical documentation to integrate Google Workspace Admin node into your workflows.
+title: เอกสารคู่มือ Google Workspace Admin node
+description: เรียนรู้วิธีใช้ Google Workspace Admin node ใน n8n และดูเอกสารทางเทคนิคเพื่อเชื่อมต่อ Google Workspace Admin node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 ---
 

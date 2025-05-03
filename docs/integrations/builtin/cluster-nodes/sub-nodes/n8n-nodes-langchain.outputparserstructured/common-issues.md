@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Structured Output Parser node common issues
-description: Documentation for common issues and questions in the Structured Output Parser node in n8n, a workflow automation platform. Includes details of the issue and suggested solutions.
+title: ปัญหาที่พบบ่อย Structured Output Parser node
+description: รวมปัญหาและวิธีแก้ Structured Output Parser node ใน n8n สำหรับ workflow automation
 contentType: [integration, reference]
 priority: high
 ---

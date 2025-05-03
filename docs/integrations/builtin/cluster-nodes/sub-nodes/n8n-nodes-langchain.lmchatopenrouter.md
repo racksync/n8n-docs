@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: OpenRouter Chat Model node documentation
-description: เรียนรู้วิธีการใช้ OpenRouter Chat Model node ใน n8n อ่านเอกสารทางเทคนิคเพื่อรวม OpenRouter Chat Model node เข้ากับ workflows ของคุณ
+title: คู่มือการใช้งาน OpenRouter Chat Model node
+description: วิธีใช้ OpenRouter Chat Model node ใน n8n เพื่อเชื่อมต่อโมเดลแชท OpenRouter กับ workflow
 contentType: [integration, reference]
 priority: high
 ---

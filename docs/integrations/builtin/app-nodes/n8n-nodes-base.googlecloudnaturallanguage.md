@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Google Cloud Natural Language node documentation
-description: Learn how to use the Google Cloud Natural Language node in n8n. Follow technical documentation to integrate Google Cloud Natural Language node into your workflows.
+title: เอกสารคู่มือ Google Cloud Natural Language node
+description: เรียนรู้วิธีใช้ Google Cloud Natural Language node ใน n8n และดูเอกสารทางเทคนิคเพื่อเชื่อมต่อ Google Cloud Natural Language node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 ---
 

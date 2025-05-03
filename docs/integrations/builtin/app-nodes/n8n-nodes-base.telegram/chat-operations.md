@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Telegram node Chat operations documentation
-description: Documentation for the Chat operations in the Telegram node in n8n, a workflow automation platform. Includes details to configure all Chat operations.
+title: Telegram Chat operations
+description: เอกสารสำหรับ Chat operations ใน Telegram node ของ n8n. รวมรายละเอียดการตั้งค่า.
 contentType: [integration, reference]
 priority: critical
 ---

@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Webex by Cisco node documentation
-description: Learn how to use the Webex by Cisco node in n8n. Follow technical documentation to integrate Webex by Cisco node into your workflows.
+title: เอกสารคู่มือ Webex by Cisco node
+description: เรียนรู้วิธีใช้ Webex by Cisco node ใน n8n และดูเอกสารทางเทคนิคเพื่อเชื่อมต่อ Webex by Cisco node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 ---
 

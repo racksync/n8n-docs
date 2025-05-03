@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Telegram node common issues
-description: Documentation for common issues and questions in the Telegram node in n8n, a workflow automation platform. Includes details of the issue and suggested solutions.
+title: ปัญหาที่พบบ่อย Telegram node
+description: ปัญหาที่พบบ่อยและแนวทางแก้ไขสำหรับ Telegram node ใน n8n.
 contentType: [integration, reference]
 priority: critical
 ---

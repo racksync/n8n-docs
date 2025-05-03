@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: WhatsApp Business Cloud node common issues
-description: Documentation for common issues and questions in the WhatsApp Business Cloud node in n8n, a workflow automation platform. Includes details of the issue and suggested solutions.
+title: ปัญหาที่พบบ่อย WhatsApp Business Cloud node
+description: ปัญหาที่พบบ่อยและแนวทางแก้ไขสำหรับ WhatsApp Business Cloud node ใน n8n.
 contentType: [integration, reference]
 priority: high
 ---

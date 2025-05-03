@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: GraphQL
-description: เอกสารสำหรับ GraphQL node ใน n8n แพลตฟอร์ม workflow automation พร้อมคำแนะนำการใช้งานและตัวอย่าง
+description: คู่มือ GraphQL node สำหรับเชื่อมต่อและ query ข้อมูลแบบ GraphQL ใน n8n
 contentType: [integration, reference]
 priority: medium
 ---

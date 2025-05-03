@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: MCP Server Trigger node documentation
-description: เรียนรู้วิธีการใช้ MCP Server Trigger node ใน n8n อ่านเอกสารทางเทคนิคเพื่อรวม MCP Server Trigger node เข้ากับ workflows ของคุณ
+title: เอกสาร MCP Server Trigger node
+description: เรียนรู้วิธีใช้ MCP Server Trigger node ใน n8n และดูเอกสารทางเทคนิคเพื่อรวมเข้ากับ workflow ของคุณ
 contentType: [integration, reference]
 ---
 

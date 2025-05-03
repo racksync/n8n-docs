@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: HTML
-description: เอกสารสำหรับ HTML node ใน n8n แพลตฟอร์ม workflow automation พร้อมคำแนะนำการใช้งานและตัวอย่าง
+description: คู่มือ HTML node สำหรับจัดการและแปลงข้อมูล HTML ใน n8n
 contentType: [integration, reference]
 priority: high
 ---

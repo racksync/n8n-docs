@@ -1,7 +1,6 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: n8n
-description: Documentation for the n8n node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+description: คู่มือ n8n node สำหรับเชื่อมต่อและใช้งาน n8n API ใน workflow
 contentType: [integration, reference]
 priority: medium
 ---

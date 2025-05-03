@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: FTP
-description: เอกสารสำหรับ FTP node ใน n8n แพลตฟอร์ม workflow automation พร้อมคำแนะนำการใช้งานและตัวอย่าง
+description: คู่มือ FTP node สำหรับจัดการไฟล์บน FTP/SFTP server ใน n8n
 contentType: [integration, reference]
 priority: medium
 ---

@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Extract From File
-description: เอกสารสำหรับ Extract From File node ใน n8n แพลตฟอร์ม workflow automation พร้อมคำแนะนำการใช้งานและตัวอย่าง
+title: ดึงข้อมูลจากไฟล์ (Extract From File)
+description: คู่มือ Extract From File node สำหรับแปลงไฟล์เป็นข้อมูลใน n8n
 contentType: [integration, reference]
 priority: high
 ---

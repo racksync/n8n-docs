@@ -1,7 +1,6 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Crypto
-description: เอกสารสำหรับ Crypto node ใน n8n แพลตฟอร์ม workflow automation พร้อมคำแนะนำการใช้งานและตัวอย่าง
+title: เข้ารหัสข้อมูล (Crypto)
+description: คู่มือ Crypto node สำหรับเข้ารหัสและแฮชข้อมูลใน n8n
 contentType: [integration, reference]
 priority: medium
 ---

@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Convert to File
-description: เอกสารสำหรับ Convert to File node ใน n8n แพลตฟอร์ม workflow automation พร้อมคำแนะนำการใช้งานและตัวอย่าง
+title: แปลงเป็นไฟล์ (Convert to File)
+description: คู่มือ Convert to File node สำหรับแปลงข้อมูลเป็นไฟล์ใน n8n
 contentType: [integration, reference]
 priority: critical
 ---

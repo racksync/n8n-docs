@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: เอกสาร Email Trigger (IMAP) node
-description: เรียนรู้วิธีใช้ Email Trigger (IMAP) node ใน n8n ทำตามเอกสารเพื่อนำ Email Trigger (IMAP) node ไปใช้ใน workflow ของคุณ
+title: ทริกเกอร์อีเมล (Email Trigger - IMAP)
+description: คู่มือ Email Trigger (IMAP) node สำหรับรับอีเมลใน n8n
 contentType: [integration, reference]
 priority: high
 ---

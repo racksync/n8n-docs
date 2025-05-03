@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: เอกสาร n8n Form node
-description: เอกสารสำหรับ n8n Form node ใน n8n แพลตฟอร์ม workflow automation พร้อมคำแนะนำการใช้งานและตัวอย่าง
+title: ฟอร์ม (n8n Form)
+description: คู่มือ n8n Form node สำหรับสร้างฟอร์มหลายขั้นตอนใน n8n
 contentType: [integration, reference]
 ---
 

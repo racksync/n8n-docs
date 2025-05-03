@@ -1,7 +1,6 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Merge
-description: เอกสารสำหรับ Merge node ใน n8n แพลตฟอร์ม workflow automation พร้อมคำแนะนำการใช้งานและตัวอย่าง
+title: รวมข้อมูล (Merge)
+description: คู่มือ Merge node สำหรับรวมข้อมูลจากหลายแหล่งใน n8n
 contentType: [integration, reference]
 priority: critical
 ---

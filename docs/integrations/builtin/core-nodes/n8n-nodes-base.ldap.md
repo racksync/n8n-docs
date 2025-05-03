@@ -1,7 +1,6 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: LDAP
-description: เอกสารสำหรับ LDAP node ใน n8n แพลตฟอร์ม workflow automation พร้อมคำแนะนำการใช้งานและตัวอย่าง
+description: คู่มือ LDAP node สำหรับเชื่อมต่อและจัดการ LDAP server ใน n8n
 contentType: [integration, reference]
 ---
 

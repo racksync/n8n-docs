@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: เอกสาร Activation Trigger node
-description: เรียนรู้วิธีใช้ Activation Trigger node ใน n8n ทำตามเอกสารเพื่อนำ Activation Trigger node ไปใช้ใน workflow ของคุณ
+title: ทริกเกอร์การเปิดใช้งาน (Activation Trigger)
+description: คู่มือ Activation Trigger node สำหรับเริ่ม workflow จาก event ใน n8n
 contentType: [integration, reference]
 ---
 

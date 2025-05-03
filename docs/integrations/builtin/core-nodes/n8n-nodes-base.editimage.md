@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Edit Image
-description: เอกสารสำหรับ Edit Image node ใน n8n แพลตฟอร์ม workflow automation พร้อมคำแนะนำการใช้งานและตัวอย่าง
+title: แก้ไขรูปภาพ (Edit Image)
+description: คู่มือ Edit Image node สำหรับปรับแต่งรูปภาพใน n8n
 contentType: [integration, reference]
 priority: medium
 ---

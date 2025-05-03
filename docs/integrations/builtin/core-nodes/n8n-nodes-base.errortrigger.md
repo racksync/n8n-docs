@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: เอกสาร Error Trigger node
-description: เรียนรู้วิธีใช้ Error Trigger node ใน n8n ทำตามเอกสารเพื่อนำ Error Trigger node ไปใช้ใน workflow ของคุณ
+title: ทริกเกอร์ข้อผิดพลาด (Error Trigger)
+description: คู่มือ Error Trigger node สำหรับจัดการ error workflow ใน n8n
 contentType: [integration, reference]
 priority: medium
 ---

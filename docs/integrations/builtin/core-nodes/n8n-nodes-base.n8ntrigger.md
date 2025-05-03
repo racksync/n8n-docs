@@ -1,7 +1,6 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: n8n Trigger node documentation
-description: Learn how to use the n8n Trigger node in n8n. Follow technical documentation to integrate n8n Trigger node into your workflows.
+title: ทริกเกอร์ n8n (n8n Trigger)
+description: คู่มือ n8n Trigger node สำหรับเริ่ม workflow จาก event ใน n8n
 contentType: [integration, reference]
 priority: medium
 ---

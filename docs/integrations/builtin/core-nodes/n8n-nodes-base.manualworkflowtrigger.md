@@ -1,7 +1,6 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: เอกสาร Manual Trigger node
-description: เรียนรู้วิธีใช้ Manual Trigger node ใน n8n ทำตามเอกสารเพื่อนำ Manual Trigger node ไปใช้ใน workflow ของคุณ
+title: ทริกเกอร์แบบแมนนวล (Manual Trigger)
+description: คู่มือ Manual Trigger node สำหรับเริ่ม workflow ด้วยตนเองใน n8n
 contentType: [integration, reference]
 priority: critical
 ---

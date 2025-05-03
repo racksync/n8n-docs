@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Git
-description: เอกสารสำหรับ Git node ใน n8n แพลตฟอร์ม workflow automation พร้อมคำแนะนำการใช้งานและตัวอย่าง
+description: คู่มือ Git node สำหรับจัดการ repository ด้วย n8n
 contentType: [integration, reference]
 ---
 

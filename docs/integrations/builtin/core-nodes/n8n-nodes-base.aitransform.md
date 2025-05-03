@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: AI Transform
-description: เอกสารสำหรับ AI Transform node ใน n8n แพลตฟอร์ม workflow automation พร้อมคำแนะนำการใช้งานและตัวอย่าง
+title: แปลงข้อมูลด้วย AI (AI Transform)
+description: คู่มือใช้งาน AI Transform node สำหรับสร้างโค้ดอัตโนมัติใน n8n
 contentType: [integration, reference]
 ---
 

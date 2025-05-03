@@ -1,7 +1,6 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Filter
-description: เอกสารสำหรับ Filter node ใน n8n แพลตฟอร์ม workflow automation พร้อมคำแนะนำการใช้งานและตัวอย่าง
+title: กรองข้อมูล (Filter)
+description: คู่มือ Filter node สำหรับกรองข้อมูลตามเงื่อนไขใน n8n
 contentType: [integration, reference]
 priority: critical
 ---

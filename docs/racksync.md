@@ -6,7 +6,7 @@ contentType: overview
 # RACKSYNC CO., LTD
 
 <div align="center">
-  <img src="https://avatars.githubusercontent.com/u/86172519?s=200&v=4" alt="RACKSYNC Logo" width="200"/><br> 
+  <img src="_images/racksync.png" alt="RACKSYNC Logo" width="200"/><br> 
   **Innovative Cloud & Infrastructure Solutions**
 </div>
 

@@ -55,9 +55,10 @@ hide:
     [:octicons-arrow-right-24: Advanced AI](/advanced-ai/index.md)
 </div>
 
-## ที่มา
-เอกสารชุดนี้ ถูกสร้างจาก [n8n thai documents](https://github.com/racksync/n8n-docs){:target=_blank .external-link} แปลโดย บริษัท แรคซิงค์ จำกัด 
-([racksync](https://www.racksync.com){:target=_blank .external-link}) โดยมีการปรับแต่งให้เหมาะสมกับการใช้งานและกลุ่มผู้ใช้ที่สนใจในไทย โดยมีต้นฉบับเป็นภาษาอังกฤษอยู่ที่ [n8n docs](https://docs.n8n.io/){:target=_blank .external-link}
+## ที่มาของเอกสารชุดนี้
+
+เอกสารชุดนี้เป็นการแปลและปรับแต่งจากเอกสารภาษาอังกฤษต้นฉบับของ n8n โดยมีการปรับแต่งให้เหมาะสมกับการใช้งานและกลุ่มผู้ใช้ที่สนใจในไทย โดยมีต้นฉบับเป็นภาษาอังกฤษอยู่ที่ [n8n docs](https://github.com/n8n-io/n8n-docs){:target=_blank .external-link} โดยระบบจะ generate ข้อมูลที่แปลแล้วจาก [n8n thai documents](https://github.com/racksync/n8n-docs){:target=_blank .external-link} แปลโดย 
+([บริษัท แรคซิงค์ จำกัด](https://www.racksync.com){:target=_blank .external-link}) 
 
 ## [RACKSYNC CO., LTD.](/racksync.md)
 

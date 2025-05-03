@@ -1,5 +1,5 @@
 nav:
-  - มาใช้ n8n กันค่ะ 🚀:
+  - มาใช้ n8n กัน 🚀:
     - ความเป็นมา: index.md
     - เริ่มต้นใช้งาน:
       - เส้นทางการเรียนรู้: learning-path.md
@@ -164,7 +164,7 @@ nav:
           - การตอบสนองต่อเหตุการณ์: privacy-security/incident-response.md
           - สิ่งที่คุณทำได้: privacy-security/what-you-can-do.md
       - Sustainable Use License: sustainable-use-license.md
-  - การเชื่อมต่อ (Integrations):
+  - การเชื่อมต่อ:
     - integrations/index.md
     - Nodes ที่มีมาให้:
       - ประเภท Node: integrations/builtin/node-types.md
@@ -1127,7 +1127,7 @@ nav:
         - integrations/creating-nodes/deploy/index.md
         - Submit community nodes: integrations/creating-nodes/deploy/submit-community-nodes.md
         - Install private nodes: integrations/creating-nodes/deploy/install-private-nodes.md
-  - การโฮสต์ n8n (Hosting):
+  - โฮสต์ n8n:
     - ภาพรวม: hosting/index.md
     - Community เทียบกับ Enterprise: hosting/community-edition-features.md
     - การติดตั้ง:
@@ -1212,7 +1212,7 @@ nav:
       - โครงสร้างฐานข้อมูล: hosting/architecture/database-structure.md
     - การใช้งาน CLI:
       - คำสั่ง CLI: hosting/cli-commands.md
-  - Code ใน n8n:
+  - n8n Code:
       - code/index.md
       - Expressions: code/expressions.md
       - การใช้งาน Code Node: code/code-node.md

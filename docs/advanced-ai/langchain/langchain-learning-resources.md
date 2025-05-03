@@ -1,7 +1,7 @@
 ---
 contentType: overview
-title: LangChain learning resources
-description: External resources to learn more about LangChain and AI.
+title: แหล่งเรียนรู้ LangChain
+description: แหล่งข้อมูลภายนอกเพื่อเรียนรู้เพิ่มเติมเกี่ยวกับ LangChain และ AI
 ---
 
 # LangChain learning resources

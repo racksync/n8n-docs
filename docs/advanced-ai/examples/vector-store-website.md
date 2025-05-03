@@ -1,8 +1,8 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: howto
-title: Populate a Pinecone vector database from a website
-description: Scrape a website, load the data into Pinecone, then query it using a chat workflow.
+title: เติมข้อมูล Pinecone vector database จากเว็บไซต์
+description: Scrape เว็บไซต์ โหลดข้อมูลเข้า Pinecone แล้ว query ด้วย chat workflow
 ---
 
 # Populate a Pinecone vector database from a website

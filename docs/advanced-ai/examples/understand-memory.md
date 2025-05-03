@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: What's memory in AI?
-description: Understand memory in the context of AI. Learn what's special about memory in n8n.
+title: Memory ใน AI คืออะไร
+description: ทำความเข้าใจ memory ในบริบท AI เรียนรู้ความพิเศษของ memory ใน n8n
 contentType: explanation
 ---
 

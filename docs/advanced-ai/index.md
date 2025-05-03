@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: n8n Advanced AI Documentation and Guides
-description: Use n8n's LangChain integrations to build AI-powered functionality within your workflows. Connect your LangChain functionality to other data sources and services.
+title: เอกสารและคู่มือ n8n Advanced AI
+description: ใช้ n8n LangChain integrations สร้างฟังก์ชัน AI ใน workflows ของคุณ เชื่อมต่อ LangChain กับ data sources และ services อื่นๆ
 contentType: overview
 ---
 

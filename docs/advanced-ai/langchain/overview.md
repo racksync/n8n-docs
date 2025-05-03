@@ -1,8 +1,8 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: overview
-title: LangChain in n8n
-description: Understand how n8n uses LangChain to provide advanced AI functionality.
+title: LangChain ใน n8n
+description: ทำความเข้าใจวิธีที่ n8n ใช้ LangChain เพื่อให้มีฟังก์ชัน AI ขั้นสูง
 hide:
   - toc
 ---

@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: n8n public REST API Documentation and Guides
-description: Access n8n public REST API documentation and guides. Find comprehensive resources to programmatically perform tasks with the public API instead of the GUI.
+title: เอกสารและคู่มือ n8n public REST API
+description: เข้าถึงเอกสารและคู่มือ n8n public REST API ค้นหาแหล่งข้อมูลเพื่อทำงานต่างๆ ผ่าน public API แทนการใช้ GUI
 contentType: overview
 search:
     boost: 5

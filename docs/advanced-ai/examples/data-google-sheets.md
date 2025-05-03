@@ -1,8 +1,8 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: howto
-title: Chat with a Google Sheet using AI
-description: Use the n8n workflow tool to load data from Google Sheets into your AI workflow.
+title: Chat กับ Google Sheet โดยใช้ AI
+description: ใช้ n8n workflow tool โหลดข้อมูลจาก Google Sheets เข้า AI workflow ของคุณ
 ---
 
 # Chat with a Google Sheet using AI

@@ -1,5 +1,6 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
+title: สร้าง AI chat agent ด้วย n8n
 description: เรียนรู้วิธีสร้าง AI workflows ด้วย n8n
 type: tutorial
 ---

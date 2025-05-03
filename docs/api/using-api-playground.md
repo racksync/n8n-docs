@@ -1,6 +1,6 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-description: How to use the API playground to try out n8n's public REST API.
+description: วิธีใช้ API playground เพื่อทดลองใช้ n8n public REST API
 contentType: howto
 ---
 

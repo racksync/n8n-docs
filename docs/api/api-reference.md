@@ -4,7 +4,7 @@ template: api.html
 hide:
     - toc
     - navigation
-description: API reference for n8n's public REST API.
+description: เอกสารอ้างอิง API reference สำหรับ n8n public REST API
 contentType: reference
 ---
 

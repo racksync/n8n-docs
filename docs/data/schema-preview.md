@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: การแสดงตัวอย่าง Schema
-description: 
+description: "การแสดงตัวอย่าง Schema แสดงข้อมูล schema ที่คาดหวังจาก node ก่อนหน้าใน Node Editor โดยที่ผู้ใช้ไม่ต้องให้ข้อมูล credentials หรือ execute node"
 contentType: overview
 ---
 

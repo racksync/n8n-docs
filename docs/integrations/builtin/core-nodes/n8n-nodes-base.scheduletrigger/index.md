@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Schedule Trigger node documentation
-description: เรียนรู้วิธีการใช้ Schedule Trigger node ใน n8n อ่านเอกสารทางเทคนิคเพื่อรวม Schedule Trigger node เข้ากับ workflow ของคุณ
+title: คู่มือ Schedule Trigger node
+description: วิธีใช้ Schedule Trigger node ใน n8n พร้อมคำอธิบายและตัวอย่าง
 contentType: [integration, reference]
 priority: critical
 ---

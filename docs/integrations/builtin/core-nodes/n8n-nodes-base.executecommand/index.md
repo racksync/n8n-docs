@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Execute Command
-description: Documentation for the Execute Command node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+title: คู่มือ Execute Command node
+description: คู่มือ Execute Command node สำหรับ n8n อธิบายวิธีใช้งานและตัวอย่าง
 contentType: [integration, reference]
 priority: high
 ---

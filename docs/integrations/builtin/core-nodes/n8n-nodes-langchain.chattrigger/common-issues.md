@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Chat Trigger node common issues 
-description: Documentation for common issues and questions in the Chat Trigger node in n8n, a workflow automation platform. Includes details of the issue and suggested solutions.
+title: ปัญหาที่พบบ่อยใน Chat Trigger node
+description: รวมปัญหาและคำถามที่พบบ่อยเกี่ยวกับ Chat Trigger node ใน n8n พร้อมแนวทางแก้ไข
 contentType: [integration, reference]
 priority: high
 ---

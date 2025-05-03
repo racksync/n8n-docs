@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Webhook node common issues 
-description: Documentation for common issues and questions in the Webhook node in n8n, a workflow automation platform. Includes details of the issues and suggested solutions.
+title: ปัญหาที่พบบ่อยใน Webhook node
+description: รวมปัญหาและคำถามที่พบบ่อยเกี่ยวกับ Webhook node ใน n8n พร้อมแนวทางแก้ไข
 contentType: [integration, reference]
 priority: critical
 ---

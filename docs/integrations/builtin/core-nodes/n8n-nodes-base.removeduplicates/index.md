@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Remove Duplicates node documentation
-description: Documentation for the Remove Duplicates node in n8n, a workflow automation platform. Includes guidance on usage and links to examples.
+title: คู่มือ Remove Duplicates node
+description: คู่มือ Remove Duplicates node สำหรับ n8n อธิบายวิธีใช้งานและลิงก์ไปยังตัวอย่าง
 contentType: [integration, reference]
 priority: medium
 ---

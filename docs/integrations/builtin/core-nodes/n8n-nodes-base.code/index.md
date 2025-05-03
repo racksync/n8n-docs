@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Code node documentation
-description: Documentation for the Code node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+title: คู่มือ Code node
+description: คู่มือใช้งาน Code node ใน n8n พร้อมตัวอย่างและวิธีใช้งาน
 contentType: [integration, reference]
 priority: critical
 tags:

@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Chat Trigger node documentation
-description: เรียนรู้วิธีใช้ Chat Trigger node ใน n8n ทำตามเอกสารทางเทคนิคเพื่อรวม Chat Trigger node เข้ากับ workflow ของคุณ
+title: คู่มือ Chat Trigger node
+description: วิธีใช้ Chat Trigger node ใน n8n พร้อมคำอธิบายและวิธีเชื่อมต่อ workflow
 priority: critical
 ---
 

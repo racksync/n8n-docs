@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Webhook node documentation 
-description: Learn how to use the Webhook node in n8n. Follow technical documentation to integrate Webhook node into your workflows.
+title: คู่มือ Webhook node
+description: วิธีใช้ Webhook node ใน n8n พร้อมคำอธิบายและตัวอย่างการใช้งาน
 priority: critical
 contentType: [integration, reference]
 tags:

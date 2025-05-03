@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Remove Duplicates node templates and Examples
-description: เอกสารสำหรับ template และตัวอย่างใน Remove Duplicates node ใน n8n แพลตฟอร์ม workflow automation รวมถึง template ที่ใช้ node และตัวอย่างการใช้งาน
+title: ตัวอย่างและ template สำหรับ Remove Duplicates node
+description: รวม template และตัวอย่างการใช้งาน Remove Duplicates node ใน n8n สำหรับ workflow automation
 contentType: [integration, reference]
 priority: medium
 ---

@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Configure n8n to use your own certificate authority
-description: Customize the n8n container to work with self signed certificates when connecting to services.
+title: ตั้งค่า n8n ให้ใช้ certificate authority ของคุณเอง
+description: ปรับแต่ง n8n container ให้ทำงานกับ self signed certificate เมื่อเชื่อมต่อ service
 contentType: howto
 ---
 

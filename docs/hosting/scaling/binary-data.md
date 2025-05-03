@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Scaling binary data in n8n
-description: How to handle large files without degrading n8n's performance.
+title: การจัดการ binary data ใน n8n
+description: วิธีจัดการไฟล์ขนาดใหญ่โดยไม่กระทบประสิทธิภาพ n8n
 contentType: howto
 ---
 

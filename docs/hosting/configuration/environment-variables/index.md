@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Environment Variables Overview
-description: An overview of configuration environment variables for self-hosted n8n. 
+title: ภาพรวม Environment Variables
+description: ภาพรวม Environment Variables สำหรับตั้งค่า n8n Self-hosted
 contentType: overview
 tags:
   - environment variables

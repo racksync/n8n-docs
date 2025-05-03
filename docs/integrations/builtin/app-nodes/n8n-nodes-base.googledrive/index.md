@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Google Drive node documentation
-description: Learn how to use the Google Drive node in n8n. Follow technical documentation to integrate Google Drive node into your workflows.
+title: เอกสาร Google Drive node
+description: เรียนรู้วิธีใช้ Google Drive node ใน n8n ทำตามเอกสารทางเทคนิคเพื่อผสาน Google Drive node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 priority: high
 ---

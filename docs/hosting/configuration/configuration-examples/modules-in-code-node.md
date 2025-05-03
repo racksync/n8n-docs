@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Enable modules in Code node
-description: Allow the use of both built-in and external modules within the Code node.
+title: เปิดใช้งาน module ใน Code node
+description: อนุญาตให้ใช้ module ทั้ง built-in และ external ใน Code node
 contentType: howto
 ---
 

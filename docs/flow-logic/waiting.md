@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Waiting
-description: How to make your workflow execution wait.
+title: การรอ
+description: วิธีทำให้ workflow execution รอ
 contentType: howto
 ---
 

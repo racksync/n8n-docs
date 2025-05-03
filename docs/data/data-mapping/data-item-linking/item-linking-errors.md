@@ -1,6 +1,8 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: reference
+title: ข้อผิดพลาด Item linking
+description: ทำความเข้าใจและแก้ไขข้อผิดพลาด item linking ใน n8n
 ---
 
 # Item linking errors

@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Text courses
-description: Access n8n text courses. Find beginner and intermediate courses to learn how to build automation workflows using n8n. 
+title: คอร์สเรียนแบบข้อความ
+description: เข้าถึงคอร์สเรียน n8n แบบข้อความ ค้นหาคอร์สสำหรับผู้เริ่มต้นและระดับกลางเพื่อเรียนรู้วิธีสร้าง workflow อัตโนมัติด้วย n8n
 contentType: overview
 ---
 

@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Gmail node common issues
-description: Documentation for common issues and questions in the Gmail node in n8n, a workflow automation platform. Includes details of the issue and suggested solutions.
+title: ปัญหาที่พบบ่อยใน Gmail node
+description: เอกสารสำหรับปัญหาและคำถามที่พบบ่อยใน Gmail node ของ n8n แพลตฟอร์มอัตโนมัติเวิร์กโฟลว์ รวมถึงรายละเอียดปัญหาและแนวทางแก้ไขที่แนะนำ
 contentType: [integration, reference]
 priority: critical
 ---

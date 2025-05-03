@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: howto
-description: Call workflows from other workflows, and split large workflows into smaller components.
+description: เรียก workflow จาก workflow อื่น และแบ่ง workflow ขนาดใหญ่เป็นส่วนย่อย
 ---
 
 # Sub-workflows

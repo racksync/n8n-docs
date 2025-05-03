@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Notion node documentation
-description: Learn how to use the Notion node in n8n. Follow technical documentation to integrate Notion node into your workflows.
+title: เอกสาร Notion node
+description: เรียนรู้วิธีใช้ Notion node ใน n8n ดูเอกสารทางเทคนิคเพื่อเชื่อม Notion node เข้ากับ workflow ของคุณ
 contentType: [integration, reference]
 priority: high
 ---

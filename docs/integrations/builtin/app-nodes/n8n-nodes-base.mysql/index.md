@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: MySQL node documentation
-description: Learn how to use the MySQL node in n8n. Follow technical documentation to integrate MySQL node into your workflows.
+title: เอกสาร MySQL node
+description: เรียนรู้วิธีใช้ MySQL node ใน n8n ดูเอกสารทางเทคนิคเพื่อเชื่อม MySQL node เข้ากับ workflow ของคุณ
 contentType: [integration, reference]
 priority: high
 ---

@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Workflows environment variables
-description: Environment variables to configure workflows in n8n, including default naming, onboarding flow preferences, tag management, and caller policy settings.
+title: Environment Variables สำหรับ Workflows
+description: Environment Variables สำหรับตั้งค่า Workflows ใน n8n เช่น ชื่อ Default การตั้งค่า Onboarding การจัดการ Tag และ Caller Policy
 contentType: reference
 tags:
   - environment variables

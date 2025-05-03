@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Hardening task runners
-description: "Harden task runners for better isolation for your self-hosted n8n instance."
+title: เพิ่มความปลอดภัยให้ task runners
+description: "เพิ่มความปลอดภัยให้ task runners เพื่อ isolation ที่ดีขึ้นสำหรับ n8n instance ที่คุณโฮสต์เอง"
 contentType: howto
 ---
 

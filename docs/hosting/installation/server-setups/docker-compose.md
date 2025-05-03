@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: tutorial
-description: Install and run n8n using Docker Compose
+description: ติดตั้งและรัน n8n ด้วย Docker Compose
 ---
 
 # Docker-Compose

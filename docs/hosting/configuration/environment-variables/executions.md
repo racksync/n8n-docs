@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Executions environment variables
-description: Environment variables to configure settings related to workflow executions. 
+title: Environment Variables สำหรับ Executions
+description: Environment Variables สำหรับตั้งค่าที่เกี่ยวกับ Workflow Executions
 contentType: reference
 tags:
   - environment variables

@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Security audit
-description: "Run a security audit on your n8n instance."
+title: ตรวจสอบความปลอดภัย
+description: "รันการตรวจสอบความปลอดภัยบน n8n instance ของคุณ"
 contentType: howto
 ---
 

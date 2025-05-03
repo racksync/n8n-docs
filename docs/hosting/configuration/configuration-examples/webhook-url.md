@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Configure webhook URLs with reverse proxy
-description: Customize n8n webhook URLs for compatibility with reverse proxy setups.
+title: ตั้งค่า webhook URL ด้วย reverse proxy
+description: ปรับแต่ง n8n webhook URL ให้ใช้กับ reverse proxy ได้
 contentType: howto
 ---
 

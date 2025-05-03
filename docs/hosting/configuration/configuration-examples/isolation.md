@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Isolate n8n
-description: Prevent your n8n instance from connecting with n8n's servers. 
+title: แยก n8n ออกจากระบบภายนอก
+description: ป้องกันไม่ให้ n8n instance เชื่อมต่อกับ server ของ n8n
 contentType: howto
 ---
 

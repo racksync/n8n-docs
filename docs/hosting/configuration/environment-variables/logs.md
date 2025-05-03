@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Logs environment variables
-description: Environment variables to configure logging and diagnostic data. 
+title: Environment Variables สำหรับ Logs
+description: Environment Variables สำหรับตั้งค่า Logging และข้อมูล Diagnostic
 contentType: reference
 tags:
   - environment variables

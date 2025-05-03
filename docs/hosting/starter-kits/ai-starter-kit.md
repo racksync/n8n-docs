@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Self-hosted AI Starter Kit
-description: ใช้ Self-hosted AI Starter Kit ที่คัดสรรโดย n8n เพื่อเริ่มต้นสร้าง workflow AI แบบ self-hosted ได้อย่างรวดเร็ว
+description: ใช้ Self-hosted AI Starter Kit ที่ n8n คัดสรรมาเพื่อเริ่มสร้าง workflow AI แบบ self-hosted ได้อย่างรวดเร็ว
 contentType: howto
 ---
 

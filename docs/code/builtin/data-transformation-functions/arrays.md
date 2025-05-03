@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Data transformation functions for arrays
-description: A reference document listing built-in convenience functions to support data transformation in expressions for arrays.
+title: ฟังก์ชันแปลงข้อมูลสำหรับ arrays
+description: รายการ convenience functions สำหรับแปลงข้อมูล arrays ใน expressions
 contentType: reference
 ---
 

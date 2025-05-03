@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Source control environment variables
-description: Environment variable to set the default SSH key type for source control setup.
+title: Environment Variables สำหรับ Source Control
+description: Environment Variable สำหรับตั้งค่า SSH Key Type เริ่มต้นในการตั้งค่า Source Control
 contentType: reference
 tags:
   - environment variables

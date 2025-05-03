@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Task runners
-description: How to configure task runners to execute tasks using internal or external runner processes.
+title: Task Runners
+description: วิธีตั้งค่า Task Runners เพื่อรัน Task โดยใช้ Process ภายในหรือภายนอก
 contentType: howto
 ---
 

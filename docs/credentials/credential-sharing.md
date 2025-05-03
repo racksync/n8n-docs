@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Credential sharing
-description: Share credentials within an organization.
+title: การแชร์ Credential
+description: แชร์ credentials ภายในองค์กร
 contentType: howto
 ---
 

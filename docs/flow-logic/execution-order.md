@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Execution order in multi-branch workflows
-description: How n8n decides the node execution order in multi-branch workflows.
+title: ลำดับการ execute ใน workflow หลาย branch
+description: วิธีที่ n8n ตัดสินใจลำดับการ execute node ใน workflow หลาย branch
 contentType: explanation
 ---
 

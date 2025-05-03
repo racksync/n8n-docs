@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Block access to nodes
-description: "Prevent your n8n users from accessing specific nodes."
+title: บล็อกการเข้าถึง nodes
+description: "ป้องกันผู้ใช้ n8n ของคุณจากการเข้าถึง nodes ที่ระบุ"
 contentType: howto
 ---
 

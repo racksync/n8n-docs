@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Google Calendar node documentation
-description: Learn how to use the Google Calendar node in n8n. Follow technical documentation to integrate Google Calendar node into your workflows.
+title: เอกสาร Google Calendar node
+description: เรียนรู้วิธีใช้ Google Calendar node ใน n8n ทำตามเอกสารทางเทคนิคเพื่อผสาน Google Calendar node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 priority: high
 ---

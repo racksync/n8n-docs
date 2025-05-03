@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: MySQL node common issues
-description: Documentation for common issues and questions in the MySQL node in n8n, a workflow automation platform. Includes details of the issue and suggested solutions.
+title: ปัญหาที่พบบ่อยใน MySQL node
+description: เอกสารปัญหาและคำถามที่พบบ่อยใน MySQL node ของ n8n พร้อมรายละเอียดและวิธีแก้ปัญหา
 contentType: [integration, reference]
 priority: high
 ---

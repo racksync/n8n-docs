@@ -1,7 +1,7 @@
 ---
 # https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-description: Best practices for updating your self-hosted n8n
-title: Update self-hosted n8n
+description: แนวทางปฏิบัติที่ดีที่สุดสำหรับการอัปเดต n8n แบบ self-hosted
+title: อัปเดต n8n แบบ self-hosted
 contentType: explanation
 tags:
   - update npm

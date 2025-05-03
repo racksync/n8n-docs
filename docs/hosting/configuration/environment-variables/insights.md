@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Insights environment variables
-description: Configure insights metrics collection with environment variables for your self-hosted n8n instance. 
+title: Environment Variables สำหรับ Insights
+description: ตั้งค่าการเก็บ Metrics ของ Insights ด้วย Environment Variables สำหรับ n8n Self-hosted
 contentType: reference
 tags:
   - environment variables

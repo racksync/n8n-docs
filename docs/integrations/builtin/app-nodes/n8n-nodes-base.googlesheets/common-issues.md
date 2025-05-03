@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Google Sheets node common issues 
-description: Documentation for common questions and solutions in the Google Sheets node in n8n, a workflow automation platform. Includes details of the issue and suggested resolutions.
+title: ปัญหาที่พบบ่อยใน Google Sheets node
+description: เอกสารคำถามและวิธีแก้ปัญหาที่พบบ่อยใน Google Sheets node ของ n8n พร้อมรายละเอียดและแนวทางแก้ไข
 contentType: [integration, reference]
 priority: critical
 ---

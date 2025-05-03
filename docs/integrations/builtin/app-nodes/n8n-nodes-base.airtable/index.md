@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Airtable node documentation
-description: Learn how to use the Airtable node in n8n. Follow technical documentation to integrate Airtable node into your workflows.
+title: เอกสาร Airtable node
+description: เรียนรู้วิธีใช้ Airtable node ใน n8n ทำตามเอกสารทางเทคนิคเพื่อผสาน Airtable node เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 priority: high
 ---

@@ -1,6 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-description: CLI commands available in n8n.
+title: คำสั่ง CLI สำหรับ n8n
+description: คำสั่ง CLI ที่มีให้ใช้ใน n8n
 contentType: reference
 ---
 

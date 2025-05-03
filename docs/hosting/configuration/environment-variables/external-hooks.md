@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: External hooks environment variables
-description: Environment variables to integrate external hooks into your self-hosted n8n instance. 
+title: Environment Variables สำหรับ External Hooks
+description: Environment Variables สำหรับ Integrate External Hooks เข้ากับ n8n Self-hosted
 contentType: reference
 tags:
   - environment variables

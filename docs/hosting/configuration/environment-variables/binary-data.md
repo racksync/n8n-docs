@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Binary data environment variables
-description: Customize binary data storage modes and paths with environment variables for your self-hosted n8n instance. 
+title: Environment Variables สำหรับ Binary Data
+description: ปรับแต่งโหมดและ Path การจัดเก็บ Binary Data ด้วย Environment Variables สำหรับ n8n Self-hosted
 contentType: reference
 tags:
   - environment variables

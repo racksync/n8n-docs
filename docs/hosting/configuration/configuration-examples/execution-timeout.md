@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Configure workflow timeout settings
-description: Set execution timeouts to determine how long workflows can run.  
+title: ตั้งค่า timeout ของ workflow
+description: กำหนดเวลา timeout เพื่อจำกัดระยะเวลาการรัน workflow
 contentType: howto
 ---
 

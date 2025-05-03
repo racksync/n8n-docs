@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Credentials environment variables
-description: Manage default credentials and override them through environment variables your self-hosted n8n instance.
+title: Environment Variables สำหรับ Credentials
+description: จัดการ Default Credentials และ Override ผ่าน Environment Variables ใน n8n Self-hosted
 contentType: reference
 tags:
   - environment variables

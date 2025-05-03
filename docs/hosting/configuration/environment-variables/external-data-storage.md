@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: External data storage environment variables
-description: Environment variables to configure external data storage for your self-hosted n8n instance. 
+title: Environment Variables สำหรับ External Data Storage
+description: Environment Variables สำหรับตั้งค่า External Data Storage ใน n8n Self-hosted
 contentType: reference
 tags:
   - environment variables

@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Community edition features
-description: Differences in available features between the Community edition and other paid plans.
+title: ฟีเจอร์ Community edition
+description: ความแตกต่างของฟีเจอร์ระหว่าง Community edition และ plan อื่นๆ ที่มีค่าใช้จ่าย
 contentType: explanation
 tags:
   - Community edition

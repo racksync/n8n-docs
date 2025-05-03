@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Task runner environment variables
-description: Environment variables to confgure task runners your self-hosted n8n instance.
+title: Environment Variables สำหรับ Task Runner
+description: Environment Variables สำหรับตั้งค่า Task Runners ใน n8n Self-hosted
 contentType: reference
 tags:
   - environment variables

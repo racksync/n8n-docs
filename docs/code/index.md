@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Code in n8n Documentation and Guides
-description: Access documentation and guides on using code and expressions in n8n and other developer resources.
+title: การใช้ Code ในเอกสารและคู่มือ n8n
+description: เข้าถึงเอกสารและคู่มือการใช้ code และ expressions ใน n8n รวมถึงแหล่งข้อมูลสำหรับนักพัฒนาอื่นๆ
 contentType: overview
 ---
 

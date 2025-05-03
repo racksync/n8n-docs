@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Gmail node Thread Operations documentation
-description: Learn how to use the Thread Operations of the Gmail node in n8n. Follow technical documentation to integrate Thread Operations into your workflows.
+title: เอกสารการทำงานกับ Thread ของ Gmail node
+description: เรียนรู้วิธีใช้ Thread Operations ของ Gmail node ใน n8n ทำตามเอกสารทางเทคนิคเพื่อผสาน Thread Operations เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 priority: high
 ---

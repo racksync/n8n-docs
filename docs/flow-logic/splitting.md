@@ -1,6 +1,6 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-description: Split workflows into multiple paths using If and Switch
+description: แบ่ง workflow เป็นหลายเส้นทางด้วย If และ Switch
 contentType: howto
 ---
 

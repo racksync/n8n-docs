@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Gmail node Message Operations documentation
-description: Learn how to use the Message Operations of the Gmail node in n8n. Follow technical documentation to integrate Message Operations into your workflows.
+title: เอกสารการทำงานกับ Message ของ Gmail node
+description: เรียนรู้วิธีใช้ Message Operations ของ Gmail node ใน n8n ทำตามเอกสารทางเทคนิคเพื่อผสาน Message Operations เข้ากับ workflows ของคุณ
 contentType: [integration, reference]
 priority: high
 ---

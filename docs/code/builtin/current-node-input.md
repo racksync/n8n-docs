@@ -1,6 +1,6 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-description: Methods for working with the input of the current node.
+description: Methods สำหรับจัดการ input ของ node ปัจจุบัน
 contentType: reference
 hide:
   - toc

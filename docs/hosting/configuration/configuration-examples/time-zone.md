@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Set the self-hosted instance timezone
-description: Change the default timezone for your self-hosted n8n instance.
+title: ตั้งค่า timezone ของ instance ที่ self-host
+description: เปลี่ยน timezone เริ่มต้นสำหรับ n8n instance ที่ self-host
 contentType: howto
 ---
 

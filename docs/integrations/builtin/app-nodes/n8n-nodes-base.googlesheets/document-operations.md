@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Google Sheets Document operations
-description: Documentation for the Document operations in Google Sheets node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: การดำเนินการ Document ใน Google Sheets
+description: เอกสารการดำเนินการ Document ใน Google Sheets node ของ n8n พร้อมรายละเอียด การตั้งค่า และลิงก์ตัวอย่าง
 contentType: [integration, reference]
 priority: critical
 ---

@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Data transformation functions for dates
-description: A reference document listing built-in convenience functions to support data transformation in expressions for dates.
+title: ฟังก์ชันแปลงข้อมูลสำหรับ dates
+description: รายการ convenience functions สำหรับแปลงข้อมูล dates ใน expressions
 contentType: reference
 ---
 

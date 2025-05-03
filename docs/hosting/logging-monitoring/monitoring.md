@@ -1,6 +1,6 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-description: Get metrics for a health check
+description: ดึง metrics สำหรับ health check
 contentType: howto
 ---
 

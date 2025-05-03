@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Google Drive Shared Drive operations
-description: Documentation for the Shared Drive operations in Google Drive node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: การทำงานกับ Shared Drive ของ Google Drive
+description: เอกสารสำหรับการทำงานกับ Shared Drive ใน Google Drive node ของ n8n แพลตฟอร์มอัตโนมัติเวิร์กโฟลว์ รวมถึงรายละเอียด operations การกำหนดค่า และลิงก์ไปยังตัวอย่างและข้อมูล credentials
 contentType: [integration, reference]
 priority: high
 ---

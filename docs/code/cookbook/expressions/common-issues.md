@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Expressions common issues
-description: Documentation for common issues and questions related to expressions in n8n, a workflow automation platform. Includes details of the issue and suggested solutions.
+title: ปัญหาทั่วไปเกี่ยวกับ Expressions
+description: เอกสารเกี่ยวกับปัญหาและคำถามทั่วไปเกี่ยวกับ expressions ใน n8n พร้อมรายละเอียดและวิธีแก้ปัญหา
 contentType: howto
 ---
 

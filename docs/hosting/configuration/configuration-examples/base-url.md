@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Configure the Base URL for n8n's front end access
-description: Configure the Base URL environment variable to define the front end's access path to the back end's REST API for n8n.
+title: ตั้งค่า Base URL สำหรับการเข้าถึง front end ของ n8n
+description: ตั้งค่า environment variable Base URL เพื่อกำหนด path การเข้าถึง REST API ของ back end จาก front end
 contentType: howto
 ---
 

@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Binary data
-description: Understand and use binary data in n8n.
+title: ข้อมูล Binary
+description: ทำความเข้าใจและใช้ข้อมูล binary ใน n8n
 contentType: overview
 tags:
   - binary data

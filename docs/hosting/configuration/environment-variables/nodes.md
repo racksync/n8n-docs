@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Nodes environment variables
-description: Environment variable to configure nodes management in self-hosted n8n instance.
+title: Environment Variables สำหรับ Nodes
+description: Environment Variable สำหรับตั้งค่าการจัดการ Nodes ใน n8n Self-hosted
 contentType: reference
 tags:
   - environment variables

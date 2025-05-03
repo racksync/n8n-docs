@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Configuration examples
-description: An overview containing different configuration examples.
+title: ตัวอย่างการตั้งค่า
+description: ภาพรวมตัวอย่างการตั้งค่าต่าง ๆ
 contentType: overview
 ---
 

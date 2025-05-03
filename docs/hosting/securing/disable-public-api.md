@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Disable the public REST API
-description: "Disable the n8n public REST API to prevent others from using it."
+title: ปิด public REST API
+description: "ปิด n8n public REST API เพื่อป้องกันการใช้งานจากภายนอก"
 contentType: howto
 ---
 

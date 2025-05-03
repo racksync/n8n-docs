@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Specify location for your custom nodes
-description: Add folders and specify paths for your custom nodes. 
+title: ระบุตำแหน่งสำหรับ custom node
+description: เพิ่มโฟลเดอร์และระบุ path สำหรับ custom node
 contentType: howto
 ---
 

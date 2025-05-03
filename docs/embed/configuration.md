@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: n8n Embed Configuration
-description: Learn how to configure your n8n Embed.
+title: การกำหนดค่า n8n Embed
+description: เรียนรู้วิธีตั้งค่า n8n Embed ของคุณ
 contentType: howto
 ---
 

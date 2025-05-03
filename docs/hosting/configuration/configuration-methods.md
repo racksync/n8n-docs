@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Configuration methods
-description: How to set environment variables for n8n.
+title: วิธีการตั้งค่า Configuration
+description: วิธีตั้งค่า Environment Variables สำหรับ n8n
 contentType: howto
 ---
 

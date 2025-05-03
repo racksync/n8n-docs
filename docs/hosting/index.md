@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: n8n Hosting Documentation and Guides
-description: Access n8n hosting documentation and guides. Find comprehensive resources to help you set up and manage your self-hosted n8n instances.
+title: คู่มือและเอกสาร n8n Hosting
+description: เข้าถึงคู่มือและเอกสาร n8n hosting แหล่งข้อมูลสำหรับติดตั้งและจัดการ n8n instance แบบ self-hosted
 contentType: overview
 hide:
   - toc

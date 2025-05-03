@@ -1,6 +1,6 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-description: External storage of binary data for your n8n instance.
+description: การจัดเก็บ binary data ภายนอกสำหรับ n8n instance ของคุณ
 contentType: howto
 tags:
   - external storage

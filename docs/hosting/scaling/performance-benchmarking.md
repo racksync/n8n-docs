@@ -1,6 +1,6 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-description: n8n performance and resource consumption benchmarking.
+description: การทดสอบประสิทธิภาพและการใช้ทรัพยากรของ n8n
 contentType: explanation
 ---
 

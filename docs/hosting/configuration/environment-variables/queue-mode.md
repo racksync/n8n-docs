@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Queue mode environment variables
-description: Environment variables to configure queue mode on your self-hosted n8n instance. 
+title: Environment Variables สำหรับ Queue Mode
+description: Environment Variables สำหรับตั้งค่า Queue Mode ใน n8n Self-hosted
 contentType: reference
 tags:
   - environment variables

@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Supabase node common issues
-description: Documentation for common issues and questions in the Supabase node in n8n, a workflow automation platform. Includes details of the issue and suggested solutions.
+title: ปัญหาที่พบบ่อยใน Supabase node
+description: เอกสารปัญหาและคำถามที่พบบ่อยใน Supabase node ของ n8n พร้อมรายละเอียดและวิธีแก้ปัญหา
 contentType: [integration, reference]
 priority: high
 ---
@@ -54,4 +54,4 @@ metadata->>age=gte.21
 
 Supabase จะเปิด RLS อัตโนมัติเมื่อสร้างตารางใน public schema ผ่าน Table Editor พอ RLS ทำงาน API จะไม่คืนข้อมูลใดๆ ให้กับ public `anon` key จนกว่าจะสร้าง policy ขึ้นมา นี่เป็นมาตรการด้านความปลอดภัยเพื่อให้แน่ใจว่าคุณจะเปิดเผยข้อมูลเท่าที่ตั้งใจไว้เท่านั้น 
 
-ถ้าต้องการเข้าถึงข้อมูลจากตารางที่เปิด RLS แล้วในบทบาท `anon` ให้ [สร้าง policy](https://supabase.com/docs/guides/database/postgres/row-level-security#creating-policies) ตามรูปแบบการเข้าถึงที่คุณต้องการ 
+ถ้าต้องการเข้าถึงข้อมูลจากตารางที่เปิด RLS แล้วในบทบาท `anon` ให้ [สร้าง policy](https://supabase.com/docs/guides/database/postgres/row-level-security#creating-policies) ตามรูปแบบการเข้าถึงที่คุณต้องการ

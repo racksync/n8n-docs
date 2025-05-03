@@ -61,7 +61,7 @@ extra:
     provider: google
     property: G-0SC4FF2FH9
     feedback:
-      title: Was this page helpful?
+      title: เอกสารนี้ช่วยคุณได้มากไหม?
       ratings:
         - icon: material/emoticon-happy-outline
           name: This page was helpful
@@ -219,7 +219,7 @@ plugins:
       cards_layout_options.title: "Thai n8n Handbook"
       cards_layout_options.description: "Quick start n8n flow-based Automation tool with Thai Description"
       cards_layout_options:
-        font_family: Noto Sans SC
+        font_family: Roboto
         background_color: "#e32652" # Change background color
         background_image: null # Remove background image
 INHERIT: ./nav.yml

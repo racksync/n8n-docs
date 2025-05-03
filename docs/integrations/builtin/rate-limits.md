@@ -1,8 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Handling API rate limits
-contentType: howto
-description: How to handle API rate limits when using n8n integrations.
+title: จัดการ API rate limit
+description: วิธีจัดการ API rate limit เมื่อใช้งาน integration ของ n8n
 ---
 
 # Handling API rate limits

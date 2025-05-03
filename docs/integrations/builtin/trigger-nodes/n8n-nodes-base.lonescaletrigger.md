@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: LoneScale Trigger node documentation
-description: Learn how to use the LoneScale Trigger node in n8n. Follow technical documentation to integrate LoneScale Trigger node into your workflows.
+title: คู่มือ LoneScale Trigger node
+description: วิธีใช้ LoneScale Trigger node ใน n8n พร้อมตัวอย่าง workflow
 contentType: [integration, reference]
 ---
 

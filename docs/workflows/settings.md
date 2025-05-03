@@ -1,6 +1,6 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-description: Manage settings for an individual workflow.
+description: จัดการการตั้งค่าสำหรับ workflow แต่ละรายการ
 contentType: howto
 ---
 

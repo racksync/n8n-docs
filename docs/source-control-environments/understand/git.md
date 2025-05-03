@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Git and n8n
-description: Git concepts and limitations in n8n.
+title: Git และ n8n
+description: แนวคิดและข้อจำกัดของ Git ใน n8n
 contentType: explanation
 ---
 

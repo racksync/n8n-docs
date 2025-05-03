@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Facebook Trigger Workplace Security object documentation
-description: Learn how to use the Workplace Security object of the Facebook Trigger node in n8n. Follow technical documentation to integrate the Facebook Trigger node's Workplace Security object into your workflows.
+title: คู่มือ Facebook Trigger Workplace Security object
+description: เรียนรู้วิธีใช้ Facebook Trigger node กับ Workplace Security object ใน n8n และวิธีเชื่อมต่อกับ workflow ของคุณ
 contentType: [integration, reference]
 priority: medium
 ---

@@ -1,5 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
+title: วางแผนสร้าง Node
+description: ภาพรวมการวางแผนและออกแบบ node ก่อนเริ่มสร้าง
 contentType: overview
 ---
 

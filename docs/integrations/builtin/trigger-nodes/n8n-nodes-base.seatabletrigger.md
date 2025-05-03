@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: SeaTable Trigger node documentation
-description: Learn how to use the SeaTable Trigger node in n8n. Follow technical documentation to integrate SeaTable Trigger node into your workflows.
+title: คู่มือ SeaTable Trigger node
+description: วิธีใช้ SeaTable Trigger node ใน n8n เพื่อเชื่อมต่อ SeaTable กับ workflow ของคุณ
 contentType: [integration, reference]
 ---
 

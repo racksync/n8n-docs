@@ -1,6 +1,7 @@
 --- 
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-description: Create your first workflow in n8n and learn some key concepts.
+title: Workflow แรกของคุณ
+description: สร้าง workflow แรกของคุณใน n8n และเรียนรู้แนวคิดสำคัญ
 contentType: tutorial
 ---
 

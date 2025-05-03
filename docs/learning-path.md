@@ -1,6 +1,6 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-description: A suggested learning path to get started with n8n through tutorials, courses, and step-by-step guides.
+description: เส้นทางการเรียนรู้แนะนำเพื่อเริ่มต้นใช้งาน n8n ผ่าน tutorials, คอร์ส และคู่มือทีละขั้นตอน
 contentType: overview
 ---
 คู่มือนี้สรุปชุดของ tutorials และแหล่งข้อมูลที่ออกแบบมาเพื่อช่วยให้คุณเริ่มต้นใช้งาน n8n

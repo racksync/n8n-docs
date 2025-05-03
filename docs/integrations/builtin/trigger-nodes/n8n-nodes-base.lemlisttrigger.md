@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Lemlist Trigger node documentation
-description: เรียนรู้วิธีการใช้ Lemlist Trigger node ใน n8n. ติดตามเอกสารทางเทคนิคเพื่อรวม Lemlist Trigger node เข้ากับ workflows ของคุณ.
+title: คู่มือ Lemlist Trigger node
+description: วิธีใช้ Lemlist Trigger node ใน n8n พร้อมตัวอย่าง workflow
 contentType: [integration, reference]
 ---
 

@@ -1,6 +1,6 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-description: An execution is a single run of a workflow.
+description: Execution คือการรัน workflow หนึ่งครั้ง
 contentType: overview
 ---
 

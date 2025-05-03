@@ -1,6 +1,6 @@
 nav:
   - มาใช้ n8n กันค่ะ 🚀:
-    - ยินดีต้อนรับ: index.md
+    - ความเป็นมา: index.md
     - เริ่มต้นใช้งาน:
       - เส้นทางการเรียนรู้: learning-path.md
       - เลือก n8n ในแบบของคุณ: choose-n8n.md
@@ -11,7 +11,7 @@ nav:
       - คอร์สวิดีโอ: video-courses.md
       - คอร์สแบบข้อความ:
         - courses/index.md
-        - ระดับ 1:
+        - ระดับที่ 1:
           - courses/level-one/index.md
           - การใช้งาน Editor UI: courses/level-one/chapter-1.md
           - สร้าง Workflow ขนาดเล็ก: courses/level-one/chapter-2.md
@@ -28,12 +28,12 @@ nav:
             - เปิดใช้งานและตรวจสอบ Workflow: courses/level-one/chapter-5/chapter-5.8.md
           - การ Export และ Import Workflows: courses/level-one/chapter-6.md
           - ทดสอบความรู้ของคุณ: courses/level-one/chapter-7.md
-        - ระดับ 2:
+        - ระดับที่ 2:
           - courses/level-two/index.md
-          - ทำความเข้าใจโครงสร้างข้อมูล: courses/level-two/chapter-1.md
-          - การประมวลผลข้อมูลประเภทต่างๆ: courses/level-two/chapter-2.md
-          - การรวมและแยกข้อมูล: courses/level-two/chapter-3.md
-          - การจัดการข้อผิดพลาดใน Workflows: courses/level-two/chapter-4.md
+          - เข้าใจโครงสร้างข้อมูล: courses/level-two/chapter-1.md
+          - ประมวลผลข้อมูลประเภทต่างๆ: courses/level-two/chapter-2.md
+          - รวมและแยกข้อมูล: courses/level-two/chapter-3.md
+          - จัดการข้อผิดพลาดใน Workflows: courses/level-two/chapter-4.md
           - สร้าง Workflow ธุรกิจอัตโนมัติ:
             - Use Case: courses/level-two/chapter-5/chapter-5.0.md
             - Workflow 1: courses/level-two/chapter-5/chapter-5.1.md
@@ -1294,6 +1294,8 @@ nav:
       - การจัดการ Workflow: embed/managing-workflows.md
       - Templates ของ Workflow: embed/workflow-templates.md
       - White labelling: embed/white-labelling.md
+  - RACKSYNC:
+      - racksync.md
 #  - Feature tests:
 #      - Main features: docs-site-feature-tests/index.md
 #

@@ -1,6 +1,6 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-description: A connection establishes a link between nodes to route data through the workflow. 
+description: Connection สร้างการเชื่อมโยงระหว่าง nodes เพื่อส่งข้อมูลผ่าน workflow
 contentType: howto
 ---
 

@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Set up SAML
-description: Generic setup instructions for using SAML SSO with n8n.
+title: ตั้งค่า SAML
+description: คำแนะนำการตั้งค่าทั่วไปสำหรับการใช้ SAML SSO กับ n8n
 contentType: howto
 ---
 

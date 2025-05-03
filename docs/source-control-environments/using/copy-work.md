@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Copy work between environments
-description: How to get changes from one environment into another.
+title: คัดลอกงานระหว่าง Environments
+description: วิธีนำการเปลี่ยนแปลงจาก environment หนึ่งไปยังอีก environment
 contentType: howto
 ---
 

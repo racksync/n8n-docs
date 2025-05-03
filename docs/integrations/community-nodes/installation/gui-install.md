@@ -1,6 +1,8 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: howto
+title: ติดตั้ง community nodes ผ่านแอป n8n
+description: วิธีติดตั้ง community nodes โดยใช้ GUI ในแอป n8n
 ---
 
 # Install community nodes in the n8n app

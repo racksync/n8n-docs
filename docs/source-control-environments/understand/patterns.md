@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Branch patterns
-description: Understand the different relationships between n8n instances and Git branches that are possible with source control.
+title: รูปแบบ Branch
+description: ทำความเข้าใจความสัมพันธ์รูปแบบต่างๆ ระหว่าง n8n instance กับ Git branch ที่เป็นไปได้ด้วย source control
 contentType: explanation
 ---
 

@@ -1,6 +1,8 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: explanation
+title: Blocklist ของ community node ใน n8n
+description: อธิบายเกี่ยวกับ blocklist ของ community node และเหตุผลที่ node อาจถูกเพิ่มเข้าไป
 ---
 
 # n8n community node blocklist

@@ -1,6 +1,6 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-description: A node is an entry point for retrieving data, a function to process data, or an exit for sending data.
+description: Node คือจุดเริ่มต้นในการดึงข้อมูล, ฟังก์ชันประมวลผลข้อมูล, หรือจุดสิ้นสุดในการส่งข้อมูล
 contentType: howto
 ---
 

@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Okta Workforce Identity SAML setup
-description: Use Okta Workforce Identity with n8n.
+title: การตั้งค่า Okta Workforce Identity SAML
+description: ใช้ Okta Workforce Identity กับ n8n
 contentType: tutorial
 ---
 

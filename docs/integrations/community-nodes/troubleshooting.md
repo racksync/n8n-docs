@@ -1,6 +1,8 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: howto
+title: การแก้ไขปัญหาและข้อผิดพลาด (Community Nodes)
+description: แนวทางการแก้ไขปัญหาและข้อผิดพลาดที่พบบ่อยเมื่อใช้ community nodes
 ---
 
 # Troubleshooting and errors

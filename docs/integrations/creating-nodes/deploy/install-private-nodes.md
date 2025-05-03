@@ -1,5 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
+title: ติดตั้ง Private Nodes
+description: วิธีติดตั้ง node ที่สร้างเองแบบ private ใน n8n instance
 contentType: howto
 ---
 

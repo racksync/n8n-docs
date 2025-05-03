@@ -1,5 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
+title: การสร้าง Nodes
+description: ภาพรวมการสร้าง custom nodes สำหรับ n8n
 contentType: overview
 ---
 

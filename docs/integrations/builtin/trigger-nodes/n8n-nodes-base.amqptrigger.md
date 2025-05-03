@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: AMQP Trigger node documentation
-description: Learn how to use the AMQP Trigger node in n8n. Follow technical documentation to integrate AMQP Trigger node into your workflows.
+title: คู่มือการใช้งาน AMQP Trigger node
+description: วิธีใช้ AMQP Trigger node กับ n8n สำหรับเชื่อมต่อและเริ่ม workflow อัตโนมัติ
 contentType: [integration, reference]
 ---
 

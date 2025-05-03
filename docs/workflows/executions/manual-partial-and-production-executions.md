@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Manual, partial, and production executions
-description: How manual, partial, and automatic workflow executions differ.
+title: Manual, partial, และ production executions
+description: ความแตกต่างระหว่าง manual, partial, และ automatic workflow executions
 contentType: explanation
 ---
 

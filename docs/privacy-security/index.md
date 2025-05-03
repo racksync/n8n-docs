@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: n8n Privacy and security
-description: Learn about privacy and security at n8n. Explore how n8n handles and secures your data, with an overview of key policies and procedures.
+title: ความเป็นส่วนตัวและความปลอดภัยของ n8n
+description: เรียนรู้เกี่ยวกับความเป็นส่วนตัวและความปลอดภัยที่ n8n และภาพรวมวิธีจัดการและรักษาความปลอดภัยข้อมูลของคุณ
 contentType: overview
 ---
 <!-- vale off -->

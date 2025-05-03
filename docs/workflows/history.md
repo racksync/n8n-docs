@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Workflow history
-description: View and restore previous versions of your workflow.
+title: ประวัติ Workflow
+description: ดูและกู้คืนเวอร์ชันก่อนหน้าของ workflow ของคุณ
 contentType: howto
 ---
 

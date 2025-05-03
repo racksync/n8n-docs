@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Facebook Trigger Link object documentation
-description: Learn how to use the Link object of the Facebook Trigger node in n8n. Follow technical documentation to integrate the Facebook Trigger node's Link object into your workflows.
+title: คู่มือ Facebook Trigger Link object
+description: เรียนรู้วิธีใช้ Facebook Trigger node กับ Link object ใน n8n และวิธีเชื่อมต่อกับ workflow ของคุณ
 contentType: [integration, reference]
 priority: medium
 ---

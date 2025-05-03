@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Keap Trigger node documentation
-description: Learn how to use the Keap Trigger node in n8n. Follow technical documentation to integrate Keap Trigger node into your workflows.
+title: คู่มือ Keap Trigger node
+description: วิธีใช้ Keap Trigger node ใน n8n พร้อมตัวอย่าง workflow
 contentType: [integration, reference]
 ---
 

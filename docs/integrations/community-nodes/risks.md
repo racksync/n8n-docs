@@ -1,6 +1,8 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: explanation
+title: ความเสี่ยงในการใช้ community nodes
+description: อธิบายความเสี่ยงที่อาจเกิดขึ้นเมื่อใช้ community nodes
 ---
 
 # Risks when using community nodes

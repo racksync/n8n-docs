@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: เอกสารประกอบ WhatsApp Trigger node
-description: เรียนรู้วิธีการใช้ WhatsApp Trigger node ใน n8n ทำตามเอกสารทางเทคนิคเพื่อรวม WhatsApp Trigger node เข้ากับ workflow ของคุณ
+title: คู่มือ WhatsApp Trigger node
+description: วิธีใช้ WhatsApp Trigger node ใน n8n เพื่อเชื่อมต่อ WhatsApp กับ workflow ของคุณ
 contentType: [integration, reference]
 priority: high
 ---

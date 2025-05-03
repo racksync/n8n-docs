@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Export and import workflows
-description: Different ways to export and import workflows in n8n.
+title: Export และ import workflows
+description: วิธีต่างๆ ในการ export และ import workflows ใน n8n
 contentType: howto
 ---
 

@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Workflow tags
-description: Use tags to label workflows, making it easier to browse your workflows.
+description: ใช้ tags เพื่อติดป้ายกำกับ workflows ทำให้ง่ายต่อการเรียกดู workflows ของคุณ
 contentType: howto
 ---
 

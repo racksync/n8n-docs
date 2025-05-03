@@ -1,6 +1,8 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: howto
+title: ติดตั้ง community nodes ด้วยตัวเอง
+description: วิธีติดตั้ง community nodes ด้วยตัวเองบน n8n ที่ self-hosted
 ---
 
 # Manually install community nodes

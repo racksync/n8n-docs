@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Mautic Trigger node documentation
-description: Learn how to use the Mautic Trigger node in n8n. Follow technical documentation to integrate Mautic Trigger node into your workflows.
+title: คู่มือ Mautic Trigger node
+description: วิธีใช้ Mautic Trigger node ใน n8n พร้อมตัวอย่าง workflow
 contentType: [integration, reference]
 ---
 

@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: What you can do
-description: What you can do to improve privacy and data security when using n8n.
+title: สิ่งที่คุณสามารถทำได้
+description: สิ่งที่คุณสามารถทำได้เพื่อปรับปรุงความเป็นส่วนตัวและความปลอดภัยของข้อมูลเมื่อใช้ n8n
 contentType: howto
 ---
 <!-- vale off -->

@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Change Instance Ownership or Username
-Description: Change instance ownership or username.
+title: เปลี่ยนเจ้าของ Instance หรือ Username
+description: เปลี่ยนเจ้าของ instance หรือ username
 contentType: howto
 ---
 

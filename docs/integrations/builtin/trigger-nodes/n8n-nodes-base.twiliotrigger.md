@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Twilio Trigger node documentation
-description: Learn how to use the Twilio Trigger node in n8n. Follow technical documentation to integrate Twilio Trigger node into your workflows.
+title: คู่มือ Twilio Trigger node
+description: วิธีใช้ Twilio Trigger node ใน n8n เพื่อเชื่อมต่อ Twilio กับ workflow ของคุณ
 contentType: [integration, reference]
 ---
 

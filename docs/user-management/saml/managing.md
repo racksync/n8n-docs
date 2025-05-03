@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Manage users with SAML
-description: How to manage users and user logins with SAML enabled.
+title: จัดการผู้ใช้ด้วย SAML
+description: วิธีจัดการผู้ใช้และการ login ของผู้ใช้เมื่อเปิดใช้งาน SAML
 contentType: howto
 ---
 

@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Box Trigger node documentation
-description: Learn how to use the Box Trigger node in n8n. Follow technical documentation to integrate Box Trigger node into your workflows.
+title: คู่มือการใช้งาน Box Trigger node
+description: วิธีใช้ Box Trigger node กับ n8n เพื่อเชื่อมต่อและเริ่ม workflow อัตโนมัติ
 contentType: [integration, reference]
 ---
 

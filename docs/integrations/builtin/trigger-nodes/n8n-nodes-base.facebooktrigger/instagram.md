@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Facebook Trigger Instagram object documentation
-description: Learn how to use the Instagram object of the Facebook Trigger node in n8n. Follow technical documentation to integrate the Facebook Trigger node's Instagram object into your workflows.
+title: คู่มือ Facebook Trigger Instagram object
+description: เรียนรู้วิธีใช้ Facebook Trigger node กับ Instagram object ใน n8n และวิธีเชื่อมต่อกับ workflow ของคุณ
 contentType: [integration, reference]
 priority: medium
 ---

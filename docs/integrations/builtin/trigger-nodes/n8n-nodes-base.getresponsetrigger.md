@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: GetResponse Trigger node documentation
-description: Learn how to use the GetResponse Trigger node in n8n. Follow technical documentation to integrate GetResponse Trigger node into your workflows.
+title: คู่มือ GetResponse Trigger node
+description: วิธีใช้ GetResponse Trigger node ใน n8n พร้อมตัวอย่าง workflow
 contentType: [integration, reference]
 ---
 

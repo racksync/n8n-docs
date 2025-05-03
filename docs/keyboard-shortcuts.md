@@ -5,7 +5,7 @@ tags:
   - Move canvas
   - Move nodes
   - Drag and drop
-description: Keyboard shortcuts available in n8n.
+description: คีย์ลัดที่ใช้งานได้ใน n8n
 hide:
   - tags
 contentType: reference

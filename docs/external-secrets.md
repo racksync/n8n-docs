@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: External secrets
-description: Use an external secrets vault with n8n.
+title: External Secrets
+description: ใช้ external secrets vault กับ n8n
 contentType: howto
 ---
 

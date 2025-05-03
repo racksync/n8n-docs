@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Troubleshooting SAML SSO
-description: A list of things to check if you encounter issues with SAML.
+title: การแก้ไขปัญหา SAML SSO
+description: รายการตรวจสอบหากคุณพบปัญหากับ SAML
 contentType: howto
 ---
 

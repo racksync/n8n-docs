@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: RBAC projects
-description: Understand how n8n uses project for RBAC. Learn how to create and manage projects.
+title: Project ใน RBAC
+description: ทำความเข้าใจวิธีที่ n8n ใช้ Project สำหรับ RBAC เรียนรู้วิธีสร้างและจัดการ Project
 contentType: howto
 ---
 

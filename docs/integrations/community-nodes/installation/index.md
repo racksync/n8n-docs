@@ -1,6 +1,8 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: overview
+title: ติดตั้งและจัดการ community nodes
+description: ภาพรวมวิธีการติดตั้งและจัดการ community nodes บน n8n
 ---
 
 # Install and manage community nodes

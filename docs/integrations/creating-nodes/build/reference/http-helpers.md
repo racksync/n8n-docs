@@ -1,5 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
+title: ตัวช่วย HTTP Request สำหรับผู้สร้าง Node
+description: เอกสารอ้างอิงสำหรับ helper การทำ HTTP request
 contentType: reference
 ---
 

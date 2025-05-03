@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Set up source control
-description: Link n8n to your Git provider.
+title: ตั้งค่า Source control
+description: เชื่อมต่อ n8n กับ Git provider ของคุณ
 contentType: howto
 ---
 

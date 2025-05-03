@@ -1,5 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
+title: สร้าง Node แบบ Declarative-style
+description: Tutorial สร้าง node แบบ declarative-style
 contentType: tutorial
 ---
 

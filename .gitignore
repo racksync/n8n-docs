@@ -8,8 +8,6 @@ yarn.lock
 .env
 .vscode
 .idea
-#.cache/plugin/social/*.png
-
 
 
 .venv

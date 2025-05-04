@@ -219,7 +219,7 @@ plugins:
       cards_layout_options.title: "Thai n8n Handbook"
       cards_layout_options.description: "Quick start n8n flow-based Automation tool with Thai Description"
       cards_layout_options:
-        font_family: Roboto
+        font_family: Noto Sans SC
         background_color: "#e32652" # Change background color
         background_image: null # Remove background image
 INHERIT: ./nav.yml

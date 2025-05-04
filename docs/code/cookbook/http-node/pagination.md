@@ -6,7 +6,7 @@ contentType: howto
 
 # Pagination in the HTTP Request node
 
-HTTP Request node รองรับ pagination หน้านี้ให้ตัวอย่างการกำหนดค่าบางส่วน รวมถึงการใช้ [HTTP node variables](/code/builtin/http-node-variables.md)
+HTTP Request node รองรับ pagination รวมถึงให้ตัวอย่างการกำหนดค่าบางส่วน รวมถึงการใช้ [HTTP node variables](/code/builtin/http-node-variables.md)
 
 อ้างอิง [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) สำหรับข้อมูลเพิ่มเติมเกี่ยวกับ node
 

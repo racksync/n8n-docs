@@ -1,7 +1,7 @@
 ใช้ Code node เพื่อเขียน JavaScript หรือ Python แบบกำหนดเอง และรันเป็นขั้นตอนใน workflow ของคุณ
 
 /// note | การเขียนโค้ดใน n8n
-หน้านี้ให้ข้อมูลการใช้งานเกี่ยวกับ Code node สำหรับคำแนะนำเพิ่มเติมเกี่ยวกับการเขียนโค้ดใน n8n โปรดดูที่ส่วน [Code](/code/index.md) ซึ่งรวมถึง:
+ข้อมูลการใช้งานเกี่ยวกับ Code node สำหรับคำแนะนำเพิ่มเติมเกี่ยวกับการเขียนโค้ดใน n8n โปรดดูที่ส่วน [Code](/code/index.md) ซึ่งรวมถึง:
 
 * เอกสารอ้างอิงเกี่ยวกับ [Built-in methods and variables](/code/builtin/overview.md)
 * คำแนะนำเกี่ยวกับ [Handling dates](/code/cookbook/luxon.md) และ [Querying JSON](/code/cookbook/jmespath.md)

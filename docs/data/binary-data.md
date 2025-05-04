@@ -11,9 +11,7 @@ hide:
 
 # Binary data
 
-Binary data คือข้อมูลประเภทไฟล์ใดๆ เช่น ไฟล์รูปภาพ หรือเอกสาร
-
-หน้านี้รวบรวมแหล่งข้อมูลที่เกี่ยวข้องกับ binary data ใน n8n
+Binary data คือข้อมูลประเภทไฟล์ใดๆ เช่น ไฟล์รูปภาพ หรือเอกสาร รวบรวมแหล่งข้อมูลที่เกี่ยวข้องกับ binary data ใน n8n
 
 ## Working with binary data in your workflows
 

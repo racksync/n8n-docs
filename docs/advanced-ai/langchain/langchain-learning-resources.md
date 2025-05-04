@@ -6,7 +6,7 @@ description: แหล่งข้อมูลภายนอกเพื่อ�
 
 # LangChain learning resources
 
-คุณไม่จำเป็นต้องรู้รายละเอียดของ LangChain เพื่อใช้ n8n แต่การเข้าใจ concepts บางอย่างจะช่วยได้ หน้านี้รวบรวมแหล่งเรียนรู้ที่ทีม n8n เห็นว่ามีประโยชน์
+คุณไม่จำเป็นต้องรู้รายละเอียดของ LangChain เพื่อใช้ n8n แต่การเข้าใจ concepts บางอย่างจะช่วยได้ รวบรวมแหล่งเรียนรู้ที่ทีม n8n เห็นว่ามีประโยชน์
 
 [LangChain documentation](https://docs.langchain.com/docs/){:target=_blank .external-link} มีข้อมูลเบื้องต้นเกี่ยวกับ key concepts และ use cases ที่เป็นไปได้ เลือกดูเอกสาร [LangChain | Python](https://python.langchain.com/docs/get_started/introduction){:target=_blank .external-link} หรือ [LangChain | JavaScript](https://js.langchain.com/docs/get_started/introduction/){:target=_blank .external-link} สำหรับ quickstarts, ตัวอย่างโค้ด และ API documentation LangChain ยังมี [code templates](https://github.com/langchain-ai/langchain/tree/master/cookbook){:target=_blank .external-link} (Python เท่านั้น) สำหรับไอเดีย use cases และ patterns ทั่วไป
 

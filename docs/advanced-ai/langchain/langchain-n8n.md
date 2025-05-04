@@ -7,9 +7,9 @@ description: วิธีที่ LangChain concepts แมปกับ n8n แ
 
 # LangChain concepts in n8n
 
-หน้านี้อธิบายว่า LangChain concepts และ features แมปกับ n8n nodes อย่างไร
+อธิบายหลักการของ LangChain concepts และ features แมปกับ n8n nodes อย่างไร
 
-หน้านี้รวมรายการของ LangChain-focused nodes ใน n8n คุณสามารถใช้ n8n node ใดก็ได้ใน workflow ที่คุณโต้ตอบกับ LangChain เพื่อเชื่อมโยง LangChain กับ services อื่นๆ ฟีเจอร์ LangChain ใช้ [Cluster nodes](/integrations/builtin/cluster-nodes/index.md) ของ n8n
+รวมรายการของ LangChain-focused nodes ใน n8n คุณสามารถใช้ n8n node ใดก็ได้ใน workflow ที่คุณโต้ตอบกับ LangChain เพื่อเชื่อมโยง LangChain กับ services อื่นๆ ฟีเจอร์ LangChain ใช้ [Cluster nodes](/integrations/builtin/cluster-nodes/index.md) ของ n8n
 
 /// note | n8n implements LangChain JS
 ฟีเจอร์นี้เป็นการนำ [LangChain's JavaScript framework](https://js.langchain.com/docs/get_started/introduction){:target=_blank .external-link} มาใช้ใน n8n

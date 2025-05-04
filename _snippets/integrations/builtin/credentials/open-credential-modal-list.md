@@ -1,2 +1,2 @@
-1. In n8n, open the **Admin Panel** (left menu)
-1. Select **Credentials** > **New**.
+1. ใน n8n, เปิด **Admin Panel** (เมนูด้านซ้าย)
+1. เลือก **Credentials** > **New**

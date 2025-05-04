@@ -1,3 +1,2 @@
-
-1. **Generate from JSON Example**: Input an example JSON object to automatically generate the schema. The node uses the object property types and names. It ignores the actual values.
-2. **Define Below**: Manually input the JSON schema. Read the JSON Schema [guides and examples](https://json-schema.org/learn/miscellaneous-examples){:target=_blank .external-link} for help creating a valid JSON schema.
+1.  **Generate from JSON Example (สร้างจากตัวอย่าง JSON)**: ป้อนตัวอย่าง JSON object เพื่อสร้าง schema โดยอัตโนมัติ node จะใช้ประเภทและชื่อ property ของ object โดยไม่สนใจค่าจริง
+2.  **Define Below (กำหนดด้านล่าง)**: ป้อน JSON schema ด้วยตนเอง อ่าน JSON Schema [guides and examples](https://json-schema.org/learn/miscellaneous-examples){:target=_blank .external-link} เพื่อช่วยในการสร้าง JSON schema ที่ถูกต้อง

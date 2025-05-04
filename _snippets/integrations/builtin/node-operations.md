@@ -1,8 +1,8 @@
-## Node operations: Triggers and Actions
+## การทำงานของ Node: Triggers และ Actions (Node operations: Triggers and Actions)
 
-When you add a node to a workflow, n8n displays a list of available operations. An operation is something a node does, such as getting or sending data.
+เมื่อคุณเพิ่ม node เข้าไปใน workflow, n8n จะแสดงรายการ operations ที่มีอยู่ operation คือสิ่งที่ node ทำ เช่น การรับหรือส่งข้อมูล
 
-There are two types of operation:
+มี operation สองประเภท:
 
-* Triggers start a workflow in response to specific events or conditions in your services. When you select a Trigger, n8n adds a trigger node to your workflow, with the Trigger operation you chose pre-selected. When you search for a node in n8n, Trigger operations have a bolt icon <span class="inline-image">![Trigger icon](/_images/common-icons/trigger.png){.off-glb}</span>.
-* Actions are operations that represent specific tasks within a workflow, which you can use to manipulate data, perform operations on external systems, and trigger events in other systems as part of your workflows. When you select an Action, n8n adds a node to your workflow, with the Action operation you chose pre-selected.
+*   Triggers เริ่มต้น workflow เพื่อตอบสนองต่อเหตุการณ์หรือเงื่อนไขเฉพาะในบริการของคุณ เมื่อคุณเลือก Trigger, n8n จะเพิ่ม trigger node เข้าไปใน workflow ของคุณ โดยมี Trigger operation ที่คุณเลือกไว้ล่วงหน้า เมื่อคุณค้นหา node ใน n8n, Trigger operations จะมีไอคอนรูปสายฟ้า <span class="inline-image">![Trigger icon](/_images/common-icons/trigger.png){.off-glb}</span>
+*   Actions คือ operations ที่แทนงานเฉพาะภายใน workflow ซึ่งคุณสามารถใช้เพื่อจัดการข้อมูล, ดำเนินการกับระบบภายนอก, และกระตุ้นเหตุการณ์ในระบบอื่น ๆ ซึ่งเป็นส่วนหนึ่งของ workflows ของคุณ เมื่อคุณเลือก Action, n8n จะเพิ่ม node เข้าไปใน workflow ของคุณ โดยมี Action operation ที่คุณเลือกไว้ล่วงหน้า

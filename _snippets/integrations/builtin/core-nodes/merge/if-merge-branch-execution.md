@@ -1,11 +1,11 @@
-/// info | 0.236.0 and below
-n8n removed this execution behavior in version 1.0. This section applies to workflows using the **v0 (legacy)** workflow execution order. By default, this is all workflows built before version 1.0. You can change the execution order in your [workflow settings](/workflows/settings.md).
+/// info | 0.236.0 และต่ำกว่า
+n8n ได้ลบพฤติกรรมการ execution นี้ในเวอร์ชัน 1.0 ส่วนนี้ใช้กับ workflows ที่ใช้ลำดับการ execution แบบ **v0 (legacy)** โดยค่าเริ่มต้น นี่คือ workflows ทั้งหมดที่สร้างก่อนเวอร์ชัน 1.0 คุณสามารถเปลี่ยนลำดับการ execution ได้ใน [workflow settings](/workflows/settings.md)
 ///
-If you add a Merge node to a workflow containing an If node, it can result in both output data streams of the If node executing.
+หากคุณเพิ่ม Merge node ไปยัง workflow ที่มี If node อาจส่งผลให้ data streams ทั้งสองของ If node ทำงาน
 
-One data stream triggers the Merge node, which then goes and executes the other data stream.
+Data stream หนึ่งจะ trigger Merge node ซึ่งจากนั้นจะไป execute data stream อีกอัน
 
-For example, in the screenshot below there's a workflow containing an Edit Fields node, If node, and Merge node. The standard If node behavior is to execute one data stream (in the screenshot, this is the **true** output). However, due to the Merge node, both data streams execute, despite the If node not sending any data down the **false** data stream.
+ตัวอย่างเช่น ในภาพหน้าจอด้านล่าง มี workflow ที่มี Edit Fields node, If node และ Merge node พฤติกรรมมาตรฐานของ If node คือการ execute data stream เดียว (ในภาพหน้าจอคือ output **true**) อย่างไรก็ตาม เนื่องจากมี Merge node ทำให้ data streams ทั้งสองทำงาน แม้ว่า If node จะไม่ได้ส่งข้อมูลใดๆ ไปยัง data stream **false** ก็ตาม
 
 ![Screenshot of a workflow. The workflow has an Edit Fields node, followed by an If node. It ends with a Merge node.](/_images/integrations/builtin/core-nodes/merge/if-merge-node.png)
 

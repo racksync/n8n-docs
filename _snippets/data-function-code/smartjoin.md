@@ -1,6 +1,6 @@
 ```js
-// Input
+// ข้อมูลเข้า
 {{ [{"type":"fruit", "name":"apple"},{"type":"vegetable", "name":"carrot"} ].smartJoin("type","name") }}
-// Output
+// ผลลัพธ์
 [Object: {"fruit":"apple","vegetable":"carrot"}]
 ```

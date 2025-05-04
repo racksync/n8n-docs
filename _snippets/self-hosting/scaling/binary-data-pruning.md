@@ -1,3 +1,3 @@
-/// note | Binary data pruning
-Binary data pruning operates on the active binary data mode. For example, if your instance stored data in S3, and you later switched to filesystem mode, n8n only prunes binary data in the filesystem. This may change in future.
+/// note | การล้างข้อมูล Binary (Binary data pruning)
+การล้างข้อมูล Binary จะทำงานตามโหมดข้อมูล Binary ที่ใช้งานอยู่ในปัจจุบัน ตัวอย่างเช่น หาก Instance ของคุณเคยเก็บข้อมูลใน S3 แล้วคุณเปลี่ยนไปใช้โหมด Filesystem ในภายหลัง n8n จะล้างข้อมูล Binary เฉพาะใน Filesystem เท่านั้น สิ่งนี้อาจมีการเปลี่ยนแปลงในอนาคต
 ///

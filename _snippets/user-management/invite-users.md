@@ -1,8 +1,8 @@
-You can now invite other people to your n8n instance.
+ตอนนี้คุณสามารถเชิญคนอื่น ๆ เข้าสู่ n8n instance ของคุณได้แล้ว
 
-1. Sign into your workspace with your owner account. (If you are in the Admin Panel open your **Workspace** from the Dashboard)
-2. Click the three dots next to your user icon at the bottom left and click **Settings**. n8n opens your **Personal settings** page.
-3. Click **Users** to go to the **Users** page.
-4. Click **Invite**.
-5. Enter the new user's email address.
-6. Click **Invite user**. n8n sends an email with a link for the new user to join.
+1. Sign in เข้าสู่ workspace ของคุณด้วยบัญชี owner (หากคุณอยู่ใน Admin Panel ให้เปิด **Workspace** ของคุณจาก Dashboard)
+2. คลิกที่จุดสามจุดถัดจากไอคอนผู้ใช้ของคุณที่ด้านล่างซ้าย แล้วคลิก **Settings** n8n จะเปิดหน้า **Personal settings** ของคุณ
+3. คลิก **Users** เพื่อไปที่หน้า **Users**
+4. คลิก **Invite**
+5. ป้อนที่อยู่อีเมลของผู้ใช้ใหม่
+6. คลิก **Invite user** n8n จะส่งอีเมลพร้อมลิงก์เพื่อให้ผู้ใช้ใหม่เข้าร่วม

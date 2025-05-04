@@ -1,3 +1,3 @@
-/// note | Recommendation: don't push and pull to the same n8n instance
-You can push work from an instance to a branch, and pull to the same instance. n8n doesn't recommend this. To reduce the risk of merge conflicts and overwriting work, try to create a process where work goes in one direction: either to Git, or from Git, but not both.
+/// note | คำแนะนำ: อย่า push และ pull ไปยัง n8n instance เดียวกัน
+คุณสามารถ push งานจาก instance หนึ่งไปยัง branch และ pull มายัง instance เดียวกันได้ แต่ n8n ไม่แนะนำวิธีนี้ เพื่อลดความเสี่ยงของ merge conflicts และการเขียนทับงาน ควรพยายามสร้างกระบวนการที่งานไหลไปในทิศทางเดียว: ไม่ว่าจะไปยัง Git หรือจาก Git แต่ไม่ใช่ทั้งสองทาง
 ///

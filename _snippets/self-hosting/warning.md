@@ -1,10 +1,10 @@
-/// note | Self-hosting knowledge prerequisites
-Self-hosting n8n requires technical knowledge, including:
+/// note | ความรู้พื้นฐานที่จำเป็นสำหรับการ Self-hosting
+การ Self-hosting n8n จำเป็นต้องมีความรู้ทางเทคนิค รวมถึง:
 
-* Setting up and configuring servers and containers
-* Managing application resources and scaling
-* Securing servers and applications
-* Configuring n8n
+* การตั้งค่าและกำหนดค่า Server และ Container
+* การจัดการทรัพยากรของแอปพลิเคชันและการปรับขนาด (Scaling)
+* การรักษาความปลอดภัยของ Server และแอปพลิเคชัน
+* การกำหนดค่า n8n
 
-n8n recommends self-hosting for expert users. Mistakes can lead to data loss, security issues, and downtime. If you aren't experienced at managing servers, n8n recommends [n8n Cloud](https://n8n.io/cloud/){:target=_blank .external-link}.
+n8n แนะนำให้ผู้ใช้ที่มีความเชี่ยวชาญทำการ Self-hosting การตั้งค่าผิดพลาดอาจนำไปสู่การสูญเสียข้อมูล ปัญหาด้านความปลอดภัย และ Downtime หากคุณไม่มีประสบการณ์ในการจัดการ Server ทาง n8n แนะนำให้ใช้ [n8n Cloud](https://n8n.io/cloud/){:target=_blank .external-link} แทน
 ///

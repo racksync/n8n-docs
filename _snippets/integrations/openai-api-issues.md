@@ -1,10 +1,10 @@
-## The service is receiving too many requests from you
+## บริการได้รับคำขอจากคุณมากเกินไป
 
-This error displays when you've exceeded [OpenAI's rate limits](https://platform.openai.com/docs/guides/rate-limits){:target=_blank .external-link}.
+ข้อผิดพลาดนี้จะแสดงขึ้นเมื่อคุณใช้งานเกิน [rate limits ของ OpenAI](https://platform.openai.com/docs/guides/rate-limits){:target=_blank .external-link}
 
-There are two ways to work around this issue:
+มีสองวิธีในการแก้ไขปัญหานี้:
 
-1. Split your data up into smaller chunks using the [Loop Over Items](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches.md) node and add a [Wait](/integrations/builtin/core-nodes/n8n-nodes-base.wait.md) node at the end for a time amount that will help. Copy the code below and paste it into a workflow to use as a template.
+1. แบ่งข้อมูลของคุณออกเป็นส่วนเล็กๆ โดยใช้ [Loop Over Items](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches.md) node และเพิ่ม [Wait](/integrations/builtin/core-nodes/n8n-nodes-base.wait.md) node ที่ส่วนท้ายเพื่อกำหนดระยะเวลาที่จะช่วยได้ คัดลอกโค้ดด้านล่างและวางลงใน workflow เพื่อใช้เป็น template
     ```
     {
         "nodes": [
@@ -113,38 +113,38 @@ There are two ways to work around this issue:
         "pinData": {}
     }
     ```
-2. Use the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) node with the built-in batch-limit option against the [OpenAI API](https://platform.openai.com/docs/quickstart){:target=_blank .external-link} instead of using the OpenAI node.
+2. ใช้ [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) node พร้อมกับตัวเลือก batch-limit ในตัวเพื่อเรียกใช้ [OpenAI API](https://platform.openai.com/docs/quickstart){:target=_blank .external-link} แทนการใช้ OpenAI node
 
-## Insufficient quota
+## Quota ไม่เพียงพอ
 
-/// note | Quota issues
-There are a number of OpenAI issues surrounding quotas, including failures when quotas have been recently topped up. To avoid these issues, ensure that there is credit in the account and issue a new API key from the [API keys screen](https://platform.openai.com/settings/organization/api-keys).
+/// note | ปัญหาเกี่ยวกับ Quota
+มีปัญหาหลายอย่างเกี่ยวกับ quota ของ OpenAI รวมถึงความล้มเหลวเมื่อเพิ่งเติม quota ไป เพื่อหลีกเลี่ยงปัญหาเหล่านี้ ตรวจสอบให้แน่ใจว่ามีเครดิตในบัญชีและออก API key ใหม่จากหน้าจอ [API keys](https://platform.openai.com/settings/organization/api-keys)
 ///
 
-This error displays when your OpenAI account doesn't have enough credits or capacity to fulfill your request. This may mean that your OpenAI trial period has ended, that your account needs more credit, or that you've gone over a usage limit.
+ข้อผิดพลาดนี้จะแสดงขึ้นเมื่อบัญชี OpenAI ของคุณมีเครดิตหรือความจุไม่เพียงพอที่จะดำเนินการตามคำขอของคุณ ซึ่งอาจหมายความว่าช่วงทดลองใช้ OpenAI ของคุณสิ้นสุดลงแล้ว บัญชีของคุณต้องการเครดิตเพิ่ม หรือคุณใช้เกินขีดจำกัดการใช้งาน
 
-To troubleshoot this error, on your [OpenAI settings](https://platform.openai.com/settings/organization/billing/overview){:target=_blank .external-link} page:
+ในการแก้ไขข้อผิดพลาดนี้ บนหน้า [OpenAI settings](https://platform.openai.com/settings/organization/billing/overview){:target=_blank .external-link} ของคุณ:
 
-* Select the correct organization for your API key in the first selector in the upper-left corner.
-* Select the correct project for your API key in the second selector in the upper-left corner.
-* Check the organization-level [billing overview](https://platform.openai.com/settings/organization/billing/overview){:target=_blank .external-link} page to ensure that the organization has enough credit. Double-check that you select the correct organization for this page.
-* Check the organization-level [usage limits](https://platform.openai.com/settings/organization/limits){:target=_blank .external-link} page. Double-check that you select the correct organization for this page and scroll to the **Usage limits** section to verify that you haven't exceeded your organization's usage limits.
-* Check your OpenAI project's usage limits. Double-check that you select the correct project in the second selector in the upper-left corner. Select **Project** > **Limits** to view or change the project limits.
-* Check that the [OpenAI API](https://status.openai.com/){:target=_blank .external-link} is operating as expected.
+* เลือก organization ที่ถูกต้องสำหรับ API key ของคุณในตัวเลือกแรกที่มุมบนซ้าย
+* เลือก project ที่ถูกต้องสำหรับ API key ของคุณในตัวเลือกที่สองที่มุมบนซ้าย
+* ตรวจสอบหน้า [billing overview](https://platform.openai.com/settings/organization/billing/overview){:target=_blank .external-link} ระดับ organization เพื่อให้แน่ใจว่า organization มีเครดิตเพียงพอ ตรวจสอบอีกครั้งว่าคุณเลือก organization ที่ถูกต้องสำหรับหน้านี้
+* ตรวจสอบหน้า [usage limits](https://platform.openai.com/settings/organization/limits){:target=_blank .external-link} ระดับ organization ตรวจสอบอีกครั้งว่าคุณเลือก organization ที่ถูกต้องสำหรับหน้านี้ และเลื่อนไปที่ส่วน **Usage limits** เพื่อตรวจสอบว่าคุณไม่ได้ใช้เกินขีดจำกัดการใช้งานของ organization ของคุณ
+* ตรวจสอบ usage limits ของ OpenAI project ของคุณ ตรวจสอบอีกครั้งว่าคุณเลือก project ที่ถูกต้องในตัวเลือกที่สองที่มุมบนซ้าย เลือก **Project** > **Limits** เพื่อดูหรือเปลี่ยนแปลง project limits
+* ตรวจสอบว่า [OpenAI API](https://status.openai.com/){:target=_blank .external-link} ทำงานตามที่คาดไว้
 
-/// note | Balance waiting period
-After topping up your balance, there may be a delay before your OpenAI account reflects the new balance.
+/// note | ระยะเวลารอ Balance
+หลังจากเติม balance ของคุณ อาจมีความล่าช้าก่อนที่บัญชี OpenAI ของคุณจะแสดง balance ใหม่
 ///
 
-In n8n:
+ใน n8n:
 
-* check that the [OpenAI credentials](/integrations/builtin/credentials/openai.md) use a valid [OpenAI API key](https://platform.openai.com/api-keys){:target=_blank .external-link} for the account you've added money to
-* ensure that you connect the [OpenAI node](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/index.md) to the correct [OpenAI credentials](/integrations/builtin/credentials/openai.md)
+* ตรวจสอบว่า [OpenAI credentials](/integrations/builtin/credentials/openai.md) ใช้ [OpenAI API key](https://platform.openai.com/api-keys){:target=_blank .external-link} ที่ถูกต้องสำหรับบัญชีที่คุณได้เติมเงินเข้าไป
+* ตรวจสอบให้แน่ใจว่าคุณเชื่อมต่อ [OpenAI node](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/index.md) กับ [OpenAI credentials](/integrations/builtin/credentials/openai.md) ที่ถูกต้อง
 
-If you find yourself frequently running out of account credits, consider turning on auto recharge in your [OpenAI billing settings](https://platform.openai.com/settings/organization/billing/overview){:target=_blank .external-link} to automatically reload your account with credits when your balance reaches $0.
+หากคุณพบว่าเครดิตในบัญชีหมดบ่อยครั้ง ให้พิจารณาเปิดใช้งาน auto recharge ใน [OpenAI billing settings](https://platform.openai.com/settings/organization/billing/overview){:target=_blank .external-link} ของคุณ เพื่อเติมเครดิตเข้าบัญชีของคุณโดยอัตโนมัติเมื่อ balance ของคุณเหลือ $0
 
-## Bad request - please check your parameters
+## Bad request - โปรดตรวจสอบ parameters ของคุณ
 
-This error displays when the request results in an error but n8n wasn't able to interpret the error message from OpenAI.
+ข้อผิดพลาดนี้จะแสดงขึ้นเมื่อคำขอส่งผลให้เกิดข้อผิดพลาด แต่ n8n ไม่สามารถตีความข้อความแสดงข้อผิดพลาดจาก OpenAI ได้
 
-To begin troubleshooting, try running the same operation using the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) node, which should provide a more detailed error message.
+ในการเริ่มต้นแก้ไขปัญหา ให้ลองดำเนินการแบบเดียวกันโดยใช้ [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) node ซึ่งควรจะให้ข้อความแสดงข้อผิดพลาดที่ละเอียดมากขึ้น

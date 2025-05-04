@@ -1,1 +1,1 @@
-You can use these credentials to authenticate when using the [HTTP Request node](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) to make a [Custom API call](/integrations/custom-operations.md).
+คุณสามารถใช้ credentials เหล่านี้เพื่อยืนยันตัวตนเมื่อใช้ [HTTP Request node](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) เพื่อทำการ [Custom API call](/integrations/custom-operations.md)

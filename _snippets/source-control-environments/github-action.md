@@ -1,4 +1,4 @@
-A GitHub Action example:
+ตัวอย่าง GitHub Action:
 
 ```yaml
 name: CI

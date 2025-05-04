@@ -3,6 +3,6 @@
 * Avoid manual executions when processing larger amounts of data.
 * Split the workflow up into sub-workflows and ensure each sub-workflow returns a limited amount of data to its parent workflow.
 
-Splitting the workflow might seem counter-intuitive at first as it usually requires adding at least two more nodes: the [Loop Over Items](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches.md) node to split up the items into smaller batches and the [Execute Workflow](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow.md) node to start the sub-workflow.
+การแบ่ง Workflow อาจดูขัดกับความรู้สึกในตอนแรก เพราะโดยปกติแล้วจะต้องเพิ่ม Node อย่างน้อยสองตัว: Node [Loop Over Items](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches.md) เพื่อแบ่งรายการออกเป็นชุดย่อยๆ และ Node [Execute Workflow](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow.md) เพื่อเริ่ม Sub-workflow
 
-However, as long as your sub-workflow does the heavy lifting for each batch and then returns only a small result set to the main workflow, this reduces memory consumption. This is because the sub-workflow only holds the data for the current batch in memory, after which the memory is free again.
+อย่างไรก็ตาม ตราบใดที่ Sub-workflow ของคุณทำงานหนักในแต่ละชุดข้อมูล (Batch) แล้วส่งคืนผลลัพธ์ชุดเล็กๆ กลับไปยัง Workflow หลัก วิธีนี้จะช่วยลดการใช้หน่วยความจำได้ เนื่องจาก Sub-workflow จะเก็บข้อมูลเฉพาะของ Batch ปัจจุบันไว้ในหน่วยความจำเท่านั้น หลังจากนั้นหน่วยความจำก็จะถูกคืนค่า

@@ -1,7 +1,7 @@
-The advantages of this pattern are:
+ข้อดีของรูปแบบนี้คือ:
 
-* An added safety layer to prevent changes getting into your production environment by mistake. You have to do a pull request in GitHub to copy work between environments.
-* It supports more than two instances.
+* มีชั้นความปลอดภัยเพิ่มเติมเพื่อป้องกันการเปลี่ยนแปลงเข้าสู่ production environment ของคุณโดยไม่ได้ตั้งใจ คุณต้องทำ pull request ใน GitHub เพื่อคัดลอกงานระหว่าง environments
+* รองรับมากกว่าสอง instances
 
-The disadvantage is more manual steps to copy work between environments.
+ข้อเสียคือ มีขั้นตอนที่ต้องทำด้วยตนเองมากขึ้นในการคัดลอกงานระหว่าง environments
 

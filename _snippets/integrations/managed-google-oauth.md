@@ -1,5 +1,5 @@
-/// note | Note for n8n Cloud users
-For the following nodes, you can authenticate by selecting **Sign in with Google** in the OAuth section: 
+/// note | หมายเหตุสำหรับผู้ใช้ n8n Cloud
+สำหรับ nodes ต่อไปนี้ คุณสามารถยืนยันตัวตนได้โดยเลือก **Sign in with Google** ในส่วน OAuth:
 
 * [Google Calendar](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/index.md)
 * [Google Contacts](/integrations/builtin/app-nodes/n8n-nodes-base.googlecontacts.md)

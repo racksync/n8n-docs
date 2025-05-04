@@ -1,7 +1,7 @@
-### Need admin approval
+### ต้องการการอนุมัติจาก Admin (Need admin approval)
 
-When attempting to add credentials for a Microsoft360 or Microsoft Entra account, users may see a message when following the procedure that this action requires admin approval.
+เมื่อพยายามเพิ่ม credentials สำหรับบัญชี Microsoft360 หรือ Microsoft Entra ผู้ใช้อาจเห็นข้อความเมื่อทำตามขั้นตอนว่าการดำเนินการนี้ต้องการการอนุมัติจาก admin
 
-This message will appear when the account attempting to grant permissions for the credential is managed by a Microsoft Entra. In order to issue the credential, the administrator account needs to grant permission to the user (or "tenant") for that application.
+ข้อความนี้จะปรากฏขึ้นเมื่อบัญชีที่พยายามให้สิทธิ์สำหรับ credential ถูกจัดการโดย Microsoft Entra เพื่อที่จะออก credential บัญชี administrator จำเป็นต้องให้สิทธิ์แก่ผู้ใช้ (หรือ "tenant") สำหรับแอปพลิเคชันนั้น
 
-The procedure for this is covered in the [Microsoft Entra documentation](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/grant-admin-consent).
+ขั้นตอนสำหรับเรื่องนี้มีอยู่ใน [Microsoft Entra documentation](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/grant-admin-consent)

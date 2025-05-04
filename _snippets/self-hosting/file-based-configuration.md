@@ -1,3 +1,3 @@
-/// note | File-based configuration
-You can add `_FILE` to individual variables to provide their configuration in a separate file. Refer to [Keeping sensitive data in separate files](/hosting/configuration/configuration-methods.md#keeping-sensitive-data-in-separate-files) for more details.
+/// note | การกำหนดค่าผ่านไฟล์
+คุณสามารถเพิ่ม `_FILE` ต่อท้ายตัวแปรแต่ละตัว เพื่อระบุการกำหนดค่าในไฟล์แยกต่างหาก อ้างอิงรายละเอียดเพิ่มเติมได้ที่ [Keeping sensitive data in separate files](/hosting/configuration/configuration-methods.md#keeping-sensitive-data-in-separate-files)
 ///

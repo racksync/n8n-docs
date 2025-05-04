@@ -1,1 +1,1 @@
-View n8n's [Advanced AI](/advanced-ai/index.md) documentation.
+ดูเอกสาร [Advanced AI](/advanced-ai/index.md) ของ n8n

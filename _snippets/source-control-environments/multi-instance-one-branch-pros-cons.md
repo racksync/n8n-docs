@@ -1,6 +1,6 @@
-The advantage of this pattern is that work is instantly available to other environments when you push from one instance.
+ข้อดีของรูปแบบนี้คือ งานจะพร้อมใช้งานสำหรับ environment อื่น ๆ ทันทีเมื่อคุณ push จาก instance หนึ่ง
 
-The disadvantages are:
+ข้อเสียคือ:
 
-* If you push by mistake, there is a risk the work will make it into your production instance. If you [use a GitHub Action to automate pulls](/source-control-environments/create-environments.md#optional-use-a-github-action-to-automate-pulls) to production, you must either use the multi-instance, multi-branch pattern, or be careful to never push work that you don't want in production.
-* Pushing and pulling to the same instance can cause data loss as changes are overridden when performing these actions. You should set up processes to ensure content flows in one direction.
+* หากคุณ push โดยไม่ได้ตั้งใจ มีความเสี่ยงที่งานนั้นจะเข้าไปอยู่ใน production instance ของคุณ หากคุณ [ใช้ GitHub Action เพื่อทำให้การ pull เป็นอัตโนมัติ](/source-control-environments/create-environments.md#optional-use-a-github-action-to-automate-pulls) ไปยัง production คุณต้องใช้รูปแบบ multi-instance, multi-branch หรือระมัดระวังไม่ push งานที่คุณไม่ต้องการให้เข้าสู่ production
+* การ push และ pull ไปยัง instance เดียวกันอาจทำให้ข้อมูลสูญหายได้ เนื่องจากการเปลี่ยนแปลงจะถูกเขียนทับเมื่อดำเนินการเหล่านี้ คุณควรตั้งค่ากระบวนการเพื่อให้แน่ใจว่าเนื้อหาไหลไปในทิศทางเดียว

@@ -1,12 +1,12 @@
-To enable 2-step Verification:
+วิธีเปิดใช้งานการยืนยันแบบ 2 ขั้นตอน (2-step Verification):
 
-1. Log in to your [Google Account](https://myaccount.google.com/){:target=_blank .external-link}.
-2. Select **Security** from the left navigation.
-3. Under **How you sign in to Google**, select **2-Step Verification**.
-    - If 2-Step Verification is already enabled, skip to the next section.
-4. Select **Get started**.
-5. Follow the on-screen steps to configure 2-Step Verification.
+1. ลงชื่อเข้าใช้ [Google Account](https://myaccount.google.com/){:target=_blank .external-link} ของคุณ
+2. เลือก **Security** จากแถบนำทางด้านซ้าย
+3. ใต้หัวข้อ **How you sign in to Google** เลือก **2-Step Verification**
+    - หากเปิดใช้งาน 2-Step Verification อยู่แล้ว ให้ข้ามไปที่ส่วนถัดไป
+4. เลือก **Get started**
+5. ทำตามขั้นตอนบนหน้าจอเพื่อกำหนดค่า 2-Step Verification
 
-Refer to [Turn on 2-step Verification](https://support.google.com/accounts/answer/185839){:target=_blank .external-link} for more information.
+โปรดดูข้อมูลเพิ่มเติมที่ [Turn on 2-step Verification](https://support.google.com/accounts/answer/185839){:target=_blank .external-link}
 
-If you can't turn on 2-step Verification, check with your email administrator.
+หากคุณไม่สามารถเปิดใช้งาน 2-step Verification ได้ โปรดตรวจสอบกับผู้ดูแลระบบอีเมลของคุณ

@@ -1,7 +1,7 @@
-/// note | API differences
-Different APIs implement pagination in different ways. Check the API documentation for the API you're using for details. You need to find out things like:
+/// note | ความแตกต่างของ API
+API ต่างๆ ใช้ pagination ในรูปแบบที่แตกต่างกัน ตรวจสอบเอกสาร API สำหรับ API ที่คุณใช้อยู่เพื่อดูรายละเอียด คุณต้องหาข้อมูลเช่น:
 
-* Does the API provide the URL for the next page?
-* Are there API-specific limits on page size or page number?
-* The structure of the data that the API returns.
+* API ให้ URL สำหรับหน้าถัดไปหรือไม่?
+* มีข้อจำกัดเฉพาะ API เกี่ยวกับขนาดหน้า (page size) หรือหมายเลขหน้า (page number) หรือไม่?
+* โครงสร้างของข้อมูลที่ API ส่งคืน
 ///

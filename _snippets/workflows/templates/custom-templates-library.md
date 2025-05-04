@@ -1,43 +1,43 @@
-In your environment variables, set `N8N_TEMPLATES_HOST` to the base URL of your API.
+ใน environment variables ของคุณ ตั้งค่า `N8N_TEMPLATES_HOST` เป็น base URL ของ API ของคุณ
 
 ### Endpoints
 
-Your API must provide the same endpoints and data structure as n8n's.
+API ของคุณต้องมี endpoints และโครงสร้างข้อมูลเหมือนกับของ n8n
 
-The endpoints are:
+Endpoints คือ:
 
 | Method | Path |
 | ------ | ---- |
 | GET | /templates/workflows/`<id>` |
 | GET | /templates/search |
 | GET | /templates/collections/`<id>` |
-| GET | /templates/collections | 
+| GET | /templates/collections |
 | GET | /templates/categories |
 | GET | /health |
 
 ### Query parameters
 
-The `/templates/search` endpoint accepts the following query parameters:
+Endpoint `/templates/search` ยอมรับ query parameters ต่อไปนี้:
 
-| Parameter  | Type                                         | Description                                      |
+| Parameter  | Type                                         | คำอธิบาย                                      |
 |------------|----------------------------------------------|--------------------------------------------------|
-| `page`     | integer                                      | The page of results to return                    |
-| `rows`     | integer                                      | The maximum number of results to return per page |
-| `category` | comma-separated list of strings (categories) | The categories to search within                  |
-| `search`   | string                                       | The search query                                 |
+| `page`     | integer                                      | หน้าของผลลัพธ์ที่จะส่งคืน                    |
+| `rows`     | integer                                      | จำนวนผลลัพธ์สูงสุดที่จะส่งคืนต่อหน้า |
+| `category` | comma-separated list of strings (categories) | หมวดหมู่ที่จะค้นหาภายใน                  |
+| `search`   | string                                       | คำค้นหา                                 |
 
-The `/templates/collections` endpoint accepts the following query parameters:
+Endpoint `/templates/collections` ยอมรับ query parameters ต่อไปนี้:
 
-| Parameter  | Type                                         | Description                     |
+| Parameter  | Type                                         | คำอธิบาย                     |
 |------------|----------------------------------------------|---------------------------------|
-| `category` | comma-separated list of strings (categories) | The categories to search within |
-| `search`   | string                                       | The search query                |
+| `category` | comma-separated list of strings (categories) | หมวดหมู่ที่จะค้นหาภายใน |
+| `search`   | string                                       | คำค้นหา                |
 
 ### Data schema
 
-You can explore the data structure of the items in the response object returned by endpoints here:
+คุณสามารถสำรวจโครงสร้างข้อมูลของรายการใน response object ที่ส่งคืนโดย endpoints ได้ที่นี่:
 
-??? note "Show `workflow` item data schema"
+??? note "แสดง `workflow` item data schema"
 	```json title="Workflow item data schema"
 	{
 	  "$schema": "http://json-schema.org/draft-07/schema#",
@@ -248,7 +248,7 @@ You can explore the data structure of the items in the response object returned 
 	}
 	```
 
-??? note "Show `category` item data schema"
+??? note "แสดง `category` item data schema"
 	```json title="Category item data schema"
 	{
 	  "$schema": "http://json-schema.org/draft-07/schema#",
@@ -268,7 +268,7 @@ You can explore the data structure of the items in the response object returned 
 	}
 	```
 
-??? note "Show `collection` item data schema"
+??? note "แสดง `collection` item data schema"
 	```json title="Collection item data schema"
 	{
 	  "$schema": "http://json-schema.org/draft-07/schema#",
@@ -318,12 +318,12 @@ You can explore the data structure of the items in the response object returned 
 	}
 	```
 
-You can also interactively explore n8n's API endpoints:
+คุณยังสามารถสำรวจ endpoints ของ API ของ n8n แบบโต้ตอบได้:
 
-[https://api.n8n.io/templates/categories](https://api.n8n.io/templates/categories)  
-[https://api.n8n.io/templates/collections](https://api.n8n.io/templates/collections)  
-[https://api.n8n.io/templates/search](https://api.n8n.io/templates/search)  
-[https://api.n8n.io/health](https://api.n8n.io/health)  
+[https://api.n8n.io/templates/categories](https://api.n8n.io/templates/categories)
+[https://api.n8n.io/templates/collections](https://api.n8n.io/templates/collections)
+[https://api.n8n.io/templates/search](https://api.n8n.io/templates/search)
+[https://api.n8n.io/health](https://api.n8n.io/health)
 
 
-You can [contact us](mailto:help@n8n.io) for more support.
+คุณสามารถ [ติดต่อเรา](mailto:help@n8n.io) เพื่อขอรับการสนับสนุนเพิ่มเติม

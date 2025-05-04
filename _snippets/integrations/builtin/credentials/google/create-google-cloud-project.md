@@ -1,10 +1,10 @@
-1. Log in to your [Google Cloud Console](https://console.cloud.google.com){:target=_blank .external-link} using your Google credentials.
-2. In the top menu, select the project dropdown in the top navigation and select **New project** or go directly to the [New Project](https://console.cloud.google.com/projectcreate){:target=_blank .external-link} page.
-3. Enter a **Project name** and select the **Location** for your project.
-4. Select **Create**.
-5. Check the top navigation and make sure the project dropdown has your project selected. If not, select the project you just created.
+1. ลงชื่อเข้าใช้ [Google Cloud Console](https://console.cloud.google.com){:target=_blank .external-link} โดยใช้ Google credentials ของคุณ
+2. ในเมนูด้านบน เลือก project dropdown ในแถบนำทางด้านบน แล้วเลือก **New project** หรือไปที่หน้า [New Project](https://console.cloud.google.com/projectcreate){:target=_blank .external-link} โดยตรง
+3. ป้อน **Project name** และเลือก **Location** สำหรับ project ของคุณ
+4. เลือก **Create**
+5. ตรวจสอบแถบนำทางด้านบนและตรวจสอบให้แน่ใจว่า project dropdown ได้เลือก project ของคุณแล้ว หากยังไม่ได้เลือก ให้เลือก project ที่คุณเพิ่งสร้างขึ้น
 
 	<figure markdown="span">
 	![The project dropdown in the Google Cloud top navigation](/_images/integrations/builtin/credentials/google/google-cloud-project-dropdown.png)
-	<figcaption>Check the project dropdown in the Google Cloud top navigation</figcaption>
+	<figcaption>ตรวจสอบ project dropdown ในแถบนำทางด้านบนของ Google Cloud</figcaption>
 	</figure>

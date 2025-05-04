@@ -1,47 +1,47 @@
-You can test your node as you build it by running it in a local n8n instance.
+คุณสามารถทดสอบ node ของคุณในขณะที่สร้างได้โดยการรันใน n8n instance บนเครื่องของคุณ
 
-1. Install n8n using npm:
+1. ติดตั้ง n8n โดยใช้ npm:
   ```shell
   npm install n8n -g
   ```
-2. When you are ready to test your node, publish it locally:
+2. เมื่อคุณพร้อมที่จะทดสอบ node ของคุณ ให้ publish มันในเครื่อง:
   ```shell
-  # In your node directory
+  # ในไดเรกทอรี node ของคุณ
   npm run build
   npm link
   ```
-3. Install the node into your local n8n instance:
+3. ติดตั้ง node ลงใน n8n instance บนเครื่องของคุณ:
   ```shell
-  # In the nodes directory within your n8n installation
-  # node-package-name is the name from the package.json
+  # ในไดเรกทอรี nodes ภายในการติดตั้ง n8n ของคุณ
+  # node-package-name คือชื่อจาก package.json
   npm link <node-package-name>
   ```
 
-    /// note | Check your directory
-	Make sure you run `npm link <node-name>` in the nodes directory within your n8n installation. This can be: 
-	
+    /// note | ตรวจสอบไดเรกทอรีของคุณ
+	ตรวจสอบให้แน่ใจว่าคุณรัน `npm link <node-name>` ในไดเรกทอรี nodes ภายในการติดตั้ง n8n ของคุณ ซึ่งอาจเป็น:
+
 	* `~/.n8n/custom/`
-	* `~/.n8n/<your-custom-name>`: if your n8n installation set a different name using `N8N_CUSTOM_EXTENSIONS`.
+	* `~/.n8n/<your-custom-name>`: หากการติดตั้ง n8n ของคุณตั้งชื่ออื่นโดยใช้ `N8N_CUSTOM_EXTENSIONS`
 	///
 
-4. Start n8n:
+4. เริ่ม n8n:
   ```
   n8n start
   ```
-5. Open n8n in your browser. You should see your nodes when you search for them in the nodes panel.
+5. เปิด n8n ในเบราว์เซอร์ของคุณ คุณควรเห็น nodes ของคุณเมื่อคุณค้นหาในแผง nodes
 
-    /// note | Node names
-    Make sure you search using the node name, not the package name. For example, if your npm package name is `n8n-nodes-weather-nodes`, and the package contains nodes named `rain`, `sun`, `snow`, you should search for `rain`, not `weather-nodes`. 
+    /// note | ชื่อ Node
+    ตรวจสอบให้แน่ใจว่าคุณค้นหาโดยใช้ชื่อ node ไม่ใช่ชื่อ package ตัวอย่างเช่น หากชื่อ npm package ของคุณคือ `n8n-nodes-weather-nodes` และ package นั้นมี nodes ชื่อ `rain`, `sun`, `snow` คุณควรค้นหา `rain` ไม่ใช่ `weather-nodes`
     ///
 
-### Troubleshooting
+### การแก้ไขปัญหา
 
-- There's no `custom` directory in `~/.n8n` local installation.
+- ไม่มีไดเรกทอรี `custom` ในการติดตั้ง `~/.n8n` บนเครื่อง
 
-You have to create `custom` directory manually and run `npm init`
+คุณต้องสร้างไดเรกทอรี `custom` ด้วยตนเองและรัน `npm init`
 ```shell
-# In ~/.n8n directory run
-mkdir custom 
-cd custom 
+# ในไดเรกทอรี ~/.n8n รันคำสั่ง
+mkdir custom
+cd custom
 npm init
 ```

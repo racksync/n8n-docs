@@ -1,3 +1,5 @@
-Select whether to include intermediate steps the agent took in the final output (turned on) or not (turned off).
+### Return Intermediate Steps (ส่งคืนขั้นตอนกลาง)
 
-This could be useful for further refining the agent's behavior based on the steps it took.
+เลือกว่าจะรวมขั้นตอนกลางที่ agent ใช้ในการประมวลผลไว้ใน output สุดท้ายหรือไม่ (เปิด) หรือไม่รวม (ปิด)
+
+สิ่งนี้อาจมีประโยชน์สำหรับการปรับแต่งพฤติกรรมของ agent เพิ่มเติมโดยอิงตามขั้นตอนที่ดำเนินการ

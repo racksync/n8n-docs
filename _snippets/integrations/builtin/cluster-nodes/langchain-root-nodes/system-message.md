@@ -1,3 +1,5 @@
-If you'd like to send a message to the agent before the conversation starts, enter the message you'd like to send.
+### System Message (ข้อความระบบ)
 
-Use this option to guide the agent's decision-making.
+หากคุณต้องการส่งข้อความไปยัง agent ก่อนเริ่มการสนทนา ให้ป้อนข้อความที่คุณต้องการส่ง
+
+ใช้ตัวเลือกนี้เพื่อชี้นำการตัดสินใจของ agent

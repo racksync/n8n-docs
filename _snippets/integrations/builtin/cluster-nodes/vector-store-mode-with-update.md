@@ -1,24 +1,24 @@
-### Operation Mode
+### Operation Mode (โหมดการทำงาน)
 
-This Vector Store node has five modes: **Get Many**, **Insert Documents**, **Retrieve Documents (As Vector Store for Chain/Tool)**, **Retrieve Documents (As Tool for AI Agent)**, and **Update Documents**. The mode you select determines the operations you can perform with the node and what inputs and outputs are available.
+Vector Store node นี้มีห้าโหมด: **Get Many**, **Insert Documents**, **Retrieve Documents (As Vector Store for Chain/Tool)**, **Retrieve Documents (As Tool for AI Agent)**, และ **Update Documents** โหมดที่คุณเลือกจะกำหนดการดำเนินการที่คุณสามารถทำได้ด้วย node และ input/output ที่มีให้ใช้งาน
 
 <!-- vale off -->
-#### Get Many
+#### Get Many (ดึงข้อมูลหลายรายการ)
 
-In this mode, you can retrieve multiple documents from your vector database by providing a prompt. The prompt will be embedded and used for similarity search. The node will return the documents that are most similar to the prompt with their similarity score. This is useful if you want to retrieve a list of similar documents and pass them to an agent as additional context. 
+ในโหมดนี้ คุณสามารถดึงเอกสารหลายรายการจาก vector database ของคุณโดยการระบุ prompt ตัว prompt จะถูกแปลงเป็น embedding และใช้สำหรับการค้นหาความคล้ายคลึง (similarity search) node จะส่งคืนเอกสารที่คล้ายกับ prompt มากที่สุดพร้อมกับคะแนนความคล้ายคลึง (similarity score) ซึ่งมีประโยชน์หากคุณต้องการดึงรายการเอกสารที่คล้ายกันและส่งต่อไปยัง agent เพื่อใช้เป็น context เพิ่มเติม
 <!-- vale on -->
-#### Insert Documents
+#### Insert Documents (แทรกเอกสาร)
 
-Use Insert Documents mode to insert new documents into your vector database.
+ใช้โหมด Insert Documents เพื่อแทรกเอกสารใหม่เข้าไปใน vector database ของคุณ
 
-#### Retrieve Documents (As Vector Store for Chain/Tool)
+#### Retrieve Documents (As Vector Store for Chain/Tool) (ดึงเอกสาร - เป็น Vector Store สำหรับ Chain/Tool)
 
-Use Retrieve Documents (As Vector Store for Chain/Tool) mode with a vector-store retriever to retrieve documents from a vector database and provide them to the retriever connected to a chain. In this mode you must connect the node to a retriever node or root node.
+ใช้โหมด Retrieve Documents (As Vector Store for Chain/Tool) กับ vector-store retriever เพื่อดึงเอกสารจาก vector database และส่งต่อไปยัง retriever ที่เชื่อมต่อกับ chain ในโหมดนี้ คุณต้องเชื่อมต่อ node เข้ากับ retriever node หรือ root node
 
-#### Retrieve Documents (As Tool for AI Agent)
+#### Retrieve Documents (As Tool for AI Agent) (ดึงเอกสาร - เป็น Tool สำหรับ AI Agent)
 
-Use Retrieve Documents (As Tool for AI Agent) mode to use the vector store as a tool resource when answering queries. When formulating responses, the agent uses the vector store when the vector store name and description match the question details.
+ใช้โหมด Retrieve Documents (As Tool for AI Agent) เพื่อใช้ vector store เป็น tool resource ในการตอบคำถาม เมื่อสร้างคำตอบ agent จะใช้ vector store เมื่อชื่อและคำอธิบายของ vector store ตรงกับรายละเอียดของคำถาม
 
-#### Update Documents
+#### Update Documents (อัปเดตเอกสาร)
 
-Use Update Documents mode to update documents in a vector database by ID. Fill in the **ID** with the ID of the embedding entry to update.
+ใช้โหมด Update Documents เพื่ออัปเดตเอกสารใน vector database โดยใช้ ID กรอก **ID** ด้วย ID ของ embedding entry ที่ต้องการอัปเดต

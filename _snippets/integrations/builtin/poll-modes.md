@@ -1,57 +1,57 @@
-### Every Hour mode
+### โหมด Every Hour (Every Hour mode)
 
-Enter the **Minute** of the hour to trigger the poll, from `0` to `59`.
+ป้อน **Minute** ของชั่วโมงเพื่อเริ่มการ poll ตั้งแต่ `0` ถึง `59`
 
-### Every Day mode
+### โหมด Every Day (Every Day mode)
 
-* Enter the **Hour** of the day to trigger the poll in 24-hour format, from `0` to `23`.
-* Enter the **Minute** of the hour to trigger the poll, from `0` to `59`.
+*   ป้อน **Hour** ของวันเพื่อเริ่มการ poll ในรูปแบบ 24 ชั่วโมง ตั้งแต่ `0` ถึง `23`
+*   ป้อน **Minute** ของชั่วโมงเพื่อเริ่มการ poll ตั้งแต่ `0` ถึง `59`
 
-### Every Week mode
+### โหมด Every Week (Every Week mode)
 
-* Enter the **Hour** of the day to trigger the poll in 24-hour format, from `0` to `23`.
-* Enter the **Minute** of the hour to trigger the poll, from `0` to `59`.
-* Select the **Weekday** to trigger the poll.
+*   ป้อน **Hour** ของวันเพื่อเริ่มการ poll ในรูปแบบ 24 ชั่วโมง ตั้งแต่ `0` ถึง `23`
+*   ป้อน **Minute** ของชั่วโมงเพื่อเริ่มการ poll ตั้งแต่ `0` ถึง `59`
+*   เลือก **Weekday** เพื่อเริ่มการ poll
 
-### Every Month mode
+### โหมด Every Month (Every Month mode)
 
-* Enter the **Hour** of the day to trigger the poll in 24-hour format, from `0` to `23`.
-* Enter the **Minute** of the hour to trigger the poll, from `0` to `59`.
-* Enter the **Day of the Month** to trigger the poll, from `0` to `31`.
+*   ป้อน **Hour** ของวันเพื่อเริ่มการ poll ในรูปแบบ 24 ชั่วโมง ตั้งแต่ `0` ถึง `23`
+*   ป้อน **Minute** ของชั่วโมงเพื่อเริ่มการ poll ตั้งแต่ `0` ถึง `59`
+*   ป้อน **Day of the Month** เพื่อเริ่มการ poll ตั้งแต่ `0` ถึง `31`
 
-### Every X mode
+### โหมด Every X (Every X mode)
 
-* Enter the **Value** of measurement for how often to trigger the poll in either minutes or hours.
-* Select the **Unit** for the value. Supported units are **Minutes** and **Hours**.
+*   ป้อน **Value** ของการวัดความถี่ในการเริ่มการ poll เป็นนาทีหรือชั่วโมง
+*   เลือก **Unit** สำหรับค่า หน่วยที่รองรับคือ **Minutes** และ **Hours**
 
-### Custom mode
+### โหมด Custom (Custom mode)
 
-Enter a custom **Cron Expression** to trigger the poll. Use these values and ranges:
+ป้อน **Cron Expression** ที่กำหนดเองเพื่อเริ่มการ poll ใช้ค่าและช่วงเหล่านี้:
 
-* Seconds: `0` - `59`
-* Minutes: `0` - `59`
-* Hours: `0` - `23`
-* Day of Month: `1` - `31`
-* Months: `0` - `11` (Jan - Dec)
-* Day of Week: `0` - `6` (Sun - Sat)
+*   Seconds: `0` - `59`
+*   Minutes: `0` - `59`
+*   Hours: `0` - `23`
+*   Day of Month: `1` - `31`
+*   Months: `0` - `11` (Jan - Dec)
+*   Day of Week: `0` - `6` (Sun - Sat)
 
-To generate a Cron expression, you can use [crontab guru](https://crontab.guru){:target=_blank .external-link}. Paste the Cron expression that you generated using crontab guru in the **Cron Expression** field in n8n.
+ในการสร้าง Cron expression คุณสามารถใช้ [crontab guru](https://crontab.guru){:target=_blank .external-link} คัดลอก Cron expression ที่คุณสร้างโดยใช้ crontab guru ไปวางในช่อง **Cron Expression** ใน n8n
 
-#### Examples
+#### ตัวอย่าง (Examples)
 
-If you want to trigger your workflow every day at 04:08:30, enter the following in the **Cron Expression** field.
+หากคุณต้องการเริ่ม workflow ทุกวันเวลา 04:08:30 ให้ป้อนข้อมูลต่อไปนี้ในช่อง **Cron Expression**
 ```
 30 8 4 * * *
 ```
 
-If you want to trigger your workflow every day at 04:08, enter the following in the **Cron Expression** field.
+หากคุณต้องการเริ่ม workflow ทุกวันเวลา 04:08 ให้ป้อนข้อมูลต่อไปนี้ในช่อง **Cron Expression**
 ```
 8 4 * * *
 ```
 
-#### Why there are six asterisks in the Cron expression
+#### ทำไมถึงมีเครื่องหมายดอกจันหกตัวใน Cron expression (Why there are six asterisks in the Cron expression)
 
-The sixth asterisk in the Cron expression represents seconds. Setting this is optional. The node will execute even if you don't set the value for seconds.
+เครื่องหมายดอกจันตัวที่หกใน Cron expression แทนวินาที การตั้งค่านี้เป็นทางเลือก Node จะทำงานแม้ว่าคุณจะไม่ได้ตั้งค่าวินาทีก็ตาม
 
 |  *  |  *  |  *  |  *  |  *  |  *  |
 |:--:|:--:|:--:|:--:|:--:|:--:|

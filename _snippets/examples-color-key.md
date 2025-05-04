@@ -1,12 +1,12 @@
-To load the template into your n8n instance:
+ในการโหลดเทมเพลตเข้าสู่ n8n instance ของคุณ:
 
-1. Download the workflow JSON file.
-1. Open a new workflow in your n8n instance.
-1. Copy in the JSON, or select **Workflow menu** <span class="inline-image">![Workflow menu icon](/_images/common-icons/three-dots-horizontal.png){.off-glb}</span> > **Import from file...**.
+1. ดาวน์โหลดไฟล์ workflow JSON
+1. เปิด workflow ใหม่ใน n8n instance ของคุณ
+1. คัดลอก JSON เข้าไป หรือเลือก **Workflow menu** <span class="inline-image">![Workflow menu icon](/_images/common-icons/three-dots-horizontal.png){.off-glb}</span> > **Import from file...**
 
-The example workflows use Sticky Notes to guide you:
+ตัวอย่าง workflows ใช้ Sticky Notes เพื่อแนะนำคุณ:
 
-* Yellow: notes and information.
-* Green: instructions to run the workflow.
-* Orange: you need to change something to make the workflow work.
-* Blue: draws attention to a key feature of the example.
+* สีเหลือง: โน้ตและข้อมูล
+* สีเขียว: คำแนะนำในการรัน workflow
+* สีส้ม: คุณต้องเปลี่ยนแปลงบางอย่างเพื่อให้ workflow ทำงานได้
+* สีน้ำเงิน: ดึงดูดความสนใจไปยังฟีเจอร์หลักของตัวอย่าง

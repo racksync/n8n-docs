@@ -1,4 +1,4 @@
-The default error data received by the Error Trigger is:
+ข้อมูล error เริ่มต้นที่ Error Trigger ได้รับคือ:
 
 ```json
 [
@@ -23,13 +23,13 @@ The default error data received by the Error Trigger is:
 
 ```
 
-All information is always present, except:
+ข้อมูลทั้งหมดมีอยู่เสมอ ยกเว้น:
 
-- `execution.id`: requires the execution to be saved in the database. Not present if the error is in the trigger node of the main workflow, as the workflow doesn't execute.
-- `execution.url`: requires the execution to be saved in the database. Not present if the error is in the trigger node of the main workflow, as the workflow doesn't execute.
-- `execution.retryOf`: only present when the execution is a retry of a failed execution.
+- `execution.id`: ต้องการให้ execution ถูกบันทึกในฐานข้อมูล จะไม่มีอยู่หาก error เกิดขึ้นใน trigger node ของ workflow หลัก เนื่องจาก workflow ไม่ได้ execute
+- `execution.url`: ต้องการให้ execution ถูกบันทึกในฐานข้อมูล จะไม่มีอยู่หาก error เกิดขึ้นใน trigger node ของ workflow หลัก เนื่องจาก workflow ไม่ได้ execute
+- `execution.retryOf`: มีอยู่เฉพาะเมื่อ execution เป็นการ retry ของ execution ที่ล้มเหลว
 
-If the error is caused by the trigger node of the main workflow, rather than a later stage, the data sent to the error workflow is different. There's less information in `execution{}` and more in `trigger{}`:
+หาก error เกิดจาก trigger node ของ workflow หลัก แทนที่จะเป็นขั้นตอนต่อมา ข้อมูลที่ส่งไปยัง error workflow จะแตกต่างกัน มีข้อมูลใน `execution{}` น้อยลง และมีข้อมูลใน `trigger{}` มากขึ้น:
 
 ```json
 {

@@ -1,22 +1,22 @@
-If you'd prefer to use an app password instead of your email account password:
+หากคุณต้องการใช้ app password แทนรหัสผ่านบัญชีอีเมลของคุณ:
 
-1. Log into the [My Account](https://myaccount.microsoft.com/) page.
-2. If you have a left navigation option for **Security Info**, jump to [Security Info app password](#security-info-app-password). If you don't have an option for **Security Info**, continue with these instructions.
-3. Go to the [Additional security verification page](https://account.activedirectory.windowsazure.com/Proofup.aspx){:target=_blank .external-link}.
-4. Select **App passwords** and **Create**.
-5. Enter a **Name** for your app password, like `n8n credential`.
-6. Use the option to **copy password to clipboard** and enter this as the **Password** in n8n instead of your email account password.
+1. ลงชื่อเข้าใช้หน้า [My Account](https://myaccount.microsoft.com/)
+2. หากคุณมีตัวเลือกการนำทางด้านซ้ายสำหรับ **Security Info** ให้ข้ามไปที่ [Security Info app password](#security-info-app-password) หากคุณไม่มีตัวเลือกสำหรับ **Security Info** ให้ทำตามคำแนะนำเหล่านี้ต่อไป
+3. ไปที่หน้า [Additional security verification page](https://account.activedirectory.windowsazure.com/Proofup.aspx){:target=_blank .external-link}
+4. เลือก **App passwords** และ **Create**
+5. ป้อน **Name** สำหรับ app password ของคุณ เช่น `n8n credential`
+6. ใช้ตัวเลือก **copy password to clipboard** และป้อนรหัสผ่านนี้เป็น **Password** ใน n8n แทนรหัสผ่านบัญชีอีเมลของคุณ
 
-Refer to Outlook's [Manage app passwords for 2-step verification](https://support.microsoft.com/en-us/account-billing/manage-app-passwords-for-two-step-verification-d6dc8c6d-4bf7-4851-ad95-6d07799387e9){:target=_blank .external-link} page for more information.
+โปรดดูข้อมูลเพิ่มเติมที่หน้า [Manage app passwords for 2-step verification](https://support.microsoft.com/en-us/account-billing/manage-app-passwords-for-two-step-verification-d6dc8c6d-4bf7-4851-ad95-6d07799387e9){:target=_blank .external-link} ของ Outlook
 
 ### Security Info app password
 
-If you have a left navigation option for **Security Info**:
+หากคุณมีตัวเลือกการนำทางด้านซ้ายสำหรับ **Security Info**:
 
-1. Select **Security Info**. The Security Info page opens.
-2. Select **+ Add method**.
-3. On the **Add a method** page, select **App password** and then select **Add**.
-4. Enter a **Name** for your app password, like `n8n credential`.
-5. Copy the **Password** and enter this as the **Password** in n8n instead of your email account password.
+1. เลือก **Security Info** หน้า Security Info จะเปิดขึ้น
+2. เลือก **+ Add method**
+3. ในหน้า **Add a method** เลือก **App password** จากนั้นเลือก **Add**
+4. ป้อน **Name** สำหรับ app password ของคุณ เช่น `n8n credential`
+5. คัดลอก **Password** และป้อนรหัสผ่านนี้เป็น **Password** ใน n8n แทนรหัสผ่านบัญชีอีเมลของคุณ
 
-Refer to Outlook's [Create app passwords from the Security info (preview)](https://support.microsoft.com/en-us/account-billing/create-app-passwords-from-the-security-info-preview-page-d8bc744a-ce3f-4d4d-89c9-eb38ab9d4137){:target=_blank .external-link} page for more information.
+โปรดดูข้อมูลเพิ่มเติมที่หน้า [Create app passwords from the Security info (preview)](https://support.microsoft.com/en-us/account-billing/create-app-passwords-from-the-security-info-preview-page-d8bc744a-ce3f-4d4d-89c9-eb38ab9d4137){:target=_blank .external-link} ของ Outlook

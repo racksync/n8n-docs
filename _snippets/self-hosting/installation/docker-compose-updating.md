@@ -1,4 +1,4 @@
-If you run n8n using a Docker Compose file, follow these steps to update n8n:
+หากคุณรัน n8n โดยใช้ไฟล์ Docker Compose ให้ทำตามขั้นตอนเหล่านี้เพื่ออัปเดต n8n:
 
 ```sh
 # Pull latest version

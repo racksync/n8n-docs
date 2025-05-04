@@ -1,8 +1,8 @@
-1. Log in to your Yahoo account [Security page](https://login.yahoo.com/account/security).
-2. Select **Generate app password** or **Generate and manage app passwords**.
-3. Select **Get Started**.
-2. Enter an **App name** for your new app password, like `n8n credential`.
-3. Select **Generate password**.
-4. Copy the generated app password. You'll use this in your n8n credential.
+1. ลงชื่อเข้าใช้หน้า [Security page](https://login.yahoo.com/account/security) ของบัญชี Yahoo ของคุณ
+2. เลือก **Generate app password** หรือ **Generate and manage app passwords**
+3. เลือก **Get Started**
+2. ป้อน **App name** สำหรับ app password ใหม่ของคุณ เช่น `n8n credential`
+3. เลือก **Generate password**
+4. คัดลอก app password ที่สร้างขึ้น คุณจะใช้รหัสผ่านนี้ใน n8n credential ของคุณ
 
-Refer to Yahoo's [Generate and manage 3rd-party app passwords](https://help.yahoo.com/kb/generate-manage-third-party-passwords-sln15241.html){:target=_blank .external-link} for more information.
+โปรดดูข้อมูลเพิ่มเติมที่ [Generate and manage 3rd-party app passwords](https://help.yahoo.com/kb/generate-manage-third-party-passwords-sln15241.html){:target=_blank .external-link} ของ Yahoo

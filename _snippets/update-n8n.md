@@ -1,8 +1,8 @@
-## How to update n8n
+## วิธีอัปเดต n8n
 
-The steps to update your n8n depend on which n8n platform you use. Refer to the documentation for your n8n:
+ขั้นตอนในการอัปเดต n8n ของคุณขึ้นอยู่กับแพลตฟอร์ม n8n ที่คุณใช้ โปรดดูเอกสารสำหรับ n8n ของคุณ:
 
 * [Cloud](/manage-cloud/update-cloud-version.md)
-* Self-hosted options:
+* ตัวเลือก Self-hosted:
     * [npm](/hosting/installation/npm.md)
     * [Docker](/hosting/installation/docker.md)

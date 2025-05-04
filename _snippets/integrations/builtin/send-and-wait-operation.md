@@ -1,34 +1,34 @@
-## Waiting for a response
+## การรอการตอบกลับ (Waiting for a response)
 
-By choosing the **Send and Wait for a Response** operation, you can send a message and pause the workflow execution until a person confirms the action or provides more information.
+โดยการเลือก operation **Send and Wait for a Response** คุณสามารถส่งข้อความและหยุดการทำงานของ workflow ชั่วคราวจนกว่าจะมีคนยืนยันการกระทำหรือให้ข้อมูลเพิ่มเติม
 
 ### Response Type
 
-You can choose between the following types of waiting and approval actions:
+คุณสามารถเลือกประเภทของการรอและการอนุมัติได้ดังนี้:
 
-* **Approval**: Users can approve or disapprove from within the message.
-* **Free Text**: Users can submit a response with a form.
-* **Custom Form**: Users can submit a response with a custom form.
+*   **Approval**: ผู้ใช้สามารถอนุมัติหรือไม่อนุมัติจากภายในข้อความ
+*   **Free Text**: ผู้ใช้สามารถส่งการตอบกลับพร้อมแบบฟอร์ม
+*   **Custom Form**: ผู้ใช้สามารถส่งการตอบกลับพร้อมแบบฟอร์มที่กำหนดเอง
 
-You can customize the waiting and response behavior depending on which response type you choose. You can configure these options in any of the above response types:
+คุณสามารถปรับแต่งพฤติกรรมการรอและการตอบกลับได้ขึ้นอยู่กับประเภทการตอบกลับที่คุณเลือก คุณสามารถกำหนดค่าตัวเลือกเหล่านี้ในประเภทการตอบกลับใดๆ ข้างต้น:
 
-* **Limit Wait Time**: Whether the workflow will automatically resume execution after a specified time limit. This can be an interval or a specific wall time.
-* **Append n8n Attribution**: Whether to mention in the message that it was sent automatically with n8n (turned on) or not (turned off).
+*   **Limit Wait Time**: กำหนดว่า workflow จะกลับมาทำงานต่อโดยอัตโนมัติหลังจากหมดเวลาที่กำหนดหรือไม่ ซึ่งอาจเป็นช่วงเวลาหรือเวลาที่ระบุเจาะจง
+*   **Append n8n Attribution**: กำหนดว่าจะระบุในข้อความว่าถูกส่งโดยอัตโนมัติด้วย n8n (เปิด) หรือไม่ (ปิด)
 
-### Approval response customization
+### การปรับแต่งการตอบกลับแบบ Approval (Approval response customization)
 
-When using the Approval response type, you can choose whether to present only an approval button or both approval *and* disapproval buttons.
+เมื่อใช้ประเภทการตอบกลับแบบ Approval คุณสามารถเลือกได้ว่าจะแสดงเฉพาะปุ่มอนุมัติ หรือทั้งปุ่มอนุมัติ *และ* ปุ่มไม่อนุมัติ
 
-You can also customize the button labels for the buttons you include.
+คุณยังสามารถปรับแต่งข้อความบนปุ่มที่คุณใส่ได้
 
-### Free Text response customization
+### การปรับแต่งการตอบกลับแบบ Free Text (Free Text response customization)
 
-When using the Free Text response type, you can customize the message button label, the form title and description, and the response button label.
+เมื่อใช้ประเภทการตอบกลับแบบ Free Text คุณสามารถปรับแต่งข้อความบนปุ่มข้อความ, ชื่อและคำอธิบายของฟอร์ม, และข้อความบนปุ่มตอบกลับได้
 
-### Custom Form response customization
+### การปรับแต่งการตอบกลับแบบ Custom Form (Custom Form response customization)
 
-When using the Custom Form response type, you build a form using the fields and options you want.
+เมื่อใช้ประเภทการตอบกลับแบบ Custom Form คุณสร้างฟอร์มโดยใช้ฟิลด์และตัวเลือกที่คุณต้องการ
 
-You can customize each form element with the settings outlined in the [n8n Form trigger's form elements](/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md#form-elements). To add more fields, select the **Add Form Element** button.
+คุณสามารถปรับแต่งองค์ประกอบแต่ละอย่างของฟอร์มด้วยการตั้งค่าที่ระบุไว้ใน [n8n Form trigger's form elements](/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md#form-elements) หากต้องการเพิ่มฟิลด์เพิ่มเติม ให้เลือกปุ่ม **Add Form Element**
 
-You'll also be able to customize the message button label, the form title and description, and the response button label.
+คุณยังสามารถปรับแต่งข้อความบนปุ่มข้อความ, ชื่อและคำอธิบายของฟอร์ม, และข้อความบนปุ่มตอบกลับได้

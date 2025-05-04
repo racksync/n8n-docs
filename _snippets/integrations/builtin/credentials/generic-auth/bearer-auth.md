@@ -1,9 +1,9 @@
-## Using bearer auth
+## การใช้ Bearer Auth
 
-Use this generic authentication if your app or service supports bearer authentication. This authentication type is actually just header authentication with the `Name` set to `Authorization` and the `Value` set to `Bearer <token>`.
+ใช้การยืนยันตัวตนทั่วไปนี้หากแอปหรือบริการของคุณรองรับ bearer authentication ประเภทการยืนยันตัวตนนี้เป็นเพียง header authentication โดยตั้งค่า `Name` เป็น `Authorization` และ `Value` เป็น `Bearer <token>`
 
-To configure this credential, enter:
+ในการกำหนดค่า credential นี้ ให้ป้อน:
 
-- The **Bearer Token** you need to pass to the app or service your HTTP request is targeting
+- **Bearer Token** ที่คุณต้องส่งไปยังแอปหรือบริการที่ HTTP request ของคุณกำหนดเป้าหมาย
 
-Read more about [bearer authentication](https://swagger.io/docs/specification/v3_0/authentication/bearer-authentication/).
+อ่านเพิ่มเติมเกี่ยวกับ [bearer authentication](https://swagger.io/docs/specification/v3_0/authentication/bearer-authentication/)

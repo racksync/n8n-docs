@@ -1,8 +1,8 @@
-## Using basic auth
+## การใช้ Basic Auth
 
-Use this generic authentication if your app or service supports basic authentication.
+ใช้การยืนยันตัวตนทั่วไปนี้หากแอปหรือบริการของคุณรองรับ basic authentication
 
-To configure this credential, enter:
+ในการกำหนดค่า credential นี้ ให้ป้อน:
 
-- The **Username** you use to access the app or service your HTTP Request is targeting
-- The **Password** that goes with that username
+- **Username** ที่คุณใช้เพื่อเข้าถึงแอปหรือบริการที่ HTTP Request ของคุณกำหนดเป้าหมาย
+- **Password** ที่ใช้คู่กับ username นั้น

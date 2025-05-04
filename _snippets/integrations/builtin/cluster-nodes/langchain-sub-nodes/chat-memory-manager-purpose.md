@@ -1,5 +1,5 @@
-This node is useful when you:
+Node นี้มีประโยชน์เมื่อคุณ:
 
-* Can't add a memory node directly.
-* Need to do more complex memory management, beyond what the memory nodes offer. For example, you can add this node to check the memory size of the Agent node's response, and reduce it if needed.
-* Want to inject messages to the AI that look like user messages, to give the AI more context.
+*   ไม่สามารถเพิ่ม memory node ได้โดยตรง
+*   ต้องการจัดการ memory ที่ซับซ้อนกว่าที่ memory node ทั่วไปมีให้ ตัวอย่างเช่น คุณสามารถเพิ่ม node นี้เพื่อตรวจสอบขนาด memory ของ response จาก Agent node และลดขนาดหากจำเป็น
+*   ต้องการแทรกข้อความไปยัง AI ที่ดูเหมือนข้อความจากผู้ใช้ เพื่อให้ AI มี context มากขึ้น

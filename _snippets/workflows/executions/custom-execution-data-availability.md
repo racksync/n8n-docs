@@ -1,8 +1,8 @@
 /// info | Feature availability
-Custom executions data is available on:
+ข้อมูล Custom executions มีให้ใช้งานใน:
 
 * Cloud: Pro, Enterprise
 * Self-Hosted: Enterprise, registered Community
 
-Available in version 0.222.0 and above.
+พร้อมใช้งานในเวอร์ชัน 0.222.0 ขึ้นไป
 ///

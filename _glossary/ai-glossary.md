@@ -4,4 +4,3 @@
 * __hallucinations__: Hallucination in AI is when an LLM (large language model) mistakenly perceives patterns or objects that don't exist.
 * __vector database__: A vector database stores mathematical representations of information. Use with embeddings and retrievers to create a database that your AI can access when answering questions.
 * __vector store__: A vector store, or vector database, stores mathematical representations of information. Use with embeddings and retrievers to create a database that your AI can access when answering questions.
-

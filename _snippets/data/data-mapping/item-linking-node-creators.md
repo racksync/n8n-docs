@@ -1,14 +1,14 @@
-/// note | Programmatic-style nodes only
-This guidance applies to programmatic-style nodes. If you're using declarative style, n8n handles paired items for you automatically.
+/// note | เฉพาะ Programmatic-style nodes เท่านั้น
+คำแนะนำนี้ใช้กับ programmatic-style nodes หากคุณใช้ declarative style, n8n จะจัดการ paired items ให้คุณโดยอัตโนมัติ
 ///
 
-Use n8n's item linking to access data from items that precede the current item. n8n needs to know which input item a given output item comes from. If this information is missing, expressions in other nodes may break. As a node developer, you must ensure any items returned by your node support this. 
+ใช้ item linking ของ n8n เพื่อเข้าถึงข้อมูลจาก items ที่อยู่ก่อนหน้า item ปัจจุบัน n8n จำเป็นต้องรู้ว่า output item ใดมาจาก input item ใด หากข้อมูลนี้หายไป expressions ใน nodes อื่นอาจเสียหาย ในฐานะนักพัฒนา node คุณต้องแน่ใจว่า items ใดๆ ที่ node ของคุณส่งคืนนั้นรองรับสิ่งนี้
 
-This applies to programmatic nodes (including trigger nodes). You don't need to consider item linking when building a declarative-style node. Refer to [Choose your node building approach](/integrations/creating-nodes/plan/choose-node-method.md) for more information on node styles.
+สิ่งนี้ใช้กับ programmatic nodes (รวมถึง trigger nodes) คุณไม่จำเป็นต้องพิจารณา item linking เมื่อสร้าง declarative-style node อ้างอิงถึง [Choose your node building approach](/integrations/creating-nodes/plan/choose-node-method.md) สำหรับข้อมูลเพิ่มเติมเกี่ยวกับ node styles
 
-Start by reading [Item linking concepts](/data/data-mapping/data-item-linking/item-linking-concepts.md), which provides a conceptual overview of item linking, and details of the scenarios where n8n can handle the linking automatically.
+เริ่มต้นด้วยการอ่าน [Item linking concepts](/data/data-mapping/data-item-linking/item-linking-concepts.md) ซึ่งให้ภาพรวมแนวคิดของ item linking และรายละเอียดของสถานการณ์ที่ n8n สามารถจัดการการเชื่อมโยงโดยอัตโนมัติได้
 
-If you need to handle item linking manually, do this by setting `pairedItem` on each item your node returns:
+หากคุณต้องการจัดการ item linking ด้วยตนเอง ให้ทำโดยการตั้งค่า `pairedItem` ในแต่ละ item ที่ node ของคุณส่งคืน:
 
 ```typescript
 // Use the pairedItem information of the incoming item

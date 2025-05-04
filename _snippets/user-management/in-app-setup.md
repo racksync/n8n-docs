@@ -1,5 +1,5 @@
-When you set up user management for the first time, you create an owner account.
+เมื่อคุณตั้งค่าการจัดการผู้ใช้เป็นครั้งแรก คุณจะต้องสร้างบัญชี owner
 
-1. Open n8n. The app displays a signup screen.
-2. Enter your details. Your password must be at least eight characters, including at least one number and one capital letter.
-3. Click **Next**. n8n logs you in with your new owner account.
+1. เปิด n8n แอปจะแสดงหน้าจอ signup
+2. ป้อนรายละเอียดของคุณ รหัสผ่านของคุณต้องมีความยาวอย่างน้อยแปดตัวอักษร รวมถึงตัวเลขอย่างน้อยหนึ่งตัวและตัวพิมพ์ใหญ่อย่างน้อยหนึ่งตัว
+3. คลิก **Next** n8n จะล็อกอินคุณเข้าสู่ระบบด้วยบัญชี owner ใหม่ของคุณ

@@ -1,8 +1,8 @@
-## Available data type comparisons
+## การเปรียบเทียบประเภทข้อมูลที่มีอยู่
 <!-- vale off -->
 ### String
 
-String data type supports these comparisons:
+ประเภทข้อมูล String รองรับการเปรียบเทียบเหล่านี้:
 
 - exists
 - does not exist
@@ -21,7 +21,7 @@ String data type supports these comparisons:
 
 ### Number
 
-Number data type supports these comparisons:
+ประเภทข้อมูล Number รองรับการเปรียบเทียบเหล่านี้:
 
 - exists
 - does not exist
@@ -36,7 +36,7 @@ Number data type supports these comparisons:
 
 ### Date & Time
 
-Date & Time data type supports these comparisons:
+ประเภทข้อมูล Date & Time รองรับการเปรียบเทียบเหล่านี้:
 
 - exists
 - does not exist
@@ -51,7 +51,7 @@ Date & Time data type supports these comparisons:
 
 ### Boolean
 
-Boolean data type supports these comparisons:
+ประเภทข้อมูล Boolean รองรับการเปรียบเทียบเหล่านี้:
 
 - exists
 - does not exist
@@ -64,7 +64,7 @@ Boolean data type supports these comparisons:
 
 ### Array
 
-Array data type supports these comparisons:
+ประเภทข้อมูล Array รองรับการเปรียบเทียบเหล่านี้:
 
 - exists
 - does not exist
@@ -81,7 +81,7 @@ Array data type supports these comparisons:
 
 ### Object
 
-Object data type supports these comparisons:
+ประเภทข้อมูล Object รองรับการเปรียบเทียบเหล่านี้:
 
 - exists
 - does not exist

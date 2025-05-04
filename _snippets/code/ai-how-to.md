@@ -1,14 +1,14 @@
-/// info | Feature availability
-AI assistance in the Code node is available to Cloud users. It isn't available in self-hosted n8n.
+/// info | ความพร้อมใช้งานของฟีเจอร์
+ความช่วยเหลือ AI ใน Code node มีให้สำหรับผู้ใช้ Cloud เท่านั้น ไม่สามารถใช้งานได้ใน n8n ที่โฮสต์เอง
 ///
 
-/// note | AI generated code overwrites your code
-If you've already written some code on the **Code** tab, the AI generated code will replace it. n8n recommends using AI as a starting point to create your initial code, then editing it as needed.
+/// note | โค้ดที่สร้างโดย AI จะเขียนทับโค้ดของคุณ
+หากคุณได้เขียนโค้ดบางส่วนไว้ในแท็บ **Code** แล้ว โค้ดที่สร้างโดย AI จะแทนที่โค้ดนั้น n8n แนะนำให้ใช้ AI เป็นจุดเริ่มต้นในการสร้างโค้ดเริ่มต้นของคุณ จากนั้นจึงแก้ไขตามต้องการ
 ///
 
-To use ChatGPT to generate code in the Code node:
+วิธีใช้ ChatGPT เพื่อสร้างโค้ดใน Code node:
 
-1. In the Code node, set **Language** to **JavaScript**.
-1. Select the **Ask AI** tab.
-1. Write your query.
-1. Select **Generate Code**. n8n sends your query to ChatGPT, then displays the result in the **Code** tab.
+1. ใน Code node ตั้งค่า **Language** เป็น **JavaScript**
+1. เลือกแท็บ **Ask AI**
+1. เขียนคำถามของคุณ
+1. เลือก **Generate Code** n8n จะส่งคำถามของคุณไปยัง ChatGPT จากนั้นแสดงผลลัพธ์ในแท็บ **Code**

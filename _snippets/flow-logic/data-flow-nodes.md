@@ -1,8 +1,8 @@
-Nodes can process multiple items.
+Nodes สามารถประมวลผลได้หลาย items
 
-For example, if you set the Trello node to `Create-Card`, and create an expression that sets `Name` using a property called `name-input-value` from the incoming data, the node creates a card for each item, always choosing the `name-input-value` of the current item.
+ตัวอย่างเช่น หากคุณตั้งค่า Trello node เป็น `Create-Card` และสร้าง expression ที่ตั้งค่า `Name` โดยใช้ property ที่ชื่อ `name-input-value` จากข้อมูลขาเข้า node จะสร้าง card สำหรับแต่ละ item โดยเลือก `name-input-value` ของ item ปัจจุบันเสมอ
 
-For example, this input will create two cards. One named `test1` the other one named `test2`:
+ตัวอย่างเช่น input นี้จะสร้างสอง cards หนึ่งชื่อ `test1` อีกอันชื่อ `test2`:
 
 ```json
 [

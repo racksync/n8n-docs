@@ -1,8 +1,8 @@
-1. Create a new workflow, with the Error Trigger as the first node. 
-2. Give the workflow a name, for example `Error Handler`. 
-3. Select **Save**.
-4. In the workflow where you want to use this error workflow:
-	1. Select **Options** <span class="inline-image">![Options menu icon](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> > **Settings**.
-	2. In **Error workflow**, select the workflow you just created. For example, if you used the name Error Handler, select **Error handler**.
-	3. Select **Save**.
-	Now, when this workflow errors, the related error workflow runs.
+1. สร้าง workflow ใหม่ โดยมี Error Trigger เป็น node แรก
+2. ตั้งชื่อ workflow ตัวอย่างเช่น `Error Handler`
+3. เลือก **Save**
+4. ใน workflow ที่คุณต้องการใช้ error workflow นี้:
+	1. เลือก **Options** <span class="inline-image">![Options menu icon](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> > **Settings**
+	2. ใน **Error workflow** เลือก workflow ที่คุณเพิ่งสร้าง ตัวอย่างเช่น หากคุณใช้ชื่อ Error Handler ให้เลือก **Error handler**
+	3. เลือก **Save**
+	ตอนนี้ เมื่อ workflow นี้เกิด error, error workflow ที่เกี่ยวข้องจะทำงาน

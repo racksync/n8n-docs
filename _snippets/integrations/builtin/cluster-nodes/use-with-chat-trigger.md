@@ -1,1 +1,1 @@
-You can use this agent with the [Chat Trigger](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/index.md) node. Attach a memory sub-node so that users can have an ongoing conversation with multiple queries. Memory doesn't persist between sessions.
+คุณสามารถใช้ agent นี้กับ [Chat Trigger](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/index.md) node ได้ เชื่อมต่อ memory sub-node เพื่อให้ผู้ใช้สามารถสนทนาต่อเนื่องด้วยคำถามหลายๆ ครั้งได้ Memory จะไม่คงอยู่ระหว่าง session

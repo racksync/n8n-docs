@@ -1,3 +1,3 @@
-/// note | Note for n8n Cloud users
-Cloud users don't need to provide connection details. Select **Connect my account** to connect through your browser.
+/// note | หมายเหตุสำหรับผู้ใช้ n8n Cloud
+ผู้ใช้ Cloud ไม่จำเป็นต้องให้รายละเอียดการเชื่อมต่อ เลือก **Connect my account** เพื่อเชื่อมต่อผ่านเบราว์เซอร์ของคุณ
 ///

@@ -1,1 +1,3 @@
-Use this option to control whether binary images should be automatically passed through to the agent as image type messages (turned on) or not (turned off).
+### Binary Images (รูปภาพแบบ Binary)
+
+ใช้ตัวเลือกนี้เพื่อควบคุมว่าจะส่งรูปภาพแบบ binary ผ่านไปยัง agent โดยอัตโนมัติเป็นข้อความประเภทรูปภาพหรือไม่ (เปิด) หรือไม่ส่ง (ปิด)

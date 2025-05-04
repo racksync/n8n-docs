@@ -1,3 +1,5 @@
-Enter the number of times the model should run to try and generate a good answer from the user's prompt.
+### Max Iterations (จำนวนรอบสูงสุด)
 
-Defaults to `10`.
+ป้อนจำนวนครั้งที่โมเดลควรทำงานเพื่อพยายามสร้างคำตอบที่ดีจาก prompt ของผู้ใช้
+
+ค่าเริ่มต้นคือ `10`

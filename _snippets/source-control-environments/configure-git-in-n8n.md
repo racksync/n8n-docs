@@ -1,4 +1,4 @@
-1. Go to **Settings** > **Environments**.
-1. In **Git repository URL** enter the SSH URL for your repository.
-1. n8n supports ED25519 and RSA public key algorithms. ED25519 is the default. Select **RSA** under **SSH Key** if your git host requires RSA.
-1. Copy the SSH key.
+1. ไปที่ **Settings** > **Environments**
+1. ในช่อง **Git repository URL** ให้ป้อน SSH URL สำหรับ repository ของคุณ
+1. n8n รองรับอัลกอริทึม public key แบบ ED25519 และ RSA โดย ED25519 เป็นค่าเริ่มต้น เลือก **RSA** ภายใต้ **SSH Key** หาก git host ของคุณต้องการ RSA
+1. คัดลอก SSH key

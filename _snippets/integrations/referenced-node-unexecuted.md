@@ -1,17 +1,17 @@
 <!-- vale off -->
-## Referenced node is unexecuted
+## Node ที่อ้างอิงยังไม่ได้ทำงาน
 <!-- vale on -->
 
-This error displays when a previous node in the workflow hasn't executed and isn't providing output that this node needs as input.
+ข้อผิดพลาดนี้จะแสดงขึ้นเมื่อ node ก่อนหน้าใน workflow ยังไม่ได้ทำงานและไม่ได้ให้ output ที่ node นี้ต้องการเป็น input
 
-The full text of this error will tell you the exact node that isn't executing in this format:
+ข้อความเต็มของข้อผิดพลาดนี้จะบอกคุณถึง node ที่แน่นอนที่ไม่ได้ทำงานในรูปแบบนี้:
 ```
 An expression references the node '<node-name>', but it hasn’t been executed yet. Either change the expression, or re-wire your workflow to make sure that node executes first.
 ```
 
-To begin troubleshooting, test the workflow up to the named node.
+ในการเริ่มต้นแก้ไขปัญหา ให้ทดสอบ workflow จนถึง node ที่ระบุชื่อไว้
 
-For nodes that call JavaScript or other custom code, determine if a node has executed before trying to use the value by calling:
+สำหรับ nodes ที่เรียกใช้ JavaScript หรือ custom code อื่นๆ ให้ตรวจสอบว่า node ได้ทำงานแล้วหรือไม่ก่อนที่จะพยายามใช้ค่าโดยการเรียกใช้:
 
 ```js
 $("<node-name>").isExecuted

@@ -1,5 +1,5 @@
-n8n recommends using an SVG for your node icon, but you can also use PNG. If using PNG, the icon resolution should be 60x60px. Node icons should have a square or near-square aspect ratio.
+n8n แนะนำให้ใช้ SVG สำหรับไอคอน node ของคุณ แต่คุณสามารถใช้ PNG ได้เช่นกัน หากใช้ PNG ความละเอียดของไอคอนควรเป็น 60x60px ไอคอน Node ควรมีอัตราส่วนภาพสี่เหลี่ยมจัตุรัสหรือเกือบสี่เหลี่ยมจัตุรัส
 
-/// note | Don't reference Font Awesome
-If you want to use a Font Awesome icon in your node, download and embed the image.
+/// note | อย่าอ้างอิง Font Awesome
+หากคุณต้องการใช้ไอคอน Font Awesome ใน node ของคุณ ให้ดาวน์โหลดและฝังรูปภาพนั้น
 ///

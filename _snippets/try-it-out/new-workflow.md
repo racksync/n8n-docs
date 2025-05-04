@@ -1,4 +1,4 @@
-When you open n8n, you'll see either:
+เมื่อคุณเปิด n8n คุณจะเห็นอย่างใดอย่างหนึ่ง:
 
-* An empty workflow: if you have no workflows and you're logging in for the first time. Use this workflow.
-* The **Workflows** list on the **Overview** page. Select the <span class="inline-image">![universal create resource icon](/_images/common-icons/universal-resource-button.png){.off-glb}</span> **button** to create a new workflow.
+* Workflow ว่างเปล่า: หากคุณไม่มี workflows และกำลังล็อกอินเป็นครั้งแรก ใช้ workflow นี้
+* รายการ **Workflows** บนหน้า **Overview** เลือกปุ่ม <span class="inline-image">![universal create resource icon](/_images/common-icons/universal-resource-button.png){.off-glb}</span> เพื่อสร้าง workflow ใหม่

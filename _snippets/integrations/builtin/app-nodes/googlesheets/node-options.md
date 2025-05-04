@@ -1,14 +1,14 @@
-- **Cell Format**: Use this option to choose how to format the data in cells. Refer to [Google Sheets API | CellFormat](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/cells#CellFormat){:target=_blank .external-link} for more information.
-    - **Let Google Sheets format** (default): n8n formats text and numbers in the cells according to Google Sheets' default settings. 
-    - **Let n8n format**: New cells in your sheet will have the same data types as the input data provided by n8n.
-- **Data Location on Sheet**: Use this option when you need to specify the data range on your sheet.
-    - **Header Row**: Specify the row index that contains the column headers.
-    - **First Data Row**: Specify the row index where the actual data starts.
-- **Handling extra fields in input**: When using **Mapping Column Mode > Map Automatically**, use this option to decide how to handle fields in the input data that don't match any existing columns in the sheet.
-    - **Insert in New Column(s)** (default): Adds new columns for any extra data.
-    - **Ignore Them**: Ignores extra data that don't match the existing columns. 
-    - **Error**: Throws an error and stops execution. 
-- **Use Append**: Turn on this option to use the [Google API append endpoint](https://developers.google.com/sheets/api/guides/values#append_values){:target=_blank .external-link} for adding new data rows.
-    - By default, n8n appends empty rows or columns and then adds the new data. This approach can ensure data alignment but may be less efficient. Using the append endpoint can lead to better performance by minimizing the number of API calls and simplifying the process. But if the existing sheet data has inconsistencies such as gaps or breaks between rows and columns, n8n may add the new data in the wrong place, leading to misalignment issues.
-    - Use this option when performance is a priority and the data structure in the sheet is consistent without gaps.
+- **Cell Format**: ใช้ตัวเลือกนี้เพื่อเลือกวิธีจัดรูปแบบข้อมูลในเซลล์ อ้างอิง [Google Sheets API | CellFormat](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/cells#CellFormat){:target=_blank .external-link} สำหรับข้อมูลเพิ่มเติม
+    - **Let Google Sheets format** (ค่าเริ่มต้น): n8n จะจัดรูปแบบข้อความและตัวเลขในเซลล์ตามการตั้งค่าเริ่มต้นของ Google Sheets
+    - **Let n8n format**: เซลล์ใหม่ในชีตของคุณจะมีชนิดข้อมูลเหมือนกับข้อมูลอินพุตที่ n8n ให้มา
+- **Data Location on Sheet**: ใช้ตัวเลือกนี้เมื่อคุณต้องการระบุช่วงข้อมูลบนชีตของคุณ
+    - **Header Row**: ระบุดัชนีแถวที่มีส่วนหัวของคอลัมน์
+    - **First Data Row**: ระบุดัชนีแถวที่ข้อมูลจริงเริ่มต้น
+- **Handling extra fields in input**: เมื่อใช้ **Mapping Column Mode > Map Automatically** ให้ใช้ตัวเลือกนี้เพื่อตัดสินใจว่าจะจัดการกับฟิลด์ในข้อมูลอินพุตที่ไม่ตรงกับคอลัมน์ที่มีอยู่ในชีตอย่างไร
+    - **Insert in New Column(s)** (ค่าเริ่มต้น): เพิ่มคอลัมน์ใหม่สำหรับข้อมูลส่วนเกินใดๆ
+    - **Ignore Them**: ละเว้นข้อมูลส่วนเกินที่ไม่ตรงกับคอลัมน์ที่มีอยู่
+    - **Error**: แสดงข้อผิดพลาดและหยุดการทำงาน
+- **Use Append**: เปิดตัวเลือกนี้เพื่อใช้ [Google API append endpoint](https://developers.google.com/sheets/api/guides/values#append_values){:target=_blank .external-link} สำหรับการเพิ่มแถวข้อมูลใหม่
+    - โดยค่าเริ่มต้น n8n จะต่อท้ายด้วยแถวหรือคอลัมน์ว่าง จากนั้นจึงเพิ่มข้อมูลใหม่ วิธีนี้สามารถช่วยให้ข้อมูลจัดเรียงตรงกัน แต่อาจมีประสิทธิภาพน้อยกว่า การใช้ append endpoint สามารถช่วยให้ประสิทธิภาพดีขึ้นโดยลดจำนวน API calls และทำให้กระบวนการง่ายขึ้น แต่หากข้อมูลชีตที่มีอยู่มีความไม่สอดคล้องกัน เช่น มีช่องว่างหรือการเว้นวรรคระหว่างแถวและคอลัมน์ n8n อาจเพิ่มข้อมูลใหม่ผิดที่ ทำให้เกิดปัญหาการจัดเรียงข้อมูลไม่ตรงกัน
+    - ใช้ตัวเลือกนี้เมื่อประสิทธิภาพเป็นสิ่งสำคัญ และโครงสร้างข้อมูลในชีตมีความสอดคล้องกันโดยไม่มีช่องว่าง
 

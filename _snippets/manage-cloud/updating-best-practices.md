@@ -1,3 +1,3 @@
-* Update frequently: this avoids having to jump multiple versions at once, reducing the risk of a disruptive update. Try to update at least once a month.
-* Check the [Release notes](/release-notes.md) for breaking changes.
-* Use [Environments](/source-control-environments/index.md) to create a test version of your instance. Test the update there first.
+* อัปเดตบ่อยๆ: วิธีนี้ช่วยหลีกเลี่ยงการต้องข้ามหลายเวอร์ชั่นในคราวเดียว ซึ่งช่วยลดความเสี่ยงของการอัปเดตที่อาจส่งผลกระทบ พยายามอัปเดตอย่างน้อยเดือนละครั้ง
+* ตรวจสอบ [Release notes](/release-notes.md) สำหรับ Breaking changes
+* ใช้ [Environments](/source-control-environments/index.md) เพื่อสร้าง Instance เวอร์ชั่นทดสอบ ทดสอบการอัปเดตที่นั่นก่อน

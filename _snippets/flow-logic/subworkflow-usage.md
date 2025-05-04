@@ -1,55 +1,55 @@
-### Create the sub-workflow
+### สร้าง Sub-workflow
 
 
-1. Create a new workflow.
+1. สร้าง workflow ใหม่
 
-    /// note | Create sub-workflows from existing workflows
-    You can optionally create a sub-workflow directly from an existing parent workflow using the [Execute Sub-workflow](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow.md) node. In the node, select the **Database** and **From list** options and select **Create a sub-workflow** in the list.
+    /// note | สร้าง sub-workflows จาก workflows ที่มีอยู่
+    คุณสามารถเลือกสร้าง sub-workflow โดยตรงจาก parent workflow ที่มีอยู่ได้ โดยใช้ [Execute Sub-workflow](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow.md) node ใน node นั้น ให้เลือกตัวเลือก **Database** และ **From list** แล้วเลือก **Create a sub-workflow** ในรายการ
     ///
 
-1. **Optional**: configure which workflows can call the sub-workflow:
-	1. Select the **Options** <span class="inline-image">![Options menu](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> menu > **Settings**. n8n opens the **Workflow settings** modal.
-	1. Change the **This workflow can be called by** setting.	Refer to [Workflow settings](/workflows/settings.md) for more information on configuring your workflows.
-1. Add the **Execute Sub-workflow** trigger node (if you are searching under trigger nodes, this is also titled **When Executed by Another Workflow**).
-1. Set the **Input data mode** to choose how you will define the sub-workflow's input data:
-	* **Define using fields below**: Choose this mode to define individual input names and data types that the calling workflow needs to provide. The [Execute Sub-workflow node](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow.md) or [Call n8n Workflow Tool node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolworkflow.md) in the calling workflow will automatically pull in the fields defined here.
-	* **Define using JSON example**: Choose this mode to provide an example JSON object that demonstrates the expected input items and their types.
-	* **Accept all data**: Choose this mode to accept all data unconditionally. The sub-workflow won't define any required input items. This sub-workflow must handle any input inconsistencies or missing values.
-1. Add other nodes as needed to build your sub-workflow functionality.
-1. Save the sub-workflow.
+1. **Optional**: กำหนดค่าว่า workflows ใดสามารถเรียก sub-workflow นี้ได้:
+	1. เลือกเมนู **Options** <span class="inline-image">![Options menu](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> > **Settings** n8n จะเปิด modal **Workflow settings** ขึ้นมา
+	1. เปลี่ยนการตั้งค่า **This workflow can be called by** อ้างอิงถึง [Workflow settings](/workflows/settings.md) สำหรับข้อมูลเพิ่มเติมเกี่ยวกับการกำหนดค่า workflows ของคุณ
+1. เพิ่ม **Execute Sub-workflow** trigger node (หากคุณค้นหาภายใต้ trigger nodes หัวข้อนี้จะมีชื่อว่า **When Executed by Another Workflow**)
+1. ตั้งค่า **Input data mode** เพื่อเลือกว่าคุณจะกำหนดข้อมูล input ของ sub-workflow อย่างไร:
+	* **Define using fields below**: เลือกโหมดนี้เพื่อกำหนดชื่อ input และชนิดข้อมูลแต่ละรายการที่ calling workflow ต้องระบุ [Execute Sub-workflow node](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow.md) หรือ [Call n8n Workflow Tool node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolworkflow.md) ใน calling workflow จะดึงข้อมูลฟิลด์ที่กำหนดไว้ที่นี่โดยอัตโนมัติ
+	* **Define using JSON example**: เลือกโหมดนี้เพื่อระบุตัวอย่าง JSON object ที่แสดงรายการ input ที่คาดหวังและชนิดข้อมูลของมัน
+	* **Accept all data**: เลือกโหมดนี้เพื่อยอมรับข้อมูลทั้งหมดโดยไม่มีเงื่อนไข sub-workflow จะไม่กำหนดรายการ input ที่จำเป็นใดๆ sub-workflow นี้จะต้องจัดการกับความไม่สอดคล้องกันของ input หรือค่าที่หายไปเอง
+1. เพิ่ม nodes อื่นๆ ตามต้องการเพื่อสร้างฟังก์ชันการทำงานของ sub-workflow ของคุณ
+1. บันทึก sub-workflow
 
-/// note | Sub-workflow mustn't contain errors
-If there are errors in the sub-workflow, the parent workflow can't trigger it.
+/// note | Sub-workflow ต้องไม่มี errors
+หากมี errors ใน sub-workflow, parent workflow จะไม่สามารถ trigger มันได้
 ///
-/// note | Load data into sub-workflow before building
-This requires the ability to [load data from previous executions](/workflows/executions/debug.md), which is available on n8n Cloud and registered Community plans.
+/// note | โหลดข้อมูลเข้าสู่ sub-workflow ก่อนสร้าง
+สิ่งนี้ต้องการความสามารถในการ [load data from previous executions](/workflows/executions/debug.md) ซึ่งมีให้ใช้งานบน n8n Cloud และแผน Community ที่ลงทะเบียนแล้ว
 
-If you want to load data into your sub-workflow to use while building it:
+หากคุณต้องการโหลดข้อมูลเข้าสู่ sub-workflow ของคุณเพื่อใช้ในขณะสร้าง:
 
-1. Create the sub-workflow and add the **Execute Sub-workflow Trigger**. 
-1. Set the node's **Input data mode** to **Accept all data** or define the input items using fields or JSON if they're already known.
-1. In the sub-workflow [settings](/workflows/settings.md), set **Save successful production executions** to **Save**. 
-1. Skip ahead to setting up the parent workflow, and run it.
-1. Follow the steps to [load data from previous executions](/workflows/executions/debug.md).
-1. Adjust the **Input data mode** to match the input sent by the parent workflow if necessary.
+1. สร้าง sub-workflow และเพิ่ม **Execute Sub-workflow Trigger**
+1. ตั้งค่า **Input data mode** ของ node เป็น **Accept all data** หรือกำหนดรายการ input โดยใช้ฟิลด์หรือ JSON หากทราบอยู่แล้ว
+1. ใน [settings](/workflows/settings.md) ของ sub-workflow ให้ตั้งค่า **Save successful production executions** เป็น **Save**
+1. ข้ามไปตั้งค่า parent workflow แล้วรันมัน
+1. ทำตามขั้นตอนเพื่อ [load data from previous executions](/workflows/executions/debug.md)
+1. ปรับ **Input data mode** ให้ตรงกับ input ที่ส่งมาจาก parent workflow หากจำเป็น
 
-You can now pin example data in the trigger node, enabling you to work with real data while configuring the rest of the workflow.
+ตอนนี้คุณสามารถ pin ข้อมูลตัวอย่างใน trigger node ได้แล้ว ทำให้คุณสามารถทำงานกับข้อมูลจริงในขณะที่กำหนดค่าส่วนที่เหลือของ workflow ได้
 ///
 
 
-### Call the sub-workflow
+### เรียกใช้ Sub-workflow
 
-1. Open the workflow where you want to call the sub-workflow.
-1. Add the **Execute Sub-workflow** node.
-1. In the **Execute Sub-workflow** node, set the sub-workflow you want to call. You can choose to call the workflow by ID, load a workflow from a local file, add workflow JSON as a parameter in the node, or target a workflow by URL.
+1. เปิด workflow ที่คุณต้องการเรียก sub-workflow
+1. เพิ่ม **Execute Sub-workflow** node
+1. ใน **Execute Sub-workflow** node ให้ตั้งค่า sub-workflow ที่คุณต้องการเรียก คุณสามารถเลือกเรียก workflow ด้วย ID, โหลด workflow จากไฟล์ local, เพิ่ม workflow JSON เป็นพารามิเตอร์ใน node หรือกำหนดเป้าหมาย workflow ด้วย URL
 
-    /// note | Find your workflow ID
-    Your sub-workflow's ID is the alphanumeric string at the end of its URL.
+    /// note | ค้นหา Workflow ID ของคุณ
+    ID ของ sub-workflow ของคุณคือสตริงตัวอักษรและตัวเลขที่อยู่ท้ายสุดของ URL
     ///
 
-1. Fill in the required input items defined by the sub-workflow.
-1. Save your workflow.
+1. กรอกข้อมูลรายการ input ที่จำเป็นซึ่งกำหนดโดย sub-workflow
+1. บันทึก workflow ของคุณ
 
-When your workflow executes, it will send data to the sub-workflow, and run it.
+เมื่อ workflow ของคุณ execute มันจะส่งข้อมูลไปยัง sub-workflow และรันมัน
 
-You can follow the execution flow from the parent workflow to the sub-workflow by opening the Execute Sub-workflow node and selecting the **View sub-execution** link. Likewise, the sub-workflow's execution contains a link back to the parent workflow's execution to navigate in the other direction.
+คุณสามารถติดตาม flow การ execute จาก parent workflow ไปยัง sub-workflow ได้โดยการเปิด Execute Sub-workflow node และเลือกลิงก์ **View sub-execution** ในทำนองเดียวกัน การ execute ของ sub-workflow จะมีลิงก์กลับไปยังการ execute ของ parent workflow เพื่อนำทางไปในทิศทางตรงกันข้าม

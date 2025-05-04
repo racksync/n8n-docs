@@ -8,7 +8,7 @@ yarn.lock
 .env
 .vscode
 .idea
-.cache
+!.cache/plugin/social/fonts
 
 .venv
 venv

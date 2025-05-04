@@ -10,7 +10,6 @@ contentType: overview
   **Innovative Cloud & Infrastructure Solutions**
 </div>
 
-<!-- ![RACKSYNC Logo](/_images/racksync.png){ width="500" }{ loading=lazy } -->
 
 ## About Us
 

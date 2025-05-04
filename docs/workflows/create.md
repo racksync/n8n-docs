@@ -6,7 +6,7 @@ contentType: howto
 
 # Create a workflow
 
-[Workflow](/glossary.md#workflow-n8n) คือชุดของ nodes ที่เชื่อมต่อเข้าด้วยกันเพื่อทำให้กระบวนการเป็นอัตโนมัติ คุณสร้าง workflows บน [workflow canvas](/glossary.md#canvas-n8n)
+[Workflow](/glossary.md#workflow-n8n) คือชุดของ nodes ที่เชื่อมต่อเข้าด้วยกันเพื่อทำให้กระบวนการเป็นอัตโนมัติ คุณสามารถสร้าง workflows ด้วยการลากและวาง nodes ที่คุณต้องการใช้จากแถบด้านข้างไปยัง [canvas](/glossary.md#canvas-n8n) 
 
 ## Create a workflow
 

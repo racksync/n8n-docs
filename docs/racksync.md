@@ -26,23 +26,13 @@ RACKSYNC CO., LTD is a technology company specializing in cloud infrastructure, 
 - **Automated Deployment Pipelines**
 - **Site Reliability Engineering (SRE)**
 - **Monitoring & Observability Solutions**
+- **Home Automation Solutions**
+- **Industrial Automation Solutions**
+- **On-the-Job Training**
+- **Professional Training Courses**
 
-## About Us
 
-RACKSYNC CO., LTD is a technology company specializing in cloud infrastructure, DevOps solutions, and system integrations. We empower businesses through innovative technology implementations and managed services tailored to meet specific operational needs.
 
-## Our Main Services
-
-- **Cloud Infrastructure Design & Implementation**
-- **DevOps Implementation & Consulting**
-- **System Integration & Architecture**
-- **Kubernetes & Container Orchestration**
-- **Infrastructure as Code (IaC) Solutions**
-- **Automated Deployment Pipelines**
-- **Site Reliability Engineering (SRE)**
-- **Monitoring & Observability Solutions**
-
-## More Services
 
 ### Home Automation Solutions
 
@@ -101,7 +91,7 @@ Our specialized training courses are taught by industry experts with extensive p
 - **Automation Solutions**: Industrial and business process automation strategies
 
 ## Hiring
-- 🔥 **We're Hiring!** Send your resume to people@racksync.com
+- 🔥 **We're Hiring!** Send your resume to [people@racksync.com](mailto:people@racksync.com)
 
 ## Connect With Us
 

@@ -112,6 +112,3 @@ Our specialized training courses are taught by industry experts with extensive p
 
 ---
 
-<div align="center">
-  <small>© 2007-2025 RACKSYNC CO., LTD. All Rights Reserved.</small>
-</div>

@@ -5,12 +5,12 @@ contentType: overview
 ---
 # RACKSYNC CO., LTD
 
-<!-- <div align="center">
+<div align="center">
   <img src="/_images/racksync.png" alt="RACKSYNC Logo" width="600"/><br> 
   **Innovative Cloud & Infrastructure Solutions**
-</div> -->
+</div>
 
-![RACKSYNC Logo](/_images/racksync.png){ width="500" }{ loading=lazy }
+<!-- ![RACKSYNC Logo](/_images/racksync.png){ width="500" }{ loading=lazy } -->
 
 ## About Us
 

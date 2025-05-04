@@ -7,8 +7,9 @@ contentType: overview
 
 # Try it out
 
-วิธีที่ดีที่สุดในการเรียนรู้ n8n คือการลองทำตาม tutorials ของเรา เพื่อให้คุ้นเคยกับ user interface และ node รวมถึง integration หลากหลายแบบที่มีให้เลือก นี่คือตัวอย่างเนื้อหาที่ช่วยให้คุณเริ่มต้นได้:
+วิธีที่ดีที่สุดในการเรียนรู้ n8n คือการลองทำตาม tutorials ที่มีการจัดเตรียมไว้ เพื่อให้คุณคุ้นเคยกับ user interface และ nodes รวมถึง integration หลากหลายรูปแบบที่มีให้เลือก  ต่อไปนี้คือตัวอย่างเนื้อหาที่ช่วยให้คุณเริ่มต้นได้เร็วขึ้น
 
 - กำลังมองหาบทนำแบบรวดเร็วใช่ไหม? ลองดู ["First Workflow" tutorial](/try-it-out/tutorial-first-workflow.md)
-- สนใจว่า AI ทำอะไรได้บ้าง? ดู [how to build an AI chat agent with n8n](/advanced-ai/intro-tutorial.md)
-- ชอบเรียนรู้จากตัวอย่างละเอียดๆ ใช่ไหม? อาจจะเหมาะกับ [courses](/courses/index.md)
+- มีความสนใจว่า AI ทำอะไรได้บ้าง? ดู [how to build an AI chat agent with n8n](/advanced-ai/intro-tutorial.md)
+- ชอบเรียนรู้จากตัวอย่างละเอียดๆ ใช่ไหม? อาจจะเหมาะกับเนื้อหาแบบ [courses](/courses/index.md) ก็เป็นได้
+- ต้องการเรียนรู้เกี่ยวกับการสร้าง workflows ที่ซับซ้อนมากขึ้น? ลองดู [advanced ai tutorials](/advanced-ai/index.md)

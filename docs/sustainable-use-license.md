@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Sustainable Use License
-description: The n8n Sustainable Use License.
+description: n8n Sustainable Use License
 contentType: explanation
 ---
 
@@ -10,140 +10,150 @@ contentType: explanation
 # Sustainable Use License
 
 /// note | Proprietary licenses for Enterprise
-Proprietary licenses are available for enterprise customers. [Get in touch](mailto:license@n8n.io) for more information.
+มี Proprietary license สำหรับลูกค้า Enterprise [ติดต่อเรา](mailto:license@n8n.io) สำหรับข้อมูลเพิ่มเติม
 ///
 
-n8n's [Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md){:target=\_blank .external-link} and [n8n Enterprise License](https://github.com/n8n-io/n8n/blob/master/LICENSE_EE.md){:target=\_blank .external-link} are based on the [fair-code](https://faircode.io/) model.
+[Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md){:target=\_blank .external-link} และ [n8n Enterprise License](https://github.com/n8n-io/n8n/blob/master/LICENSE_EE.md){:target=\_blank .external-link} ของ n8n อ้างอิงตามโมเดล [fair-code](https://faircode.io/)
 
-## License FAQs
+## คำถามที่พบบ่อยเกี่ยวกับ License
 
-### What license do you use?
+### คุณใช้ License อะไร
 
-n8n uses the [Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md) and [n8n Enterprise License](https://github.com/n8n-io/n8n/blob/master/LICENSE_EE.md){:target=_blank .external-link}. These licenses are based on the [fair-code](https://faircode.io/) model.
-
-
-### What source code is covered by the Sustainable Use License? 
-
-The [Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md) applies to all our source code hosted in our [main GitHub repository](https://github.com/n8n-io/n8n) except:
-
-* Content of branches other than master.
-* Source code files that contain `.ee.` in their file name. These are licensed under the [n8n Enterprise License](https://github.com/n8n-io/n8n/blob/master/LICENSE_EE.md){:target=_blank .external-link}.
-
-### What is the Sustainable Use License?
-
-The Sustainable Use License is a fair-code software license created by n8n in 2022. You can read more about why we did this [here](#why-did-you-create-a-license). The license allows you the free right to use, modify, create derivative works, and redistribute, with three limitations:
-
-* You may use or modify the software only for your own internal business purposes or for non-commercial or personal use.
-* You may distribute the software or provide it to others only if you do so free of charge for non-commercial purposes.
-* You may not alter, remove, or obscure any licensing, copyright, or other notices of the licensor in the software. Any use of the licensor's trademarks is subject to applicable law.
-
-We encourage anyone who wants to use the Sustainable Use License. If you are building something out in the open, it makes sense to think about licensing earlier in order to avoid problems later. Contact us at [license@n8n.io](mailto:license@n8n.io) if you would like to ask any questions about it. 
+n8n ใช้ [Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md) และ [n8n Enterprise License](https://github.com/n8n-io/n8n/blob/master/LICENSE_EE.md){:target=_blank .external-link} License เหล่านี้อ้างอิงตามโมเดล [fair-code](https://faircode.io/)
 
 
-### What is and isn't allowed under the license in the context of n8n's product?
+### Source code ใดบ้างที่อยู่ภายใต้ Sustainable Use License
 
-Our license restricts use to "internal business purposes". In practice this means all use is allowed unless you are selling a product, service, or module in which the value derives entirely or substantially from n8n functionality. Here are some examples that wouldn't be allowed:
+[Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md) ใช้กับ Source code ทั้งหมดของเราที่โฮสต์อยู่ใน [main GitHub repository](https://github.com/n8n-io/n8n) ของเรา ยกเว้น:
 
-* White-labeling n8n and offering it to your customers for money.
-* Hosting n8n and charging people money to access it.
+* Content ของ branch อื่นที่ไม่ใช่ master
+* ไฟล์ Source code ที่มี `.ee.` ในชื่อไฟล์ สิ่งเหล่านี้ได้รับ License ภายใต้ [n8n Enterprise License](https://github.com/n8n-io/n8n/blob/master/LICENSE_EE.md){:target=_blank .external-link}
 
-All of the following examples are allowed under our license: 
+### Sustainable Use License คืออะไร
 
-* Using n8n to sync the data you control as a company, for example from a CRM to an internal database.
-* Creating an n8n node for your product or any other integration between your product and n8n.
-* Providing consulting services related to n8n, for example building workflows, custom features closely connect to n8n, or code that gets executed by n8n.
-* Supporting n8n, for example by setting it up or maintaining it on an internal company server.
+Sustainable Use License เป็น License ซอฟต์แวร์แบบ fair-code ที่สร้างโดย n8n ในปี 2022 คุณสามารถอ่านเพิ่มเติมเกี่ยวกับเหตุผลที่เราทำเช่นนี้ได้ [ที่นี่](#why-did-you-create-a-license) License นี้อนุญาตให้คุณมีสิทธิ์ใช้ แก้ไข สร้างผลงานลอกเลียนแบบ และแจกจ่ายต่อได้ฟรี โดยมีข้อจำกัดสามประการ:
 
-#### Can I use n8n to act as the back-end to power a feature in my app?
+* คุณสามารถใช้หรือแก้ไขซอฟต์แวร์เพื่อวัตถุประสงค์ทางธุรกิจภายในของคุณเอง หรือเพื่อการใช้งานที่ไม่ใช่เชิงพาณิชย์หรือส่วนบุคคลเท่านั้น
+* คุณสามารถแจกจ่ายซอฟต์แวร์หรือมอบให้ผู้อื่นได้ก็ต่อเมื่อคุณทำเช่นนั้นโดยไม่คิดค่าใช้จ่ายเพื่อวัตถุประสงค์ที่ไม่ใช่เชิงพาณิชย์
+* คุณไม่สามารถเปลี่ยนแปลง ลบ หรือปิดบัง License, Copyright หรือประกาศอื่นๆ ของผู้อนุญาตในซอฟต์แวร์ การใช้เครื่องหมายการค้าใดๆ ของผู้อนุญาตอยู่ภายใต้กฎหมายที่บังคับใช้
 
-Usually yes, as long as the back-end process doesn't use users' own credentials to access their data.
-
-Here are two examples to clarify:
-
-##### Example 1: Sync ACME app with HubSpot
-
-Bob sets up n8n to collect a user's HubSpot credentials to sync data in the ACME app with data in HubSpot.
-
-<span style="color: #BF2F51;">**NOT ALLOWED**</span> under the Sustainable Use License. This use case collects the user's own HubSpot credentials to pull information to feed into the ACME app.
-
-##### Example 2: Embed AI chatbot in ACME app
-
-Bob sets up n8n to embed an AI chatbot within the ACME app. The AI chatbot's credentials in n8n use Bob's company credentials. ACME app end-users only enter their questions or queries to the chatbot.
-
-<span style="color: #1C9985;">**ALLOWED**</span> under the Sustainable Use License. No user credentials are being collected.
-
-### What if I want to use n8n for something that's not permitted by the license?
-
-You must sign a separate commercial agreement with us. We actively encourage software creators to embed n8n within their products; we just ask them to sign an agreement laying out the terms of use, and the fees owed to n8n for using the product in this way. We call this mode of use n8n Embed. You can learn more, and contact us about it [here](https://n8n.io/embed). 
-
-If you are unsure whether the use case you have in mind constitutes an internal business purpose or not, take a look at [the examples](#what-is-and-isnt-allowed-under-the-license-in-the-context-of-n8ns-product), and if you're still unclear, email us at [license@n8n.io](mailto:license@n8n.io).
-
-### Why don't you use an open source license?
-
-n8n's mission is to give everyone who uses a computer technical superpowers. We've decided the best way for us to achieve this mission is to make n8n as widely and freely available as possible for users, while ensuring we can build a sustainable, viable business. By making our product free to use, easy to distribute, and source-available we help everyone access the product. By operating as a business, we can continue to release features, fix bugs, and provide reliable software at scale long-term.
-
-### Why did you create a license?
-
-Creating a license was our least favorite option. We only went down this path after reviewing the possible existing licenses and deciding nothing fit our specific needs. There are two ways in which we try to mitigate the pain and friction of using a proprietary license:
-
-1. By using plain English, and keeping it as short as possible.
-2. By promoting [fair-code](https://faircode.io/) with the goal of making it a well-known umbrella term to describe software models like ours.
-
-Our goals when we created the Sustainable Use License were:
-
-1. To be as permissive as possible.
-2. Safeguarding our ability to build a business.
-3. Being as clear as possible what use was permitted or not.
-
-### My company has a policy against using code that restricts commercial use – can I still use n8n?
-
-Provided you are using n8n for internal business purposes, and not making n8n available to your customers for them to connect their accounts and build workflows, you should be able to use n8n. If you are unsure whether the use case you have in mind constitutes an internal business purpose or not, take a look at [the examples](#what-is-and-isnt-allowed-under-the-license-in-the-context-of-n8ns-product), and if you're still unclear, email us at [license@n8n.io](mailto:license@n8n.io).
+เราสนับสนุนให้ทุกคนที่ต้องการใช้ Sustainable Use License หากคุณกำลังสร้างบางสิ่งแบบเปิดเผย การคิดเกี่ยวกับ License ตั้งแต่เนิ่นๆ จะช่วยหลีกเลี่ยงปัญหาในภายหลังได้ ติดต่อเราที่ [license@n8n.io](mailto:license@n8n.io) หากคุณมีคำถามใดๆ เกี่ยวกับเรื่องนี้
 
 
-### What happens to the code I contribute to n8n in light of the Sustainable Use License?
+### อะไรที่อนุญาตและไม่อนุญาตภายใต้ License ในบริบทของผลิตภัณฑ์ n8n
 
-Any code you contribute on GitHub is subject to GitHub's [terms of use](https://docs.github.com/en/site-policy/github-terms/github-terms-of-service#d-user-generated-content). In simple terms, this means you own, and are responsible for, anything you contribute, but that you grant other GitHub users certain rights to use this code. When you contribute code to a repository containing notice of a license, you license the code under the same terms.
+License ของเราจำกัดการใช้งานไว้ที่ "วัตถุประสงค์ทางธุรกิจภายใน" ในทางปฏิบัติ หมายความว่าอนุญาตให้ใช้งานได้ทั้งหมด เว้นแต่คุณจะขายผลิตภัณฑ์ บริการ หรือโมดูลที่มูลค่าทั้งหมดหรือส่วนใหญ่มาจากฟังก์ชันการทำงานของ n8n นี่คือตัวอย่างบางส่วนที่ไม่ได้รับอนุญาต:
 
-n8n asks every contributor to sign our [Contributor License Agreement](https://github.com/n8n-io/n8n/blob/master/CONTRIBUTOR_LICENSE_AGREEMENT.md). In addition to the above, this gives n8n the ability to change its license without seeking additional permission. It also means you aren't liable for your contributions (e.g. in case they cause damage to someone else's business).
+* การทำ White-labeling n8n และเสนอขายให้ลูกค้าของคุณเพื่อรับเงิน
+* การโฮสต์ n8n และเรียกเก็บเงินจากผู้คนเพื่อเข้าถึง
 
-It's easy to get started contributing code to n8n [here](https://github.com/n8n-io), and we've listed broader ways of participating in our community [here](https://docs.n8n.io/reference/contributing.html).
+ตัวอย่างต่อไปนี้ทั้งหมดได้รับอนุญาตภายใต้ License ของเรา:
+
+* การใช้ n8n เพื่อ Sync ข้อมูลที่คุณควบคุมในฐานะบริษัท เช่น จาก CRM ไปยังฐานข้อมูลภายใน
+* การสร้าง n8n node สำหรับผลิตภัณฑ์ของคุณ หรือการ Integrate อื่นๆ ระหว่างผลิตภัณฑ์ของคุณกับ n8n
+* การให้บริการ Consulting ที่เกี่ยวข้องกับ n8n เช่น การสร้าง Workflow, Custom feature ที่เชื่อมต่ออย่างใกล้ชิดกับ n8n หรือโค้ดที่ถูก Execute โดย n8n
+* การ Support n8n เช่น การตั้งค่าหรือดูแลรักษาบน Server ภายในของบริษัท
+
+นี่คือตารางสรุปเพื่อช่วยให้เข้าใจได้ง่ายขึ้น:
+
+| สิ่งที่อนุญาต (Allowed)                                                                                                | สิ่งที่ไม่อนุญาต (Not Allowed)                                                                 |
+| :-------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------- |
+| ใช้ n8n เพื่อ Sync ข้อมูลภายในบริษัท (เช่น จาก CRM ไปยังฐานข้อมูลภายใน)                                                              | White-labeling n8n และเสนอขายให้ลูกค้า                                                            |
+| สร้าง n8n node สำหรับผลิตภัณฑ์ของคุณ หรือการ Integrate อื่นๆ ระหว่างผลิตภัณฑ์ของคุณกับ n8n                                     | โฮสต์ n8n และเรียกเก็บเงินจากผู้คนเพื่อเข้าถึง                                                     |
+| ให้บริการ Consulting ที่เกี่ยวข้องกับ n8n (เช่น การสร้าง Workflow, Custom feature)                                        | ขายผลิตภัณฑ์ บริการ หรือโมดูลที่มูลค่าทั้งหมดหรือส่วนใหญ่มาจากฟังก์ชันการทำงานของ n8n                 |
+| Support n8n (เช่น การตั้งค่าหรือดูแลรักษาบน Server ภายในของบริษัท)                                                            | ใช้ n8n เพื่อให้ผู้ใช้ของคุณเชื่อมต่อ Credential ของตนเองเพื่อ Sync ข้อมูลกับแอปของคุณ (ดูตัวอย่าง HubSpot ด้านล่าง) |
+| ใช้ n8n เป็น Back-end เพื่อขับเคลื่อนฟีเจอร์ในแอปของคุณ โดยใช้ Credential ของบริษัทคุณ (ไม่ใช่ของผู้ใช้ปลายทาง) (ดูตัวอย่าง AI Chatbot ด้านล่าง) |                                                                                                |
+
+#### ฉันสามารถใช้ n8n เป็น back-end เพื่อขับเคลื่อนฟีเจอร์ในแอปของฉันได้หรือไม่
+
+โดยปกติแล้วใช่ ตราบใดที่กระบวนการ Back-end ไม่ได้ใช้ Credential ของผู้ใช้เองเพื่อเข้าถึงข้อมูลของพวกเขา
+
+นี่คือสองตัวอย่างเพื่อความชัดเจน:
+
+##### ตัวอย่างที่ 1: Sync แอป ACME กับ HubSpot
+
+Bob ตั้งค่า n8n เพื่อรวบรวม Credential HubSpot ของผู้ใช้เพื่อ Sync ข้อมูลในแอป ACME กับข้อมูลใน HubSpot
+
+<span style="color: #BF2F51;">**ไม่อนุญาต**</span> ภายใต้ Sustainable Use License กรณีการใช้งานนี้รวบรวม Credential HubSpot ของผู้ใช้เองเพื่อดึงข้อมูลไปป้อนเข้าแอป ACME
+
+##### ตัวอย่างที่ 2: Embed AI chatbot ในแอป ACME
+
+Bob ตั้งค่า n8n เพื่อ Embed AI chatbot ภายในแอป ACME Credential ของ AI chatbot ใน n8n ใช้ Credential ของบริษัท Bob ผู้ใช้ปลายทางของแอป ACME เพียงแค่ป้อนคำถามหรือข้อสงสัยไปยัง Chatbot เท่านั้น
+
+<span style="color: #1C9985;">**อนุญาต**</span> ภายใต้ Sustainable Use License ไม่มีการรวบรวม Credential ของผู้ใช้
+
+### จะทำอย่างไรถ้าฉันต้องการใช้ n8n ในสิ่งที่ License ไม่อนุญาต
+
+คุณต้องลงนามในข้อตกลงเชิงพาณิชย์แยกต่างหากกับเรา เราสนับสนุนให้ผู้สร้างซอฟต์แวร์ Embed n8n ภายในผลิตภัณฑ์ของตนอย่างจริงจัง เพียงแต่ขอให้พวกเขาลงนามในข้อตกลงที่ระบุเงื่อนไขการใช้งาน และค่าธรรมเนียมที่ต้องชำระให้ n8n สำหรับการใช้ผลิตภัณฑ์ในลักษณะนี้ เราเรียกโหมดการใช้งานนี้ว่า n8n Embed คุณสามารถเรียนรู้เพิ่มเติมและติดต่อเราเกี่ยวกับเรื่องนี้ได้ [ที่นี่](https://n8n.io/embed)
+
+หากคุณไม่แน่ใจว่ากรณีการใช้งานที่คุณคิดไว้ถือเป็นวัตถุประสงค์ทางธุรกิจภายในหรือไม่ โปรดดู [ตัวอย่าง](#what-is-and-isnt-allowed-under-the-license-in-the-context-of-n8ns-product) และหากคุณยังไม่ชัดเจน โปรดส่งอีเมลถึงเราที่ [license@n8n.io](mailto:license@n8n.io)
+
+### ทำไมคุณไม่ใช้ Open source license
+
+ภารกิจของ n8n คือการมอบพลังพิเศษทางเทคนิคให้กับทุกคนที่ใช้คอมพิวเตอร์ เราตัดสินใจว่าวิธีที่ดีที่สุดสำหรับเราในการบรรลุภารกิจนี้คือการทำให้ n8n พร้อมใช้งานอย่างกว้างขวางและฟรีที่สุดเท่าที่จะเป็นไปได้สำหรับผู้ใช้ ในขณะเดียวกันก็รับประกันว่าเราสามารถสร้างธุรกิจที่ยั่งยืนและอยู่รอดได้ ด้วยการทำให้ผลิตภัณฑ์ของเราใช้งานได้ฟรี แจกจ่ายง่าย และ Source-available เราช่วยให้ทุกคนเข้าถึงผลิตภัณฑ์ได้ การดำเนินงานในฐานะธุรกิจทำให้เราสามารถปล่อย Feature แก้ไข Bug และจัดหาซอฟต์แวร์ที่เชื่อถือได้ในระยะยาวได้อย่างต่อเนื่อง
+
+### ทำไมคุณถึงสร้าง License
+
+การสร้าง License เป็นทางเลือกที่เราชอบน้อยที่สุด เราเลือกเส้นทางนี้หลังจากตรวจสอบ License ที่มีอยู่และตัดสินใจว่าไม่มีอะไรเหมาะสมกับความต้องการเฉพาะของเรา มีสองวิธีที่เราพยายามลดความยุ่งยากและความขัดแย้งในการใช้ Proprietary license:
+
+1. โดยใช้ภาษาอังกฤษที่เข้าใจง่าย และทำให้สั้นที่สุดเท่าที่จะทำได้
+2. โดยการส่งเสริม [fair-code](https://faircode.io/) โดยมีเป้าหมายเพื่อให้เป็นคำที่รู้จักกันดีในวงกว้างเพื่ออธิบายโมเดลซอฟต์แวร์เช่นของเรา
+
+เป้าหมายของเราเมื่อสร้าง Sustainable Use License คือ:
+
+1. เพื่อให้มีความยืดหยุ่นมากที่สุดเท่าที่จะเป็นไปได้
+2. ปกป้องความสามารถของเราในการสร้างธุรกิจ
+3. ทำให้ชัดเจนที่สุดเท่าที่จะเป็นไปได้ว่าการใช้งานใดได้รับอนุญาตหรือไม่
+
+### บริษัทของฉันมีนโยบายห้ามใช้โค้ดที่จำกัดการใช้งานเชิงพาณิชย์ ฉันยังสามารถใช้ n8n ได้หรือไม่
+
+หากคุณใช้ n8n เพื่อวัตถุประสงค์ทางธุรกิจภายใน และไม่ได้ทำให้ n8n พร้อมใช้งานสำหรับลูกค้าของคุณเพื่อให้พวกเขาเชื่อมต่อบัญชีและสร้าง Workflow คุณควรจะสามารถใช้ n8n ได้ หากคุณไม่แน่ใจว่ากรณีการใช้งานที่คุณคิดไว้ถือเป็นวัตถุประสงค์ทางธุรกิจภายในหรือไม่ โปรดดู [ตัวอย่าง](#what-is-and-isnt-allowed-under-the-license-in-the-context-of-n8ns-product) และหากคุณยังไม่ชัดเจน โปรดส่งอีเมลถึงเราที่ [license@n8n.io](mailto:license@n8n.io)
 
 
-### Why did you switch to the Sustainable Use License from your previous license arrangement (Apache 2.0 with Commons Clause)?
+### จะเกิดอะไรขึ้นกับโค้ดที่ฉัน Contribute ให้ n8n ภายใต้ Sustainable Use License
 
-n8n was licensed under Apache 2.0 with Commons Clause until 17 March 2022. Commons Clause was initiated by various software companies wanting to protect their rights against cloud providers. The concept involved adding a commercial restriction on top of an existing open source license.
+โค้ดใดๆ ที่คุณ Contribute บน GitHub อยู่ภายใต้ [ข้อกำหนดการใช้งาน](https://docs.github.com/en/site-policy/github-terms/github-terms-of-service#d-user-generated-content) ของ GitHub พูดง่ายๆ ก็คือ คุณเป็นเจ้าของและรับผิดชอบต่อสิ่งที่คุณ Contribute แต่คุณให้สิทธิ์บางอย่างแก่ผู้ใช้ GitHub รายอื่นในการใช้โค้ดนี้ เมื่อคุณ Contribute โค้ดไปยัง Repository ที่มีประกาศเกี่ยวกับ License คุณจะอนุญาตให้ใช้โค้ดนั้นภายใต้เงื่อนไขเดียวกัน
 
-However, the use of the Commons Clause as an additional condition to an open source license, as well as the use of wording that's open to interpretation, created some confusion and uncertainty regarding the terms of use. The Commons Clause also restricted people's ability to offer consulting and support services: we realized these services are critical in enabling people to get value from n8n, so we wanted to remove this restriction.
+n8n ขอให้ Contributor ทุกคนลงนามใน [Contributor License Agreement](https://github.com/n8n-io/n8n/blob/master/CONTRIBUTOR_LICENSE_AGREEMENT.md) ของเรา นอกเหนือจากข้างต้น สิ่งนี้ทำให้ n8n สามารถเปลี่ยนแปลง License ได้โดยไม่ต้องขออนุญาตเพิ่มเติม นอกจากนี้ยังหมายความว่าคุณจะไม่ต้องรับผิดชอบต่อ Contribution ของคุณ (เช่น ในกรณีที่ก่อให้เกิดความเสียหายต่อธุรกิจของผู้อื่น)
 
-We created the Sustainable Use License to be more permissive and more clear about what use is allowed, while continuing to ensure n8n gets the funding needed to build and improve our product.
+การเริ่ม Contribute โค้ดให้ n8n นั้นง่ายมาก [ที่นี่](https://github.com/n8n-io) และเราได้ระบุวิธีการที่กว้างขึ้นในการมีส่วนร่วมในชุมชนของเรา [ที่นี่](https://docs.n8n.io/reference/contributing.html)
 
-### What are the main differences between the Sustainable Use License and your previous license arrangement (Apache 2.0 with Commons Clause)?
 
-There are two main differences between the Sustainable Use License and our previous license arrangement. The first is that we have tightened the definition of how you can use the software. Previously the Commons Clause restricted users ability to "sell" the software; we have redefined this to restrict use to internal business purposes. The second difference is that our previous license restricted people's ability to charge fees for consulting or support services related to the software: we have lifted that restriction altogether.
+### ทำไมคุณถึงเปลี่ยนมาใช้ Sustainable Use License จากข้อตกลง License ก่อนหน้า (Apache 2.0 with Commons Clause)
 
-That means you are now free to offer commercial consulting or support services (e.g. building n8n workflows) without the need for a separate license agreement with us. If you are interested in joining our community of n8n experts providing these services, you can learn more here.
+n8n ได้รับ License ภายใต้ Apache 2.0 with Commons Clause จนถึงวันที่ 17 มีนาคม 2022 Commons Clause ริเริ่มโดยบริษัทซอฟต์แวร์หลายแห่งที่ต้องการปกป้องสิทธิ์ของตนจากผู้ให้บริการ Cloud แนวคิดนี้เกี่ยวข้องกับการเพิ่มข้อจำกัดเชิงพาณิชย์ทับ Open source license ที่มีอยู่
 
-### Is n8n open source?
+อย่างไรก็ตาม การใช้ Commons Clause เป็นเงื่อนไขเพิ่มเติมของ Open source license รวมถึงการใช้ถ้อยคำที่เปิดให้ตีความได้หลายอย่าง ทำให้เกิดความสับสนและความไม่แน่นอนเกี่ยวกับเงื่อนไขการใช้งาน Commons Clause ยังจำกัดความสามารถของผู้คนในการให้บริการ Consulting และ Support เราตระหนักดีว่าบริการเหล่านี้มีความสำคัญอย่างยิ่งในการช่วยให้ผู้คนได้รับประโยชน์จาก n8n ดังนั้นเราจึงต้องการลบข้อจำกัดนี้ออกไป
 
-Although n8n's source code is available under the Sustainable Use License, according to the [Open Source Initiative](https://opensource.org/) (OSI), open source licenses can't include limitations on use, so we do not call ourselves open source. In practice, n8n offers most users many of the same benefits as OSI-approved open source.
+เราสร้าง Sustainable Use License เพื่อให้มีความยืดหยุ่นและชัดเจนมากขึ้นเกี่ยวกับสิ่งที่อนุญาตให้ใช้งานได้ ในขณะเดียวกันก็ยังคงรับประกันว่า n8n จะได้รับเงินทุนที่จำเป็นในการสร้างและปรับปรุงผลิตภัณฑ์ของเรา
 
-We coined the term ['fair-code'](https://faircode.io/) as a way of describing our licensing model, and the model of other companies who are source-available, but restrict commercial use of their source code.
+### อะไรคือความแตกต่างหลักระหว่าง Sustainable Use License และข้อตกลง License ก่อนหน้าของคุณ (Apache 2.0 with Commons Clause)
 
-### What is fair-code, and how does the Sustainable Use License relate to it?
+มีความแตกต่างหลักสองประการระหว่าง Sustainable Use License และข้อตกลง License ก่อนหน้าของเรา ประการแรกคือเราได้เข้มงวดคำจำกัดความของวิธีที่คุณสามารถใช้ซอฟต์แวร์ได้ ก่อนหน้านี้ Commons Clause จำกัดความสามารถของผู้ใช้ในการ "ขาย" ซอฟต์แวร์ เราได้นิยามใหม่นี้เพื่อจำกัดการใช้งานไว้ที่วัตถุประสงค์ทางธุรกิจภายใน ความแตกต่างประการที่สองคือ License ก่อนหน้าของเราจำกัดความสามารถของผู้คนในการเรียกเก็บค่าธรรมเนียมสำหรับบริการ Consulting หรือ Support ที่เกี่ยวข้องกับซอฟต์แวร์ เราได้ยกเลิกข้อจำกัดนั้นโดยสิ้นเชิง
 
-Fair-code isn't a software license. It describes a software model where software:
+นั่นหมายความว่าตอนนี้คุณมีอิสระที่จะเสนอบริการ Consulting หรือ Support เชิงพาณิชย์ (เช่น การสร้าง n8n workflow) โดยไม่จำเป็นต้องมีข้อตกลง License แยกต่างหากกับเรา หากคุณสนใจเข้าร่วมชุมชนผู้เชี่ยวชาญ n8n ของเราที่ให้บริการเหล่านี้ คุณสามารถเรียนรู้เพิ่มเติมได้ที่นี่
 
-* Is generally free to use and can be distributed by anybody.
-* Has its source code openly available.
-* Can be extended by anybody in public and private communities.
-* Is commercially restricted by its authors.
+### n8n เป็น Open source หรือไม่
 
-The Sustainable Use License is a fair-code license. You can read more about it and see other examples of fair-code licenses [here](https://faircode.io/).
+แม้ว่า Source code ของ n8n จะพร้อมใช้งานภายใต้ Sustainable Use License แต่ตาม [Open Source Initiative](https://opensource.org/) (OSI) แล้ว Open source license ไม่สามารถมีข้อจำกัดในการใช้งานได้ ดังนั้นเราจึงไม่เรียกตัวเองว่า Open source ในทางปฏิบัติ n8n มอบสิทธิประโยชน์หลายอย่างเช่นเดียวกับ Open source ที่ได้รับการอนุมัติจาก OSI ให้กับผู้ใช้ส่วนใหญ่
 
-We're always excited to talk about software licenses, fair-code, and other principles around sharing code with interested parties. To get in touch to chat, email [license@n8n.io](mailto:license@n8n.io).
+เราบัญญัติศัพท์ ['fair-code'](https://faircode.io/) ขึ้นเพื่ออธิบายโมเดล License ของเรา และโมเดลของบริษัทอื่นๆ ที่เป็น Source-available แต่จำกัดการใช้งาน Source code ของตนในเชิงพาณิชย์
 
-### Can I use n8n's Sustainable Use License for my own project?
+### Fair-code คืออะไร และ Sustainable Use License เกี่ยวข้องกับมันอย่างไร
 
-Yes! We're excited to see more software use the Sustainable Use License. We'd love to hear about your project if you're using our license: [license@n8n.io](mailto:license@n8n.io).
+Fair-code ไม่ใช่ License ซอฟต์แวร์ แต่เป็นการอธิบายโมเดลซอฟต์แวร์ที่ซอฟต์แวร์:
+
+* โดยทั่วไปใช้งานได้ฟรีและทุกคนสามารถแจกจ่ายได้
+* มี Source code เปิดเผยต่อสาธารณะ
+* ทุกคนสามารถขยายได้ทั้งในชุมชนสาธารณะและส่วนตัว
+* ถูกจำกัดการใช้งานเชิงพาณิชย์โดยผู้สร้าง
+
+Sustainable Use License เป็น License แบบ fair-code คุณสามารถอ่านเพิ่มเติมเกี่ยวกับเรื่องนี้และดูตัวอย่างอื่นๆ ของ License แบบ fair-code ได้ [ที่นี่](https://faircode.io/)
+
+เรายินดีเสมอที่จะพูดคุยเกี่ยวกับ License ซอฟต์แวร์, fair-code และหลักการอื่นๆ เกี่ยวกับการแบ่งปันโค้ดกับผู้ที่สนใจ หากต้องการติดต่อเพื่อพูดคุย โปรดส่งอีเมลไปที่ [license@n8n.io](mailto:license@n8n.io)
+
+### ฉันสามารถใช้ Sustainable Use License ของ n8n สำหรับโปรเจกต์ของฉันเองได้หรือไม่
+
+ใช่! เรารู้สึกตื่นเต้นที่ได้เห็นซอฟต์แวร์จำนวนมากขึ้นใช้ Sustainable Use License เรายินดีที่จะรับฟังเกี่ยวกับโปรเจกต์ของคุณหากคุณใช้ License ของเรา: [license@n8n.io](mailto:license@n8n.io)
 
 <!-- vale on -->

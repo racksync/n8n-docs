@@ -60,7 +60,7 @@ export N8N_CONFIG_FILES=/<path-to-config>/my-config.json,/<path-to-config>/produ
   "saveDataOnSuccess": "none"
  },
  "generic": {
-  "timezone": "Europe/Berlin"
+  "timezone": "Asia/Bangkok"
  },
  "nodes": {
   "exclude": "[\"n8n-nodes-base.executeCommand\",\"n8n-nodes-base.writeBinaryFile\"]"

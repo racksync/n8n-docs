@@ -2,3 +2,7 @@ mkdocs==1.6.1
 mkdocs-exclude==1.0.2
 mkdocs-glightbox
 mkdocs-macros-plugin==1.0.4
+mkdocs-material
+mkdocs-material[imaging]
+mkdocs-dracula-theme 
+mkdocs-i18n

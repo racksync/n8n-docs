@@ -89,8 +89,8 @@ docker volume create n8n_data
 docker run -it --rm \
  --name n8n \
  -p 5678:5678 \
- -e GENERIC_TIMEZONE="Europe/Berlin" \
- -e TZ="Europe/Berlin" \
+ -e GENERIC_TIMEZONE="Asia/Bangkok" \
+ -e TZ="Asia/Bangkok" \
  -v n8n_data:/home/node/.n8n \
  docker.n8n.io/n8nio/n8n
 ```

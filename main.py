@@ -86,6 +86,19 @@ def define_env(env):
 
 	@env.macro
 	def workflowDemo(workflow_json):
+		"""
+		Creates an interactive workflow preview widget.
+		
+		Usage in Markdown:
+		{{ workflowDemo('https://api.n8n.io/workflows/123') }}
+		{{ workflowDemo('file:///example-workflow.json') }}
+		
+		Args:
+			workflow_json (str): URL to workflow JSON (https://, http://, or file://)
+		
+		Returns:
+			str: HTML with n8n-demo component and template link
+		"""
 		if no_template:
 			return "<div class='n8n-workflow-preview'><p>Workflow preview placeholder.</p></div>"
 

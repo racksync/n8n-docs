@@ -10,6 +10,7 @@ contentType: overview
   **Innovative Cloud & Infrastructure Solutions**
 </div>
 
+[[ workflowDemo("file:////racksync/hass.json") ]]
 
 ## About Us
 

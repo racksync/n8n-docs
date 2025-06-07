@@ -102,7 +102,7 @@ SUBDOMAIN=n8n
 
 # ตั้ง timezone (ใช้กับ Cron และ node scheduling อื่น ๆ)
 # ถ้าไม่ตั้งจะใช้ New York เป็นค่า default
-GENERIC_TIMEZONE=Europe/Berlin
+GENERIC_TIMEZONE=Asia/Bangkok
 
 # อีเมลที่ใช้สร้าง TLS/SSL certificate
 SSL_EMAIL=user@example.com
